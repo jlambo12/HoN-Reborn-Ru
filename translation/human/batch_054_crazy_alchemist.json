@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_054_CRAZY_ALCHEMIST",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_Crazy_Alchemist1_name"], "ru": "Transmute"},
+    {"keys": ["entities:Ability_Crazy_Alchemist1_description"], "ru": "Превращает крипа в золото!"},
+    {"keys": ["entities:Ability_Crazy_Alchemist1_description_simple"], "ru": "Выберите крипа, чтобы ^oтрансформировать^* его: мгновенно убить и получить полную награду за него. Нельзя применять к героям."},
+    {"keys": ["entities:Ability_Crazy_Alchemist1_IMPACT_effect"], "ru": "Мгновенно убивает выбранного юнита, не являющегося героем, и даёт полную награду за него."}
+  ]
+}

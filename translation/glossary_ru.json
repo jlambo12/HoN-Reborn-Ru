@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "glossary_version": "1.1.0",
+  "domain": "Heroes of Newerth Reborn game localization",
+  "entries": [
+    {
+      "id": "GLOSS-ROLE-CARRY",
+      "source_term": "Carry",
+      "context": {"domain": "hero_role", "categories": ["role", "hero_role", "matchmaking_role"]},
+      "approved_translation": "Керри",
+      "forbidden_translations": ["нести", "переносить"],
+      "status": "APPROVED",
+      "note": "Устоявшееся название роли; буквальный глагольный перевод неверен."
+    },
+    {
+      "id": "GLOSS-ROLE-MID",
+      "source_term": "Mid",
+      "context": {"domain": "hero_role", "categories": ["role", "hero_role", "matchmaking_role"]},
+      "approved_translation": "Мид",
+      "forbidden_translations": ["Средний"],
+      "status": "APPROVED",
+      "note": "Устоявшееся название игровой позиции."
+    },
+    {
+      "id": "GLOSS-ROLE-OFFLANE",
+      "source_term": "Offlane",
+      "context": {"domain": "hero_role", "categories": ["role", "hero_role", "matchmaking_role"]},
+      "approved_translation": "Оффлейн",
+      "forbidden_translations": [],
+      "status": "APPROVED",
+      "note": "Устоявшееся название игровой позиции."
+    },
+    {
+      "id": "GLOSS-ROLE-SOFT-SUPPORT",
+      "source_term": "Soft Support",
+      "context": {"domain": "hero_role", "categories": ["role", "hero_role", "matchmaking_role"]},
+      "approved_translation": "Поддержка",
+      "forbidden_translations": ["Мягкая поддержка"],
+      "status": "APPROVED",
+      "note": "Player-facing название роли без буквальной кальки."
+    },
+    {
+      "id": "GLOSS-ROLE-HARD-SUPPORT",
+      "source_term": "Hard Support",
+      "context": {"domain": "hero_role", "categories": ["role", "hero_role", "matchmaking_role"]},
+      "approved_translation": "Основная поддержка",
+      "forbidden_translations": ["Жесткая поддержка", "Жёсткая поддержка"],
+      "status": "APPROVED",
+      "note": "Player-facing название роли без буквальной кальки."
+    },
+    {
+      "id": "GLOSS-STATUS-SILENCE",
+      "source_term": "Silence",
+      "context": {"domain": "gameplay_status", "mechanic_ids": ["silenced", "silence"]},
+      "approved_translation": "Безмолвие",
+      "forbidden_translations": ["без звука"],
+      "status": "APPROVED",
+      "note": "Единое название игровой механики во всех player-facing слоях."
+    },
+    {
+      "id": "GLOSS-COOLDOWN-LABEL",
+      "source_term": "Cooldown",
+      "context": {"domain": "compact_ui_label", "categories": ["stat_label", "tooltip_label"]},
+      "approved_translation": "Перезарядка",
+      "forbidden_translations": ["КД"],
+      "status": "APPROVED",
+      "note": "Короткая и понятная новичку UI-форма."
+    },
+    {
+      "id": "GLOSS-COOLDOWN-PROSE",
+      "source_term": "Cooldown",
+      "context": {"domain": "descriptive_prose", "categories": ["item_description", "ability_description", "help"]},
+      "approved_translation": "Время восстановления",
+      "forbidden_translations": ["КД"],
+      "status": "APPROVED",
+      "note": "Контекстная форма для полного предложения."
+    },
+    {
+      "id": "GLOSS-DAMAGE",
+      "source_term": "Damage",
+      "context": {"domain": "gameplay_stat"},
+      "approved_translation": "Урон",
+      "forbidden_translations": ["дамаг"],
+      "status": "APPROVED",
+      "note": "Общепонятный игровой термин."
+    },
+    {
+      "id": "GLOSS-MOVEMENT-SPEED",
+      "source_term": "Movement Speed",
+      "context": {"domain": "gameplay_stat"},
+      "approved_translation": "Скорость передвижения",
+      "forbidden_translations": ["МС"],
+      "status": "APPROVED",
+      "note": "Не сокращать в обычном player-facing тексте."
+    },
+    {
+      "id": "GLOSS-ATTACK-SPEED",
+      "source_term": "Attack Speed",
+      "context": {"domain": "gameplay_stat"},
+      "approved_translation": "Скорость атаки",
+      "forbidden_translations": ["АС"],
+      "status": "APPROVED",
+      "note": "Не сокращать в обычном player-facing тексте."
+    },
+    {
+      "id": "GLOSS-CHARGE-ITEM",
+      "source_term": "charge",
+      "context": {"domain": "item_charge_count", "required_evidence": ["maxcharges", "charges", "chargerefreshtime"]},
+      "approved_translation": "заряд",
+      "forbidden_translations": ["обвинение"],
+      "status": "APPROVED",
+      "note": "Только для счётчика зарядов предмета, не для рывка или времени подготовки."
+    },
+    {
+      "id": "GLOSS-CHARGE-AMBIGUOUS",
+      "source_term": "charge",
+      "context": {"domain": "unknown_or_action"},
+      "approved_translation": null,
+      "forbidden_translations": [],
+      "status": "REVIEW",
+      "note": "Нужен entity context: заряд предмета, накопление, подготовка или рывок."
+    },
+    {
+      "id": "GLOSS-PERPLEX",
+      "source_term": "Perplex",
+      "context": {"domain": "gameplay_status", "mechanic_ids": ["perplexed", "perplex"]},
+      "approved_translation": null,
+      "forbidden_translations": ["в недоумении"],
+      "status": "REVIEW",
+      "note": "Не утверждать перевод до доказательства player-facing семантики по game data/code."
+    },
+    {
+      "id": "GLOSS-UNITWALKING",
+      "source_term": "unitwalking",
+      "context": {"domain": "movement_mechanic"},
+      "approved_translation": null,
+      "candidate_translation": "проход сквозь юнитов",
+      "forbidden_translations": ["юнитволкинг"],
+      "status": "REVIEW",
+      "note": "Кандидат понятен новичку, но требует единого утверждения для всех UI-слоёв."
+    }
+  ]
+}

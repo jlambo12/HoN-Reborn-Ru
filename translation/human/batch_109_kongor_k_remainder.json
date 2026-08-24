@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_109_KONGOR_K_REMAINDER",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Kraken3_tooltip_flavor"],
+      "ru": "...но ничего не произошло!"
+    },
+    {
+      "keys": ["entities:State_KuldrasSheepstick_name"],
+      "ru": "Transfigured"
+    },
+    {
+      "keys": ["entities:State_KuldrasSheepstick_FRAME_effect"],
+      "ru": "Базовая скорость передвижения установлена на 100.\\nОтключает Evasion.\\n\\nРазвеивание сокращает оставшуюся длительность эффекта на 70% и делает его неразвеиваемым."
+    },
+    {
+      "keys": ["entities:Ability_Kongor1_description", "entities:Ability_Kongor1_description_simple"],
+      "ru": "Бросает камень в выбранную точку, который приземляется через 2 секунды. Наносит магический урон в размере [150 + 10% от максимального здоровья цели] и оглушает на 2 секунды.\\n\\nСражаясь хотя бы с 1 вражеским героем, Kongor каждую секунду с вероятностью 20% применяет эту способность."
+    },
+    {
+      "keys": ["entities:Ability_Kongor2_description", "entities:Ability_Kongor2_description_simple"],
+      "ru": "Бьёт по земле, нанося магический урон в размере [70 + 100 × количество возрождений Kongor в этом матче], и снижает скорость передвижения и атаки всех ближайших игроков.\\n\\nПрименяется только тогда, когда в ближнем бою с Kongor находятся не менее 3 существ."
+    },
+    {
+      "keys": ["entities:Ability_Kongor2_effect_header"],
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:State_Kongor_Ability2_description"],
+      "ru": "Могучий удар Kongor снизил вашу скорость передвижения и атаки."
+    },
+    {
+      "keys": ["entities:Ability_Kongor3_description", "entities:Ability_Kongor3_description_simple"],
+      "ru": "Восстанавливает 5% здоровья в секунду. После получения атаки эффект отключается на 10 секунд.\\n\\nЕсли способность не перезаряжается, она блокирует следующее направленное заклинание и уходит на перезарядку."
+    },
+    {
+      "keys": ["entities:Ability_Kongor4_description"],
+      "ru": "Даёт ^o70%^* сокращения длительности негативных эффектов и оглушения, а также сопротивления замедлению."
+    },
+    {
+      "keys": ["entities:Ability_Kongor4_description_simple"],
+      "ru": "Даёт ^o70%^* сокращения длительности негативных эффектов и оглушения, а также сопротивления замедлению.\\n\\nПри оглушении эти сопротивления увеличиваются на 15% на 20 секунд. Усиление может срабатывать раз в 6 секунд.\\n\\nАтакующие ^oKongor^* противники получают на 50% меньше вампиризма."
+    },
+    {
+      "keys": ["entities:Ability_Kongor4_description_simple:boss_resist_1"],
+      "ru": "Даёт ^o85%^* сокращения длительности негативных эффектов и оглушения, а также сопротивления замедлению.\\n\\nПри оглушении эти сопротивления увеличиваются на 15% на 20 секунд. Усиление может срабатывать раз в 6 секунд.\\n\\nАтакующие ^oKongor^* противники получают на 50% меньше вампиризма."
+    },
+    {
+      "keys": ["entities:Ability_Kongor4_description_simple:boss_resist_max"],
+      "ru": "Даёт ^o100%^* сокращения длительности негативных эффектов и оглушения, а также сопротивления замедлению.\\n\\nАтакующие ^oKongor^* противники получают на 50% меньше вампиризма."
+    },
+    {
+      "keys": ["entities:Neutral_Kongor_description"],
+      "ru": "Король обезьян"
+    },
+    {
+      "keys": ["entities:State_KongorSummon_Aura_name"],
+      "ru": "Kongor's Vigor"
+    },
+    {
+      "keys": ["entities:State_KongorSummon_Aura_FRAME_effect"],
+      "ru": "Щит на {0,150,300} здоровья."
+    },
+    {
+      "keys": ["entities:State_KongorBoss_Lifesteal_Reduction_name"],
+      "ru": "Kongor's Resilience"
+    },
+    {
+      "keys": ["entities:State_KongorSummon_Scaling_name"],
+      "ru": "Kongor Scaling"
+    },
+    {
+      "keys": ["entities:State_Kongor_CreepScaling_name"],
+      "ru": "Kongor Creep Scaling"
+    },
+    {
+      "keys": ["entities:State_Kongor_TowerTinker_name"],
+      "ru": "Tinkered Tower"
+    },
+    {
+      "keys": ["entities:State_Kongor_TowerDisarm_name"],
+      "ru": "Tinker Disarmed Tower"
+    },
+    {
+      "keys": ["entities:State_Kongor_Regen_Disabled_name"],
+      "ru": "Kongor Regeneration Disabled"
+    },
+    {
+      "keys": ["entities:Gadget_Kongor_Wall_name"],
+      "ru": "Stone Wall"
+    },
+    {
+      "keys": ["entities:State_Kongor_Scaling_name"],
+      "ru": "Kongor Upgrade"
+    },
+    {
+      "keys": ["entities:State_Kongor_Scaling_description"],
+      "ru": "Во время боя способности Kongor постепенно усиливаются."
+    },
+    {
+      "keys": ["entities:State_Krosmode_Hellbourne_Building_name"],
+      "ru": "Строение Hellbourne (KrosMode)"
+    },
+    {
+      "keys": ["entities:State_Krosmode_Kongor_name"],
+      "ru": "Kongor (KrosMode)"
+    },
+    {
+      "keys": ["entities:State_Krosmode_Legion_Building_name"],
+      "ru": "Строение Legion (KrosMode)"
+    },
+    {
+      "keys": ["entities:State_Krosmode_Mainbase_Experience_name"],
+      "ru": "Командный опыт"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_036_BEAR",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Bear1_name"],
+      "ru": "Return"
+    },
+    {
+      "keys": ["entities:Ability_Bear1_description"],
+      "ru": "Телепортирует Booboo к Wildsoul. Если Booboo получает урон от подконтрольного игроку юнита, Return уходит на перезарядку на 3 секунды."
+    },
+    {
+      "keys": ["entities:Ability_Bear1_description_simple"],
+      "ru": "Активируйте, чтобы ^oтелепортировать Booboo к Wildsoul^*. Если Booboo получает урон от подконтрольного игроку юнита, Return уходит на перезарядку на 3 секунды."
+    },
+    {
+      "keys": ["entities:Ability_Bear1_effect_header"],
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:Ability_Bear2_name"],
+      "ru": "Alpha Male"
+    },
+    {
+      "keys": ["entities:Ability_Bear2_description"],
+      "ru": "Пассивно увеличивает урон от атак по лесным крипам на ^o50%^*."
+    },
+    {
+      "keys": ["entities:Ability_Bear2_description_simple"],
+      "ru": "Пассивно даёт ^o+50% урона от атак по лесным крипам^*."
+    },
+    {
+      "keys": ["entities:Ability_Bear2_description:Yogiq_Boosted"],
+      "ru": "Пассивно увеличивает урон от атак по лесным крипам на ^y100%^*.\\n\\n^yУсиление:^* дополнительный урон удваивается до 100%."
+    },
+    {
+      "keys": ["entities:Ability_Bear2_description_simple:Yogiq_Boosted"],
+      "ru": "Пассивно даёт ^y+100%^* ^oурона от атак по лесным крипам^*.\\n\\n^yУсиление:^* дополнительный урон удваивается до 100%."
+    },
+    {
+      "keys": ["entities:Ability_Bear3_name"],
+      "ru": "Swipe"
+    },
+    {
+      "keys": ["entities:Ability_Bear3_description", "entities:Ability_Bear3_description:Yogiq_Boosted"],
+      "ru": "Бьёт по земле, нанося урон и замедляя противников вокруг себя."
+    },
+    {
+      "keys": ["entities:Ability_Bear3_description_simple"],
+      "ru": "Бьёт по земле, ^oнаносит противникам в области 160 физического урона^* и ^oзамедляет их на 75% на 1.5 секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_Bear3_effect_header"],
+      "ru": "Эффекты Swipe"
+    },
+    {
+      "keys": ["entities:Ability_Bear3_IMPACT_effect"],
+      "ru": "Наносит противникам в области ^o160 физического урона^* и накладывает на них ^oSwipe^* на ^o1.5 секунды^*.\\n\\nЕсли способность не перезаряжается, она автоматически срабатывает при 3-й атаке.\\n\\n- Не срабатывает, если Booboo находится слишком далеко от Wildsoul."
+    },
+    {
+      "keys": ["entities:Ability_Bear3_description_simple:Yogiq_Boosted"],
+      "ru": "Бьёт по земле, ^oнаносит противникам в области 160 физического урона^* и ^oзамедляет их на 75% на 1.5 секунды^*.\\n\\n^yУсиление:^* теперь также ^oнаносит урон строениям^*. Радиус увеличен на 50."
+    },
+    {
+      "keys": ["entities:Ability_Bear3_IMPACT_effect:Yogiq_Boosted"],
+      "ru": "Наносит противникам в области ^o160 физического урона^* и накладывает на них ^oSwipe^* на ^o1.5 секунды^*.\\n\\n^yУсиление:^* теперь также ^oнаносит урон строениям^*. Радиус увеличен на 50.\\n\\nЕсли способность не перезаряжается, она автоматически срабатывает при 3-й атаке.\\n\\n- Не срабатывает, если Booboo находится слишком далеко от Wildsoul."
+    },
+    {
+      "keys": ["entities:Ability_Bear4_name"],
+      "ru": "Frenzy"
+    },
+    {
+      "keys": ["entities:Ability_Bear4_description"],
+      "ru": "Каждый раз, когда Booboo получает урон, пассивно даёт ему 1 заряд ^oFrenzy^* на ^o15 секунд^*. Максимум — 15 зарядов."
+    },
+    {
+      "keys": ["entities:Ability_Bear4_description_simple"],
+      "ru": "Каждый раз, когда Booboo получает урон, пассивно даёт ему ^o2 урона от атаки на 15 секунд^*. Максимальный бонус — ^o30 урона^*."
+    },
+    {
+      "keys": ["entities:Ability_Bear4_effect_header"],
+      "ru": "Эффекты Frenzy"
+    },
+    {
+      "keys": ["entities:Ability_Bear4_description:Yogiq_Boosted"],
+      "ru": "Каждый раз, когда Booboo получает урон, пассивно даёт ему 1 заряд ^oFrenzy^* на ^o15 секунд^*. Максимум — 15 зарядов.\\n\\n^yУсиление:^* пассивно повышает броню и магическую броню на 3."
+    },
+    {
+      "keys": ["entities:Ability_Bear4_description_simple:Yogiq_Boosted"],
+      "ru": "Каждый раз, когда Booboo получает урон, пассивно даёт ему ^o2 урона от атаки на 15 секунд^*. Максимальный бонус — ^o30 урона^*.\\n\\n^yУсиление:^* пассивно даёт ^o3 брони и магической брони^*."
+    }
+  ]
+}

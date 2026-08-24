@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_028_ARACHNA",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Arachna1_name"],
+      "ru": "Webbed Shot"
+    },
+    {
+      "keys": ["entities:Ability_Arachna1_description"],
+      "ru": "Arachna опутывает свои атаки паутиной: при попадании они наносят противникам урон и замедляют их."
+    },
+    {
+      "keys": ["entities:Ability_Arachna1_description_simple"],
+      "ru": "Атаки накладывают ^oWebbed Shot^* на 2 секунды.\\n\\n^oWebbed Shot^* снижает скорость передвижения на ^o-{15,25,35,45}%^* и скорость атаки на ^o-{15,25,35,45}^*, а также наносит ^o{10,20,30,40} магического урона в секунду^*.\\n\\nНажмите правой кнопкой мыши, чтобы включить автоприменение."
+    },
+    {
+      "keys": ["entities:Ability_Arachna1_description2"],
+      "ru": ""
+    },
+    {
+      "keys": ["entities:Ability_Arachna1_effect_header"],
+      "ru": "Эффекты Webbed Shot"
+    },
+    {
+      "keys": ["entities:Ability_Arachna1_IMPACT_effect"],
+      "ru": "Накладывает на цель Webbed Shot на 2 секунды.\\n\\nНажмите правой кнопкой мыши, чтобы включить автоприменение."
+    },
+    {
+      "keys": ["entities:Ability_Arachna1_tooltip_flavor"],
+      "ru": "В мою паутину попалась муха!"
+    },
+    {
+      "keys": ["entities:Ability_Arachna2_name"],
+      "ru": "Harden Carapace"
+    },
+    {
+      "keys": ["entities:Ability_Arachna2_description"],
+      "ru": "Arachna ненадолго укрепляет панцирь, повышая сопротивление магическим атакам."
+    },
+    {
+      "keys": ["entities:Ability_Arachna2_description_simple"],
+      "ru": "Ненадолго укрепляет панцирь, ^oснимает с вас отрицательные эффекты^* и даёт ^o{10,20,30,40} магической брони^* на ^o5 секунд^*. На ^o4-м уровне^* способность можно ^oактивировать под действием оглушения или Silence^*."
+    },
+    {
+      "keys": ["entities:Ability_Arachna2_effect_header"],
+      "ru": "Эффекты Hardened Carapace"
+    },
+    {
+      "keys": ["entities:Ability_Arachna2_tooltip_flavor"],
+      "ru": "Нелегко быть вдовой."
+    },
+    {
+      "keys": ["entities:Ability_Arachna3_name"],
+      "ru": "Precision"
+    },
+    {
+      "keys": ["entities:Ability_Arachna3_description"],
+      "ru": "Arachna находит слабое место цели и наносит тем больше урона, чем меньше у неё здоровья."
+    },
+    {
+      "keys": ["entities:Ability_Arachna3_description2", "entities:Ability_Arachna3_description_simple"],
+      "ru": "При нанесении урона юниту увеличивает ваш ^oурон от атаки^* на величину до ^o{20,40,60,80}%^* в зависимости от ^oнедостающего здоровья^* цели. Минимальный бонус к урону от атаки — 5%; ^oмаксимальный урон^* достигается, когда у цели остаётся ^o20% максимального здоровья^*.\\n\\nПротив ^oюнитов, не являющихся героями^*, дополнительный урон снижен на 50%."
+    },
+    {
+      "keys": ["entities:Ability_Arachna3_tooltip_flavor"],
+      "ru": "Я вижу твою слабость."
+    },
+    {
+      "keys": ["entities:Ability_Arachna4_name"],
+      "ru": "Spider Sting"
+    },
+    {
+      "keys": ["entities:Ability_Arachna4_description"],
+      "ru": "Бросает во вражеского юнита Spiderling, который раскрывает замаскированных противников. Добравшись до цели, Spiderling яростно атакует её, отравляя и снижая скорость передвижения и атаки."
+    },
+    {
+      "keys": ["entities:Ability_Arachna4_description2"],
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* Spiderling накладывает на цель Restrain. Перезарядка сокращается до {30,25,20} секунд, а дальность применения увеличивается до 900. Если Spiderling убивает цель, появляется подконтрольный Adult Spiderling на 50 секунд. Если Adult Spiderling убивает вражеского юнита, появляется Child Spiderling на 50 секунд. Для убийства каждого паука требуется {5,6,7} попаданий."
+    },
+    {
+      "keys": ["entities:Ability_Arachna4_description_simple"],
+      "ru": "Бросает во врага Spiderling. Он снижает ^oскорость передвижения цели на -{40,60,80}% и скорость атаки на -{40,60,80}^* и наносит до ^o{375,750,1125} физического урона^* за 5 атак. Spiderling погибает после {5,6,7} попаданий по нему.\\n\\n^gStaff of the Master^* накладывает на цель ^oRestrain^*, сокращает ^oперезарядку до {30,25,20} секунд^*, увеличивает ^oдальность применения до 900^* и при убийстве ^oсоздаёт дополнительных Spiderlings^*."
+    },
+    {
+      "keys": ["entities:Ability_Arachna4_effect_header"],
+      "ru": "Эффекты Spider Sting"
+    },
+    {
+      "keys": ["entities:Ability_Arachna4_IMPACT_effect"],
+      "ru": "Бросает Spiderling в выбранного юнита. При попадании накладывает Spider Sting на 1.5 секунды и создаёт Spiderling.\\n\\nАтаки Spiderling наносят ^o{75,150,225} физического урона^* и повторно накладывают Spider Sting на 1.5 секунды. Spiderling существует, пока не совершит 5 атак, но не дольше 15 секунд.\\n\\nЗадержка между атаками Spiderling — 1 секунда; он обладает максимальной скоростью передвижения и ^oпогибает после {5,6,7} атак по нему^*. Пока Spiderling жив, цель видна и раскрыта."
+    },
+    {
+      "keys": ["entities:Ability_Arachna4_tooltip_flavor"],
+      "ru": "Смертельно опасный поцелуй!"
+    },
+    {
+      "keys": ["entities:Ability_Arachna4_name:ult_boost"],
+      "ru": "^gBroodlings*^*"
+    },
+    {
+      "keys": ["entities:Ability_Arachna4_description2:ult_boost"],
+      "ru": "\\r"
+    },
+    {
+      "keys": ["entities:Ability_Arachna4_description_simple:ult_boost"],
+      "ru": "Бросает во врага Spiderling и накладывает на цель ^gRestrain^*. Spiderling снижает ^oскорость передвижения цели на -{40,60,80}% и скорость атаки на -{40,60,80}^* и наносит до ^o{375,750,1125} физического урона^* за 5 атак.\\n\\nПротивник может атаковать и убить Spiderling.\\n\\n^gЕсли Spiderling убивает цель, появляется подконтрольный Adult Spiderling. Если цель погибает, пока Adult Spiderling жив, появляются Child Spiderlings.^*"
+    },
+    {
+      "keys": ["entities:Ability_Arachna4_IMPACT_effect:ult_boost"],
+      "ru": "Бросает Spiderling в выбранного юнита. При попадании накладывает Spider Sting на 1.5 секунды и создаёт Spiderling.\\n\\nАтаки Spiderling наносят ^o{75,150,225} физического урона^* и повторно накладывают Spider Sting на 1.5 секунды. Spiderling существует, пока не совершит 5 атак, но не дольше 15 секунд.\\n\\nЗадержка между атаками Spiderling — 1 секунда; он обладает максимальной скоростью передвижения и погибает после {5,6,7} атак по нему. Пока Spiderling жив, цель видна и раскрыта.\\n\\n^gЕсли Spiderling убивает цель, появляется подконтрольный Adult Spiderling на 50 секунд. Если Adult Spiderling убивает вражеского юнита, появляется Child Spiderling на 50 секунд.^*"
+    }
+  ]
+}

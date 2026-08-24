@@ -1,0 +1,23 @@
+{
+  "schema_version":1,"batch_id":"HUMAN_RU_214_ITEMS_EIGHT_ROW_GROUP","reviewed_by":"Codex manual gameplay localization",
+  "entries":[
+    {"keys":["entities:Item_RunedCleaver_ATTACK_IMPACT_effect"],"english_hash":"e82ddf6c8838974b379e35eb11a6549abdddba3a2d9f0771b84dc74ae7a5c197","ru":"Наносит ^o60% прорубающего урона^* в радиусе 300 (только ближний бой)."},
+    {"keys":["entities:Item_RunedCleaver_FRAME_effect:creepdamage_melee"],"english_hash":"d58f14a4df58709736b942fe56ec5da2ebd780c958fd4c272edc4197059c5497","ru":"+25 урона против вражеских юнитов, не являющихся героями"},
+    {"keys":["entities:Item_RunedCleaver_FRAME_effect:creepdamage_ranged"],"english_hash":"b8da0f5a01474c13e1d6aa541e9e3f20bbe9ab2f8b0023314d47b4df77781658","ru":"+15 урона против вражеских юнитов, не являющихся героями"},
+    {"keys":["entities:Item_RunedCleaver_FRAME_effect:runedaxe_shopdescription"],"english_hash":"4b47b84b76772f256df41f441504be4a47b73b478d5b9dff46413435ebdb57ab","ru":"+25 урона против вражеских юнитов, не являющихся героями (только ближний бой)\\n+15 урона против вражеских юнитов, не являющихся героями (только дальний бой)"},
+    {"keys":["entities:Item_RunedCleaver_IMPACT_effect"],"english_hash":"68005ec14e9f7bff88929c7fa54b038b2288d88de4defb68fa62a81fe51ac7ff","ru":"Уничтожает выбранное ^oдерево^* или наносит ваш ^oурон от атак^* ^oвражескому крипу, устройству или варду^*.\\n\\nПри выборе дерева, устройства или варда перезарядка устанавливается на 5 секунд."},
+    {"keys":["entities:Item_RunedCleaver_description2"],"english_hash":"75d2553520dfa0d68b2d666c1f495816958f5b109a4414cd8f1bc7c3bbd80e5b","ru":"Содержит ^oмодификатор урона по крипам^*, который не складывается.\\n\\nНе даёт атакам дальнего боя урон по области."},
+    {"keys":["entities:Item_RunedCleaver_description_simple"],"english_hash":"6e5ed56361588f62d74de4765b148588e56768d2372e9fa36a5eeb186644d1a2","ru":"Герои ближнего боя получают урон по области при атаке. Герои дальнего боя не получают бонуса."},
+    {"keys":["entities:Item_Steamboots_FRAME_effect"],"english_hash":"ba588ced87abbdc32974c51fb2cb89d0a7b77ac13be095c7788e9db21383a236","ru":"+10 силы|ловкости|интеллекта при переключении"},
+    {"keys":["entities:Item_WarsteamBoots_FRAME_effect"],"english_hash":"533cbbd6b7be8e13d696e97c9fa02fd99127bcb3562549d94dd65db45beda7b8","ru":"+20% силы|ловкости|интеллекта при переключении"},
+    {"keys":["entities:Item_Steamboots_IMPACT_effect","entities:Item_WarsteamBoots_IMPACT_effect"],"english_hash":"98f9032b1cd8e19d1fe3ca578f8c61c0fadc69db5a320f686dfb197acf8bf835","ru":"^oПереключает^* бонус атрибута."},
+    {"keys":["entities:Item_Steamboots_IMPACT_effect:agi","entities:Item_WarsteamBoots_IMPACT_effect:agi"],"english_hash":"5742dd5b3764f01817a697973778b12f2489e2d3cf6e1f82d4b639d4fba531b4","ru":"^oПереключает^* бонус атрибута на интеллект."},
+    {"keys":["entities:Item_Steamboots_IMPACT_effect:int","entities:Item_WarsteamBoots_IMPACT_effect:int"],"english_hash":"7020dc903166e214a788edb92699608730edfb2c0a54f751b4710846b35f9f3c","ru":"^oПереключает^* бонус атрибута на силу."},
+    {"keys":["entities:Item_Steamboots_IMPACT_effect:str","entities:Item_WarsteamBoots_IMPACT_effect:str"],"english_hash":"f3b20c1f5fe9ff7276ea12604c2eaf07acb639a657108a3e0fa23e2edf933ad4","ru":"^oПереключает^* бонус атрибута на ловкость."},
+    {"keys":["entities:Item_Steamboots_description2"],"english_hash":"2d0afb6d7d784ceacc74c459a54cb823262332d4b28efbd1256e17caab61c73d","ru":"Этот предмет даёт пассивный бонус к ^yскорости передвижения^*, который не складывается сам с собой или с другими сапогами."},
+    {"keys":["entities:Item_Steamboots_description_simple"],"english_hash":"7b577f4715c34448bf48fc03e7805d710868702204bd871e326a42d7c9bb05db","ru":"^oМодификатор передвижения^*\\n60 скорости передвижения. Можно переключать бонусы атрибутов."},
+    {"keys":["entities:Item_WarsteamBoots_description2"],"english_hash":"624de829434897e4cb4606de790b1065881ca27c9bd9980cb110e94a891bd047","ru":"Этот предмет даёт пассивный бонус к ^yскорости передвижения^*, который не складывается сам с собой или с другими сапогами. ^rНельзя выбросить; можно иметь только один такой предмет^*."},
+    {"keys":["entities:Item_WarsteamBoots_description_simple"],"english_hash":"dfef78dc5f57646fd55d1f0d5602c56cf196a92a6715690832f453eca43c1eb8","ru":"^oМодификатор передвижения^*\\n75 скорости передвижения. Можно переключать бонусы атрибутов."},
+    {"keys":["entities:Item_RunedCleaver_effect_header","entities:Item_Steamboots_effect_header","entities:Item_WarsteamBoots_effect_header"],"english_hash":"6e5e7bc5e96f838352cde0fcff351520eab9cd6b12ecb43e9b30ed6fd98f6777","ru":"Эффекты состояния"}
+  ]
+}

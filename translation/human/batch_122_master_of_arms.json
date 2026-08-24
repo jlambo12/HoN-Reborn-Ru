@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_122_MASTER_OF_ARMS",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_MasterOfArms1_description"],
+      "ru": "Master Of Arms перегружает оружие и выпускает в противника мощный разряд, который наносит урон и обездвиживает основную цель, а затем разделяется на дополнительные снаряды, наносящие урон и замедляющие других врагов."
+    },
+    {
+      "keys": ["entities:Ability_MasterOfArms1_tooltip_flavor"],
+      "ru": "Фазеры — на оглушение! Или на поражение!"
+    },
+    {
+      "keys": ["entities:Ability_MasterOfArms1_description_simple", "entities:Ability_MasterOfArms1_IMPACT_effect"],
+      "ru": "Выпускает молнию, которая при попадании в выбранного противника разделяется на 2 разряда. Основная цель получает ^o{70,140,210,280} магического урона^* и ^oоглушается на {1.2,1.4,1.6,1.8} секунды^*, а поражённые дополнительными разрядами цели получают ^o100 магического урона^* и ^oзамедляются на 40% с постепенным ослаблением эффекта в течение 1,5 секунды^*."
+    },
+    {
+      "keys": ["entities:State_MasterOfArms_Ability1_Subsequent_name"],
+      "ru": "Forked Lightning"
+    },
+    {
+      "keys": ["entities:Ability_MasterOfArms2_description"],
+      "ru": "Master Of Arms бросает в выбранную точку Acid Bomb, которая постепенно наносит урон стоящим в кислоте противникам."
+    },
+    {
+      "keys": ["entities:Ability_MasterOfArms2_description_simple", "entities:Ability_MasterOfArms2_IMPACT_effect"],
+      "ru": "Бросает в выбранную точку ^oAcid Bomb^*. Бомба катится вперёд и разбрызгивает кислоту, которая сохраняется 6 секунд, ^oснижает броню на {1,2,3,4}^*, ^oзамедляет передвижение на {11,14,17,20}%^* и наносит стоящим в ней противникам ^o{20,35,50,65} физического урона в секунду^*."
+    },
+    {
+      "keys": ["entities:Ability_MasterOfArms3_description"],
+      "ru": "По мере освоения своего арсенала Master Of Arms открывает дополнительные свойства оружия."
+    },
+    {
+      "keys": ["entities:Ability_MasterOfArms3_description2"],
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* Одновременно предоставляет эффекты Bulldozer и Cheetah."
+    },
+    {
+      "keys": ["entities:Ability_MasterOfArms3_tooltip_flavor"],
+      "ru": "Красные против синих."
+    },
+    {
+      "keys": ["entities:Ability_MasterOfArms3_description_simple"],
+      "ru": "^bBulldozer^*\\nBulldozer даёт ^o{0,105,120,135,150} дальности атаки^* и ^o{0,8,16,24,32} урона от атаки^*.\\n\\n^rCheetah^*\\nCheetah ^oснижает урон от ваших атак по героям на 10%^* и ^oувеличивает скорость атаки на {0,45,70,95,120}^*.\\n\\n^gStaff of the Master^* одновременно предоставляет эффекты ^bBulldozer^* и ^rCheetah^*."
+    },
+    {
+      "keys": ["entities:Ability_MasterOfArms3_description_simple:MasterOfArms_Electrical"],
+      "ru": "^bBulldozer^*\\nBulldozer даёт ^o{0,105,120,135,150} дальности атаки^* и ^o{0,8,16,24,32} урона от атаки^*.\\n\\nПримените, чтобы сменить оружие на Cheetah.\\n^bBulldozer^*\\n\\n^gStaff of the Master^* одновременно предоставляет эффекты ^bBulldozer^* и ^rCheetah^*."
+    },
+    {
+      "keys": ["entities:Ability_MasterOfArms3_description_simple:MasterOfArms_Magnetic"],
+      "ru": "^rCheetah^*\\nCheetah ^oснижает урон от ваших атак по героям на {0,22,18,14,10}%^* и ^oувеличивает скорость атаки на {0,45,70,95,120}^*.\\n\\nПримените, чтобы сменить оружие на Bulldozer.\\n^rCheetah^*\\n\\n^gStaff of the Master^* одновременно предоставляет эффекты ^bBulldozer^* и ^rCheetah^*."
+    },
+    {
+      "keys": ["entities:Ability_MasterOfArms3_IMPACT_effect:MasterOfArms_Electrical"],
+      "ru": "^bBulldozer^*\\nВзяв свою винтовку Bulldozer, герой получает {0,105,120,135,150} дальности атаки и {0,8,16,24,32} урона от атаки.\\n\\nПримените, чтобы сменить оружие на Cheetah.\\n^bBulldozer^*\\n\\n^gStaff of the Master^* одновременно предоставляет эффекты Bulldozer и Cheetah."
+    },
+    {
+      "keys": ["entities:Ability_MasterOfArms3_IMPACT_effect:MasterOfArms_Magnetic"],
+      "ru": "^rCheetah^*\\n^oСнижает урон от атак по героям на {0,22,18,14,10}%^* и ^oувеличивает скорость атаки на {0,45,70,95,120}^*.\\n\\nПримените, чтобы сменить оружие на Bulldozer.\\n^rCheetah^*\\n\\n^gStaff of the Master^* одновременно предоставляет эффекты Bulldozer и Cheetah."
+    },
+    {
+      "keys": ["entities:Ability_MasterOfArms3_description2:ult_boost", "entities:Ability_MasterOfArms3_description_simple:ult_boost"],
+      "ru": "^gОдновременно предоставляет эффекты Bulldozer и Cheetah:^* {0,105,120,135,150} дальности атаки, {0,8,16,24,32} урона от атаки, {0,45,70,95,120} скорости атаки и -{0,22,18,14,10}% урона от атак по героям."
+    },
+    {
+      "keys": ["entities:Ability_MasterOfArms4_description"],
+      "ru": "Master Of Arms окружает себя мощным щитом, который на время действия усиливает и его атакующие возможности."
+    },
+    {
+      "keys": ["entities:Ability_MasterOfArms4_description2"],
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* Из-за несовершенства бонусы Master's Call к скорости и урону атаки действуют с эффективностью 70%."
+    },
+    {
+      "keys": ["entities:Ability_MasterOfArms4_tooltip_flavor"],
+      "ru": "Мне всегда нравилось играть за командира..."
+    },
+    {
+      "keys": ["entities:Ability_MasterOfArms4_description_simple"],
+      "ru": "Накладывает на выбранного союзного героя или на себя щит, который ^oпоглощает {200,400,600} урона после снижения^*. Щит действует не более 8 секунд.\\n\\nНезависимо от щита вы на 14 секунд получаете ^o{100,150,200} скорости атаки^* с ^rCheetah^* и ^o{40,50,60} дополнительного урона от атаки^* с ^bBulldozer^*. В первые 6 секунд также предоставляется ^o{60,90,120} скорости передвижения с постепенно ослабевающим эффектом^*.\\n\\n^gStaff of the Master^* вносит несовершенства: бонусы Master's Call к скорости и урону атаки действуют с эффективностью 70%."
+    },
+    {
+      "keys": ["entities:Ability_MasterOfArms4_IMPACT_effect"],
+      "ru": "Накладывает на выбранного союзного героя или на себя щит, который ^oпоглощает {200,400,600} урона после снижения^*. Щит действует не более 8 секунд.\\n\\nНезависимо от щита вы на 14 секунд получаете ^o{100,150,200} скорости атаки^* с ^rCheetah^* и ^o{40,50,60} дополнительного урона от атаки^* с ^bBulldozer^*. В первые 6 секунд также предоставляется ^o{60,90,120} скорости передвижения с постепенно ослабевающим эффектом^*."
+    },
+    {
+      "keys": ["entities:Ability_MasterOfArms4_description_simple:ult_boost"],
+      "ru": "Накладывает на выбранного союзного героя или на себя щит, который ^oпоглощает {200,400,600} урона после снижения^*. Щит действует не более 8 секунд.\\n\\nНезависимо от щита вы на 14 секунд получаете ^o{70,105,140} скорости атаки^* и ^o{28,35,42} дополнительного урона от атаки^*. В первые 6 секунд также предоставляется ^o{60,90,120} скорости передвижения с постепенно ослабевающим эффектом^*."
+    },
+    {
+      "keys": ["entities:Ability_MasterOfArms4_IMPACT_effect:ult_boost"],
+      "ru": "Накладывает на выбранного союзного героя или на себя щит, который ^oпоглощает {200,400,600} урона после снижения^*. Щит действует не более 8 секунд.\\n\\nНезависимо от щита вы на 14 секунд получаете ^g{70,105,140} скорости атаки^* и ^g{28,35,42} дополнительного урона от атаки^*. В первые 6 секунд также предоставляется ^o{60,90,120} скорости передвижения с постепенно ослабевающим эффектом^*."
+    },
+    {
+      "keys": ["entities:State_MasterOfArms_Ability4_name"],
+      "ru": "Magnetic Shield"
+    },
+    {
+      "keys": ["entities:State_MasterOfArms_Ability4_FRAME_effect"],
+      "ru": "Поглощает {200,400,600} урона после снижения"
+    },
+    {
+      "keys": ["entities:State_MasterOfArms_Ability4_Weapon_name"],
+      "ru": "Magnetic Weapon Mod"
+    },
+    {
+      "keys": ["entities:State_MasterOfArms_Ability4_Weapon_FRAME_effect"],
+      "ru": "Даёт {100,150,200} скорости атаки с оружием Cheetah\\nДаёт {40,50,60} дополнительного урона от атаки с оружием Bulldozer"
+    },
+    {
+      "keys": ["entities:Hero_MasterOfArms_description"],
+      "ru": "Меткий и смертоносный Master Of Arms расправляется с врагами с молниеносной скоростью и безупречной точностью. Его непревзойдённый арсенал сеет хаос среди противников, а неутолимая жажда битвы воодушевляет союзников."
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_MasterOfArms_1"],
+      "ru": "Выбирайте подходящую форму Master's Call, чтобы выбраться из опасной ситуации."
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_MasterOfArms_2"],
+      "ru": "Следите за картой и союзниками: Master's Call действует глобально и позволяет спасти товарища на другом конце карты."
+    },
+    {
+      "keys": ["interface:hero_tip_defensive_tip_Hero_MasterOfArms_1"],
+      "ru": "Быстро сосредоточьте огонь на Master Of Arms. Он наносит очень высокий урон, но обычно обладает небольшим запасом здоровья."
+    },
+    {
+      "keys": ["interface:hero_tip_defensive_tip_Hero_MasterOfArms_2"],
+      "ru": "Не стойте в кислоте от Acid Bomb."
+    }
+  ]
+}

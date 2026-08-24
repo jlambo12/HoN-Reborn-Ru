@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "scope": "Remote MOTD shell",
+  "rows": [
+    {"source_prefix":"preact-remote/src/components/motd.tsx","english":"Latest Updates","russian":"Последние новости","expected_matches":2},
+    {"source_prefix":"preact-remote/src/components/motd.tsx","english":"Couldn't load news","russian":"Не удалось загрузить новости","expected_matches":1},
+    {"source_prefix":"preact-remote/src/components/motd.tsx","english":"We couldn't reach the news service. Check your connection and try again.","russian":"Не удалось подключиться к службе новостей. Проверьте соединение и повторите попытку.","expected_matches":1},
+    {"source_prefix":"preact-remote/src/components/motd.tsx","english":"Retry","russian":"Повторить","expected_matches":1},
+    {"source_prefix":"preact-remote/src/components/motd.tsx","english":"No news right now","russian":"Сейчас новостей нет","expected_matches":1},
+    {"source_prefix":"preact-remote/src/components/motd.tsx","english":"Check back soon for the latest patches, events, and updates.","russian":"Загляните позже, чтобы узнать о новых патчах, событиях и обновлениях.","expected_matches":1},
+    {"source_prefix":"preact-remote/src/components/motd.tsx","english":"Message of the Day","russian":"Сообщение дня","expected_matches":1},
+    {"source_prefix":"preact-remote/src/components/motd.tsx","english":"Refresh","russian":"Обновить","expected_matches":1},
+    {"source_prefix":"preact-remote/src/components/motd.tsx","english":"Quick Links","russian":"Полезные ссылки","expected_matches":1},
+    {"source_prefix":"preact-remote/src/components/motd.tsx","english":"Discord","russian":"Discord","decision":"KEEP_EN","expected_matches":1},
+    {"source_prefix":"preact-remote/src/components/motd.tsx","english":"Join the community","russian":"Присоединиться к сообществу","expected_matches":1},
+    {"source_prefix":"preact-remote/src/components/motd.tsx","english":"Website","russian":"Сайт","expected_matches":1},
+    {"source_prefix":"preact-remote/src/components/motd.tsx","english":"heroesofnewerth.com","russian":"heroesofnewerth.com","decision":"KEEP_EN","expected_matches":1},
+    {"source_prefix":"preact-remote/src/components/motd.tsx","english":"Support","russian":"Поддержка","expected_matches":1},
+    {"source_prefix":"preact-remote/src/components/motd.tsx","english":"Get help","russian":"Получить помощь","expected_matches":1},
+    {"source_prefix":"preact-remote/src/components/motd.tsx","english":"&copy; 2026 Kongor Studios. All rights reserved.","russian":"&copy; 2026 Kongor Studios. Все права защищены.","expected_matches":1}
+  ]
+}

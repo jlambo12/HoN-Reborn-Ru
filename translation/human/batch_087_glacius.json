@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_087_GLACIUS",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_Glacius1_name"], "ru": "Tundra Blast"},
+    {"keys": ["entities:Ability_Glacius1_description"], "ru": "Glacius поражает группу противников ледяным взрывом, нанося им урон и снижая скорость передвижения и атаки."},
+    {"keys": ["entities:Ability_Glacius1_description_simple"], "ru": "Создаёт ледяной взрыв в выбранной точке и наносит противникам в области ^o{110,160,210,260} магического урона^*. Скорость их передвижения сначала снижается на ^o{25,30,35,40}%^* и постепенно восстанавливается, а ^oскорость атаки снижается на 20^* на {3,3.5,4,4.5} секунды."},
+    {"keys": ["entities:Ability_Glacius1_effect_header"], "ru": "Эффекты Tundra Blast"},
+    {"keys": ["entities:Ability_Glacius1_tooltip_flavor"], "ru": "Ледник прямо по курсу."},
+
+    {"keys": ["entities:Ability_Glacius2_name"], "ru": "Ice Imprisonment"},
+    {"keys": ["entities:Ability_Glacius2_description"], "ru": "Glacius заключает выбранного противника в лёд. Замёрзшая цель не может двигаться или атаковать и постепенно получает урон."},
+    {"keys": ["entities:Ability_Glacius2_description_simple"], "ru": "Заключает противника в лёд, наносит ^o85 магического урона в секунду^*, кратковременно ^oоглушает^*, а затем ^oобездвиживает и разоружает^* на ^o{1.5,2,2.5,3} секунды^*. На существ, не являющихся героями, эффект действует 10 секунд."},
+    {"keys": ["entities:Ability_Glacius2_effect_header"], "ru": "Эффекты Frozen"},
+    {"keys": ["entities:Ability_Glacius2_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_Glacius2_IMPACT_effect"], "ru": "Вызывает у цели Mini-Stun, а затем накладывает ^oFrozen^* на ^o{1.5,2,2.5,3} секунды^*, если цель — вражеский герой, или на 10 секунд, если это крип."},
+    {"keys": ["entities:Ability_Glacius2_tooltip_flavor"], "ru": "Тебе нужно остыть!"},
+
+    {"keys": ["entities:Ability_Glacius3_name"], "ru": "Chilling Presence"},
+    {"keys": ["entities:Ability_Glacius3_description"], "ru": "Glacius помогает союзникам сохранять хладнокровие перед лицом опасности. Увеличивает восстановление маны всех союзных героев независимо от их положения на карте."},
+    {"keys": ["entities:Ability_Glacius3_description_simple"], "ru": "Даёт Glacius ^o+1 к регенерации маны^*. Союзные герои получают ^o+{0.5,1,1.5,2} к регенерации маны^* и ^o+{25,50,75,100} к максимальному запасу маны^*."},
+    {"keys": ["entities:Ability_Glacius3_effect_header"], "ru": "Эффекты состояния"},
+    {"keys": ["entities:Ability_Glacius3_tooltip_flavor"], "ru": "Как насчёт стакана холодного лимонада?"},
+
+    {"keys": ["entities:Ability_Glacius4_name"], "ru": "Glacial Downpour"},
+    {"keys": ["entities:Ability_Glacius4_name:ult_boost"], "ru": "^gGlacial Torrent*^*"},
+    {"keys": ["entities:Ability_Glacius4_description"], "ru": "Glacius обрушивает вокруг себя град ледяных осколков. Они падают в случайные точки, наносят противникам огромный урон и снижают их скорость атаки и передвижения."},
+    {"keys": ["entities:Ability_Glacius4_description2"], "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* во время поддержания Glacius получает на 50% меньше урона. На противников, поражённых 3 осколками этой способности, накладывается Ice Imprisonment текущего уровня."},
+    {"keys": ["entities:Ability_Glacius4_description2:ult_boost"], "ru": "\\r"},
+    {"keys": ["entities:Ability_Glacius4_description_simple"], "ru": "Поддерживает способность до 6 секунд, обрушивая вокруг себя град ледяных осколков. Каждый осколок наносит ^o{75,100,125} магического урона^*. Скорость передвижения всех противников в области снижается на ^o25%^*, а скорость атаки — на ^o25^*.\\n\\n^gStaff of the Master^* даёт ^o50% снижения получаемого урона^* во время поддержания и накладывает Ice Imprisonment на противников, поражённых ^o3 ледяными осколками^* этой способности."},
+    {"keys": ["entities:Ability_Glacius4_description_simple:ult_boost"], "ru": "Поддерживает способность до 6 секунд, обрушивая вокруг себя град ледяных осколков. Каждый осколок наносит ^o{75,100,125} магического урона^*. Скорость передвижения всех противников в области снижается на ^o25%^*, а скорость атаки — на ^o25^*.\\n\\n^gВо время поддержания Glacius получает на 50% меньше урона. На противников, которые ещё не находятся под действием Ice Imprisonment и были поражены осколками 3 раза, накладывается Ice Imprisonment.^*"},
+    {"keys": ["entities:Ability_Glacius4_effect_header"], "ru": "Эффекты Glacial Freeze"},
+    {"keys": ["entities:Ability_Glacius4_IMPACT_effect"], "ru": "В течение 6 секунд или до отмены способности каждые 0,1 секунды создаёт Ice Shard в случайной точке указанной области. При попадании Ice Shard наносит противникам в радиусе 350 {75,100,125} магического урона. Во время поддержания вокруг Glacius в радиусе 700 действует Glacial Downpour."},
+    {"keys": ["entities:Ability_Glacius4_IMPACT_effect:ult_boost"], "ru": "В течение 6 секунд или до отмены способности каждые 0,1 секунды создаёт Ice Shard в случайной точке указанной области. При попадании Ice Shard наносит противникам в радиусе 350 {75,100,125} магического урона. ^gНа противников, которые ещё не находятся под действием Ice Imprisonment и были поражены осколками 3 раза, накладывается Ice Imprisonment текущего уровня.^* Во время поддержания вокруг Glacius в радиусе 700 действует Glacial Downpour. ^gВо время поддержания Glacius получает на 50% меньше урона.^*"},
+    {"keys": ["entities:Ability_Glacius4_tooltip_flavor"], "ru": "Ты холоден как лёд и готов на жертвы."}
+  ]
+}

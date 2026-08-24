@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package>
+
+	<template name="motd">
+		<panel name="motd" width="65%" height="80.2h" x="12%" align="center" visible="1" noclick="1" processcursor="1">
+
+			<!-- <html source="/preact-remote/dist/index.html" root="/preact-remote/dist/" width="100%" height="100%" /> -->
+			<html source="/preact-remote/dist/index.html" root="/preact-remote/dist/" width="100%" height="100%" />
+
+			<panel width="5h" height="5h" align="right" noclick="1">
+				<instance name="closexbutton" align="center" valign="center" onclicklua="Main:FSPanelHide()" />
+			</panel>
+
+		</panel>
+	</template>
+
+</package>

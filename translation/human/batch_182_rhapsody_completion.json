@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_182_RHAPSODY_COMPLETION",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Rhapsody1_IMPACT_effect"],
+      "english_hash": "72131e6162b70f48c5088e806ace7e2caeb9ff211a012397adcbaa968879f880",
+      "ru": "Наносит цели {50,60,65,70} магического урона и оглушает её на 1 секунду.\\n\\nПолучает {1,2,3,4} заряда. Активируйте повторно, чтобы потратить заряд, нанести цели 50 магического урона и оглушить её на 0.25 секунды."
+    },
+    {
+      "keys": ["entities:Ability_Rhapsody1_IMPACT_effect:Rhapsodystaccato"],
+      "english_hash": "aba5b7c616f2e2dc4b803bc1c1be60892b61a37232f8fa62a38d08e4b82eac2d",
+      "ru": "Активируйте, чтобы потратить заряд, нанести цели 50 магического урона и оглушить её на 0.25 секунды."
+    },
+    {
+      "keys": ["entities:Ability_Rhapsody1_description"],
+      "english_hash": "b9bb61c01534f624821cb7ca6adc5b78074c7a628ee2e8691e4323c76ffcc180",
+      "ru": "Rhapsody исполняет куплет, каждая нота которого заставляет цель содрогнуться."
+    },
+    {
+      "keys": ["entities:Ability_Rhapsody1_description_simple"],
+      "english_hash": "8000b9305aff761633299cd08f5a6f1d13bf700492f3855bbc38451a85e2da2a",
+      "ru": "Исполняет оглушающий разум куплет, нанося вражескому юниту ^o{50,60,65,70} магического урона^* и ^oоглушая его на 1 секунду^*. Затем Staccato получает ^o{1,2,3,4} заряда^* на ^o5 секунд^*. Потратьте заряд, чтобы нанести цели ^o50 магического урона^* и ^oоглушить её на 0.25 секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_Rhapsody2_IMPACT_effect"],
+      "english_hash": "669148762ca836dd55450b5dd17fb15cac941c8f9f7e819f9a437e7975188ae2",
+      "ru": "Создаёт в выбранной точке танцпол на ^o6 секунд^*. Противники на танцполе получают ^o{18,27,36,45} магического урона в секунду (в 0.75 раза меньше при движении)^*, а союзники восстанавливают ^o{10,18,26,34} здоровья в секунду (в 1.25 раза больше при движении)^*."
+    },
+    {
+      "keys": ["entities:Ability_Rhapsody2_description"],
+      "english_hash": "0bdb6a33f11c732f1ed9c25250b5b1c5f49e5f13bf28c650daab7e272d387dce",
+      "ru": "Rhapsody создаёт грандиозный танцпол, на котором и союзники, и противники пускаются в пляс."
+    },
+    {
+      "keys": ["entities:Ability_Rhapsody2_description_simple"],
+      "english_hash": "9b29c29bae50cdce8eb7fd0a7360aab7a45717b1e75fc16ec95f227fd7d4c57a",
+      "ru": "Создаёт в выбранной точке танцпол на ^o6 секунд^*. Противники на танцполе получают ^o{18,27,36,45} магического урона в секунду (в 0.75 раза меньше при движении)^*, а союзники восстанавливают ^o{10,18,26,34} здоровья в секунду (в 1.25 раза больше при движении)^*."
+    },
+    {
+      "keys": ["entities:Ability_Rhapsody3_description"],
+      "english_hash": "03fc064c090cbb3ee71c016b69df9b6c22ae52cefefbf4d0c77aff95043f6cd0",
+      "ru": "Rhapsody исполняет тайные заклинания, постоянно усиливая магические способности союзников."
+    },
+    {
+      "keys": ["entities:Ability_Rhapsody3_description2"],
+      "english_hash": "71c6a6c3fdc0d570d049db651b48469a572f700a2373c3afb220c94ee9d3847b",
+      "ru": "Даёт союзным героям поблизости ^o{0,0.5,1,1.5,2} пробивания магической брони, {0,8,12,16,20}% эффективности исцеления и ^o{0,20,40,60,80} скорости применения^*.\\n\\n^cАктивируйте способность, чтобы применить Disco Inferno к себе: его эффекты будут следовать за вами до окончания действия.^*"
+    },
+    {
+      "keys": ["entities:Ability_Rhapsody3_description_simple"],
+      "english_hash": "8888f7a8ac53d2d1415c08102ec3d1d6dde081ca9fb4b32685af6c818e0e1579",
+      "ru": "Даёт союзным героям поблизости ^o{0,0.5,1,1.5,2} пробивания магической брони, {0,8,12,16,20}% эффективности исцеления и ^o{0,20,40,60,80} скорости применения^*.\\n\\n^cАктивируйте способность, чтобы применить Disco Inferno к себе: его эффекты будут следовать за вами до окончания действия.^*"
+    },
+    {
+      "keys": ["entities:Ability_Rhapsody4_IMPACT_effect"],
+      "english_hash": "485e5ffa4808233e7ab442a2a21dcc4c0049d1fb294b07c1a90aa13b01c9c442",
+      "ru": "Поддерживает способность до {4,5,6} секунд, давая другим союзникам в радиусе 500 ^o100% снижения физического и магического урона^*."
+    },
+    {
+      "keys": ["entities:Ability_Rhapsody4_IMPACT_effect:ult_boost"],
+      "english_hash": "6f9d36cd4eadc2e07e691f8c5ba2f19c5a0eb2dde510789bd4b20ed201deb54f",
+      "ru": "Поддерживает способность до ^g{5,6,7} секунд^*, давая союзникам поблизости в радиусе 500 ^o100% снижения физического и магического урона^*. Во время поддержания можно ^gпередвигаться, не прерывая^* его."
+    },
+    {
+      "keys": ["entities:Ability_Rhapsody4_description"],
+      "english_hash": "c031064965734b076632be73e39824d8100a8cc0bdfd82d79ded7ccce432cd81",
+      "ru": "Песня Rhapsody защищает находящихся поблизости союзников, кроме неё самой, от любого физического и магического урона."
+    },
+    {
+      "keys": ["entities:Ability_Rhapsody4_description2"],
+      "english_hash": "c1f63a9d65674cf8a64a0c69dde145a2feb80079ef4252b4353e8e3fd77e956c",
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff:^* позволяет Rhapsody передвигаться во время поддержания и увеличивает длительность на 1 секунду.^*"
+    },
+    {
+      "keys": ["entities:Ability_Rhapsody4_description_simple"],
+      "english_hash": "46e6a45d9b6f298aa8d342fa0ddc4886296e895b2480a7e5bb4b96c077560e31",
+      "ru": "Поддерживает способность до ^o{4,5,6} секунд^*, давая другим союзникам в радиусе 500 ^o100% снижения физического и магического урона^*.\\n\\n^gStaff of the Master^* позволяет ^oпередвигаться во время поддержания^* и увеличивает длительность до ^o{5,6,7}^*."
+    },
+    {
+      "keys": ["entities:Ability_Rhapsody4_description_simple:ult_boost"],
+      "english_hash": "6f9d36cd4eadc2e07e691f8c5ba2f19c5a0eb2dde510789bd4b20ed201deb54f",
+      "ru": "Поддерживает способность до ^g{5,6,7} секунд^*, давая союзникам поблизости в радиусе 500 ^o100% снижения физического и магического урона^*. Во время поддержания можно ^gпередвигаться, не прерывая^* его."
+    },
+    {
+      "keys": ["entities:State_Rhapsody_Ability1_Self_description"],
+      "english_hash": "20e75c6ca744f358542f17454961d83e3d237c3c5e1009e19f6c83bd0d59b961",
+      "ru": "Пока действует этот эффект, активация Staccato наносит цели Staccato 50 магического урона и оглушает её на 0.25 секунды."
+    },
+    {
+      "keys": ["entities:State_Rhapsody_Ability1_Target_description"],
+      "english_hash": "e383bdfa6c23a1e914ca2e1d0a5e27daba574fe5041c11110480a81924c8acec",
+      "ru": "Каждая исполненная Rhapsody нота наносит вам урон и кратковременно оглушает"
+    },
+    {
+      "keys": ["entities:State_Rhapsody_Ability2_Ally_FRAME_effect"],
+      "english_hash": "b9b9d85006b0b9df441fb7bcdc3d2413ba9e2f9cceeeed4e9daa10e6d16e6c69",
+      "ru": "Восстанавливает {10,18,26,34} здоровья в секунду (в 1.25 раза больше при движении)"
+    },
+    {
+      "keys": ["entities:State_Rhapsody_Ability2_Enemy_FRAME_effect"],
+      "english_hash": "8c4a24d85b03bd53a88457ccde880516c42f0c4d481f00c055087f848283f137",
+      "ru": "Получает {18,27,36,45} магического урона в секунду (в 0.75 раза меньше при движении)"
+    },
+    {
+      "keys": ["entities:State_Rhapsody_Ability3_FRAME_effect"],
+      "english_hash": "1693c31fd57a6613deb7b179ed13dd5b25586dc23f0b3f009fe5e3996a5d4e7d",
+      "ru": "{0,0.5,1,1.5,2} пробивания магической брони"
+    },
+    {
+      "keys": ["entities:State_Rhapsody_Ability4_Buff_description"],
+      "english_hash": "80bcd940fb30ee6135a2f1b929151e52614998a862d0ba063d58bfcc0b56c56c",
+      "ru": "100% снижения физического и магического урона"
+    },
+    {
+      "keys": ["entities:State_Rhapsody_Ability4_Buff_description2"],
+      "english_hash": "d595fa4596ca62f49cfb98d201b87f5665f37461643497882c384ff7f030215c",
+      "ru": "Под защитой великолепия Rhapsody!"
+    },
+    {
+      "keys": ["entities:State_Rhapsody_Ability4_Self_description"],
+      "english_hash": "38973e0eb7aeb022945cb13542d788b73f11e38745057b1c348d3430087dc51e",
+      "ru": "Поддерживает способность, дающую союзникам поблизости 100% снижения физического и магического урона"
+    },
+    {
+      "keys": ["entities:State_Rhapsody_Ability4_Self_description2"],
+      "english_hash": "0b982370be5bdc2ac2ba25c650b2916a66bff479433dbad273343e740b83aaee",
+      "ru": "Поёт как настоящая дива!"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_194_SOLSTICE_ULTIMATE_COMPLETION",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Solstice4_IMPACT_effect"],
+      "english_hash": "71fd81570bff2a32aeda839853cd1f15f8e470eb604a21f6d6f8c7c133d0a4be",
+      "ru": "Выберите область, чтобы начать поддержание в течение 3 секунд с дальностью ^o{200-1400}^*. После начала можно повторно нажать ульту и выпустить эффект досрочно. Чем дольше поддерживается Pure Light, тем больше урон и радиус действия.\\n\\n^oДнём^* после выпуска наносит по области ^o{100-400,150-600,200-800}^* магического урона и накладывает ^o50%^* замедление на 6 секунд, которое постепенно ослабевает.\\n^bНочью^* после выпуска наносит по области ^o{100-400,150-600,200-800}^* магического урона и накладывает ^oстрах на 1.5 секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_Solstice4_IMPACT_effect:Day_Solstice"],
+      "english_hash": "99fc514401b2e3dcb2a535bcfa538d5a66467cd1c697803b11b1c6c6c77a1301",
+      "ru": "^rДневная форма^*\\nАктивируйте, чтобы начать поддержание до 3 секунд, увеличивая урон и дальность конуса; активируйте повторно для досрочного выпуска.\\n\\nНаносит ^o{100-400,150-600,200-800} магического урона^* в конусе на расстоянии от 450 до 1400 и накладывает Breath of Sol на 6 секунд.\\n^r{Day Time}^*\\n\\n- Эффект отменяется, если противник прервёт поддержание."
+    },
+    {
+      "keys": ["entities:Ability_Solstice4_IMPACT_effect:Night_Solstice"],
+      "english_hash": "264a6f2026250178ade31f743883ccae3816f33e20a8df3477b1c3eab6539072",
+      "ru": "^bНочная форма^*\\nАктивируйте, чтобы начать поддержание до 3 секунд, увеличивая урон и дальность конуса; активируйте повторно для досрочного выпуска.\\n\\nНаносит ^o{100-400,150-600,200-800} магического урона^* в конусе на расстоянии от 450 до 1400 и накладывает Lunar Judgment на 1.5 секунды.\\n^b{Night Time}^*\\n\\n- Эффект отменяется, если противник прервёт поддержание."
+    },
+    {
+      "keys": ["entities:Ability_Solstice4_description"],
+      "english_hash": "f4313a78bc8f35faaba05169198340a2579d1d06824348324af14057c009b6ac",
+      "ru": "Solstice купается в сиянии солнца или луны, накапливая силу для мощного луча."
+    },
+    {
+      "keys": ["entities:Ability_Solstice4_description:Day_Solstice"],
+      "english_hash": "6037b28adc379d0abbc843ac8f0d883d44b79095ddd6b8ed09e816fbc9791872",
+      "ru": "Solstice купается в солнечном сиянии, накапливая силу для мощного луча."
+    },
+    {
+      "keys": ["entities:Ability_Solstice4_description:Night_Solstice"],
+      "english_hash": "be97522dd54f3e9092f0ccba1a7c33bf7e012a36ef47ed7b26530201c37c5e0e",
+      "ru": "Solstice купается в мрачном лунном сиянии, накапливая силу для мощного луча."
+    },
+    {
+      "keys": ["entities:Ability_Solstice4_description_simple"],
+      "english_hash": "f51f92f92ba6aaa482303dffae07d2cde43251b52ca36af5f59fe5df4ebada0b",
+      "ru": "Поддерживайте способность ^oдо 3 секунд^*, чтобы нанести ^oдо {400,600,800} магического урона^* в конусе на расстоянии ^oдо 1300 единиц^*.\\n^rДневная форма^*\\nНакладывает ^o50% замедление^* на 6 секунд, которое постепенно ослабевает.\\n^bНочная форма^*\\nНакладывает ^oстрах на 1.5 секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_Solstice4_description_simple:Day_Solstice"],
+      "english_hash": "e6e672dd8ef5080e24686ad9d8826116ef854bdb104e105a728aa9f6f51791d8",
+      "ru": "^rДневная форма^*\\nПоддерживайте способность ^oдо 3 секунд^*, чтобы нанести ^oдо {400,600,800} магического урона^* в конусе на расстоянии ^oдо 1300 единиц^* и наложить ^o50% замедление, которое постепенно ослабевает^* в течение 6 секунд."
+    },
+    {
+      "keys": ["entities:Ability_Solstice4_description_simple:Night_Solstice"],
+      "english_hash": "0b7f957185a2f9e2bce67b18d67e257d5e8eb445fdad1eb4279f10be9a0eda8a",
+      "ru": "^rНочная форма^*\\nПоддерживайте способность ^oдо 3 секунд^*, чтобы нанести ^oдо {400,600,800} магического урона^* в конусе на расстоянии ^oдо 1300 единиц^* и наложить ^oстрах на 1.5 секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_Solstice4_effect_header:Day_Solstice"],
+      "english_hash": "135648fe0907e474c96aff0389b9038b264b2ccb4e0067f43e008f3db628b640",
+      "ru": "Эффекты Breath of Sol"
+    },
+    {
+      "keys": ["entities:Ability_Solstice4_effect_header:Night_Solstice"],
+      "english_hash": "07cc05b741b1437d2789202fa4424a59a403f7d966fb343be562bf78a8daa500",
+      "ru": "Эффекты Lunar Judgment"
+    },
+    {
+      "keys": ["entities:State_Solstice_Ability4_Enemy_FRAME_effect"],
+      "english_hash": "99dc92dc2ba3380d73d58680beec9d0a73d056c02cfe4750d534e0423cab2cf9",
+      "ru": "Сначала снижает скорость передвижения на 50%; она постепенно восстанавливается в течение 6 секунд."
+    },
+    {
+      "keys": ["entities:State_Solstice_Ability4_Enemy_Night_FRAME_effect"],
+      "english_hash": "3f0ea30a2a94b8e15cea297050c7815de35d504b5734e268e2527baf2acecc3f",
+      "ru": "Теряет контроль и в страхе хаотично перемещается"
+    }
+  ]
+}

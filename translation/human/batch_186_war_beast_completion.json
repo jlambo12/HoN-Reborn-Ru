@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_186_WAR_BEAST_COMPLETION",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_WarBeast1_IMPACT_effect"],
+      "english_hash": "19092ae3d272949def569424fbfb81586d617652e3af6a8655af4754138ad7a3",
+      "ru": "Призывает 2 Hellhounds. Одновременно могут существовать только 2.\\n\\nHellhounds имеют ^o{400,425,450,475} здоровья^*, наносят ^o{30,38,46,54} физического урона^* за атаку, имеют 3 брони, наносят нейтралам 10 дополнительного урона атаки и атакуют раз в 1.25 секунды. Их атаки с вероятностью 30% наносят ^oв {1.5,1.6,1.7,1.8} раза больше обычного урона^*.\\n\\nHellhounds 4-го уровня невидимы, пока не атакуют.\\n\\nHellhounds не могут атаковать башни, если War Beast находится дальше 925 единиц."
+    },
+    {
+      "keys": ["entities:Ability_WarBeast1_IMPACT_effect:ult_boost"],
+      "english_hash": "c34b4ef1218b9078b20baa474daf959149d33e825f7a0147e1fed6256f6de24e",
+      "ru": "Призывает 2 Hellhounds. Одновременно могут существовать только 2.\\n\\nHellhounds имеют ^g{800,850,900,950} здоровья^*, наносят ^o{30,38,46,54} физического урона^* за атаку, имеют 3 брони, наносят нейтралам 10 дополнительного урона атаки и атакуют раз в 1.25 секунды. Их атаки с вероятностью 30% наносят ^oв {1.5,1.6,1.7,1.8} раза больше обычного урона^* и ^gна 6 секунд увеличивают базовый урон атаки всех союзников в радиусе 600 на 4%; эффект суммируется до 20 раз^*.\\n\\nHellhounds 4-го уровня невидимы, пока не атакуют.\\n\\nHellhounds не могут атаковать башни, если War Beast находится дальше 925 единиц."
+    },
+    {
+      "keys": ["entities:Ability_WarBeast1_description"],
+      "english_hash": "bfd33cd66a9533d377aacf3f42323d3b852d35c39fc33404dc54ba06699b21ab",
+      "ru": "War Beast призывает из преисподней Hellhounds, чтобы они атаковали его врагов."
+    },
+    {
+      "keys": ["entities:Ability_WarBeast1_description2"],
+      "english_hash": "2cc86460bcc0603e6289d91d61db5e1d778f8ee7e7c322b9e142bb054684f54c",
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff:^* удваивает максимальное здоровье Hellhounds, а их атаки начинают увеличивать базовый урон атаки союзников."
+    },
+    {
+      "keys": ["entities:Ability_WarBeast1_description_simple"],
+      "english_hash": "640f0a0de522322bd162642826d2e5f616a2a3e36a0fc7e4566b2b19c30d687f",
+      "ru": "Призывает из преисподней ^o2 Hellhounds^*. Они имеют ^o{400,425,450,475} здоровья^*, наносят ^o{30,38,46,54} урона^*, имеют 3 физической и 2 магической брони, наносят нейтралам 10 дополнительного урона атаки и с ^oвероятностью 30% наносят критический удар^* с множителем ^o{1.5,1.6,1.7,1.8}^*.\\n\\nHellhounds 4-го уровня ^oневидимы, пока не атакуют^*.\\n\\n^gStaff of the Master^* увеличивает их максимальное здоровье до ^o{800,850,900,950}^*, а атаки Hellhounds на 6 секунд увеличивают базовый урон атаки союзников в радиусе 600 на 4%; эффект суммируется до 20 раз."
+    },
+    {
+      "keys": ["entities:Ability_WarBeast1_description_simple:ult_boost"],
+      "english_hash": "b15cf760a51ad5351b6066132cddc15c14d26db32ed393d79a1402a3128a066a",
+      "ru": "Призывает из преисподней ^o2 Hellhounds^*. Они имеют ^g{800,850,900,950} здоровья^*, наносят ^o{30,38,46,54} урона^*, имеют 3 физической и 2 магической брони, наносят нейтралам 10 дополнительного урона атаки и с ^oвероятностью 30%^* наносят критический удар с множителем ^o{1.5,1.6,1.7,1.8}^*, а ^gих атаки на 6 секунд увеличивают базовый урон атаки союзников в радиусе 600 на 4%; эффект суммируется до 20 раз^*. Hellhounds 4-го уровня невидимы, пока не атакуют."
+    },
+    {
+      "keys": ["entities:Ability_WarBeast1_effect_header", "entities:Ability_WarBeast3_effect_header", "entities:Ability_WarBeast_Ability1_Pet_Ability1_effect_header", "entities:Ability_WarBeast_Ability1_Pet_Ability2_effect_header", "entities:Ability_WarBeast_Ability1_Pet_Ability3_effect_header"],
+      "english_hash": "6e5e7bc5e96f838352cde0fcff351520eab9cd6b12ecb43e9b30ed6fd98f6777",
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:Ability_WarBeast2_IMPACT_effect"],
+      "english_hash": "5b12d564853e42fede973103d933380c6c4c30dceac6925b36237587cf2e54b0",
+      "ru": "Накладывает ^oBattle Cry^* на себя и всех союзных героев на ^o20 секунд^*.\\n\\nНакладывает Rallied на всех подконтрольных игрокам союзных юнитов на 20 секунд. Этот эффект не даёт War Beast помощь в убийстве."
+    },
+    {
+      "keys": ["entities:Ability_WarBeast2_description"],
+      "english_hash": "5d23c328a4aa7ddaa9a8572a04a09746e9658a6a625ade8170c1d05a8c103e1d",
+      "ru": "War Beast издаёт могучий боевой клич, увеличивая урон себе и подконтрольным юнитам."
+    },
+    {
+      "keys": ["entities:Ability_WarBeast2_description_simple"],
+      "english_hash": "11eaeba16f8c02bb0ae0285ce196fa29f7a77fd105cd98435008a95b38f8b1c3",
+      "ru": "Издаёт могучий ^oBattle Cry^*, давая всем союзным героям ^o{15,20,25,30} урона атаки^* и ^o{5,10,15,20} скорости атаки^*, а всем подконтрольным игрокам союзным юнитам — ^o{6,8,10,12} урона атаки^* и ^o{5,10,15,20} скорости атаки^* на ^o20 секунд^*."
+    },
+    {
+      "keys": ["entities:Ability_WarBeast2_effect_header"],
+      "english_hash": "bbf1151dbe2a2c014da08a17791f461596921cb037587c0075496157c52d330c",
+      "ru": "Эффекты Battle Cry"
+    },
+    {
+      "keys": ["entities:Ability_WarBeast2_effect_header2"],
+      "english_hash": "1e4dca45402d90c24b052bea2aab9e38bfaab7dac2b18858aa7a92b08b724ed2",
+      "ru": "Эффекты Rallied"
+    },
+    {
+      "keys": ["entities:Ability_WarBeast3_description"],
+      "english_hash": "416f2046acfc94e1d35305389686285a43a984acd1e38555f2e1a9ef24da571f",
+      "ru": "War Beast накапливает первобытную ярость, увеличивая урон атаки и восстановление здоровья себе и подконтрольным юнитам."
+    },
+    {
+      "keys": ["entities:Ability_WarBeast3_description_simple"],
+      "english_hash": "27d9c9707be19d4ec0c7f0e5417e2e8e9f317277bd12cc0a637f1165f391fc99",
+      "ru": "Даёт вам и подконтрольным юнитам ^o{10,15,20,25}% дополнительного базового урона^* и ^o{2,4,6,8} восстановления здоровья^*."
+    },
+    {
+      "keys": ["entities:Ability_WarBeast4_IMPACT_effect"],
+      "english_hash": "af89eca5bd1f8ee86fcaa8473dd039947c48c5455caa54e0284fc01920d6dec8",
+      "ru": "Накладывает на себя Metamorphosis на 20 секунд."
+    },
+    {
+      "keys": ["entities:Ability_WarBeast4_description"],
+      "english_hash": "ac4cff877fb8b0907755fd074331ec7818da0d1d45c10be2cc876a642a3356b7",
+      "ru": "War Beast превращается в Hellhound Lieutenant, получая больше здоровья, критический удар, дополнительную скорость и возможность проходить сквозь юнитов."
+    },
+    {
+      "keys": ["entities:Ability_WarBeast4_description_simple"],
+      "english_hash": "dd4fede3fcee44dc5bbee5329ec40a228f8580ed7d11386987ff84555910f7fc",
+      "ru": "^oПревращается^* в Hellhound Lieutenant на ^o20 секунд^*, получая ^oсниженное базовое время атаки^* с 1.7 до 1.4, 30% вероятности нанести ^oкритический удар с множителем {1.6,1.8,2}^*, ^o{100,200,300} дополнительного здоровья^*, ^o{600,800,1000} ночного обзора^*, ^oвозможность проходить сквозь юнитов^* и максимальную ^oскорость передвижения {550,575,600}^* для себя и всех подконтрольных юнитов."
+    },
+    {
+      "keys": ["entities:Ability_WarBeast4_effect_header"],
+      "english_hash": "4b288228b70dc1b25b79d33cf5e319854c4ea4d7e641ec272a672d4889cae09a",
+      "ru": "Эффекты Metamorphosis"
+    },
+    {
+      "keys": ["entities:Ability_WarBeast_Ability1_Pet_Ability1_description"],
+      "english_hash": "51cd60ba11ec72d33a7131886ac633f5e60a518ad5244fc627c581c059fd744d",
+      "ru": "Каждая атака имеет вероятность стать критической."
+    },
+    {
+      "keys": ["entities:Ability_WarBeast_Ability1_Pet_Ability1_description_simple"],
+      "english_hash": "a1bd76c63d7cb0a2ac264fc7b303c31a830f7650aa40eb9051067ed6c25e38ec",
+      "ru": "Наносит нейтралам 10 дополнительного урона атаки. Также даёт ^o30% вероятности^* нанести критический удар с множителем ^o{1.5,1.6,1.7,1.8}^*."
+    },
+    {
+      "keys": ["entities:Ability_WarBeast_Ability1_Pet_Ability2_description"],
+      "english_hash": "16218ff8f10e3d7d58a9ce693fad8c9e2648d8c0ad4eae6c5bf07fb8bb0c0dc5",
+      "ru": "Всегда невидим, пока не атакует."
+    },
+    {
+      "keys": ["entities:Ability_WarBeast_Ability1_Pet_Ability2_description_simple"],
+      "english_hash": "01a3514287b19e90397fb990ba4e7d63ec9ea8ef3497bbe6d1105a59d9b25743",
+      "ru": "Даёт невидимость, пока юнит не атакует."
+    },
+    {
+      "keys": ["entities:Ability_WarBeast_Ability1_Pet_Ability3_description", "entities:Ability_WarBeast_Ability1_Pet_Ability3_description_simple"],
+      "english_hash": "15eec866625830d5a7f36ea856ffb330d7cd85fc57e58d15946144dd75808685",
+      "ru": "^gАтаки на 6 секунд увеличивают базовый урон атаки союзников в радиусе 600 на 4%; эффект суммируется до 20 раз.^*"
+    },
+    {
+      "keys": ["entities:State_WarBeast_Ability4_FRAME_effect"],
+      "english_hash": "582f84b05c8775108bbaec57a79e48e7be7bdac26abcd24e4ce3a4320fde3f76",
+      "ru": "Снижает базовое время атаки с 1.7 до 1.4 секунды.\\nУвеличивает скорость передвижения героя и всех подконтрольных юнитов до {550,575,600} и позволяет проходить сквозь юнитов.\\nУвеличивает дальность ночного обзора на {600,800,1000}."
+    }
+  ]
+}

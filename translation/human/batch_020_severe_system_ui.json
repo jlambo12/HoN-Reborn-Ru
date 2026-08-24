@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_020_SEVERE_SYSTEM_UI",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Shop_Recipes5_description"],
+      "ru": "Рецепты изменения атаки создают предметы, которые добавляют новые свойства атакам героя или изменяют существующие."
+    },
+    {
+      "keys": ["entities:Shop_Boots_description"],
+      "ru": "В этом магазине продаются ботинки, увеличивающие скорость передвижения, включая Marchers и Post Haste."
+    },
+    {
+      "keys": ["entities:Shoutout_BigPimpin_description"],
+      "ru": "Сверкни льдом — пора Biiiig Pimpin'!"
+    },
+    {
+      "keys": ["interface:tutorial_slide_bans_desc_top"],
+      "ru": "Нажмите «ИГРАТЬ», чтобы открыть экран выбора режима, где можно указать героев для запрета."
+    },
+    {
+      "keys": ["interface:tutorial_slide_bans_desc_bottom"],
+      "ru": "Приоритет идёт СВЕРХУ ВНИЗ.\\nЧем выше герой в списке, тем вероятнее его запрет."
+    },
+    {
+      "keys": ["interface:tutorial_slide_game_modes_desc_bottom"],
+      "ru": "Forest of Caldavar предлагает классические сражения на 3 линиях.\\nMidWars — более непринуждённый режим с быстрыми схватками на 1 линии."
+    },
+    {
+      "keys": ["interface:tutorial_npe_welcome_title"],
+      "ru": "Добро пожаловать в Heroes of Newerth: Reborn"
+    },
+    {
+      "keys": ["interface:tutorial_npe_complete_message_new"],
+      "ru": "Вы освоили основы Heroes of Newerth: Reborn. Удачи в бою!"
+    },
+    {
+      "keys": ["interface:tutorial_npe_complete_message_moba"],
+      "ru": "Вы освоили основы Heroes of Newerth: Reborn. Пора доминировать!"
+    },
+    {
+      "keys": ["interface:boss_info_kongor_ability3_desc"],
+      "ru": "Пассивно восстанавливает 5% максимального здоровья в секунду. После получения атаки восстановление отключается на 10 секунд.\\n\\nТакже даёт эффект Nullstone, блокирующий следующую направленную способность. После срабатывания эффект восстанавливается через 15 секунд."
+    }
+  ]
+}

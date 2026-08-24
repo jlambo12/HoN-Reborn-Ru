@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_002_RUNTIME_ITEMS",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Item_Hellflower_description_simple"],
+      "ru": "Примените к врагу, чтобы запретить ему использовать способности и предметы, а также увеличить получаемый им урон."
+    },
+    {
+      "keys": ["entities:Item_Hellflower_effect_header"],
+      "ru": "Эффекты Hellflower"
+    },
+    {
+      "keys": ["entities:Item_Hellflower_shop_flavor"],
+      "ru": "Hellflower растёт в землях, куда не проникает солнце Ньюэрта. Эти цветы источают запах смерти и покрыты пылающими шипами, но всё равно высоко ценятся: их аромат обостряет разум и пробуждает боевое неистовство, заставляя атаковать быстрее и сильнее. Укол шипа ускоряет восстановление магических сил, а распустившийся цветок обжигает саму душу врага."
+    },
+    {
+      "keys": ["entities:Item_Hellflower_IMPACT_effect"],
+      "ru": "Накладывает ^oHellflower^* на выбранную цель на ^o5 секунд^*."
+    },
+    {
+      "keys": ["entities:State_Hellflower_FRAME_effect"],
+      "ru": "За поражённой целью остаётся видимый след."
+    },
+    {
+      "keys": ["entities:Item_CrimsonGuard_description"],
+      "ru": "Реликвия, рождённая в пламени после гибели вечной ^rFirebird^*.\\n\\nПассивно увеличивает ^yмагическую броню^*. Этот бонус не складывается с бонусом к ^yмагической броне^* от других предметов."
+    },
+    {
+      "keys": ["entities:Item_PhoenixTalon_description", "entities:Item_Chaosbrand_description"],
+      "ru": "Реликвия, рождённая в пламени после гибели вечной ^rFirebird^*."
+    },
+    {
+      "keys": ["entities:Item_PhoenixTalon_IMPACT_effect"],
+      "ru": "^oТелепортирует^* в выбранную точку. Противники в радиусе 1000 получают на 20% больше урона от подконтрольных вам источников. Через 4 секунды вы ^oвозвращаетесь в точку применения^*."
+    },
+    {
+      "keys": ["entities:State_Item_PhoenixTalon_Return_FRAME_effect"],
+      "ru": "Возвращение в точку применения!"
+    },
+    {
+      "keys": ["entities:State_Item_PhoenixTalon_Amplify_FRAME_effect"],
+      "ru": "Получает на 20% больше урона от владельца Phoenix's Talon."
+    },
+    {
+      "keys": ["entities:State_Item_Chaosbrand_Starborn_Burning_FRAME_effect"],
+      "ru": "Получает 75 магического урона за 2 секунды."
+    },
+    {
+      "keys": ["entities:State_Item_Chaosbrand_Active_FRAME_effect"],
+      "ru": "Временно получает все эффекты Chaosbrand.\\nКогда действие закончится, Chaosbrand будет неактивен 10 секунд."
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_162_SOUL_REAPER",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_SoulReaper1_IMPACT_effect"],
+      "english_hash": "f4b43793feb3624f5f872500e8ca8b588e4838ea0ad4002867691651e541ced5",
+      "ru": "Наносит противникам ^o{75,150,225,300} магического урона^* и ^oвосстанавливает союзникам в области {60,85,110,135} здоровья^*."
+    },
+    {
+      "keys": ["entities:Ability_SoulReaper1_description"],
+      "english_hash": "6763ab39f2291bd8b28e44f86e9d33e182dbabc6beda559a08dc72b9f675f6d8",
+      "ru": "Soul Reaper мгновенно вершит суд над всеми вокруг. Противники получают урон, а союзники восстанавливают здоровье."
+    },
+    {
+      "keys": ["entities:Ability_SoulReaper1_description_simple"],
+      "english_hash": "e30e00fd1ae14cf100641599c74bed8a58dc894fa00465abe047abf7f92ec8d4",
+      "ru": "Выпускает душу в каждого ближайшего юнита. Души наносят противникам ^o{75,150,225,300} магического урона^*, а союзникам ^oвосстанавливают {60,85,110,135} здоровья^*.\\n\\n^gStaff of the Master^*: увеличивает урон на 10% от текущего здоровья цели, а лечение — на 5% от недостающего здоровья цели."
+    },
+    {
+      "keys": ["entities:Ability_SoulReaper1_description_simple:ult_boost"],
+      "english_hash": "5a5d31b77bc23a9513d9e0fcb59c389561fb4766ce63324ec87d2a9492212f9b",
+      "ru": "Выпускает душу в каждого ближайшего юнита. Души наносят противникам ^g{75,150,225,300} + 10% от текущего здоровья цели магического урона^*, а союзникам ^gвосстанавливают {60,85,110,135} + 5% от их недостающего здоровья^*."
+    },
+    {
+      "keys": ["entities:Ability_SoulReaper2_IMPACT_effect"],
+      "english_hash": "6fc9a39f3a7abeacee358f29b987eb38490fd2ed6fd3ba9f57322576f9f256df",
+      "ru": "На ^o10 секунд^* ^oудваивает потерю здоровья^* от ауры, но вдвое уменьшает её радиус."
+    },
+    {
+      "keys": ["entities:Ability_SoulReaper2_description"],
+      "english_hash": "55bdc42d2715424619c1622581e6e5b6a0438c154f52276a1b2654b5f391a283",
+      "ru": "Перед Soul Reaper каждый герой вспоминает о своих грехах. Само присутствие жнеца постепенно лишает окружающих жизненных сил."
+    },
+    {
+      "keys": ["entities:Ability_SoulReaper2_description_simple"],
+      "english_hash": "801971bcdfc65d78c3b24156c883901d8e76f933f8145e7ba171e623a2cf74fa",
+      "ru": "Постепенно истощает окружающих противников: каждую секунду они теряют ^o{.4,.6,.8,1}% от максимального здоровья^*.\\n\\nПри активации на ^o10 секунд^* ^oудваивает потерю здоровья^* и ^oзамедляет противников на {4,6,8,10}%^*, но вдвое уменьшает радиус."
+    },
+    {
+      "keys": ["entities:Ability_SoulReaper3_IMPACT_effect"],
+      "english_hash": "28688f2d6780b1df4048537f8d537c4462f42d1425a0e0e695c5099ed3fabae4",
+      "ru": "Накапливает до ^o10 зарядов^*, получая один заряд, когда юнит в радиусе 1000 погибает от подконтрольного союзному игроку юнита.\\n\\nПримените к себе или союзному герою, чтобы потратить все заряды и восстановить цели ^o{10,20,30,40} маны за заряд^*.\\n\\n^oАвтоприменение^* мгновенно расходует на себя все текущие и последующие заряды."
+    },
+    {
+      "keys": ["entities:Ability_SoulReaper3_description"],
+      "english_hash": "8dc89fbd6a9052929fd81f760da92087f8fbcf0d8642c1870bba53519e4794de",
+      "ru": "Soul Reaper питается маной других существ и становится сильнее, забирая силы у павших рядом."
+    },
+    {
+      "keys": ["entities:Ability_SoulReaper3_description_simple"],
+      "english_hash": "ad9aa1f907c170d639dd30efa3cdb13b28230c43cd88301b73e644a3002d9381",
+      "ru": "Накапливает до ^o10 зарядов^*, когда ближайших юнитов убиваете вы или ваши союзники.\\n\\nПримените к себе или союзному герою, чтобы потратить все заряды и ^oвосстановить цели {10,20,30,40} маны за заряд^*.\\n\\nМожно включить ^oавтоприменение^*, чтобы всегда расходовать все заряды на себя."
+    },
+    {
+      "keys": ["entities:Ability_SoulReaper4_IMPACT_effect"],
+      "english_hash": "d51a73e7f6265cac9ba45994788615a60dadf311f5d3dcbcf6f8aaa631731f35",
+      "ru": "^o{40,65,90}% от недостающего здоровья цели^* наносится как ^oмагический урон^*. ^gУрон до 5 раз переходит на вражеских героев в радиусе 500, каждый раз сохраняя 60% силы.^*\\n\\n^oОглушает основную цель на 1.5 секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_SoulReaper4_description"],
+      "english_hash": "22e84d72b8fe953e26f847aa2b218da17136a75e2336f60b082cd9e5b80fd705",
+      "ru": "Soul Reaper призывает демоническую казнь, оглушая цель и нанося тем больше урона, чем ближе она к смерти."
+    },
+    {
+      "keys": ["entities:Ability_SoulReaper4_description_simple"],
+      "english_hash": "5680fa33b15c05853b05d0ac1e0e5bcc22a517ef54b731b479cdc961b206b501",
+      "ru": "Совершает демоническую казнь над вражеским юнитом: ^oоглушает его на 1.5 секунды^* и наносит магический урон в размере ^o{40,65,90}%^* от недостающего здоровья цели."
+    },
+    {
+      "keys": ["entities:State_SoulReaper_Ability2_Buff_FRAME_effect"],
+      "english_hash": "312dce9283cc81b6590d34904c3aa94fe0b84fcb59f1ffc07bd26c33bb9b7fe0",
+      "ru": "Потеря здоровья от ауры удвоена, но её радиус уменьшен вдвое."
+    },
+    {
+      "keys": ["entities:State_SoulReaper_Ability2_FRAME_effect"],
+      "english_hash": "9f3642c4d03ea7b1e8f8cfe5b43d5789bf7e79bd9042f98d3a6d884d625fc16f",
+      "ru": "Противники в области каждую секунду теряют {.4,.6,.8,1}% от максимального здоровья."
+    },
+    {
+      "keys": ["entities:State_SoulReaper_Ability2_Greater_FRAME_effect"],
+      "english_hash": "1a9675caaf0cc28770c6e0b4ecf89a7fe9cf19e0c0054af8b7d2b1c5b396f6e0",
+      "ru": "Противники в области каждую секунду теряют {.8,1.2,1.6,2}% от максимального здоровья."
+    }
+  ]
+}

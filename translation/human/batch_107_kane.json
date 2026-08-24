@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_107_KANE",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Kane1_description"],
+      "ru": "Kane выбрасывает вперёд могучий меч, поражая врагов и притягивая их под удар своего щита."
+    },
+    {
+      "keys": ["entities:Ability_Kane1_IMPACT_effect"],
+      "ru": "Выберите точку, чтобы метнуть перед собой меч и нанести ^o{110,185,260,335}^* физического урона.\\n\\nСнижает скорость передвижения поражённых противников ^oна 20% на 4 секунды^* и притягивает их к вам."
+    },
+    {
+      "keys": ["entities:Ability_Kane1_tooltip_flavor"],
+      "ru": "Держи друзей близко, а врагов — ещё ближе."
+    },
+    {
+      "keys": ["entities:Ability_Kane2_description"],
+      "ru": "Kane в совершенстве владеет искусством нападения и защиты и может переключаться между двумя аурами, которые дают ему и союзникам шанс критического удара либо дополнительную броню."
+    },
+    {
+      "keys": ["entities:Ability_Kane2_IMPACT_effect"],
+      "ru": "Переключает ауры с задержкой {2} секунды:\\n\\nOffensive Force: даёт Kane и ближайшим союзникам ^o{10,20,30,40}% шанса нанести критический удар с множителем 1.5x^* и восстанавливает ^o{1,1.5,2,2.5}%^* недостающей маны вне боя.\\n\\nDefensive Might: даёт Kane и ближайшим союзникам ^o{2,3,4,5} брони^* и восстанавливает ^o{1,1.5,2,2.5}% недостающего здоровья^*, если они не получали урон в течение 8 секунд."
+    },
+    {
+      "keys": ["entities:Ability_Kane2_IMPACT_effect:Kane_Offense"],
+      "ru": "Пассивно даёт Kane и ближайшим союзникам ^o{10,20,30,40}%^* шанса нанести критический удар с множителем 1.5x и восстанавливает ^o{1,1.5,2,2.5}%^* недостающей маны, если они не получали урон в течение 8 секунд.\\n\\nПереключите, чтобы перейти к Defensive Might."
+    },
+    {
+      "keys": ["entities:Ability_Kane2_IMPACT_effect:Kane_Defense"],
+      "ru": "Пассивно даёт Kane и ближайшим союзникам ^o{2,3,4,5}^* брони и восстанавливает ^o{1,1.5,2,2.5}%^* недостающего здоровья, если они не получали урон в течение 8 секунд.\\n\\nПереключите, чтобы перейти к Offensive Force."
+    },
+    {
+      "keys": ["entities:State_Kane_Ability2_Regen_name"],
+      "ru": "Defensive Might (Regen)"
+    },
+    {
+      "keys": ["entities:State_Kane_Ability2_Regen_description"],
+      "ru": "Восстанавливает {1,1.5,2,2.5}% недостающего здоровья в секунду, пока вы не получаете урон."
+    },
+    {
+      "keys": ["entities:State_Kane_Ability2_Regen_FRAME_effect", "entities:State_Kane_Ability2_Regen_Mana_FRAME_effect"],
+      "ru": "Не действует, если существо получало урон в течение последних 8 секунд."
+    },
+    {
+      "keys": ["entities:State_Kane_Ability2_Regen_Mana_name"],
+      "ru": "Offensive Force (Regen)"
+    },
+    {
+      "keys": ["entities:State_Kane_Ability2_Regen_Mana_description"],
+      "ru": "Восстанавливает {1,1.5,2,2.5}% недостающей маны в секунду, пока вы не получаете урон."
+    },
+    {
+      "keys": ["entities:State_Kane_Ability2_Switch_Offense_name"],
+      "ru": "Offense Switch"
+    },
+    {
+      "keys": ["entities:State_Kane_Ability2_Switch_Offense_description"],
+      "ru": "Переключение на ауру Offensive Force..."
+    },
+    {
+      "keys": ["entities:State_Kane_Ability2_Switch_Defense_name"],
+      "ru": "Defense Switch"
+    },
+    {
+      "keys": ["entities:State_Kane_Ability2_Switch_Defense_description"],
+      "ru": "Переключение на ауру Defensive Might..."
+    },
+    {
+      "keys": ["entities:Ability_Kane3_description"],
+      "ru": "С каждым взмахом Kane сокрушает боевой дух противника, уменьшая наносимый им Kane урон."
+    },
+    {
+      "keys": ["entities:Ability_Kane3_tooltip_flavor"],
+      "ru": "Меч Kane — продолжение его самого. Он разит с такой точностью и яростью, что перед его могуществом падут даже самые грозные создания."
+    },
+    {
+      "keys": ["entities:State_Kane_Ability3_name"],
+      "ru": "Kane's Anguish"
+    },
+    {
+      "keys": ["entities:State_Kane_Ability3_description"],
+      "ru": "За каждый заряд ваши атаки наносят на ^o20%^* меньше урона.\\nПри атаке Kane вы получаете урон в размере ^o5% от своего урона от атаки за каждый заряд^*.\\nМаксимум зарядов: {1,2,3,4}."
+    },
+    {
+      "keys": ["entities:Ability_Kane4_description"],
+      "ru": "Kane всегда первым бросается в бой. Бросив вызов противнику, он насмешками и оскорблениями вынуждает того ответить — и начинается поединок."
+    },
+    {
+      "keys": ["entities:Ability_Kane4_description2"],
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff:^* пробуждает неактивные награды за выигранные дуэли, давая 1 урона от атаки за каждый заряд. Во время Face Off Kane получает на 50% меньше урона из всех источников, кроме своего противника."
+    },
+    {
+      "keys": ["entities:Ability_Kane4_tooltip_flavor"],
+      "ru": "Пришёл, увидел, победил."
+    },
+    {
+      "keys": ["entities:State_Kane_Ability4_Enemy_description", "entities:State_Kane_Ability4_Me_description"],
+      "ru": "При активации вы и ваша цель бросаетесь навстречу друг другу и вступаете в бой на {3.5,4.25,5} секунд!"
+    },
+    {
+      "keys": ["entities:State_Kane_Ability4_Enemy_description2"],
+      "ru": "До конца действия вынужден атаковать Kane."
+    },
+    {
+      "keys": ["entities:State_Kane_Ability4_Me_description2"],
+      "ru": "До конца действия вынужден атаковать выбранную цель.\\n\\nЕсли второй дуэлянт погибает, вы навсегда получаете {4,6,8} урона от атаки. Бонус неактивен, пока не действует эффект Staff of the Master."
+    },
+    {
+      "keys": ["entities:State_Kane_Ability4_Me_description2:ult_boost"],
+      "ru": "До конца действия вынужден атаковать выбранную цель.\\n\\Получает на 50% меньше урона из всех источников, кроме второго дуэлянта.\\n\\nЕсли второй дуэлянт погибает, вы навсегда получаете {4,6,8} урона от атаки."
+    },
+    {
+      "keys": ["entities:Hero_Kane_description"],
+      "ru": "Kane the Usurper — осиротевший воин смешанной крови, которого Maliken воспитал в ненависти ко всем монархам и властям. Его идеал — Newerth без корон, где править другими дозволено лишь сильнейшим и свирепейшим. Он невероятно самоуверен, но слова у него не расходятся с делом — возможно, это просто уверенность в себе..."
+    },
+    {
+      "keys": ["entities:Hero_Kane_role"],
+      "ru": "Kane — боец передней линии. Он превосходно возглавляет атаку, выводит из боя вражеского керри и одновременно усиливает свою команду."
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_Kane_1"],
+      "ru": "Waylay можно применять по-разному: застать противника врасплох, быстро уничтожить волну крипов, заработать золото и начать наступление."
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_Kane_2"],
+      "ru": "Если на линии вы получаете много урона, оставьте Balance of Power в режиме Defense. Дополнительная базовая броня не позволит противнику легко вытеснить вас с линии."
+    },
+    {
+      "keys": ["interface:hero_tip_defensive_tip_Hero_Kane_1"],
+      "ru": "Помните: ультимейтом можно бросить вызов башне и заставить её атаковать вас. Вместе со Steel Resolve это позволяет принять огонь башни на себя, пока ваши крипы почти безнаказанно её атакуют."
+    },
+    {
+      "keys": ["interface:hero_tip_defensive_tip_Hero_Kane_2"],
+      "ru": "Раннее очко в Steel Resolve даст серьёзное преимущество в любом бою 1 на 1."
+    }
+  ]
+}

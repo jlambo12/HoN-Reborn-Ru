@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_114_MALPHAS_CROSSREFS",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Malphas2_description"],
+      "ru": "Наносит ^o{20,40,60} превосходящего магического урона в секунду^* в радиусе 225."
+    },
+    {
+      "keys": ["entities:Ability_Malphas2_description_simple"],
+      "ru": "Наносит ближайшим противникам ^o{20,40,60} превосходящего магического урона в секунду^*."
+    },
+    {
+      "keys": ["entities:Ability_Malphas2_effect_header"],
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:State_Malphas_Ability2_FRAME_effect"],
+      "ru": "{20,40,60} превосходящего магического урона в секунду."
+    },
+    {
+      "keys": ["entities:Ability_Malphas3_description"],
+      "ru": "Пассивно даёт ^o{20,40,60} скорости атаки^*."
+    },
+    {
+      "keys": ["entities:Ability_Malphas3_description_simple"],
+      "ru": "Даёт ^o{20,40,60} скорости атаки^*."
+    },
+    {
+      "keys": ["entities:Ability_Malphas3_effect_header"],
+      "ru": "Эффекты Burning Sword"
+    },
+    {
+      "keys": ["entities:State_Malphas_Ability3_name"],
+      "ru": "Burning"
+    },
+    {
+      "keys": ["entities:State_Malphas_Ability3_FRAME_effect"],
+      "ru": "5 магического урона в секунду за каждый заряд. Строения получают 20% урона."
+    },
+    {
+      "keys": ["entities:Ability_Malphas4_description"],
+      "ru": "Пассивно увеличивает урон по ^oстроениям^* на ^o25%^*."
+    },
+    {
+      "keys": ["entities:Ability_Malphas4_description_simple"],
+      "ru": "Увеличивает урон по ^oстроениям^* на ^o25%^*."
+    },
+    {
+      "keys": ["entities:State_Malphas_Ability4_name"],
+      "ru": "Fire Bomb"
+    },
+    {
+      "keys": ["entities:State_Malphas_Ability4_FRAME_effect"],
+      "ru": "Каждые 3 секунды выпускает огненный шар в ближайшего вражеского героя."
+    },
+    {
+      "keys": ["entities:Pet_Hellbringer_Ability4_name"],
+      "ru": "Malphas"
+    },
+    {
+      "keys": ["entities:Hero_Hellbringer_role"],
+      "ru": "Hellbringer способен постоянно исцелять себя многократным применением Demonic Wave и Demon Strike. При необходимости он использует Summon Malphas, оглушая противников в огромной области и призывая могучего демона с разрушительной огненной магией."
+    },
+    {
+      "keys": ["entities:Hero_Rhapsody_description"],
+      "ru": "Давным-давно — я всё ещё помню тот день — Rhapsody вступила в Legion. Она знала: представься ей возможность, она заставила бы Malphas петь и плясать, и, быть может, он перестал бы убивать её поклонников. Но затем она встретила Slither, отравившего их повсюду. Больше терпеть это она не могла и поклялась отомстить. Rhapsody посвятила жизнь делу Legion, признала Jeraziah своим предводителем, а он утешил её после потери и поклялся всегда оставаться рядом."
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_Hellbringer_1"],
+      "ru": "Обычно Summon Malphas стоит приберечь для начала сражения, но оглушение в большой области также отлично помогает при отступлении."
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_Hellbringer_2"],
+      "ru": "Помните: Malphas наносит магический урон по области и дополнительный урон строениям."
+    },
+    {
+      "keys": ["interface:hero_tip_defensive_tip_Hero_Hellbringer_1"],
+      "ru": "От оглушения и урона Summon Malphas невозможно уклониться. Однако Malphas можно мгновенно уничтожить с помощью Nullfire Blade."
+    }
+  ]
+}

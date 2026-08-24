@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_096_HUNTER_INVIS",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Neutral_HunterInvis_name"],
+      "ru": "Stealth Hunter"
+    },
+    {
+      "keys": ["entities:Ability_HunterInvis1_description"],
+      "ru": "Stealth Hunter преследует свою добычу, скрываясь в тенях!"
+    },
+    {
+      "keys": ["entities:Ability_HunterInvis1_description_simple"],
+      "ru": "При активации становится ^oневидимым на 15 секунд^*. Переход в невидимость занимает 0,5 секунды. В невидимости ^oскорость передвижения повышается на 20%^*.\\n\\nПервая атака из невидимости ^oнаносит 50 дополнительного физического урона^*."
+    },
+    {
+      "keys": ["entities:Ability_HunterInvis1_IMPACT_effect"],
+      "ru": "Накладывает на себя On the Hunt на 15 секунд."
+    },
+    {
+      "keys": ["entities:State_HunterInvis_Ability1_description"],
+      "ru": "Невидимость. Первая атака из невидимости получает 50 дополнительного урона от атаки."
+    },
+    {
+      "keys": ["entities:State_HunterInvis_Ability1_FRAME_effect"],
+      "ru": "Следующая атака нанесёт 90 дополнительного урона."
+    }
+  ]
+}

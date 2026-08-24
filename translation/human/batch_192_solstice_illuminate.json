@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_192_SOLSTICE_ILLUMINATE",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Solstice2_IMPACT_effect:Day_Solstice"],
+      "english_hash": "028b547465aa6a1931806f70a3326348ce1117b934bd86bcb7cdd8ffd28b625c",
+      "ru": "^rДневная форма^*\\nНакладывает на себя ^oIlluminate^* на ^o8 секунд^*.\\n^rДневная форма^*"
+    },
+    {
+      "keys": ["entities:Ability_Solstice2_IMPACT_effect:Night_Solstice"],
+      "english_hash": "86c090b08971c8f4da172a5c0b4443f39a8ba051dcffcf72331958289aaa8070",
+      "ru": "^bНочная форма^*\\nВыберите область, чтобы дать обзор противников на 8 секунд. Накладывает на вас ^oLuminescence^* на 8 секунд.\\n\\n- Противники не знают, что их видно.\\n^bНочная форма^*"
+    },
+    {
+      "keys": ["entities:Ability_Solstice2_description"],
+      "english_hash": "3060acc379bb4d85a64e889e3075183c56f444c0a67a8df7d0863060e35b91e5",
+      "ru": "Solstice призывает свет звёзд, раскрывая область и нанося противникам урон или усиливая себя."
+    },
+    {
+      "keys": ["entities:Ability_Solstice2_description:Day_Solstice"],
+      "english_hash": "87ddacb6b8feb28e2f98ea950432304d295e37ab4fa638ce43a29b69c953e9d3",
+      "ru": "Solstice призывает солнечные лучи, обжигающие противников."
+    },
+    {
+      "keys": ["entities:Ability_Solstice2_description:Night_Solstice"],
+      "english_hash": "9ec34fb3bb0d8e889ebed4c5aedd82615ee5fcb077707d5b51890b1eb281cf89",
+      "ru": "Solstice призывает лунный свет, усиливая себя и раскрывая противников."
+    },
+    {
+      "keys": ["entities:Ability_Solstice2_description_simple"],
+      "english_hash": "a457f0802acc1a3ad3e342527a2b9300d948e3f65f3c15441d913e8e78b747c2",
+      "ru": "^rДневная форма^*\\nПризывает солнечные лучи, которые дают 700 беспрепятственного обзора и обжигают противников поблизости в течение ^o8 секунд^*, нанося ^o{15,30,45,60} магического урона в секунду^*.\\n^bНочная форма^*\\nПризывает лунный свет, раскрывающий область и дающий вам ^o{15,30,45,60} урона атаки и скорости передвижения^* на 8 секунд."
+    },
+    {
+      "keys": ["entities:Ability_Solstice2_description_simple:Day_Solstice"],
+      "english_hash": "6f8940096d731204527b6715352da04ec8e9a196e5a4d79e43f89dd7d8491a82",
+      "ru": "^rДневная форма^*\\nПризывает солнечные лучи, которые дают 700 беспрепятственного обзора и обжигают противников поблизости в течение ^o8 секунд^*, нанося ^o{15,30,45,60} магического урона в секунду^*."
+    },
+    {
+      "keys": ["entities:Ability_Solstice2_description_simple:Night_Solstice"],
+      "english_hash": "00f4407e8be24fe972b0b9afd326e64551aa9bb55fc1999d0ae2e28b6a5677bc",
+      "ru": "^bНочная форма^*\\nПризывает лунный свет, раскрывающий область и дающий вам ^o{15,30,45,60} урона атаки и скорости передвижения^* на 8 секунд."
+    },
+    {
+      "keys": ["entities:Ability_Solstice2_effect_header:Day_Solstice"],
+      "english_hash": "a52de471c6e0762216f723e0ba67c803e3d11239d768f24f0d260bdca4a5ea73",
+      "ru": "Эффекты Illuminate"
+    },
+    {
+      "keys": ["entities:Ability_Solstice2_effect_header:Night_Solstice"],
+      "english_hash": "78c99ce356440795b5536caaee2ea8bc92e77ed53154f5d8b217e3b9a2a294e8",
+      "ru": "Эффекты Luminescence"
+    },
+    {
+      "keys": ["entities:State_Solstice_Ability2_Damage_FRAME_effect"],
+      "english_hash": "56f96fc8a9704bbb55ac4aa1b39d15306f6bf26507261f8eaf6b0b76e62c1e4a",
+      "ru": "{15,30,45,60} магического урона в секунду"
+    },
+    {
+      "keys": ["entities:State_Solstice_Ability2_Day_FRAME_effect"],
+      "english_hash": "991d1a8ff722bbfd78ebfe0540ed102e74410941144f8270ca21b332dc24594d",
+      "ru": "{15,30,45,60} магического урона в секунду противникам в радиусе 700.\\n700 беспрепятственного обзора"
+    }
+  ]
+}

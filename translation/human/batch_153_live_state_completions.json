@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_153_LIVE_STATE_COMPLETIONS",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:State_Aluna_Ability4_FRAME_effect"],
+      "english_hash": "5ee7c9000a52b5d6684e1dfebd7c6e05f8d9f3ee3e08d406a72f7398412fd878",
+      "ru": "Ваши способности усилены!"
+    },
+    {
+      "keys": ["entities:State_Aluna_Ability4_FRAME_effect:ult_boost"],
+      "english_hash": "dafb2c3e6d3b4681e1a2d53a7ab6d3961416a78059b83771d9e9d7ce1a8c978a",
+      "ru": "+250% к скорости восстановления перезарядки\\nВаши способности усилены!"
+    },
+    {
+      "keys": ["entities:State_Andromeda_Ability3_AttackRange_FRAME_effect"],
+      "english_hash": "9a60577adc4d2b9b5cb6da9c1f234586e48221c6a9e66f40642b7e2a14f6b328",
+      "ru": "+1000 к дальности атаки"
+    },
+    {
+      "keys": ["entities:State_Andromeda_Ability3_description"],
+      "english_hash": "69a313139cfcb68c7e217505c62441607cbaa335c7c1dcad30bcaebc7e0e9e7b",
+      "ru": "Рядом с Andromeda вы чувствуете себя иначе."
+    },
+    {
+      "keys": ["entities:State_Arachna_Ability1_FRAME_effect"],
+      "english_hash": "efda2a4ced633546453e158d4af2d6418e4c00d4ef1171657e7e2121779ffdd3",
+      "ru": "{10,20,30,40} магического урона в секунду"
+    },
+    {
+      "keys": ["entities:State_Armadon_Ability2_FRAME_effect"],
+      "english_hash": "f22ec1e5bb2ecaaca720bec52257001d21733ca38eef683709286180b68c4a88",
+      "ru": "Spine Burst наносит 25 дополнительного физического урона за заряд"
+    },
+    {
+      "keys": ["entities:State_Behemoth_Ability2_description"],
+      "english_hash": "fd15942910aa20eac7a433fddb02d82027bc1e705087431495825e46790692bc",
+      "ru": "Следующая атака наносит увеличенный урон"
+    },
+    {
+      "keys": ["entities:State_Behemoth_Ability2_description:ult_boost"],
+      "english_hash": "66339ebc300792b62f276f3a0c19003ae2ddff77e1f47eb6ffd61f4ba7d8b18a",
+      "ru": "Следующая атака наносит увеличенный урон и получает ^gTrue Strike^*"
+    },
+    {
+      "keys": ["entities:State_Blacksmith_Ability2_FRAME_effect"],
+      "english_hash": "7aae2af9dae0e55dbd0fd400a08b7528a3a103a60731d22b6107b1974377cea0",
+      "ru": "{20,25,30,35} магического урона в секунду\\n{-1,-2,-3,-4} к магической броне; штраф постепенно уменьшается до 0"
+    },
+    {
+      "keys": ["entities:State_Blacksmith_Ability3_FRAME_effect"],
+      "english_hash": "3ee9f34d22151393e46fd939f7eba0f36a4a409ab10211cc2b26958b7c1cce2a",
+      "ru": "Дополнительно даёт владельцу 10% скорости передвижения и {10,15,20,25} скорости атаки."
+    },
+    {
+      "keys": ["entities:State_Bubbles_Ability4_description"],
+      "english_hash": "0b4e3ac9c0da3790ed779e61dcf87e7ba4b9dc3e551f1dd080f149dc882f2e9f",
+      "ru": "Если отойти более чем на 600 единиц от центра Kelp Field, вы получите {100,150,200} магического урона и будете оглушены на {1.5,2.25,3} секунды."
+    },
+    {
+      "keys": ["entities:State_Bubbles_Ability4_description:ult_boost"],
+      "english_hash": "d09d84dfc5025b658f6371475f1fa346019e15dad2778e52607e77daf1b1174f",
+      "ru": "Если отойти более чем на 600 единиц от центра Kelp Field, вы получите {200,300,400} ^gурона превосходящей магией^* и будете на {1.5,2.25,3} секунды ^gоглушены превосходящей магией^*."
+    },
+    {
+      "keys": ["entities:State_Bushwack_Ability4_Damage_FRAME_effect"],
+      "english_hash": "e510e86de03ea011d31b11a3ce60b188f08108dfde6aaceff11842fd15351d31",
+      "ru": "Получает {6,10,14} физического урона в секунду за каждый заряд"
+    },
+    {
+      "keys": ["entities:State_Chronos_Ability4_Timer_FRAME_effect"],
+      "english_hash": "868855d58f13c3c2ec07e2c9bc03ed259f91731ef4c2ea721c9ba67116f65e6d",
+      "ru": "Chronofield заканчивается вдвое быстрее, пока Chronos находится за его пределами."
+    },
+    {
+      "keys": ["entities:State_Chronos_Ability4_description"],
+      "english_hash": "6e75147a3b4fa18a9d003b481bed895a9fb69cc7826caf84595326027d3a221b",
+      "ru": "Заморожен во времени и не может совершать никаких действий."
+    },
+    {
+      "keys": ["entities:State_CorruptedDisciple_Ability3_FRAME_effect"],
+      "english_hash": "582217a8e36faed76a640e75dc9c73965795651c6e0d260e406fec24dc7198d4",
+      "ru": "Сначала замедляет скорость передвижения на 80%; эффект постепенно ослабевает"
+    },
+    {
+      "keys": ["entities:State_CorruptedDisciple_Ability4_Self_description"],
+      "english_hash": "a2a2d7b3bc23e55e2b664aa10661a8bf7a9b9c7412b086bd137c2d047ce36744",
+      "ru": "Вот это разряд!"
+    },
+    {
+      "keys": ["entities:State_Defiler_Ability3_Enemy_FRAME_effect"],
+      "english_hash": "3f5013c1d8475c5af3195fd5ac7b1ae9dc27d695e5bf5f2e2a182597d66c83ac",
+      "ru": "20 + {1,1.5,2,2.5}% от максимального здоровья вражеского героя магического урона в секунду"
+    },
+    {
+      "keys": ["entities:State_Defiler_Ability3_Self_FRAME_effect"],
+      "english_hash": "7b077f9bd63b1a85ea2ff584cfb6976a40d7ec0bb190010b9903f89d8cae92dc",
+      "ru": "Восстанавливает 10 + {2,3,4,5}% от максимального здоровья вражеского героя в секунду"
+    },
+    {
+      "keys": ["entities:State_DoctorRepulsor_Ability3_FRAME_effect"],
+      "english_hash": "ee526cd929607c7606d33c9e7477ce1313a0edf426a1b146c3f8ffcf5110676d",
+      "ru": "При попадании атаки наносит {40,60,80,100} магического урона в радиусе 300 и накладывает Electric Frenzy на 0.6 секунды."
+    },
+    {
+      "keys": ["entities:State_DoctorRepulsor_Ability3_FRAME_effect:ult_boost"],
+      "english_hash": "7ffa3e9aaab8c561cee7befbcd1d456ccd1f5e94602e8b77685083babaf4d8b6",
+      "ru": "При попадании атаки наносит {40,60,80,100} ^g+ 3% от максимальной маны^* магического урона в радиусе 300 и накладывает Electric Frenzy на 0.6 секунды."
+    },
+    {
+      "keys": ["entities:State_Ellonia_Ability3_Freeze_description"],
+      "english_hash": "4f6d22b65401a0de4b1eb2afbd448d3968a193e79f623ffbcb3cb3185d514c0a",
+      "ru": "Имбовые криты и компания."
+    },
+    {
+      "keys": ["entities:State_Ellonia_Ability3_description"],
+      "english_hash": "889abf1b93f49c8b76d4aadaab1eab5bf95c43f4beb49fa5b4c0c011c053b9b4",
+      "ru": "2% замедления скорости передвижения за заряд"
+    },
+    {
+      "keys": ["entities:State_EmeraldWarden_Ability3_Immobilized_FRAME_effect"],
+      "english_hash": "60c57c5493a0504aad65c52788d391c5cb445366bdb80098e3924a9ddd8c64dd",
+      "ru": "{60,70,80,90} магического урона в секунду (в 1.5 раза больше по юнитам, не являющимся героями)"
+    },
+    {
+      "keys": ["entities:State_Fayde_Ability3_FRAME_effect"],
+      "english_hash": "8d7c989c7e7f2ddca0fc3acc14064f7f57931d84f8bd507c1ddf1200ebaf0751",
+      "ru": "Невосприимчивость к одиночным целям"
+    },
+    {
+      "keys": ["entities:State_FlintBeastwood_Ability1_DoT_FRAME_effect"],
+      "english_hash": "c9567282232ea61b451384aff96bcc8c1f8b6dee4ca5c6270ebad4fb15f5bdf0",
+      "ru": "{25,50,75,100} магического урона в секунду"
+    },
+    {
+      "keys": ["entities:State_FlintBeastwood_Ability3_Aura_FRAME_effect"],
+      "english_hash": "e90066c8882f6f5c71670ed346f0d61c4f998681a31d9195c0eb67a9c792dbe9",
+      "ru": "{30,40,50,60}% шанс получить True Strike при атаке"
+    },
+    {
+      "keys": ["entities:State_ForsakenArcher_Ability2_FRAME_effect"],
+      "english_hash": "3e215b433245882d1b00de48a2037a29cbcdb740b8ae58d734d4cf06e86ba06c",
+      "ru": "Каждая атака разделяется на 5 отдельных выстрелов"
+    },
+    {
+      "keys": ["entities:State_Gemini_Ability1_FRAME_effect"],
+      "english_hash": "4ece1aec998c564accee7f794bb664ce12cf4c24584210e3a987f49ad983d1c1",
+      "ru": "{5,10,15,20} магического урона в секунду"
+    },
+    {
+      "keys": ["entities:State_Hammerstorm_Ability1_FRAME_effect"],
+      "english_hash": "fcfe419635967eafb7ed12d92337a3e7ea383100393d1349a8593dfa743f55b3",
+      "ru": "Hammer Throw можно применить повторно, чтобы телепортироваться к лежащему на земле молоту"
+    },
+    {
+      "keys": ["entities:State_Hammerstorm_Ability4_FRAME_effect:ult_boost"],
+      "english_hash": "63ab568bdef13ac0d03005676b460e1601c934e87f015baa1ca962d81f6fa3bc",
+      "ru": "Даёт другим союзным героям в радиусе 900 +{toolvalue2}% базового урона"
+    },
+    {
+      "keys": [
+        "entities:State_OpheliasPact_PermaBuff1_FRAME_effect",
+        "entities:State_OpheliasPact_PermaBuff3_FRAME_effect"
+      ],
+      "english_hash": "634e2258ef7c7eec63a72b2b24221b9b340268e503fd57946ef554d572cc1b2c",
+      "ru": "\\nПостоянная награда за выполнение Ophelia's Pact."
+    }
+  ]
+}

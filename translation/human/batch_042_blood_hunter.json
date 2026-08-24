@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_042_BLOOD_HUNTER",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_BloodHunter1_name"],
+      "ru": "Blood Crazy"
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter1_description"],
+      "ru": "Blood Hunter пробуждает в выбранном юните кровавое безумие и накладывает на него Безмолвие."
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter1_description2", "entities:Ability_BloodHunter3_description2"],
+      "ru": ""
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter1_description_simple"],
+      "ru": "Накладывает ^oБезмолвие на противника и врагов вокруг основной цели на 4 секунды^*, наносит ^o60 магического урона^* и ещё ^o{10,20,30,40} магического урона в секунду^*.\\n\\nВаши обычные атаки по поражённым целям ^oпродлевают Безмолвие на 0.5 секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter1_effect_header"],
+      "ru": "Эффекты Blood Crazy"
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter1_IMPACT_effect"],
+      "ru": "Выберите вражеского юнита, чтобы ^oналожить на него Безмолвие на 4 секунды^* и нанести ему и противникам вокруг основной цели ^o60 магического урона^*. Blood Crazy также наносит основной цели ^o{10,20,30,40} магического урона в секунду^*.\\n\\nВаши обычные атаки по поражённым целям ^oпродлевают Безмолвие на 0.5 секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter1_tooltip_flavor"],
+      "ru": "Держись подальше от солнечного света."
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter2_name"],
+      "ru": "Feast"
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter2_description"],
+      "ru": "Blood Hunter пожирает плоть каждой жертвы и восстанавливает здоровье в зависимости от её максимального здоровья."
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter2_description_simple", "entities:Ability_BloodHunter2_description2"],
+      "ru": "При убийстве юнита восстанавливает вам ^o{10,15,20,25}% его максимального здоровья^* (^o{15,30,45,60}% за вражеского героя^*).\\n\\nВыберите вражеского крипа, чтобы ^oубить^* его и активировать лечение Feast.\\n\\nНа 4-м уровне способности, применив её к некоторым нейтральным крипам, Blood Hunter перенимает их ауру. Аура теряется при получении другой ауры или после гибели Blood Hunter."
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter2_IMPACT_effect"],
+      "ru": "Активируйте и выберите вражеского крипа, чтобы убить его и запустить лечение Feast."
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter2_effect_header", "entities:Ability_BloodHunter3_effect_header"],
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter2_tooltip_flavor"],
+      "ru": "Тебе это здоровье всё равно не нужно."
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter3_name"],
+      "ru": "Blood Sense"
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter3_description", "entities:Ability_BloodHunter3_description_simple"],
+      "ru": "^oРаскрывает^* вражеских героев и ^oдаёт их видимость^*, если их здоровье опускается ^oниже {25,30,35,40}%^* в пределах ^o{1500,3000,4500,global} дальности^*. Ваши обычные атаки наносят таким целям дополнительный урон в размере ^o{10,20,30,40}% вашего базового урона^*.\\n\\nЕсли союзный или вражеский герой соответствует этим условиям, Blood Hunter получает ^o{10,20,30,40}% скорости передвижения^*."
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter3_tooltip_flavor"],
+      "ru": "Ищи его, мальчик. Ищи!"
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter4_name"],
+      "ru": "Hemorrhage"
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter4_description"],
+      "ru": "Blood Hunter выпускает из тела острый шип в крупную артерию противника, наносит начальный урон, а затем — дополнительный урон при каждом движении цели."
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter4_description2"],
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* накладывает Hemorrhage на всех противников вокруг основной цели."
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter4_description_simple"],
+      "ru": "Выпускает острый шип в крупную артерию противника, наносит ^o{250,375,500} урона превосходящей магией^* и накладывает Hemorrhage на ^o{5,7,9} секунд^*.\\n\\nЗа время действия цель получает ^oурон превосходящей магией в размере {40,60,80}% пройденного расстояния^*.\\n\\nТелепортация при принудительном перемещении юнита не вызывает урон от ^oHemorrhage^*.\\n\\n^gStaff of the Master^* накладывает Hemorrhage ^oв радиусе вокруг цели^*."
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter4_effect_header"],
+      "ru": "Эффекты Hemorrhage"
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter4_IMPACT_effect"],
+      "ru": "Наносит цели {250,375,500} урона превосходящей магией и накладывает Hemorrhage на {5,7,9} секунд.\\n\\nТелепортации Teleportation Stone и Post Haste при принудительном перемещении юнита не вызывают урон от Hemorrhage."
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter4_name:ult_boost"],
+      "ru": "^gBloodbath*^*"
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter4_description2:ult_boost"],
+      "ru": "\\r"
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter4_description_simple:ult_boost"],
+      "ru": "Выпускает острый шип в крупную артерию противника, наносит ^o{250,375,500} урона превосходящей магией^* и накладывает ^gHemorrhage на всех противников в радиусе^* на ^o{5,7,9} секунд^*.\\n\\nЗа время действия цели получают ^oурон превосходящей магией в размере {40,60,80}% пройденного расстояния^*.\\n\\nТелепортация при принудительном перемещении юнита не вызывает урон от ^oHemorrhage^*."
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter4_IMPACT_effect:ult_boost"],
+      "ru": "Наносит {250,375,500} урона превосходящей магией и накладывает Hemorrhage на {5,7,9} секунд на цель ^gи всех противников вокруг неё^*.\\n\\nТелепортации Teleportation Stone и Post Haste при принудительном перемещении юнита не вызывают урон от Hemorrhage."
+    },
+    {
+      "keys": ["entities:Ability_BloodHunter4_tooltip_flavor"],
+      "ru": "Нам нужен ты, Van Helsing."
+    }
+  ]
+}

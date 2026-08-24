@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "batch_id": "NATIVE_RUNTIME_003_MATCH_HUD",
+  "reviewed_by": "Codex runtime screenshot review 2026-08-24",
+  "rows": [
+    {
+      "source_file": "ui/hd_ui/templates/heroframe_templates.package",
+      "english": "MISSING",
+      "source_encoding": "ascii",
+      "russian": "НЕ ВИДЕН",
+      "expected_matches": 1
+    }
+  ]
+}

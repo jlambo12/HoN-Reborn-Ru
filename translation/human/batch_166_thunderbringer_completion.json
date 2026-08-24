@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_166_THUNDERBRINGER_COMPLETION",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Thunderbringer1_IMPACT_effect"],
+      "english_hash": "3ff58286b409b00d5e5cebdb5f3df3b9b68d126aecf56627a9f2910f58d6a8fa",
+      "ru": "Перескакивает на ^o{3,5,7,9} последовательно ближайших целей^*, нанося каждой ^o{85,100,115,130} магического урона^*."
+    },
+    {
+      "keys": ["entities:Ability_Thunderbringer1_description"],
+      "english_hash": "97940fc51964f12b185b07310c0bbfe2b2d1b601c2cc34153d27db9c37fbab82",
+      "ru": "Thunderbringer поражает выбранного врага нестабильной молнией, которая затем перескакивает на других ближайших противников."
+    },
+    {
+      "keys": ["entities:Ability_Thunderbringer1_description_simple"],
+      "english_hash": "5700b20b9172321a20b19412c495a409d509597a93416d9d7fb58c4d3cf7e4b2",
+      "ru": "Поражает противника молнией, которая перескакивает между ^o{3,5,7,9} ближайшими врагами^* и наносит каждому ^o{85,100,115,130} магического урона^*."
+    },
+    {
+      "keys": [
+        "entities:Ability_Thunderbringer1_effect_header",
+        "entities:Ability_Thunderbringer2_effect_header",
+        "entities:Ability_Thunderbringer3_effect_header",
+        "entities:Ability_Thunderbringer4_effect_header"
+      ],
+      "english_hash": "6e5e7bc5e96f838352cde0fcff351520eab9cd6b12ecb43e9b30ed6fd98f6777",
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:Ability_Thunderbringer2_IMPACT_effect"],
+      "english_hash": "9506d8c0b0ecff62e309c09e5e6de4e1cc22334bc906fc7609d193b68f56ffb0",
+      "ru": "Наносит цели ^o{105,180,255,330} магического урона^* и оглушает её на {0.1,0.2,0.3,0.4} секунды. На 5 секунд даёт в исходной точке цели беспрепятственный обзор радиусом 1000 днём и 700 ночью, а также раскрывает скрытых юнитов.\\n\\nМожно применить к союзнику, чтобы вместо этого дать ему ^o{60,75,90,105} скорости передвижения^* на 5 секунд."
+    },
+    {
+      "keys": ["entities:Ability_Thunderbringer2_description"],
+      "english_hash": "fdbfaa23bc552216ee25f25adc7dfe3156b64bbd875c689aa543cb7e31196d45",
+      "ru": "Thunderbringer поражает выбранного врага молнией, наносит урон и очень ненадолго оглушает. Область вокруг цели освещается, открывая обзор и раскрывая скрытых юнитов.\\n\\nМожно применить к союзнику, чтобы вместо этого увеличить его скорость передвижения."
+    },
+    {
+      "keys": [
+        "entities:Ability_Thunderbringer3_IMPACT_effect",
+        "entities:Ability_Thunderbringer3_IMPACT_effect:ult_boost"
+      ],
+      "english_hash": "d14e5129318c99f9021faeb45f633dae2e20b9f309517acacf6116f68b5d9072",
+      "ru": "Каждый раз, когда вы наносите вражескому герою урон способностью, он получает магический урон в размере ^o{2.5,4,5.5,7}% от текущего здоровья^*. Если поражённый герой находится дальше 1100 единиц от вас, урон ^oуменьшается вдвое^*."
+    },
+    {
+      "keys": ["entities:Ability_Thunderbringer3_description"],
+      "english_hash": "cb291f59edd570ceb183aa3c28b86f622104251892e6fe4a3cec75662e884400",
+      "ru": "Враги Thunderbringer становятся громоотводами и получают урон при каждом применении им способности. Урон зависит от их текущего здоровья."
+    },
+    {
+      "keys": [
+        "entities:Ability_Thunderbringer3_description_simple",
+        "entities:Ability_Thunderbringer3_description_simple:ult_boost"
+      ],
+      "english_hash": "13567813736cda242eea91c07b00e09ba0ab180fe82d3e019f71561c91fdfdd3",
+      "ru": "Каждый раз, когда вы наносите вражескому герою урон способностью, он получает ^oмагический урон в размере {2.5,4,5.5,7}% от текущего здоровья^*. Если поражённый герой находится дальше 1100 единиц от вас, урон ^oуменьшается вдвое^*."
+    },
+    {
+      "keys": [
+        "entities:Ability_Thunderbringer4_IMPACT_effect",
+        "entities:Ability_Thunderbringer4_description_simple"
+      ],
+      "english_hash": "96a6e974761c019714fd46d8cba3d5bed988be0d154401a2ebe3b92768960ede",
+      "ru": "Создаёт в выбранной точке ^oThunder Cloud^* на ^o9 секунд^*. За это время облако выпускает ^o{4,5,6} разрядов^*, каждый из которых поражает всех противников в радиусе 600, наносит ^o250 магического урона^* и на 1 секунду ^oзамедляет их передвижение на 25%^*."
+    },
+    {
+      "keys": ["entities:Ability_Thunderbringer4_description"],
+      "english_hash": "b271f39a93e99df935211037276c77742caeb14f6097d19ec6c3c40a4eee9f06",
+      "ru": "Thunderbringer создаёт грозовое облако, которое поражает всех противников в области, наносит им урон и ненадолго раскрывает пространство вокруг них."
+    }
+  ]
+}

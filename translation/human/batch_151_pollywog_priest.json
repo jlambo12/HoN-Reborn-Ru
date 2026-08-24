@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_151_POLLYWOG_PRIEST",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_PollywogPriest1_description"],
+      "ru": "Pollywog Priest поражает электричеством выбранного юнита и несколько целей поблизости, нанося урон каждой из них."
+    },
+    {
+      "keys": ["entities:Ability_PollywogPriest1_description2"],
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff:^* Сокращает перезарядку до 4 секунд. Также увеличивает скорость атаки Voodoo Wards в области на 175 на 1 секунду."
+    },
+    {
+      "keys": ["entities:Ability_PollywogPriest1_description_simple"],
+      "ru": "Поражает вражеского юнита разрядом, нанося ему и всем врагам позади него в конической области ^o{105,170,235,300} магического урона^*.\\n\\n^gStaff of the Master^* сокращает ^oперезарядку до 4 секунд^* и увеличивает скорость атаки ^oVoodoo Wards^* в области на 175 на 1 секунду."
+    },
+    {
+      "keys": ["entities:Ability_PollywogPriest1_description_simple:ult_boost"],
+      "ru": "Поражает вражеского юнита разрядом, нанося всем врагам в конической области ^o{105,170,235,300} магического урона^* ^gи увеличивая скорость атаки Voodoo Wards в этой области на 175 на 1 секунду^*."
+    },
+    {
+      "keys": ["entities:Ability_PollywogPriest1_effect_header", "entities:Ability_PollywogPriest4_effect_header"],
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:Ability_PollywogPriest1_IMPACT_effect"],
+      "ru": "Поражает вражеского юнита разрядом, нанося всем врагам на линии длиной 780 единиц ^o{105,170,235,300} магического урона^*. Радиус линии увеличивается с 200 в начале до 300 в конце."
+    },
+    {
+      "keys": ["entities:Ability_PollywogPriest1_IMPACT_effect:ult_boost"],
+      "ru": "Поражает выбранного врага разрядом, нанося всем врагам на линии длиной 780 единиц ^o{105,170,235,300} магического урона^* ^gи увеличивая скорость атаки Voodoo Wards в этой области на 175 на 1 секунду^*. Радиус линии увеличивается с 200 в начале до 300 в конце."
+    },
+    {
+      "keys": ["entities:Ability_PollywogPriest1_tooltip_flavor"],
+      "ru": "Водные существа уязвимы к электрическим атакам."
+    },
+    {
+      "keys": ["entities:Ability_PollywogPriest2_description"],
+      "ru": "Pollywog Priest ненадолго превращает врага в лягушку, лишая его возможности атаковать и применять заклинания. Если целью была иллюзия, она мгновенно погибает."
+    },
+    {
+      "keys": ["entities:Ability_PollywogPriest2_description_simple"],
+      "ru": "Превращает вражеского юнита в лягушку на ^o{1.25,2,2.75,3.5} секунды^*. В этом состоянии цель ^oне может атаковать^*, ^oприменять заклинания^* и ^oиспользовать предметы^*. Мгновенно убивает вражеские иллюзии и рассеивает невидимость.\\n\\n^oПри применении на себя^* вы также ^oне можете^* атаковать, применять заклинания и использовать предметы, но получаете ^o50% уклонения^* и ^o+35%^* к ^oскорости передвижения^* на время действия."
+    },
+    {
+      "keys": ["entities:Ability_PollywogPriest2_effect_header"],
+      "ru": "Эффекты Morphed"
+    },
+    {
+      "keys": ["entities:Ability_PollywogPriest2_IMPACT_effect"],
+      "ru": "Накладывает на цель Morphed на {1.25,2,2.75,3.5} секунды и устанавливает базовую скорость передвижения на 100. Мгновенно убивает вражеские иллюзии и рассеивает невидимость.\\n\\n^rПрименение на себя^*\\nНакладывает на Pollywog ^oFrog Dance^* (^o50% уклонения^* и ^o+35% к скорости передвижения^*)."
+    },
+    {
+      "keys": ["entities:Ability_PollywogPriest2_tooltip_flavor"],
+      "ru": "Жаль, что ты не муха."
+    },
+    {
+      "keys": ["entities:State_PollywogPriest_Ability2_name"],
+      "ru": "Morphed"
+    },
+    {
+      "keys": ["entities:State_PollywogPriest_Ability2_FRAME_effect"],
+      "ru": "Базовая скорость передвижения установлена на 100.\\nОтключает уклонение"
+    },
+    {
+      "keys": ["entities:State_PollywogPriest_Ability2_Self_name"],
+      "ru": "Frog Dance"
+    },
+    {
+      "keys": ["entities:Ability_PollywogPriest3_description"],
+      "ru": "Pollywog Priest удерживает врага языком, не позволяя ему двигаться, атаковать, применять заклинания и использовать предметы. Tongue Tied со временем наносит цели магический урон."
+    },
+    {
+      "keys": ["entities:Ability_PollywogPriest3_description_simple"],
+      "ru": "^oПоддерживайте^* способность, чтобы удерживать врага языком в течение ^o{2.5,3.25,4.0,4.75} секунды^*, нанося ^o{40,50,60,70} магического урона в секунду^* и накладывая ^oSuppression^*."
+    },
+    {
+      "keys": ["entities:Ability_PollywogPriest3_effect_header"],
+      "ru": "Эффекты Tongue Tied"
+    },
+    {
+      "keys": ["entities:Ability_PollywogPriest3_IMPACT_effect"],
+      "ru": "Накладывает на цель Tongue Tied на {2.5,3.25,4.0,4.75} секунды или до отмены заклинания."
+    },
+    {
+      "keys": ["entities:Ability_PollywogPriest3_tooltip_flavor"],
+      "ru": "Я отлично владею языком."
+    },
+    {
+      "keys": ["entities:State_PollywogPriest_Ability3_FRAME_effect"],
+      "ru": "{40,50,60,70} магического урона в секунду"
+    },
+    {
+      "keys": ["entities:Ability_PollywogPriest4_description"],
+      "ru": "Pollywog Priest призывает в выбранной точке несколько управляемых Voodoo Wards. Варды атакуют ближайших врагов. Лазерами."
+    },
+    {
+      "keys": ["entities:Ability_PollywogPriest4_description_simple"],
+      "ru": "Призывает в выбранной точке 8 управляемых ^oVoodoo Wards^*. Варды атакуют ближайших врагов, нанося ^o{40,65,90} физического урона^* за атаку (на 25% меньше урона строениям), и погибают от 2 атак."
+    },
+    {
+      "keys": ["entities:Ability_PollywogPriest4_IMPACT_effect"],
+      "ru": "Призывает в выбранной точке 8 Voodoo Wards, которые наносят {40,65,90} физического урона за атаку (на 25% меньше урона строениям).\\n\\nВарды существуют 45 секунд и погибают от 2 атак."
+    },
+    {
+      "keys": ["entities:Ability_PollywogPriest4_tooltip_flavor"],
+      "ru": "Меньше нытья, больше пиу-пиу!"
+    },
+    {
+      "keys": ["entities:Hero_PollywogPriest_description"],
+      "ru": "На протяжении веков каждая Великая Лягушка болотного народа совмещала политическую и магическую власть в роли верховного жреца Диких культов. Когда началась война, собратья-Звери призвали Pollywog Priest, и теперь он использует свою силу, защищая народ и сам Newerth."
+    },
+    {
+      "keys": ["entities:Hero_PollywogPriest_role"],
+      "ru": "Pollywog Priest — сильный герой поддержки с двумя мощнейшими способностями для обезвреживания одиночной цели: Morph и Tongue Tied. Его Voodoo Wards незаменимы при атаке башен, но ими также можно окружать врагов."
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_PollywogPriest_1"],
+      "ru": "С помощью Voodoo Wards можно окружить врага или даже себя. Применяйте способности обезвреживания до и после этого, чтобы задержать и, возможно, убить противника!"
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_PollywogPriest_2"],
+      "ru": "Старайтесь применять Tongue Tied после того, как вражеская команда потратила свои способности обезвреживания, или на герое с последней такой неиспользованной способностью. Так Tongue Tied удастся поддерживать дольше."
+    },
+    {
+      "keys": ["interface:hero_tip_defensive_tip_Hero_PollywogPriest_1"],
+      "ru": "Если вас окружили Voodoo Wards, не паникуйте! Атакуйте их, чтобы проложить себе путь."
+    },
+    {
+      "keys": ["interface:hero_tip_defensive_tip_Hero_PollywogPriest_2"],
+      "ru": "Держитесь рядом с союзником, способным обезвредить врага, чтобы быстро прервать Tongue Tied."
+    }
+  ]
+}

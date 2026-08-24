@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_098_IM_CHICKEN",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:State_Im_Chicken_name"],
+      "ru": "Да ты цыплёнок!"
+    },
+    {
+      "keys": ["entities:State_Im_Chicken_description"],
+      "ru": "Вот же повезло..."
+    }
+  ]
+}

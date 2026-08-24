@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_140_N_NECRO_UNITS",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_NecroMelee_1_description", "entities:Ability_NecroMelee_1_description_simple"],
+      "ru": "При атаке пассивно ^oсжигает {25,50,75} маны^* и наносит физический урон, равный сожжённой мане."
+    },
+    {
+      "keys": ["entities:Ability_NecroMelee_1_effect_header", "entities:Ability_NecroMelee_2_effect_header", "entities:Ability_NecroMelee_3_effect_header", "entities:Ability_NecroRanged_1_effect_header", "entities:Ability_NecroRanged_2_effect_header"],
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:Ability_NecroMelee_2_description_simple"],
+      "ru": "После гибели от руки противника наносит убийце ^o{200,400,600} чистого урона^*."
+    },
+    {
+      "keys": ["entities:Ability_NecroMelee_2_KILLED_effect"],
+      "ru": "Наносит убившему Mauler вражескому существу {200,400,600} чистого урона."
+    },
+    {
+      "keys": ["entities:Ability_NecroMelee_3_description"],
+      "ru": "Обнаруживает скрытых существ и Wards вокруг Puzzlebox Mauler."
+    },
+    {
+      "keys": ["entities:Ability_NecroMelee_3_description_simple"],
+      "ru": "Пассивно ^oобнаруживает скрытых существ и Wards^* в пределах ^o{300,650,1000}^*."
+    },
+    {
+      "keys": ["entities:Ability_NecroRanged_1_description"],
+      "ru": "Сжигает ману выбранного существа и наносит урон в зависимости от сожжённого количества."
+    },
+    {
+      "keys": ["entities:Ability_NecroRanged_1_description_simple"],
+      "ru": "Сжигает выбранному противнику до ^o{125,175,225} маны^* и наносит магический урон, равный сожжённой мане."
+    },
+    {
+      "keys": ["entities:Ability_NecroRanged_1_IMPACT_effect"],
+      "ru": "Сжигает цели до {125,175,225} маны и наносит магический урон в размере 100% сожжённой маны."
+    },
+    {
+      "keys": ["entities:Ability_NecroRanged_2_description"],
+      "ru": "Повышает скорость передвижения и атаки ближайших союзников."
+    },
+    {
+      "keys": ["entities:Ability_NecroRanged_2_description_simple"],
+      "ru": "Пассивно даёт ближайшим союзникам ^o{3,6,9}% скорости передвижения^* и ^o{3,6,9} скорости атаки^*."
+    },
+    {
+      "keys": ["entities:State_NecroRanged_2_name"],
+      "ru": "Haste Aura"
+    }
+  ]
+}

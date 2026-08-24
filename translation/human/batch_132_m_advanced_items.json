@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_132_M_ADVANCED_ITEMS",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Item_MastersLegacy_description"],
+      "ru": "Усиливает способности многих героев."
+    },
+    {
+      "keys": ["entities:Item_MastersLegacy_description_simple"],
+      "ru": "Усиливает способности союзного героя.\\nПри получении даёт дополнительные характеристики."
+    },
+    {
+      "keys": ["entities:Item_MastersLegacy_effect_header"],
+      "ru": "Эффекты Master's Legacy"
+    },
+    {
+      "keys": ["entities:Item_MastersLegacy_IMPACT_effect"],
+      "english_hash": "d0fcba23eaf0393f363c60d3be1b5dcbb1042283ea60673a0ad514828d6ae828",
+      "ru": "Выберите другого союзного героя, чтобы ^oнавсегда усилить его способности^* доступными ему эффектами Staff of the Master. Применить предмет можно только к герою, у которого есть подходящая способность.\\n\\n^oЭто можно сделать только один раз^* и только с героем, который ещё не усилен. Потеря предмета снимет усиление с союзника и отправит предмет на перезарядку на 1 минуту."
+    },
+    {
+      "keys": ["entities:State_MastersLegacy_FRAME_effect"],
+      "ru": "Способности усилены эффектами Staff of the Master."
+    },
+    {
+      "keys": ["entities:Item_MockOfBrilliance_description"],
+      "ru": "Накладывает на ближайших противников ^oауру^*, которая постепенно наносит ^oмагический урон^*. Даёт ^o15% уклонения^*."
+    },
+    {
+      "keys": ["entities:Item_MockOfBrilliance_description2"],
+      "ru": "Предмет даёт ^yуклонение^*. Бонусы к уклонению не суммируются."
+    },
+    {
+      "keys": ["entities:Item_MockOfBrilliance_description_simple"],
+      "ru": "Даёт ауру, которая постепенно наносит ближайшим противникам магический урон, а владельцу — ^yуклонение^*."
+    },
+    {
+      "keys": ["entities:Item_MockOfBrilliance_effect_header"],
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:Item_MockOfBrilliance_shop_flavor"],
+      "ru": "Из восемнадцати могучих молотов, выкованных легендарным шаманом зверей Торгашем, уцелели лишь единицы. Их прозвали Mocks: говорили, будто они насмехаются над попытками человечества противостоять Beast Horde. Эти мощные орудия светятся внутренней силой и обжигают ближайших врагов."
+    },
+    {
+      "keys": ["entities:Item_MockOfBrilliance_IMPACT_effect", "entities:Item_MockOfBrilliance_IMPACT_effect:MockOfBrilliance_Aura_On"],
+      "ru": "При использовании выключает ауру."
+    },
+    {
+      "keys": ["entities:Item_MockOfBrilliance_IMPACT_effect:MockOfBrilliance_Aura_Off"],
+      "ru": "При использовании включает ауру."
+    },
+    {
+      "keys": ["entities:State_MockOfBrilliance_FRAME_effect"],
+      "ru": "60 магического урона в секунду"
+    },
+    {
+      "keys": ["entities:Item_Madfreds_BrassKnuckles_description"],
+      "ru": "За каждое убийство героя или помощь в убийстве получает заряд, который навсегда даёт ^o4 дополнительного урона от атаки^*. Не более ^c5 зарядов^*.\\n\\nПри ^cмаксимальном числе зарядов^* также даёт ^o15 скорости передвижения^*."
+    },
+    {
+      "keys": ["entities:Item_Madfreds_BrassKnuckles_description_simple"],
+      "ru": "Накапливает урон за убийства героев и помощь в убийстве."
+    },
+    {
+      "keys": ["entities:Item_Madfreds_BrassKnuckles_effect_header"],
+      "ru": "Эффекты Madfred's Brass Knuckles"
+    },
+    {
+      "keys": ["entities:Item_Madfreds_BrassKnuckles_tooltip_flavor"],
+      "ru": "Посвящается Madfred за его закулисную работу в качестве одного из руководителей HoN!"
+    },
+    {
+      "keys": ["entities:Item_MonsterHunter_description"],
+      "ru": "Каждая 3-я атака за 7 секунд пассивно наносит ^o100 дополнительного магического урона^* в радиусе 350 ^oвражеским нейтральным крипам, не являющимся Ancient или Boss^*, восстанавливает вам здоровье в размере 15% дополнительного урона и даёт 1 заряд.\\n\\nУбийство нейтрального крипа, не являющегося Ancient или Boss, восстанавливает вам ману в размере 3% от максимального здоровья цели."
+    },
+    {
+      "keys": ["entities:Item_MonsterHunter_description_simple"],
+      "ru": "Каждая 3-я атака за 7 секунд пассивно наносит ^o100 дополнительного магического урона^* в радиусе 350 ^oвражеским нейтральным крипам, не являющимся Ancient или Boss^*, восстанавливает вам здоровье в размере 15% дополнительного урона и даёт 1 заряд.\\n\\nВыберите ^oвражеского героя, чтобы снизить его скорость передвижения^*, или ^gсоюзного героя, чтобы повысить её^*. Расходует все заряды предмета и за каждый заряд снижает или повышает скорость на 1%. Не более 30 зарядов.\\n\\nУбийство нейтрального крипа, не являющегося Ancient или Boss, восстанавливает вам ману в размере 3% от максимального здоровья цели."
+    },
+    {
+      "keys": ["entities:Item_MonsterHunter_IMPACT_effect"],
+      "ru": "Выберите ^oвражеского героя, чтобы снизить его скорость передвижения^*, или ^gсоюзного героя, чтобы повысить её^*. Расходует все заряды предмета и за каждый заряд снижает или повышает скорость на 1%. Не более 30 зарядов."
+    },
+    {
+      "keys": ["entities:Item_MonsterHunter_FRAME_effect"],
+      "ru": "+20% снижения урона от нейтральных крипов, не являющихся Ancient или Boss"
+    }
+  ]
+}

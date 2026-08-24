@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_017_SEVERE_STATES",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:State_Accursed_Ability3_Debuff_FRAME_effect"],
+      "ru": "При получении атаки накладывает на атакующего Burning Strikes на 4,5 секунды."
+    },
+    {
+      "keys": ["entities:State_Berzerker_Ability2_Debuff_FRAME_effect"],
+      "ru": "Беспрепятственный обзор радиусом 350"
+    },
+    {
+      "keys": ["entities:State_Fayde_Ability4_Stealth_FRAME_effect"],
+      "ru": "Даёт беспрепятственный обзор радиусом {800,1000,1200}\\nСледующая атака за 2 секунды наносит магический урон в размере {150,200,250} + {10,15,20}% текущего здоровья цели и на 4 секунды снижает получаемое ею лечение и восстановление здоровья на {20,40,60}%."
+    },
+    {
+      "keys": ["entities:State_Gladiator_Ability4_Damage_FRAME_effect"],
+      "ru": "Наносит Gladiator накопленный способностью Call to Arms урон в виде прямого снятия здоровья"
+    },
+    {
+      "keys": ["entities:State_PostHaste_Source_description"],
+      "ru": "После завершения поддержания телепортирует героя к выбранному строению или юниту.\\n\\nПоддержание Post Haste не прерывается эффектом Silence, но прерывается эффектом Perplex."
+    },
+    {
+      "keys": ["entities:State_GraveLocket_FRAME_effect", "entities:State_OrbOfZamos_FRAME_effect"],
+      "ru": "За убитых вражеских линейных крипов синхронизированный герой получает 20% золота\\nЗа добитых союзных линейных крипов синхронизированный герой получает 35% золота\\nЭффект начинает истекать, если расстояние до синхронизированного союзника превышает 1500"
+    },
+    {
+      "keys": ["entities:State_WinterBoss_Scaling_description"],
+      "ru": "По ходу матча Frostbite получает всё больше здоровья и урона!"
+    },
+    {
+      "keys": ["entities:State_Krosmode_Legion_Hero_name"],
+      "ru": "KrosMode: герой Legion"
+    },
+    {
+      "keys": ["entities:State_Krosmode_Hellbourne_Hero_name"],
+      "ru": "KrosMode: герой Hellbourne"
+    },
+    {
+      "keys": ["entities:State_Krosmode_Mainbase_Grimms_name"],
+      "ru": "KrosMode: база Grimms"
+    },
+    {
+      "keys": ["entities:State_Krosmode_Mainbase_Immunity_1_name"],
+      "ru": "KrosMode: невосприимчивость базы 1"
+    },
+    {
+      "keys": ["entities:State_Krosmode_Mainbase_Immunity_2_name"],
+      "ru": "KrosMode: невосприимчивость базы 2"
+    },
+    {
+      "keys": ["entities:State_Krosmode_ShrineTower1_name"],
+      "ru": "KrosMode: башня святилища 1"
+    },
+    {
+      "keys": ["entities:State_Krosmode_ShrineTower2_name"],
+      "ru": "KrosMode: башня святилища 2"
+    }
+  ]
+}

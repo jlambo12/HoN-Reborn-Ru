@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_019_BOSS_MECHANICS",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_SnotterBoss2_description", "entities:Ability_SnotterBoss2_description_simple"],
+      "ru": "Через 5 секунд после получения атаки Snotter Boss выбирает случайного вражеского героя в радиусе 650, становится неуязвимым и на 4 секунды взмывает в воздух. На это время здоровье Snotter Boss снижается до 1.\\n\\nПриземлившись в позиции цели, он наносит 5000 магического урона в радиусе 450 и разделяется максимум на 10 Snotters. Каждый появляется в 450 единицах от центра взрыва, имеет 200 здоровья, 60 скорости передвижения, может проходить сквозь любые объекты и обладает GadgetImmunity, после чего движется к центру.\\n\\nДостигнув расстояния 40 от центра, Snotter исчезает и восстанавливает Snotter Boss 1000 здоровья. Когда все выжившие Snotters достигают центра, Snotter Boss восстанавливается с итоговым запасом здоровья: за каждого убитого Snotter он теряет 900 здоровья. Если убиты все Snotters, Snotter Boss возрождается с 1000 здоровья."
+    },
+    {
+      "keys": ["entities:Ability_SnotterBoss4_description", "entities:Ability_SnotterBoss4_description_simple"],
+      "ru": "После получения атаки каждые 2,5 секунды выполняет проверку. С вероятностью 30% на 8 секунд усиливает всех нейтральных крипов фракции Snotter Boss в радиусе 900, давая им +100 скорости передвижения и возможность проходить сквозь юнитов."
+    },
+    {
+      "keys": ["entities:Ability_WinterBoss1_description", "entities:Ability_WinterBoss1_description_simple"],
+      "ru": "Frostbite выпускает Freezing Breath по дуге в 180 градусов. Все задетые цели получают ^oурон в размере 2 атак Frostbite^*, а их ^oброня снижается^*. Freezing Breath также может заморозить юнитов, лишив их возможности двигаться."
+    },
+    {
+      "keys": ["entities:Ability_WinterBoss3_description", "entities:Ability_WinterBoss3_description_simple"],
+      "ru": "Пассивно увеличивает здоровье и урон с течением времени.\\n\\nКаждая атака по Frostbite снижает скорость атаки атакующего на ^o5%^*, вплоть до ^o-30% скорости атаки^*."
+    }
+  ]
+}

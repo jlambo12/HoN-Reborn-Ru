@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_197_ITEMS_SHORT_GROUP_C",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Item_LagunaOrb_FRAME_effect"],
+      "english_hash": "4c321feb770f8e4d06faa486776af16ad628305c4a7dffe1f407cc446375b0e7",
+      "ru": "\\nКаждая 6-я атака наносит дополнительно ^o100 чистого урона^*, снимает с цели все положительные эффекты и снижает её ^oскорость передвижения на 100%^*, причём эффект постепенно ослабевает в течение 1 секунды."
+    },
+    {
+      "keys": ["entities:Item_LastWail_FRAME_effect"],
+      "english_hash": "3b7870d90185b84787ca7012c90f223313a43c2078d28c0dfc4409cb6ac8b4f3",
+      "ru": "\\nЕсли вас убивает ^oвражеский герой^*, он получает ^oчистый урон^* в размере 250 + 10% от своего максимального здоровья. Если этот урон убивает его, вы возрождаетесь с 250 + 10% здоровья."
+    },
+    {
+      "keys": ["entities:Item_Lifetube_description_simple"],
+      "english_hash": "c3ce28d936bf7e3f61ff6f0b5bb73eeeeb739657c607eea0e8472353e36770fb",
+      "ru": "4.5 здоровья в секунду"
+    },
+    {
+      "keys": ["entities:Item_LuminousPrism_description_simple"],
+      "english_hash": "fa2baa663d3cf55e2975809a80de25832edb616f65c075e12a4bb8540efe8ef2",
+      "ru": "^77915 интеллекта^*"
+    },
+    {
+      "keys": ["entities:Item_PerpetualCogwheel_description_simple"],
+      "english_hash": "e0753f39478466e1d1226d6982bb4de915e8852092c662763d13352d9f0399e9",
+      "ru": "150% восстановления маны"
+    },
+    {
+      "keys": ["entities:Item_PickledBrain_description_simple"],
+      "english_hash": "d8ab3a05a11d638b0e2df4f7dcf7ab4151b0095d8d16ee7b85c089ea30de700b",
+      "ru": "200 маны"
+    },
+    {
+      "keys": ["entities:Item_Platemail_description_simple"],
+      "english_hash": "15cb287e35589a46c5af048f79be6bed427130d3eec429ef2dce674c51fb1134",
+      "ru": "10 брони"
+    },
+    {
+      "keys": ["entities:Item_PretendersCrown_description_simple"],
+      "english_hash": "9eb0f4ca32636091ba2f7c761076f37539ba154769ff6098103ab22d471934f3",
+      "ru": "^9772 силы^*\\n^7972 ловкости^*\\n^7792 интеллекта^*"
+    },
+    {
+      "keys": ["entities:Item_Punchdagger_description_simple"],
+      "english_hash": "d5f3ce18b8bb17254c9d9eb42bc6be21ceb2b8767b8a4868d13fd76beb5202b7",
+      "ru": "9 урона"
+    },
+    {
+      "keys": ["entities:Item_Quickblade_description_simple"],
+      "english_hash": "1988fed35e37a6b8b1997b98c6db51909899d92021e4cae05866a30067addb1e",
+      "ru": "^79710 ловкости^*"
+    },
+    {
+      "keys": ["entities:Item_Ringmail_description_simple"],
+      "english_hash": "14106824045772d698c01fbf8c443ea666c10972aceb2e2ab703a6ded0bae38c",
+      "ru": "4 брони"
+    },
+    {
+      "keys": ["entities:Item_SacrificialStone_IMPACT_effect"],
+      "english_hash": "05fa6d939d4061e26eefd86a98d779ebc85fad8eee2b7f1041d0b1d6a71d54eb",
+      "ru": "Восстанавливает ^o12 здоровья^* и ^o15 маны за каждый заряд^*. Максимум — ^c15 зарядов^*."
+    },
+    {
+      "keys": ["entities:Item_SacrificialStone_description_simple"],
+      "english_hash": "9a022a77daad9ae1999eadbc3af4ed324fe59d1cb613c82c9a5a8830ddd46904",
+      "ru": "Сокращает время возрождения.\\nУсиливает лечение и восстанавливает здоровье после смерти"
+    },
+    {
+      "keys": ["entities:Item_Scarab_description_simple"],
+      "english_hash": "8ec526356e4eef39409238a360ebdc05bd136b406732dc9ad45fc619ca5a5bcb",
+      "ru": "50% восстановления маны"
+    },
+    {
+      "keys": ["entities:Item_ShieldOfHonor_FRAME_effect"],
+      "english_hash": "456cdfe85e8ac1b64f1e5a31eb8ea07772b512baf4bf09b1848ae9fe085867c6",
+      "ru": "\\nПри ^oполучении атаки^* вы получаете ^o3 урона от атак и 3 скорости атаки^* на 5 секунд. Эффект складывается до 10 раз."
+    },
+    {
+      "keys": ["entities:Item_SinnersInscription_IMPACT_effect"],
+      "english_hash": "2610af3f9596b5d00c91543f7a299f3e04494dd9eeaa192abd822a7e48644ecd",
+      "ru": "^oТолкает выбранного^* подконтрольного игроку юнита на 600 единиц ^oв направлении его взгляда^*, уничтожая деревья в радиусе 100 от цели во время перемещения.\\n\\nЕсли это союзный юнит, ^oувеличивает скорость передвижения^* цели на ^o15% на 1.5 секунды^*.\\nЕсли это вражеский юнит, ^oснижает скорость передвижения^* на ^o15% на 1.5 секунды^*.\\n\\nПрерывает поддерживаемые способности.\\n\\nНельзя применить к обездвиженным или удерживаемым целям."
+    },
+    {
+      "keys": ["entities:Item_SinnersInscription_description_simple"],
+      "english_hash": "962412c0c2d9a7bcf8c64ba4d5ea7bcba529521702f20131fd0c3e509066f898",
+      "ru": "Улучшенные активные эффекты Tablet of Command и аура Abyssal Skull."
+    },
+    {
+      "keys": ["entities:Item_Slayer_description_simple"],
+      "english_hash": "e99844003aa3a15f3af634fee7fe7ccec5d346484925b8193c51d5832d53df9c",
+      "ru": "40 урона"
+    },
+    {
+      "keys": ["entities:Item_SnakeBracelet_description2"],
+      "english_hash": "4af0d7a0863c84b91f26028439b6498547ca5476741482236681c370ec0e8916",
+      "ru": "Этот предмет обладает свойством ^yуклонения^*. Свойства уклонения не складываются."
+    },
+    {
+      "keys": ["entities:Item_SnakeBracelet_description_simple"],
+      "english_hash": "e53855b34414ca8937d68cc9c7c5d45eb511dcc7cbeba443b4e1b68d90af3afa",
+      "ru": "^oМодификатор уклонения^*\\n15% уклонения"
+    },
+    {
+      "keys": ["entities:Item_SoulscreamRing_description_simple"],
+      "english_hash": "c4290704d4f8c439b78c439e09c28da21a8126ef23532a5d0dd40df0833946ba",
+      "ru": "3 силы\\n6 ловкости\\n3 интеллекта"
+    },
+    {
+      "keys": ["entities:Item_StaffOfTheMaster_description"],
+      "english_hash": "abed43e7d72fc0ead4841f5c7eb123ac9e18f4a23ab9aa0d664e925a40eaffec",
+      "ru": "Улучшает способности многих героев."
+    },
+    {
+      "keys": ["entities:Item_StaffOfTheMaster_description_simple"],
+      "english_hash": "6a95cbb5787de6e7a0458766d4f3d0eae22614ef4ea1317b40ee2b890224b1d7",
+      "ru": "Улучшает способности многих героев. Совместимость указана в подсказках способностей."
+    },
+    {
+      "keys": ["entities:Item_Steamstaff_description_simple"],
+      "english_hash": "1f69ef06c881c5eaa8d717c0a4e29553cd8c5269779497a3a2666dabade6e87c",
+      "ru": "10 урона\\n10 скорости атаки"
+    },
+    {
+      "keys": ["entities:Item_LagunaOrb_description", "entities:Item_LastWail_description", "entities:Item_ShieldOfHonor_description"],
+      "english_hash": "2e629a6a49bced6062c96616472ffe671f183581c030bfe5f7a08ca6909e5563",
+      "ru": "Реликвия, опалённая и явленная миру смертью вечной ^rFirebird^*."
+    },
+    {
+      "keys": ["entities:Item_Lifetube_effect_header", "entities:Item_LuminousPrism_effect_header", "entities:Item_PerpetualCogwheel_effect_header", "entities:Item_PickledBrain_effect_header", "entities:Item_Platemail_effect_header", "entities:Item_PretendersCrown_effect_header", "entities:Item_Punchdagger_effect_header", "entities:Item_Quickblade_effect_header", "entities:Item_Ringmail_effect_header", "entities:Item_Scarab_effect_header", "entities:Item_Slayer_effect_header", "entities:Item_SoulscreamRing_effect_header", "entities:Item_Steamstaff_effect_header"],
+      "english_hash": "6e5e7bc5e96f838352cde0fcff351520eab9cd6b12ecb43e9b30ed6fd98f6777",
+      "ru": "Эффекты состояния"
+    }
+  ]
+}

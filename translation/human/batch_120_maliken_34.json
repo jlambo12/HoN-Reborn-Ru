@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_120_MALIKEN_34",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Maliken3_description"],
+      "ru": "Maliken обращает боль от своих ран в ярость: чем больше здоровья он потерял, тем выше его скорость атаки и магическая броня."
+    },
+    {
+      "keys": ["entities:Ability_Maliken3_description_simple"],
+      "ru": "Даёт ^o2 магической брони^*.\\n\\nЗа каждый ^o1% потерянного здоровья^* дополнительно даёт ^o{0.5,1,1.5,2} скорости атаки^* и ^o{0.025,0.05,0.075,0.1} магической брони^*."
+    },
+    {
+      "keys": ["entities:Ability_Maliken3_tooltip_flavor"],
+      "ru": "Разобьёшь мне сердце — я разобью тебя!"
+    },
+    {
+      "keys": ["entities:Ability_Maliken3_FRAME_effect", "entities:Ability_Maliken3_FRAME_effect:maliken_ability3_Armor"],
+      "ru": "^oДаёт {0.5,1,1.5,2} скорости атаки и {0.025,0.05,0.075,0.1} магической брони^* за каждый ^o1% потерянного здоровья^*."
+    },
+    {
+      "keys": ["entities:Ability_Maliken4_description"],
+      "ru": "Maliken впускает в себя демона и на время принимает его истинный облик. В этой форме его атаки становятся дальними и наносят урон по области."
+    },
+    {
+      "keys": ["entities:Ability_Maliken4_description2"],
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* Сокращает перезарядку до 14 секунд."
+    },
+    {
+      "keys": ["entities:Ability_Maliken4_description_simple"],
+      "ru": "На ^o30 секунд^* превращает вас в истинного демона, ^oпоглощая 25% текущего здоровья^*. Вы получаете ^o{5,10,15} брони на 6 секунд^*, ^oдальние атаки с уроном по области^* и накладываете ^oFear на {1.5,1.75,2} секунды^* на ближайших вражеских героев. На всё время действия противники также получают ^oSighted^* и ^oRevealed^*.\\n\\n^gStaff of the Master^* сокращает перезарядку до ^o14 секунд^*."
+    },
+    {
+      "keys": ["entities:Ability_Maliken4_effect_header"],
+      "ru": "Эффекты Possessed"
+    },
+    {
+      "keys": ["entities:Ability_Maliken4_effect_header2"],
+      "ru": "Feared"
+    },
+    {
+      "keys": ["entities:Ability_Maliken4_tooltip_flavor"],
+      "ru": "Какая непристойная демонстрация силы!"
+    },
+    {
+      "keys": ["entities:Ability_Maliken4_IMPACT_effect"],
+      "ru": "При использовании ^oпоглощает 25% текущего здоровья^*, накладывает на героя ^oPossessed^* на ^o30 секунд^* и накладывает Fear на вражеских героев в радиусе 400 на ^o{1.5,1.75,2} секунды^*. На всё время действия противники также получают Sighted и Revealed."
+    },
+    {
+      "keys": ["entities:Ability_Maliken4_description_simple:ult_boost"],
+      "ru": "На ^o30 секунд^* превращает вас в истинного демона, ^oпоглощая 25% текущего здоровья^*. Вы получаете ^o{5,10,15} брони на 6 секунд^*, ^oдальние атаки с уроном по области^* и накладываете ^oFear на {1.5,1.75,2} секунды^* на ближайших вражеских героев. На всё время действия противники также получают ^oSighted^* и ^oRevealed^*."
+    },
+    {
+      "keys": ["entities:State_Maliken_Ability4_name"],
+      "ru": "Possessed"
+    },
+    {
+      "keys": ["entities:State_Maliken_Ability4_FRAME_effect"],
+      "ru": "Атаки становятся дальними (дальность 550) и наносят урон по области:\\n^y{50,75,100}%^* в области радиусом 75\\n^y{35,50,65}%^* в области радиусом 200\\n^y{20,25,30}%^* в области радиусом 350"
+    },
+    {
+      "keys": ["entities:State_Maliken_Ability4_Fear_name"],
+      "ru": "Feared"
+    },
+    {
+      "keys": ["entities:State_Maliken_Ability4_Fear_FRAME_effect"],
+      "ru": "Теряет управление и в страхе бесцельно бежит"
+    },
+    {
+      "keys": ["entities:Hero_Maliken_description"],
+      "ru": "Некогда Maliken был величайшим защитником человечества и повелителем всей Legion, но однажды слишком близко подошёл к тьме и стал её добычей. Теперь он лишь один из рабов среди проклятых, однако падение только приумножило его невероятную мощь. Вооружённый проклятым мечом, который питается его собственной проклятой душой, Maliken стал погибелью тех самых героев, которых когда-то вёл в бой."
+    },
+    {
+      "keys": ["entities:Hero_Maliken_role"],
+      "ru": "Maliken — сильный инициатор и боец поздней игры, способный сочетать Sword Throw с Possession. Благодаря Hellbourne Zeal он атакует всё быстрее по мере потери здоровья, поэтому игроку приходится тщательно следить за его выживаемостью. Shrunken Head значительно повышает его шансы остаться в живых."
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_Maliken_1"],
+      "ru": "Отправьте Sword Throw в одну сторону, а сами двигайтесь в другую, чтобы заставить преследователей разделиться."
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_Maliken_2"],
+      "ru": "Купите Shrunken Head, чтобы под огнём противника вас не оглушили, пока вы восстанавливаете здоровье атаками с Life Essence."
+    },
+    {
+      "keys": ["interface:hero_tip_defensive_tip_Hero_Maliken_1"],
+      "ru": "Когда Maliken применяет Sword Throw, следуйте за мечом, чтобы заранее встретить героя после телепортации."
+    },
+    {
+      "keys": ["interface:hero_tip_defensive_tip_Hero_Maliken_2"],
+      "ru": "Сосредоточьте весь урон на Maliken, иначе он восстановит здоровье с помощью Life Essence и воспользуется бонусом к скорости атаки от Hellbourne Zeal."
+    }
+  ]
+}

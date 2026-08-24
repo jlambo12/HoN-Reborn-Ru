@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package>
+
+	<template name="login_input">
+		<panel float="bottom" width="100%" style="grow_noinvis">
+			<!-- Label -->
+			<label font="dyn_11" style="color-juvio-white" fity="1" fitypadding="0.2h" shadow="1" content="{label}" />
+			<frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" height="3.3h" valign="center" color="#031113" bordercolor="#031113" borderthickness=".35h">
+				<!-- Input -->
+				<textbox name="{id}"
+					maxlength="{maxLength=-1}"
+					style="textbox_input_xl" font="dyn_13"
+					selectonfocus="1"
+					passwordchar="{passwordchar}"
+					taborder="{taborder}"
+					onloadlua="{onloadlua}"
+					onchangelua="{onchangelua}"
+					onenterlua="{onenterlua}"
+					onenter="{onenter}"
+				/>
+				<frame texture="/ui/hd_ui/frames/border_normal.tga" color="#0d2b31" bordercolor="#0d2b31" borderthickness=".35h" noclick="1" />
+			</frame>
+		</panel>
+	</template>
+
+	<!-- Core -->
+	<panel name="login_widgets" noclick="1">
+
+		<!-- Login Form -->
+		<panel name="main_login_form" size="30h" style="center" y="14h" noclick="1">
+			
+			<panel width="100%" align="center" style="grow_noinvis">
+
+				<!-- Frames -->
+				<frame texture="/ui/fe3/frames/juvio_card.tga" borderthickness="1.0h" />
+
+				<panel width="100%" height="29.5h" hmargin="3.0h" vmargin="3.0h" noclick="1">
+
+					<!-- Login Options -->
+					<panel name="main_login_area" float="bottom" padding="1.5h" visible="1" noclick="1">
+
+						<!-- Username -->
+						<instance name="login_input"
+							label="main_label_username"
+							id="main_login_user"
+							maxLength="16"
+							taborder="1"
+							onchangelua="Login:UsernameInput_OnChange(self)"
+						/>
+
+						<!-- Password -->
+						<instance name="login_input"
+							label="main_label_password"
+							id="main_login_password"
+							taborder="2"
+							passwordchar="*"
+							onchangelua="Login:PasswordInput_OnChange(self)"
+							onenterlua="Login:PasswordInput_OnEnter()"
+						/>
+
+
+						<!-- Login Options -->
+						<panel width="100%" float="bottom" padding="1h" style="grow_noinvis" noclick="1" visible="1">
+
+							<!-- Remember Me Checkbox -->
+							<instance name="checkbox_labeled_hd" visible="1"
+								label="main_login_remember_me"
+								cvar="login_rememberPassword"
+								onmouseoverlua="Tooltips:TooltipHover_Main(self, 'main_login_remember_me_tip', 'bottom', '34h')"
+								onmouseoutlua="Tooltips:TooltipHover_Main(false)"
+								onclicklua="Login:OnRememberMeToggle()"
+							/>
+
+						</panel>
+
+						<!-- Login Button -->
+						<instance name="button_juvio"
+							button_name="main_login_btn"
+							height="3.4h"
+							font="dyn_bold_11"
+							version="primary"
+							label="general_login"
+							onclicklua="Login:ExecuteLogin()"
+						/>
+
+						<label name="main_login_create_link" fity="1" font="dyn_10" textalign="center" content="Create an Account" style="text_a" visible="0" />
+
+					</panel>
+
+					<!-- Login Progress -->
+					<panel name="main_login_progress" width="100%" style="grow_noinvis" float="bottom" padding="2h" valign="center" visible="0" noclick="1">
+
+						<!-- Logging In Label -->
+						<label font="dyn_16" content="Logging In..." style="text_a,textcenter" fity="1" />
+
+					</panel>
+
+					<!-- Login Error -->
+					<panel name="main_login_error" width="100%" style="grow_noinvis" float="bottom" padding="2h" valign="center" visible="0" noclick="1">
+
+						<!-- Error Label -->
+						<label name="main_login_error_label" font="dyn_12" content="Error..." style="text_a,textcenter" fity="1" />
+						
+						<instance name="button_juvio"
+							button_name="main_login_tryagain_btn"
+							height="3.4h"
+							font="dyn_bold_11"
+							version="primary"
+							label="general_ok"
+							onclicklua="Login:FailedLoginAcceptButton()"
+						/>
+
+					</panel>
+
+				</panel>
+				
+			</panel>
+
+			<!-- Logo -->
+			<panel y="-100@" size="27h" align="center" noclick="1">
+				<image texture="../elements/juvio_logo_combined.tga" size="100%" align="center" noclick="1" />
+			</panel>
+
+		</panel>
+
+		<!-- Copyright -->
+		<label style="text_base,color-juvio-white" textalign="center" fity="1" y="-1.0h" valign="bottom" content="© 2026 Juvio, Все права защищены" noclick="1" />
+
+		<!-- Close Game Btn -->
+		<instance name="closexbutton" button_name="login_close" x="-1.4h" y="1.4h" align="right" size="2.5h"
+			onclicklua="Main:CloseButtonPressed()"
+		/>
+
+		<!-- Settings -->
+		<instance name="imagebutton" button_name="sysbar_settings_login" x="-5.2h" y="1.4h" valign="top" align="right" size="2.5h" icon="/ui/hd_ui/icons/settings.tga"
+			onclicklua="GetWidget('options_hd', 'options'):ToggleVisible()"
+		/>
+
+		<!-- Auto Play -->
+		<if condition="releaseStage_dev">
+			<instance name="imagebutton" button_name="sysbar_login_autoplay" x="-9.2h" y="1.4h" valign="top" align="right" size="2.5h" icon="/ui/hd_ui/icons/fast_forward.tga"
+				onclicklua="GetWidget('devui_panel'):ToggleVisible()"
+			/>
+		</if>
+
+		<!-- Language Select -->
+		<panel name="language_selector_parent" valign="bottom" x=".5h" y="-.5h" width="10h" height="10h" visible="1" noclick="1">
+
+			<instance name="combobox_hd" id="language_selector_combobox"
+				width="100%"
+				height="3.0h"
+				valign="bottom" listbg_y="-.4h"
+				itemheight="3.0h"
+				itemwidth="100%"
+				references="/ui/icons/local.tga,/ui/icons/automatic.tga"
+				maxlistheight="5"
+				listbgheight="6.7h"
+				watch="UIUpdateRegions"
+				ontriggerlua="HoN_Region:PopulateLanguageSelector(self)"
+				onselectlua="HoN_Region:ChangeLanguage(self:GetValue())"
+			/>
+
+		</panel>
+
+	</panel>
+	
+</package>

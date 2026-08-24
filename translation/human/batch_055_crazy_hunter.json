@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_055_CRAZY_HUNTER",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_Crazy_Hunter_name"], "ru": "Crazy Hunting!"},
+    {"keys": ["entities:Ability_Crazy_Hunter_description"], "ru": "Crazy Hunter бросается в атаку!"},
+    {"keys": ["entities:Ability_Crazy_Hunter_description_simple", "entities:Ability_Crazy_Hunter_IMPACT_effect"], "ru": "При активации на 7 секунд даёт максимальную скорость передвижения и 90 скорости атаки."}
+  ]
+}

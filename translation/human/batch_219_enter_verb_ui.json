@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_219_ENTER_VERB_UI",
+  "catalog_apply": true,
+  "reviewed_by": "Codex systematic runtime UI review",
+  "entries": [
+    {"keys":["interface:account_lost_username_msg"],"english_hash":"69b732f78d5af8f829f06eb11d500e5eb1776a5190062f64a10fcbf85915bbe0","ru":"Введите ниже адрес электронной почты, привязанный к вашей учётной записи, и мы отправим вам имя пользователя."},
+    {"keys":["interface:account_lost_password_msg"],"english_hash":"721a6319ea015040ce1746bfd4ba1fa2b263b90fe863ac7360a6cf9159643a9c","ru":"Введите имя пользователя или адрес электронной почты, и мы отправим пароль на адрес, привязанный к вашей учётной записи."},
+    {"keys":["interface:options_search_terms"],"english_hash":"46e0d2ada3d2acd3b8c3504526e09fd67f56f7a27a7af9dc5c5f4d8b69d5984a","ru":"Введите поисковый запрос"},
+    {"keys":["interface:options_search_too_short"],"english_hash":"883567ea44662636a0d9a9453077b40d41f43e165bd6fe5f8b4cca71e1c38fc8","ru":"Введите более длинный поисковый запрос"},
+    {"keys":["interface:create_acc_promocode"],"english_hash":"ec571480ce72b5e93020db31ae16a8bef6bd9e9e80fabd1e65d80628bf641490","ru":"Введите промокод"},
+    {"keys":["interface:create_acc_entercode_btn"],"english_hash":"2a62cd460e0c5768cee74fd2b7bf6835fac68c4311e02e0e073fd65d5bbf7c50","ru":"Ввести код"},
+    {"keys":["interface:main_local_browser_filter_desc"],"english_hash":"e1ad5735f56e9c8c7d56007b61e5105240745f6dc21103234bf56eff31994d5c","ru":"Введите название игры или его часть, чтобы отфильтровать результаты."},
+    {"keys":["interface:main_local_browser_password_tip"],"english_hash":"a6789ed5ad229c808b056912df772816d44c9a310fae45a0274d2c9803fdd8f3","ru":"Введите пароль этой игры."},
+    {"keys":["interface:main_local_browser_ip_tip"],"english_hash":"df53f59fa4c3099c0e7b035beba1aa220ecb9a8cbebd663cff16548085e0f9bf","ru":"Введите IP-адрес для подключения к удалённой игре."},
+    {"keys":["interface:cc_com_label_find_nickname_below"],"english_hash":"daf4b304ae366822fb93358a566034958a438065b8c0c2f4b0aac0eb8fb15c0b","ru":"Введите никнейм ниже:"},
+    {"keys":["interface:cc_com_newclan_memberinfo"],"english_hash":"bdea6165b339efa2e41ff1de8bffb710ace1621610f7c4f6265dc7125ece8163","ru":"Введите никнеймы четырёх основателей клана. Все основатели должны быть в сети и не состоять в другом клане."},
+    {"keys":["interface:cc_message_label_enter_name_message"],"english_hash":"f000c9df31c5ff75bcac7fcde2dca24c9d091214aa8d14ec06a8837fc849704f","ru":"Введите никнейм получателя"},
+    {"keys":["interface:game_end_stats_fetch_tooltip"],"english_hash":"f80b8d2963e1c168c8c0188e370df5ee872a3282c4c560395ac142afc6c8ab1b","ru":"Введите ID завершённого матча. ID прошлых матчей можно найти на сайте повторов. После загрузки данных можно посмотреть сведения о матче и скачать повтор, если он доступен."},
+    {"keys":["interface:mainlobby_tip_filter_server_name"],"english_hash":"d76ae0fcc62dc609154b1e206e6364e30f0ddbfdd6dbc2e3b0dc0c3493a0cfa4","ru":"Введите название сервера или его часть, чтобы отфильтровать результаты."},
+    {"keys":["interface:main_create_account_first_name_tip"],"english_hash":"5dac5ea05e080cd1d46e01214f3c5d46a88539dfb70d1c3a795064ca6c36afcf","ru":"Введите ваше имя."},
+    {"keys":["interface:main_create_account_last_name_tip"],"english_hash":"1352f0f9578b23e01fa34b16c2c0fc9bcd930bdde256e02a0c17a9ef531667ba","ru":"Введите вашу фамилию."},
+    {"keys":["interface:main_create_account_email_tip"],"english_hash":"280f46b8965731d99f73c1f8bb9691c79c306803a2356b448aa7fbe868ff2a4d","ru":"Введите адрес электронной почты."},
+    {"keys":["interface:mm_queue_enter_btn"],"english_hash":"315168e4986e20aa7b33b8c43aec8294bc5c59d8dcef92501b147c9a5c0d0458","ru":"Встать в очередь"},
+    {"keys":["interface:social_groups_newIM_msg"],"english_hash":"67db819a31e38da0427a5b61dcbc4578d75527960cac91b4c99ef302d87cd73d","ru":"Введите никнейм игрока, чтобы начать разговор."},
+    {"keys":["interface:social_enter_new_group"],"english_hash":"be97c206b1fa19d595f3badf97db40a82bdd83bcea7b23b6df6a6d05a2d9fd1b","ru":"Введите название группы ниже"}
+  ]
+}

@@ -1,0 +1,65 @@
+name: Build release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version without the v prefix"
+        required: true
+        default: "0.1.0"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - name: Resolve version
+        id: version
+        shell: pwsh
+        run: |
+          if ("${{ github.event_name }}" -eq "workflow_dispatch") {
+              $Version = "${{ inputs.version }}"
+          }
+          else {
+              $Version = "${{ github.ref_name }}".TrimStart("v")
+          }
+          "version=$Version" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+      - name: Verify release overlay
+        run: python tools/verify_release.py --version ${{ steps.version.outputs.version }}
+      - name: Build package
+        shell: pwsh
+        run: .\scripts\package_release.ps1 -Version ${{ steps.version.outputs.version }}
+      - name: Upload workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: HoN-Reborn-RU-v${{ steps.version.outputs.version }}
+          path: dist/release/*
+          if-no-files-found: error
+      - name: Publish GitHub prerelease
+        if: github.ref_type == 'tag'
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $Version = "${{ steps.version.outputs.version }}"
+          $Notes = "docs/release-notes/v$Version.md"
+          if (-not (Test-Path -LiteralPath $Notes)) {
+              throw "Release notes not found: $Notes"
+          }
+          gh release create "v$Version" `
+              "dist/release/HoN-Reborn-RU-v$Version.zip" `
+              "dist/release/SHA256SUMS.txt" `
+              --title "HoN Reborn RU v$Version" `
+              --notes-file $Notes `
+              --prerelease `
+              --verify-tag
+

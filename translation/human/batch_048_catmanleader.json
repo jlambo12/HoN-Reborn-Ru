@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_048_CATMANLEADER",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_Catmanleader1_name"], "ru": "Wild Strike"},
+    {"keys": ["entities:Ability_Catmanleader1_description"], "ru": "Атакует всех противников поблизости, наносит им урон и на 3 секунды снижает скорость передвижения и атаки."},
+    {"keys": ["entities:Ability_Catmanleader1_description_simple"], "ru": "При активации наносит противникам поблизости ^o150 магического урона^*, на 3 секунды ^oснижает скорость передвижения на 25^* и ^oскорость атаки на -25^*."},
+    {"keys": ["entities:Ability_Catmanleader1_IMPACT_effect"], "ru": "Наносит целям в области 150 магического урона и накладывает Wild Strike на 3 секунды."},
+    {"keys": ["entities:Ability_Catmanleader1_effect_header"], "ru": "Эффекты Wild Strike"},
+    {"keys": ["entities:Ability_Catmanleader2_name"], "ru": "Catman's Wisdom"},
+    {"keys": ["entities:Ability_Catmanleader2_description"], "ru": "Повышает восстановление маны союзных юнитов поблизости."},
+    {"keys": ["entities:Ability_Catmanleader2_description_simple"], "ru": "Даёт союзным юнитам поблизости 1 восстановления маны в секунду."},
+    {"keys": ["entities:Ability_Catmanleader2_effect_header"], "ru": ""}
+  ]
+}

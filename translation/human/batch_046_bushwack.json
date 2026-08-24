@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_046_BUSHWACK",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_Bushwack1_name"], "ru": "Crippling Dart"},
+    {"keys": ["entities:Ability_Bushwack1_description"], "ru": "Быстро стреляет во врага, нанося ему урон и замедляя его."},
+    {"keys": ["entities:Ability_Bushwack1_description_simple"], "ru": "Быстро стреляет в выбранного противника, наносит ^o{45,75,105,135} + 100% физического урона^* и на ^o1.5 секунды^* ^oзамедляет его передвижение на 75%^*."},
+    {"keys": ["entities:Ability_Bushwack1_IMPACT_effect"], "ru": "Выберите противника, чтобы нанести ему ^o{45,75,105,135} + 100% физического урона^* и на ^o1.5 секунды^* ^oзамедлить его передвижение на 75%^*."},
+    {"keys": ["entities:Ability_Bushwack1_effect_header"], "ru": "Эффекты Crippling Dart"},
+    {"keys": ["entities:Ability_Bushwack1_description2", "entities:Ability_Bushwack1_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_Bushwack1_tooltip_flavor"], "ru": "Для Cthulhuphant понадобится дротик побольше."},
+
+    {"keys": ["entities:Ability_Bushwack2_name"], "ru": "Side Step"},
+    {"keys": ["entities:Ability_Bushwack2_description"], "ru": "Стремительно перемещается в выбранную точку."},
+    {"keys": ["entities:Ability_Bushwack2_description_simple", "entities:Ability_Bushwack2_IMPACT_effect"], "ru": "Стремительно перемещается в выбранную точку и на ^o3 секунды^* получает усиление. Если за это время вы атакуете противника, то на ^o3 секунды^* получаете ^oвидимость^* цели.\\n\\nАтаки сокращают перезарядку этой способности на ^o3 секунды^*."},
+    {"keys": ["entities:Ability_Bushwack2_description2", "entities:Ability_Bushwack2_effect_header"], "ru": ""},
+    {"keys": ["entities:Ability_Bushwack2_tooltip_flavor"], "ru": "Бывали. Уворачивались."},
+
+    {"keys": ["entities:Ability_Bushwack3_name"], "ru": "Spiked Dart"},
+    {"keys": ["entities:Ability_Bushwack3_description"], "ru": "Атаки Bushwack иногда наносят критический урон."},
+    {"keys": ["entities:Ability_Bushwack3_description_simple"], "ru": "Следующая атака наносит ^o{1.3,1.4,1.5,1.6}x критического урона^* и накладывает на других противников в радиусе 300 от цели ^o{1,1,2,3}^* (^o{1,1,2,2}^* на вражеских героев) ^oзарядов^* ^oпериодического эффекта Jungle Toxin^*, если способность изучена.\\n\\nПрименение ^oSide Step^* сбрасывает перезарядку."},
+    {"keys": ["entities:Ability_Bushwack3_ATTACK_effect"], "ru": "Если способность не перезаряжается, следующая атака наносит ^o{1.3,1.4,1.5,1.6}x критического урона^* и накладывает на других противников в радиусе 300 от цели {1,1,2,3} заряда ({1,1,2,2} на вражеских героев) периодического эффекта Jungle Toxin, если способность изучена.\\n\\nПрименение ^oSide Step^* сбрасывает перезарядку."},
+    {"keys": ["entities:Ability_Bushwack3_description2", "entities:Ability_Bushwack3_effect_header"], "ru": ""},
+    {"keys": ["entities:Ability_Bushwack3_tooltip_flavor"], "ru": "Встаньте в ряд — каждый будет мой."},
+
+    {"keys": ["entities:Ability_Bushwack4_name"], "ru": "Jungle Toxin"},
+    {"keys": ["entities:Ability_Bushwack4_name:ult_boost"], "ru": "^gJungle Toxin*^*"},
+    {"keys": ["entities:Ability_Bushwack4_description"], "ru": "Bushwack пропитывает свои снаряды смертельным ядом джунглей: атаки наносят противникам периодический урон и повышают скорость атаки самого Bushwack."},
+    {"keys": ["entities:Ability_Bushwack4_description_simple"], "ru": "Каждая атака или применение ^yCrippling Dart^* накладывает на противников, кроме боссов, ^oJungle Toxin^* на 2.5 секунды. Эффект складывается до ^o20 раз^*.\\n\\n^oJungle Toxin раскрывает цель^*, наносит ^o{6,10,14} физического урона в секунду^* и ^oпохищает {10,15,20} скорости атаки за каждый заряд^*.\\n\\nМаксимальное снижение скорости атаки противника — 50. ^oМаксимальная прибавка к вашей скорости атаки — {200,300,400}^*. При атаке другой цели прибавка сбрасывается.\\n\\n^gStaff of the Master:^* прибавка к скорости атаки больше не теряется при смене цели. Также ^oдаёт видимость^* цели."},
+    {"keys": ["entities:Ability_Bushwack4_description_simple:ult_boost"], "ru": "Каждая атака или применение ^yCrippling Dart^* накладывает на противников, кроме боссов, ^oJungle Toxin^* на 2.5 секунды. Эффект складывается до ^o20 раз^*.\\n\\n^oJungle Toxin раскрывает цель ^gи даёт её видимость^*^*, наносит ^o{6,10,14} физического урона в секунду^* и ^oпохищает {10,15,20} скорости атаки за каждый заряд^*.\\n\\nМаксимальное снижение скорости атаки противника — 50. ^oМаксимальная прибавка к вашей скорости атаки — {200,300,400}^*."},
+    {"keys": ["entities:Ability_Bushwack4_description2"], "ru": "^gЭту способность можно усилить с помощью Staff of the Master^*.\\n\\n^gЭффект Staff of the Master:^* прибавка к скорости атаки не теряется при смене цели. Также даёт видимость цели."},
+    {"keys": ["entities:Ability_Bushwack4_description2:ult_boost"], "ru": "\\r"},
+    {"keys": ["entities:Ability_Bushwack4_effect_header"], "ru": "Эффекты Jungle Toxin"},
+    {"keys": ["entities:Ability_Bushwack4_IMPACT_effect"], "ru": "Каждая атака или применение ^yCrippling Dart^* накладывает на противника ^oJungle Toxin^* на 2.5 секунды. Эффект складывается до ^o20 раз^*.\\n\\n^oJungle Toxin раскрывает цель^*, наносит ^o{6,10,14} физического урона в секунду^* (не более 100 по боссам) и ^oпохищает {10,15,20} скорости атаки за каждый заряд^*.\\n\\nМаксимальное снижение скорости атаки противника — 50. ^oМаксимальная прибавка к скорости атаки Bushwack — {200,300,400}^*. При атаке другой цели прибавка сбрасывается."},
+    {"keys": ["entities:Ability_Bushwack4_IMPACT_effect:ult_boost"], "ru": "Каждая атака накладывает на противника ^oJungle Toxin^* на 2.5 секунды. Эффект складывается до ^o20 раз^*.\\n\\n^oJungle Toxin раскрывает цель ^gи даёт её видимость^*^*, наносит ^o{6,10,14} физического урона в секунду^* (не более 100 по боссам) и ^oпохищает {10,15,20} скорости атаки за каждый заряд^*.\\n\\nМаксимальное снижение скорости атаки противника — 50. ^oМаксимальная прибавка к скорости атаки Bushwack — {200,300,400}^*."},
+    {"keys": ["entities:Ability_Bushwack4_ATTACK_effect", "entities:Ability_Bushwack4_ATTACK_effect:ult_boost", "entities:Ability_Bushwack4_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_Bushwack4_tooltip_flavor"], "ru": "Добро пожаловать в джунгли."}
+  ]
+}

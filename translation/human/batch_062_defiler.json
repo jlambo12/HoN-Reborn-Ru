@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_062_DEFILER",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_Defiler1_name"], "ru": "Wave of Death"},
+    {"keys": ["entities:Ability_Defiler1_description"], "ru": "Властвуя над смертью, Defiler выпускает Wave of Death, которая наносит урон противникам в конусе."},
+    {"keys": ["entities:Ability_Defiler1_description_simple"], "ru": "Выпускает ^oWave of Death^* в выбранного юнита или точку и наносит противникам в конусе ^o{100,175,250,325} магического урона^*."},
+    {"keys": ["entities:Ability_Defiler1_IMPACT_effect"], "ru": "Наносит целям вдоль линии длиной 800 единиц {100,175,250,325} магического урона. Радиус линии увеличивается со 110 в начале до 300 в конце."},
+    {"keys": ["entities:Ability_Defiler1_effect_header"], "ru": "Эффекты состояния"},
+    {"keys": ["entities:Ability_Defiler1_tooltip_flavor"], "ru": "Переправа через Стикс!"},
+
+    {"keys": ["entities:Ability_Defiler2_name"], "ru": "Grave Silence"},
+    {"keys": ["entities:Ability_Defiler2_description"], "ru": "Defiler наполняет разум противников образами павших воинов и заставляет их умолкнуть, лишая возможности применять заклинания и способности."},
+    {"keys": ["entities:Ability_Defiler2_description_simple"], "ru": "Накладывает ^oБезмолвие^* на противников в выбранной области на ^o{1.75,2.5,3.25,4} секунды^*."},
+    {"keys": ["entities:Ability_Defiler2_IMPACT_effect"], "ru": "Накладывает Безмолвие на цели в области на {1.75,2.5,3.25,4} секунды."},
+    {"keys": ["entities:Ability_Defiler2_effect_header"], "ru": "Эффекты Grave Silence"},
+    {"keys": ["entities:Ability_Defiler2_tooltip_flavor"], "ru": "Я написала книгу о безумии."},
+
+    {"keys": ["entities:Ability_Defiler3_name"], "ru": "Siphon Soul"},
+    {"keys": ["entities:Ability_Defiler3_description"], "ru": "Defiler цепляется за душу вражеского героя, постепенно наносит ему урон и восстанавливает собственное здоровье."},
+    {"keys": ["entities:Ability_Defiler3_description_simple"], "ru": "На срок до ^o5 секунд^* связывает себя с частицей души противника, каждую секунду наносит ^o20 + {1,1.5,2,2.5}% максимального здоровья цели в виде магического урона^* и ^oвосстанавливает 10 + {2,3,4,5}% максимального здоровья цели^*. Связь также ^oснижает скорость передвижения цели на {15,30,45,60}^* и ^oповышает вашу на {7,14,21,28}%^*.\\n\\nСвязь разрывается на расстоянии ^o800 единиц^*, а также если цель становится неуязвимой или невосприимчивой к магии."},
+    {"keys": ["entities:Ability_Defiler3_IMPACT_effect"], "ru": "На срок до 5 секунд связывает себя с частицей души противника, каждую секунду наносит ^o20 + {1,1.5,2,2.5}% максимального здоровья цели в виде магического урона^* и ^oвосстанавливает 10 + {2,3,4,5}% максимального здоровья цели^*. Связь также ^oснижает скорость передвижения цели на {15,30,45,60}^* и ^oповышает вашу на {7,14,21,28}%^*.\\n\\nСвязь разрывается на расстоянии ^o800 единиц^*, а также если цель становится неуязвимой или невосприимчивой к магии."},
+    {"keys": ["entities:Ability_Defiler3_effect_header"], "ru": "Эффекты состояния"},
+    {"keys": ["entities:Ability_Defiler3_tooltip_flavor"], "ru": "Остаётся лишь дождаться смерти."},
+
+    {"keys": ["entities:Ability_Defiler4_name"], "ru": "Unholy Expulsion"},
+    {"keys": ["entities:Ability_Defiler4_name:ult_boost"], "ru": "^gUnholy Expatriation*^*"},
+    {"keys": ["entities:Ability_Defiler4_description"], "ru": "Defiler выпускает из себя несколько неуязвимых духов. Ими нельзя управлять напрямую: они атакуют окружающих противников и цель самой Defiler. Когда Unholy Expulsion заканчивается, духи возвращаются и исцеляют её."},
+    {"keys": ["entities:Ability_Defiler4_description_simple"], "ru": "На 30 секунд призывает ^o{8,15,22} неуязвимых духов^* с ^o50 урона от атаки^*. Они атакуют окружающих противников, отдавая приоритет целям Defiler, а после исчезновения ^oисцеляют её^*.\\n\\n^gStaff of the Master:^* призывает ^o{2,3,4} постоянных Greater Spirits^*, которые атакуют окружающих противников, наносят 75 урона и сразу восстанавливают Defiler здоровье в размере 50% нанесённого урона."},
+    {"keys": ["entities:Ability_Defiler4_description_simple:ult_boost"], "ru": "^oDefiler^* помогают ^o{2,3,4} Greater Spirits^*: они атакуют окружающих противников, наносят 75 урона и восстанавливают Defiler здоровье в размере 50% нанесённого урона.\\n\\nНа 30 секунд призывает ^o{8,15,22} неуязвимых духов^* с ^o50 урона от атаки^*. Они атакуют окружающих противников, отдавая приоритет целям Defiler, а после исчезновения ^oисцеляют её^*."},
+    {"keys": ["entities:Ability_Defiler4_description2"], "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* призывает ^o{2,3,4} постоянных Greater Spirits^*, которые атакуют окружающих противников, наносят 75 урона и сразу восстанавливают Defiler здоровье в размере нанесённого урона."},
+    {"keys": ["entities:Ability_Defiler4_description2:ult_boost"], "ru": "^gПризывает ^o{2,3,4} постоянных Greater Spirits^*, которые атакуют окружающих противников, наносят 75 урона и сразу восстанавливают Defiler здоровье в размере нанесённого урона.^*"},
+    {"keys": ["entities:Ability_Defiler4_IMPACT_effect", "entities:Ability_Defiler4_IMPACT_effect:ult_boost"], "ru": "На 30 секунд призывает {8,15,22} неуязвимых летающих духов, которые следуют за Defiler.\\n\\nКаждая их атака наносит 50 физического урона, игнорирует Deflection и имеет перезарядку 2 секунды. Духи атакуют цель Defiler, а если её нет — любого противника поблизости.\\n\\nПо завершении духи возвращаются и восстанавливают Defiler здоровье в размере 100% нанесённого ими урона."},
+    {"keys": ["entities:Ability_Defiler4_effect_header"], "ru": "Эффекты состояния"},
+    {"keys": ["entities:Ability_Defiler4_tooltip_flavor"], "ru": "Призраки HoN!"}
+  ]
+}

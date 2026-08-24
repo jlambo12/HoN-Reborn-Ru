@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_218_RUNTIME_MAIN_UI",
+  "catalog_apply": true,
+  "reviewed_by": "Codex runtime screenshot review",
+  "entries": [
+    {
+      "keys": ["interface:mstore_buygift_enter_player"],
+      "english_hash": "7aa2ec65921315f107d6dc091845d0accb2b14d30e57b2d572a4876660b138fb",
+      "ru": "Введите имя игрока"
+    },
+    {
+      "keys": ["interface:player_stats_fetch_msg"],
+      "english_hash": "3be0df7281443b134abb7bf74e35ae6cab38847ee28875c5ea74c02652f83537",
+      "ru": "Введите имя игрока, чтобы посмотреть его статистику."
+    },
+    {
+      "keys": ["interface:ui_staff_spectate_placeholder", "interface:social_panel_enter_name"],
+      "english_hash": "5d8356991a7f6865a0cd5b4c5462899d450f44c0aa5b9cff6d30a91c6037e758",
+      "ru": "Введите имя игрока..."
+    },
+    {
+      "keys": ["interface:social_panel_enter_group"],
+      "english_hash": "a071eea6917b6e93f997091794da538ac513f803a7313dd0b4d1d25e00e2680e",
+      "ru": "...или введите название группы"
+    }
+  ]
+}

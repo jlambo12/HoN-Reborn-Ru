@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "batch_id": "PREACT_RUNTIME_013_PATCH_REGISTRY",
+  "scope": "Latest patch cards",
+  "reviewed_by": "Codex manual translation 2026-08-24",
+  "rows": [
+    {"source_file":"preact/src/layers/patch-notes-v2/data/patchregistry.ts","english":"August 21st, 2026","russian":"21 августа 2026 года","expected_matches":1},
+    {"source_file":"preact/src/layers/patch-notes-v2/data/patchregistry.ts","english":"Play with your friends, wait less for a game, and a new Legendary avatar for Corrupted Disciple.","russian":"Играйте с друзьями, быстрее находите матчи и встречайте новый легендарный облик Corrupted Disciple.","expected_matches":1}
+  ]
+}

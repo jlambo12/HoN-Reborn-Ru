@@ -1,0 +1,39 @@
+---
+interface Props {
+  url: string | null;
+}
+
+const { url } = Astro.props;
+---
+
+<div class="download">
+  {url ? (
+    <a class="download-button" href={url} rel="noopener" data-download>
+      <span class="download-button__energy" aria-hidden="true"></span>
+      <span class="download-button__label">Скачать русификатор</span>
+    </a>
+  ) : (
+    <button
+      class="download-button"
+      type="button"
+      disabled
+      aria-disabled="true"
+      aria-describedby="download-status"
+    >
+      <span class="download-button__energy" aria-hidden="true"></span>
+      <span class="download-button__label">Скачать русификатор</span>
+    </button>
+  )}
+  <p class="download__status" id="download-status" aria-live="polite">
+    {url ? 'Релизный архив для Windows' : 'Первая сборка готовится'}
+  </p>
+</div>
+
+<script>
+  const downloadButton = document.querySelector('[data-download]');
+
+  downloadButton?.addEventListener('click', () => {
+    downloadButton.classList.remove('is-flashing');
+    requestAnimationFrame(() => downloadButton.classList.add('is-flashing'));
+  });
+</script>

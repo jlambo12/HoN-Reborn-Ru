@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_139_N_ITEMS",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Item_NeophytesBook_description_simple"],
+      "ru": "^77910 интеллекта^*"
+    },
+    {
+      "keys": ["entities:Item_NeophytesBook_effect_header", "entities:Item_NomesWisdom_effect_header"],
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:Item_NeophytesBook_shop_flavor"],
+      "ru": "Знакомые рецепты, полезные ритуалы и множество заумных, но якобы пророческих изречений наполняют каждую Neophyte's Book. Этот кладезь знаний повышает интеллект владельца — и, вероятно, ещё сильнее раздувает его самомнение."
+    },
+    {
+      "keys": ["entities:Item_NomesWisdom_description"],
+      "ru": "Окружает всех ближайших союзников ^oаурой^*. Аура не суммируется с такой же аурой или предметами, в которые входит Nome's Wisdom."
+    },
+    {
+      "keys": ["entities:Item_NomesWisdom_description2"],
+      "ru": "Предмет пассивно даёт ^yмагическую броню^*. Этот бонус не суммируется с другими предметами на ^yмагическую броню^*.\\n\\n^yАура магической брони^*, однако, суммируется с другими предметами на магическую броню."
+    },
+    {
+      "keys": ["entities:Item_NomesWisdom_description_simple"],
+      "ru": "^oМодификатор магической брони^*\\nДаёт ауру регенерации маны и исцеления."
+    },
+    {
+      "keys": ["entities:Item_NomesWisdom_shop_flavor"],
+      "ru": "По лесам Caldavar разнёсся слух: безумный алхимик Nome создал новую реликвию. Артефакт излучал восстанавливающую ауру, способную унять даже глубочайшие боевые раны. Когда война за господство разгорелась с новой силой, и Hellbourne, и Legion отчаянно попытались использовать уникальный предмет и быстро добавили его в свои арсеналы."
+    },
+    {
+      "keys": ["entities:Item_NomesWisdom_tooltip_flavor"],
+      "ru": "Посвящается Nome за этот предмет в HoN!\\n\\nИ за нескольких его забавных героев в HoN тоже."
+    },
+    {
+      "keys": ["entities:State_Nome_FRAME_effect"],
+      "ru": "Восстанавливает здоровье в размере 30% потраченной маны.\\n\\nЕсли исцеление превышает максимальное здоровье, создаёт щит на избыточную величину на 7 секунд. Щит может иметь не более 200 здоровья."
+    },
+    {
+      "keys": ["entities:State_Nomes_Shield_name"],
+      "ru": "Nome's Shield"
+    },
+    {
+      "keys": ["entities:State_Nomes_Shield_description"],
+      "ru": "Щит создаётся избыточным исцелением Nome's Wisdom сверх максимального здоровья."
+    },
+    {
+      "keys": ["entities:Item_NullStone_description_simple"],
+      "ru": "Периодически блокирует способности, направленные на одну цель."
+    },
+    {
+      "keys": ["entities:Item_NullStone_effect_header"],
+      "ru": "Эффекты Nulling Magic"
+    },
+    {
+      "keys": ["entities:Item_NullStone_shop_flavor"],
+      "ru": "Ценой бесчисленных жизней была усовершенствована технология создания Refined Glowstones. Эти удивительные предметы укрепляют владельца во всех отношениях, быстро восстанавливают здоровье и магическую энергию и нейтрализуют вражескую магию. Какова бы ни была цена, они того стоят."
+    },
+    {
+      "keys": ["entities:Item_NullStone_IMPACT_effect"],
+      "ru": "^oПередаёт^* способность нейтрализации заклинаний другому союзному герою не более чем на 15 секунд."
+    },
+    {
+      "keys": ["entities:Item_NullStone_tooltip_flavor"],
+      "ru": "Посвящается Sliferjam за вклад в техническую поддержку!"
+    },
+    {
+      "keys": ["entities:State_NullStone_name"],
+      "ru": "Null Stone Protection"
+    },
+    {
+      "keys": ["entities:State_NullStone_FRAME_effect"],
+      "ru": "Нейтрализует одно направленное заклинание."
+    },
+    {
+      "keys": ["entities:Item_NullfireBlade_description"],
+      "ru": "Сжигает ману цели и наносит урон в зависимости от сожжённого количества.\\n\\n^rМожно улучшить 2 раза^*. ^cАктивация уровня 2+ снимает усиления с вражеской цели^*, а ^cна уровне 3 предмет можно применить к себе, чтобы снять отрицательные эффекты^*."
+    },
+    {
+      "keys": ["entities:Item_NullfireBlade_description2"],
+      "ru": "Эффект предмета ^yMana Burn^* не суммируется с таким же эффектом."
+    },
+    {
+      "keys": ["entities:Item_NullfireBlade_description_simple"],
+      "ru": "^oМодификатор Mana Combustion^*\\nСжигает ману противника и замедляет его.\\n^rМожно улучшить 2 раза^*."
+    },
+    {
+      "keys": ["entities:Item_NullfireBlade_effect_header"],
+      "ru": "Эффекты Dispelled"
+    },
+    {
+      "keys": ["entities:Item_NullfireBlade_shop_flavor"],
+      "ru": "Nullfire Blade выкован в лишённом материи и энергии плане ада и стремится уничтожить всякую магию поблизости: выжечь её из врага или сорвать с него чары. Окружающий клинок вихрь пустоты также дарует владельцу скорость и проницательность."
+    },
+    {
+      "keys": ["entities:Item_NullfireBlade_IMPACT_effect"],
+      "ru": "Накладывает на выбранного противника ^oзамедление передвижения на 60% с постепенным ослаблением в течение 4 секунд^*. Наносит призванным существам 800 чистого урона и мгновенно уничтожает иллюзии."
+    },
+    {
+      "keys": ["entities:Item_NullfireBlade_ATTACK_IMPACT_effect:manacombustion"],
+      "ru": "Сжигает до ^o{30,50,70} маны цели^* и наносит физический урон в размере 50% сожжённой маны.\\n\\nИллюзии получают этот эффект с силой 33%."
+    },
+    {
+      "keys": ["entities:Item_NihilCrystal_description"],
+      "ru": "При получении от противника ^o60+ урона заклинанием^* восстанавливает ^o40 здоровья и 20 маны^* за 10 секунд."
+    },
+    {
+      "keys": ["entities:Item_NihilCrystal_description2"],
+      "ru": "Пассивный бонус к регенерации маны не суммируется с таким же предметом или Adeve's Cloak."
+    },
+    {
+      "keys": ["entities:Item_NihilCrystal_description_simple"],
+      "ru": "Поддерживает силы при получении урона заклинаниями.\\n+0,5 регенерации маны"
+    },
+    {
+      "keys": ["entities:Item_NihilCrystal_effect_header"],
+      "ru": "Эффекты Nihil Crystal"
+    },
+    {
+      "keys": ["entities:Item_NihilCrystal_shop_flavor"],
+      "ru": "Кристалл, который, по всей видимости, сопротивляется урону заклинаний."
+    },
+    {
+      "keys": ["entities:State_NihilCrystal_name"],
+      "ru": "Nihil Essence"
+    }
+  ]
+}

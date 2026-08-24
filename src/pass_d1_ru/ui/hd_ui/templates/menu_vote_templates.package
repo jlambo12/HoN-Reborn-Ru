@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package>
+
+	<template name="game_menu_button">
+		<button
+			x="{x=}" y="{y=}" size="{size=100%}" align="{align=}" valign="{valign=}"
+			group="{group}"
+			name="{button_name}"
+			watch="{watch=}"
+			ontriggerlua="{ontriggerlua=}"
+			color="invisible"
+			visible="{visible=1}"
+			onmouseoverlua="PlaySound('/shared/sounds/ui/ccpanel/button_over_02.wav') PlaySound('/shared/sounds/ui/ccpanel/button_over_01.wav') {onmouseoverlua}"
+			onclick="{onclick}"
+			onclicklua="PlaySound('{sound=/shared/sounds/ui/ccpanel/button_click_02.wav}') {onclicklua}"
+		>
+			<widgetstate statename="up">
+				<image texture="/ui/hd_ui/icons/{icon}" color="1 1 1 .7"/>
+			</widgetstate>
+			<widgetstate statename="over">
+				<image texture="/ui/hd_ui/icons/{icon}" style="color-orange"/>
+			</widgetstate>
+			<widgetstate statename="down" y="1">
+				<image texture="/ui/hd_ui/icons/{icon}"/>
+			</widgetstate>
+			<widgetstate statename="disabled">
+				<image texture="/ui/hd_ui/icons/{icon}" color=".7 .7 .7 .35"/>
+			</widgetstate>
+		</button>
+	</template>
+
+	<template name="kick_button">
+		<button
+			x="{x=}" y="{y=}" width="{width=100%}" height="{height=100%}" align="{align=}" valign="{valign=}"
+			group="{group}"
+			name="{button_name}"
+			color="invisible"
+			visible="{visible=true}"
+			watch="{watch=}"
+			enabled="{enabled=true}"
+			ontrigger="{ontrigger=}"
+			ontriggerlua="{ontriggerlua=}"
+			watch1="{watch1=}"
+			ontrigger1="{ontrigger1=}"
+			ontrigger1lua="{ontrigger1lua=}"
+			watch2="{watch2=}"
+			ontrigger2="{ontrigger2=}"
+			ontrigger2lua="{ontrigger2lua=}"
+			onmouseover="{onmouseover}"
+			onmouseoverlua="PlaySound('/shared/sounds/ui/ccpanel/button_over_02.wav') PlaySound('/shared/sounds/ui/ccpanel/button_over_01.wav') {onmouseoverlua}"
+			onmouseout="{onmouseout}"
+			onclick="{onclick}"
+			onclicklua="PlaySound('{sound=/shared/sounds/ui/ccpanel/button_click_02.wav}') {onclicklua}"
+			onenter="{onenter}"
+			onenterlua="PlaySound('{sound='/shared/sounds/ui/ccpanel/button_click_02.wav}') {onenterlua}"
+			onshow="{onshow}"
+			onhide="{onhide}"
+			onhidelua="{onhidelua}"
+			hotkey="{hotkey}"
+			onhotkey="{onhotkey}"
+			onhotkeylua="PlaySound('{sound=/shared/sounds/ui/ccpanel/button_click_02.wav}') {onhotkeylua}"
+			interactive="{interactive=true}"
+			onevent="{onevent=}"
+			onloadlua="{onloadlua}"
+		>
+			<widgetstate statename="up">
+				<image texture="/ui/elements/kick_up.tga"/>
+			</widgetstate>
+
+			<widgetstate statename="over">
+				<image texture="/ui/elements/kick_over.tga"/>
+			</widgetstate>
+
+			<widgetstate statename="down" x="1" y="1">
+				<image texture="/ui/elements/kick_down.tga"/>
+			</widgetstate>
+			<widgetstate statename="disabled">
+				<image texture="/ui/elements/kick_disabled.tga"/>
+			</widgetstate>
+		</button>
+	</template>
+
+	<template name="kick_player_item">
+		<panel name="kick_player_item_{index}" visible="0" width="100%" height="1.75h" sticky="1" stickytoinvis="0">
+
+            <panel width="1.8h" height="100%" noclick="1">
+                <image name="kick_player_icon_{index}"
+                    texture="/shared/icons/off.tga"
+                    width="100%" height="100%"
+                    usealphamask="1"
+                    alphamaskfile="/ui/hd_ui/mask/scoreboard_hero_mask.tga"
+                />
+            </panel>
+
+			<label font="dyn_9" color="white" textvalign="center" shadow="1" noclick="1" x="2.0h"
+				onloadlua="MenuVote:RegisterKickPlayerName(self, '{index}')"
+			/>
+
+			<instance name="kick_button" button_name="kick_player_item_{index}_button" width="100@" height="100%" align="right"
+				onloadlua="MenuVote:RegisterKickButton(self, '{index}')"
+			/>
+
+			<!-- I dont even know what this is??? -->
+			<!-- 
+			<label align="right" width="3h" font="dyn_9" color="white" textalign="right" textvalign="center" shadow="1" noclick="1" visible="0" content="0"
+				watch="MenuPlayerInfo{index}"
+				ontriggerlua="
+					local timeUntilKickAllowed = tonumber(param17)
+					if timeUntilKickAllowed ~= nil and timeUntilKickAllowed > 0 then
+						self:SetText(math.ceil(timeUntilKickAllowed / 1000.0))
+						self:SetVisible(1)
+					end
+				"
+			/>
+			-->
+
+		</panel>
+	</template>
+
+	<template name="report_player_item">
+		<panel name="report_player_item_{index}" visible="0" width="100%" height="1.75h" sticky="1" stickytoinvis="0">
+
+            <panel width="1.8h" height="100%" noclick="1">
+                <image name="report_player_icon_{index}"
+                    texture="/shared/icons/off.tga"
+                    width="100%" height="100%"
+                    usealphamask="1"
+                    alphamaskfile="/ui/hd_ui/mask/scoreboard_hero_mask.tga"
+                />
+            </panel>
+
+			<label font="dyn_9" color="white" textvalign="center" shadow="1" noclick="1" x="2.0h"
+				onloadlua="MenuVote:RegisterReportPlayerName(self, '{index}')"
+			/>
+
+			<instance name="kick_button" button_name="report_player_item_{index}_button" width="100@" height="100%" align="right"
+				onloadlua="MenuVote:RegisterReportButton(self, '{index}')"
+			/>
+
+		</panel>
+	</template>
+
+	<template name="menu_blue_button">
+		<instance
+			name="button_hd" button_name="menu_btn_{btnName}"
+			label="game_menu_{btnName}_button" label_align="left" label_x="130@"
+			hasicon="1" icon="/ui/hd_ui/icons/{btnIcon}.tga"
+			height="2.2h"
+			style="btn_sm"
+			onclicklua="{onclicklua}"
+			visible="{visible=1}"
+		/>
+	</template>
+
+	<template name="menu_vote_dialog">
+		<panel name="{panel_name}" group="game_menu_tray" width="{width=6.5w}" x="-.5h" y="3.5h" valign="top" align="right" style="grow_noinvis" visible="0">
+			
+			<!-- Base Frame-->
+			<instance name="tooltip_base_frame" />
+
+			<panel style="tip_contents" noclick="1">
+
+				<!-- Header -->
+				<panel width="100%" height="2.8h" noclick="1">
+					<instance name="tooltip_header_base" />
+					<panel style="tip_header_content" noclick="1">
+
+						<!-- Header Label -->
+						<label style="color-white" textvalign="center" font="dyn_bold_10" shadow="1" content="{header}" noclick="1" />
+
+						<instance name="closexbutton" size="1.5h" x="0.4h" valign="center" align="right" onclicklua="MenuVote:CloseParent('{panel_name}')" />
+
+					</panel>
+				</panel>
+
+				<!-- Body -->
+				<panel style="tip_body">
+
+					<!-- Call Vote Buttons -->
+					<panel style="tip_body_contents" visible="1">
+						<instance name="tooltip_bottom_nudge" />
+
+						<panel width="100%" float="bottom" padding="1.0h" style="grow_noinvis" noclick="1">
+
+							<instance name="menu_vote_{block}" parent="{panel_name}" />
+
+						</panel>
+
+						<panel height=".7h" style="sticky" noclick="1" />
+
+					</panel>
+
+				</panel>
+
+			</panel>
+
+		</panel>
+	</template>
+
+</package>

@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_157_DAMPEER_DEADWOOD_COMPLETION",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:State_Dampeer_Ability1_Fear_FRAME_effect"],
+      "english_hash": "77b46c15004b2f5f4e8aa255d20d13c03e90cdc3d370c54c34dcaf77a7755b16",
+      "ru": "Теряет управление и в страхе мечется из стороны в сторону."
+    },
+    {
+      "keys": ["entities:State_Dampeer_Ability1_Fear_description"],
+      "english_hash": "ce1d594ab2092df67d813099907ce93ce83d81bb65c85abe6afb78ad7f86a1ec",
+      "ru": "Не боись!"
+    },
+    {
+      "keys": ["entities:State_Dampeer_Ability3_Ally_FRAME_effect"],
+      "english_hash": "77bf537f1847e3d3e9a20de4d98d68d18d311807cb96f9deea85c20a09637a37",
+      "ru": "+{2.5,5,7.5,10}% вампиризма для юнитов дальнего боя"
+    },
+    {
+      "keys": ["entities:State_Dampeer_Ability3_Ally_description"],
+      "english_hash": "284a6007ea6859734b10065c7f6341643c81755b9b7bdbaedc14bc830a128417",
+      "ru": "Атаки обладают вампиризмом."
+    },
+    {
+      "keys": ["entities:State_Dampeer_Ability4_Hero_FRAME_effect"],
+      "english_hash": "4a4f6a2d71b7c3dbe9e48e382fdc09a00625d0eb047a9ac4a6fed5fb78eb0e47",
+      "ru": "Смерть усилит Dampeer."
+    },
+    {
+      "keys": ["entities:State_Deadwood_Ability1_FRAME_effect"],
+      "english_hash": "14928711ab354015d3ab5560ee6238df07a46e4e7924e70ebb131f3b128fff70",
+      "ru": "За время действия получает {100,150,200,250} физического урона"
+    },
+    {
+      "keys": ["entities:State_Deadwood_Ability2_Slow_FRAME_effect"],
+      "english_hash": "24e13e33cb5d2db68ddcb01a7ce84aa67a7d5f48de815b1773cb34e3c0d865ce",
+      "ru": "Сначала замедляет скорость передвижения на 75%; эффект постепенно ослабевает"
+    },
+    {
+      "keys": ["entities:State_Deadwood_Ability2_description:ult_boost"],
+      "english_hash": "190f6ef2687df6230bf56aabcc24fbf36f199ea14b8304d611de53d211c4329d",
+      "ru": "Атаки наносят 50% физического урона по области радиусом 300 вокруг цели\\n\\nКаждая 4-я атака мини-оглушает цель и на 0.75 секунды накладывает постепенно ослабевающее замедление"
+    },
+    {
+      "keys": ["entities:State_Deadwood_Ability3_FRAME_effect"],
+      "english_hash": "4581508ee78aa093d642f92a42cfb726997f6d99ee6a4d8f612eb3acbd25d6e7",
+      "ru": "Уничтожает деревья на пути, давая {30,45,60,75} скорости передвижения и {25,50,75,100}% сопротивления замедлению на 2 секунды"
+    },
+    {
+      "keys": ["entities:State_Deadwood_Ability4_Tooltip_FRAME_effect"],
+      "english_hash": "e642820fc71565d9dc7e40002494f07c91983da295c7aee49c335ce5d6c2c62a",
+      "ru": "Сначала замедляет скорость передвижения на 100%; эффект постепенно ослабевает"
+    }
+  ]
+}

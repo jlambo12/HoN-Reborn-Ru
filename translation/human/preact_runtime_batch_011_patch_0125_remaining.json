@@ -1,0 +1,1304 @@
+{
+  "schema_version": 1,
+  "batch_id": "PREACT_RUNTIME_PATCH_0125_DRAFT",
+  "scope": "Complete editorial text for patch 0.2.5",
+  "reviewed_by": "Machine draft with manual terminology and screenshot polish 2026-08-24",
+  "rows": [
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Ward of Sight",
+      "russian": "Ward of Sight",
+      "expected_matches": 1,
+      "source_line": 87,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Patch 0.12.5",
+      "russian": "Patch 0.12.5",
+      "expected_matches": 1,
+      "source_line": 900,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Loki",
+      "russian": "Loki",
+      "expected_matches": 3,
+      "source_line": 1045,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Earning.",
+      "russian": "Получение жетонов.",
+      "expected_matches": 1,
+      "source_line": 1353,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Finish a Ranked Caldavar match you queued for with",
+      "russian": "Завершите рейтинговый матч Caldavar, встав в очередь с",
+      "expected_matches": 1,
+      "source_line": 1353,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "both",
+      "russian": "обеими",
+      "expected_matches": 1,
+      "source_line": 1354,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Soft Support and Hard Support selected, and you are paid in Role Tokens. You are paid for the offer, not the outcome - it does not matter which role the draft actually handed you.",
+      "russian": "выбранными ролями поддержки — и получите жетоны ролей. Награда выдаётся за готовность играть, а не за итог: какую роль вам назначил выбор героев, неважно.",
+      "expected_matches": 1,
+      "source_line": 1354,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Balances cap at",
+      "russian": "Можно накопить не более",
+      "expected_matches": 1,
+      "source_line": 1369,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": ". One support role on its own earns nothing - it has to be both.",
+      "russian": ". Одна выбранная роль поддержки жетонов не приносит — нужно выбрать обе.",
+      "expected_matches": 1,
+      "source_line": 1369,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Spending.",
+      "russian": "Расход жетонов.",
+      "expected_matches": 1,
+      "source_line": 1374,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Queueing Ranked Caldavar with",
+      "russian": "Поиск рейтингового матча Caldavar без",
+      "expected_matches": 1,
+      "source_line": 1374,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "neither",
+      "russian": "ни одной",
+      "expected_matches": 1,
+      "source_line": 1374,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "support role selected costs",
+      "russian": "выбранной роли поддержки стоит",
+      "expected_matches": 1,
+      "source_line": 1375,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Role Token. Selecting either Soft Support or Hard Support is free entry, it just does not earn you anything. Spend a token and you can queue playing exactly what you want.",
+      "russian": "жетон роли. Выбор хотя бы одной роли поддержки ничего не стоит, но и жетонов не приносит. Потратьте жетон — и ищите матч только на желаемых ролях.",
+      "expected_matches": 1,
+      "source_line": 1375,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Both supports ticked",
+      "russian": "Выбраны обе роли поддержки",
+      "expected_matches": 1,
+      "source_line": 1383,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Role Priority with both support roles ticked",
+      "russian": "Приоритет ролей с обеими ролями поддержки",
+      "expected_matches": 1,
+      "source_line": 1387,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Enter Queue - earns +4 / +2 Role Queue Tokens",
+      "russian": "Встать в очередь — награда: +4 / +2 жетона ролей",
+      "expected_matches": 1,
+      "source_line": 1392,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Neither support ticked",
+      "russian": "Роли поддержки не выбраны",
+      "expected_matches": 1,
+      "source_line": 1397,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Role Priority with neither support role ticked",
+      "russian": "Приоритет ролей без ролей поддержки",
+      "expected_matches": 1,
+      "source_line": 1401,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Tick a Support Role to Queue",
+      "russian": "Выберите роль поддержки для входа в очередь",
+      "expected_matches": 1,
+      "source_line": 1406,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Who is inside the economy.",
+      "russian": "На кого действует система.",
+      "expected_matches": 1,
+      "source_line": 1412,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "A party of five neither earns nor spends - it brings its own team. Neither does a party queueing with a spread wide enough to slow its rating; a party already paying for its gap is not charged for its roles as well. Terminated matches settle nothing.",
+      "russian": "Полная группа из пяти игроков не получает и не тратит жетоны — она уже собрала всю команду. То же относится к группе с такой разницей рейтинга, которая снижает влияние матча на MMR: дополнительной платы за роли нет. Прерванные матчи не учитываются.",
+      "expected_matches": 1,
+      "source_line": 1412,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Four-player parties can no longer queue ranked",
+      "russian": "Группы из четырёх игроков больше не допускаются в рейтинговую очередь",
+      "expected_matches": 1,
+      "source_line": 1420,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "A four stack asks the matchmaker to find one specific player to complete your team, at your combined rating, in your region, right now. It is the hardest ask in the entire system. In practice it meant four stacks waited a long time for a game, and when the game finally formed it was frequently a worse match for all ten players.",
+      "russian": "Группе из четырёх подбор должен найти одного строго подходящего игрока: для завершения команды, под общий рейтинг, в выбранном регионе и прямо сейчас. Это самая трудная задача для всей системы. На практике такие группы долго ждали, а найденный матч нередко оказывался хуже для всех десяти игроков.",
+      "expected_matches": 1,
+      "source_line": 1423,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Valid party sizes are one, two, three and five. Queue as three, or bring a fifth. We know that is not the answer some of you want, and we would rather tell you plainly than leave you in a queue that was never going to serve you well.",
+      "russian": "Допустимые размеры партии: один, два, три и пять. Встаньте в очередь втроём или приведите пятого. Мы знаем, что это не тот ответ, который нужен некоторым из вас, и мы скорее скажем вам прямо, чем оставим вас в очереди, которая никогда не принесет вам пользы.",
+      "expected_matches": 1,
+      "source_line": 1429,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Better games when they do form",
+      "russian": "Более качественные матчи",
+      "expected_matches": 1,
+      "source_line": 1436,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Queue as carry + hard support, or offlane + soft support, and the matchmaker will actively try to put the two of you in the same lane. It can nudge other players&apos; role choices to make that happen, within limits. No more queueing as a duo and getting split across the map.",
+      "russian": "Выберите связку керри + поддержка или оффлейн + роум, и подбор постарается поставить вас на одну линию. В допустимых пределах он может скорректировать роли других игроков. Дуэты больше не должны оказываться на разных концах карты.",
+      "expected_matches": 1,
+      "source_line": 1439,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Told why, not just no",
+      "russian": "Отказ с объяснением",
+      "expected_matches": 1,
+      "source_line": 1447,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "These rules are not new, but the queue now explains itself instead of refusing you silently.",
+      "russian": "Эти правила не новы, но теперь очередь объясняет сама себя, а не молча отказывает вам.",
+      "expected_matches": 1,
+      "source_line": 1450,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "High-rated players can only queue ranked solo or as a duo.",
+      "russian": "Игроки с высоким рейтингом могут стоять в очереди только в одиночку или в дуэте.",
+      "expected_matches": 1,
+      "source_line": 1454,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "A party containing a high-rated player can only queue ranked with players rated",
+      "russian": "Группа, содержащая игрока с высоким рейтингом, может стоять в очереди только с игроками с рейтингом",
+      "expected_matches": 1,
+      "source_line": 1456,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "or above.",
+      "russian": "или выше.",
+      "expected_matches": 1,
+      "source_line": 1457,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "A party that stops qualifying for what it is queued for - the support cover leaves, someone&apos;s roles change, the party grows - now leaves the queue rather than riding out a game it is no longer eligible for.",
+      "russian": "Если группа перестала соответствовать условиям очереди — вышел игрок поддержки, изменились роли или вырос состав, — она покидает очередь, а не продолжает ждать матч, для которого уже не подходит.",
+      "expected_matches": 1,
+      "source_line": 1460,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Leaving a party of one is no longer possible, and leaving a party puts you straight into a fresh solo queue rather than into no party at all.",
+      "russian": "Покинуть группу из одного игрока больше нельзя. После выхода из группы вы сразу становитесь отдельной группой, а не остаётесь без группы вовсе.",
+      "expected_matches": 1,
+      "source_line": 1465,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Xsolla is now live as a payment provider on heroesofnewerth.com. That means local payment methods that actually work where you live.",
+      "russian": "На heroesofnewerth.com подключена платёжная система Xsolla, а вместе с ней — местные способы оплаты, доступные в вашем регионе.",
+      "expected_matches": 1,
+      "source_line": 1478,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "This one has been a long time coming. A lot of you have told us over the past year that you wanted to pick up a skin or an avatar and simply could not complete the checkout. That was a real gap, and it was on us to close it.",
+      "russian": "Этого ждали уже давно. Многие из вас говорили нам за последний год, что хотели получить скин или аватар и просто не могли завершить оформление заказа. Это был настоящий пробел, и мы должны были его закрыть.",
+      "expected_matches": 1,
+      "source_line": 1515,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Nothing about the game changes, and nothing is paywalled.",
+      "russian": "Сама игра не меняется, а её содержимое не скрывается за оплатой.",
+      "expected_matches": 1,
+      "source_line": 1521,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "If you never spend a cent, HoN Reborn plays exactly the same for you as it did yesterday. But if you have wanted to grab something from the store, or throw a bit of support behind the project, the door is finally open.",
+      "russian": "Если вы ничего не покупаете, HoN Reborn останется для вас точно такой же игрой. Но если вы давно хотели приобрести что-нибудь в магазине или поддержать проект, теперь такая возможность наконец появилась.",
+      "expected_matches": 1,
+      "source_line": 1521,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Go to the store",
+      "russian": "Перейти в магазин",
+      "expected_matches": 1,
+      "source_line": 1529,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "If a payment method still does not show up for your region, tell us in #support on",
+      "russian": "Если способ оплаты по-прежнему не отображается для вашего региона, сообщите нам об этом в #support на",
+      "expected_matches": 1,
+      "source_line": 1534,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Discord",
+      "russian": "Discord",
+      "expected_matches": 1,
+      "source_line": 1536,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": ". We want to know.",
+      "russian": ". Мы хотим знать.",
+      "expected_matches": 1,
+      "source_line": 1538,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Kill credit on wards was a coin flip whenever more than one thing damaged the ward on the same frame. It is decided by a rule now.",
+      "russian": "Если в одном кадре вард повреждали несколько целей, награда за его уничтожение определялась случайно. Теперь действует однозначное правило.",
+      "expected_matches": 1,
+      "source_line": 1548,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Legendary",
+      "russian": "Legendary",
+      "expected_matches": 2,
+      "source_line": 1575,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Jade",
+      "russian": "Jade",
+      "expected_matches": 2,
+      "source_line": 1579,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Corrupted Disciple &middot; not marketable",
+      "russian": "Corrupted Disciple &middot; не продаётся на торговой площадке",
+      "expected_matches": 1,
+      "source_line": 1586,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Green and gold, horned and gilded, wreathed in a sorcery that answers to nobody. A trickster reimagining of the Corrupted Disciple, built from the ground up rather than recoloured.",
+      "russian": "Зелёный и золотой, рогатый и позолоченный, окутанный неподвластной никому магией. Образ трикстера для Corrupted Disciple, созданный с нуля, а не простой перекраской.",
+      "expected_matches": 1,
+      "source_line": 1592,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Loki avatar spotlight",
+      "russian": "Обзор облика Loki",
+      "expected_matches": 1,
+      "source_line": 1600,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Electric Tide (Q):",
+      "russian": "Electric Tide (Q):",
+      "expected_matches": 1,
+      "source_line": 1612,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "new ring and impact effects.",
+      "russian": "новые эффекты кольца и попадания.",
+      "expected_matches": 1,
+      "source_line": 1612,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Corrupted Conduit (W):",
+      "russian": "Corrupted Conduit (W):",
+      "expected_matches": 1,
+      "source_line": 1615,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "a new spin model, with separate effect sets on the self and enemy halves.",
+      "russian": "новая вращающаяся модель и отдельные наборы эффектов для союзной и вражеской частей связи.",
+      "expected_matches": 1,
+      "source_line": 1615,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Static Discharge (E):",
+      "russian": "Static Discharge (E):",
+      "expected_matches": 1,
+      "source_line": 1619,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "a new shield model and impact treatment.",
+      "russian": "новая модель щита и эффекты попадания.",
+      "expected_matches": 1,
+      "source_line": 1619,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Overload (R):",
+      "russian": "Overload (R):",
+      "expected_matches": 1,
+      "source_line": 1623,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "a new projectile, trail and impact, with its own",
+      "russian": "новые снаряд, след и эффект попадания, а также отдельный",
+      "expected_matches": 1,
+      "source_line": 1623,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Staff of the Master",
+      "russian": "Staff of the Master",
+      "expected_matches": 1,
+      "source_line": 1627,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Staff of the Master variant.",
+      "russian": "отдельный вариант для Staff of the Master.",
+      "expected_matches": 1,
+      "source_line": 1630,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "A new model and texture set, custom animations, and custom ability icons.",
+      "russian": "Новая модель и набор текстур, уникальные анимации и значки способностей.",
+      "expected_matches": 1,
+      "source_line": 1633,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "A full voice set - selection, flavour, movement, attack, out-of-mana, cooldown and taunt lines.",
+      "russian": "Полный набор реплик: выбор героя, особые фразы, движение, атака, нехватка маны, перезарядка и насмешки.",
+      "expected_matches": 1,
+      "source_line": 1636,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Its own store stage and spawn, plus a bespoke death and tombstone treatment.",
+      "russian": "Собственные сцена и появление в магазине, а также уникальные эффекты смерти и надгробия.",
+      "expected_matches": 1,
+      "source_line": 1640,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Electric Tide",
+      "russian": "Electric Tide",
+      "expected_matches": 2,
+      "source_line": 1651,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Corrupted Conduit",
+      "russian": "Corrupted Conduit",
+      "expected_matches": 2,
+      "source_line": 1658,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Static Discharge",
+      "russian": "Static Discharge",
+      "expected_matches": 2,
+      "source_line": 1665,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Overload",
+      "russian": "Overload",
+      "expected_matches": 2,
+      "source_line": 1672,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "VRZO English Announcer",
+      "russian": "VRZO English Announcer",
+      "expected_matches": 2,
+      "source_line": 1682,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "The VRZO announcer arrives in English. Every call is delivered through a battered little CRT that flies apart on impact, so the pack is as much something you watch as something you hear.",
+      "russian": "Добавлен англоязычный комментатор VRZO. Каждая реплика сопровождается старым ЭЛТ-телевизором, который разлетается от удара, поэтому этот набор интересно не только слушать, но и смотреть.",
+      "expected_matches": 1,
+      "source_line": 1700,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "A complete event set - first blood, every kill streak up to Immortal, multi-kills through to Annihilation, Kongor, tower denies, team wipes, humiliation, payback, nemesis, rage quits, and victory and defeat.",
+      "russian": "Полный набор событий — первая кровь, каждая серия убийств вплоть до Бессмертного, несколько убийств до Аннигиляции, Конгора, отрицание башни, уничтожение команды, унижение, расплата, Немезида, выход из ярости, а также победа и поражение.",
+      "expected_matches": 1,
+      "source_line": 1711,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Its own on-screen banner for every call, not just a voice line.",
+      "russian": "Собственный экранный баннер для каждого события, а не только голосовая реплика.",
+      "expected_matches": 1,
+      "source_line": 1715,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Its own marketplace stage.",
+      "russian": "Собственная сцена в магазине.",
+      "expected_matches": 1,
+      "source_line": 1716,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Hear it.",
+      "russian": "Послушать.",
+      "expected_matches": 1,
+      "source_line": 1723,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Five of the calls, with the announcer&apos;s own audio straight out of the game files. Press play - these ones have sound.",
+      "russian": "Пять реплик с оригинальным звуком комментатора прямо из файлов игры. Нажмите воспроизведение — у этих примеров есть звук.",
+      "expected_matches": 1,
+      "source_line": 1723,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Now Recruiting: Game Masters",
+      "russian": "Набор игровых модераторов",
+      "expected_matches": 1,
+      "source_line": 1737,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Our new moderation system goes live soon, and we are building out a volunteer Game Master team to help review reports and keep matches fair. If you care about this game and want a real hand in how it is moderated, we want to hear from you.",
+      "russian": "Наша новая система модерации скоро заработает, и мы создаем команду волонтеров Game Master, которая поможет проверять отчеты и обеспечивать честность матчей. Если вам небезразлична эта игра и вы хотите реально участвовать в ее модерации, мы хотим услышать ваше мнение.",
+      "expected_matches": 1,
+      "source_line": 1741,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "What GMs do",
+      "russian": "Обязанности модераторов",
+      "expected_matches": 1,
+      "source_line": 1748,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Review reports for griefing, feeding, ability abuse, item abuse, role refusal and going AFK.",
+      "russian": "Рассматривать жалобы на вредительство, намеренные смерти, злоупотребление способностями и предметами, отказ играть выбранную роль и бездействие.",
+      "expected_matches": 1,
+      "source_line": 1751,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Decide whether the reported player is guilty or not guilty.",
+      "russian": "Определять, виновен ли игрок, на которого поступила жалоба.",
+      "expected_matches": 1,
+      "source_line": 1754,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Several GMs rule on every case, and none of them can see anyone else&apos;s verdict - so every decision is genuinely independent.",
+      "russian": "Каждую жалобу рассматривают несколько игровых модераторов, причём никто не видит решений остальных — поэтому все вердикты действительно независимы.",
+      "expected_matches": 1,
+      "source_line": 1756,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "What GMs do not do",
+      "russian": "Чего модераторы не делают",
+      "expected_matches": 1,
+      "source_line": 1763,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "GMs have no power over your account.",
+      "russian": "Игровые модераторы не управляют вашей учётной записью.",
+      "expected_matches": 1,
+      "source_line": 1766,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "They cannot ban, suspend or mute anyone, and they cannot influence account standing. A verdict is an opinion on one case; the system works out the consequence from the player&apos;s own history.",
+      "russian": "Они не могут блокировать, временно отстранять или заглушать игроков и не влияют на статус учётной записи. Вердикт — лишь решение по одной жалобе; последствия система определяет по истории игрока.",
+      "expected_matches": 1,
+      "source_line": 1766,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "GMs do not choose which cases they get.",
+      "russian": "Игровые модераторы не выбирают назначенные им жалобы.",
+      "expected_matches": 1,
+      "source_line": 1772,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Cases are handed to them. Nobody can go looking for a particular player, or pick and choose what to rule on.",
+      "russian": "Им передаются дела. Никто не может искать конкретного игрока или выбирать, на основании чего принимать решение.",
+      "expected_matches": 1,
+      "source_line": 1772,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "No GM ever decides a case alone.",
+      "russian": "Ни одна жалоба не решается одним модератором.",
+      "expected_matches": 1,
+      "source_line": 1776,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Cheating, boosting and other serious cases go straight to Staff, never to the GM team.",
+      "russian": "Жалобы на читы, бустинг и другие серьёзные нарушения сразу передаются сотрудникам проекта, а не игровым модераторам.",
+      "expected_matches": 1,
+      "source_line": 1778,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "What we are looking for",
+      "russian": "Наши требования",
+      "expected_matches": 1,
+      "source_line": 1785,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "An account in good standing, with a clean recent history and honor record.",
+      "russian": "Учётная запись с хорошей репутацией, чистой недавней историей и достойным уровнем чести.",
+      "expected_matches": 1,
+      "source_line": 1787,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Someone who can be fair and consistent, including on cases involving players they do not know or do not like.",
+      "russian": "Кто-то, кто может быть честным и последовательным, в том числе в делах, касающихся игроков, которых он не знает или которые ему не нравятся.",
+      "expected_matches": 1,
+      "source_line": 1789,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Willingness to commit real time to reviewing cases regularly.",
+      "russian": "Готовность уделять время регулярному рассмотрению дел.",
+      "expected_matches": 1,
+      "source_line": 1792,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Terms and perks",
+      "russian": "Сроки и награды",
+      "expected_matches": 1,
+      "source_line": 1797,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Terms run",
+      "russian": "Срок участия —",
+      "expected_matches": 1,
+      "source_line": 1800,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "days, with a",
+      "russian": "дней, с",
+      "expected_matches": 1,
+      "source_line": 1800,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "day cooldown before you can reapply. It keeps the team fresh and stops any one person&apos;s bias settling in.",
+      "russian": "дней, после чего перед повторной заявкой действует перерыв. Так состав регулярно обновляется, а предвзятость одного человека не успевает закрепиться.",
+      "expected_matches": 1,
+      "source_line": 1801,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "This icon, in game, next to your name.",
+      "russian": "Этот значок в игре рядом с вашим именем.",
+      "expected_matches": 1,
+      "source_line": 1806,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "GM Points for qualifying verdicts, quality reviews and program milestones, redeemable in the GM store.",
+      "russian": "Баллы GM за квалификационные вердикты, обзоры качества и этапы программы, которые можно обменять в магазине GM.",
+      "expected_matches": 1,
+      "source_line": 1809,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "A direct line to the development team - somewhere to put your feedback, push back on a change before it ships, and have a real say in where the game goes next.",
+      "russian": "Прямая линия с командой разработчиков — куда можно оставить свой отзыв, отклонить изменение до его выхода и реально сказать, как будет развиваться игра дальше.",
+      "expected_matches": 1,
+      "source_line": 1813,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Apply to be a Game Master",
+      "russian": "Подайте заявку на должность гейм-мастера",
+      "expected_matches": 1,
+      "source_line": 1823,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Store",
+      "russian": "Магазин",
+      "expected_matches": 1,
+      "source_line": 1834,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "The store used to freeze the entire client for over a minute the first time you opened it in a session, and could close the client outright on a reopen or after a logout. Both are fixed.",
+      "russian": "Раньше при первом открытии магазина клиент зависал более чем на минуту, а повторное открытие или вход после выхода могли полностью закрыть игру. Обе проблемы исправлены.",
+      "expected_matches": 1,
+      "source_line": 1837,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Opening the store is fast.",
+      "russian": "Магазин открывается быстро.",
+      "expected_matches": 1,
+      "source_line": 1843,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "It was precaching every product model in every category through a single shared panel -",
+      "russian": "Раньше через одну общую панель заранее загружались модели всех товаров во всех категориях —",
+      "expected_matches": 1,
+      "source_line": 1843,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "models at roughly a third of a second each, strictly serial, with nothing yielding in between. Precaching is driven by what the grid is actually showing now, two rows of lookahead included, and runs in the background in batches. Revisiting a tab you have already seen costs nothing.",
+      "russian": "модели примерно за треть секунды каждая, строго серийные, без каких-либо промежуточных результатов. Предварительное кэширование определяется тем, что на самом деле показывает сетка в данный момент, включая две строки опережающего просмотра, и выполняется в фоновом режиме в пакетном режиме. Повторное посещение уже просмотренной вкладки ничего не стоит.",
+      "expected_matches": 1,
+      "source_line": 1845,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "The hero list is virtualized.",
+      "russian": "Список героев виртуализирован.",
+      "expected_matches": 1,
+      "source_line": 1851,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "It was rebuilding around 140 rows of 11 widgets each on every refresh. It reuses a fixed pool sized to what actually fits on screen now.",
+      "russian": "При каждом обновлении заново создавалось около 140 строк по 11 элементов. Теперь используется постоянный набор строк — ровно столько, сколько помещается на экране.",
+      "expected_matches": 1,
+      "source_line": 1851,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Filtering the hero list keeps alphabetical order.",
+      "russian": "Фильтрация списка героев сохраняет алфавитный порядок.",
+      "expected_matches": 1,
+      "source_line": 1856,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Re-showing a hidden hero used to append it to the end of the list instead of restoring its position.",
+      "russian": "Повторное отображение скрытого героя добавляло его в конец списка вместо восстановления его позиции.",
+      "expected_matches": 1,
+      "source_line": 1856,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Heroes with nothing to sell are properly disabled",
+      "russian": "Герои, которым нечего продать, корректно отключены",
+      "expected_matches": 1,
+      "source_line": 1861,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "rather than just dimmed, so they no longer take hover and click input that did nothing.",
+      "russian": ", а не просто затемняются, поэтому больше не перехватывают наведение и бесполезные щелчки.",
+      "expected_matches": 1,
+      "source_line": 1861,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Reopening the store, or logging out and back in, no longer closes the client.",
+      "russian": "Повторное открытие магазина или выход из системы и повторный вход больше не закрывают клиент.",
+      "expected_matches": 1,
+      "source_line": 1865,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "A short &quot;Preparing store previews&quot; notice covers the brief window while previews are still resolving.",
+      "russian": "Пока миниатюры подготавливаются, ненадолго появляется сообщение «Подготовка изображений магазина».",
+      "expected_matches": 1,
+      "source_line": 1869,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Two of them, and they take their time. The client now boots over a hazy Newerth valley - waterfall, treeline and a fortress wall going grey in the distance - and the map load drops you straight into Caldavar after dark, ward glow and firelight picking their way through the trees. Wide, quiet, and a long way from a flat backdrop with a spinner on it.",
+      "russian": "Добавлены два неспешных атмосферных экрана. При запуске видна туманная долина Newerth с водопадом, лесом и уходящей вдаль крепостной стеной. Во время загрузки карты показывается ночной Caldavar, где сквозь деревья пробиваются свет вардов и отблески огня. Это живые широкие сцены вместо плоского фона с индикатором загрузки.",
+      "expected_matches": 1,
+      "source_line": 1879,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "The new client boot screen",
+      "russian": "Новый экран загрузки клиента",
+      "expected_matches": 1,
+      "source_line": 1888,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Booting the client",
+      "russian": "Загрузка клиента",
+      "expected_matches": 1,
+      "source_line": 1889,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "The new map loading screen",
+      "russian": "Новый экран загрузки карты",
+      "expected_matches": 1,
+      "source_line": 1892,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Loading into a match",
+      "russian": "Загрузка в матч",
+      "expected_matches": 1,
+      "source_line": 1893,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "And you can always see what you are running.",
+      "russian": "Версия запущенной сборки всегда видна.",
+      "expected_matches": 1,
+      "source_line": 1898,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "The build version sits in the corner of the boot screen, and it is now the real one. It used to be read from a file at startup, and could be overridden on top of that, so the number on screen could quietly disagree with the client actually running. Both routes are gone. There is one version now, built into the client, and it is the same one the boot screen shows, the crash reports carry, and the servers check when you connect.",
+      "russian": "Версия сборки находится в углу экрана загрузки, и теперь она настоящая. Раньше оно считывалось из файла при запуске, и, кроме того, его можно было переопределить, поэтому число на экране могло незаметно не совпадать с фактически запущенным клиентом. Оба маршрута исчезли. Сейчас существует одна версия, встроенная в клиент, и она та же самая, что отображается на экране загрузки, в отчетах о сбоях и на серверах, когда вы подключаетесь.",
+      "expected_matches": 1,
+      "source_line": 1898,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "0.12.5.0 - windows x64",
+      "russian": "0.12.5.0 - windows x64",
+      "expected_matches": 1,
+      "source_line": 1907,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Bottom-right of the boot screen.",
+      "russian": "В правом нижнем углу экрана загрузки.",
+      "expected_matches": 1,
+      "source_line": 1908,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "In-game HTML panels",
+      "russian": "Внутриигровые HTML-панели",
+      "expected_matches": 1,
+      "source_line": 1913,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Origami, the renderer behind the in-game patch notes, profile, store, news and match stats panels, gets a substantial round of fixes.",
+      "russian": "Origami, средство визуализации внутриигровых панелей обновлений, профиля, магазина, новостей и статистики матчей, получило существенное количество исправлений.",
+      "expected_matches": 1,
+      "source_line": 1916,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Hero spotlight videos play in the panel.",
+      "russian": "Видеообзоры героев воспроизводятся прямо в панели.",
+      "expected_matches": 1,
+      "source_line": 1921,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Every historical patch notes page carried a stand-in that opened the video in your system browser, because the old renderer could not host an embedded player. They are real YouTube players now, on all 15 spotlights across the archive.",
+      "russian": "Раньше на страницах старых патчей стояла заглушка, открывавшая видео в системном браузере: прежний рендерер не поддерживал встроенный проигрыватель. Теперь во всех 15 обзорах архива работают настоящие проигрыватели YouTube.",
+      "expected_matches": 1,
+      "source_line": 1921,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Links in a panel open in your browser again",
+      "russian": "Ссылки на панели снова открываются в браузере",
+      "expected_matches": 1,
+      "source_line": 1927,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "instead of doing nothing. This also fixes the share and &quot;Watch on YouTube&quot; buttons inside embedded players.",
+      "russian": "вместо бездействия. Также исправлены кнопки «Поделиться» и «Смотреть на YouTube» во встроенных проигрывателях.",
+      "expected_matches": 1,
+      "source_line": 1927,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Panel video follows your master sound volume.",
+      "russian": "Громкость видео подчиняется общей громкости игры.",
+      "expected_matches": 1,
+      "source_line": 1932,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "A clip in a panel used to play at whatever volume the page asked for, straight past the game&apos;s sound slider. As a side effect, changing the master volume multiplier now reaches the game&apos;s own audio too, which it previously did not.",
+      "russian": "Раньше видео в панели воспроизводилось с громкостью, заданной страницей, игнорируя ползунок игры. Теперь общая громкость корректно влияет и на видео, и на собственные звуки игры.",
+      "expected_matches": 1,
+      "source_line": 1932,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Clicking a panel&apos;s empty space no longer steals your click.",
+      "russian": "Щелчок по пустой области панели больше не перехватывается ею.",
+      "expected_matches": 1,
+      "source_line": 1938,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Panels are transparent overlays, and the old rule counted any element under the cursor as interactive - including the invisible wrapper covering essentially the whole panel. Clicks over transparent regions reach the interface behind now, and Escape closes the panel again after you have clicked inside it.",
+      "russian": "Панели представляют собой прозрачные наложения, и старое правило считало любой элемент под курсором интерактивным, включая невидимую оболочку, закрывающую практически всю панель. Щелчки по прозрачным областям теперь достигают интерфейса позади, и Escape снова закрывает панель после того, как вы щелкнули внутри нее.",
+      "expected_matches": 1,
+      "source_line": 1939,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Scrollbar dragging works.",
+      "russian": "Перетаскивание полосы прокрутки работает.",
+      "expected_matches": 1,
+      "source_line": 1945,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "A press-and-drag on a panel scrollbar keeps working when the cursor leaves the panel, and a release the panel never saw no longer leaves it thinking the button is still held.",
+      "russian": "Нажатие и перетаскивание полосы прокрутки панели продолжает работать, когда курсор покидает панель, а отпускание, которое панель никогда не видела, больше не покидает ее, думая, что кнопка все еще удерживается.",
+      "expected_matches": 1,
+      "source_line": 1945,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Text fields in panels record what you type.",
+      "russian": "Текстовые поля в панелях правильно принимают ввод.",
+      "expected_matches": 1,
+      "source_line": 1950,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Input boxes such as the profile search take keyboard input properly now.",
+      "russian": "Поля ввода, такие как поиск профиля, теперь правильно воспринимают ввод с клавиатуры.",
+      "expected_matches": 1,
+      "source_line": 1950,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Dragging to select text works.",
+      "russian": "Текст можно выделять перетаскиванием.",
+      "expected_matches": 1,
+      "source_line": 1954,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Ctrl+C and Ctrl+V work in panels.",
+      "russian": "Ctrl+C и Ctrl+V работают на панелях.",
+      "expected_matches": 1,
+      "source_line": 1957,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Neither reached the page at all before - and worse, Ctrl+C in a panel wrote an empty string over whatever was on your clipboard. Copying with nothing selected no longer clears the clipboard anywhere in the game.",
+      "russian": "Ни один из них вообще не достиг страницы раньше - и, что еще хуже, Ctrl + C на панели написал пустую строку поверх всего, что было в вашем буфере обмена. Копирование без выбора больше не очищает буфер обмена в любом месте игры.",
+      "expected_matches": 1,
+      "source_line": 1957,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Modifier keys reach the page.",
+      "russian": "Панель распознаёт клавиши-модификаторы.",
+      "expected_matches": 1,
+      "source_line": 1963,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Ctrl+C arrived as a bare C and Shift+Right as a bare Right, so the caret moved instead of the selection extending.",
+      "russian": "Раньше Ctrl+C распознавалось как обычная C, а Shift+Right — как Right, поэтому курсор перемещался вместо расширения выделения.",
+      "expected_matches": 1,
+      "source_line": 1963,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Elements no longer shift around or look partially broken when you hover or click them.",
+      "russian": "Элементы больше не смещаются и не выглядят частично сломанными, когда вы наводите на них курсор или щелкаете по ним.",
+      "expected_matches": 1,
+      "source_line": 1969,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Repainting the area under the cursor could land a pixel out of place and leave a stale strip behind it. It only ever showed on displays whose scaling is not a whole number, 1440p among them, which is why it never turned up in testing.",
+      "russian": "Перекрашивание области под курсором может привести к тому, что пиксель окажется не на своем месте и после него останется несвежая полоса. Он когда-либо показывался только на дисплеях, масштабирование которых не является целым числом, в том числе 1440p, поэтому он никогда не участвовал в тестировании.",
+      "expected_matches": 1,
+      "source_line": 1972,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Panels load faster and use less memory.",
+      "russian": "Панели загружаются быстрее и используют меньше памяти.",
+      "expected_matches": 1,
+      "source_line": 1977,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Files already held in a game archive are handed to the renderer directly instead of being copied out first - opening the patch notes panel pulls 18.5 MB through that path.",
+      "russian": "Файлы, уже хранящиеся в игровом архиве, передаются непосредственно рендереру, а не сначала копируются — открытие панели примечаний к патчу требует 18,5 МБ по этому пути.",
+      "expected_matches": 1,
+      "source_line": 1977,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "GCash",
+      "russian": "GCash",
+      "expected_matches": 1,
+      "source_line": 2057,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Maya",
+      "russian": "Maya",
+      "expected_matches": 1,
+      "source_line": 2058,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "TrueMoney Wallet",
+      "russian": "TrueMoney Wallet",
+      "expected_matches": 1,
+      "source_line": 2065,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Local bank transfer",
+      "russian": "Местный банковский перевод",
+      "expected_matches": 1,
+      "source_line": 2066,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Pix",
+      "russian": "Pix",
+      "expected_matches": 1,
+      "source_line": 2073,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Boleto",
+      "russian": "Boleto",
+      "expected_matches": 1,
+      "source_line": 2074,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Local cards",
+      "russian": "Местные банковские карты",
+      "expected_matches": 1,
+      "source_line": 2075,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Card",
+      "russian": "Card",
+      "expected_matches": 1,
+      "source_line": 2082,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Alipay",
+      "russian": "Alipay",
+      "expected_matches": 1,
+      "source_line": 2083,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "WeChat Pay",
+      "russian": "WeChat Pay",
+      "expected_matches": 1,
+      "source_line": 2084,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Klarna",
+      "russian": "Klarna",
+      "expected_matches": 1,
+      "source_line": 2085,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Crypto",
+      "russian": "Crypto",
+      "expected_matches": 1,
+      "source_line": 2086,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Double Tap",
+      "russian": "Double Tap",
+      "expected_matches": 1,
+      "source_line": 2092,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Quad Kill",
+      "russian": "Quad Kill",
+      "expected_matches": 1,
+      "source_line": 2093,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Smackdown",
+      "russian": "Smackdown",
+      "expected_matches": 1,
+      "source_line": 2094,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Rage Quit",
+      "russian": "Rage Quit",
+      "expected_matches": 1,
+      "source_line": 2095,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Defeat",
+      "russian": "Поражение",
+      "expected_matches": 1,
+      "source_line": 2096,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Art pending - drop this file in to replace.",
+      "russian": "Art pending - drop this file in to replace.",
+      "expected_matches": 2,
+      "source_line": 2204,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Clip pending",
+      "russian": "Clip pending",
+      "expected_matches": 1,
+      "source_line": 2283,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0125.tsx",
+      "english": "Drop this file in to replace.",
+      "russian": "Drop this file in to replace.",
+      "expected_matches": 1,
+      "source_line": 2285,
+      "decision": "KEEP_EN"
+    }
+  ]
+}

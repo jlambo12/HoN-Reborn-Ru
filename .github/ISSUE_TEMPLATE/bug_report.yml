@@ -1,0 +1,44 @@
+name: Ошибка перевода или установки
+description: Сообщить о неправильной строке, отображении или работе установщика
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Область
+      options:
+        - Перевод
+        - Интерфейс и вёрстка
+        - Установка или удаление
+        - Сайт
+        - Другое
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Версия локализации
+      placeholder: v0.1.0
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Что произошло
+      description: Укажите экран, действие, фактический и ожидаемый результат.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Скриншот или безопасный фрагмент лога
+      description: Не публикуйте логин, токены и другие личные данные.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Проверка данных
+      options:
+        - label: Я проверил вложения и удалил из них личные данные.
+          required: true
+

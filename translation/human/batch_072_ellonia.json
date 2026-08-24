@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_072_ELLONIA",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_Ellonia1_name"], "ru": "Glacial Spike"},
+    {"keys": ["entities:Ability_Ellonia1_description"], "ru": "Ellonia выпускает вихрь ледяных осколков, который наносит урон противникам на линии и замедляет их."},
+    {"keys": ["entities:Ability_Ellonia1_description2"], "ru": ""},
+    {"keys": ["entities:Ability_Ellonia1_description_simple"], "ru": "Поражает противников по прямой, нанося ^o{80,120,160,200} магического урона^* и накладывая ^t5 зарядов Frosted^*."},
+    {"keys": ["entities:Ability_Ellonia1_frosted_comment"], "ru": "Скорость передвижения противников под действием ^tFrosted^* снижается на 2% за каждый заряд."},
+    {"keys": ["entities:Ability_Ellonia1_effect_header"], "ru": "^tЭффекты Frosted^*"},
+    {"keys": ["entities:Ability_Ellonia1_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_Ellonia1_tooltip_flavor"], "ru": "Осколок льда наносит огромный урон холодом, а затем взрывается и замораживает противников поблизости."},
+
+    {"keys": ["entities:Ability_Ellonia2_name"], "ru": "Frigid Field"},
+    {"keys": ["entities:Ability_Ellonia2_description"], "ru": "Ellonia покрывает выбранную область кристаллическими осколками, которые наносят урон находящимся внутри противникам и замедляют их."},
+    {"keys": ["entities:Ability_Ellonia2_description2"], "ru": ""},
+    {"keys": ["entities:Ability_Ellonia2_description_simple"], "ru": "На 3 секунды покрывает область морозом. При применении и затем каждую секунду в течение ^o3^* секунд наносит ^o{25,40,55,70} магического урона^* и накладывает ^t2 заряда Frosted^*."},
+    {"keys": ["entities:Ability_Ellonia2_effect_header"], "ru": "^tЭффекты Frosted^*"},
+    {"keys": ["entities:Ability_Ellonia2_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_Ellonia2_tooltip_flavor"], "ru": "Кристаллы распускаются, словно цветы."},
+
+    {"keys": ["entities:Ability_Ellonia3_name"], "ru": "Flash Freeze"},
+    {"keys": ["entities:Ability_Ellonia3_description"], "ru": "Ellonia сковывает морозом воздух вокруг выбранного противника, нанося ему урон и оглушая."},
+    {"keys": ["entities:Ability_Ellonia3_description2"], "ru": ""},
+    {"keys": ["entities:Ability_Ellonia3_description_simple"], "ru": "Наносит выбранному противнику ^o{55,80,105,130} магического урона^* и ^oоглушает его на 1 секунду^*. Поглощает все заряды ^tFrosted^*: каждый из них наносит дополнительно ^o{4,6,8,10} магического урона^* и продлевает оглушение на 0,05 секунды за каждый заряд ^tFrosted^*.\\n\\nМаксимальная длительность оглушения — 3 секунды, а максимальный магический урон — 550."},
+    {"keys": ["entities:Ability_Ellonia3_effect_header"], "ru": ""},
+    {"keys": ["entities:Ability_Ellonia3_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_Ellonia3_tooltip_flavor"], "ru": "Ты что, прибавил в весе?"},
+    {"keys": ["entities:Ability_Ellonia3_IMPACT_effect"], "ru": "Снимает с цели все заряды ^tFrosted^* и наносит {55,80,105,130} магического урона плюс {4,6,8,10} магического урона за каждый поглощённый заряд ^tFrosted^*. Оглушает цель на 1 секунду и ещё на 0,05 секунды за каждый поглощённый заряд ^tFrosted^*.\\n\\nМаксимальная длительность оглушения — 3 секунды, а максимальный магический урон — 550."},
+
+    {"keys": ["entities:Ability_Ellonia4_name"], "ru": "Absolute Zero"},
+    {"keys": ["entities:Ability_Ellonia4_description"], "ru": "Ellonia выпускает движущуюся сферу, которая замораживает воздух вокруг себя, замедляя противников и нанося им урон."},
+    {"keys": ["entities:Ability_Ellonia4_description2"], "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* Достигнув конечной точки, сфера летит обратно к Ellonia со скоростью в 3 раза выше и применяет ^oFlash Freeze^* ко всем поражённым противникам."},
+    {"keys": ["entities:Ability_Ellonia4_description_simple"], "ru": "Запускает пульсирующую сферу по прямой. При ^oпопадании^* она наносит ^o{50,100,150} усиленного магического урона^*. Кроме того, каждую секунду сфера наносит до ^o{350,550,750} усиленного магического урона^* и накладывает ^o{10,15,20}^* зарядов ^tFrosted^* ^oза ^oсекунду^*.\\n\\n^gStaff of the Master^* заставляет сферу по достижении конечной точки полететь обратно к вам, применяя ^oFlash Freeze^* на обратном пути."},
+    {"keys": ["entities:Ability_Ellonia4_effect_header"], "ru": "^tЭффекты Frosted^*"},
+    {"keys": ["entities:Ability_Ellonia4_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_Ellonia4_tooltip_flavor"], "ru": "Цельсий или Фаренгейт?"},
+    {"keys": ["entities:Ability_Ellonia4_IMPACT_effect"], "ru": "Запускает сферу в выбранном направлении. За 2,4 секунды она пролетает 1200 ед. и каждые 0,2 секунды выпускает импульс радиусом 400 — всего 12 импульсов. Каждый импульс наносит до ^o{70,110,150} усиленного магического урона^*, который уменьшается по мере удаления от центра, и накладывает ^t{2,3,4} заряда Frosted^* на 4 секунды.\\n\\nВокруг сферы действует беспрепятственный обзор радиусом 1000 днём и ночью."},
+    {"keys": ["entities:Ability_Ellonia4_name:ult_boost"], "ru": "^gAbsolute Zero*^*"},
+    {"keys": ["entities:Ability_Ellonia4_description2:ult_boost"], "ru": "\\r"},
+    {"keys": ["entities:Ability_Ellonia4_description_simple:ult_boost"], "ru": "Запускает пульсирующую сферу по прямой. При ^oпопадании^* она наносит ^o{50,100,150} усиленного магического урона^*. Кроме того, каждую ^oсекунду^* сфера наносит до ^o{350,550,750} усиленного магического урона^* и накладывает ^o{10,15,20} зарядов Frosted^*.\\n\\nДостигнув конечной точки, сфера летит обратно к вам и по пути применяет ^oFlash Freeze^* к вражеским юнитам."},
+    {"keys": ["entities:Ability_Ellonia4_IMPACT_effect:ult_boost"], "ru": "Запускает сферу в выбранном направлении. За 2,4 секунды она пролетает 1200 ед. и каждые 0,2 секунды выпускает импульс радиусом 400 — всего 12 импульсов. Каждый импульс наносит до ^o{70,110,150} усиленного магического урона^*, который уменьшается по мере удаления от центра, и накладывает ^t{2,3,4} заряда Frosted^* на 4 секунды.\\n\\nВокруг сферы действует беспрепятственный обзор радиусом 1000 днём и ночью.\\n\\n^gДостигнув конечной точки, сфера летит обратно к Ellonia и применяет Flash Freeze к противникам, задетым на обратном пути.^*"}
+  ]
+}

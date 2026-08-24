@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_201_ITEMS_THREE_ROW_GROUP_C",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys":["entities:Item_TokenOfLife_description"],"english_hash":"e6d9aa7f180b4ce8d171354029b760ceb3f6d317a578ec747fafafe137e0af9f","ru":"Говорят, что Token of Life — символ Привратника Ада, который возвращает владельца к жизни после смерти.\\n\\n^rМожно получить, убив Kongor.^*"},
+    {"keys":["entities:Item_TokenOfLife_description_simple"],"english_hash":"8bcea9f5eb3576d212cc3845e7e306990ecadd920923fdbfb916b1222d9244ff","ru":"Возрождает после смерти."},
+    {"keys":["entities:Item_TomeOfElements_IMPACT_effect"],"english_hash":"d51f276a1e875b77af4821f52a6e85e9a66e64184859f6a1d5f7f7ed976c8e65","ru":"Активируйте, чтобы получить 300 опыта, ^oа если вашего опыта меньше среднего по команде — дополнительно 60% от этой разницы^*."},
+    {"keys":["entities:Item_TomeOfElements_description"],"english_hash":"f7beb350575d15df72065dac2eaa4f885de66ce50aea3589acbad102e6e2e130","ru":"Расходуемый предмет.\\n\\nЗапас: 1/2 (начальный/максимальный)\\nПополнение запаса: 15/12 минут (первое/последующие)"},
+    {"keys":["entities:Item_TomeOfElements_description_simple"],"english_hash":"82da1991c8c91074f5ad92b057bf6cc93e8e922fffbad8ec9ea9df9795c81cb1","ru":"Даёт владельцу опыт.\\nВремя пополнения — 10 минут"},
+    {"keys":["entities:Item_TowerTinkerer_IMPACT_effect"],"english_hash":"ad46f86729eada2607237136ef90c01679df9497f4be03e7f9699a680677efad","ru":"Снижает уровень башни на 1."},
+    {"keys":["entities:Item_TowerTinkerer_description","entities:Item_TowerTinkerer_description_simple"],"english_hash":"b78384db5c5c413d1a3127e059ad92b3efd5b703b2a1b1dfaa2bb3343279c4cd","ru":"Выберите башню, чтобы снизить её уровень на 1. Башни нулевого уровня обезоруживаются, и их больше нельзя изменить этим предметом."},
+    {"keys":["entities:Item_WindWhistle_description"],"english_hash":"542d9ab93e2d5a3a0a3f9eb93d627fdb4a719f89e99120eb0308c64cdee95a45","ru":"Бонус этого предмета к скорости передвижения не складывается сам с собой."},
+    {"keys":["entities:Item_WindWhistle_description_simple"],"english_hash":"fe8c99117304e5c2ba9d164ec23178d828ace3709f7005ea50794a3cf42f2673","ru":"15 скорости передвижения"},
+    {"keys":["entities:Item_TokenOfLife_effect_header","entities:Item_WindWhistle_effect_header"],"english_hash":"6e5e7bc5e96f838352cde0fcff351520eab9cd6b12ecb43e9b30ed6fd98f6777","ru":"Эффекты состояния"}
+  ]
+}

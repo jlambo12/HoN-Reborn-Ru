@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package>
+
+	<template name="ban_list_instance">
+		<button color="invisible" borderthickness=".6h" width="100%" height="3h" align="center" onclicklua="{object}:OnSearchSelect('{id}') PlaySound('/shared/sounds/ui/button_click_05.ogg', 0.9)">
+			<widgetstate statename="up">
+				<instance name="fe3_panel_base" color=".1 .1 .1" outer_glow="0" borderthickness=".25h" />					
+				<frame texture="/ui/hd_ui/frames/border_normal.tga" borderthickness=".25h" color=".05 .05 .05" noclick="1" />
+			</widgetstate>
+			<widgetstate statename="over">
+				<instance name="fe3_panel_base" color=".15 .15 .15" outer_glow="0" borderthickness=".25h" />	
+				<frame texture="/ui/hd_ui/frames/border_normal.tga" borderthickness=".25h" color=".05 .05 .05" noclick="1" />
+			</widgetstate>
+			<widgetstate statename="down">
+				<instance name="fe3_panel_base" color=".2 .2 .2" outer_glow="0" borderthickness=".25h" />
+				<frame texture="/ui/hd_ui/frames/border_normal.tga" borderthickness=".25h" color=".05 .05 .05" noclick="1" />
+			</widgetstate>
+
+			<panel width="-1.0h" align="center" float="right" padding="1h" noclick="1">
+				<image name="ban_list_instance_heroicon{id}{object}" texture="/heroes/pyromancer/base/icon.tga" size="2h" valign="center" noclick="1" />
+				<label name="ban_list_instance_heroname{id}{object}" textvalign="center" fitx="1" fity="1" color="white" shadow="1" shadowcolor="0 0 0 .6" shadowoffset="2" font="dyn_11" content="Pyromancer" noclick="1" />				
+			</panel>
+			
+		</button>
+	</template>
+
+	<template name="ban_instance_dropdown">
+		<panel name="{object}ban_instance_dropdown" x="1h" width="22h" height="36.8h" noclick="1" visible="{visible=0}">
+
+			<!-- Frame -->
+			<instance name="fe3_panel_base" color=".1 .1 .1" />
+
+			<!-- Content -->
+			<panel float="bottom" padding="0.5h" noclick="1">
+
+				<panel width="100%" height="0.5h" noclick="1" />
+
+				<!-- Header -->
+				<frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" borderthickness=".6h" width="90%" height="3.6h" align="center" noclick="1" color="1 1 1 .1">
+					<textbox name="{object}_listbox_searchinput"
+						hpadding="0.8h"
+						vpadding="0.8h"
+						maxlength="250"
+						width="-11.0h"
+						font="dyn_11"
+						textcolor=".9 .9 .9"
+						shadow="0"
+						color="invisible"
+						onchangelua="local input = self:GetInputLine(); Main:GetWidget('{object}_listbox_placeholder'):SetVisible(input == ''); {object}:OnSearchInputChange(self)"
+						onshowlua="self:SetInputLine('') self:SetFocus(true); Main:GetWidget('{object}_listbox_placeholder'):SetVisible(true)"
+					/>
+					<label name="{object}_listbox_placeholder" x="1.2h" style="text_base,text_muted" textvalign="center" content="Поиск..." noclick="1" />
+
+					<frame texture="/ui/hd_ui/frames/border_thin.tga" borderthickness=".6h" color=".05 .05 .05" noclick="1" />
+				</frame>
+
+				<!-- Heroes List -->
+				<panel width="90%" height="-6.1h" align="center" noclick="1">
+
+					<listbox name="{object}_listbox"
+						color="invisible"
+						font="dyn_10"
+						itemwidth="-.15h"
+						itemheight="3.4h"
+						select="0"
+						clearselection="1"
+						hoverselect="0"
+						hoverhighlight="0"
+						highlight="under"
+						highlightcolor="invisible"
+						highlightbordercolor="invisible"
+						selectedcolor="invisible"
+						selectedbordercolor="invisible"
+						scrolltexture="/ui/hd_ui/input_controls/scrollbar_mini.tga"
+						backgroundimagecolor="invisible"
+						colortransition="1"
+						colortransitiontime="250"
+						exteriorscrollbars="1"
+						scrollbarsize=".5h"
+						hscrollbar="0"
+						handleheight="4.0h"
+					/>
+
+				</panel>
+
+				<panel width="100%" height="0.5h" noclick="1" />
+
+			</panel>
+
+		</panel>
+	</template>
+
+	<template name="ban_instance">
+		<panel width="-1.4h" height="3.2h" align="center">
+			
+			<!-- Content -->
+			<button 
+				color="invisible"
+				float="right" padding="1h"
+				onclicklua="{object}:OnEdit('{id}') PlaySound('/shared/sounds/ui/button_click_05.ogg', 0.9)"
+				onrightclicklua="{object}:ClearSlot('{id}')"
+				onmouseoverlua="PlaySound('/shared/sounds/ui/button_over_01.ogg', 0.9)"
+			>
+
+				<widgetstate statename="up">
+					<instance name="fe3_panel_base" color=".1 .1 .1" outer_glow="0" borderthickness=".6h" />					
+					<frame texture="/ui/hd_ui/frames/rounded_right_bg_solid.tga" hflip="1" width="3h" align="right" borderthickness=".6h" color=".15 .15 .15" />
+					<frame texture="/ui/hd_ui/frames/border_thin.tga" borderthickness=".6h" color=".05 .05 .05" noclick="1" />
+				</widgetstate>
+				<widgetstate statename="over">
+					<instance name="fe3_panel_base" color="#250b0b" borderthickness=".6h" outer_glow="0" inner_glow="1" inner_glow_color="#9a2727"  />
+					<frame texture="/ui/hd_ui/frames/rounded_right_bg_solid.tga" hflip="1" width="3h" align="right" borderthickness=".6h" color=".25 .25 .25" />
+					<frame texture="/ui/hd_ui/frames/border_thin.tga" borderthickness=".6h" color=".05 .05 .05" noclick="1" />
+				</widgetstate>
+				<widgetstate statename="down">
+					<instance name="fe3_panel_base" color=".2 .2 .2" outer_glow="0" borderthickness=".6h" />
+					<frame texture="/ui/hd_ui/frames/border_thin.tga" borderthickness=".6h" color=".05 .05 .05" noclick="1" />
+				</widgetstate>	
+
+				<!-- Order Num -->
+				<label name="ban_instance_ordernum{id}{object}" x="0.8h" width="1.6h" valign="center" style="textcenter" color="red" outline="1" font="dyn_bold_14" content="{slotlabel}" noclick="1" />
+
+				<!-- Hero Icon -->
+				<panel size="3h" valign="center" noclick="1">
+					<image name="ban_instance_heroicon{id}{object}" texture="$invis" size="96%" style="center" noclick="1" />
+					<frame texture="/ui/hd_ui/frames/border_normal.tga" borderthickness=".25h" color=".05 .05 .05" noclick="1" />
+				</panel>
+
+				<!-- Hero Name -->
+				<panel height="100%" valign="center" style="grow_noinvis" noclick="1">
+					<label name="ban_instance_heroname{id}{object}" y="-.15h" textvalign="center" fitx="1" style="h3" content="Pyromancer" noclick="1" />
+				</panel>
+
+				<!-- Edit (x=0 makes it ignore float) -->
+				<panel name="ban_instance_edit{id}{object}" x="0" size="3h" align="right" valign="center" sticky="0" stickytoinvis="0" noclick="1">
+					<image texture="/ui/hd_ui/icons/edit.tga" size="50%" x="-.15h" style="center"
+						onclicklua="{object}:OnEdit('{id}')"
+					/>
+				</panel>
+
+
+
+			</button>
+
+				<!-- Cancel -->
+				<panel name="ban_instance_cancel{id}{object}" x="0" size="3h" align="right" valign="center" sticky="0" stickytoinvis="0" visible="0"
+					onclicklua="{object}:CancelEdit()"
+				>
+					<image texture="/ui/hd_ui/icons/x.tga" x="-.15h" size="50%" style="center" noclick="1" />
+				</panel>
+
+		</panel>
+	</template>
+
+	<template name="ban_list">
+		<panel width="90%" align="center" style="grow_noinvis" noclick="1">
+
+			<instance name="fe3_panel_base" color=".15 .15 .15" borderthickness=".3h" outer_glow_size="+0.3h" outer_glow_color="0 0 0 .5"/>
+
+			<panel width="100%" float="bottom" style="grow_noinvis" noclick="1">
+
+				<!-- Header -->
+				<panel width="100%" height="3.0h" noclick="1">
+					<frame texture="/ui/hd_ui/frames/rounded_top_bg_solid.tga" borderthickness=".6h" color=".05 .05 .05" noclick="1" />
+					<label style="textcenter,h5,color-red" font="dyn_bold_12" content="ban_pick_title" noclick="1" />
+				</panel>
+
+				<!-- Description -->
+				<panel width="100%" height="5.2h" noclick="1">
+
+					<!-- Left -->
+					<panel x="1.0h" width="75%" align="left" noclick="1">
+						<label fity="1" valign="center" style="text_base" content="ban_pick_desc" wrap="1" noclick="1" />
+					</panel>
+
+					<!-- Right -->
+					<panel width="25%" align="right" float="bottom" padding="0.2h" noclick="1">
+						<panel y=".8h" width="100%" height="2.0h" noclick="1">
+							<image texture="/ui/hd_ui/icons/rmb.tga" width="100@" align="center" />
+						</panel>
+						<label style="text_label_small,text_muted" textalign="center" content="ban_pick_clear" noclick="1" />
+					</panel>
+
+				</panel>
+
+				<!-- Loading Placeholder -->
+				<panel name="{object}_fetching" width="100%" height="14.4h" sticky="0" stickytoinvis="0" visible="1" noclick="1">
+					<label style="textcenter,h5,color-white" font="dyn_bold_12" content="Fetching Data from Server..." noclick="1" />
+				</panel>
+
+				<!-- Failed Notification -->
+				<panel name="{object}_failed" width="100%" height="14.4h" sticky="0" stickytoinvis="0" visible="0" noclick="1">
+					<label style="textcenter,h5,color-red" font="dyn_bold_12" y="-2h" content="Failed to Fetch Ban Data" noclick="1" />
+					<instance name="button_hd" button_name="btn_retryfetchbans_{object}" width="12h" height="3h" y="2h" align="center" valign="center" font="dyn_11" label="Попробовать снова"
+						onclicklua="BanList_Shared:GetBans()"
+					/>
+				</panel>
+
+				<!-- Contents -->
+				<panel name="{object}_core" width="100%" float="bottom" padding="0.3h" style="grow_noinvis" sticky="0" stickytoinvis="0" visible="0" noclick="1" />
+
+				<panel width="100%" height=".7h" noclick="1" />
+
+			</panel>
+
+			<panel width="1" align="right" noclick="1">
+
+				<!-- Ban List Instance Dropdown -->
+				<instance name="ban_instance_dropdown" object="{object}" visible="0" />
+
+			</panel>
+
+			<frame texture="/ui/hd_ui/frames/border_normal.tga" borderthickness=".3h" color=".05 .05 .05" noclick="1" />
+
+		</panel>
+	</template>
+
+	<!-- CORE -->
+	<template name="ban_list_core">
+		<panel width="{width=100%}" style="grow_noinvis" onshowlua="{object}:OnShow()" noclick="1">
+
+			<panel width="100%" style="grow_noinvis" float="bottom" noclick="1">
+
+				<!-- Ban List -->
+				<instance name="ban_list" object="{object}" />
+
+			</panel>
+
+		</panel>
+
+	</template>
+
+</package>

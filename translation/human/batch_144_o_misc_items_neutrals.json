@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_144_O_MISC_ITEMS_NEUTRALS",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Item_OblivionHammer_description"],
+      "ru": "Предмет обладает свойством ^yBashing^*. Предметы и способности со свойством ^yBashing^* используют общую перезарядку."
+    },
+    {
+      "keys": ["entities:Item_OblivionHammer_description2"],
+      "ru": "Пассивно даёт ^o60% шанс^* ^oзаблокировать 80 урона (40 для героев дальнего боя)^* от вражеских атак. Не блокирует урон от гаджетов.\\n\\nПри атаке даёт ^o25% шанс (10% для героев дальнего боя)^* нанести цели ^o120 дополнительного физического урона^* и наложить Stun на 1.5 секунды.\\n\\nИллюзии получают 33% силы этого эффекта, но не накладывают Stun."
+    },
+    {
+      "keys": ["entities:Item_OblivionHammer_description_simple"],
+      "ru": "^oМодификатор Bash^*\\nДаёт шанс наложить Stun на цель при атаке. Примените, чтобы наложить Stun на врага."
+    },
+    {
+      "keys": ["entities:Item_OblivionHammer_IMPACT_effect"],
+      "ru": "При применении накладывает на цель ^oStun^* на ^o1.5 секунды^*. Можно применять не чаще одного раза в 30 секунд.\\n\\nНельзя применить к цели, на которую Oblivion Hammer воздействовал в течение последних 7 секунд."
+    },
+    {
+      "keys": ["entities:State_OblivionHammer_Cooldown_name"],
+      "ru": "Перезарядка Oblivion Hammer"
+    },
+    {
+      "keys": ["entities:Item_ObsidianBell_description"],
+      "ru": "Предмет содержит модификаторы ^yпробивания магической брони и усиления заклинаний^*, которые не суммируются."
+    },
+    {
+      "keys": ["entities:Item_ObsidianBell_description_simple", "entities:Item_ObsidianBell_FRAME_effect"],
+      "ru": "60% пробивания магической брони^*\\n+18% усиления заклинаний"
+    },
+    {
+      "keys": ["entities:Item_OrbOfZamos_description_simple"],
+      "ru": "Увеличивает скорость вам и ближайшему союзнику."
+    },
+    {
+      "keys": ["entities:Item_OrbOfZamos_effect_header"],
+      "ru": "Эффекты синхронизации"
+    },
+    {
+      "keys": ["entities:Item_OrbOfZamos_IMPACT_effect"],
+      "ru": "^oВыключает^* Orb of Zamos и снимает с вас все эффекты синхронизации."
+    },
+    {
+      "keys": ["entities:Item_OrbOfZamos_IMPACT_effect:item_OrbOfZamos_Disabled"],
+      "ru": "^oВключает^* Orb of Zamos."
+    },
+    {
+      "keys": ["entities:State_OrbOfZamos_name"],
+      "ru": "Synchronized"
+    },
+    {
+      "keys": ["entities:Item_ObsidianSpear_description"],
+      "ru": "Реликвия, выжженная в мир гибелью вечного ^rFirebird^*."
+    },
+    {
+      "keys": ["entities:Ability_Ogre1_description_simple"],
+      "ru": "Выберите союзника, чтобы дать ему ^o8 брони^* на 30 секунд.\\n\\n^cМожно включить автоприменение на ближайшего союзного героя, у которого ещё нет этого эффекта.^*"
+    },
+    {
+      "keys": ["entities:Ability_Ogre1_IMPACT_effect"],
+      "ru": "Накладывает на цель Icy Cold Armor на 30 секунд."
+    },
+    {
+      "keys": ["entities:Ability_Ogre1_effect_header"],
+      "ru": "Усиление Icy Cold Armor"
+    },
+    {
+      "keys": ["entities:Ability_Ogre1_effect_header2"],
+      "ru": "Ослабление Icy Cold Armor"
+    },
+    {
+      "keys": ["entities:Ability_OgreLeader1_description_simple"],
+      "ru": "Выберите союзного юнита, чтобы наложить на него Immolating Flames на 30 секунд.\\n\\nImmolating Flames наносит 20 магического урона в секунду врагам в радиусе 200 от цели."
+    },
+    {
+      "keys": ["entities:Ability_OgreLeader1_IMPACT_effect"],
+      "ru": "Накладывает на союзную цель Immolating Flames на 30 секунд."
+    },
+    {
+      "keys": ["entities:Ability_OgreLeader1_effect_header", "entities:State_OgreLeader_Ability1_Buff_name"],
+      "ru": "Immolating Flames (усиление)"
+    },
+    {
+      "keys": ["entities:Ability_OgreLeader1_effect_header2", "entities:State_OgreLeader_Ability1_Debuff_name"],
+      "ru": "Immolating Flames (ослабление)"
+    },
+    {
+      "keys": ["entities:State_OgreLeader_Ability1_Buff_FRAME_effect"],
+      "ru": "Наносит 20 магического урона в секунду врагам в радиусе 200"
+    },
+    {
+      "keys": ["entities:State_OgreLeader_Ability1_Debuff_FRAME_effect"],
+      "ru": "Получает 20 магического урона в секунду"
+    }
+  ]
+}

@@ -1,0 +1,1606 @@
+{
+  "heroes": [
+    {
+      "entity": "Hero_Accursed",
+      "id": 342,
+      "name": "Accursed"
+    },
+    {
+      "entity": "Hero_Aluna",
+      "id": 365,
+      "name": "Aluna"
+    },
+    {
+      "entity": "Hero_AmunRa",
+      "id": 391,
+      "name": "Amun-Ra"
+    },
+    {
+      "entity": "Hero_Andromeda",
+      "id": 410,
+      "name": "Andromeda"
+    },
+    {
+      "entity": "Hero_Arachna",
+      "id": 431,
+      "name": "Arachna"
+    },
+    {
+      "entity": "Hero_Armadon",
+      "id": 446,
+      "name": "Armadon"
+    },
+    {
+      "entity": "Hero_Behemoth",
+      "id": 464,
+      "name": "Behemoth"
+    },
+    {
+      "entity": "Hero_Blacksmith",
+      "id": 480,
+      "name": "Blacksmith"
+    },
+    {
+      "entity": "Hero_BloodHunter",
+      "id": 493,
+      "name": "Blood Hunter"
+    },
+    {
+      "entity": "Hero_Bombardier",
+      "id": 3209,
+      "name": "Bombardier"
+    },
+    {
+      "entity": "Hero_Bubbles",
+      "id": 508,
+      "name": "Bubbles"
+    },
+    {
+      "entity": "Hero_Bushwack",
+      "id": 3946,
+      "name": "Bushwack"
+    },
+    {
+      "entity": "Hero_Chronos",
+      "id": 555,
+      "name": "Chronos"
+    },
+    {
+      "entity": "Hero_CorruptedDisciple",
+      "id": 578,
+      "name": "Corrupted Disciple"
+    },
+    {
+      "entity": "Hero_Cthulhuphant",
+      "id": 3858,
+      "name": "Cthulhuphant"
+    },
+    {
+      "entity": "Hero_Dampeer",
+      "id": 3766,
+      "name": "Dampeer"
+    },
+    {
+      "entity": "Hero_Deadwood",
+      "id": 3661,
+      "name": "Deadwood"
+    },
+    {
+      "entity": "Hero_Defiler",
+      "id": 599,
+      "name": "Defiler"
+    },
+    {
+      "entity": "Hero_DementedShaman",
+      "id": 618,
+      "name": "Demented Shaman"
+    },
+    {
+      "entity": "Hero_Devourer",
+      "id": 641,
+      "name": "Devourer"
+    },
+    {
+      "entity": "Hero_DoctorRepulsor",
+      "id": 660,
+      "name": "Doctor Repulsor"
+    },
+    {
+      "entity": "Hero_DrunkenMaster",
+      "id": 684,
+      "name": "Drunken Master"
+    },
+    {
+      "entity": "Hero_Electrician",
+      "id": 700,
+      "name": "Electrician"
+    },
+    {
+      "entity": "Hero_Ellonia",
+      "id": 721,
+      "name": "Ellonia"
+    },
+    {
+      "entity": "Hero_EmeraldWarden",
+      "id": 3880,
+      "name": "Emerald Warden"
+    },
+    {
+      "entity": "Hero_Empath",
+      "id": 741,
+      "name": "Empath"
+    },
+    {
+      "entity": "Hero_Engineer",
+      "id": 3588,
+      "name": "Engineer"
+    },
+    {
+      "entity": "Hero_Fayde",
+      "id": 765,
+      "name": "Fayde"
+    },
+    {
+      "entity": "Hero_FlintBeastwood",
+      "id": 784,
+      "name": "Flint Beastwood"
+    },
+    {
+      "entity": "Hero_Flux",
+      "id": 805,
+      "name": "Flux"
+    },
+    {
+      "entity": "Hero_ForsakenArcher",
+      "id": 830,
+      "name": "Forsaken Archer"
+    },
+    {
+      "entity": "Hero_Gauntlet",
+      "id": 860,
+      "name": "Gauntlet"
+    },
+    {
+      "entity": "Hero_Gemini",
+      "id": 938,
+      "name": "Gemini"
+    },
+    {
+      "entity": "Hero_Geomancer",
+      "id": 963,
+      "name": "Geomancer"
+    },
+    {
+      "entity": "Hero_Glacius",
+      "id": 982,
+      "name": "Glacius"
+    },
+    {
+      "entity": "Hero_Gunblade",
+      "id": 3121,
+      "name": "Gunblade"
+    },
+    {
+      "entity": "Hero_Hammerstorm",
+      "id": 1025,
+      "name": "Hammerstorm"
+    },
+    {
+      "entity": "Hero_Hellbringer",
+      "id": 1052,
+      "name": "Hellbringer"
+    },
+    {
+      "entity": "Hero_Jeraziah",
+      "id": 1077,
+      "name": "Jeraziah"
+    },
+    {
+      "entity": "Hero_Kane",
+      "id": 4100,
+      "name": "Kane"
+    },
+    {
+      "entity": "Hero_KeeperOfTheForest",
+      "id": 1098,
+      "name": "Keeper of the Forest"
+    },
+    {
+      "entity": "Hero_Kinesis",
+      "id": 3797,
+      "name": "Kinesis"
+    },
+    {
+      "entity": "Hero_KingKlout",
+      "id": 3149,
+      "name": "King Klout"
+    },
+    {
+      "entity": "Hero_Kraken",
+      "id": 1156,
+      "name": "Kraken"
+    },
+    {
+      "entity": "Hero_Legionnaire",
+      "id": 1174,
+      "name": "Legionnaire"
+    },
+    {
+      "entity": "Hero_Lodestone",
+      "id": 1195,
+      "name": "Lodestone"
+    },
+    {
+      "entity": "Hero_LordSalforis",
+      "id": 3963,
+      "name": "Lord Salforis"
+    },
+    {
+      "entity": "Hero_Magebane",
+      "id": 1227,
+      "name": "Magebane"
+    },
+    {
+      "entity": "Hero_Magmus",
+      "id": 1247,
+      "name": "Magmus"
+    },
+    {
+      "entity": "Hero_Maliken",
+      "id": 1264,
+      "name": "Maliken"
+    },
+    {
+      "entity": "Hero_Martyr",
+      "id": 1281,
+      "name": "Martyr"
+    },
+    {
+      "entity": "Hero_MasterOfArms",
+      "id": 3681,
+      "name": "Master Of Arms"
+    },
+    {
+      "entity": "Hero_Midas",
+      "id": 1310,
+      "name": "Midas"
+    },
+    {
+      "entity": "Hero_Monarch",
+      "id": 1339,
+      "name": "Monarch"
+    },
+    {
+      "entity": "Hero_MonkeyKing",
+      "id": 1371,
+      "name": "Monkey King"
+    },
+    {
+      "entity": "Hero_MoonQueen",
+      "id": 1380,
+      "name": "Moon Queen"
+    },
+    {
+      "entity": "Hero_Moraxus",
+      "id": 1394,
+      "name": "Moraxus"
+    },
+    {
+      "entity": "Hero_Myrmidon",
+      "id": 1417,
+      "name": "Myrmidon"
+    },
+    {
+      "entity": "Hero_NightHound",
+      "id": 3159,
+      "name": "Night Hound"
+    },
+    {
+      "entity": "Hero_Nomad",
+      "id": 3266,
+      "name": "Nomad"
+    },
+    {
+      "entity": "Hero_Nymphora",
+      "id": 1436,
+      "name": "Nymphora"
+    },
+    {
+      "entity": "Hero_Ophelia",
+      "id": 1451,
+      "name": "Ophelia"
+    },
+    {
+      "entity": "Hero_Pandamonium",
+      "id": 1477,
+      "name": "Pandamonium"
+    },
+    {
+      "entity": "Hero_Pearl",
+      "id": 1504,
+      "name": "Pearl"
+    },
+    {
+      "entity": "Hero_Pebbles",
+      "id": 1526,
+      "name": "Pebbles"
+    },
+    {
+      "entity": "Hero_Pestilence",
+      "id": 1542,
+      "name": "Pestilence"
+    },
+    {
+      "entity": "Hero_Pharaoh",
+      "id": 1570,
+      "name": "Pharaoh"
+    },
+    {
+      "entity": "Hero_PlagueRider",
+      "id": 1589,
+      "name": "Plague Rider"
+    },
+    {
+      "entity": "Hero_PollywogPriest",
+      "id": 1603,
+      "name": "Pollywog Priest"
+    },
+    {
+      "entity": "Hero_Predator",
+      "id": 3227,
+      "name": "Predator"
+    },
+    {
+      "entity": "Hero_Prisoner",
+      "id": 4041,
+      "name": "Prisoner 945"
+    },
+    {
+      "entity": "Hero_Prophet",
+      "id": 1631,
+      "name": "Prophet"
+    },
+    {
+      "entity": "Hero_PuppetMaster",
+      "id": 1653,
+      "name": "Puppet Master"
+    },
+    {
+      "entity": "Hero_Pyromancer",
+      "id": 1668,
+      "name": "Pyromancer"
+    },
+    {
+      "entity": "Hero_Rampage",
+      "id": 1701,
+      "name": "Rampage"
+    },
+    {
+      "entity": "Hero_Ravenor",
+      "id": 3739,
+      "name": "Ravenor"
+    },
+    {
+      "entity": "Hero_Revenant",
+      "id": 3720,
+      "name": "Revenant"
+    },
+    {
+      "entity": "Hero_Rhapsody",
+      "id": 1721,
+      "name": "Rhapsody"
+    },
+    {
+      "entity": "Hero_Riftwalker",
+      "id": 1743,
+      "name": "Riftwalker"
+    },
+    {
+      "entity": "Hero_Riptide",
+      "id": 3835,
+      "name": "Riptide"
+    },
+    {
+      "entity": "Hero_SandWraith",
+      "id": 1778,
+      "name": "Sand Wraith"
+    },
+    {
+      "entity": "Hero_Scout",
+      "id": 1800,
+      "name": "Scout"
+    },
+    {
+      "entity": "Hero_ShadowBlade",
+      "id": 3923,
+      "name": "Shadowblade"
+    },
+    {
+      "entity": "Hero_Silhouette",
+      "id": 1832,
+      "name": "Silhouette"
+    },
+    {
+      "entity": "Hero_SirBenzington",
+      "id": 1851,
+      "name": "Sir Benzington"
+    },
+    {
+      "entity": "Hero_Slither",
+      "id": 1868,
+      "name": "Slither"
+    },
+    {
+      "entity": "Hero_Solstice",
+      "id": 1918,
+      "name": "Solstice"
+    },
+    {
+      "entity": "Hero_SoulReaper",
+      "id": 1952,
+      "name": "Soul Reaper"
+    },
+    {
+      "entity": "Hero_Soulstealer",
+      "id": 1935,
+      "name": "Soulstealer"
+    },
+    {
+      "entity": "Hero_Swiftblade",
+      "id": 1975,
+      "name": "Swiftblade"
+    },
+    {
+      "entity": "Hero_Tarot",
+      "id": 4043,
+      "name": "Tarot"
+    },
+    {
+      "entity": "Hero_Tempest",
+      "id": 1998,
+      "name": "Tempest"
+    },
+    {
+      "entity": "Hero_Chipper",
+      "id": 532,
+      "name": "The Chipper"
+    },
+    {
+      "entity": "Hero_DarkLady",
+      "id": 3994,
+      "name": "The Dark Lady"
+    },
+    {
+      "entity": "Hero_Gladiator",
+      "id": 1010,
+      "name": "The Gladiator"
+    },
+    {
+      "entity": "Hero_Madman",
+      "id": 1212,
+      "name": "The Madman"
+    },
+    {
+      "entity": "Hero_Thunderbringer",
+      "id": 2013,
+      "name": "Thunderbringer"
+    },
+    {
+      "entity": "Hero_Torturer",
+      "id": 2028,
+      "name": "Torturer"
+    },
+    {
+      "entity": "Hero_Tundra",
+      "id": 2067,
+      "name": "Tundra"
+    },
+    {
+      "entity": "Hero_Valkyrie",
+      "id": 2087,
+      "name": "Valkyrie"
+    },
+    {
+      "entity": "Hero_Vindicator",
+      "id": 2103,
+      "name": "Vindicator"
+    },
+    {
+      "entity": "Hero_VoodooJester",
+      "id": 2123,
+      "name": "Voodoo Jester"
+    },
+    {
+      "entity": "Hero_WarBeast",
+      "id": 2138,
+      "name": "War Beast"
+    },
+    {
+      "entity": "Hero_WitchSlayer",
+      "id": 2152,
+      "name": "Witch Slayer"
+    },
+    {
+      "entity": "Hero_WretchedHag",
+      "id": 2164,
+      "name": "Wretched Hag"
+    },
+    {
+      "entity": "Hero_Zephyr",
+      "id": 2184,
+      "name": "Zephyr"
+    }
+  ],
+  "items": [
+    {
+      "entity": "Item_AbyssalFlower",
+      "id": 3789,
+      "name": "Abyssal Flower"
+    },
+    {
+      "entity": "Item_AbyssalSkull",
+      "id": 2361,
+      "name": "Abyssal Skull"
+    },
+    {
+      "entity": "Item_AcolytesStaff",
+      "id": 2218,
+      "name": "Acolyte's Staff"
+    },
+    {
+      "entity": "Item_AdevesCloak",
+      "id": 2363,
+      "name": "Adeve's Cloak"
+    },
+    {
+      "entity": "Item_AlacrityBand",
+      "id": 2219,
+      "name": "Alacrity Band"
+    },
+    {
+      "entity": "Item_AlchemistsBones",
+      "id": 2365,
+      "name": "Alchemist's Bones"
+    },
+    {
+      "entity": "Item_AmuletOfExile",
+      "id": 2367,
+      "name": "Amulet of Exile"
+    },
+    {
+      "entity": "Item_ApprenticesRobe",
+      "id": 2220,
+      "name": "Apprentice's Robe"
+    },
+    {
+      "entity": "Item_Arcana",
+      "id": 2368,
+      "name": "Arcana"
+    },
+    {
+      "entity": "Item_ArmorOfTheMadMage",
+      "id": 2369,
+      "name": "Armor of the Mad Mage"
+    },
+    {
+      "entity": "Item_AssassinsShroud",
+      "id": 2372,
+      "name": "Assassin's Shroud"
+    },
+    {
+      "entity": "Item_Astrolabe",
+      "id": 2374,
+      "name": "Astrolabe"
+    },
+    {
+      "entity": "Item_AxeOfTheMalphai",
+      "id": 2221,
+      "name": "Axe of the Malphai"
+    },
+    {
+      "entity": "Item_Cheese",
+      "id": 2234,
+      "name": "Bananas"
+    },
+    {
+      "entity": "Item_BarbedArmor",
+      "id": 2377,
+      "name": "Barbed Armor"
+    },
+    {
+      "entity": "Item_BarrierIdol",
+      "id": 2379,
+      "name": "Barrier Idol"
+    },
+    {
+      "entity": "Item_Beastheart",
+      "id": 2222,
+      "name": "Beastheart"
+    },
+    {
+      "entity": "Item_BehemothsHeart",
+      "id": 2383,
+      "name": "Behemoth's Heart"
+    },
+    {
+      "entity": "Item_BeltOfVitality",
+      "id": 3606,
+      "name": "Belt Of Vitality"
+    },
+    {
+      "entity": "Item_BlessedOrb",
+      "id": 2223,
+      "name": "Blessed Orb"
+    },
+    {
+      "entity": "Item_BlightStones",
+      "id": 2224,
+      "name": "Blight Stones"
+    },
+    {
+      "entity": "Item_BloodChalice",
+      "id": 2384,
+      "name": "Blood Chalice"
+    },
+    {
+      "entity": "Item_BloodRuby",
+      "id": 2226,
+      "name": "Blood Ruby"
+    },
+    {
+      "entity": "Item_BolsteringArmband",
+      "id": 2227,
+      "name": "Bolstering Armband"
+    },
+    {
+      "entity": "Item_Bottle",
+      "id": 2228,
+      "name": "Bottle (3/3)"
+    },
+    {
+      "entity": "Item_BoundEye",
+      "id": 2230,
+      "name": "Bound Eye"
+    },
+    {
+      "entity": "Item_BrimstonePlate",
+      "id": 3451,
+      "name": "Brimstone Plate\\n^vTier II^*"
+    },
+    {
+      "entity": "Item_Broadsword",
+      "id": 2233,
+      "name": "Broadsword"
+    },
+    {
+      "entity": "Item_Brutalizer",
+      "id": 2388,
+      "name": "Brutalizer"
+    },
+    {
+      "entity": "Item_BurningTemper",
+      "id": 3453,
+      "name": "Burning Temper\\n^vTier IV^*"
+    },
+    {
+      "entity": "Item_Chaosbrand",
+      "id": 3454,
+      "name": "Chaosbrand\\n^vTier IV^*"
+    },
+    {
+      "entity": "Item_Codex",
+      "id": 2392,
+      "name": "Codex"
+    },
+    {
+      "entity": "Item_CorruptedSword",
+      "id": 2393,
+      "name": "Corrupted Sword"
+    },
+    {
+      "entity": "Item_CrimsonGuard",
+      "id": 3459,
+      "name": "Crimson Guard\\n^vTier III^*"
+    },
+    {
+      "entity": "Item_CrownGreaves",
+      "id": 3607,
+      "name": "Crown Greaves"
+    },
+    {
+      "entity": "Item_CrushingClaws",
+      "id": 2235,
+      "name": "Crushing Claws"
+    },
+    {
+      "entity": "Item_DaemonicBreastplate",
+      "id": 2395,
+      "name": "Daemonic Breastplate"
+    },
+    {
+      "entity": "Item_DancingBlade",
+      "id": 2236,
+      "name": "Dancing Blade"
+    },
+    {
+      "entity": "Item_Dawnbringer",
+      "id": 2400,
+      "name": "Dawnbringer"
+    },
+    {
+      "entity": "Item_DesertScream",
+      "id": 3612,
+      "name": "Desert Scream"
+    },
+    {
+      "entity": "Item_DevourersGauntlet",
+      "id": 3616,
+      "name": "Devourer's Gauntlet"
+    },
+    {
+      "entity": "Item_DoomBringer",
+      "id": 2403,
+      "name": "Doom Bringer"
+    },
+    {
+      "entity": "Item_Dreamcatcher",
+      "id": 2405,
+      "name": "Dreamcatcher"
+    },
+    {
+      "entity": "Item_DuckBoots",
+      "id": 2237,
+      "name": "Duck Boots"
+    },
+    {
+      "entity": "Item_DustOfRevelation",
+      "id": 2241,
+      "name": "Dust of Revelation"
+    },
+    {
+      "entity": "Item_ElderParasite",
+      "id": 2409,
+      "name": "Elder Parasite"
+    },
+    {
+      "entity": "Item_EmberstoneBracers",
+      "id": 3461,
+      "name": "Emberstone Bracers\\n^vTier II^*"
+    },
+    {
+      "entity": "Item_Energizer",
+      "id": 2411,
+      "name": "Energizer"
+    },
+    {
+      "entity": "Item_EtherJewel",
+      "id": 2244,
+      "name": "Ether Jewel"
+    },
+    {
+      "entity": "Item_FauxBow",
+      "id": 2414,
+      "name": "Faux Bow"
+    },
+    {
+      "entity": "Item_Firebrand",
+      "id": 2415,
+      "name": "Firebrand"
+    },
+    {
+      "entity": "Item_FlameBelcher",
+      "id": 3618,
+      "name": "Flame Belcher"
+    },
+    {
+      "entity": "Item_FlamekeeperOath",
+      "id": 3464,
+      "name": "Flamekeeper's Oath\\n^vTier II^*"
+    },
+    {
+      "entity": "Item_Flayer",
+      "id": 2416,
+      "name": "Flayer"
+    },
+    {
+      "entity": "Item_Fleetfeet",
+      "id": 2245,
+      "name": "Fleetfeet"
+    },
+    {
+      "entity": "Item_FluffyFleetingFeather",
+      "id": 3465,
+      "name": "Fluffy's Fleeting Feather\\n^vTier I^*"
+    },
+    {
+      "entity": "Item_FluffyFletchingArrows",
+      "id": 3467,
+      "name": "Fluffy's Fletching Arrows\\n^vTier III^*"
+    },
+    {
+      "entity": "Item_FortifiedBracer",
+      "id": 2417,
+      "name": "Fortified Bracer"
+    },
+    {
+      "entity": "Item_Frostburn",
+      "id": 2418,
+      "name": "Frostburn"
+    },
+    {
+      "entity": "Item_FrostfieldPlate",
+      "id": 2424,
+      "name": "Frostfield Plate"
+    },
+    {
+      "entity": "Item_FrostwolfsSkull",
+      "id": 2427,
+      "name": "Frostwolf's Skull"
+    },
+    {
+      "entity": "Item_Frozenlight",
+      "id": 2436,
+      "name": "Frozen Light"
+    },
+    {
+      "entity": "Item_Genjuro",
+      "id": 2440,
+      "name": "Genjuro"
+    },
+    {
+      "entity": "Item_GeometersBane",
+      "id": 2443,
+      "name": "Geometer's Bane"
+    },
+    {
+      "entity": "Item_GhostMarchers",
+      "id": 2445,
+      "name": "Ghost Marchers"
+    },
+    {
+      "entity": "Item_GlovesOfTheSwift",
+      "id": 2246,
+      "name": "Gloves of the Swift"
+    },
+    {
+      "entity": "Item_Glowstone",
+      "id": 2247,
+      "name": "Glowstone"
+    },
+    {
+      "entity": "Item_GoldenApple",
+      "id": 2248,
+      "name": "Golden Apple"
+    },
+    {
+      "entity": "Item_GoldenReach",
+      "id": 3469,
+      "name": "Golden Reach\\n^vTier I^*"
+    },
+    {
+      "entity": "Item_GrimoireOfPower",
+      "id": 2450,
+      "name": "Grimoire of Power"
+    },
+    {
+      "entity": "Item_GuardianRing",
+      "id": 2249,
+      "name": "Guardian Ring"
+    },
+    {
+      "entity": "Item_Halberd",
+      "id": 2250,
+      "name": "Halberd"
+    },
+    {
+      "entity": "Item_HarkonsBlade",
+      "id": 2454,
+      "name": "Harkon's Blade"
+    },
+    {
+      "entity": "Item_HealthPotion",
+      "id": 2251,
+      "name": "Health Potion"
+    },
+    {
+      "entity": "Item_HeartOfFire",
+      "id": 3470,
+      "name": "Heart of Fire\\n^vTier I^*"
+    },
+    {
+      "entity": "Item_Hellflower",
+      "id": 2458,
+      "name": "Hellflower"
+    },
+    {
+      "entity": "Item_HelmOfTheBlackLegion",
+      "id": 2460,
+      "name": "Helm of the Black Legion"
+    },
+    {
+      "entity": "Item_HelmOfTheFirelands",
+      "id": 3472,
+      "name": "Helm of the Firelands\\n^vTier IV^*"
+    },
+    {
+      "entity": "Item_HelmOfTheVictim",
+      "id": 2253,
+      "name": "Helm of the Victim"
+    },
+    {
+      "entity": "Item_HolyHandGrenade",
+      "id": 3474,
+      "name": "Holy Hand Grenade\\n^vTier III^*"
+    },
+    {
+      "entity": "Item_HungrySpirit",
+      "id": 2254,
+      "name": "Hungry Spirit"
+    },
+    {
+      "entity": "Item_Hypercrown",
+      "id": 2464,
+      "name": "Hypercrown"
+    },
+    {
+      "entity": "Item_Icebrand",
+      "id": 2466,
+      "name": "Icebrand"
+    },
+    {
+      "entity": "Item_IconOfTheGoddess",
+      "id": 2469,
+      "name": "Icon of the Goddess"
+    },
+    {
+      "entity": "Item_ImmortalPride",
+      "id": 3619,
+      "name": "Immortal Pride"
+    },
+    {
+      "entity": "Item_Impaler",
+      "id": 2255,
+      "name": "Impaler"
+    },
+    {
+      "entity": "Item_InquisitorsFlail",
+      "id": 3621,
+      "name": "Inquisitor's Flail"
+    },
+    {
+      "entity": "Item_Insanitarius",
+      "id": 2472,
+      "name": "Insanitarius"
+    },
+    {
+      "entity": "Item_IoynStone",
+      "id": 2256,
+      "name": "Ioyn Stone"
+    },
+    {
+      "entity": "Item_IronBuckler",
+      "id": 2264,
+      "name": "Iron Buckler"
+    },
+    {
+      "entity": "Item_IronShield",
+      "id": 2475,
+      "name": "Iron Shield"
+    },
+    {
+      "entity": "Item_ChargedHammer",
+      "id": 2390,
+      "name": "Item_ChargedHammer"
+    },
+    {
+      "entity": "Item_JadeSpire",
+      "id": 2476,
+      "name": "Jade Spire"
+    },
+    {
+      "entity": "Item_ShrunkenHead_Consumable",
+      "id": 2563,
+      "name": "Kong's Tiny Head"
+    },
+    {
+      "entity": "Item_KuldrasSheepstick",
+      "id": 2477,
+      "name": "Kuldra's Sheepstick"
+    },
+    {
+      "entity": "Item_LagunaOrb",
+      "id": 3477,
+      "name": "Laguna Orb\\n^vTier III^*"
+    },
+    {
+      "entity": "Item_LastWail",
+      "id": 3479,
+      "name": "Last Wail\\n^vTier II^*"
+    },
+    {
+      "entity": "Item_LexTalionis",
+      "id": 2480,
+      "name": "Lex Talionis"
+    },
+    {
+      "entity": "Item_Lifetube",
+      "id": 2265,
+      "name": "Lifetube"
+    },
+    {
+      "entity": "Item_Lightbrand",
+      "id": 2485,
+      "name": "Lightbrand"
+    },
+    {
+      "entity": "Item_LoggersHatchet",
+      "id": 2266,
+      "name": "Logger's Hatchet"
+    },
+    {
+      "entity": "Item_LuminousPrism",
+      "id": 2268,
+      "name": "Luminous Prism"
+    },
+    {
+      "entity": "Item_LunarTear",
+      "id": 2269,
+      "name": "Lunar Tear"
+    },
+    {
+      "entity": "Item_Madfreds_BrassKnuckles",
+      "id": 2487,
+      "name": "Madfred's Brass Knuckles"
+    },
+    {
+      "entity": "Item_MagmaGauntlet",
+      "id": 3483,
+      "name": "Magma Gauntlet\\n^vTier III^*"
+    },
+    {
+      "entity": "Item_MajorTotem",
+      "id": 2270,
+      "name": "Major Totem"
+    },
+    {
+      "entity": "Item_ManaBattery",
+      "id": 2273,
+      "name": "Mana Battery"
+    },
+    {
+      "entity": "Item_ManaPotion",
+      "id": 2274,
+      "name": "Mana Potion"
+    },
+    {
+      "entity": "Item_Manatube",
+      "id": 2271,
+      "name": "Manatube"
+    },
+    {
+      "entity": "Item_Marchers",
+      "id": 2276,
+      "name": "Marchers"
+    },
+    {
+      "entity": "Item_MarkOfTheNovice",
+      "id": 2277,
+      "name": "Mark of the Novice"
+    },
+    {
+      "entity": "Item_MastersLegacy",
+      "id": 2488,
+      "name": "Master's Legacy"
+    },
+    {
+      "entity": "Item_MightyBlade",
+      "id": 2278,
+      "name": "Mighty Blade"
+    },
+    {
+      "entity": "Item_MinorTotem",
+      "id": 2279,
+      "name": "Minor Totem"
+    },
+    {
+      "entity": "Item_MockOfBrilliance",
+      "id": 2490,
+      "name": "Mock of Brilliance"
+    },
+    {
+      "entity": "Item_MonsterHunter",
+      "id": 2280,
+      "name": "Monster Hunter"
+    },
+    {
+      "entity": "Item_MysticVestments",
+      "id": 2284,
+      "name": "Mystic Vestments"
+    },
+    {
+      "entity": "Item_NeophytesBook",
+      "id": 2285,
+      "name": "Neophyte's Book"
+    },
+    {
+      "entity": "Item_NihilCrystal",
+      "id": 2286,
+      "name": "Nihil Crystal"
+    },
+    {
+      "entity": "Item_NomesWisdom",
+      "id": 2492,
+      "name": "Nome's Wisdom"
+    },
+    {
+      "entity": "Item_NullStone",
+      "id": 2497,
+      "name": "Null Stone"
+    },
+    {
+      "entity": "Item_NullfireBlade",
+      "id": 2495,
+      "name": "Nullfire Blade"
+    },
+    {
+      "entity": "Item_OblivionHammer",
+      "id": 2499,
+      "name": "Oblivion Hammer"
+    },
+    {
+      "entity": "Item_ObsidianBell",
+      "id": 3623,
+      "name": "Obsidian Bell"
+    },
+    {
+      "entity": "Item_ObsidianSpear",
+      "id": 3486,
+      "name": "Obsidian Spear\\n^vTier II^*"
+    },
+    {
+      "entity": "Item_OpheliasPact",
+      "id": 2289,
+      "name": "Ophelia's Pact"
+    },
+    {
+      "entity": "Item_PegasusBoots",
+      "id": 2510,
+      "name": "Pegasus Boots"
+    },
+    {
+      "entity": "Item_PerpetualCogwheel",
+      "id": 2293,
+      "name": "Perpetual Cogwheel"
+    },
+    {
+      "entity": "Item_PhantasmalTreads",
+      "id": 3624,
+      "name": "Phantasmal Treads"
+    },
+    {
+      "entity": "Item_PhoenixEgg",
+      "id": 2295,
+      "name": "Phoenix Egg"
+    },
+    {
+      "entity": "Item_Phoenix_ItemToken",
+      "id": 3495,
+      "name": "Phoenix Item Token"
+    },
+    {
+      "entity": "Item_PhoenixTalon",
+      "id": 3488,
+      "name": "Phoenix's Talon\\n^vTier IV^*"
+    },
+    {
+      "entity": "Item_PhoenixVeil",
+      "id": 3491,
+      "name": "Phoenix's Veil\\n^vTier I^*"
+    },
+    {
+      "entity": "Item_PickledBrain",
+      "id": 2298,
+      "name": "Pickled Brain"
+    },
+    {
+      "entity": "Item_PlatedGreaves",
+      "id": 2512,
+      "name": "Plated Greaves"
+    },
+    {
+      "entity": "Item_Platemail",
+      "id": 2299,
+      "name": "Platemail"
+    },
+    {
+      "entity": "Item_PortalKey",
+      "id": 2300,
+      "name": "Portal Key"
+    },
+    {
+      "entity": "Item_PostHaste",
+      "id": 2520,
+      "name": "Post Haste"
+    },
+    {
+      "entity": "Item_PowerSupply",
+      "id": 2528,
+      "name": "Power Supply"
+    },
+    {
+      "entity": "Item_PretendersCrown",
+      "id": 2301,
+      "name": "Pretender's Crown"
+    },
+    {
+      "entity": "Item_ProtectiveTalisman",
+      "id": 2530,
+      "name": "Protective Talisman"
+    },
+    {
+      "entity": "Item_PsionicHood",
+      "id": 3626,
+      "name": "Psionic Hood"
+    },
+    {
+      "entity": "Item_Punchdagger",
+      "id": 2302,
+      "name": "Punchdagger"
+    },
+    {
+      "entity": "Item_Puzzlebox",
+      "id": 2531,
+      "name": "Puzzlebox"
+    },
+    {
+      "entity": "Item_Quickblade",
+      "id": 2303,
+      "name": "Quickblade"
+    },
+    {
+      "entity": "Item_Raven",
+      "id": 3296,
+      "name": "Raven"
+    },
+    {
+      "entity": "Item_RefreshingOrnament",
+      "id": 2541,
+      "name": "Refreshing Ornament"
+    },
+    {
+      "entity": "Item_RestorationStone",
+      "id": 2543,
+      "name": "Restoration Stone"
+    },
+    {
+      "entity": "Item_Riftshards",
+      "id": 2544,
+      "name": "Riftshards"
+    },
+    {
+      "entity": "Item_RingOfSorcery",
+      "id": 2545,
+      "name": "Ring of Sorcery"
+    },
+    {
+      "entity": "Item_RingOfTheTeacher",
+      "id": 2546,
+      "name": "Ring of the Teacher"
+    },
+    {
+      "entity": "Item_Ringmail",
+      "id": 2304,
+      "name": "Ringmail"
+    },
+    {
+      "entity": "Item_RunedCleaver",
+      "id": 3085,
+      "name": "Runed Cleaver"
+    },
+    {
+      "entity": "Item_SacrificialStone",
+      "id": 2549,
+      "name": "Sacrificial Stone"
+    },
+    {
+      "entity": "Item_SandScepter",
+      "id": 2550,
+      "name": "Sand Scepter"
+    },
+    {
+      "entity": "Item_SavageMace",
+      "id": 2554,
+      "name": "Savage Mace"
+    },
+    {
+      "entity": "Item_Scarab",
+      "id": 2305,
+      "name": "Scarab"
+    },
+    {
+      "entity": "Item_Searinglight",
+      "id": 2555,
+      "name": "Searing Light"
+    },
+    {
+      "entity": "Item_ShadowMist",
+      "id": 2307,
+      "name": "Shadow Mist"
+    },
+    {
+      "entity": "Item_ShamansHeaddress",
+      "id": 2557,
+      "name": "Shaman's Headdress"
+    },
+    {
+      "entity": "Item_ShieldOfHonor",
+      "id": 3492,
+      "name": "Shield of Honor\\n^vTier I^*"
+    },
+    {
+      "entity": "Item_ShieldOfTheFive",
+      "id": 2561,
+      "name": "Shield of the Five"
+    },
+    {
+      "entity": "Item_Shieldbreaker",
+      "id": 2558,
+      "name": "Shieldbreaker"
+    },
+    {
+      "entity": "Item_ShrunkenHead",
+      "id": 2564,
+      "name": "Shrunken Head"
+    },
+    {
+      "entity": "Item_SinnersInscription",
+      "id": 3395,
+      "name": "Sinner's Inscription"
+    },
+    {
+      "entity": "Item_Slayer",
+      "id": 2309,
+      "name": "Slayer"
+    },
+    {
+      "entity": "Item_SnakeBracelet",
+      "id": 2310,
+      "name": "Snake Bracelet"
+    },
+    {
+      "entity": "Item_SolsBulwark",
+      "id": 2566,
+      "name": "Sol's Bulwark"
+    },
+    {
+      "entity": "Item_SorceryBoots",
+      "id": 2569,
+      "name": "Sorcery Boots"
+    },
+    {
+      "entity": "Item_SoulscreamRing",
+      "id": 2572,
+      "name": "Soulscream Ring"
+    },
+    {
+      "entity": "Item_Soultrap",
+      "id": 2573,
+      "name": "Soultrap"
+    },
+    {
+      "entity": "Item_SpellSunder",
+      "id": 2578,
+      "name": "Spell Sunder"
+    },
+    {
+      "entity": "Item_SpellShards",
+      "id": 2577,
+      "name": "Spellshards"
+    },
+    {
+      "entity": "Item_SpikedBola",
+      "id": 2582,
+      "name": "Spiked Bola"
+    },
+    {
+      "entity": "Item_StaffOfTheMaster",
+      "id": 2586,
+      "name": "Staff of the Master"
+    },
+    {
+      "entity": "Item_StarscribeBoots",
+      "id": 2587,
+      "name": "Starscribe Boots"
+    },
+    {
+      "entity": "Item_Steamboots",
+      "id": 2590,
+      "name": "Steamboots"
+    },
+    {
+      "entity": "Item_Steamstaff",
+      "id": 2311,
+      "name": "Steamstaff"
+    },
+    {
+      "entity": "Item_StormLance",
+      "id": 3627,
+      "name": "Storm Lance"
+    },
+    {
+      "entity": "Item_Stormspirit",
+      "id": 2592,
+      "name": "Stormspirit"
+    },
+    {
+      "entity": "Item_Striders",
+      "id": 2596,
+      "name": "Striders"
+    },
+    {
+      "entity": "Item_Sustainer",
+      "id": 2599,
+      "name": "Sustainer"
+    },
+    {
+      "entity": "Item_SwordOfTheHigh",
+      "id": 2312,
+      "name": "Sword of the High"
+    },
+    {
+      "entity": "Item_SymbolOfRage",
+      "id": 2600,
+      "name": "Symbol of Rage"
+    },
+    {
+      "entity": "Item_TabletOfCommand",
+      "id": 2605,
+      "name": "Tablet of Command"
+    },
+    {
+      "entity": "Item_TeleportationStone",
+      "id": 3297,
+      "name": "Teleportation Stone"
+    },
+    {
+      "entity": "Item_TeleportationStone_MidWars",
+      "id": 3527,
+      "name": "Teleportation Stone"
+    },
+    {
+      "entity": "Item_TemporalBeads",
+      "id": 3628,
+      "name": "Temporal Beads"
+    },
+    {
+      "entity": "Item_Thunderclaw",
+      "id": 2609,
+      "name": "Thunderclaw"
+    },
+    {
+      "entity": "Item_TokenOfLife",
+      "id": 2313,
+      "name": "Token of Life"
+    },
+    {
+      "entity": "Item_TokenOfSight",
+      "id": 2316,
+      "name": "Token of Sight"
+    },
+    {
+      "entity": "Item_TokenOfStealth",
+      "id": 2320,
+      "name": "Token of Stealth"
+    },
+    {
+      "entity": "Item_TomeOfElements",
+      "id": 2322,
+      "name": "Tome of Elements"
+    },
+    {
+      "entity": "Item_TowerTinkerer",
+      "id": 3305,
+      "name": "Tower Tinkerer"
+    },
+    {
+      "entity": "Item_ToxinClaws",
+      "id": 2323,
+      "name": "Toxin Claws"
+    },
+    {
+      "entity": "Item_TrinketOfRestoration",
+      "id": 2325,
+      "name": "Trinket of Restoration"
+    },
+    {
+      "entity": "Item_TwinBlades",
+      "id": 2610,
+      "name": "Twin Blades"
+    },
+    {
+      "entity": "Item_TwinTikiMask",
+      "id": 3494,
+      "name": "Twin Tiki Mask\\n^vTier IV^*"
+    },
+    {
+      "entity": "Item_UltorsHeavyPlate",
+      "id": 2614,
+      "name": "Ultor's Heavy Helm"
+    },
+    {
+      "entity": "Item_VeiledRot",
+      "id": 2327,
+      "name": "Veiled Rot"
+    },
+    {
+      "entity": "Item_VoidTalisman",
+      "id": 2617,
+      "name": "Void Talisman"
+    },
+    {
+      "entity": "Item_Voltstone",
+      "id": 2331,
+      "name": "Voltstone"
+    },
+    {
+      "entity": "Item_WardOfRevelation",
+      "id": 2333,
+      "name": "Ward of Revelation"
+    },
+    {
+      "entity": "Item_WardOfSight",
+      "id": 2337,
+      "name": "Ward of Sight"
+    },
+    {
+      "entity": "Item_Warhammer",
+      "id": 2340,
+      "name": "Warhammer"
+    },
+    {
+      "entity": "Item_Warpcleft",
+      "id": 2341,
+      "name": "Warpcleft"
+    },
+    {
+      "entity": "Item_WarsteamBoots",
+      "id": 3629,
+      "name": "Warsteam Boots"
+    },
+    {
+      "entity": "Item_WhisperingHelm",
+      "id": 2619,
+      "name": "Whispering Helm"
+    },
+    {
+      "entity": "Item_WindWhistle",
+      "id": 2342,
+      "name": "Wind Whistle"
+    },
+    {
+      "entity": "Item_Wingbow",
+      "id": 2623,
+      "name": "Wingbow"
+    }
+  ],
+  "official_api": {
+    "heroes": {
+      "count": 106,
+      "sha256": "3e30f03524ddf69af0b9410511034b48fcadb5368c8132b23a58aa7e509c9238",
+      "source": "cache",
+      "url": "https://gamedata.juvio.com/entities/heroes"
+    },
+    "items": {
+      "count": 210,
+      "sha256": "600022d214f642e911075d96ca2f28b42927dbf29be12275c993106926f27c7e",
+      "source": "cache",
+      "url": "https://gamedata.juvio.com/entities/items"
+    }
+  },
+  "schema_version": 1,
+  "upstream": {
+    "path": "%LOCALAPPDATA%\\Juvio\\heroes of newerth\\resources0.jz",
+    "sha256": "eec2d8bc50200874e8aa368b980d1d67b45f637ffad4fb39030c4749c324af76",
+    "source": "cache"
+  }
+}

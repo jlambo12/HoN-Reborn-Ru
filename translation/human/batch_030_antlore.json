@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_030_ANTLORE",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Antlore1_name"],
+      "ru": "Heal"
+    },
+    {
+      "keys": ["entities:Ability_Antlore1_description"],
+      "ru": "Немного восстанавливает здоровье союзному юниту."
+    },
+    {
+      "keys": ["entities:Ability_Antlore1_description_simple"],
+      "ru": "Выберите союзника, чтобы восстановить ему ^o15 здоровья^*."
+    },
+    {
+      "keys": ["entities:Ability_Antlore1_IMPACT_effect"],
+      "ru": "Восстанавливает выбранному юниту 15 здоровья."
+    },
+    {
+      "keys": ["entities:Ability_Antlore3_name"],
+      "ru": "Auto-Heal (Heroes)"
+    },
+    {
+      "keys": ["entities:Ability_Antlore3_description_simple"],
+      "ru": "Во включённом состоянии автоматически применяет Heal к союзному герою в области, которому недостаёт больше всего здоровья."
+    },
+    {
+      "keys": ["entities:Ability_Antlore3_IMPACT_effect"],
+      "ru": "Исцеляет героя в области, которому недостаёт больше всего здоровья."
+    },
+    {
+      "keys": ["entities:Ability_Antlore4_name"],
+      "ru": "Auto-Heal (All Units)"
+    },
+    {
+      "keys": ["entities:Ability_Antlore4_description"],
+      "ru": "Из всех союзных юнитов рядом с Antlore Healer автоматически исцеляет того, кому недостаёт больше всего здоровья."
+    },
+    {
+      "keys": ["entities:Ability_Antlore4_description_simple"],
+      "ru": "Во включённом состоянии автоматически применяет Heal к союзнику в области, которому недостаёт больше всего здоровья."
+    },
+    {
+      "keys": ["entities:Ability_Antlore4_IMPACT_effect"],
+      "ru": "Исцеляет юнита в области, которому недостаёт больше всего здоровья."
+    }
+  ]
+}

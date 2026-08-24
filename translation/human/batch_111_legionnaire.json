@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_111_LEGIONNAIRE",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Legionnaire1_description"],
+      "ru": "Legionnaire насмехается над ближайшими противниками, вынуждая их несколько секунд атаковать его. Готовясь принять удары, он значительно повышает свою броню на время действия."
+    },
+    {
+      "keys": ["entities:Ability_Legionnaire1_description_simple"],
+      "ru": "Применяет ^oTaunt^* к ближайшим противникам, получает ^o{8,12,16,20} брони^* и ^oвынуждает их атаковать вас^* в течение ^o{2,2.4,2.8,3.2} секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_Legionnaire1_effect_header"],
+      "ru": "Эффекты Taunting"
+    },
+    {
+      "keys": ["entities:Ability_Legionnaire1_IMPACT_effect"],
+      "ru": "^oВынуждает противников^* в радиусе атаковать вас в течение ^o{2,2.4,2.8,3.2} секунды^*. Накладывает на себя ^oTaunting^* на ^o{2,2.4,2.8,3.2} секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_Legionnaire1_tooltip_flavor"],
+      "ru": "ХА-ХА, ВЫ ВСЕ НИЧТОЖЕСТВА!"
+    },
+    {
+      "keys": ["entities:State_Legionnaire_Ability1_name"],
+      "ru": "Taunting"
+    },
+    {
+      "keys": ["entities:State_Legionnaire_Ability1_Enemy_name"],
+      "ru": "Mocking Call"
+    },
+    {
+      "keys": ["entities:State_Legionnaire_Ability1_Enemy_description"],
+      "ru": "Вынужден атаковать Legionnaire."
+    },
+    {
+      "keys": ["entities:Ability_Legionnaire2_description"],
+      "ru": "Legionnaire стремительно бросается к выбранному противнику и, достигнув его, делает широкий взмах могучим топором. Удар наносит урон и накладывает Terrify на всех, кому не повезло оказаться рядом. Под действием Terrify противники атакуют намного быстрее, но каждая атака наносит меньше урона."
+    },
+    {
+      "keys": ["entities:Ability_Legionnaire2_description_simple"],
+      "ru": "Бросается к вражескому существу, получая ^o{100,200,300,400} дополнительной скорости передвижения^* и ^o{0,2,4,6} брони и магической брони^*. Достигнув цели, наносит противникам в конусе ^o{150,200,250,300}% от базового урона^* и на ^o{4,5,6,7} секунд^* изменяет их урон от атаки на ^o-50%^*, а скорость атаки — на ^o50%^*."
+    },
+    {
+      "keys": ["entities:Ability_Legionnaire2_effect_header"],
+      "ru": "Эффекты Terrify"
+    },
+    {
+      "keys": ["entities:Ability_Legionnaire2_IMPACT_effect"],
+      "ru": "^oБросается^* к выбранному существу. Во время рывка получает ^o{100,200,300,400} скорости передвижения^*, Unitwalking и ^o{0,2,4,6} брони и магической брони^*, а также даёт обзор цели в радиусе 600 днём и ночью и накладывает на неё Revealed. Рывок прерывается при получении другого приказа, эффектов Stunned, Immobilized или Restrained либо если расстояние до цели превышает 1750 единиц.\\n\\nДостигнув цели, наносит противникам в конусе 110 градусов радиусом 240 ^o{150,200,250,300}% от базового урона в виде физического урона^* и накладывает ^oTerrify^* на ^o{4,5,6,7} секунд^*.\\n\\nУсиление сохраняется ещё 1 секунду после успешного рывка."
+    },
+    {
+      "keys": ["entities:Ability_Legionnaire2_tooltip_flavor"],
+      "ru": "Дам тебе фору... БЕГИ!"
+    },
+    {
+      "keys": ["entities:State_Legionnaire_Ability2_Terrify_name"],
+      "ru": "Terrify"
+    },
+    {
+      "keys": ["entities:State_Legionnaire_Ability2_Terrify_FRAME_effect"],
+      "ru": "-50% урона от атаки\\n+50% скорости атаки"
+    },
+    {
+      "keys": ["entities:Ability_Legionnaire3_description"],
+      "ru": "Мастерство Legionnaire в обращении с боевым топором не знает равных. При каждой полученной атаке он с небольшой вероятностью выполняет приём Whirling Blade, нанося урон всем ближайшим противникам."
+    },
+    {
+      "keys": ["entities:Ability_Legionnaire3_description_simple"],
+      "ru": "При получении ^oатаки^* накапливает ^oзаряд на 5 секунд^*. Каждый заряд даёт ^o9% шанса^* совершить круговой взмах топором и нанести ближайшим противникам ^o{120,150,185,215} физического урона^*.\\n\\nЕсли после 9 атак взмах ни разу не сработал, он происходит автоматически."
+    },
+    {
+      "keys": ["entities:Ability_Legionnaire3_effect_header", "entities:Ability_Legionnaire4_effect_header"],
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:Ability_Legionnaire3_ATTACKED_PRE_IMPACT_effect"],
+      "ru": "За каждый заряд даёт ^o9% шанса^* при получении атаки нанести противникам в радиусе 300 ^o{120,150,185,215} физического урона^*. Каждая атака даёт один заряд; при получении 9-го заряда взмах происходит автоматически.\\n\\nЗаряды сбрасываются после взмаха или если вы не получали атак в течение 5 секунд."
+    },
+    {
+      "keys": ["entities:Ability_Legionnaire3_IMPACT_effect"],
+      "ru": "При активации отключает Whirling Blade."
+    },
+    {
+      "keys": ["entities:Ability_Legionnaire3_IMPACT_effect:legionnaire_E_inactive"],
+      "ru": "При активации включает Whirling Blade."
+    },
+    {
+      "keys": ["entities:Ability_Legionnaire3_tooltip_flavor"],
+      "ru": "Мой топор и я поставим дьявола на колени!"
+    },
+    {
+      "keys": ["entities:Ability_Legionnaire4_description"],
+      "ru": "Legionnaire наносит могучий удар боевым топором, пытаясь обезглавить противника. Если у цели мало здоровья, атака мгновенно убивает её."
+    },
+    {
+      "keys": ["entities:Ability_Legionnaire4_description2"],
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff:^* успешное применение Decapitate, убившее героя, мгновенно сбрасывает перезарядку всех способностей."
+    },
+    {
+      "keys": ["entities:Ability_Legionnaire4_description_simple"],
+      "ru": "Пытается ^oприменить Decapitate^* к раненому противнику и ^oмгновенно убивает^* его, если у цели меньше ^o{300,450,600} здоровья^*.\\n\\nВ противном случае наносит ^o{150,250,350} магического урона^*.\\n\\n^gStaff of the Master^* теперь мгновенно ^oсбрасывает перезарядку всех способностей^* после ^oуспешного применения Decapitate^* к герою."
+    },
+    {
+      "keys": ["entities:Ability_Legionnaire4_IMPACT_effect", "entities:Ability_Legionnaire4_IMPACT_effect:hellbourne"],
+      "ru": "^oМгновенно убивает^* выбранное существо, если у него меньше ^o{300,450,600} здоровья^*. В противном случае наносит цели ^o{150,250,350} магического урона^*."
+    },
+    {
+      "keys": ["entities:Ability_Legionnaire4_tooltip_flavor"],
+      "ru": "Ночь приносит дурные сны — дурные сны и гильотины!"
+    },
+    {
+      "keys": ["entities:Ability_Legionnaire4_description_simple:ult_boost"],
+      "ru": "Пытается ^oприменить Decapitate^* к раненому противнику, ^oмгновенно убивает^* его при запасе здоровья ниже ^o{300,450,600}^* и ^gсбрасывает перезарядку ваших способностей^*.\\n\\nВ противном случае наносит ^o{150,250,350} магического урона^*."
+    },
+    {
+      "keys": ["entities:Ability_Legionnaire4_IMPACT_effect:ult_boost"],
+      "ru": "^oМгновенно убивает^* выбранное существо, если у него меньше ^o{300,450,600} здоровья^*, и ^gсбрасывает перезарядку всех способностей, если погиб герой^*. В противном случае наносит цели ^o{150,250,350} магического урона^*."
+    },
+    {
+      "keys": ["entities:Hero_Legionnaire_description"],
+      "ru": "Legionnaires, давшие имя самому Legion, несут на поле боя несокрушимую мощь. Огромными боевыми топорами эти воины сеют резню среди врагов и прорубают кровавые просеки в их рядах. Даже демоны, рождённые из самого страха, способны ужаснуться этим героям Legion."
+    },
+    {
+      "keys": ["entities:Hero_Legionnaire_role"],
+      "ru": "Legionnaire с самого начала матча может стоять на линии или зачищать лес. Taunt заставляет противников атаковать его и тем самым активирует Whirling Blade. Врагов с малым запасом здоровья можно мгновенно убить с помощью Decapitate, а Portal Key значительно улучшает возможность начинать сражения."
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_Legionnaire_1"],
+      "ru": "Купите Portal Key! Он необходим для начала боя и отступления."
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_Legionnaire_2"],
+      "ru": "Нажмите ПКМ на вражеском герое, чтобы его крипы начали атаковать вас и активировали Whirling Blade."
+    },
+    {
+      "keys": ["interface:hero_tip_defensive_tip_Hero_Legionnaire_1"],
+      "ru": "Держитесь на безопасном расстоянии от союзников, чтобы не попасть под мощный Taunt. Поддерживайте высокий запас здоровья, чтобы избежать Decapitate."
+    },
+    {
+      "keys": ["interface:hero_tip_defensive_tip_Hero_Legionnaire_2"],
+      "ru": "Не подходите к союзным крипам, когда Legionnaire пытается атаковать вас: они лишь заставят Whirling Blade срабатывать чаще и приблизят вашу смерть."
+    }
+  ]
+}

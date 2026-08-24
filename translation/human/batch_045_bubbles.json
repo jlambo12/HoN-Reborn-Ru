@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_045_BUBBLES",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_Bubbles1_name"], "ru": "Shell Surf"},
+    {"keys": ["entities:Ability_Bubbles1_description"], "ru": "Bubbles направляет заклинание телепортации через свой панцирь. Тот скользит навстречу противникам и ранит всех на пути, а Bubbles может в любой момент перенестись к нему."},
+    {"keys": ["entities:Ability_Bubbles1_description_simple"], "ru": "Запускает панцирь в выбранном направлении, нанося задетым противникам ^o{70,140,210,280} магического урона^*. Примените способность повторно, чтобы ^oтелепортироваться^* к панцирю. Во время полёта он даёт ^oобзор^*, который ^oненадолго сохраняется^* после его исчезновения."},
+    {"keys": ["entities:Ability_Bubbles1_description_simple:Bubblesorb"], "ru": "Телепортироваться в текущее местоположение панциря."},
+    {"keys": ["entities:Ability_Bubbles1_IMPACT_effect:Bubblesorb"], "ru": "Телепортирует Bubbles в текущее местоположение запущенного панциря."},
+    {"keys": ["entities:Ability_Bubbles1_description2", "entities:Ability_Bubbles1_effect_header", "entities:Ability_Bubbles1_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_Bubbles1_tooltip_flavor"], "ru": "Вот бы он был красным."},
+
+    {"keys": ["entities:Ability_Bubbles2_name"], "ru": "Song of the Sea"},
+    {"keys": ["entities:Ability_Bubbles2_description"], "ru": "Bubbles извлекает из раковины оглушительную ноту, которая наносит урон и накладывает Безмолвие на всех противников поблизости."},
+    {"keys": ["entities:Ability_Bubbles2_description_simple"], "ru": "Извлекает из раковины оглушительную ноту, которая наносит окружающим противникам ^o{100,160,220,280} магического урона^* и ^oнакладывает Безмолвие на {1.5,2,2.5,3} секунды^*."},
+    {"keys": ["entities:Ability_Bubbles2_IMPACT_effect"], "ru": "Наносит всем противникам поблизости ^o{100,160,220,280} магического урона^* и ^oнакладывает Безмолвие^* на ^o{1.5,2,2.5,3} секунды^*."},
+    {"keys": ["entities:Ability_Bubbles2_effect_header"], "ru": "Эффекты Безмолвия"},
+    {"keys": ["entities:Ability_Bubbles2_description2", "entities:Ability_Bubbles2_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_Bubbles2_tooltip_flavor"], "ru": "Возьми на заметку."},
+
+    {"keys": ["entities:Ability_Bubbles3_name"], "ru": "Take Cover"},
+    {"keys": ["entities:Ability_Bubbles3_description"], "ru": "Bubbles прячется в зачарованном панцире и становится неуязвимым для любых атак — как магических, так и обычных."},
+    {"keys": ["entities:Ability_Bubbles3_description_simple"], "ru": "Прячется в зачарованном панцире и становится ^oнеуязвимым на {1,1.5,2,2.5} секунды^*. Это ^oподдерживаемая способность^*: передвижение или атака прервут её.\\n\\n^cДля способности можно включить автоприменение.^*"},
+    {"keys": ["entities:Ability_Bubbles3_description2"], "ru": "^cДля способности можно включить автоприменение.^*"},
+    {"keys": ["entities:Ability_Bubbles3_IMPACT_effect"], "ru": "На всё время поддержания даёт ^oнеуязвимость^* к любому урону."},
+    {"keys": ["entities:Ability_Bubbles3_CHANNEL_START_effect", "entities:Ability_Bubbles3_effect_header", "entities:Ability_Bubbles3_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_Bubbles3_tooltip_flavor"], "ru": "В окопах черепах не бывает."},
+
+    {"keys": ["entities:Ability_Bubbles4_name"], "ru": "Kelp Field"},
+    {"keys": ["entities:Ability_Bubbles4_name:ult_boost"], "ru": "^gKelp Zone*^*"},
+    {"keys": ["entities:Ability_Bubbles4_description"], "ru": "Из земли вырастают магические водоросли и цепляются за вражеских героев. Побег бесполезен: натянувшиеся водоросли рвутся, оглушая пленника и нанося ему урон."},
+    {"keys": ["entities:Ability_Bubbles4_description_simple"], "ru": "В выбранной области вырастают водоросли, которые цепляются за вражеских героев, наносят им ^o{100,150,200} магического урона^* и ^oоглушают на {0.5} секунды^*.\\n\\nЕсли в течение 5 секунд поражённый противник отойдёт слишком далеко, он получит ^o{100,150,200} магического урона^* и будет ^oоглушён на {1.5,2.25,3} секунды^*.\\n\\n^gStaff of the Master:^* сокращает перезарядку до ^o60 секунд^*. При удалении более чем на 600 единиц от Kelp Field урон и оглушение становятся ^oвысшими магическими^*, а урон при разрыве увеличивается до ^o{200,300,400}^*."},
+    {"keys": ["entities:Ability_Bubbles4_description_simple:ult_boost"], "ru": "В выбранной области вырастают водоросли, которые цепляются за вражеских героев, наносят им ^o{100,150,200} магического урона^* и ^oоглушают на {0.5} секунды^*.\\n\\nЕсли в течение 5 секунд поражённый противник отойдёт слишком далеко, он получит ^o{200,300,400}^* ^gвысшего^* ^oмагического урона^* и будет ^gвысшей магией^* ^oоглушён на {1.5,2.25,3} секунды^*."},
+    {"keys": ["entities:Ability_Bubbles4_description2"], "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* сокращает перезарядку до 60 секунд. При удалении более чем на 600 единиц от Kelp Field урон и оглушение становятся ^oвысшими магическими^*, а урон при разрыве удваивается."},
+    {"keys": ["entities:Ability_Bubbles4_description2:ult_boost"], "ru": "\\r"},
+    {"keys": ["entities:Ability_Bubbles4_IMPACT_effect"], "ru": "Наносит целям в области ^o{100,150,200} магического урона^*, ^oоглушает^* их на 0.5 секунды и на 5 секунд ^oопутывает водорослями^*. Если за это время противник отойдёт более чем на 600 единиц от центра области, он получит ^o{100,150,200} магического урона^* и будет ^oоглушён на {1.5,2.25,3} секунды^*.\\n\\nВодоросли могут прикрепиться к невосприимчивым к магии юнитам, но если цель была невосприимчива к магии в момент применения, урон и оглушение не сработают."},
+    {"keys": ["entities:Ability_Bubbles4_IMPACT_effect:ult_boost"], "ru": "Наносит целям в области ^o{100,150,200} магического урона^*, ^oоглушает^* их на 0.5 секунды и на 5 секунд ^oопутывает водорослями^*. Если за это время противник отойдёт более чем на 600 единиц от центра области, он получит ^g{200,300,400} высшего магического урона^* и будет ^gвысшей магией^* ^oоглушён на {1.5,2.25,3} секунды^*.\\n\\nВодоросли могут прикрепиться к невосприимчивым к магии юнитам."},
+    {"keys": ["entities:Ability_Bubbles4_effect_header", "entities:Ability_Bubbles4_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_Bubbles4_tooltip_flavor"], "ru": "Смотри под ноги!"}
+  ]
+}

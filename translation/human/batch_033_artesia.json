@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_033_ARTESIA",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Artesia1_name"],
+      "ru": "Arcane Missile"
+    },
+    {
+      "keys": ["entities:Ability_Artesia1_name:artesia_Mode2"],
+      "ru": "Arcane Missile (Healing)"
+    },
+    {
+      "keys": ["entities:Ability_Artesia1_description", "entities:Ability_Artesia2_description", "entities:Ability_Artesia3_description", "entities:Ability_Artesia4_description"],
+      "ru": ""
+    },
+    {
+      "keys": ["entities:Ability_Artesia1_description_simple"],
+      "ru": "Выберите точку, чтобы выпустить огонёк, который удаляется от места появления не более чем на 1200 единиц и способен слегка корректировать траекторию.\\n\\nПри соприкосновении наносит ^o{125,150,175,200} магического урона^* и в небольшой области ^oзамедляет скорость передвижения на 15%^* на 3 секунды."
+    },
+    {
+      "keys": ["entities:Ability_Artesia1_description_simple:artesia_Mode2"],
+      "ru": "Выберите точку, чтобы выпустить огонёк, который удаляется от места появления не более чем на 1200 единиц и способен слегка корректировать траекторию.\\n\\nПри соприкосновении ^oвосстанавливает {40,50,65,80} здоровья^* и в небольшой области ^oповышает скорость передвижения на 15%^* на 3 секунды."
+    },
+    {
+      "keys": ["entities:Ability_Artesia1_IMPACT_effect"],
+      "ru": "Выберите точку, чтобы выпустить огонёк, который удаляется от места появления не более чем на 1200 единиц. В радиусе 650 он наводится на ближайшего вражеского героя и может пролететь ещё до 400 единиц. При попадании наносит ^o{125,150,175,200} магического урона^* и в радиусе 200 ^oзамедляет скорость передвижения на 15%^* на 3 секунды.\\n\\nВокруг огонька действует беспрепятственный обзор радиусом 280. После попадания обзор сохраняется 1 секунду."
+    },
+    {
+      "keys": ["entities:Ability_Artesia1_IMPACT_effect:artesia_Mode2"],
+      "ru": "Выберите точку, чтобы выпустить огонёк, который удаляется от места появления не более чем на 1200 единиц. В радиусе 650 он наводится на ближайшего союзного героя и может пролететь ещё до 400 единиц. При попадании ^oвосстанавливает {40,50,65,80} здоровья^* и в радиусе 200 ^oповышает скорость передвижения на 15%^* на 3 секунды.\\n\\nВокруг огонька действует беспрепятственный обзор радиусом 280. После попадания обзор сохраняется 1 секунду."
+    },
+    {
+      "keys": ["entities:Ability_Artesia1_tooltip_flavor"],
+      "ru": "Лети вместе с ветром!"
+    },
+    {
+      "keys": ["entities:Ability_Artesia2_name"],
+      "ru": "Dance of Death"
+    },
+    {
+      "keys": ["entities:Ability_Artesia2_description_simple"],
+      "ru": "Активируйте, чтобы поддерживать способность до ^o{4.5,6,7.5,9} секунд^*. В это время вы создаёте и выпускаете ^494Arcane Bolts^* каждые ^o{.4,.35,.3,.25} секунды^*, можете выпускать ^494Arcane Missiles^* сквозь крипов с удвоенной скоростью, проходить сквозь юнитов и получаете беспрепятственный обзор радиусом 800.\\n\\nПрименение способностей и предметов, а также движение не прерывают поддержание."
+    },
+    {
+      "keys": ["entities:Ability_Artesia2_IMPACT_effect", "entities:Ability_Artesia2_IMPACT_effect:artesia_Dance", "entities:Ability_Artesia2_IMPACT_effect:artesia_ability2_NoResponse"],
+      "ru": "Поддерживайте способность до ^o{4.5,6,7.5,9} секунд^*, чтобы получить беспрепятственный обзор радиусом 800, прохождение сквозь юнитов и возможность двигаться, не прерывая поддержание.\\n\\nВо время Dance of Death вы создаёте и выпускаете ^494Arcane Bolts^* каждые ^o{.4,.35,.3,.25} секунды^* и можете выпускать ^494Arcane Missiles^* сквозь крипов с удвоенной скоростью.\\n\\nПрименение способностей и предметов не прерывает поддержание, но оглушение или Silence прервут его. Повторная активация также прекращает действие.\\n\\nПерезарядка начинается после окончания поддержания."
+    },
+    {
+      "keys": ["entities:Ability_Artesia2_tooltip_flavor"],
+      "ru": "Не дотронешься..."
+    },
+    {
+      "keys": ["entities:Ability_Artesia3_name"],
+      "ru": "Arcane Bolts"
+    },
+    {
+      "keys": ["entities:Ability_Artesia3_name:artesia_Mode2"],
+      "ru": "Arcane Bolts (Healing)"
+    },
+    {
+      "keys": ["entities:Ability_Artesia3_description_simple"],
+      "ru": "При применении способности выпускает {0,4} Arcane Bolts, которые ищут случайных вражеских героев в радиусе 800 и наносят каждому ^o{0,15,20,25,30} магического урона^*.\\n\\n^oАктивируйте^*, чтобы перейти в ^292режим лечения^*. В режиме лечения Arcane Missile и Arcane Bolts исцеляют союзников вместо нанесения урона противникам. Перезарядка и расход маны ^494Arcane Missile^* также сокращаются вдвое."
+    },
+    {
+      "keys": ["entities:Ability_Artesia3_description_simple:artesia_Mode2"],
+      "ru": "При применении способности выпускает {0,4} Arcane Bolts, которые ищут случайных союзных героев в радиусе 800 и ^oвосстанавливают каждому {0,9,12,15,18} здоровья^*.\\n\\nОдин Arcane Bolt выпускается каждые 0.4 секунды.\\n\\n^oАктивируйте^*, чтобы перейти в ^922режим урона^*. В режиме урона Arcane Missile и Arcane Bolts наносят урон противникам вместо лечения союзников."
+    },
+    {
+      "keys": ["entities:Ability_Artesia3_ABILITY_IMPACT_effect"],
+      "ru": "При применении способности выпускает {0,4} Arcane Bolts, которые ищут случайных вражеских героев в радиусе 800 и наносят каждому ^o{0,15,20,25,30} магического урона^*.\\n\\nОдин Arcane Bolt выпускается каждые 0.4 секунды."
+    },
+    {
+      "keys": ["entities:Ability_Artesia3_IMPACT_effect"],
+      "ru": "^oАктивируйте^*, чтобы перейти в ^292режим лечения^*. В режиме лечения Arcane Missile и Arcane Bolts исцеляют союзников вместо нанесения урона противникам. Перезарядка и расход маны ^494Arcane Missile^* также сокращаются вдвое."
+    },
+    {
+      "keys": ["entities:Ability_Artesia3_ABILITY_IMPACT_effect:artesia_Mode2"],
+      "ru": "При применении способности выпускает {0,4} Arcane Bolts, которые ищут случайных союзных героев в радиусе 800 и ^oвосстанавливают каждому {0,9,12,15,18} здоровья^*.\\n\\nОдин Arcane Bolt выпускается каждые 0.4 секунды."
+    },
+    {
+      "keys": ["entities:Ability_Artesia3_IMPACT_effect:artesia_Mode2"],
+      "ru": "^oАктивируйте^*, чтобы перейти в ^922режим урона^*. В режиме урона Arcane Missile и Arcane Bolts наносят урон противникам вместо лечения союзников."
+    },
+    {
+      "keys": ["entities:Ability_Artesia3_tooltip_flavor"],
+      "ru": "Наконец-то свободна!"
+    },
+    {
+      "keys": ["entities:Ability_Artesia4_name"],
+      "ru": "Essence Projection"
+    },
+    {
+      "keys": ["entities:Ability_Artesia4_name:ult_boost"],
+      "ru": "^gArcane Projection*^*"
+    },
+    {
+      "keys": ["entities:Ability_Artesia4_name:Artesia_ult_active"],
+      "ru": "Essence Shift"
+    },
+    {
+      "keys": ["entities:Ability_Artesia4_name:Artesia_ult_active_sotm"],
+      "ru": "^gEssence Shift*^*"
+    },
+    {
+      "keys": ["entities:Ability_Artesia4_description2"],
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* дальность применения становится глобальной, перезарядка сокращается до 60 секунд, а перезарядка перемещения — до 4 секунд (+2 секунды слишком близко к вражескому Well)."
+    },
+    {
+      "keys": ["entities:Ability_Artesia4_description2:ult_boost"],
+      "ru": "\\r"
+    },
+    {
+      "keys": ["entities:Ability_Artesia4_description_simple"],
+      "ru": "Выберите точку, чтобы призвать Projection на ^o20 секунд^*. В режиме лечения она восстанавливает ближайшим союзным героям ^o{20,30,40} здоровья^* в секунду, а в режиме урона — ^oманы^*.\\n\\nКроме того, Projection повторяет ваши применения ^494Arcane Missile^* и получает заряды ^494Arcane Bolts^* вместе с вами.\\n\\nProjection ^oможно перемещать^* с перезарядкой 8 секунд.\\n\\n^gStaff of the Master^* делает дальность применения глобальной, сокращает перезарядку до 60 секунд, а перезарядку перемещения — до 4 секунд (+2 секунды слишком близко к вражескому Well)."
+    },
+    {
+      "keys": ["entities:Ability_Artesia4_description_simple:ult_boost"],
+      "ru": "Выберите точку, чтобы призвать Projection на ^o20 секунд^*.\\n\\nВ режиме лечения она восстанавливает ближайшим союзным героям ^o{20,30,40} здоровья^* в секунду, а в режиме урона — ^oманы^*.\\n\\nКроме того, Projection повторяет ваши применения ^494Arcane Missile^* и получает заряды ^494Arcane Bolts^* вместе с вами.\\n\\nProjection погибает после ^o{3,4,5} атак по ней^*.\\n\\nProjection ^oможно перемещать^* с перезарядкой ^g4^* секунды (+2 секунды слишком близко к вражескому Well)."
+    },
+    {
+      "keys": ["entities:Ability_Artesia4_description_simple:Artesia_ult_active", "entities:Ability_Artesia4_description_simple:Artesia_ult_active_sotm"],
+      "ru": "Выберите точку, чтобы переместить Projection, если она не получала урон последние 3 секунды.\\n\\nВ режиме лечения Projection восстанавливает ближайшим союзным героям ^o{20,30,40} здоровья^* в секунду, а в режиме урона — ^oманы^*.\\n\\nКроме того, Projection повторяет ваши применения ^494Arcane Missile^* и получает заряды ^494Arcane Bolts^* вместе с вами.\\n\\nProjection погибает после ^o{3,4,5} атак по ней^*."
+    },
+    {
+      "keys": ["entities:Ability_Artesia4_IMPACT_effect"],
+      "ru": "Выберите точку, чтобы призвать Projection на ^o20 секунд^*.\\n\\nВ режиме лечения Projection восстанавливает ближайшим союзным героям ^o{20,30,40} здоровья^* в секунду, а в режиме урона — ^oманы^*. Также даёт беспрепятственный обзор радиусом 800.\\n\\nКроме того, Projection повторяет ваши применения ^494Arcane Missile^* и получает заряды ^494Arcane Bolts^* вместе с вами.\\n\\n^oEssence Projection наносит 100% вашего урона.^* Projection погибает после ^o{3,4,5} атак по ней^*.\\n\\nПока Projection существует, её ^oможно перемещать^* с перезарядкой 8 секунд."
+    },
+    {
+      "keys": ["entities:Ability_Artesia4_IMPACT_effect:ult_boost"],
+      "ru": "Выберите точку, чтобы призвать Projection на ^o20 секунд^*.\\n\\nВ режиме лечения Projection восстанавливает ближайшим союзным героям ^o{20,30,40} здоровья^* в секунду, а в режиме урона — ^oманы^*. Также даёт беспрепятственный обзор радиусом 800.\\n\\nКроме того, Projection повторяет ваши применения ^494Arcane Missile^* и получает заряды ^494Arcane Bolts^* вместе с вами.\\n\\n^oEssence Projection наносит 100% вашего урона.^* Projection погибает после ^o{3,4,5} атак по ней^*.\\n\\nПока Projection существует, её ^oможно перемещать^* с перезарядкой ^g4^* секунды (+2 секунды слишком близко к вражескому Well)."
+    },
+    {
+      "keys": ["entities:Ability_Artesia4_IMPACT_effect:Artesia_ult_active", "entities:Ability_Artesia4_IMPACT_effect:Artesia_ult_active_sotm"],
+      "ru": "Выберите точку, чтобы переместить Projection, если она не получала урон последние 3 секунды.\\n\\nВ режиме лечения Projection восстанавливает ближайшим союзным героям ^o{20,30,40} здоровья^* в секунду, а в режиме урона — ^oманы^*. Также даёт беспрепятственный обзор радиусом 800.\\n\\nКроме того, Projection повторяет ваши применения ^494Arcane Missile^* и получает заряды ^494Arcane Bolts^* вместе с вами.\\n\\n^oEssence Projection наносит 100% вашего урона.^* Projection погибает после ^o{3,4,5} атак по ней^*."
+    },
+    {
+      "keys": ["entities:Ability_Artesia4_tooltip_flavor"],
+      "ru": "Тише шёпота."
+    }
+  ]
+}

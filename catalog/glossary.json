@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "scope": "Phase 2A controlled terminology for the first Russian user vertical",
+  "categories": {
+    "technical_locked": [
+      {"english": "MMR", "russian": "MMR", "status": "APPROVED_KEEP_EN"},
+      {"english": "KDA", "russian": "KDA", "status": "APPROVED_KEEP_EN"},
+      {"english": "GPM", "russian": "GPM", "status": "APPROVED_KEEP_EN"},
+      {"english": "XPM", "russian": "XPM", "status": "APPROVED_KEEP_EN"},
+      {"english": "FPS", "russian": "FPS", "status": "APPROVED_KEEP_EN"}
+    ],
+    "gameplay_terms": [
+      {"english": "Health", "russian": "здоровье", "status": "REVIEW_STARTER"},
+      {"english": "Mana", "russian": "мана", "status": "REVIEW_STARTER"},
+      {"english": "Armor", "russian": "броня", "status": "REVIEW_STARTER"},
+      {"english": "Cooldown", "russian": "перезарядка", "status": "REVIEW_STARTER"}
+    ],
+    "damage_types": [
+      {"english": "Physical Damage", "russian": "физический урон", "status": "REVIEW_STARTER"},
+      {"english": "Magic Damage", "russian": "магический урон", "status": "REVIEW_STARTER"}
+    ],
+    "status_effects": [
+      {"english": "Silenced", "russian": "обезмолвлен", "status": "REVIEW_STARTER"},
+      {"english": "Stunned", "russian": "оглушён", "status": "REVIEW_STARTER"},
+      {"english": "Disarmed", "russian": "обезоружен", "status": "REVIEW_STARTER"}
+    ],
+    "UI_terms": [
+      {"english": "Apply", "russian": "Применить", "status": "APPROVED"},
+      {"english": "Cancel", "russian": "Отмена", "status": "APPROVED"},
+      {"english": "Graphics", "russian": "Графика", "status": "APPROVED"},
+      {"english": "Controls", "russian": "Управление", "status": "APPROVED"},
+      {"english": "Loadout", "russian": "Комплект", "status": "APPROVED"},
+      {"english": "Stash", "russian": "Тайник", "status": "APPROVED"}
+    ],
+    "attributes": [],
+    "stats": [],
+    "matchmaking": [
+      {"english": "Matchmaking", "russian": "поиск матча", "status": "APPROVED"},
+      {"english": "Queue", "russian": "очередь", "status": "APPROVED"}
+    ],
+    "social": [],
+    "store": [],
+    "replay": [],
+    "controls": [
+      {"english": "Ward", "russian": "Вард", "status": "APPROVED"},
+      {"english": "Lane", "russian": "Линия", "status": "APPROVED"},
+      {"english": "Courier", "russian": "курьер", "status": "APPROVED"}
+    ]
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_198_ITEMS_SHORT_GROUP_D",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Item_StormLance_description"],
+      "english_hash": "63af2062fbbd39f05b1d02e788296507d0e2dd63757cf1e950978e99176671e4",
+      "ru": "За каждые пройденные 12.5 единицы вы получаете 1 заряд, вплоть до 100. Если у ^oStorm Lance^* есть хотя бы 50 зарядов, ваша ^oследующая атака по вражескому юниту^* расходует все заряды и наносит 0.4 дополнительного физического урона за каждый заряд, вплоть до ^o40 дополнительного физического урона^*."
+    },
+    {
+      "keys": ["entities:Item_StormLance_description_simple"],
+      "english_hash": "93878cfb293fc1ccd37dee3d1e56632d1877caa426ebf513e032189c53de9eb0",
+      "ru": "Передвижение увеличивает урон вашей первой атаки."
+    },
+    {
+      "keys": ["entities:Item_Striders_description2"],
+      "english_hash": "2d0afb6d7d784ceacc74c459a54cb823262332d4b28efbd1256e17caab61c73d",
+      "ru": "Этот предмет даёт пассивный бонус к ^yскорости передвижения^*, который не складывается сам с собой или с другими сапогами."
+    },
+    {
+      "keys": ["entities:Item_Striders_description_simple"],
+      "english_hash": "c52e3cdb04e84554587aeea04f833b035dc98bd7eaaf89d1b9a87f1ecb3cf167",
+      "ru": "^oМодификатор передвижения^*\\n55 скорости передвижения. Дополнительная скорость и восстановление вне боя."
+    },
+    {
+      "keys": ["entities:Item_Sustainer_description_simple"],
+      "english_hash": "934dc4ab4d13b9c64207195de0401d939a1ecf40e7390a1b96082292e2379c20",
+      "ru": "5 здоровья в секунду\\n125% восстановления маны\\n"
+    },
+    {
+      "keys": ["entities:Item_SwordOfTheHigh_description_simple"],
+      "english_hash": "8909121bb9220d1115b2524ed2d48c55385d804fabafed081a2d56b6ac587258",
+      "ru": "64 урона"
+    },
+    {
+      "keys": ["entities:Item_TabletOfCommand_IMPACT_effect"],
+      "english_hash": "955462b710755a4c69342f62bc9b84e3065f358b40f4a7ce44cd0d360f3935f3",
+      "ru": "^oТолкает выбранного^* подконтрольного игроку юнита на 500 единиц ^oв направлении его взгляда^*. Прерывает поддерживаемые способности.\\n\\nНельзя применить к обездвиженным или удерживаемым целям. Во время перемещения уничтожает деревья в радиусе 100 от цели."
+    },
+    {
+      "keys": ["entities:Item_TabletOfCommand_description_simple"],
+      "english_hash": "63320a3d3ed54ccd58fe23d27c92c8934ccabb2bcfbc193b0aa63690b03f2c44",
+      "ru": "Примените к подконтрольному игроку юниту, чтобы толкнуть его в направлении взгляда. Прерывает поддерживаемые способности."
+    },
+    {
+      "keys": ["entities:Item_TemporalBeads_description"],
+      "english_hash": "210590b42c95bb85104495ad12854c710191e4f3f209a366f4bbb35ea2b316cc",
+      "ru": "Этот предмет содержит ^yмодификатор сокращения перезарядки способностей^*, который не складывается."
+    },
+    {
+      "keys": ["entities:Item_TemporalBeads_description_simple"],
+      "english_hash": "c217f67003444a3b09eec476008ab2295935518c8bdce932ef728f161715ee9b",
+      "ru": "Сокращение перезарядки"
+    },
+    {
+      "keys": ["entities:Item_TrinketOfRestoration_description_simple"],
+      "english_hash": "828ba5448fca45100f77874b0f0c02e128c461c026e3d38b9d5f17e12d43db85",
+      "ru": "2 восстановления здоровья"
+    },
+    {
+      "keys": ["entities:Item_TwinBlades_description"],
+      "english_hash": "c20f5c7374c0c81731d684ddad86df0ad97bfbc6844c3b1137d4886f3fd0dd52",
+      "ru": "Когда предмет не перезаряжается, он пассивно вызывает ^oдополнительную атаку^*, которая наносит 80% урона и ^oснижает скорость передвижения на 100%^* на 0.7 секунды.\\n\\nКаждая атака сокращает перезарядку на ^o0.5 секунды^*.\\n\\nРаботает только у героев ^gближнего боя^*."
+    },
+    {
+      "keys": ["entities:Item_TwinBlades_description_simple"],
+      "english_hash": "01b561155d4a294b4a55ec6866aa4af1ed44dd58f87f10729b921f1fb1bb7f8b",
+      "ru": "Даёт дополнительную атаку."
+    },
+    {
+      "keys": ["entities:Item_TwinTikiMask_FRAME_effect"],
+      "english_hash": "592b0bae49bfd8b65fd79d080ac108e32c5c2c34f2b7087c3603b6ddc7619bf6",
+      "ru": "\\n^oВ выключенном состоянии^*: вы наносите и получаете на 15% меньше урона из всех источников (10% для героев дальнего боя).\\n\\n^oВо включённом состоянии^*: вы наносите и получаете на 15% больше урона из всех источников (10% для героев дальнего боя)."
+    },
+    {
+      "keys": ["entities:Item_Warhammer_description_simple"],
+      "english_hash": "c8e9b65b8428cb373d530ec921f6ed653d423089a14e575ddca8b92fb61eb6dc",
+      "ru": "24 урона"
+    },
+    {
+      "keys": ["entities:Item_Warpcleft_description_simple"],
+      "english_hash": "db3fa8c1b0573322c7fbea6f27450962abdac475be3ec2ba664a9b6afcbb0dca",
+      "ru": "^09945 скорости атаки^*"
+    },
+    {
+      "keys": ["entities:Item_TwinTikiMask_description"],
+      "english_hash": "2e629a6a49bced6062c96616472ffe671f183581c030bfe5f7a08ca6909e5563",
+      "ru": "Реликвия, опалённая и явленная миру смертью вечной ^rFirebird^*."
+    },
+    {
+      "keys": ["entities:Item_Sustainer_effect_header", "entities:Item_SwordOfTheHigh_effect_header", "entities:Item_TrinketOfRestoration_effect_header", "entities:Item_Warhammer_effect_header", "entities:Item_Warpcleft_effect_header"],
+      "english_hash": "6e5e7bc5e96f838352cde0fcff351520eab9cd6b12ecb43e9b30ed6fd98f6777",
+      "ru": "Эффекты состояния"
+    }
+  ]
+}

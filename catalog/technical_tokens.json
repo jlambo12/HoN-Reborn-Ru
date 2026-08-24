@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "policy": "Exact whole-token classification; surrounding user-facing UI remains translatable.",
+  "stat_abbreviations": ["MMR", "KDA", "K/D/A", "KD", "GPM", "XPM", "DPM", "CS", "HP", "MP", "MS", "CD"],
+  "technical_abbreviations": ["FPS", "CPU", "GPU", "RAM", "API", "UI", "VFX", "SFX", "VOICE", "ANIMS", "ICONS"],
+  "region_codes": ["EU", "USE", "USW", "SEA", "BR", "TH", "AU", "NA", "RU", "CIS", "LATAM"],
+  "currency_codes": ["USD", "EUR", "RUB", "THB", "GBP", "AUD", "BRL"],
+  "keycaps": ["Ctrl", "Alt", "Shift", "Tab", "Enter", "Esc", "Space", "Backspace", "Home", "End", "Insert", "Delete", "Mouse1", "Mouse2", "Mouse3"],
+  "keycap_patterns": ["^F(?:[1-9]|1[0-2])$", "^Num[0-9]+$", "^Mouse[0-9]+$"]
+}

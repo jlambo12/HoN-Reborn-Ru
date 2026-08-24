@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_190_REVENANT_COMPLETION",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Revenant1_IMPACT_effect", "entities:Ability_Revenant1_IMPACT_effect:Revenant_Ability4_1", "entities:Ability_Revenant1_IMPACT_effect:Revenant_Ability4_1boost", "entities:Ability_Revenant1_IMPACT_effect:Revenant_Ability4_2", "entities:Ability_Revenant1_IMPACT_effect:Revenant_Ability4_2boost", "entities:Ability_Revenant1_IMPACT_effect:Revenant_Ability4_3", "entities:Ability_Revenant1_IMPACT_effect:Revenant_Ability4_3boost"],
+      "english_hash": "2637e3b316cbbed64733a6337fe4bf6e60f6926c4b432e8386cd6ac2c003e946",
+      "ru": "Следующие 2 атаки цели наносят дополнительно {50,80,110,140} магического урона.\\n\\nЗадетые противники также получают суммируемое замедление передвижения на 20% на 4 секунды.\\n\\nУсиление действует 5 секунд на каждую атаку."
+    },
+    {
+      "keys": ["entities:Ability_Revenant1_description"],
+      "english_hash": "98512ec5f9f8f034a82ddab87ceb3ec8036cf5e8c49a92f97788873df463799c",
+      "ru": "Зачаровывает следующие две атаки цели, добавляя им урон и замедление."
+    },
+    {
+      "keys": ["entities:Ability_Revenant1_description_simple"],
+      "english_hash": "03a6c7061cd4c0c69bde32532800fc548832a25602d2766adae2d48bb3d2dbd3",
+      "ru": "Выберите себя или союзника, чтобы следующие 2 атаки наносили дополнительно ^o{50,80,110,140} магического урона^*. Задетые противники также получают ^oсуммируемое замедление передвижения на 20% на 4 секунды^*.\\n\\nУсиление действует 5 секунд на каждую атаку."
+    },
+    {
+      "keys": ["entities:Ability_Revenant2_IMPACT_effect", "entities:Ability_Revenant2_IMPACT_effect:Revenant_Ability4_1", "entities:Ability_Revenant2_IMPACT_effect:Revenant_Ability4_1boost", "entities:Ability_Revenant2_IMPACT_effect:Revenant_Ability4_2", "entities:Ability_Revenant2_IMPACT_effect:Revenant_Ability4_2boost", "entities:Ability_Revenant2_IMPACT_effect:Revenant_Ability4_3", "entities:Ability_Revenant2_IMPACT_effect:Revenant_Ability4_3boost", "entities:Ability_Revenant2_description_simple"],
+      "english_hash": "d1aca3d635ce5c8288e5c95a16d1ecdc0197ca2124c4bcb990625fed0134027f",
+      "ru": "Выберите юнита, чтобы в течение 6 секунд наносить противникам в радиусе 300 ^o{15,25,35,45} магического урона в секунду^*.\\n\\nЗадетые противники получают ^o-{1,2,3,4} магической брони^*."
+    },
+    {
+      "keys": ["entities:Ability_Revenant2_description"],
+      "english_hash": "7ecc668e0d59af0ce4f94516abbbe3fd5f80363d2d1c150bbea773e3e5d97086",
+      "ru": "Прикрепляет к выбранному противнику или союзнику область периодического урона."
+    },
+    {
+      "keys": ["entities:Ability_Revenant3_IMPACT_effect", "entities:Ability_Revenant3_IMPACT_effect:Revenant_Ability4_1", "entities:Ability_Revenant3_IMPACT_effect:Revenant_Ability4_1boost", "entities:Ability_Revenant3_IMPACT_effect:Revenant_Ability4_2", "entities:Ability_Revenant3_IMPACT_effect:Revenant_Ability4_2boost", "entities:Ability_Revenant3_IMPACT_effect:Revenant_Ability4_3", "entities:Ability_Revenant3_IMPACT_effect:Revenant_Ability4_3boost"],
+      "english_hash": "2a23852bcaa379fad20b8b3f257642fde5897ac2f02da22339ed51e9a37d4b2c",
+      "ru": "Даёт цели невидимость на {12,15,18,21} секунды с задержкой исчезновения 1 секунду.\\n\\nПервая атака из невидимости снижает броню атакованной цели на {1,2,3,4}. Снижение брони суммируется."
+    },
+    {
+      "keys": ["entities:Ability_Revenant3_description"],
+      "english_hash": "8b79aebcc367143012608ed08b963c563139b708f005923c9bb0aa419638fd26",
+      "ru": "Окутывает сущность цели покровом, давая ей невидимость на время действия."
+    },
+    {
+      "keys": ["entities:Ability_Revenant3_description_simple"],
+      "english_hash": "c3846dc36b11a1ab405d7c7038d33490c30e86f563ebb9f0d1379a5f9d5e32f3",
+      "ru": "Выберите себя или союзника, чтобы дать ^oневидимость на {12,15,18,21} секунды^* с задержкой исчезновения 1 секунду.\\n\\nАтака из этой невидимости ^oснижает броню атакованной цели на {1,2,3,4}^*."
+    },
+    {
+      "keys": ["entities:Ability_Revenant4_FRAME_effect"],
+      "english_hash": "cc2aa729d9143bcf98fc606e1ab9270e4ccaa2c80b2711c940da0eabbd75c442",
+      "ru": "На 1-м уровне Manifestation: Essence Shroud увеличивает скорость передвижения на 18%.\\n\\nНа 2-м уровне Manifestation: Defile увеличивает скорость атаки на 120.\\n\\nНа 3-м уровне Manifestation: Mortification снижает получаемое исцеление, вампиризм и восстановление на 33%.\\n\\nПод действием Essence Shroud можно применять все способности, копируя их ещё на {0,1,2} подходящие цели в радиусе."
+    },
+    {
+      "keys": ["entities:Ability_Revenant4_FRAME_effect:ult_boost"],
+      "english_hash": "ff9e61428c165da1030cea14b600ef8128f24d1ef1b1a612a20d588c2e3a4880",
+      "ru": "^gНа 1-м уровне Manifestation^*: Essence Shroud увеличивает скорость передвижения на 18%, а Defile — скорость атаки на 120.\\n\\n^gНа 2-м уровне Manifestation^*: Mortification снижает получаемое исцеление, вампиризм и восстановление на 33%.\\n\\nПод действием Essence Shroud можно применять все способности, копируя их ещё на {1,2,4} подходящие цели в радиусе."
+    },
+    {
+      "keys": ["entities:Ability_Revenant4_description"],
+      "english_hash": "01deb90195d0b2bfc4d274e0f3550c8e577febfd5e28f761495a89036b393170",
+      "ru": "Пассивно изменяет применение способностей Revenant. Эту способность можно изучать и улучшать на уровнях 4, 8 и 12."
+    },
+    {
+      "keys": ["entities:Ability_Revenant4_description2"],
+      "english_hash": "2baf5a7bae33b2978f9efae6aeab9c01b222e7487bdc994f5ca5539cd22af6e2",
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff:^* повышает уровень на один. На 4-м уровне Manifestation все способности применяются к числу целей в радиусе до 5."
+    },
+    {
+      "keys": ["entities:Ability_Revenant4_description_simple"],
+      "english_hash": "996f08618351e3612e0e88724389f227dd0b26dc8e821eb3a6cb8485a674cccf",
+      "ru": "Теперь под действием ^oEssence Shroud^* можно применять все способности; с повышением уровня Manifestation они ^oулучшаются^*:\\n• ^cУровень 1^* — Essence Shroud увеличивает скорость передвижения на 18%.\\n• ^cУровень 2^* — Defile увеличивает скорость атаки на 120.\\n• ^cУровень 3^* — Mortification снижает получаемое исцеление, вампиризм и восстановление на 33%.\\n\\n^oКопирует способности^* ещё на ^o{0,1,2}^* подходящие цели в радиусе.\\n\\nСпособность можно ^oулучшать на уровнях 4, 8 и 12^*.\\n\\n^gStaff of the Master^*: повышает уровень способности на один, вплоть до 4-го.\\nНа 4-м уровне ^oManifestation^* способности копируются ещё на 4 подходящие цели в радиусе."
+    },
+    {
+      "keys": ["entities:Ability_Revenant4_description_simple:ult_boost"],
+      "english_hash": "e7fccef49749bbaffe9585790629d40ea485e536e6e84e93d4a435fd9e77a477",
+      "ru": "Теперь под действием ^oEssence Shroud^* можно применять все способности; с повышением уровня Manifestation они ^oулучшаются^*:\\n• ^cУровень 1^* — Essence Shroud увеличивает скорость передвижения на 18%, ^gа Defile — скорость атаки на 120^*.\\n• ^cУровень 2^* — ^gMortification снижает получаемое исцеление, вампиризм и восстановление на 33%^*.\\n\\n^oКопирует способности^* ещё на ^g{1,2,4}^* подходящие цели в радиусе.\\n\\nСпособность можно ^oулучшать на уровнях 4, 8 и 12^*."
+    },
+    {
+      "keys": ["entities:State_Revenant_Ability1_description"],
+      "english_hash": "7b5d8c7f1c8d30ed1c0107d7b5afbc9085af4d336c0d803f9c44df57a3add438",
+      "ru": "Следующая атака наносит дополнительно {50,80,110,140} магического урона и замедляет."
+    },
+    {
+      "keys": ["entities:State_Revenant_Ability2_Boosted_description"],
+      "english_hash": "1ca95cd7a0f7439f9c66e2283d5b18537e1dbd29b73323161d8bd112ce29ecb0",
+      "ru": "Наносит {15,25,35,45} магического урона в секунду в радиусе 300\\nПолучаемое противниками в радиусе исцеление, вампиризм и восстановление снижены на 33%."
+    },
+    {
+      "keys": ["entities:State_Revenant_Ability2_Debuff_Aura_2_description", "entities:State_Revenant_Ability2_Debuff_Aura_2_description_simple", "entities:State_Revenant_Ability2_Debuff_Aura_FRAME_effect", "entities:State_Revenant_Ability2_Debuff_Aura_description", "entities:State_Revenant_Ability2_Debuff_Aura_description_simple"],
+      "english_hash": "5d56d331326d98471ada12ccf9a5681f4e520d285d468ba8b21b289f28fe8711",
+      "ru": "Получает {15,25,35,45} магического урона в секунду"
+    },
+    {
+      "keys": ["entities:State_Revenant_Ability2_Debuff_Aura_Boosted_FRAME_effect", "entities:State_Revenant_Ability2_Debuff_Aura_Boosted_description", "entities:State_Revenant_Ability2_Debuff_Aura_Boosted_description_simple"],
+      "english_hash": "05fac16fdeeeb2cf14e9e3897496b7068b2dbac3ef54ccef92944eab1244ea46",
+      "ru": "Получает {15,25,35,45} магического урона в секунду. Получаемое исцеление, вампиризм и восстановление снижены на 33%."
+    },
+    {
+      "keys": ["entities:State_Revenant_Ability2_Debuff_description", "entities:State_Revenant_Ability2_description"],
+      "english_hash": "4f345ae211c6c6d791fd17e53859ab9e9d77625b8f7f6a22975bd4c30bd1f4da",
+      "ru": "Наносит {15,25,35,45} магического урона в секунду в радиусе 300."
+    },
+    {
+      "keys": ["entities:State_Revenant_Ability3_Armor_description"],
+      "english_hash": "751ae8bbe70cb3ab46be7ad9eb46cf8c8cecf1290f17be5965d2cbfec7beaedb",
+      "ru": "Броня снижена"
+    },
+    {
+      "keys": ["entities:State_Revenant_Ability3_description"],
+      "english_hash": "b85518e53811d738cdf51c835a83927bd13f473956d9a301b874cb8681dc6b91",
+      "ru": "Невидимость. Следующая атака снизит броню противника на {1,2,3,4}"
+    }
+  ]
+}

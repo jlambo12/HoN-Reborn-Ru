@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_180_VOODOO_JESTER_COMPLETION",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_VoodooJester1_IMPACT_effect"],
+      "english_hash": "a06971fa89e63066e90f8f21255a9d53763ddcde8fd2d1febac22d9b4febf0e5",
+      "ru": "При попадании в героя сначала оглушает его на 1.5 секунды, а при каждом следующем отскоке — на 1 секунду. Наносит героям {50} магического урона.\\n\\nПри попадании в крипа наносит {75,100,125,150} магического урона и оглушает на 5 секунд.\\n\\nОтскакивает {2,4,6,8} раз."
+    },
+    {
+      "keys": ["entities:Ability_VoodooJester1_description"],
+      "english_hash": "9702300b478d9d7e12a8cbe2c2c29b851a9f9ebcbc0fb8a95f507a1a2cc7135b",
+      "ru": "Voodoo Jester бросает во врага мерзкую смесь проклятых химикатов, которая поочерёдно оглушает его и находящихся рядом юнитов."
+    },
+    {
+      "keys": ["entities:Ability_VoodooJester1_description_simple"],
+      "english_hash": "e418fc33841551c05fe1b978e32128d618e5235effe902c258301fe6ccaed3ae",
+      "ru": "Бросает во вражеского юнита смесь проклятых химикатов, ^oоглушая его на 1.5 секунды^*. Снаряд ^oотскакивает^* к случайным видимым противникам поблизости ^o{2,4,6,8} раз^*, нанося ^o50 магического урона^* и ^oоглушая их на 1 секунду^*.\\n\\n^oКрипы^* ^oоглушаются на 5 секунд^* и получают ^o{75,100,125,150} магического урона^*."
+    },
+    {
+      "keys": ["entities:Ability_VoodooJester1_effect_header"],
+      "english_hash": "6e5e7bc5e96f838352cde0fcff351520eab9cd6b12ecb43e9b30ed6fd98f6777",
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:Ability_VoodooJester2_IMPACT_effect"],
+      "english_hash": "8a6fedea2699192ab281853cc5d107f5611781b36331e8f52ad12d43c1e54c1f",
+      "ru": "Накладывает Good Mojo на союзника или Bad Mojo на противника на 8 секунд."
+    },
+    {
+      "keys": ["entities:Ability_VoodooJester2_description_simple"],
+      "english_hash": "5ef31b07fa332278c18c5a492d2b9abb703e177e910482d05913e8afae2d72de",
+      "ru": "Выберите ^oсоюзника, чтобы наложить Good Mojo^*, или ^oпротивника, чтобы наложить Bad Mojo^* на ^o8 секунд^*.\\n\\n^oGood Mojo^* восстанавливает цели ^o{15,25,35,45} здоровья в секунду^* (остальным союзникам в радиусе — половину).\\n\\n^oBad Mojo^* наносит цели ^o{15,25,35,45} магического урона в секунду^* (остальным противникам в радиусе — половину)."
+    },
+    {
+      "keys": ["entities:Ability_VoodooJester2_effect_header"],
+      "english_hash": "5ac2dbc61f0804908565d80112a7ea0714a36427fe28fd97220b2ad852ed8a57",
+      "ru": "Эффекты Good Mojo"
+    },
+    {
+      "keys": ["entities:Ability_VoodooJester2_effect_header2"],
+      "english_hash": "e8259b6470ed02c0083567b10ad27060d0fc86b532da93450e765d611d92dd40",
+      "ru": "Эффекты Bad Mojo"
+    },
+    {
+      "keys": ["entities:Ability_VoodooJester3_IMPACT_effect"],
+      "english_hash": "19022637631fc74d5595eb12ccc5d9de0605fd494f651c72a6e6d4fa18ecba86",
+      "ru": "Накладывает Cursed на цели в радиусе действия на 12 секунд."
+    },
+    {
+      "keys": ["entities:Ability_VoodooJester3_description"],
+      "english_hash": "252ee15da84eb8f338d9f22ff08c141f0023ed9001b4cfa585f13eb2a78b5979",
+      "ru": "Voodoo Jester проклинает землю под ногами врагов, через несколько секунд нанося им урон в зависимости от потерянного за это время здоровья."
+    },
+    {
+      "keys": ["entities:Ability_VoodooJester3_description_simple"],
+      "english_hash": "0c8d7ef2be3357f120edd2bed7c9a2e330858e1455871837ac4e4600c3b94313",
+      "ru": "Проклинает землю под ногами врагов, нанося ^o{8,12,16,20} магического урона в секунду^* в течение ^o12 секунд^*.\\n\\nКроме того, каждые ^o4 секунды^* цели под действием ^oCursed^* получают ^o{16,24,32,40}% потерянного здоровья в виде магического урона^* с момента наложения ^oCursed^*."
+    },
+    {
+      "keys": ["entities:Ability_VoodooJester3_effect_header"],
+      "english_hash": "048ae5f643988e65fad19c466fd5c82720e62e26e1f70e2a88935423ccf4e7d2",
+      "ru": "Эффекты Cursed"
+    },
+    {
+      "keys": ["entities:Ability_VoodooJester4_IMPACT_effect"],
+      "english_hash": "b1319566fd69357c20dbcfc5b300bca265b29c519e2c2b86a8372d3db1261944",
+      "ru": "Поддерживает в выбранной точке неуязвимый смертоносный Spirit Ward до 8 секунд. Он атакует ближайшего вражеского героя, нанося ^o{60,90,120} физического урона за удар^*. На 3-м уровне атаки отскакивают к дополнительной цели.\\n\\n^gStaff of the Master^* увеличивает урон Spirit Ward до ^o{90,120,150}^*, число отскоков — до ^o{0,1,2}^* дополнительных целей и убирает поддержание способности (она всё равно прекращается при оглушении, немоте или смерти)."
+    },
+    {
+      "keys": ["entities:Ability_VoodooJester4_IMPACT_effect:ult_boost"],
+      "english_hash": "b94d91aee7cdc577d13bbf9c67b390854f665a09b5930de9d8da3e03679b8f00",
+      "ru": "Поддерживает в выбранной точке неуязвимый смертоносный Spirit Ward до 8 секунд. Он атакует ближайшего вражеского героя, нанося каждой цели ^o{90,120,150} физического урона за удар^*, и отскакивает ещё к ^g{0,1,2}^* героям. ^gСпособность больше не требует поддержания, но всё равно прекращается при оглушении, немоте или смерти."
+    },
+    {
+      "keys": ["entities:Ability_VoodooJester4_description"],
+      "english_hash": "dff3f7071de039166b640af5570a02ad69a69f499da605d71de691977a987aa3",
+      "ru": "Voodoo Jester поддерживает смертоносный Spirit Ward, атакующий вражеских героев."
+    },
+    {
+      "keys": ["entities:Ability_VoodooJester4_description2"],
+      "english_hash": "701eb5653159c75bb3944321544e36c37912790a746f31a9bcd15773a004594c",
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff:^* увеличивает урон Spirit Ward с {60,90,120} до {90,120,150}, а число дополнительных целей при отскоке — с {0,0,1} до {0,1,2}. Способность больше не требует поддержания, но всё равно прекращается при оглушении, немоте или смерти."
+    },
+    {
+      "keys": ["entities:Ability_VoodooJester4_description_simple"],
+      "english_hash": "ca4602b09c335af7a2b3121942334b1e52c2c77c519a1d7bc47470d0625c715b",
+      "ru": "Поддерживает в выбранной точке неуязвимый смертоносный Spirit Ward до ^o8 секунд^*. Он атакует ближайшего вражеского героя, нанося ^o{60,90,120} физического урона за удар^*. На ^o3-м уровне^* атаки ^oотскакивают^* к дополнительной цели.\\n\\n^gStaff of the Master^* увеличивает урон Spirit Ward до ^o{90,120,150}^*, число отскоков — до ^o{0,1,2}^* дополнительных целей и убирает поддержание способности (она всё равно прекращается при оглушении, немоте или смерти)."
+    },
+    {
+      "keys": ["entities:Ability_VoodooJester4_description_simple:ult_boost"],
+      "english_hash": "90e53fdde61652c31bfe725ac06259f4a314598b798c1f9f51c71246f227181e",
+      "ru": "Поддерживает в выбранной точке неуязвимый смертоносный Spirit Ward до ^o8 секунд^*. Он атакует ближайшего вражеского героя, нанося ^g{90,120,150} физического урона за удар^*, и отскакивает ещё к ^g{0,1,2}^* героям. ^gСпособность больше не требует поддержания, но всё равно прекращается при оглушении, немоте или смерти."
+    },
+    {
+      "keys": ["entities:Ability_VoodooJester4_effect_header"],
+      "english_hash": "6e5e7bc5e96f838352cde0fcff351520eab9cd6b12ecb43e9b30ed6fd98f6777",
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:State_VoodooJester_Ability2_Buff_Aura_FRAME_effect"],
+      "english_hash": "e543d203dfad28e01c01c51e032f595ad747cb058e8cfe1e237a553b91946e4d",
+      "ru": "Восстанавливает {7.5,12.5,17.5,22.5} здоровья в секунду"
+    },
+    {
+      "keys": ["entities:State_VoodooJester_Ability2_Buff_FRAME_effect"],
+      "english_hash": "0647aaabdb1f5cda4c427a5c934e4149137aca6762c6ad51678700bbea4a4182",
+      "ru": "Восстанавливает {15,25,35,45} здоровья в секунду"
+    },
+    {
+      "keys": ["entities:State_VoodooJester_Ability2_Debuff_Aura_FRAME_effect"],
+      "english_hash": "df25bd07938ccdf5e69f1341044c884749ec6f41be8679b60463ebab39b52b96",
+      "ru": "Получает {7.5,12.5,17.5,22.5} магического урона в секунду"
+    },
+    {
+      "keys": ["entities:State_VoodooJester_Ability2_Debuff_FRAME_effect"],
+      "english_hash": "149056b7096f4210916bd3a8f66d44b410ffb8f189b64d7f592f6ba7884af888",
+      "ru": "Получает {15,25,35,45} магического урона в секунду"
+    },
+    {
+      "keys": ["entities:State_VoodooJester_Ability3_FRAME_effect"],
+      "english_hash": "5c3f897cd773ce00f642a586254a9fe4b286c45e7e783808e9cad9f75af385ab",
+      "ru": "{8,12,16,20} магического урона в секунду\\nКаждые 4 секунды наносит магический урон в размере {16,24,32,40}% всего здоровья, потерянного с момента наложения Cursed."
+    }
+  ]
+}

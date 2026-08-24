@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_138_NYMPHORA",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Nymphora1_description"],
+      "ru": "Nymphora создаёт в выбранной точке Volatile Pod, который исцеляет союзников и наносит урон врагам."
+    },
+    {
+      "keys": ["entities:Ability_Nymphora1_description_simple", "entities:Ability_Nymphora1_description_simple:fairy_Q_active", "entities:Ability_Nymphora1_IMPACT_effect", "entities:Ability_Nymphora1_IMPACT_effect:fairy_Q_active"],
+      "ru": "Создаёт в выбранной точке ^oVolatile Pod^*, который накапливает силу в течение ^o3 секунд^* и взрывается по окончании или при повторном применении, ^oнанося урон противникам^* и ^oисцеляя союзников^*.\\n\\nНаносит ^o40^* + ^o{30,50,70,90} магического урона за каждую секунду роста^* и восстанавливает союзникам столько же здоровья."
+    },
+    {
+      "keys": ["entities:Ability_Nymphora1_tooltip_flavor"],
+      "ru": "Мы с вами как горошины в одном стручке!"
+    },
+    {
+      "keys": ["entities:Ability_Nymphora2_description"],
+      "ru": "Выпускает духа, который наносит урон и оглушает противников на прямой. Каждый задетый враг получает урон и оглушение."
+    },
+    {
+      "keys": ["entities:Ability_Nymphora2_description_simple", "entities:Ability_Nymphora2_IMPACT_effect"],
+      "ru": "Выпускает духа в выбранном направлении, после чего тот возвращается к вам. При каждом касании противника дух наносит ^o{50,80,110,140} магического урона^* и ^oоглушает на {1,1.1,1.2,1.3} секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_Nymphora2_effect_header"],
+      "ru": "Эффекты Nymphora's Zeal"
+    },
+    {
+      "keys": ["entities:Ability_Nymphora2_tooltip_flavor"],
+      "ru": "Работает в обе стороны."
+    },
+    {
+      "keys": ["entities:Ability_Nymphora3_description"],
+      "ru": "Nymphora благословляет выбранного союзника своей милостью, восстанавливая ему ману и повышая скорость передвижения на 3 секунды."
+    },
+    {
+      "keys": ["entities:Ability_Nymphora3_description_simple"],
+      "ru": "Благословляет союзника, восстанавливая ему ^o{85,160,230,300} маны^* за 3 секунды и давая на это время ^o100 скорости передвижения^*.\\n\\nЭффект заканчивается при получении урона от ^oподконтрольных вражескому игроку существ^*."
+    },
+    {
+      "keys": ["entities:Ability_Nymphora3_IMPACT_effect"],
+      "ru": "Благословляет союзника. Восстанавливает ему ^o{85,160,230,300} маны^* за 3 секунды и даёт на это время ^o100 скорости передвижения^*.\\n\\nЭффект заканчивается при получении урона от ^oподконтрольного вражескому игроку существа^*."
+    },
+    {
+      "keys": ["entities:Ability_Nymphora3_tooltip_flavor"],
+      "ru": "Держи немного волшебной пыльцы!"
+    },
+    {
+      "keys": ["entities:State_Nymphora_Ability3_name"],
+      "ru": "Enchanted"
+    },
+    {
+      "keys": ["entities:State_Nymphora_Ability3_FRAME_effect"],
+      "ru": "Заканчивается при получении урона от подконтрольных игроку существ"
+    },
+    {
+      "keys": ["entities:Ability_Nymphora4_description"],
+      "ru": "Nymphora призывает силу леса и соединяется со всем живым. Благодаря этой связи она телепортируется в выбранную точку, а на высоких уровнях переносит и нескольких ближайших союзников."
+    },
+    {
+      "keys": ["entities:Ability_Nymphora4_description2"],
+      "ru": "Способность нельзя использовать ближе 2500 единиц к главному строению вражеской базы.\\n\\n^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* Сокращает время применения до 3,5 секунды, увеличивает число телепортируемых героев на 2 и радиус переноса до 600. После завершения поддержания автоматически применяет Volatile Pod, Grace of the Nymph и 4 Nymphora's Zeal в радиусе 600 от выбранной точки. Созданные таким образом Nymphora's Zeal не наносят магический урон."
+    },
+    {
+      "keys": ["entities:Ability_Nymphora4_description_simple"],
+      "ru": "Поддерживайте способность ^o5 секунд^*, чтобы телепортироваться в выбранную точку вместе с ближайшими ^o{1,2,3} союзными героями.\\n\\n^gStaff of the Master^* сокращает время применения до ^o3,5^* секунды, увеличивает число переносимых героев до ^o{3,4,5}^* и радиус телепортации, а после завершения поддержания ^oавтоматически применяет Volatile Pod, Grace of the Nymph и 4 Nymphora's Zeal (только оглушение)^* в радиусе 600 от выбранной точки."
+    },
+    {
+      "keys": ["entities:Ability_Nymphora4_effect_header"],
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:Ability_Nymphora4_IMPACT_effect"],
+      "ru": "После завершения поддержания телепортирует героя и {1,2,3} ближайших союзных героев в радиусе в выбранную точку.\\n\\nСпособность нельзя использовать ближе 2500 единиц к главному строению вражеской базы."
+    },
+    {
+      "keys": ["entities:Ability_Nymphora4_IMPACT_effect:ult_boost"],
+      "ru": "После завершения поддержания вы и ^o{3,4,5} ближайших союзных героев телепортируетесь^* в выбранную точку. ^gВ радиусе 600 от неё применяются Volatile Pod, Grace of the Nymph и 4 Nymphora's Zeal. Созданные таким образом Nymphora's Zeal не наносят магический урон.^*\\n\\nСпособность нельзя использовать ближе 2500 единиц к главному строению вражеской базы."
+    },
+    {
+      "keys": ["entities:Ability_Nymphora4_description_simple:ult_boost"],
+      "ru": "Поддерживайте способность ^g3,5^* ^oсекунды^*, чтобы телепортироваться в выбранную точку вместе с ближайшими ^g{3,4,5}^*. ^oПосле прибытия^* ^gв радиусе 600 применяются Volatile Pod, Grace of the Nymph и 4 Nymphora's Zeal (только оглушение)^*."
+    },
+    {
+      "keys": ["entities:Ability_Nymphora4_tooltip_flavor"],
+      "ru": "Каждый раз, когда умирает крип, фея получает крылья!"
+    },
+    {
+      "keys": ["entities:State_Nymphora_Ability4_name"],
+      "ru": "Being Teleported!"
+    },
+    {
+      "keys": ["entities:Hero_Nymphora_description"],
+      "ru": "Nymphora издавна оберегает тайные красоты Newerth — укромные поляны и хрустальные родники. Кажется, воплощению бабочек и жаворонков нет места в жестокой бойне, охватившей мир, но достаточно увидеть крошечные клыки, которые Revealed её улыбкой, чтобы понять: у неё есть собственные опасные секреты."
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_Nymphora_1"],
+      "ru": "Используйте Volatile Pod и Grace of the Nymph, чтобы поддерживать здоровье и ману себе и союзникам. Если противники не могут прервать способность, Teleport поможет вырваться из окружения."
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_Nymphora_2"],
+      "ru": "Грамотно размещайте Wards of Sight, чтобы безопасно устраивать засады с помощью Teleport."
+    },
+    {
+      "keys": ["interface:hero_tip_defensive_tip_Hero_Nymphora_1"],
+      "ru": "Следите за картой, чтобы Nymphora и её союзники не застали вас врасплох с помощью Teleport."
+    },
+    {
+      "keys": ["interface:hero_tip_defensive_tip_Hero_Nymphora_2"],
+      "ru": "Быстро убивайте Nymphora, чтобы она не поддерживала силы союзников с помощью Volatile Pod и Grace of the Nymph."
+    }
+  ]
+}

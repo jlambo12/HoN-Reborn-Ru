@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_092_GUNBLADE",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_Gunblade1_name"], "ru": "Crippling Slugs"},
+    {"keys": ["entities:Ability_Gunblade1_description"], "ru": "Делает три последовательных выстрела в выбранном направлении, нанося противникам урон и замедляя их."},
+    {"keys": ["entities:Ability_Gunblade1_description2", "entities:Ability_Gunblade1_effect_header", "entities:Ability_Gunblade1_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_Gunblade1_description_simple"], "ru": "Выпускает 3 ^oCrippling Slugs^* конусом в выбранном направлении. Поражённые противники получают ^o{90,150,210,270} физического урона^*, а их ^oскорость передвижения снижается на {15,20,25,30}%^*."},
+    {"keys": ["entities:Ability_Gunblade1_tooltip_flavor"], "ru": "Как покалечить слизней? Солевой винтовкой."},
+    {"keys": ["entities:Ability_Gunblade1_IMPACT_effect"], "ru": "Выпускает три Slugs конусом в выбранном направлении. Каждый Slug наносит {90,150,210,270} физического урона и снижает скорость передвижения на {15,20,25,30}% на 3 секунды."},
+
+    {"keys": ["entities:Ability_Gunblade2_name"], "ru": "Demonic Shield"},
+    {"keys": ["entities:Ability_Gunblade2_description"], "ru": "Временно окружает Gunblade щитом, который поглощает урон и, пока действует, повышает скорость передвижения."},
+    {"keys": ["entities:Ability_Gunblade2_description2", "entities:Ability_Gunblade2_effect_header", "entities:Ability_Gunblade2_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_Gunblade2_description_simple"], "ru": "Создаёт ^oDemonic Shield^*, который поглощает урон в размере ^o{60,100,140,180} + ({0.75,1,1.25,1.5} × ловкость)^*.\\n\\nЩит действует {8,9,10,11} секунд и даёт ^o{20,40,60,80} к скорости передвижения^*. ^oНа 4-м уровне способность можно активировать, даже если Gunblade оглушён или находится под Безмолвием.^*"},
+    {"keys": ["entities:Ability_Gunblade2_tooltip_flavor"], "ru": "Вот бы эти пушки ещё и стреляли в ответ..."},
+    {"keys": ["entities:Ability_Gunblade2_IMPACT_effect"], "ru": "На {8,9,10,11} секунд создаёт щит, который поглощает урон после снижения защитой в размере {60,100,140,180} + {75,100,125,150}% от ловкости Gunblade. Пока щит действует, он даёт {20,40,60,80} к скорости передвижения. ^oНа 4-м уровне способность можно активировать, даже если Gunblade оглушён или находится под Безмолвием.^*"},
+
+    {"keys": ["entities:Ability_Gunblade3_name"], "ru": "Lethal Range"},
+    {"keys": ["entities:Ability_Gunblade3_description"], "ru": "Чем ближе Gunblade к цели, тем больше дополнительного урона наносят его атаки."},
+    {"keys": ["entities:Ability_Gunblade3_description2", "entities:Ability_Gunblade3_effect_header", "entities:Ability_Gunblade3_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_Gunblade3_description_simple"], "ru": "Переключите способность, чтобы перейти в ^cрежим ближнего боя^*.\\n\\nДаёт дополнительный ^oурон от атаки^* — до ^o{20,30,40,50}% от базового урона^* в зависимости от ^oрасстояния^* до вражеского героя.\\n\\nЕсли до цели не более 200 ед., Gunblade вместо этого получает ^o+{30,45,60,75}% базового урона и True Strike^*. При атаке ^oкрипов^* ^oдополнительный урон^* снижается вдвое, а атаки считаются ^oатаками ближнего боя^*."},
+    {"keys": ["entities:Ability_Gunblade3_description_simple:gunblade_persistent_melee"], "ru": "Переключите способность, чтобы перейти в ^cрежим дальнего боя^*.\\n\\nДаёт дополнительный ^oурон от атаки^* — до ^o{20,30,40,50}% от базового урона^* в зависимости от ^oрасстояния^* до вражеского героя.\\n\\nЕсли до цели не более 200 ед., Gunblade вместо этого получает ^o+{30,45,60,75}% базового урона и True Strike^*. При атаке ^oкрипов^* ^oдополнительный урон^* снижается вдвое, а атаки считаются ^oатаками ближнего боя^*."},
+    {"keys": ["entities:Ability_Gunblade3_tooltip_flavor"], "ru": "Пожалуйста, уважайте моё личное пространство."},
+    {"keys": ["entities:Ability_Gunblade3_IMPACT_effect"], "ru": "Переключает Gunblade в ^cрежим ближнего боя^*."},
+    {"keys": ["entities:Ability_Gunblade3_IMPACT_effect:gunblade_persistent_melee"], "ru": "Переключает Gunblade в ^cобычный режим^*."},
+    {"keys": ["entities:Ability_Gunblade3_ATTACK_effect", "entities:Ability_Gunblade3_ATTACK_effect:gunblade_persistent_melee"], "ru": "Если до цели не более 200 ед., атаки Gunblade по вражеским героям получают +{30,45,60,75}% базового урона и True Strike. В этом радиусе атаки также считаются атаками ближнего боя, а против крипов бонус уменьшается вдвое.\\n\\nНа большем расстоянии атаки получают до +{20,30,40,50}% базового урона на дистанции 200 ед.; к 600 ед. бонус постепенно снижается до 0%."},
+
+    {"keys": ["entities:Ability_Gunblade4_name"], "ru": "Grappling Shot"},
+    {"keys": ["entities:Ability_Gunblade4_description"], "ru": "Притягивает Gunblade к выбранной цели!"},
+    {"keys": ["entities:Ability_Gunblade4_description2", "entities:Ability_Gunblade4_effect_header"], "ru": ""},
+    {"keys": ["entities:Ability_Gunblade4_description_simple"], "ru": "Притягивается к вражескому герою, ^oприкрепляется к нему^* и накладывает ^oRestrained^* на ^o{4,5,6} секунд^*. Наносит ^o{150,250,350} физического урона^*, ^oоглушает на 1 секунду^* и на 8 секунд снижает броню на ^o{3,5,7}^*. Притянутая цель наносит Gunblade на 25% меньше урона.\\n\\nПовторная активация досрочно разрывает сцепку.\\n\\n^gStaff of the Master:^* при достижении цели ^oнакладывает Fear на всех противников в радиусе 650 на 1,5 секунды^* и применяет к ним те же отрицательные эффекты, что и к основной цели."},
+    {"keys": ["entities:Ability_Gunblade4_tooltip_flavor"], "ru": "Пока смерть не разлучит нас."},
+    {"keys": ["entities:Ability_Gunblade4_IMPACT_effect", "entities:Ability_Gunblade4_IMPACT_effect:Gunblade_Ability4_On"], "ru": "Бросает Gunblade к выбранной цели, наносит {150,250,350} физического урона, оглушает на 1 секунду, снижает броню на {-3,-5,-7} на 6 секунд и сцепляет Gunblade с целью на {4,5,6} секунд.\\n\\nПока сцепка действует, цель тащит Gunblade за собой, но он может свободно атаковать. Цель получает Restrained, Sighted и Revealed и ^oнаносит Gunblade на 25% меньше урона^*.\\n\\nПовторная активация досрочно разрывает сцепку."},
+    {"keys": ["entities:Ability_Gunblade4_name:ult_boost"], "ru": "^gGrappling Shot^*"},
+    {"keys": ["entities:Ability_Gunblade4_description:ult_boost"], "ru": "В сцепке!"},
+    {"keys": ["entities:Ability_Gunblade4_description2:ult_boost"], "ru": "\\r"},
+    {"keys": ["entities:Ability_Gunblade4_description_simple:ult_boost"], "ru": "Притягивается к вражескому герою, ^oприкрепляется к нему^* и накладывает ^oRestrained^* на ^o{4,5,6} секунд^*. Наносит ^o{150,250,350} физического урона^*, ^oоглушает на 1 секунду^* и снижает броню на ^o{3,5,7}^*. Притянутая цель наносит Gunblade на 25% меньше урона.\\n\\n^gПротивники в радиусе 650 получают Fear на 1,5 секунды, теряют {3,5,7} брони и наносят Gunblade на 25% меньше урона.^*\\n\\nПовторная активация досрочно разрывает сцепку."},
+    {"keys": ["entities:Ability_Gunblade4_IMPACT_effect:ult_boost"], "ru": "Броня снижена!"}
+  ]
+}

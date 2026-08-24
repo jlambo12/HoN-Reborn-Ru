@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_027_ANDROMEDA",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Andromeda1_name"],
+      "ru": "Comet"
+    },
+    {
+      "keys": ["entities:Ability_Andromeda1_description"],
+      "ru": "Andromeda вырывает Comet из своего измерения и швыряет её во врага, нанося урон и оглушая цель."
+    },
+    {
+      "keys": ["entities:Ability_Andromeda1_description2", "entities:Ability_Andromeda1_effect_header2", "entities:Ability_Andromeda2_description2", "entities:Ability_Andromeda2_effect_header2", "entities:Ability_Andromeda3_effect_header2"],
+      "ru": ""
+    },
+    {
+      "keys": ["entities:Ability_Andromeda1_description_simple"],
+      "ru": "Швыряет во врага комету из вашего измерения, наносит ^o{100,175,250,325} магического урона^* и ^oоглушает на {1.5,1.6,1.7,1.8} секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_Andromeda1_effect_header"],
+      "ru": "Эффекты Comet"
+    },
+    {
+      "keys": ["entities:Ability_Andromeda1_tooltip_flavor"],
+      "ru": "Небо падает!"
+    },
+    {
+      "keys": ["entities:Ability_Andromeda1_IMPACT_effect"],
+      "ru": "При попадании наносит цели ^o{100,175,250,325} магического урона^* и ^oоглушает^* её на ^o{1.5,1.6,1.7,1.8} секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_Andromeda2_name"],
+      "ru": "Aurora"
+    },
+    {
+      "keys": ["entities:Ability_Andromeda2_description"],
+      "ru": "Andromeda возмущает магнитное поле Ньюэрта, вызывая Aurora, которая наносит урон всем противникам перед ней и снижает их броню."
+    },
+    {
+      "keys": ["entities:Ability_Andromeda2_description_simple"],
+      "ru": "Возмущает магнитное поле Ньюэрта и создаёт по прямой ^oAurora^*. Поражённые противники получают ^o{45,70,95,120} магического урона^*, а их броня снижается на ^o{-3,-4,-5,-6}^* на ^o8 секунд^*.\\n\\nВдоль линии на ^o5 секунд^* появляется ^oобзор^*."
+    },
+    {
+      "keys": ["entities:Ability_Andromeda2_effect_header"],
+      "ru": "Эффекты Aurora"
+    },
+    {
+      "keys": ["entities:Ability_Andromeda2_tooltip_flavor"],
+      "ru": "Взболтать, но не смешивать?"
+    },
+    {
+      "keys": ["entities:Ability_Andromeda2_IMPACT_effect"],
+      "ru": "Наносит целям на линии длиной 1400 и радиусом 275 ^o{45,70,95,120} магического урона^* и накладывает на них ^oAurora^* на ^o8 секунд^*."
+    },
+    {
+      "keys": ["entities:Ability_Andromeda3_name"],
+      "ru": "Dimensional Link"
+    },
+    {
+      "keys": ["entities:Ability_Andromeda3_name:ult_boost"],
+      "ru": "^gDimensional Link*^*"
+    },
+    {
+      "keys": ["entities:Ability_Andromeda3_description"],
+      "ru": "Связь Andromeda с родным измерением наделяет ближайших союзников силой и увеличивает урон их атак."
+    },
+    {
+      "keys": ["entities:Ability_Andromeda3_description2"],
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* когда ваша способность поражает вражеского героя, дальность атаки увеличивается на +1000 на ^o4^* секунды."
+    },
+    {
+      "keys": ["entities:Ability_Andromeda3_description2:ult_boost"],
+      "ru": "^gКогда ваша способность поражает вражеского героя, дальность атаки увеличивается на +1000 на ^o4^g секунды.^*\\n\\n^gStaff of the Master:^* когда ваша способность поражает вражеского героя, дальность атаки увеличивается на +1000 на ^o4^g секунды."
+    },
+    {
+      "keys": ["entities:Ability_Andromeda3_description_simple"],
+      "ru": "Даёт ближайшим союзным юнитам ауру, увеличивающую ^oбазовый урон на {10,14,18,22}%^*.\\n\\n^oПереключите^*, чтобы аура действовала только на ближайших союзных героев.\\n\\n^gStaff of the Master:^* когда ваша способность поражает вражеского героя, дальность атаки увеличивается на +1000 на ^o4^* секунды."
+    },
+    {
+      "keys": ["entities:Ability_Andromeda3_description_simple:andromedaauratoggle_heroes"],
+      "ru": "Даёт ближайшим союзным героям ауру, увеличивающую ^oбазовый урон на {10,14,18,22}%^*.\\n\\n^oПереключите^*, чтобы аура действовала на все ближайшие союзные юниты.\\n\\n^gStaff of the Master:^* когда ваша способность поражает вражеского героя, дальность атаки увеличивается на +1000 на ^o4^* секунды."
+    },
+    {
+      "keys": ["entities:Ability_Andromeda3_description_simple:ult_boost"],
+      "ru": "Даёт ауру, увеличивающую ^oбазовый урон на {10,14,18,22}%^*, ближайшим ^oсоюзным юнитам^* или ^oтолько союзным героям^*. ^oПереключите^*, чтобы изменить тип целей.\\n\\n^gКогда ваша способность поражает вражеского героя, дальность атаки увеличивается на +1000 на 4 секунды.^*"
+    },
+    {
+      "keys": ["entities:Ability_Andromeda3_effect_header"],
+      "ru": "Эффекты Dimensional Link"
+    },
+    {
+      "keys": ["entities:Ability_Andromeda3_tooltip_flavor"],
+      "ru": "К бесконечности и дальше!"
+    },
+    {
+      "keys": ["entities:Ability_Andromeda3_IMPACT_effect"],
+      "ru": "Переключает ауру на союзных героев."
+    },
+    {
+      "keys": ["entities:Ability_Andromeda3_name:andromedaauratoggle_heroes"],
+      "ru": "Dimensional Link (Heroes)"
+    },
+    {
+      "keys": ["entities:Ability_Andromeda3_IMPACT_effect:andromedaauratoggle_heroes"],
+      "ru": "Переключает ауру на союзные юниты."
+    },
+    {
+      "keys": ["entities:Ability_Andromeda3_IMPACT_effect:ult_boost"],
+      "ru": "Переключает ауру между союзными юнитами и союзными героями. ^gКогда ваша способность поражает вражеского героя, дальность атаки увеличивается на +1000 на ^o4^g секунды.^*"
+    },
+    {
+      "keys": ["entities:Ability_Andromeda4_name"],
+      "ru": "Void Rip"
+    },
+    {
+      "keys": ["entities:Ability_Andromeda4_name:ult_boost"],
+      "ru": "^gNether Rip*^*"
+    },
+    {
+      "keys": ["entities:Ability_Andromeda4_description"],
+      "ru": "Andromeda останавливает время и пространство, мгновенно меняется местами с другим героем и оставляет иллюзию на своей исходной позиции."
+    },
+    {
+      "keys": ["entities:Ability_Andromeda4_description2"],
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* перезарядка сокращается до 20 секунд. Andromeda также получает невосприимчивость к магии на 2 секунды."
+    },
+    {
+      "keys": ["entities:Ability_Andromeda4_description2:ult_boost"],
+      "ru": "\\r"
+    },
+    {
+      "keys": ["entities:Ability_Andromeda4_description_simple"],
+      "ru": "Останавливает время и пространство, чтобы мгновенно ^oпоменяться местами с другим героем^* и ^oсоздать свою иллюзию^* на исходной позиции. Цель ^oзамедляется на {10,20,30}% на 3 секунды^* и получает ^oмини-оглушение^*, если это ^oпротивник^*. ^oИллюзия^* существует 20 секунд, наносит 25% урона и получает 200% урона.\\n\\n^oНа 3 секунды увеличивает вашу скорость передвижения на {10,20,30}% и приравнивает дальность применения Comet к дальности Void Rip^*.\\n\\n^gStaff of the Master^* сокращает перезарядку до ^o20 секунд^* и даёт ^oневосприимчивость к магии на 2 секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_Andromeda4_description_simple:ult_boost"],
+      "ru": "Останавливает время и пространство, чтобы мгновенно ^oпоменяться местами с другим героем^* и ^oсоздать свою иллюзию^* на исходной позиции. Цель ^oзамедляется на {10,20,30}% на 3 секунды^* и получает ^oмини-оглушение^*, если это ^oпротивник^*. ^oИллюзия^* существует 20 секунд, наносит 25% урона и получает 200% урона.\\n\\n^oНа 3 секунды увеличивает вашу скорость передвижения на {10,20,30}% и приравнивает дальность применения Comet к дальности Void Rip^*, а также даёт ^gневосприимчивость к магии на 2 секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_Andromeda4_effect_header"],
+      "ru": "Эффекты Void Rip"
+    },
+    {
+      "keys": ["entities:Ability_Andromeda4_IMPACT_effect"],
+      "ru": "Выберите союзного или вражеского героя, чтобы ^oпоменяться с ним местами^*. Цель замедляется на {10,20,30}% на 3 секунды и получает мини-оглушение, если это противник. ^oНа исходной позиции Andromeda появляется иллюзия^*, которая существует 20 секунд, наносит 25% урона и получает 200% урона.\\n\\nКроме того, ^oна 3 секунды ваша скорость передвижения увеличивается на {10,20,30}%, а дальность применения Comet приравнивается к дальности Void Rip^*; вы также получаете ^gневосприимчивость к магии на 2 секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_Andromeda4_tooltip_flavor"],
+      "ru": "Салочки! Теперь ты водишь!"
+    }
+  ]
+}

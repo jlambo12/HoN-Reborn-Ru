@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_082_FORSAKEN_ARCHER",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_ForsakenArcher1_name"], "ru": "Crippling Volley"},
+    {"keys": ["entities:Ability_ForsakenArcher1_description"], "ru": "Forsaken Archer выпускает высоко в небо залп зазубренных стрел. Они обрушиваются на выбранную область и пригвождают к земле попавших под обстрел противников."},
+    {"keys": ["entities:Ability_ForsakenArcher1_description_simple"], "ru": "Обрушивает залп зазубренных стрел на выбранную точку, наносит противникам ^o{85,150,215,280} магического урона^* и ^oобездвиживает их на {1.5,1.75,2,2.25} секунды^*."},
+    {"keys": ["entities:Ability_ForsakenArcher1_description2"], "ru": ""},
+    {"keys": ["entities:Ability_ForsakenArcher1_effect_header"], "ru": "Эффект Crippling Volley"},
+    {"keys": ["entities:Ability_ForsakenArcher1_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_ForsakenArcher1_tooltip_flavor"], "ru": "Куда-то собрался?"},
+    {"keys": ["entities:Ability_ForsakenArcher1_IMPACT_effect"], "ru": "Выпускает залп стрел, который обрушивается на выбранную область через 0,7 секунды. При попадании наносит целям в области ^o{85,150,215,280} магического урона^* и обездвиживает их на ^o{1.5,1.75,2,2.25}^* секунды."},
+
+    {"keys": ["entities:Ability_ForsakenArcher2_name"], "ru": "Split Fire"},
+    {"keys": ["entities:Ability_ForsakenArcher2_description"], "ru": "Forsaken Archer черпает силу из похищенных душ, заточённых в её колчане, и выпускает расщепляющиеся стрелы, поражающие сразу несколько целей."},
+    {"keys": ["entities:Ability_ForsakenArcher2_description_simple", "entities:Ability_ForsakenArcher2_IMPACT_effect"], "ru": "^oПереключаемая способность^*.\\n\\nДаёт ^o{15,20,25,30} к скорости атаки^*.\\n\\nПока способность активна, ^oкаждая атака разделяется на 5 отдельных выстрелов^*, каждый из которых наносит ^o{15,30,45,60}% урона^*. ^oОсновная цель получает полный урон^*."},
+    {"keys": ["entities:Ability_ForsakenArcher2_description2"], "ru": ""},
+    {"keys": ["entities:Ability_ForsakenArcher2_tooltip_flavor"], "ru": "Почувствуй жало..."},
+
+    {"keys": ["entities:Ability_ForsakenArcher3_name"], "ru": "Call of the Damned"},
+    {"keys": ["entities:Ability_ForsakenArcher3_description"], "ru": "Каждый раз, когда Forsaken Archer или подконтрольное ей существо наносит непериодический урон, с вероятностью ^o20%^* появляется лучник-скелет. Он атакует один раз, нанося ^o{20,30,40,50}% от урона атаки Forsaken Archer в виде магического урона^*.\\n\\nЕсли способность не перезаряжается, эффект также гарантированно срабатывает при атаке.\\n\\n— Скелеты не блокируют появление нейтральных существ."},
+    {"keys": ["entities:Ability_ForsakenArcher3_description_simple"], "ru": "Каждый раз, когда Forsaken Archer или подконтрольное ей существо наносит непериодический урон, с вероятностью ^o20%^* появляется лучник-скелет. Он атакует один раз, нанося ^o{20,30,40,50}% от урона атаки Forsaken Archer в виде магического урона^*.\\n\\nЕсли способность не перезаряжается, эффект также гарантированно срабатывает при атаке.\\n\\n^gStaff of the Master^* ^oсокращает перезарядку до 1 секунды^*. Лучники-скелеты наносят ^oусиленный магический урон^* и на ^o2 секунды снижают скорость атаки и передвижения на 25%^*."},
+    {"keys": ["entities:Ability_ForsakenArcher3_description2"], "ru": ""},
+    {"keys": ["entities:Ability_ForsakenArcher3_description_simple:ult_boost"], "ru": "Каждый раз, когда Forsaken Archer или подконтрольное ей существо наносит непериодический урон, с вероятностью ^o20%^* появляется лучник-скелет. Он атакует один раз, нанося ^o{20,30,40,50}% от урона атаки Forsaken Archer^* в виде ^gусиленного магического урона^*, и ^gна 2 секунды снижает скорость атаки и передвижения на 25%^*.\\n\\nЕсли способность не перезаряжается, эффект также гарантированно срабатывает при атаке."},
+    {"keys": ["entities:Ability_ForsakenArcher3_tooltip_flavor"], "ru": "3 секунды..."},
+
+    {"keys": ["entities:Ability_ForsakenArcher4_name"], "ru": "Piercing Arrows"},
+    {"keys": ["entities:Ability_ForsakenArcher4_description"], "ru": "Пылая от ярости, Forsaken Archer создаёт призрачную копию, которая выпускает Piercing Arrows. Стрелы пробивают цель насквозь и поражают всех противников позади неё, пока не рассеются."},
+    {"keys": ["entities:Ability_ForsakenArcher4_description_simple"], "ru": "Создаёт в выбранной точке неуязвимую копию, которая ^oв течение 4 секунд выпускает по 2 стрелы в секунду^*.\\n\\nКаждая стрела наносит ^o{75,125,175} магического урона^*."},
+    {"keys": ["entities:Ability_ForsakenArcher4_description2", "entities:Ability_ForsakenArcher4_effect_header", "entities:Ability_ForsakenArcher4_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_ForsakenArcher4_tooltip_flavor"], "ru": "Если мне суждено умереть, ты умрёшь вместе со мной!"},
+    {"keys": ["entities:Ability_ForsakenArcher4_IMPACT_effect"], "ru": "Создаёт на вашей позиции копию, которая в течение 4 секунд каждые 0,5 секунды выпускает Piercing Arrow в выбранном направлении. Каждая стрела пролетает 1300 ед. и наносит ^o{75,125,175} магического урона^*."}
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_101_ITEM_STATES_I",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:State_ItemDawnbringerSlow_name", "entities:State_Icebrand_Slow_name"],
+      "ru": "Chilled"
+    },
+    {
+      "keys": ["entities:State_Item2B_name"],
+      "ru": "Crippling Wounds"
+    },
+    {
+      "keys": ["entities:State_IconOfTheGodess_Regen_name"],
+      "ru": "Gift of the Goddess"
+    },
+    {
+      "keys": ["entities:State_IconOfTheGodess_Regen_FRAME_effect"],
+      "ru": "15 здоровья в секунду."
+    },
+    {
+      "keys": ["entities:State_Insanitarius_FRAME_effect", "entities:State_ImmortalPride_FRAME_effect"],
+      "ru": "Теряет 35 здоровья в секунду."
+    },
+    {
+      "keys": ["entities:State_Item4F_name"],
+      "ru": "Symbolic Rage"
+    },
+    {
+      "keys": ["entities:State_Item_HeartOfFire_name"],
+      "ru": "Heart of Fire"
+    },
+    {
+      "keys": ["entities:State_Item_ShieldOfHonor_name"],
+      "ru": "Shield of Honor"
+    },
+    {
+      "keys": ["entities:State_Item_EmberstoneBracers_Slow_name"],
+      "ru": "Ember Heat"
+    },
+    {
+      "keys": ["entities:State_Item_FluffyFletchingArrows_name"],
+      "ru": "Fluffy's Reach"
+    },
+    {
+      "keys": ["entities:State_Item_FluffyFletchingArrows_description"],
+      "ru": "+500 к дальности атаки, для героев ближнего боя — +250."
+    },
+    {
+      "keys": ["entities:State_Item_MagmaGauntlet_Reduction_name"],
+      "ru": "Magma Mantle"
+    },
+    {
+      "keys": ["entities:State_Item_Chaosbrand_Emberfrost_Slow_name"],
+      "ru": "Frostbite"
+    },
+    {
+      "keys": ["entities:State_Item_Chaosbrand_Starborn_Burning_name"],
+      "ru": "Searing"
+    },
+    {
+      "keys": ["entities:State_Item_Chaosbrand_Ironroot_name"],
+      "ru": "Nature's Might"
+    },
+    {
+      "keys": ["entities:State_Item_Chaosbrand_Active_name"],
+      "ru": "Chaos Elementalist"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "scope": "P3 patch notes reviewed dynamic labels and user-facing errors",
+  "rows": [
+    {
+      "id": "preact:preact/src/apis/patch-notes/usepatchnotes.ts:user_message:3812f610a2db:1",
+      "english": "Patch ID is required",
+      "russian": "Необходимо указать ID патча"
+    },
+    {
+      "id": "preact:preact/src/layers/patch-notes-v2/components/patchnoteslistviewv2.tsx:jsx_template_attribute:990495fb53bd:1",
+      "english": "Patch ${patch.version}",
+      "russian": "Патч ${patch.version}"
+    },
+    {
+      "id": "preact:preact/src/layers/patch-notes-v2/components/spotlightvideo.tsx:jsx_template_attribute:c6f197f4c957:1",
+      "english": "${title} - opens in your browser",
+      "russian": "${title} — откроется в браузере"
+    },
+    {
+      "id": "preact:preact/src/layers/patch-notes/components/patchnoteslistview.tsx:jsx_template_attribute:990495fb53bd:1",
+      "english": "Patch ${patch.version}",
+      "russian": "Патч ${patch.version}"
+    },
+    {
+      "id": "preact:preact/src/layers/patch-notes/components/patchnotesview.tsx:jsx_template_attribute:fdcbe6aea841:1",
+      "english": "Patch ${patchNotesData.patchNotes.version} Art",
+      "russian": "Иллюстрация патча ${patchNotesData.patchNotes.version}"
+    }
+  ]
+}

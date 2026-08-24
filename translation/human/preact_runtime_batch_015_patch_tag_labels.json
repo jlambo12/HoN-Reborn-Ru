@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "batch_id": "PREACT_RUNTIME_015_PATCH_TAG_LABELS",
+  "scope": "Translate displayed patch category labels without changing typed config values",
+  "reviewed_by": "Codex manual translation 2026-08-24",
+  "rows": [
+    {"source_file":"preact/src/layers/patch-notes-v2/patches/patch0124.tsx","english":"{u.tag}</span>","russian":"{{ Gameplay: 'Игровой процесс', Visual: 'Графика', Audio: 'Звук', Tooltip: 'Подсказка' }[u.tag] ?? u.tag}</span>","expected_matches":1},
+    {"source_file":"preact/src/layers/patch-notes-v2/patches/patch0125.tsx","english":"{u.tag}</span>","russian":"{{ Gameplay: 'Игровой процесс', Visual: 'Графика', Audio: 'Звук', Tooltip: 'Подсказка' }[u.tag] ?? u.tag}</span>","expected_matches":1},
+    {"source_file":"preact/src/layers/patch-notes-v2/patches/patch0124.tsx","english":"[{c.tag}]","russian":"[{{ Client: 'Клиент', Server: 'Сервер' }[c.tag] ?? c.tag}]","expected_matches":1}
+  ]
+}

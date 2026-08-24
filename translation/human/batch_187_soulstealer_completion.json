@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_187_SOULSTEALER_COMPLETION",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Soulstealer1_IMPACT_effect"],
+      "english_hash": "46966c8cce0427c95d0f4cdf1b4359a18d666f7f468345bf812df98c9457439a",
+      "ru": "Наносит каждой цели в радиусе {100,175,250,325} магического урона."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer1_description"],
+      "english_hash": "6749d4a66eb4ed996b775e01ed5a3db7026c8049683014f386bf0a729eb4fdd7",
+      "ru": "Soulstealer призывает великих демонов Hellbourne уничтожить стоящих перед ним врагов."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer1_description_simple"],
+      "english_hash": "6477126b843c3ad4067d2e13804f952b09ecc6026b8566f9af6b212f53e2722e",
+      "ru": "Наносит каждой цели в радиусе 250 ^o{100,175,250,325} магического урона^* на ^o3 разных дистанциях^*."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer1_effect_header", "entities:Ability_Soulstealer1a_effect_header", "entities:Ability_Soulstealer1b_effect_header", "entities:Ability_Soulstealer1c_effect_header", "entities:Ability_Soulstealer2_effect_header", "entities:Ability_Soulstealer3_effect_header"],
+      "english_hash": "6e5e7bc5e96f838352cde0fcff351520eab9cd6b12ecb43e9b30ed6fd98f6777",
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer1a_IMPACT_effect"],
+      "english_hash": "9e937786c78a2727537a1b714e895ff610e03e57aa9e4b8d909d2f2b39ca4951",
+      "ru": "Наносит каждой цели в области радиусом 200 перед героем {100,175,250,325} магического урона."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer1a_description"],
+      "english_hash": "47c359c19187d98fc53eaf7e9aa7e190d6e95f5339300551fe2124c0f765465d",
+      "ru": "Demon Hand атакует противников на близкой дистанции перед Soulstealer."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer1a_description_simple"],
+      "english_hash": "c5e9077ce22db5b6fdceaa7e073bfd119e51c5d7b77f21de5a64f9eee4606521",
+      "ru": "Наносит каждой цели в области на расстоянии 200 перед вами ^o{100,175,250,325} магического урона^*."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer1b_IMPACT_effect"],
+      "english_hash": "af977891c20d1870bfa453e1ac3c1791f6ba50dba3e283ef50430ee202caa58c",
+      "ru": "Наносит каждой цели в области радиусом 450 перед героем {100,175,250,325} магического урона."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer1b_description"],
+      "english_hash": "199fdaa06f5beddc5ea0af2a474c5ee4af42850e7211658739845baac4ed17c5",
+      "ru": "Demon Hand атакует противников на средней дистанции перед Soulstealer."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer1b_description_simple"],
+      "english_hash": "d96c7eb7f84cd1999fa4065870e5c20f3eee99da848cc76d3d91723e7af402e1",
+      "ru": "Наносит каждой цели в области на расстоянии 450 перед вами ^o{100,175,250,325} магического урона^*."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer1c_IMPACT_effect"],
+      "english_hash": "0995d831bf09a0029989abee7575b0bb07269f044fb5640d5f57ee94fe3c209c",
+      "ru": "Наносит каждой цели в области радиусом 700 перед героем {100,175,250,325} магического урона."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer1c_description"],
+      "english_hash": "c18969c45483019203cefc4f500800873650a48beda7cdd9a25944fa6f52ff50",
+      "ru": "Demon Hand атакует противников на большой дистанции перед Soulstealer."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer1c_description_simple"],
+      "english_hash": "0c69cd6cd83c5ecf222d6335021c79b18653f2300706d93fd7b94ab119a41722",
+      "ru": "Наносит каждой цели в области на расстоянии 700 перед вами ^o{100,175,250,325} магического урона^*."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer2_FRAME_effect"],
+      "english_hash": "ca9ce4dd996aa1a13eb0e05d08e3f1a11fe4a49d5cd0250594db187065c707d3",
+      "ru": "Каждый заряд добавляет атакам 2 урона. После смерти вы теряете 40% зарядов."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer2_KILL_effect"],
+      "english_hash": "8e30c9865cdfd3de19944224966fd70b973792b5381ca6e05f8f4b1a3f0169c0",
+      "ru": "Добавляет один заряд.\\nЗа убийство героя даёт {4,6,8,10} зарядов."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer2_description"],
+      "english_hash": "f5dd50d03be4c9f22d0c04c63ec5d896e73b8dd1d23d18081adfde7c636f0fdf",
+      "ru": "Soulstealer похищает души всех поверженных врагов, увеличивая свой урон по мере роста коллекции."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer2_description2"],
+      "english_hash": "6876e2ccabeeac276a6c3f424af86554f39d5d12e0d3e0cc66110435fdc37592",
+      "ru": "Не более {10,20,30,40} душ.\\n\\n^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff:^* увеличивает максимальное число душ до {20,30,40,50} и даёт +50 скорости применения."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer2_description2:ult_boost"],
+      "english_hash": "abc2c66644774c6d18c929d2cdb43211b056a3c1fb58a23d58b3d0b75f1a68fd",
+      "ru": "Не более ^g{20,30,40,50} душ^*."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer2_description_simple"],
+      "english_hash": "cb8ba4d44099bd7952cdfe56d938b59e539da8832a0cbc2568f2b6530037bd54",
+      "ru": "За убийство юнита даёт душу, но не более ^o{10,20,30,40} душ^*. Каждая душа даёт ^o2 урона атаки^*. ^oУбийство героя даёт {4,6,8,10} душ^*.\\n\\nПосле смерти вы ^oтеряете 40% душ^*.\\n\\n^gЭффект Staff:^* увеличивает ^oмаксимальное число душ до {20,30,40,50}^* и даёт ^o+50 скорости применения^*."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer2_description_simple:ult_boost"],
+      "english_hash": "f1438ebeee8134b7c1622b55de793eea269761127019d258658a0f792f7e2d9e",
+      "ru": "^gДаёт 50 скорости применения^*.\\n\\nЗа убийство юнита даёт душу, но не более ^g{20,30,40,50} душ^*. Каждая душа даёт ^o2 урона атаки^*. ^oУбийство героя даёт {4,6,8,10} душ^*.\\n\\nПосле смерти вы ^oтеряете 40% душ^*."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer3_IMPACT_effect"],
+      "english_hash": "51a13ac4187d3d5a9bf253173afdba925265b4ce71acafefab283828be2236a0",
+      "ru": "Переключите, чтобы ^oотключить^* ауру Dread."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer3_IMPACT_effect:soulstealer_dread_off"],
+      "english_hash": "f688a301d84d8e1e63033d379cfa8d37146e1da152b314ad5836f4690b066d01",
+      "ru": "^oПереключите, чтобы включить ауру Dread^*."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer3_description"],
+      "english_hash": "ebb955909f9f26dba1903497b0dd01aae082d10782d169a4a96e44fcf80f9013",
+      "ru": "Облик Soulstealer внушает настоящий ужас. Одно его присутствие подрывает боевой дух врагов и снижает их броню."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer3_description2"],
+      "english_hash": "6ac297bd85e27e1808e35057440e7a6317ad76335b293c70996fe4ba3b6ae5ff",
+      "ru": "Даёт ^o{0.5,1,1.5,2} пробивания магической брони^*."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer3_description_simple", "entities:Ability_Soulstealer3_description_simple:soulstealer_dread_off"],
+      "english_hash": "566adbe28ac85961a5f2a01e5a7546fa95068e8deb46301258313d8066f14582",
+      "ru": "^oПереключаемая способность^*.\\n\\nДаёт ^o{0.5,1,1.5,2} пробивания магической брони^*.\\n\\nНакладывает ^o-{3,4,5,6} брони^* на противников поблизости."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer4_IMPACT_effect"],
+      "english_hash": "c5c44e2641661ff9b6963a51e698a7d1afe7315240fa806dbd6c36ada0fa1fa3",
+      "ru": "Выпускает поток, сила которого зависит от числа душ.\\n\\nПоток наносит до ^o{150,225,300} + {15,22.5,30} магического урона за каждую душу^*. Накладывает Soul Burst на противников в радиусе действия на 5 секунд."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer4_description"],
+      "english_hash": "2007365a305d22a1aab89adc87f93c748e1f3c902fa076e9781d67ecbc2e7b49",
+      "ru": "Soulstealer выпускает потоки отрицательной энергии, сила которых зависит от числа собранных душ. Они наносят урон противникам поблизости, усиливаясь ближе к Soulstealer."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer4_description_simple"],
+      "english_hash": "21c69313201a1c56892bc3315f604b46e515b94b9b3db43f25fed7b3936fdd25",
+      "ru": "После ^oподготовки в течение 1.4 секунды^* выпускает потоки отрицательной энергии, питаемые собранными душами. Противникам в пределах 100 единиц наносится до ^o{150,225,300} + {15,22.5,30} магического урона за каждую имеющуюся душу^*; с расстоянием урон ^oуменьшается^*.\\n\\nНакладывает на всех задетых противников ^o{-25}% к скорости передвижения и базовому урону^* на 5 секунд."
+    },
+    {
+      "keys": ["entities:Ability_Soulstealer4_effect_header"],
+      "english_hash": "e00790b979ed48c9db63096eaaff9d37b9e9b52b4b0a1211f3806a7a1ea73993",
+      "ru": "Эффекты Soul Burst"
+    }
+  ]
+}

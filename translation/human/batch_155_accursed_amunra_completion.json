@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_155_ACCURSED_AMUNRA_COMPLETION",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:State_Accursed_Ability2_FRAME_effect"],
+      "english_hash": "9e09df2b24028ecc46defa73b88a5507adbc3b19fec1accb03d0c8cacf78dd45",
+      "ru": "Щит поглощает {110,140,170,200} урона после его снижения.\\n\\nПоглотив весь запас, наносит противникам в радиусе 700 {110,140,170,200} магического урона."
+    },
+    {
+      "keys": ["entities:State_Accursed_Ability3_description"],
+      "english_hash": "8e303452e51029cf081e56d1a56bbef1389f781d2b2c32adda9e66dadb09f244",
+      "ru": "Sear"
+    },
+    {
+      "keys": ["entities:State_Accursed_Ability4_DAMAGED_effect"],
+      "english_hash": "68ae17044edc195aa8b7ed51fbfda283fb385199bbe3a32196dd4ed62cdfa550",
+      "ru": "Преобразует получаемый урон в здоровье"
+    },
+    {
+      "keys": ["entities:State_Accursed_Ability4_FRAME_effect"],
+      "english_hash": "3082da481e4e903449ebae83e8e12db60b5a03cc770954fd82890d1412556e9b",
+      "ru": "Преобразует 100% получаемого урона в здоровье"
+    },
+    {
+      "keys": ["entities:State_AmunRa_Ability2_Self_description"],
+      "english_hash": "760791ac68b83120723653e9f50b6fec05bc2a577bada1d6a27a2b48dae33839",
+      "ru": "Каждый заряд снижает стоимость здоровья Ignite на 1.5% от максимального здоровья"
+    },
+    {
+      "keys": ["entities:State_AmunRa_Ability3_Damage_FRAME_effect"],
+      "english_hash": "990655a4aba745abd27d26b1ba89e6092156d8472ddb327ef23087401cd03a6d",
+      "ru": "Получает магический урон каждую секунду"
+    },
+    {
+      "keys": ["entities:State_AmunRa_Ability3_FRAME_effect"],
+      "english_hash": "c900df4e2c536391f57e678dc9ded91b3faea75f2c5e60168805fc9e0cb3662e",
+      "ru": "Каждую секунду наносит магический урон ближайшим противникам"
+    },
+    {
+      "keys": ["entities:State_AmunRa_Ability4_description"],
+      "english_hash": "400f60618c9a483661f0380e9018be3c48d9fd75c43d37bc4125d80570ca71f8",
+      "ru": "{10,20,30}% дополнительного урона"
+    }
+  ]
+}

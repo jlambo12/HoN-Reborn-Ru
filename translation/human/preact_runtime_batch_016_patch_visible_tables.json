@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "batch_id": "PREACT_RUNTIME_016_PATCH_VISIBLE_TABLES",
+  "scope": "Player-visible patch 0.12.4 card and patch 0.12.5 data tables omitted by the earlier AST audit",
+  "reviewed_by": "Codex manual editorial translation 2026-08-24",
+  "rows": [
+    {"source_file":"preact/src/layers/patch-notes-v2/data/patchregistry.ts","english":"August 15th, 2026","russian":"15 августа 2026 года","expected_matches":1},
+    {"source_file":"preact/src/layers/patch-notes-v2/data/patchregistry.ts","english":"A major matchmaking overhaul, Kane joins the roster, and a new renderer under every HTML panel.","russian":"Масштабное обновление подбора матчей, появление Kane и новый рендерер для всех HTML-панелей.","expected_matches":1},
+    {"source_file":"preact/src/layers/patch-notes-v2/patches/patch0125.tsx","english":"Solo","russian":"В одиночку","expected_matches":1},
+    {"source_file":"preact/src/layers/patch-notes-v2/patches/patch0125.tsx","english":"Duo","russian":"Вдвоём","expected_matches":1},
+    {"source_file":"preact/src/layers/patch-notes-v2/patches/patch0125.tsx","english":"Trio","russian":"Втроём","expected_matches":1},
+    {"source_file":"preact/src/layers/patch-notes-v2/patches/patch0125.tsx","english":"4 tokens","russian":"4 жетона","expected_matches":1},
+    {"source_file":"preact/src/layers/patch-notes-v2/patches/patch0125.tsx","english":"2 tokens","russian":"2 жетона","expected_matches":2},
+    {"source_file":"preact/src/layers/patch-notes-v2/patches/patch0125.tsx","english":"1 token","russian":"1 жетон","expected_matches":2},
+    {"source_file":"preact/src/layers/patch-notes-v2/patches/patch0125.tsx","english":"loss: 'Nothing'","russian":"loss: 'Нет'","expected_matches":1},
+    {"source_file":"preact/src/layers/patch-notes-v2/patches/patch0125.tsx","english":"Two enemy heroes","russian":"Два вражеских героя","expected_matches":1},
+    {"source_file":"preact/src/layers/patch-notes-v2/patches/patch0125.tsx","english":"Enemy hero + creep","russian":"Вражеский герой и крип","expected_matches":1},
+    {"source_file":"preact/src/layers/patch-notes-v2/patches/patch0125.tsx","english":"Creep only","russian":"Только крип","expected_matches":1},
+    {"source_file":"preact/src/layers/patch-notes-v2/patches/patch0125.tsx","english":"Ally deny, with an enemy also hitting","russian":"Добивание союзником при участии врага","expected_matches":1},
+    {"source_file":"preact/src/layers/patch-notes-v2/patches/patch0125.tsx","english":"The gold popup shows up. The bounty was anchored to the ward itself, which is stealthed and removed the instant it dies, so the popup was dropped and the gold arrived silently. It is anchored to the hero receiving it now.","russian":"Всплывающее сообщение о золоте снова отображается. Раньше награда была привязана к самому варду: он невидим и исчезает сразу после уничтожения, поэтому сообщение терялось, хотя золото начислялось. Теперь оно привязано к герою, получившему награду.","expected_matches":1},
+    {"source_file":"preact/src/layers/patch-notes-v2/patches/patch0125.tsx","english":"Reveal range and credit range now match. A ward killed near the outer edge of a Ward of Revelation died without ever finding the ward that had revealed it - the search radius was 800 against a reveal range of 850.","russian":"Радиус обнаружения теперь совпадает с радиусом зачёта награды. Раньше вард, уничтоженный у внешней границы действия Ward of Revelation, не находил раскрывший его вард: радиус поиска составлял 800 против радиуса обнаружения 850.","expected_matches":1}
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HoN RU localization catalog row",
+  "type": "object",
+  "required": [
+    "id", "key", "english", "thai", "source_file", "source_line",
+    "namespace", "category", "context", "status", "runtime_role",
+    "thai_signal", "protected_reason", "protected_terms", "locked_spans", "russian", "notes",
+    "english_hash", "classification_version", "classification_source"
+  ],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "key": { "type": "string", "minLength": 1 },
+    "english": { "type": "string" },
+    "thai": { "type": "string" },
+    "source_file": { "type": "string", "pattern": "^stringtables/.*_en\\.str$" },
+    "source_line": { "type": "integer", "minimum": 1 },
+    "namespace": { "type": "string", "minLength": 1 },
+    "category": { "type": "string", "minLength": 1 },
+    "context": { "type": "string" },
+    "status": {
+      "enum": ["TRANSLATE", "KEEP_EN", "REVIEW", "DYNAMIC", "IMAGE_TEXT", "DEPRECATED"]
+    },
+    "runtime_role": {
+      "enum": ["DISPLAY_TEXT", "COMMAND_TOKEN", "INTERNAL_ID", "RESOURCE_PATH", "SEARCH_METADATA", "STRUCTURAL", "DYNAMIC_DATA", "DEV_TEST", "TECHNICAL_COPY", "KEYCAP"]
+    },
+    "thai_signal": {
+      "enum": ["MISSING", "EMPTY", "SAME_AS_ENGLISH", "DIFFERENT"]
+    },
+    "protected_reason": { "type": "string" },
+    "protected_terms": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "locked_spans": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["canonical_text", "type", "source_start", "source_end", "visible_start", "visible_end", "case_policy", "markup_prefix", "markup_suffix"],
+        "properties": {
+          "canonical_text": { "type": "string", "minLength": 1 },
+          "type": { "type": "string", "minLength": 1 },
+          "source_start": { "type": "integer", "minimum": 0 },
+          "source_end": { "type": "integer", "minimum": 1 },
+          "visible_start": { "type": "integer", "minimum": 0 },
+          "visible_end": { "type": "integer", "minimum": 1 },
+          "case_policy": { "enum": ["EXACT", "CASE_INSENSITIVE"] },
+          "markup_prefix": { "type": "string" },
+          "markup_suffix": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "russian": { "type": "string" },
+    "notes": { "type": "string" },
+    "english_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "classification_version": { "type": "integer", "minimum": 1 },
+    "classification_source": { "enum": ["AUTO", "HUMAN"] }
+  },
+  "additionalProperties": false
+}

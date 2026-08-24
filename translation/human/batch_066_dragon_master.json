@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_066_DRAGON_MASTER",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_DragonMaster1_name"], "ru": "Burnination"},
+    {"keys": ["entities:Ability_DragonMaster1_description"], "ru": "Охватывает окружающую область драконьим пламенем, которое некоторое время обжигает противников поблизости."},
+    {"keys": ["entities:Ability_DragonMaster1_description_simple", "entities:Ability_DragonMaster1_IMPACT_effect"], "ru": "При активации в течение 10 секунд наносит окружающим противникам ^o40 магического урона в секунду^*."},
+    {"keys": ["entities:Ability_DragonMaster1_effect_header"], "ru": "Burnination"},
+    {"keys": ["entities:Ability_DragonMaster2_name"], "ru": "Dragonscale's Boon"},
+    {"keys": ["entities:Ability_DragonMaster2_description"], "ru": "Снижает магический урон, получаемый союзниками поблизости."},
+    {"keys": ["entities:Ability_DragonMaster2_description_simple"], "ru": "Снижает получаемый магический урон окружающих союзников на 25% (на 15% для героев)."},
+    {"keys": ["entities:Ability_DragonMaster2_effect_header"], "ru": ""}
+  ]
+}

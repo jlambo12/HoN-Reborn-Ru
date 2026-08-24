@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_031_ANTKING",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Antking1_name"],
+      "ru": "Summon Zomblings"
+    },
+    {
+      "keys": ["entities:Ability_Antking1_description_simple", "entities:Ability_Antking1_IMPACT_effect"],
+      "ru": "Поднимает 10 ^oZomblings^* на 30 секунд. Каждый Zombling обладает ^o270 здоровья^*, ^o5 магической брони^*, ^o300 скорости передвижения^* и наносит ^o15 физического урона за атаку^*."
+    }
+  ]
+}

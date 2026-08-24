@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_079_FLINT_BEASTWOOD",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_FlintBeastwood1_name"], "ru": "Explosive Flare"},
+    {"keys": ["entities:Ability_FlintBeastwood1_description"], "ru": "Мистер Beastwood заряжает одно из своих орудий снарядом Explosive Flare и отправляет пылающий заряд в противников. При приземлении тот, разумеется, взрывается, поджигая и замедляя всех поблизости. Мистер Beastwood обожает запах гари по утрам."},
+    {"keys": ["entities:Ability_FlintBeastwood1_description_simple"], "ru": "Выпускает ^oExplosive Flare^* в выбранную точку, наносит поражённым противникам ^o{25,50,75,100} магического урона^*, а затем ещё ^o{50,100,150,200} магического урона^* за 2 секунды.\\n\\nПервоначальный урон также действует на строения. Снижает ^oскорость передвижения на {15,20,25,30}%^* и даёт обзор области на 4 секунды."},
+    {"keys": ["entities:Ability_FlintBeastwood1_effect_header"], "ru": "Эффекты Flared"},
+    {"keys": ["entities:Ability_FlintBeastwood1_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_FlintBeastwood1_tooltip_flavor"], "ru": "Я вижу [будущих] мертвецов..."},
+
+    {"keys": ["entities:Ability_FlintBeastwood2_name"], "ru": "Hollowpoint Shells"},
+    {"keys": ["entities:Ability_FlintBeastwood2_description"], "ru": "Мистер Beastwood любит хаос и подмешивает Hollowpoint Shells к обычным патронам. Поэтому его атаки могут нанести дополнительный урон и совсем ненадолго оглушить цель. И каждый раз он смеётся над вами."},
+    {"keys": ["entities:Ability_FlintBeastwood2_description_simple"], "ru": "Атаки с вероятностью 40% наносят вражеским существам дополнительно ^o{16,34,52,70} физического урона^* и ^oоглушают их на {0.05,0.1,0.15,0.2} секунды^*.\\n\\nИллюзии не могут вызвать оглушение."},
+    {"keys": ["entities:Ability_FlintBeastwood2_description_simple:OnlyMidMap"], "ru": "^rMid Wars:^* атаки с вероятностью 30% наносят вражеским существам дополнительно ^o{16,34,52,70} физического урона^* и ^oоглушают их на {0.04,0.08,0.12,0.16} секунды^*.\\n\\nИллюзии не могут вызвать оглушение."},
+    {"keys": ["entities:Ability_FlintBeastwood2_effect_header"], "ru": ""},
+    {"keys": ["entities:Ability_FlintBeastwood2_ATTACK_IMPACT_effect"], "ru": "С вероятностью 40% наносит вражеским существам ^o{16,34,52,70} дополнительного физического урона^* и оглушает их на ^o{0.05,0.1,0.15,0.2} секунды^*.\\n\\nИллюзии не могут вызвать оглушение."},
+    {"keys": ["entities:Ability_FlintBeastwood2_ATTACK_IMPACT_effect:OnlyMidMap"], "ru": "^rMid Wars:^* с вероятностью 30% наносит вражеским существам ^o{16,34,52,70} дополнительного физического урона^* и оглушает их на ^o{0.04,0.08,0.12,0.16} секунды^*.\\n\\nИллюзии не могут вызвать оглушение."},
+    {"keys": ["entities:Ability_FlintBeastwood2_tooltip_flavor"], "ru": "Что лучше пуль? Пули получше."},
+
+    {"keys": ["entities:Ability_FlintBeastwood3_name"], "ru": "Dead Eye"},
+    {"keys": ["entities:Ability_FlintBeastwood3_description"], "ru": "Мистер Beastwood вас видит. Он видит, когда вы прячетесь, и знает, когда вам страшно. Вы можете быть далеко, но сегодня это вас не спасёт..."},
+    {"keys": ["entities:Ability_FlintBeastwood3_description2", "entities:Ability_FlintBeastwood3_description_simple"], "ru": "Даёт ^o{75,150,225,300} к дальности атаки и обзору^*.\\n\\nСоюзные существа в указанном радиусе с вероятностью ^o{30,40,50,60}%^* получают ^oTrue Strike^* для своих атак."},
+    {"keys": ["entities:Ability_FlintBeastwood3_description2:OnlyMidMap", "entities:Ability_FlintBeastwood3_description_simple:OnlyMidMap"], "ru": "^rMid Wars:^* даёт ^o{50,100,150,200} к дальности атаки^* и ^o{75,150,225,300} к обзору^*.\\n\\nСоюзные существа в указанном радиусе с вероятностью ^o{30,40,50,60}%^* получают ^oTrue Strike^* для своих атак."},
+    {"keys": ["entities:Ability_FlintBeastwood3_effect_header"], "ru": ""},
+    {"keys": ["entities:Ability_FlintBeastwood3_tooltip_flavor"], "ru": "Мистер Beastwood едет в город!"},
+
+    {"keys": ["entities:Ability_FlintBeastwood4_name"], "ru": "Money Shot"},
+    {"keys": ["entities:Ability_FlintBeastwood4_description"], "ru": "Мистера Beastwood не зря называют лучшим стрелком Западного Newerth. Он тратит пару секунд, чтобы как следует прицелиться во врага издалека, а затем наносит ему огромный урон одним мощным выстрелом. И этот выстрел всегда попадает в цель."},
+    {"keys": ["entities:Ability_FlintBeastwood4_description_simple"], "ru": "Выберите противника на расстоянии до ^o{2000,2500,3000} ед.^*. После поддержания в течение ^o1,7 секунды^* Flint Beastwood делает мощный выстрел, который наносит ^o{350,525,700} магического урона^* и ^oоглушает на 0,2 секунды^*. Поддержание прерывается, если цель отходит более чем на 4000 ед.\\n\\n^gStaff of the Master^* снижает ^oзатраты маны до {100,200,300}^* и ^oвыпускает второй Money Shot с мощностью 35%^* в ближайшего вражеского героя в радиусе 1500 от цели. ^oMoney Shot^* больше не прерывается из-за расстояния, а его ^oперезарядка сбрасывается после каждого убийства вражеского героя^*."},
+    {"keys": ["entities:Ability_FlintBeastwood4_description2"], "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* затраты маны снижаются до {100,200,300}; второй Money Shot с мощностью 35% поражает ближайшего вражеского героя в радиусе 1500 от цели. Money Shot больше не прерывается из-за расстояния, а его перезарядка сбрасывается каждый раз, когда Flint Beastwood убивает настоящего вражеского героя."},
+    {"keys": ["entities:Ability_FlintBeastwood4_effect_header", "entities:Ability_FlintBeastwood4_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_FlintBeastwood4_tooltip_flavor"], "ru": "БУМ! В ГОЛОВУ!"},
+    {"keys": ["entities:Ability_FlintBeastwood4_IMPACT_effect"], "ru": "После поддержания в течение 1,7 секунды выпускает снаряд, который при попадании наносит ^o{350,525,700} магического урона^* и оглушает на 0,2 секунды.\\n\\nПоддержание можно отменить, не расходуя ману и не запуская перезарядку. Оно прерывается, если цель отходит более чем на ^o4000 ед.^*. Во время поддержания вокруг цели действует обзор радиусом 1800 днём и 800 ночью, а сама цель получает Revealed."},
+    {"keys": ["entities:Ability_FlintBeastwood4_name:ult_boost"], "ru": "^gMoney Shots*^*"},
+    {"keys": ["entities:Ability_FlintBeastwood4_description2:ult_boost"], "ru": "\\r"},
+    {"keys": ["entities:Ability_FlintBeastwood4_description_simple:ult_boost"], "ru": "После ^oподдержания в течение 1,7 секунды^* Flint Beastwood делает мощный выстрел по противнику, нанося ^o{350,525,700} магического урона^* и ^oоглушая на 0,2 секунды^*. ^gВторой Money Shot с мощностью 35% поражает ближайшего вражеского героя в радиусе 1500 от цели.^*\\n\\n^gПерезарядка сбрасывается после каждого убийства вражеского героя.^*"},
+    {"keys": ["entities:Ability_FlintBeastwood4_IMPACT_effect:ult_boost"], "ru": "После поддержания в течение 1,7 секунды выпускает снаряд, который при попадании наносит ^o{350,525,700} магического урона^* и оглушает на 0,2 секунды. ^gВторой Money Shot с мощностью 35% поражает ближайшего вражеского героя в радиусе 1500 от цели.^*\\n\\nПоддержание можно отменить, не расходуя ману и не запуская перезарядку. Во время поддержания вокруг цели действует обзор радиусом 1800 днём и 800 ночью, а сама цель получает Revealed.\\n\\n^gПерезарядка сбрасывается каждый раз, когда Flint Beastwood убивает настоящего вражеского героя.^*"}
+  ]
+}

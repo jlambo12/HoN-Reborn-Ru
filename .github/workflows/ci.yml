@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  localization:
+    name: Localization and release checks
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - name: Run portable unit tests
+        run: |
+          python -m unittest discover -s tests -p "test_audit.py" -v
+          python -m unittest discover -s tests -p "test_validate_live_localization.py" -v
+          python -m unittest discover -s tests -p "test_live_gameplay_queue.py" -v
+      - name: Verify release overlay
+        run: python tools/verify_release.py --version 0.1.0
+      - name: Build distributable package
+        shell: pwsh
+        run: .\scripts\package_release.ps1 -Version 0.1.0
+
+  website:
+    name: Website build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: website
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: website/package-lock.json
+      - run: npm ci
+      - run: npm run build

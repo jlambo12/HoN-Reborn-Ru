@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_134_NIGHT_HOUND",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_NightHound1_description"],
+      "ru": "Night Hound бросает в выбранную точку дымовую бомбу. Стоящие в дыму противники получают Безмолвие, чаще промахиваются атаками и медленнее передвигаются."
+    },
+    {
+      "keys": ["entities:Ability_NightHound1_description_simple"],
+      "ru": "Бросает в выбранную точку ^oSmoke Bomb^*, создавая дым на ^o{4,4.5,5,5.5} секунды^*.\\n\\nПротивники в дыму получают ^oБезмолвие^*, ^o{40,50,60,70}% вероятности промаха^* и ^o-25% скорости передвижения^*."
+    },
+    {
+      "keys": ["entities:Ability_NightHound1_effect_header"],
+      "ru": "Эффекты Smoke Bomb"
+    },
+    {
+      "keys": ["entities:Ability_NightHound1_IMPACT_effect"],
+      "ru": "Создаёт облако дыма радиусом 325 на {4,4.5,5,5.5} секунды и накладывает Smoke Bomb на находящихся внутри существ."
+    },
+    {
+      "keys": ["entities:Ability_NightHound1_tooltip_flavor"],
+      "ru": "Не курить ближе десяти футов!"
+    },
+    {
+      "keys": ["entities:State_NightHound_Ability1_name"],
+      "ru": "Smoke"
+    },
+    {
+      "keys": ["entities:State_NightHound_Ability1_Self_name"],
+      "ru": "Smoke Cover"
+    },
+    {
+      "keys": ["entities:Ability_NightHound2_description"],
+      "ru": "Используя эффект неожиданности, Night Hound телепортируется за спину выбранного существа. Если цель — противник, при появлении он сразу атакует её и наносит дополнительный урон."
+    },
+    {
+      "keys": ["entities:Ability_NightHound2_description_simple"],
+      "ru": "Телепортируется за спину существа. Если цель — противник, атакует её с ^o{25,50,75,100} дополнительного физического урона^*.\\n\\n^gStaff of the Master:^* даёт 2 заряда и позволяет применить Pounce к области, атакуя всех противников в радиусе 300 и автоматически активируя Backstab."
+    },
+    {
+      "keys": ["entities:Ability_NightHound2_description_simple:ult_boost"],
+      "ru": "Телепортируется за спину выбранного существа или в выбранную точку, атакуя с ^o{25,50,75,100} дополнительного физического урона^* ^gвсех противников в радиусе 300^* и активируя против них Backstab."
+    },
+    {
+      "keys": ["entities:Ability_NightHound2_effect_header", "entities:Ability_NightHound3_effect_header", "entities:Ability_NightHound4_effect_header"],
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:Ability_NightHound2_IMPACT_effect"],
+      "ru": "Телепортирует героя за спину цели и атакует её с {25,50,75,100} дополнительного урона."
+    },
+    {
+      "keys": ["entities:Ability_NightHound2_tooltip_flavor"],
+      "ru": "Пс-с! Я прямо за тобой."
+    },
+    {
+      "keys": ["entities:Ability_NightHound3_description"],
+      "ru": "Night Hound мастерски использует любую брешь в обороне. Атакуя цель сзади, он наносит дополнительный урон, зависящий от его ловкости."
+    },
+    {
+      "keys": ["entities:Ability_NightHound3_description_simple"],
+      "ru": "При атаке ^oсо спины^* добавляет к урону атаки ^o{30,60,90,120}% от ловкости^*."
+    },
+    {
+      "keys": ["entities:Ability_NightHound3_ATTACK_effect"],
+      "ru": "При атаке цели со спины добавляет {30,60,90,120}% от своей ловкости как дополнительный урон атаки."
+    },
+    {
+      "keys": ["entities:Ability_NightHound3_tooltip_flavor"],
+      "ru": "Мне нельзя доверять."
+    },
+    {
+      "keys": ["entities:Ability_NightHound4_description"],
+      "ru": "Night Hound учится скрываться ещё лучше и становится невидимым для невооружённого глаза."
+    },
+    {
+      "keys": ["entities:Ability_NightHound4_description_simple"],
+      "ru": "Даёт ^o{6,12,18} ловкости^* и постоянную скрытность с ^oзадержкой исчезновения {4,3.25,2.5} секунды^*.\\n\\n^oБезмолвие^* нарушает скрытность. Способность можно ^oулучшить на уровнях 1, 6 и 11^*."
+    },
+    {
+      "keys": ["entities:Ability_NightHound4_description2"],
+      "ru": "Эту способность можно ^oулучшить на уровнях 1, 6 и 11^*.\\n\\nПассивно даёт постоянную скрытность с ^oзадержкой исчезновения {4,3.25,2.5} секунды^*. Эффект можно отключить.\\n\\nНевидимость перестаёт действовать, когда Night Hound получает Безмолвие. ^oИспользование предметов не нарушает скрытность, за исключением Teleportation Stone^*."
+    },
+    {
+      "keys": ["entities:Ability_NightHound4_tooltip_flavor"],
+      "ru": "Как насчёт игры в прятки?"
+    },
+    {
+      "keys": ["entities:Hero_NightHound_description"],
+      "ru": "Гнусные слухи о противоестественном происхождении преследовали этого гордого львиноподобного воина всю жизнь. Долгое время он служил в Beast Horde тайным разведчиком и убийцей, а затем занял похожее место в новой Legion. Кем бы он ни был, Night Hound — желанный союзник и смертельно опасный враг."
+    },
+    {
+      "keys": ["entities:Hero_NightHound_role"],
+      "ru": "Получив Invisibility, Night Hound навсегда становится невидимым. После этого он может свободно перемещаться по карте, расправляясь с врагами с помощью Pounce и избегая урона благодаря Smoke Bomb."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_035_COMMON_ABILITIES",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_AttributeBoost_name"],
+      "ru": "Attribute Boost"
+    },
+    {
+      "keys": ["entities:Ability_AttributeBoost_description"],
+      "ru": "^yБонусы за уровень:^*\\n+2 к силе\\n+2 к ловкости\\n+2 к интеллекту"
+    },
+    {
+      "keys": ["entities:Ability_AttributeBoost_description_simple"],
+      "ru": "Повышает характеристики героя.\\n\\n^gБонусы за уровень:^*\\n+2 к силе\\n+2 к ловкости\\n+2 к интеллекту"
+    },
+    {
+      "keys": ["entities:Ability_AutomatedCourier_name"],
+      "ru": "Use Courier"
+    },
+    {
+      "keys": ["entities:Ability_AutomatedCourier_description"],
+      "ru": "Доставляет предметы из вашего тайника.\\n\\nКурьер виден противнику, только когда тот видит вашего основного героя."
+    },
+    {
+      "keys": ["entities:Ability_AutomatedCourier_description_simple", "entities:Ability_AutomatedCourier_IMPACT_effect"],
+      "ru": "Приказывает курьеру доставить герою предметы из тайника.\\n\\nКурьер виден противнику, только когда тот видит вашего основного героя."
+    },
+    {
+      "keys": ["entities:Ability_AutomatedCourier_name:automated_courier_cancel"],
+      "ru": "Return Home"
+    },
+    {
+      "keys": ["entities:Ability_AutomatedCourier_description_simple:automated_courier_cancel", "entities:Ability_AutomatedCourier_IMPACT_effect:automated_courier_cancel"],
+      "ru": "Приказывает курьеру остановиться и вернуться домой.\\n\\nКурьер виден противнику, только когда тот видит вашего основного героя."
+    },
+    {
+      "keys": ["entities:Ability_AutomatedCourier_name:return_trip"],
+      "ru": "Return to Hero"
+    },
+    {
+      "keys": ["entities:Ability_AutomatedCourier_description_simple:return_trip", "entities:Ability_AutomatedCourier_IMPACT_effect:return_trip"],
+      "ru": "Приказывает курьеру остановиться и вернуться к вашему герою.\\n\\nКурьер виден противнику, только когда тот видит вашего основного героя."
+    }
+  ]
+}

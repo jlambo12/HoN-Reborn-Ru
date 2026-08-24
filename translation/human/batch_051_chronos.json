@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_051_CHRONOS",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_Chronos1_name"], "ru": "Time Leap"},
+    {"keys": ["entities:Ability_Chronos1_description"], "ru": "Chronos перемещается сквозь пространство и время в выбранную точку и по прибытии замедляет окружающих противников."},
+    {"keys": ["entities:Ability_Chronos1_description_simple"], "ru": "^oПрыгает^* в выбранную точку, ^oпо прибытии^* наносит окружающим противникам ^o{80,120,160,200} магического урона^* и на 3 секунды ^oзамедляет их передвижение на {20,25,30,35}%^*."},
+    {"keys": ["entities:Ability_Chronos1_IMPACT_effect"], "ru": "Телепортируется в выбранную точку. По прибытии наносит противникам в области ^o{80,120,160,200} магического урона^* и на 3 секунды накладывает на них ^oTime Sap^*."},
+    {"keys": ["entities:Ability_Chronos1_effect_header"], "ru": "Time Sap"},
+    {"keys": ["entities:Ability_Chronos1_tooltip_flavor"], "ru": "Всё дело в потоковом конденсаторе!"},
+
+    {"keys": ["entities:Ability_Chronos2_name"], "ru": "Rewind"},
+    {"keys": ["entities:Ability_Chronos2_description_simple"], "ru": "Даёт ^o25% шанс^* быстро ^oвосстановить {65,70,75,80}% только что потерянного здоровья^*."},
+    {"keys": ["entities:Ability_Chronos2_DAMAGED_effect"], "ru": "С вероятностью 25% восстанавливает {65,70,75,80}% здоровья, потерянного от одного источника урона. Лечение происходит со скоростью ^o{4,6,8,10}% максимального здоровья^* в секунду.\\n\\nЭффект не передаётся иллюзиям."},
+    {"keys": ["entities:Ability_Chronos2_effect_header"], "ru": "Эффекты состояния"},
+    {"keys": ["entities:Ability_Chronos2_tooltip_flavor"], "ru": "Меня не достать!"},
+
+    {"keys": ["entities:Ability_Chronos3_name"], "ru": "Curse of Ages"},
+    {"keys": ["entities:Ability_Chronos3_description"], "ru": "Каждым ударом Chronos может похитить у вражеского героя частицу времени и ненадолго остановить его."},
+    {"keys": ["entities:Ability_Chronos3_description_simple"], "ru": "Атаки с ^o25% вероятностью^* вызывают ^yBash^*: ^oоглушают цель на 1 секунду^* и наносят ^o{45,70,95,120} дополнительного магического урона^*.\\n\\nЕсли на цель действует Chronofield, вероятность срабатывания увеличивается в 3x.\\n\\n^rНе складывается^* с другими источниками ^yBash^*."},
+    {"keys": ["entities:Ability_Chronos3_ATTACK_IMPACT_effect"], "ru": "Атаки с ^o25% вероятностью^* наносят вражескому юниту {45,70,95,120} дополнительного магического урона и оглушают его на 1 секунду.\\n\\nЕсли на цель действует Chronofield, вероятность срабатывания увеличивается в 3x."},
+    {"keys": ["entities:Ability_Chronos3_description2"], "ru": "Эта способность обладает свойствами ^yBash^*. Предметы и способности со свойствами ^yBash^* имеют общую внутреннюю перезарядку."},
+    {"keys": ["entities:Ability_Chronos3_tooltip_flavor"], "ru": "Наслаждайся пространственно-временным континуумом."},
+
+    {"keys": ["entities:Ability_Chronos4_name"], "ru": "Chronofield"},
+    {"keys": ["entities:Ability_Chronos4_name:ult_boost"], "ru": "^gChronofield Deluxe*^*"},
+    {"keys": ["entities:Ability_Chronos4_description"], "ru": "Chronos создаёт энергетическое поле, существующее вне времени. Все неподконтрольные ему юниты внутри замирают, но сам Chronos невосприимчив к эффекту разлома."},
+    {"keys": ["entities:Ability_Chronos4_description_simple"], "ru": "Создаёт в выбранной точке ^oChronofield^* на ^o{3,4,5} секунд^*. Все неподконтрольные вам юниты внутри ^oзамирают^*. Находясь в Chronofield, Chronos получает ^oUnitwalking и 1000 скорости передвижения^*.\\n\\n^gStaff of the Master^* увеличивает ^oдлительность до {4,5,6} секунд^* и сокращает ^oперезарядку до 120 секунд^*. Союзники замедляются вместо того, чтобы замереть."},
+    {"keys": ["entities:Ability_Chronos4_description_simple:ult_boost"], "ru": "Создаёт в выбранной точке ^oChronofield^*. Все противники внутри ^oзамирают^* на ^g{4,5,6} секунд, а союзники значительно замедляются^*. Находясь в Chronofield, Chronos получает ^oUnitwalking и 1000 скорости передвижения^*."},
+    {"keys": ["entities:Ability_Chronos4_description2"], "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* увеличивает длительность с {3,4,5} до {4,5,6} секунд, сокращает перезарядку до 120 секунд, а вместо остановки союзников снижает их скорость передвижения, атаки и применения способностей на 80%."},
+    {"keys": ["entities:Ability_Chronos4_description2:ult_boost"], "ru": "\\r"},
+    {"keys": ["entities:Ability_Chronos4_effect_header"], "ru": "Эффекты Chronofield"},
+    {"keys": ["entities:Ability_Chronos4_effect_header2"], "ru": "Эффекты Time Dilation"},
+    {"keys": ["entities:Ability_Chronos4_IMPACT_effect"], "ru": "Создаёт поле на ^o{3,4,5} секунд^*. Оно накладывает Chronofield на всех юнитов внутри, кроме Chronos и подконтрольных ему юнитов. Находясь в Chronofield, Chronos также получает ^oUnitwalking и 1000 скорости передвижения^*."},
+    {"keys": ["entities:Ability_Chronos4_IMPACT_effect:ult_boost"], "ru": "Создаёт поле на ^g{4,5,6}^* секунд. Оно накладывает ^gChronofield на противников, а Time Dilation — на союзников^* внутри, кроме Chronos и подконтрольных ему юнитов.\\n\\nНаходясь в Chronofield, Chronos также получает ^oUnitwalking и 1000 скорости передвижения^*."},
+    {"keys": ["entities:Ability_Chronos4_tooltip_flavor"], "ru": "Добро пожаловать в Громовой купол!"}
+  ]
+}

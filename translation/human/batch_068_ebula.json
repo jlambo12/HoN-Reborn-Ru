@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_068_EBULA",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_Ebula1_name"], "ru": "Toxic Spit"},
+    {"keys": ["entities:Ability_Ebula1_description"], "ru": "Добавляет атакам урон ядом."},
+    {"keys": ["entities:Ability_Ebula1_description_simple"], "ru": "Атаки пассивно наносят ^o2 магического урона в секунду^*."},
+    {"keys": ["entities:Ability_Ebula1_ATTACK_IMPACT_effect"], "ru": "Накладывает Toxic Spit на 20 секунд на обычных юнитов и на 10 секунд на героев."},
+    {"keys": ["entities:Ability_Ebula1_effect_header"], "ru": "Эффекты Toxic Spit"}
+  ]
+}

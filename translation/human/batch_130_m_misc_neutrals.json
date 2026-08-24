@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_130_M_MISC_NEUTRALS",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:State_MidWarsBeta_name"],
+      "ru": "Mid Wars Beta"
+    },
+    {
+      "keys": ["entities:State_MidWarsBeta_description"],
+      "ru": "(режим Blitz)"
+    },
+    {
+      "keys": ["entities:State_MidWarsBeta_FRAME_effect"],
+      "ru": "+100% урона от атаки"
+    },
+    {
+      "keys": ["entities:State_MasterofArms_Ability2_Chemical_FRAME_effect"],
+      "ru": "{20,35,50,65} физического урона в секунду"
+    },
+    {
+      "keys": ["entities:Ability_ManiacLord1_description"],
+      "ru": "Болезненный яд Dreadbeetle Queen замедляет жертву и позволяет королеве восстанавливать здоровье, пока она пирует."
+    },
+    {
+      "keys": ["entities:Ability_ManiacLord1_description_simple", "entities:Ability_ManiacLord1_IMPACT_effect"],
+      "ru": "Впрыскивает выбранному противнику Dreadvenom, ^oснижая его скорость передвижения на 40%^* на 4 секунды.\\n\\nАтаки и способности по поражённой цели восстанавливают атакующему здоровье в размере ^o40% нанесённого урона^*."
+    },
+    {
+      "keys": ["entities:Ability_ManiacLord2_description"],
+      "ru": "Излучает ауру, которая повышает скорость атаки ближайших союзников и даёт им вампиризм."
+    },
+    {
+      "keys": ["entities:Ability_ManiacLord2_description_simple"],
+      "ru": "Даёт всем ближайшим союзникам ^o15% скорости атаки^* и ^o10% вампиризма^*."
+    },
+    {
+      "keys": ["entities:Ability_Minotaur1_description"],
+      "ru": "Сотрясает землю, нанося урон ближайшим противникам и оглушая их."
+    },
+    {
+      "keys": ["entities:Ability_Minotaur1_description_simple"],
+      "ru": "При применении наносит ближайшим вражеским героям ^o25 магического урона^* и ^oоглушает их на 2 секунды^*. Остальные противники оглушаются на 3 секунды."
+    },
+    {
+      "keys": ["entities:Ability_Minotaur1_IMPACT_effect"],
+      "ru": "Наносит целям в радиусе 25 магического урона и оглушает на 2 секунды, а существ, не являющихся героями, — на 3 секунды."
+    },
+    {
+      "keys": ["entities:Ability_Minotaur2_description"],
+      "ru": "Повышает скорость атаки ближайших союзников."
+    },
+    {
+      "keys": ["entities:Ability_Minotaur2_description_simple"],
+      "ru": "Пассивно даёт ближайшим союзникам ^o15 скорости атаки^*."
+    },
+    {
+      "keys": ["entities:Ability_Minotaur2_effect_header"],
+      "ru": "Эффекты состояния"
+    }
+  ]
+}

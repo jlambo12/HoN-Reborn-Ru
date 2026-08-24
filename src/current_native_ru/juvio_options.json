@@ -1,0 +1,638 @@
+{
+  "title": "Настройки Juvio",
+  "icon": "/ui/fe3/elements/juvio_logo.tga",
+  "categories": [
+    {
+      "title": "options_dynamic_graphics_header",
+      "subcategories": [
+        {
+          "title": "options_dynamic_graphics_subtitle",
+          "options": [
+            {
+              "style": "options_dropdown",
+              "label": "options_label_display",
+              "tooltip": "options_display_tip",
+              "cvar": "vid_display",
+              "template": "options_dropdown_item",
+              "values": "GetDisplays()",
+              "onchangelua": "SetResolutionToHighestSupportedValue() SetRefreshRateToHighestSupportedValue()",
+              "value": "GetCurrentDisplay()",
+              "apply": "ApplyVideoSettings()"
+            },
+            {
+              "style": "options_dropdown",
+              "label": "options_label_window_mode",
+              "tooltip": "options_window_mode_tip",
+              "cvar": "vid_windowMode",
+              "template": "options_dropdown_item",
+              "value": "GetCurrentWindowMode()",
+              "onchangelua": "SetResolutionToHighestSupportedValue() SetRefreshRateToHighestSupportedValue()",
+              "apply": "ApplyVideoSettings()",
+              "values": [
+                {"0": "Полноэкранный режим (без рамки)"},
+                {"2": "Оконный режим"}
+              ]
+            },
+            {
+              "style": "options_dropdown",
+              "label": "options_label_resolution",
+              "tooltip": "options_resolution_tip",
+              "cvar": "vid_resolution",
+              "template": "options_dropdown_item",
+              "values": "GetResolutions()",
+              "value": "GetCurrentResolution()",
+              "onchangelua": "SetRefreshRateToHighestSupportedValue()",
+              "apply": "ApplyVideoSettings()"
+            },
+            {
+              "style": "options_dropdown",
+              "label": "options_label_max_aspect_ratio",
+              "tooltip": "options_max_aspect_ratio_tip",
+              "cvar": "vid_maxAspectRatio",
+              "template": "options_dropdown_item",
+              "values": [
+                {"1.7778": "16:9"},
+                {"2.3888": "21:9"}
+              ]
+            },
+            {
+              "style": "options_dropdown",
+              "label": "options_label_refresh_rate",
+              "tooltip": "options_tip_refresh_rate",
+              "cvar": "vid_refreshRate",
+              "template": "options_dropdown_item",
+              "values": "GetRefreshRates()",
+              "enabled": "CanChangeRefreshRate()",
+              "value": "GetCurrentRefreshRate()",
+              "apply": "ApplyVideoSettings()"
+            },
+            {
+              "style": "options_slider",
+              "label": "options_slider_max_ingame_framerate",
+              "tooltip": "options_slider_max_ingame_framerate_tip",
+              "cvar": "host_maxFPS",
+              "defaultvalue": 999,
+              "minvalue": 30,
+              "maxvalue": 999,
+			  "step": 10,
+			  "precision": 1
+            },
+            {
+              "style": "options_slider",
+              "label": "options_slider_max_menu_framerate",
+              "tooltip": "options_slider_max_menu_framerate_tip",
+              "cvar": "host_maxFPSMainMenu",
+              "defaultvalue": 120,
+              "minvalue": 30,
+              "maxvalue": 1000,
+			  "step": 10,
+			  "precision": 1
+            },
+            {
+              "style": "options_slider",
+              "label": "options_slider_max_ui_framerate",
+              "tooltip": "options_slider_max_ui_framerate_tip",
+              "cvar": "host_maxFPSUI",
+              "defaultvalue": 999,
+              "minvalue": 30,
+              "maxvalue": 999,
+			  "step": 10,
+			  "precision": 1
+            }
+          ]
+        },
+        {
+          "title": "options_submen_video",
+          "options": [
+            {
+              "style": "options_dropdown",
+              "template": "options_dropdown_item",
+              "label": "options_checkbox_frame_queuing",
+              "tooltip": "options_frame_queuing_tip",
+              "cvar": "d11_flush",
+              "values": [
+                {"0": "options_checkbox_frame_queuing_enabled"},
+                {"1": "options_checkbox_frame_queuing_disabled_flush_frame_end"},
+                {"2": "options_checkbox_frame_queuing_disabled_flush_frame_start"}
+              ]
+            },
+            {
+              "style": "options_slider",
+              "label": "options_hue_tip_header",
+              "tooltip": "options_hue_tip",
+              "cvar": "vid_hue",
+              "defaultvalue": 0.0,
+              "minvalue": 0.0,
+              "maxvalue": 359.9,
+              "step": 0.01,
+              "precision": 1
+            },
+            {
+              "style": "options_slider",
+              "label": "options_saturation_tip_header",
+              "tooltip": "options_saturation_tip",
+              "cvar": "vid_saturation",
+              "defaultvalue": 0.85,
+              "minvalue": 0.0,
+              "maxvalue": 2.0,
+              "step": 0.01,
+              "precision": 1
+            },
+            {
+              "style": "options_slider",
+              "label": "options_value_tip_header",
+              "tooltip": "options_value_tip",
+              "cvar": "vid_value",
+              "defaultvalue": 1.0,
+              "minvalue": 0.0,
+              "maxvalue": 2.0,
+              "step": 0.01,
+              "precision": 1
+            },
+            {
+              "style": "options_slider",
+              "label": "options_vibrance_tip_header",
+              "tooltip": "options_vibrance_tip",
+              "cvar": "vid_vibrance",
+              "defaultvalue": 0.4,
+              "minvalue": -1.0,
+              "maxvalue": 1.0,
+              "step": 0.01,
+              "precision": 1
+            },
+            {
+              "style": "options_slider",
+              "label": "options_brightMin_tip_header",
+              "tooltip": "options_brightMin_tip",
+              "cvar": "vid_brightMin",
+              "defaultvalue": 1.0,
+              "minvalue": 0.01,
+              "maxvalue": 2.0,
+              "step": 0.01,
+              "precision": 1
+            },
+            {
+              "style": "options_slider",
+              "label": "options_brightMax_tip_header",
+              "tooltip": "options_brightMax_tip",
+              "cvar": "vid_brightMax",
+              "defaultvalue": 1.0,
+              "minvalue": 1.0,
+              "maxvalue": 3.0,
+              "step": 0.01,
+              "precision": 1
+            },
+            {
+              "style": "options_slider",
+              "label": "options_brightScale_tip_header",
+              "tooltip": "options_brightScale_tip",
+              "cvar": "vid_brightScale",
+              "defaultvalue": 0.6,
+              "minvalue": 0.01,
+              "maxvalue": 2.0,
+              "step": 0.01,
+              "precision": 1
+            },
+            {
+              "style": "options_slider",
+              "label": "options_cursor_size",
+              "tooltip": "options_cursor_size_tip",
+              "cvar": "vid_cursorSize",
+              "defaultvalue": 1.0,
+              "minvalue": 0.5,
+              "maxvalue": 4.0,
+              "step": 0.1,
+              "precision": 1,
+              "onchangelua": "InvalidateCursor()"
+            },
+            {
+              "style": "options_checkbox",
+              "label": "options_vsync",
+              "tooltip": "options_vsync_tip_text",
+              "cvar": "d11_presentInterval"
+            },
+            {
+              "style": "options_checkbox",
+              "label": "options_checkbox_graphics_triple_buffering",
+              "tooltip": "options_checkbox_graphics_triple_buffering_tip",
+              "cvar": "d11_tripleBuffering",
+              "onchangelua": "ApplyVideoSettings()"
+            },
+            {
+              "style": "options_checkbox",
+              "label": "options_checkbox_shadows",
+              "tooltip": "options_checkbox_shadows_tip",
+              "cvar": "vid_shadows"
+            }
+          ]
+        },
+        {
+          "title": "mainlobby_label_more",
+          "options": [
+            {
+              "label": "options_shader_water_quality",
+              "tooltip": "options_shader_water_quality_tip",
+              "style": "options_dropdown",
+              "cvar": "vid_shaderWaterQuality",
+              "template": "options_dropdown_item",
+              "values": [
+                {"3": "options_low"},
+                {"2": "options_medium"},
+                {"1": "options_high"}
+              ]
+            },
+            {
+              "label": "options_shadow_quality",
+              "tooltip": "options_shadow_quality_tip",
+              "style": "options_dropdown",
+              "cvar": "options_shadowQuality",
+              "template": "options_dropdown_item",
+              "onchangelua": "SetShadowQualityCvars()",
+              "values": [
+                {"0": "options_low"},
+                {"1": "options_medium"},
+                {"2": "options_high"},
+                {"3": "options_ultra"}
+              ]
+            },
+            {
+              "label": "options_shader_quality",
+              "tooltip": "options_shader_quality_tip",
+              "style": "options_dropdown",
+              "cvar": "options_shaderQuality",
+              "template": "options_dropdown_item",
+              "onchangelua": "SetShaderQualityCvars()",
+              "values": [
+                {"3": "options_low"},
+                {"1": "options_medium"},
+                {"0": "options_high"}
+              ]
+            },
+            {
+              "label": "options_label_texture_filtering",
+              "tooltip": "options_label_texture_filtering_tip",
+              "style": "options_dropdown",
+              "cvar": "vid_textureFiltering",
+              "template": "options_dropdown_item",
+              "values": "GetTextureFilteringModes()"
+            },
+            {
+              "label": "options_label_anti_aliasing",
+              "tooltip": "options_label_anti_aliasing_tip",
+              "style": "options_dropdown",
+              "cvar": "vid_antialiasing",
+              "template": "options_dropdown_item",
+              "values": "GetAntiAliasingModes()",
+              "onchangelua": "ApplyVideoSettings()"
+            },
+            {
+              "label": "options_rim_lighting",
+              "tooltip": "options_rim_lighting_tip",
+              "style": "options_checkbox",
+              "cvar": "vid_shaderRimLighting"
+            },
+            {
+              "label": "options_display_foliage",
+              "tooltip": "options_foliage_tip_text",
+              "style": "options_checkbox",
+              "cvar": "gfx_foliage"
+            },
+            {
+              "label": "options_post_sharpen",
+              "tooltip": "options_post_sharpen_tip",
+              "style": "options_checkbox",
+              "cvar": "vid_sharpen"
+            },
+            {
+              "label": "options_post_processing",
+              "tooltip": "options_post_processing_tip",
+              "style": "options_checkbox",
+              "cvar": "vid_postEffects"
+            }
+          ]
+        },
+        {
+          "title": "options_submen_hdr",
+          "options": [
+            {
+              "style": "options_checkbox",
+              "label": "options_hdr_enable",
+              "tooltip": "options_hdr_enable_tip",
+              "cvar": "vid_hdr",
+              "onchangelua": "ApplyVideoSettings()"
+            },
+            {
+              "style": "options_dropdown",
+              "template": "options_dropdown_item",
+              "label": "options_hdr_mode",
+              "tooltip": "options_hdr_mode_tip",
+              "cvar": "vid_hdrMode",
+              "onchangelua": "ApplyVideoSettings()",
+              "values": [
+                {"0": "scRGB (FP16)"},
+                {"1": "HDR10 (PQ)"}
+              ]
+            },
+            {
+              "style": "options_slider",
+              "label": "options_hdr_paperwhite",
+              "tooltip": "options_hdr_paperwhite_tip",
+              "cvar": "vid_hdrPaperWhiteNits",
+              "defaultvalue": 200,
+              "minvalue": 80,
+              "maxvalue": 480,
+              "step": 5,
+              "precision": 1
+            },
+            {
+              "style": "options_slider",
+              "label": "options_hdr_peak",
+              "tooltip": "options_hdr_peak_tip",
+              "cvar": "vid_hdrPeakNits",
+              "defaultvalue": 1000,
+              "minvalue": 400,
+              "maxvalue": 4000,
+              "step": 50,
+              "precision": 1
+            },
+            {
+              "style": "options_dropdown",
+              "template": "options_dropdown_item",
+              "label": "options_hdr_tonemap",
+              "tooltip": "options_hdr_tonemap_tip",
+              "cvar": "vid_tonemap",
+              "values": [
+                {"0": "Clamp"},
+                {"1": "Filmic"},
+                {"2": "Reinhard"}
+              ]
+            },
+            {
+              "style": "options_slider",
+              "label": "options_hdr_exposure",
+              "tooltip": "options_hdr_exposure_tip",
+              "cvar": "vid_tonemapExposure",
+              "defaultvalue": 1.0, "minvalue": 0.25, "maxvalue": 4.0, "step": 0.05, "precision": 2
+            },
+            {
+              "style": "options_slider",
+              "label": "options_hdr_contrast",
+              "tooltip": "options_hdr_contrast_tip",
+              "cvar": "vid_hdrContrast",
+              "defaultvalue": 1.0, "minvalue": 0.5, "maxvalue": 2.0, "step": 0.01, "precision": 2
+            },
+            {
+              "style": "options_slider",
+              "label": "options_hdr_saturation",
+              "tooltip": "options_hdr_saturation_tip",
+              "cvar": "vid_hdrSaturation",
+              "defaultvalue": 1.1, "minvalue": 0.0, "maxvalue": 2.0, "step": 0.01, "precision": 2
+            },
+            {
+              "style": "options_slider",
+              "label": "options_hdr_highlight_boost",
+              "tooltip": "options_hdr_highlight_boost_tip",
+              "cvar": "vid_hdrHighlightBoost",
+              "defaultvalue": 1.0, "minvalue": 0.25, "maxvalue": 4.0, "step": 0.05, "precision": 2
+            },
+            {
+              "style": "options_slider",
+              "label": "options_hdr_highlight_desat",
+              "tooltip": "options_hdr_highlight_desat_tip",
+              "cvar": "vid_hdrHighlightDesat",
+              "defaultvalue": 0.0, "minvalue": 0.0, "maxvalue": 1.0, "step": 0.01, "precision": 2
+            },
+            {
+              "style": "options_slider",
+              "label": "options_hdr_black_point",
+              "tooltip": "options_hdr_black_point_tip",
+              "cvar": "vid_hdrBlackPoint",
+              "defaultvalue": 0.0, "minvalue": -0.05, "maxvalue": 0.05, "step": 0.005, "precision": 3
+            },
+            {
+              "style": "options_slider",
+              "label": "options_hdr_gamut",
+              "tooltip": "options_hdr_gamut_tip",
+              "cvar": "vid_hdrGamutExpand",
+              "defaultvalue": 0.0, "minvalue": -1.0, "maxvalue": 1.0, "step": 0.05, "precision": 2
+            },
+            {
+              "style": "options_checkbox",
+              "label": "options_hdr_tonemap_ui",
+              "tooltip": "options_hdr_tonemap_ui_tip",
+              "cvar": "vid_tonemapUI"
+            },
+            {
+              "style": "options_checkbox",
+              "label": "options_hdr_sdr_grade",
+              "tooltip": "options_hdr_sdr_grade_tip",
+              "cvar": "vid_sdrGrade",
+              "onchangelua": "ApplyVideoSettings()"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "options_button_sound",
+      "subcategories": [
+        {
+          "title": "options_submen_vol",
+          "options": [
+            {
+              "style": "options_slider",
+              "label": "options_master_volume_tip_header",
+              "cvar": "sound_masterVolume",
+              "tooltip": "options_master_volume_tip",
+              "defaultvalue": 60,
+              "multiplier": 100
+            },
+            {
+              "style": "options_slider",
+              "label": "options_interface_volume_tip_header",
+              "cvar": "sound_interfaceVolume",
+              "tooltip": "options_interface_volume_tip",
+              "defaultvalue": 60,
+              "multiplier": 100
+            },
+            {
+              "style": "options_slider",
+              "label": "options_sound_effects_tip_header",
+              "cvar": "sound_sfxVolume",
+              "tooltip": "options_sound_effects_tip",
+              "defaultvalue": 75,
+              "multiplier": 100
+            },
+            {
+              "style": "options_slider",
+              "label": "options_label_music_volume_tip_header",
+              "cvar": "sound_musicVolume",
+              "tooltip": "options_label_music_volume_tip",
+              "defaultvalue": 30,
+              "multiplier": 100
+            },
+            {
+              "style": "options_slider",
+              "label": "options_label_voice_chat_volume",
+              "tooltip": "options_voice_chat_volume_tip",
+              "cvar": "voice_volume",
+              "defaultvalue": 100,
+              "multiplier": 100
+            },
+            {
+              "style": "options_checkbox",
+              "label": "options_checkbox_sound_mute",
+              "tooltip": "options_checkbox_sound_mute_tip",
+              "cvar": "sound_mute"
+            },
+            {
+              "style": "options_checkbox",
+              "label": "options_checkbox_sound_muteMusic",
+              "tooltip": "options_checkbox_sound_muteMusic_tip",
+              "cvar": "sound_muteMusic"
+            },
+            {
+              "style": "options_slider",
+              "label": "options_slider_sound_quality",
+              "tooltip": "options_slider_sound_quality_tip",
+              "cvar": "options_soundQuality",
+              "defaultvalue": 2,
+              "step":1,
+              "minvalue": 0,
+              "maxvalue": 2,
+              "onchangelua": "SetSoundQualityCvars()",
+              "values": [
+                {"0": "Низкое"},
+                {"1": "Среднее"},
+                {"2": "Высокое"}
+              ]
+            }
+          ]
+        },
+        {
+          "title": "options_button_sound",
+          "options": [
+            {
+              "style": "options_dropdown",
+              "label": "options_label_playback_driver",
+              "tooltip": "options_playback_driver_tip",
+              "cvar": "sound_playbackDriver",
+              "template": "options_dropdown_item",
+              "values": "GetSoundPlaybackDrivers()",
+              "onchangelua": "UpdateSoundPlaybackDriver()",
+              "apply": "ApplySoundPlaybackDriver()"
+            },
+            {
+              "style": "options_dropdown",
+              "label": "options_label_recording_driver",
+              "tooltip": "options_recording_drive_tip",
+              "cvar": "voice_recordingDriver",
+              "template": "options_dropdown_item",
+              "values": "GetVoiceRecordingDrivers()",
+              "onchangelua": "UpdateVoiceRecordingDriver()",
+              "apply": "ApplyVoiceRecordingDriver()"
+            },
+            {
+              "style": "options_slider",
+              "label": "options_sound_channels_tip_header",
+              "tooltip": "options_sound_channels_tip",
+              "cvar": "sound_numChannels",
+              "defaultvalue": 128,
+              "minvalue": 32,
+              "maxvalue": 256
+            },
+            {
+              "style": "options_checkbox",
+              "label": "options_checkbox_disable_all_sounds",
+              "tooltip": "options_disable_all_sounds_tip",
+              "cvar": "sound_disable"
+            }
+          ]
+        },
+        {
+          "title": "options_button_voice",
+          "options": [
+            {
+              "label": "options_label_mic_on_sensitivity",
+              "tooltip": "options_mic_on_sensitivity_tip",
+              "style": "options_slider",
+              "cvar": "voice_activationStartLevel",
+              "defaultvalue": 0.6,
+              "step": 0.1
+            },
+            {
+              "label": "options_label_mic_off_time",
+              "tooltip": "options_mic_off_time_tip",
+              "style": "options_slider",
+              "cvar": "voice_activationDuration",
+              "defaultvalue": 200.0,
+              "minvalue": 0.0,
+              "maxvalue": 2000.0
+            },
+            {
+              "label": "options_label_microphone_gain",
+              "tooltip": "options_mic_gain_tip",
+              "style": "options_slider",
+              "cvar": "voice_micGainDB",
+              "defaultvalue": 0.0,
+              "minvalue": -20.0,
+              "maxvalue": 20.0,
+              "step": 0.1
+            },
+            {
+              "label": "options_label_auto_sound_dampen",
+              "tooltip": "options_auto_dampen_tip",
+              "style": "options_slider",
+              "cvar": "voice_audioDampen",
+              "defaultvalue": 0.6,
+              "step": 0.1
+            },
+            {
+              "style": "options_voice_test",
+              "table": "game",
+              "label": "options_label_test_mic_level",
+              "tooltip": "options_test_mic_level_tip"
+            },
+            {
+              "style": "options_dropdown",
+              "label": "options_voice_activation",
+              "tooltip": "options_voice_activation_tip",
+              "cvar": "voice_voiceActivation",
+              "template": "options_dropdown_item",
+              "values": [
+                {"false": "options_voice_activation_push_to_talk"},
+                {"true": "options_voice_activation_automatic"}
+              ],
+              "maxlistheight": 2
+            },
+            {
+              "style": "options_keybind",
+              "table": "game",
+              "action": "VoicePushToTalk",
+              "label": "options_label_push_to_talk_keybind",
+              "tooltip": "options_push_to_talk_tip",
+              "usemodifiers": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "options_submen_friendsclans",
+      "subcategories":
+      [
+        {
+          "title": "options_submen_chat",
+          "options": [
+            {
+              "style": "options_checkbox",
+              "label": "options_checkbox_censor_chat",
+              "tooltip": "options_screen_censor_chat_tip",
+              "cvar": "cg_censorChat"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

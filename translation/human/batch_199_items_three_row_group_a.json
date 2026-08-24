@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_199_ITEMS_THREE_ROW_GROUP_A",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Item_AmuletOfExile_description"],
+      "english_hash": "e849eaecad023e7a192f61f6591072254dd174b7a9e5db16396139dccad221be",
+      "ru": "За каждого убитого вражеского юнита вы получаете 3 маны."
+    },
+    {
+      "keys": ["entities:Item_AmuletOfExile_description_simple"],
+      "english_hash": "1671dd1520a84aefde73be893a6fc1421b85d4947a5ba268ea9d19ec319da93d",
+      "ru": "3 силы\\n3 ловкости\\n6 интеллекта"
+    },
+    {
+      "keys": ["entities:Item_CorruptedSword_IMPACT_effect"],
+      "english_hash": "bde33865d447133f75df892836edfa414401e0a0d2d25923317040ebdf328764",
+      "ru": "Активируйте дважды (или выберите себя целью), чтобы поглотить предмет и ^oнавсегда получить 35 урона^*. Эффект складывается."
+    },
+    {
+      "keys": ["entities:Item_CorruptedSword_description_simple"],
+      "english_hash": "9048b6b88b2fbf3895864e5102c0fe185b963baca8d5657b2cd9e2f088e3edd8",
+      "ru": "Можно поглотить, чтобы навсегда увеличить урон."
+    },
+    {
+      "keys": ["entities:Item_CorruptedSword_effect_header"],
+      "english_hash": "272467fcf3c82f92427c1f9bc9255a0150500a9c8d40750cbc5c9f01dd7d1c65",
+      "ru": "Эффекты Corrupted Sword"
+    },
+    {
+      "keys": ["entities:Item_DesertScream_IMPACT_effect"],
+      "english_hash": "d7e6d87edc47b8b3cbfcaaae7b9f42027f42c80aa84b92cd716e197127e7015b",
+      "ru": "Запускает снаряд в выбранную точку. С ^oсоюзников^* снимаются отрицательные эффекты, и на 1,5 секунды их скорость передвижения повышается на 40%. С ^oврагов^* снимаются положительные эффекты; на 1,5 секунды они обездвиживаются, становятся видимыми в тумане войны и раскрываются."
+    },
+    {
+      "keys": ["entities:Item_DesertScream_description"],
+      "english_hash": "c517abf54d02da0c555b766dec2eb083891e1b41778d9ee3655d2eaa517ae19d",
+      "ru": "Увеличивает дальность применения способностей и предметов на 200.\\n\\nБонус от нескольких таких предметов не складывается.\\n\\n^rНе увеличивает дальность применения^* Stagger героя Drunken Master."
+    },
+    {
+      "keys": ["entities:Item_DesertScream_description_simple"],
+      "english_hash": "519045c5e8939b1e587a950206a37601e47cb213652ec0299a78529f522201da",
+      "ru": "Обездвиживает врагов и рассеивает эффекты, увеличивает дальность применения."
+    },
+    {
+      "keys": ["entities:Item_FauxBow_description"],
+      "english_hash": "fdd71911ba5ab93c3eea7c86cd07b6d9fa31fc3694074bf8d47694662eaaf5a0",
+      "ru": "Даёт ^o100 дальности атаки^* героям ^gдальнего боя^* и ^o50 дальности атаки^* героям ^gближнего боя^*."
+    },
+    {
+      "keys": ["entities:Item_FauxBow_description2"],
+      "english_hash": "37490e8f3a1ad4061e37258097546fa0c416195dd4aa9031176f1011f9187403",
+      "ru": "Этот предмет обладает свойством ^yувеличения дальности атаки^*. Эффекты увеличения дальности атаки не складываются."
+    },
+    {
+      "keys": ["entities:Item_FauxBow_description_simple"],
+      "english_hash": "d2232cd3d184176db8346a13f49ed1f01b4bcc73d3454f824503a6b17462b362",
+      "ru": "Даёт ловкость и скорость атаки. Увеличивает дальность атаки героев дальнего боя."
+    },
+    {
+      "keys": ["entities:Item_Firebrand_description2"],
+      "english_hash": "1e536c2960eb473dbbdcc63b2a02abadcbaae554cef4964a30e4b2a2c4039c46",
+      "ru": "Бонус предмета к ^yскорости передвижения^* не складывается сам с собой или с предметами, в которые он улучшается."
+    },
+    {
+      "keys": ["entities:Item_Firebrand_description_simple"],
+      "english_hash": "ede86d66694c5340dd478b0e8cf47b470af71f7f4cb5b9bddf2231568f1d0e29",
+      "ru": "^oМодификатор Firebrand^*\\nУвеличивает ловкость, скорость передвижения и скорость атаки."
+    },
+    {
+      "keys": ["entities:Item_FluffyFletchingArrows_IMPACT_effect"],
+      "english_hash": "7add6958622e30360234dba400092da2ae3cbfc4ed21d173708382181308de4e",
+      "ru": "+100 дальности атаки\\n\\nАктивируйте, чтобы получить ^o+500/250 дальности атаки^* на 4 секунды, но на это время потерять ^o50% скорости передвижения^*."
+    },
+    {
+      "keys": ["entities:Item_FluffyFletchingArrows_description2"],
+      "english_hash": "f62388a87a7eb4fdc2a056e02d97046397ba2b38c05cd433270e7a53a39ce7e5",
+      "ru": "^yБонус этого предмета к дальности атаки складывается с другими источниками дополнительной дальности атаки.^*"
+    },
+    {
+      "keys": ["entities:Item_Frozenlight_FRAME_effect"],
+      "english_hash": "5a72ff83ee4f38ce959ce6862a21d01e6251cf94f424e8bf901d2e8bb494b3d1",
+      "ru": "10% магического вампиризма от непериодического урона (3% против юнитов, не являющихся героями)"
+    },
+    {
+      "keys": ["entities:Item_Frozenlight_description"],
+      "english_hash": "0a161cdc34e214ac957b4e9a6c16f326faa3011712c7fb9c8b7fd27f06271571",
+      "ru": "Пассивно снижает ^oскорость передвижения на 30%^* при атаке на ^o3 секунды^*. У героев дальнего боя замедляет только на 15%.\\n\\nОбжигание: нанесённый непериодический урон накладывает ^oсуммирующийся эффект, наносящий 13 магического урона в секунду в течение 3 секунд (не более 2 зарядов)^*.\\n\\nЭтот предмет содержит ^oмодификатор заморозки^*, ^oмодификатор магического вампиризма^* и ^oмодификатор обжигания^*; ни один из них не складывается."
+    },
+    {
+      "keys": ["entities:Item_Frozenlight_effect_header"],
+      "english_hash": "826065efccc467af01fe3a653b820ed499ce99c045040eaed240206c58e2c043",
+      "ru": "Эффекты Frozen Light"
+    },
+    {
+      "keys": ["entities:Item_GoldenApple_IMPACT_effect"],
+      "english_hash": "128199cc4e5bd0970e30c10ab4a94df726fa2648a19d22e44d1e1a00a9b6e262",
+      "ru": "Мгновенно восстанавливает вам 75 здоровья."
+    },
+    {
+      "keys": ["entities:Item_GoldenApple_description"],
+      "english_hash": "5e2c2d567582fabce55196e597c9547f80100f1cb0fc0418d4835e4148d57a22",
+      "ru": "Расходуемый предмет."
+    },
+    {
+      "keys": ["entities:Item_GoldenApple_description_simple"],
+      "english_hash": "7c75b9522fcafa2ed5ff7357c783b78c16ddb3df77ea2645ea20958d372d632f",
+      "ru": "При использовании мгновенно восстанавливает 75 здоровья.\\n+1.5 урона от атак\\n^yНе складывается и не передаётся^*"
+    },
+    {
+      "keys": ["entities:Item_HarkonsBlade_description"],
+      "english_hash": "8392d6bda2099b43e50f1ed5f319756d210bd235cbe9d07e67facc297f3fe4fd",
+      "ru": "В активном состоянии: ^oизменяет тип урона от атак на магический^*, расходуя 50 маны за атаку. Атаки также накладывают на цель ^oHarkon's Blade^* на ^o5 секунд^*."
+    },
+    {
+      "keys": ["entities:Item_HarkonsBlade_description_simple"],
+      "english_hash": "ff7846e8749231d463405b832c4c99e939051cd93e1b1a189cc4961a4631c5c7",
+      "ru": "В активном состоянии превращает урон ваших атак в магический."
+    },
+    {
+      "keys": ["entities:Item_HarkonsBlade_effect_header"],
+      "english_hash": "10cc209cc2079e3679247edee486d6ca1976f4f309a68d2aaea2d148535b134e",
+      "ru": "Эффекты Harkon's Blade"
+    },
+    {
+      "keys": ["entities:Item_HelmOfTheBlackLegion_description"],
+      "english_hash": "c6e778175b639f5cdd9fdaf46e0f2207d7a085da6b41d35d16088e888e0894e1",
+      "ru": "Пассивно даёт ^o50% шанс^* ^oзаблокировать 60 урона (30 для героев дальнего боя)^* от вражеских атак. Не блокирует урон от устройств."
+    },
+    {
+      "keys": ["entities:Item_HelmOfTheBlackLegion_description_simple"],
+      "english_hash": "9f4067afa80e47b0106162c4bcd3aaa6470d297a897c0f8a058c0f5de3aa99b8",
+      "ru": "Даёт здоровье, восстановление здоровья и высокий шанс заблокировать урон от атак."
+    },
+    {
+      "keys": ["entities:Item_HungrySpirit_description2"],
+      "english_hash": "8ee60ebfcc7e25fa601db0906d647e595aba7a7d06292a815d9a3317855c815c",
+      "ru": "Этот предмет содержит ^oмодификатор вампиризма^*, который не складывается."
+    },
+    {
+      "keys": ["entities:Item_HungrySpirit_description_simple"],
+      "english_hash": "96e81442816263c6dfce4b2b6a157993b06e8c30c7a09073c184c77197293924",
+      "ru": "^oМодификатор вампиризма^*\\n10% вампиризма"
+    },
+    {
+      "keys": ["entities:Item_Icebrand_description"],
+      "english_hash": "20c27fba6dff553073e7df4a17241d92bec057f463cee71b046bf4d76243bd8f",
+      "ru": "Пассивно снижает ^oскорость передвижения на 20%^* при атаке на ^o3 секунды^*. У героев дальнего боя замедляет только на 10%.\\n\\nЭтот предмет содержит ^oмодификатор заморозки^*, который не складывается."
+    },
+    {
+      "keys": ["entities:Item_Icebrand_description_simple"],
+      "english_hash": "76d500ad1f5fbd65ba1c53b810fd9724e36e4f68aaf2ce4696344c84ef2f0336",
+      "ru": "^oМодификатор заморозки^*\\nДаёт замедляющую атаку."
+    },
+    {
+      "keys": ["entities:Item_Icebrand_effect_header"],
+      "english_hash": "2b7d9f2f4dd13e23856e55a6513f70323b1d0a49e3d212fb7c0eb8c21672eaa8",
+      "ru": "Эффекты Icebrand"
+    },
+    {
+      "keys": ["entities:Item_FluffyFletchingArrows_description"],
+      "english_hash": "2e629a6a49bced6062c96616472ffe671f183581c030bfe5f7a08ca6909e5563",
+      "ru": "Реликвия, опалённая и явленная миру смертью вечной ^rFirebird^*."
+    },
+    {
+      "keys": ["entities:Item_AmuletOfExile_effect_header", "entities:Item_Firebrand_effect_header", "entities:Item_HelmOfTheBlackLegion_effect_header", "entities:Item_HungrySpirit_effect_header"],
+      "english_hash": "6e5e7bc5e96f838352cde0fcff351520eab9cd6b12ecb43e9b30ed6fd98f6777",
+      "ru": "Эффекты состояния"
+    }
+  ]
+}

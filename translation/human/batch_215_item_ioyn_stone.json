@@ -1,0 +1,19 @@
+{
+  "schema_version":1,"batch_id":"HUMAN_RU_215_ITEM_IOYN_STONE","reviewed_by":"Codex manual gameplay localization",
+  "entries":[
+    {"keys":["entities:Item_IoynStone_IMPACT_effect"],"english_hash":"7c68cc0351a72335f712a9423e70c4a70ab1105a1db70e3b0cea9d64d35fe6b0","ru":"Выберите руну, чтобы скопировать и сохранить её эффект (основная руна не расходуется)."},
+    {"keys":["entities:Item_IoynStone_IMPACT_effect:ioyn_stone_damage"],"english_hash":"9c8bc620ee0bea4de3dd42bbe5a9dee769e3d46fb4aa0b4a8efc769c71c0b273","ru":"Накладывает на цель Урон Ioyn на 12 секунд.\\n\\n^oНе складывается с Двойным уроном.^*\\n\\nПри выпадении Ioyn Stone теряет все заряды."},
+    {"keys":["entities:Item_IoynStone_IMPACT_effect:ioyn_stone_empty"],"english_hash":"b889fbf47919951b34e00bd453d1c5cd8f217f83ba161b4fb5244770ff8bd300","ru":"Нажмите правой кнопкой или выберите основную руну, чтобы дать Ioyn Stone 3 заряда длительностью до 4 минут. Скопированная руна не расходуется. Каждый заряд даёт ослабленный эффект скопированной руны, который можно применить к себе или союзному герою.\\n\\nПри копировании руны Merrick она расходуется ради золота, а вместо неё предмет получает 2 заряда Освежения.\\n\\nПри выпадении Ioyn Stone теряет все заряды."},
+    {"keys":["entities:Item_IoynStone_IMPACT_effect:ioyn_stone_illusion"],"english_hash":"32f646d4640ee5581c9b1e44073d58d1cd00399cef7f06a8d25ed01a3e18d954","ru":"Даёт цели 10% сокращения перезарядки и затрат маны на 12 секунд. Создаёт одну иллюзию выбранного союзника (или вас), которая наносит 35% урона, получает 300% урона и существует 10 секунд.\\n\\nПри выпадении Ioyn Stone теряет все заряды."},
+    {"keys":["entities:Item_IoynStone_IMPACT_effect:ioyn_stone_refresh"],"english_hash":"0035e8161131f638056a48d8c7dbf141a5bfbf29e41da9707e6721d3e4bd07bc","ru":"Накладывает на цель Освежение Ioyn на 3 секунды.\\n\\nПри выпадении Ioyn Stone теряет все заряды."},
+    {"keys":["entities:Item_IoynStone_IMPACT_effect:ioyn_stone_regen"],"english_hash":"d043914bd99b897b3577efb7c80509a531e17e654072aa17db84c00327fb9398","ru":"Накладывает на цель Регенерацию Ioyn на 6 секунд.\\n\\nПри выпадении Ioyn Stone теряет все заряды."},
+    {"keys":["entities:Item_IoynStone_IMPACT_effect:ioyn_stone_stealth"],"english_hash":"05890ff02fe50531e9ae8444abb0e63ef82b6b2c45860a3a6c7be66717de774c","ru":"Накладывает на цель Скрытность Ioyn на 12 секунд. Во время задержки невидимости цель может совершать действия, не нарушая скрытность.\\n\\nПри выпадении Ioyn Stone теряет все заряды."},
+    {"keys":["entities:Item_IoynStone_description"],"english_hash":"a7e03f6bbb607b9716e64ba34f0676603ad12e691daba8f7e5132722ca9a23b7","ru":"Копирует основную руну, не расходуя её, и сохраняет 3 заряда ослабленного эффекта.\\n\\n^rЭффект не складывается с другими камнями Ioyn или бутылками.^*"},
+    {"keys":["entities:Item_IoynStone_description_simple"],"english_hash":"15f211ad37c31e9b2dd10f7e599820e745d42b104103b2980ca7ac8eff47e72c","ru":"Камень, способный скопировать сущность руны, чтобы позже применить её к союзникам."},
+    {"keys":["entities:Item_IoynStone_effect_header:ioyn_stone_damage"],"english_hash":"3cd9aa50993eb192eebfcb8ef4e7a6c7f64d83d72800995952ddafcb2171c882","ru":"Эффекты урона Ioyn"},
+    {"keys":["entities:Item_IoynStone_effect_header:ioyn_stone_movespeed"],"english_hash":"3e794b3c716df7536761d387b8f50c66e4a7381d486035602825f413de9f6e61","ru":"Эффекты скорости Ioyn"},
+    {"keys":["entities:Item_IoynStone_effect_header:ioyn_stone_refresh"],"english_hash":"72a410fb7a2b6f18b5f5d2cde1d26915aed20650c366dd83ade8419286d2cb63","ru":"Эффекты освежения Ioyn"},
+    {"keys":["entities:Item_IoynStone_effect_header:ioyn_stone_regen"],"english_hash":"2e9bd07c8ea970d3c5a93ed0eb3fc09e75e965eb3d08872a278fc369bee2b07a","ru":"Эффекты регенерации Ioyn"},
+    {"keys":["entities:Item_IoynStone_effect_header"],"english_hash":"6e5e7bc5e96f838352cde0fcff351520eab9cd6b12ecb43e9b30ed6fd98f6777","ru":"Эффекты состояния"}
+  ]
+}

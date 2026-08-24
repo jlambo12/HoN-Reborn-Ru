@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package>
+	<style name="gameScoreHeaderBarSpace" width="75%" height="13@" y="13@"/>
+	<style name="item_frame_mask" usealphamask="1" alphamaskfile="/ui/hd_ui/mask/item_frame_cutout.tga" align="center" valign="center" />
+	<style name="ward_frame_mask" usealphamask="1" alphamaskfile="/ui/hd_ui/mask/ward_frame_cutout.tga" align="center" valign="center" />
+
+	<style name="game_list_box_style"
+		width="100%"
+		height="-1.0h"
+		color="invisible"
+		font="dyn_10"
+		itemwidth="100%"
+		itemheight="2.8h"
+		select="1"
+		clearselection="1"
+		hoverselect="0"
+		hoverhighlight="1"
+		highlight="under"
+		highlightcolor="#46adff42"
+		highlightbordercolor="invisible"
+		selectedcolor="#346dff52"
+		selectedbordercolor="invisible"
+		backgroundimagecolor=".1 .1 .1 .4"
+		backgroundimage="$white"
+		colortransition="1"
+		colortransitiontime="250"
+		scrollbarsize="1.4h"
+		scrolltexture="/ui/hd_ui/input_controls/scrollbar.tga"
+		hscrollbar="0"
+		handleheight="2.8h"
+	/>
+
+	<!-- Colors -->
+	<style name="color-ability-frame" color="#ffe99e" />
+	<style name="color-blue-light" color="#52c9fa" />
+	<style name="color-blue-dark" color="#273b4d" />
+	<style name="color-gold" color="#fac10e" />
+	<style name="color-gold-lost" color="#d9713e" />
+	<style name="color-orange" color="#ffab01" />
+	<style name="color-green" color="#6CDE8B" />
+	<style name="color-green-light" color="#c1ffd2" />
+	<style name="color-green-dark" color="#2b4e34" />
+	<style name="color-red" color="#d82727" />
+	<style name="color-red-light" color="#f86464" />
+	<style name="color-red-dark" color="#530000" />
+	<style name="color-gray" color=".75 .75 .75 1" />
+	<style name="color-gray-dark" color=".3 .3 .3 1" />
+	<style name="color-gray-light" color=".86 .86 .86 1" />
+	<style name="color-purple" color="#415288" />
+	<style name="color-white" color=".95 .95 .95 1" />
+	<style name="color-juvio-primary" color="#1cd991" />
+	<style name="color-juvio-white" color="#e7fffa" />
+	<style name="color-currency-jade" color="#9cf16a" />
+	<style name="color-currency-ticket" color="#c17bf6" />
+	<style name="color-currency-drop" color="#7ccaf3" />
+	
+	<style name="color-str" color="1 0.37 0.34" />
+	<style name="color-agi" color="0.37 1 0.34" />
+	<style name="color-int" color="0.34 0.65 1" />
+	<style name="color-attack" color="0.98 0.85 0.72" />
+	<style name="color-armor" color="0.71 0.77 1" />
+	<style name="color-magic" color="0.71 0.77 1" />
+	<style name="color-move" color="0.83 0.94 0.9" />
+	<style name="color-xp" color="#9213aa" bordercolor="#9213aa" />
+	<style name="color-lifetime" color="#b95139" bordercolor="#b95139" />
+	<style name="color-illusion" color="#485eea" bordercolor="#485eea" />
+	<style name="color-illusion-portrait" color="#3020b93f" />
+	<style name="color-kills" color="#9CFFAE" />
+	<style name="color-deaths" color="#FFA0A0" />
+	<style name="color-assists" color="#A1CAFF" />
+	<style name="color-ck" color="#9EE09E" />
+	<style name="color-cd" color="#CC83DA" />
+
+	<!-- Attribs -->
+	<style name="resource-color-mana" color="#135cca" bordercolor="#135cca" />
+	<style name="resource-color-health" color="#058d27" bordercolor="#058d27" />
+	<style name="resource-color-xp" color="#9213aa" bordercolor="#9213aa" />
+	<style name="resource-xp" color="#9213aa" bordercolor="#9213aa" />
+
+	<!-- Border Colors -->
+	<style name="border-color-gold" bordercolor="#fac10e" />
+	<style name="border-color-gold-lost" bordercolor="#d9713e" />
+	<style name="border-color-orange" bordercolor="#ffab01" />
+	<style name="border-color-green" bordercolor="#6CDE8B" />
+	<style name="border-color-green-dark" bordercolor="#2b4e34" />
+	<style name="border-color-red" bordercolor="#d82727" />
+	<style name="border-color-red-light" bordercolor="#f86464" />
+	<style name="border-color-red-dark" bordercolor="#720000" />
+	<style name="border-color-blue-light" bordercolor="#52c9fa" />
+	<style name="border-color-ability-frame" bordercolor="#ffe99e" />
+
+	<!-- Outline Colors -->
+	<style name="outlinecolor-color-gold" outlinecolor="#fac10e" />
+	<style name="outlinecolor-color-gold-lost" outlinecolor="#d9713e" />
+	<style name="outlinecolor-color-orange" outlinecolor="#ffab01" />
+	<style name="outlinecolor-color-green" outlinecolor="#6CDE8B" />
+	<style name="outlinecolor-color-green-dark" outlinecolor="#0e2313" />
+	<style name="outlinecolor-color-red" outlinecolor="#d82727" />
+	<style name="outlinecolor-color-red-light" outlinecolor="#f86464" />
+	<style name="outlinecolor-color-red-dark" outlinecolor="#720000" />
+	<style name="outlinecolor-color-blue-light" outlinecolor="#52c9fa" />
+
+	<!-- UI Elements -->
+	<style name="color-panel_bg" color=".1 .1 .1" />
+
+	<!-- Arcade Messages Modelpanel -->
+	<style name="arcade_msg_modelpanel"
+		align="center"
+		cameraangles="0 0 180"
+		visible="0"
+		noclick="1"
+		anim="idle"
+		cameradistance="0"
+		lookat="0"
+		cameranear="1"
+		carmerafar="5000"
+		depthclear="0"
+		depthcompress="1"
+		sunazimuth="-90"
+		sunaltitude="180"
+		scenebuffer="1"
+	/>
+
+	<!-- Typography -->
+	<style name="section_title"
+		font="heading_13"
+		shadow="1" shadowoffset="2"
+		sticky="1" stickytoinvis="0"
+		color=".95 .95 .95 1"
+	/>
+	<style name="h1"
+		font="heading_14"
+		shadow="1" shadowoffset="2"
+		sticky="1" stickytoinvis="0"
+		color=".95 .95 .95 1"
+	/>
+	<style name="h2"
+		font="dyn_bold_13"
+		shadow="1" shadowoffset="2"
+		sticky="1" stickytoinvis="0"
+		color=".95 .95 .95 1"
+	/>
+	<style name="h3"
+		font="dyn_bold_12"
+		shadow="1" shadowoffset="2"
+		sticky="1" stickytoinvis="0"
+		color=".95 .95 .95 1"
+	/>
+	<style name="h4"
+		font="dyn_bold_11"
+		shadow="1" shadowoffset="2"
+		sticky="1" stickytoinvis="0"
+		color=".95 .95 .95 1"
+	/>
+	<style name="h5"
+		font="dyn_bold_10"
+		shadow="1" shadowoffset="2"
+		sticky="1" stickytoinvis="0"
+		color=".95 .95 .95 1"
+	/>
+	<style name="fe3_play"
+		font="dyn_bold_20"
+		outline="1"
+		color="1 1 1 1"
+	/>
+	<style name="fe3_topbar_menu"
+		font="dyn_bold_12"
+		shadow="1" shadowcolor="0 0 0 1" shadowoffset="1"
+		color="1 1 1 1"
+	/>
+	<style name="text_base"
+		font="dyn_10"
+		shadow="1"
+		sticky="1" stickytoinvis="0"
+		color=".95 .95 .95 1"
+	/>
+	<style name="text_label"
+		style="text_base"
+		font="dyn_9"
+	/>
+	<style name="text_label_small"
+		style="text_base"
+		font="dyn_8"
+	/>
+	<style name="text_label_xs"
+		style="text_base"
+		font="dyn_7"
+	/>
+	<style name="text_outline"
+		outline="1" shadow="0"
+	/>
+	<style name="filter_hd"
+		style="text_base"
+		font="dyn_bold_11"
+	/>
+	<style name="text_a" style="color-juvio-primary" />
+	<style name="text_muted" color=".7 .7 .7 1" />
+	<style name="sysbar_menu_label"
+		font="heading_14"
+		shadow="1" shadowoffset="2"
+		sticky="1" stickytoinvis="0"
+		color=".95 .95 .95 1"
+	/>
+	<style name="shortcut_label"
+		style="text_base"
+		outline="1" shadow="0"
+		font="dyn_bold_10"
+	/>
+
+	<style name="tutorial_h1"
+		font="heading_16"
+		outline="1" outlinecolor=".1 .1 .1"
+		color=".95 .95 .95 1"
+	/>
+	<style name="tutorial_h2"
+		font="dyn_bold_12"
+		outline="1" outlinecolor=".1 .1 .1"
+		color=".95 .95 .95 1"
+	/>
+
+	<!-- Vanity -->
+	<style name="vanity_jade_color" color="#066a1b" />
+	<style name="vanity_jade_text_color" color="#c4fa9c" />
+	<style name="vanity_ticket_color" color="#651aa0" />
+	<style name="vanity_ticket_text_color" color="#cb8ffb" />
+	<style name="vanity_bg_current_color" color="#df5353" />
+	<style name="vanity_bg_current_border_color" color="#f3baba" />
+	<style name="vanity_btn_size" size="6.5h" />
+	<style name="vanity_btn_width" width="6.5h" />
+	<style name="vanity_ability_btn_size" size="3.9h" />
+	<style name="vanity_gap" padding=".6h" />
+	<style name="vanity_auto_jade_btn_color" color=".5 .5 .5 1" />
+
+	<style name="emote_btn_size" size="6.5h" />
+	<style name="emote_gap" padding="1.4h" />
+	<style name="cosmetic_gap" padding="0.6h" />
+
+	<style name="vanity_unowned" height="6h" color=".15 .15 .15" />
+
+	<!-- Sizing -->
+	<style name="size-match-height" width="100@" height="100%" />
+	<style name="size-match-width" width="100%" height="100@" />
+	
+	<!-- Layout-->
+	<style name="center" align="center" valign="center" />
+	<style name="textcenter" textalign="center" textvalign="center" />
+	<style name="centerall" align="center" valign="center" textalign="center" textvalign="center" />
+	<style name="sticky" sticky="1" stickytoinvis="0" />
+	<style name="nosticky" sticky="0" />
+	<style name="100wh" size="100%" />
+	<style name="grow_noinvis" grow="1" regrow="1" growinvis="0" />
+	<style name="grow_noregrow_noinvis" grow="1" growinvis="0" />
+
+	<!-- Gridlike -->
+	<style name="grid_parent" width="100%" float="bottom" padding="1.0h" style="grow_noinvis" />
+	<style name="grid_row" float="right" padding="2%" width="100%" style="grow_noinvis" />
+	<style name="grid_item_2" width="49.0%" />
+	<style name="grid_item_3" width="32.0%" />
+	<style name="grid_item_4" width="23.5%" />
+	<style name="grid_item_5" width="18.4%" />
+
+	<!-- Buttons -->
+	<style name="btn_xs" borderthickness=".4h" font="dyn_9" />
+	<style name="btn_sm" borderthickness=".5h" font="dyn_10" />
+	<style name="btn_lg" borderthickness=".8h" font="dyn_bold_14"/>
+	<style name="btn_secondary" version="secondary"/>
+	<style name="btn_green" version="primary"/>
+	<style name="btn_blue" version="blue"/>
+	<style name="btn_red" version="red"/>
+	<style name="btn_orange" version="orange"/>
+	<style name="btn_gray" version="gray"/>
+
+	<!-- Text Input -->
+	<style name="textinput_frame" noclick="1" height="2.7h" valign="center" texture="/ui/hd_ui/frames/inset.tga" bordercolor=".5 .5 .5 .8" color="1 .5 .5 .8" borderthickness=".25h" />
+	<style name="textbox_input" color="invisible" hpadding="0.5h" vpadding="0.5h" width="-3.0h" font="dyn_10" textcolor=".8 .8 .8 1" shadow="false" />
+	<style name="textinput_frame_xl" noclick="1" height="3.1h" valign="center" texture="/ui/hd_ui/frames/inset.tga" bordercolor=".5 .5 .5 .8" color=".5 .5 .5 .8" borderthickness=".25h" />
+	<style name="textbox_input_xl" color="invisible" hpadding="0.8h" vpadding="0.5h" width="-3.0h" font="dyn_12" textcolor=".8 .8 .8 1" shadow="false" />
+
+	<!-- Alt Info -->
+	<style name="altinfo_bar_xl" height="0.8h" />
+	<style name="altinfo_bar_lg" height="0.7h" />
+	<style name="altinfo_bar_md" height="0.5h" />
+	<style name="altinfo_bar_sm" height="0.4h" />	
+	<style name="textleft" textalign="left" />
+	<style name="textright" textalign="right" />
+
+	<style name="scrollbar" texture="/ui/hd_ui/input_controls/scrollbar.tga" width="1.8h" handlewidth="1.8h" handleheight="5.4h" slotwidth="0.6h" slotheight="1" align="right"
+		handlecolor=".7 .7 .75 1"
+		onloadlua="local h = GetWidget(self:GetName()..'_slider_handle', nil, true) if h then h:SetCallback('onmouseover', function() h:SetColor(1,1,1,1) end) h:SetCallback('onmouseout', function() h:SetColor(.7,.7,.75,1) end) end"
+	/>
+	<style name="scrollbar_mini" texture="/ui/hd_ui/input_controls/scrollbar_mini.tga" width="0.8h" handlewidth=".5h" handleheight="4h" slotwidth="0.6h" slotheight="1" align="right"
+		handlecolor=".7 .7 .75 1"
+		onloadlua="local h = GetWidget(self:GetName()..'_slider_handle', nil, true) if h then h:SetCallback('onmouseover', function() h:SetColor(1,1,1,1) end) h:SetCallback('onmouseout', function() h:SetColor(.7,.7,.75,1) end) end"
+	/>
+
+	<!-- Containers -->
+	<style name="logstyle" width="100%" textalign="left" textvalign="center" color="white" font="dyn_10" noclick="1" />
+	<style name="log_shadow"
+		 width="+1.2h" height="+1.2h" align="center" valign="center" texture="/ui/hd_ui/frames/squareglow.tga" color="0 0 0 .3" bordercolor="0 0 0 .3" borderthickness="1.0h" noclick="1"
+	/>
+	<style name="log_framing" noclick="1" 
+		texture="/ui/hd_ui/frames/tooltip_base.tga"
+		color=".9 .9 .9 .3" bordercolor=".9 .9 .9 .3" borderthickness="0.8h"
+	/>
+
+	<style name="scoreboard_shadow"
+		 width="+1.2h" height="+1.2h" align="center" valign="center" texture="/ui/hd_ui/frames/squareglow.tga" color=".08 .08 .08 .85" bordercolor=".08 .08 .08 .85" borderthickness="1.0h" noclick="1"
+	/>
+	<style name="scoreboard_framing" noclick="1" 
+		texture="/ui/hd_ui/frames/tooltip_base.tga"
+		color=".9 .9 .9 .3" bordercolor=".9 .9 .9 .3" borderthickness="0.8h"
+	/>
+
+	<!-- Death Summary-->
+	<style name="death_summary_left" width="43%" align="left" />
+	<style name="death_summary_right" width="55%" align="right" />
+	<style name="death_summary_history_graph_width" width="-210@" />
+	<style name="death_summary_vs_row_height" height="3.0h" />
+
+	<!-- Tooltips -->
+	
+	<style name="panel_background_tooltip"
+		color=".6 .6 .6 .9" bordercolor=".6 .6 .6 .9"
+	/>
+	
+	<style name="tip_contents"
+		width="100%" grow="1" regrow="1" growinvis="0" float="bottom"
+	/>
+
+	<style name="tip_margin_x"
+		hmargin="1.0h"
+	/>
+
+	<style name="tip_header_content"
+		y="12%"
+		height="66%"
+		style="tip_margin_x"		
+	/>
+
+	<style name="tip_body"
+		grow="1" regrow="1" growinvis="0"
+		width="100%" noclick="1"
+	/>
+
+	<style name="tip_body_contents"
+		width="100%"
+		grow="1" regrow="1" growinvis="0"
+		float="bottom"
+		padding="0.4h"
+		style="tip_margin_x"
+	/>
+
+	<style name="generic_tooltip"
+		texture="/ui/hd_ui/frames/tooltip_base.tga"
+		color="1 1 1 1" bordercolor="1 1 1 1" borderthickness="0.8h"
+		noclick="1"
+		visible="0"
+		grow="1" regrow="1" growinvis="0"
+		align="right" valign="bottom"
+	/>
+
+	<style name="tip_textSmaller"
+		font="dyn_8"
+		color=".95 .95 .95 1"
+	/>
+
+	<style name="tip_textSmall"
+		font="dyn_9"
+		color=".95 .95 .95 1"
+	/>
+
+	<style name="tip_textMedium"
+		font="dyn_10"
+		color=".95 .95 .95 1"
+	/>
+
+	<style name="tip_textBig"
+		font="dyn_bold_11"
+		color=".95 .95 .95 1"
+	/>
+
+	<style name="tip_textBigger"
+		font="dyn_bold_11"
+		color=".95 .95 .95 1"
+	/>
+
+	<style name="tip_row"
+		height="1.5h"
+		sticky="1" stickytoinvis="0"
+	/>
+
+	<style name="tip_block_title"
+		width="100%"
+		grow="1" regrow="1" growinvis="0"
+		float="bottom"
+		sticky="1" stickytoinvis="0"
+	/>
+
+	<style name="tip_block_offsety"
+		height=".4h"
+	/>
+
+	<style name="tip_label_main"
+		style="tip_textMedium"
+		fity="1" fitypadding=".1h"
+		wrap="1"
+		shadow="1" 
+		sticky="1" stickytoinvis="0"
+	/>
+
+	<style name="tip_label_minor"
+		style="tip_textSmall"
+		fity="1" fitypadding=".1h"
+		wrap="1"
+		shadow="1" 
+		sticky="1" stickytoinvis="0"
+	/>
+
+	<style name="vanity_scroller"
+		sticky="0"
+		stickytoinvis="0"
+		color="invisible"
+		font="dyn_10"
+		select="0"
+		clearselection="1"
+		hoverselect="0"
+		hoverhighlight="0"
+		highlight="under"
+		highlightcolor="#46adff1d"
+		highlightbordercolor="invisible"
+		selectedcolor="#346dff52"
+		selectedbordercolor="invisible"
+		scrolltexture="/ui/hd_ui/input_controls/scrollbar_mini.tga"
+		backgroundimagecolor="#1d2f3b"
+		colortransition="1"
+		colortransitiontime="250"
+		exteriorscrollbars="1"
+		scrollbarsize=".5h"
+		hscrollbar="0"
+		handleheight="4.0h"
+	/>
+
+	<!-- Shop Styles -->
+	<style name="quickbuy_slot_content" y="-1" hmargin="0.2h" vmargin="0.2h" />
+	<style name="tree_stick_color" color=".3 .3 .3 1" />
+	<style name="quickbuy_slot_lvl1" color=".3 .3 .3 1" />
+	<style name="quickbuy_slot_lvl2" color=".2 .2 .2 1" />
+	<style name="quickbuy_overflow_btn" width="100@" height="100%" align="center" valign="{valign}" />
+	<style name="body_content_margin" hmargin="1.0h" />
+	<style name="colored_border" noclick="1" texture="/ui/hd_ui/frames/border_normal.tga" color="invisible" bordercolor=".3 .3 .3 1" borderthickness=".25h" />
+	<style name="shop_search_frame" noclick="1" valign="center" texture="/ui/hd_ui/frames/inset.tga" bordercolor=".5 .5 .5 .8" color=".5 .5 .5 .8" borderthickness=".35h" />
+	<style name="shop_search_textbox" color="invisible" hpadding="0.8h" vpadding="14%" width="-2.8h" font="dyn_bold_9" textcolor=".8 .8 .8 1" shadow="1" />
+	<style name="shop_centerscroll" texture="/ui/hd_ui/input_controls/scrollbar.tga" width="1.4h" handlewidth="1.4h" handleheight="2.8h" slotwidth="0.6h" slotheight="1" align="right"
+		handlecolor=".7 .7 .75 1"
+		onloadlua="local h = GetWidget(self:GetName()..'_slider_handle', nil, true) if h then h:SetCallback('onmouseover', function() h:SetColor(1,1,1,1) end) h:SetCallback('onmouseout', function() h:SetColor(.7,.7,.75,1) end) end"
+	/>
+	<style name="shop_searchshop_placeholder" y="-.1h" x="0.6h" font="dyn_bold_9" color=".3 .3 .3 1" textvalign="center" />
+
+	<!-- Plinko -->
+	<style name="plinko-rarity-1" color="#00d1ad" />
+	<style name="plinko-rarity-1-light" color="#00d1ad" />
+	<style name="plinko-rarity-1-hover" color="#00d1ad69" />
+
+	<style name="plinko-rarity-2" color="#0090d1" />
+	<style name="plinko-rarity-2-light" color="#0090d1" />
+	<style name="plinko-rarity-2-hover" color="#0090d169" />
+
+	<style name="plinko-rarity-3" color="#b81fec" />
+	<style name="plinko-rarity-3-light" color="#b81fec" />
+	<style name="plinko-rarity-3-hover" color="#b81fec69" />
+
+	<style name="plinko-rarity-4" color="#ff9000" />
+	<style name="plinko-rarity-4-light" color="#ff9000" />
+	<style name="plinko-rarity-4-hover" color="#ff900069" />
+
+	<!-- Notifications -->
+	<style name="friends_border" bordercolor=".4 .4 .4 1" />
+	<style name="clans_border" bordercolor=".4 .4 .4 1" />
+	<style name="tourney_border" bordercolor=".4 .4 .4 1" />
+	<style name="invite_border" bordercolor=".4 .4 .4 1" />
+	<style name="patch_border" bordercolor=".4 .4 .4 1" />
+
+	<style name="friends_dependent" color=".8 .8 .8 1" />
+	<style name="clans_dependent" color=".8 .8 .8 1" />
+	<style name="tourney_dependent" color=".8 .8 .8 1" />
+	<style name="invite_dependent" color=".8 .8 .8 1" />
+	<style name="patch_dependent" color=".8 .8 .8 1" />
+
+	<style name="friends_situation_bgcolor" color=".4 .4 .4 1" />
+	<style name="clans_situation_bgcolor" color=".4 .4 .4 1" />
+	<style name="tourney_situation_bgcolor" color=".4 .4 .4 1" />
+	<style name="invite_situation_bgcolor" color=".4 .4 .4 1" />
+	<style name="patch_situation_bgcolor" color=".4 .4 .4 1" />
+
+	<!-- FE3 Shop -->
+	<style name="store_alpha_scroller"
+		color="invisible"
+		font="dyn_10"
+		itemheight="3.8h"
+		clearselection="1"
+		hoverselect="0"
+		hoverhighlight="0"
+		highlight="under"
+		highlightcolor="#46adff1d"
+		highlightbordercolor="invisible"
+		selectedcolor="#0060ddff"
+		selectedbordercolor="invisible"
+		scrolltexture="/ui/hd_ui/input_controls/scrollbar_mini.tga"
+		backgroundimagecolor="#1d2f3b"
+		colortransition="1"
+		colortransitiontime="250"
+		exteriorscrollbars="0"
+		scrollbarsize="1h"
+		hscrollbar="0"
+		handleheight="8h"
+		onloadlua="local h = GetWidget(self:GetName()..'_vscroll_slider_handle') if h then h:SetColor(.7,.7,.75,1) h:SetCallback('onmouseover', function() h:SetColor(1,1,1,1) end) h:SetCallback('onmouseout', function() h:SetColor(.7,.7,.75,1) end) end"
+	/>
+
+	<style name="store_product_grid_scroller"
+		sticky="0"
+		stickytoinvis="0"
+		color="invisible"
+		font="dyn_10"
+		select="0"
+		clearselection="1"
+		hoverselect="0"
+		hoverhighlight="0"
+		highlight="under"
+		highlightcolor="#46adff1d"
+		highlightbordercolor="invisible"
+		selectedcolor="#346dff52"
+		selectedbordercolor="invisible"
+		scrolltexture="/ui/hd_ui/input_controls/scrollbar_mini.tga"
+		backgroundimagecolor="#1d2f3b"
+		colortransition="1"
+		colortransitiontime="250"
+		exteriorscrollbars="1"
+		scrollbarsize="1h"
+		hscrollbar="0"
+		handleheight="8h"
+		onloadlua="local h = GetWidget(self:GetName()..'_vscroll_slider_handle') if h then h:SetColor(.7,.7,.75,1) h:SetCallback('onmouseover', function() h:SetColor(1,1,1,1) end) h:SetCallback('onmouseout', function() h:SetColor(.7,.7,.75,1) end) end"
+	/>
+
+</package>

@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_152_PREDATOR",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Predator1_description"],
+      "ru": "Predator прыгает к вражескому юниту и поражает его ядовитыми когтями, нанося урон и ненадолго замедляя."
+    },
+    {
+      "keys": ["entities:Ability_Predator1_description_simple"],
+      "ru": "Прыгает к выбранному врагу, наносит ^o{100,150,200,250} магического урона^*, накладывает ^oRestrain на {1.6,1.9,2.2,2.5} секунды^* и ^oзамедляет скорость передвижения на 40%^* на ^o{2.5,3,3.5,4} секунды^*.\\n\\nТакже накладывает ^o1 заряд Terror^*."
+    },
+    {
+      "keys": ["entities:Ability_Predator1_effect_header"],
+      "ru": "Эффекты Venomous"
+    },
+    {
+      "keys": ["entities:Ability_Predator1_tooltip_flavor"],
+      "ru": "Никому не избежать своей судьбы!"
+    },
+    {
+      "keys": ["entities:State_Predator_Ability1_name", "entities:State_Predator_Ability1_SelfDisarm_name"],
+      "ru": "Venomous Strike"
+    },
+    {
+      "keys": ["entities:State_Predator_Ability1_Restrain_name"],
+      "ru": "Venomous Binding"
+    },
+    {
+      "keys": ["entities:Ability_Predator2_effect_header"],
+      "ru": "Эффекты Stone Hide"
+    },
+    {
+      "keys": ["entities:Ability_Predator2_description"],
+      "ru": "Predator делает свою шкуру каменной, рассеивая Debuffs, получая невосприимчивость к магии и временно увеличивая броню.\\n\\nЭффект невосприимчивости к магии этой способности имеет ^428Activation Modifier^* вместе с Shrunken Head и Void Talisman."
+    },
+    {
+      "keys": ["entities:Ability_Predator2_description_simple"],
+      "ru": "Пассивно даёт ^o{1,2,3,4} брони^*.\\n\\nПри активации ^oрассеивает Debuffs^* и даёт ^oневосприимчивость к магии^* и ^o{2,4,6,8} брони^* на ^o{3.75,4.5,5.25,6} секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_Predator2_IMPACT_effect"],
+      "ru": "Рассеивает Debuffs и накладывает на героя Stone Hide на {3.75,4.5,5.25,6} секунды."
+    },
+    {
+      "keys": ["entities:Ability_Predator2_tooltip_flavor"],
+      "ru": "Держи свои серебряные пули подальше."
+    },
+    {
+      "keys": ["entities:Ability_Predator3_description"],
+      "ru": "С каждой атакой Predator пожирает плоть противника, что позволяет ему сокрушать даже сильнейших воинов. Каждая атака наносит урон в зависимости от текущего здоровья цели и исцеляет Predator на величину нанесённого урона."
+    },
+    {
+      "keys": ["entities:Ability_Predator3_description_simple"],
+      "ru": "Пассивно наносит дополнительный ^oфизический урон в размере {2,4,6,8}% от текущего здоровья цели^*. Восстанавливает вам столько же здоровья."
+    },
+    {
+      "keys": ["entities:Ability_Predator3_description2"],
+      "ru": "Не действует на боссов."
+    },
+    {
+      "keys": ["entities:Ability_Predator3_effect_header"],
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:Ability_Predator3_ATTACK_IMPACT_effect"],
+      "ru": "Наносит дополнительный физический урон в размере {2,4,6,8}% от текущего здоровья цели и восстанавливает вам здоровье в размере нанесённого урона. Иллюзии наносят 33% урона."
+    },
+    {
+      "keys": ["entities:Ability_Predator3_tooltip_flavor"],
+      "ru": "Сегодня полнолуние!"
+    },
+    {
+      "keys": ["entities:Ability_Predator4_description"],
+      "ru": "Predator вселяет Terror во врагов, на которых сосредоточился, снижая их броню. Союзники, атакующие цель под действием Terror, получают дополнительную скорость атаки и передвижения."
+    },
+    {
+      "keys": ["entities:Ability_Predator4_description2"],
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff:^* Снижает необходимое число зарядов Terror до 2, увеличивает бонус к скорости атаки до ^o{50,75,100}^* и обновляет Venomous Leap после убийства."
+    },
+    {
+      "keys": ["entities:Ability_Predator4_description_simple"],
+      "ru": "4 атаки или применения Venomous Leap по одной цели накладывают на неё ^o{-2,-4,-6} к броне на 8 секунд^*.\\n\\nКогда атакуют поражённого врага, нападающий получает ^o{25,50,75} скорости атаки^* и ^o20% скорости передвижения^* на 4.25 секунды.\\n\\n^gStaff of the Master^* уменьшает необходимое число зарядов Terror, увеличивает скорость атаки и обновляет Venomous Leap после убийства."
+    },
+    {
+      "keys": ["entities:Ability_Predator4_effect_header"],
+      "ru": "Эффекты Terror"
+    },
+    {
+      "keys": ["entities:Ability_Predator4_ATTACK_IMPACT_effect"],
+      "ru": "Накладывает на цель заряд на 3 секунды. При 4 зарядах снимает все заряды и накладывает Terror на 8 секунд. Venomous Leap также добавляет один заряд. На врагах под действием Terror новые заряды не накапливаются."
+    },
+    {
+      "keys": ["entities:Ability_Predator4_description_simple:ult_boost"],
+      "ru": "^g2 атаки^* или применения Venomous Leap по одной цели накладывают на неё ^o{-2,-4,-6} к броне на 8 секунд^*.\\n\\nКогда атакуют поражённого врага, нападающий получает ^g{50,75,100} скорости атаки^* и ^o20% скорости передвижения^* на 4.25 секунды.\\n\\n^gУбийства сбрасывают перезарядку Venomous Leap.^*"
+    },
+    {
+      "keys": ["entities:Ability_Predator4_ATTACK_IMPACT_effect:ult_boost"],
+      "ru": "Накладывает на цель заряд на 3 секунды. При ^g2 зарядах^* снимает все заряды и накладывает Terror на 8 секунд. Venomous Leap также добавляет один заряд. На врагах под действием Terror новые заряды не накапливаются.\\n\\n^gУбийства сбрасывают перезарядку Venomous Leap.^*"
+    },
+    {
+      "keys": ["entities:Ability_Predator4_tooltip_flavor"],
+      "ru": "Прислушайся с трепетом — и ты его услышишь!"
+    },
+    {
+      "keys": ["entities:State_Predator_Ability4_FRAME_effect"],
+      "ru": "При получении атаки даёт нападающему {25,50,75} скорости атаки и 20% скорости передвижения на 4.25 секунды"
+    },
+    {
+      "keys": ["entities:State_Predator_Ability4_FRAME_effect:ult_boost"],
+      "ru": "При получении атаки даёт нападающему {50,75,100} скорости атаки и 20% скорости передвижения на 4.25 секунды"
+    },
+    {
+      "keys": ["entities:State_Predator_Ability4_Buff_name", "entities:State_Predator_Ability4_Buff_SOTM_name"],
+      "ru": "Enraged"
+    },
+    {
+      "keys": ["entities:State_Predator_Ability4_Enemy_name"],
+      "ru": "Terrorized"
+    },
+    {
+      "keys": ["entities:State_Predator_Ability4_Enemy_description"],
+      "ru": "После получения 4 зарядов на этого юнита накладывается Terror"
+    },
+    {
+      "keys": ["entities:State_Predator_Ability4_Enemy_description:ult_boost"],
+      "ru": "После получения 2 зарядов на этого юнита накладывается Terror"
+    },
+    {
+      "keys": ["entities:Hero_Predator_description"],
+      "ru": "Из предплечий Predators выступают огромные цельнокостяные когти, похожие на копья, а твёрдый панцирь усеян шипами, способными пронзить сильнейшего врага. Эти существа больше напоминают демонов, чем Зверей. Сражающиеся рядом люди до сих пор со страхом вспоминают времена, когда Predators охотились не на демонов, а на них. И всё же их голод, скорость и ярость стали желанным оружием против Hellbourne."
+    },
+    {
+      "keys": ["entities:Hero_Predator_role"],
+      "ru": "В бою один на один Predator побеждает почти любого другого героя, наносящего урон, благодаря зависящему от здоровья цели вампиризму Carnivorous. Несмотря на ориентацию на одну цель, Terror — одно из самых сильных снижений брони в игре, поэтому Predator отлично сочетается с другими героями, наносящими физический урон."
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_Predator_1"],
+      "ru": "Carnivorous даёт Predator огромный вампиризм. Даже при низком здоровье Stone Hide и автоатаки часто позволяют продержаться до прихода союзников или даже убить врага."
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_Predator_2"],
+      "ru": "Предметы, повышающие вашу скорость или замедляющие врага, помогут не отставать от цели и восстанавливать здоровье атаками."
+    },
+    {
+      "keys": ["interface:hero_tip_defensive_tip_Hero_Predator_1"],
+      "ru": "У Predator нет способности для прерывания. Носите Homecoming Stone, чтобы легко спастись. Дополнительная броня также поможет ослабить действие Terror."
+    },
+    {
+      "keys": ["interface:hero_tip_defensive_tip_Hero_Predator_2"],
+      "ru": "Void Talisman эффективно защищает от атакующего вас Predator."
+    }
+  ]
+}

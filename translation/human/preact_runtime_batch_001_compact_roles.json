@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "batch_id": "PREACT_RUNTIME_001_COMPACT_ROLES",
+  "reviewed_by": "Codex runtime screenshot review 2026-08-24",
+  "rows": [
+    {
+      "source_file": "preact/src/types/global.ts",
+      "english": "\"Soft Support\"",
+      "russian": "\"Роум\"",
+      "expected_matches": 1
+    },
+    {
+      "source_file": "preact/src/types/global.ts",
+      "english": "\"Hard Support\"",
+      "russian": "\"Поддержка\"",
+      "expected_matches": 1
+    },
+    {
+      "source_file": "preact/src/types/global.ts",
+      "english": "\"Solo Offlane\"",
+      "russian": "\"Оффлейн\"",
+      "expected_matches": 1
+    },
+    {
+      "source_file": "preact/src/types/global.ts",
+      "english": "\"Jungle\"",
+      "russian": "\"Лес\"",
+      "expected_matches": 1
+    }
+  ]
+}

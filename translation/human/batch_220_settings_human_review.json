@@ -1,0 +1,1023 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_220_SETTINGS_REVIEW",
+  "catalog_apply": true,
+  "reviewed_by": "Codex full settings semantic review",
+  "entries": [
+    {
+      "keys": [
+        "interface:options_slider_max_menu_framerate_tip"
+      ],
+      "english_hash": "d7588a19004ca7f9614289262586f27ff5f94dbe5706ae3b036d0fd8db5b1a87",
+      "ru": "Ограничивает частоту кадров в главном меню. Высокие значения делают анимацию и движение курсора плавнее, а низкие снижают нагрузку и энергопотребление. Если меню подтормаживает или сильно загружает GPU, уменьшите это значение."
+    },
+    {
+      "keys": [
+        "interface:options_slider_max_ingame_framerate_tip"
+      ],
+      "english_hash": "beb9c6856d45cb2beeec5fedc2493284cd9f74f7830a3fa517feaa8ceb0295e1",
+      "ru": "Ограничивает частоту кадров во время игры. Высокие значения делают анимацию и движение курсора плавнее, а низкие снижают нагрузку и энергопотребление. Если игра подтормаживает или сильно загружает GPU, уменьшите это значение."
+    },
+    {
+      "keys": [
+        "interface:options_slider_max_ui_framerate"
+      ],
+      "english_hash": "b5dbaf3e13196353e88ff800973c2e4a15b6b9bfc0f5037299d8735261eb0d35",
+      "ru": "Максимальная частота кадров интерфейса"
+    },
+    {
+      "keys": [
+        "interface:options_slider_max_ui_framerate_tip"
+      ],
+      "english_hash": "13dafcaf5abab73be17ebf280b2d07591d7782f20390e1a5f4c984e8c0fbc4fa",
+      "ru": "Ограничивает частоту кадров интерфейса. Высокие значения делают анимацию и HTML-панели плавнее, а низкие уменьшают нагрузку на поток интерфейса."
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_show_client_info"
+      ],
+      "english_hash": "bc68157c8ffc302581b892f946c32471475bb4226edef2f4ce0652ca40867817",
+      "ru": "Показывать FPS и пинг"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_show_client_info_tip"
+      ],
+      "english_hash": "e70bd0d95b3a4b4d9c8dbe47a88dde48ac523aec2350c92ef3c12843805a9b39",
+      "ru": "Показывает текущие FPS и пинг в правом верхнем углу экрана."
+    },
+    {
+      "keys": [
+        "interface:options_shadow_quality_tip"
+      ],
+      "english_hash": "250572b2730f1b37c7759dd050f78fd436c1f93324754837f21992e517c4d977",
+      "ru": "Чем выше качество теней, тем чётче они выглядят, но тем больше видеопамяти требуется. Производительность зависит и от GPU, и от CPU."
+    },
+    {
+      "keys": [
+        "interface:options_rim_lighting_tip"
+      ],
+      "english_hash": "34caa452a487d29eacd16cab7e32d206bb0139b9925c15f26dcca5d2ff740116",
+      "ru": "Контурное освещение повышает контраст моделей с фоном, имитируя яркий источник света позади модели и создавая светлый контур по её верхним краям."
+    },
+    {
+      "keys": [
+        "interface:options_spec_skybox"
+      ],
+      "english_hash": "5456a704efa65259d28c0f0939c1f52da9ca4bd70bba4e9b63f15008e4a24077",
+      "ru": "Показывать небо в режиме наблюдателя"
+    },
+    {
+      "keys": [
+        "interface:options_label_voice_chat_volume"
+      ],
+      "english_hash": "151dbec19c014019b951daff0bf4c29289d8e5301808f07d035e2c61fa41e848",
+      "ru": "Громкость голосового чата и комментатора ^w"
+    },
+    {
+      "keys": [
+        "interface:options_voice_chat_volume_tip_header"
+      ],
+      "english_hash": "15da4ea8bd7f3208e8a099ed426d5659ce8ddacecf66aa2a0f426f80710a60e4",
+      "ru": "Громкость голосового чата и комментатора"
+    },
+    {
+      "keys": [
+        "interface:options_voice_chat_volume_tip"
+      ],
+      "english_hash": "2885b86f7d83fdea2a22264e94cb7abf9c787aa6c9fa8ae0276803819fb464f3",
+      "ru": "Настраивает громкость голосового чата других игроков и комментария при просмотре повторов."
+    },
+    {
+      "keys": [
+        "interface:options_disable_input_background_tip"
+      ],
+      "english_hash": "b5a9fa9d5f2960495514d6f6f877256199a20d62053e8965fa0ee1a9bf949900",
+      "ru": "Когда игра находится в фоне, курсор продолжает двигаться, но прокрутка у края экрана отключается, а элементы интерфейса не подсвечиваются и не воспроизводят звуки при наведении."
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_display_xp_rewards"
+      ],
+      "english_hash": "5f44fd19b42ccee5db4fb5e85bfb1b1e87a563894d6d83c6f91bdc4fafdd7e85",
+      "ru": "Показывать полученный опыт"
+    },
+    {
+      "keys": [
+        "interface:options_override_conflict_confirm_body"
+      ],
+      "english_hash": "2be0436c83eaab67da2adf1b0b08b0bf9390532a689431b360d954114842309c",
+      "ru": "^yОбнаружен конфликт:^* выбранная клавиша уже назначена действию ^o'{bind}'^*.\\nПрежняя привязка действия ^o'{bind}'^* будет удалена."
+    },
+    {
+      "keys": [
+        "interface:options_label_chat_controls"
+      ],
+      "english_hash": "77f478b2a49b6dea953271c0390b5e4c8f64c35a9cbf646a336d1c149ab169c3",
+      "ru": "Управление вкладками чата"
+    },
+    {
+      "keys": [
+        "interface:options_label_shift_keybind"
+      ],
+      "english_hash": "7b97a02782acbc7229627019188875c63417d9bef4edb9b9028a9390a2695254",
+      "ru": "Модификатор Shift"
+    },
+    {
+      "keys": [
+        "interface:options_label_shiftmod_keybind_tooltip"
+      ],
+      "english_hash": "b51bfadad328c77b0565a0a98604f6f1c090c8428881bb464b9e6fd820442ccc",
+      "ru": "Модификатор Shift позволяет ставить команды в очередь."
+    },
+    {
+      "keys": [
+        "interface:options_label_ctrl_keybind"
+      ],
+      "english_hash": "f3151c6700bc3eb28857fff2d28439d3d902b0d8d5135ca00df1744a25797cf9",
+      "ru": "Модификатор Ctrl"
+    },
+    {
+      "keys": [
+        "interface:options_label_ctrlmod_keybind_tooltip"
+      ],
+      "english_hash": "d1e657d2d6036ba62542e5ac9cd467e50a62f4ddcfc2b764019cdd1e7d4f3219",
+      "ru": "Модификатор Ctrl используется вместе с различными игровыми командами."
+    },
+    {
+      "keys": [
+        "interface:options_simple_on-screen_info_toggle_text"
+      ],
+      "english_hash": "fa544ca4f41e419f38dc8902936235e90e12e06d48a992fac648f2cdcb37cd88",
+      "ru": "Горячая клавиша для показа и скрытия элементов игрового интерфейса, например полос здоровья"
+    },
+    {
+      "keys": [
+        "interface:options_label_chat_show_tab_1"
+      ],
+      "english_hash": "567c3481bb0b357156361ca7d1e7962d16c94b20ffff106a887757a501da7cfc",
+      "ru": "Показать вкладку чата 1"
+    },
+    {
+      "keys": [
+        "interface:options_label_chat_show_tab_2"
+      ],
+      "english_hash": "3c739d6cbc3ff5327e9f0bc9c797379cb3bc81b89415e852a6cb85c9053b560c",
+      "ru": "Показать вкладку чата 2"
+    },
+    {
+      "keys": [
+        "interface:options_label_chat_show_tab_3"
+      ],
+      "english_hash": "229c7062f1644f12426999b710dfa3cc0779cd62926490a1471147a9ae36155d",
+      "ru": "Показать вкладку чата 3"
+    },
+    {
+      "keys": [
+        "interface:options_label_chat_sel_tab_1"
+      ],
+      "english_hash": "6a16c1efd85d54ea600df085963662af7974af3e7fccd874195b090ac1a85502",
+      "ru": "Выбрать вкладку чата 1"
+    },
+    {
+      "keys": [
+        "interface:options_label_chat_sel_tab_2"
+      ],
+      "english_hash": "9405e2667233ce4e6c557ff62e32c929e49f0ec33f4ffccbac42440c90acd7f3",
+      "ru": "Выбрать вкладку чата 2"
+    },
+    {
+      "keys": [
+        "interface:options_label_chat_sel_tab_3"
+      ],
+      "english_hash": "f0c0423ec290d1dc54129f744cf77bfa48014ecd5cb36b084f0ad7187fda6816",
+      "ru": "Выбрать вкладку чата 3"
+    },
+    {
+      "keys": [
+        "interface:options_keybind_showtab_1"
+      ],
+      "english_hash": "df0639543904ce63ecc8418f348f7337bd33be2fbd54fce917687e92cc91c458",
+      "ru": "Показать вкладку 1"
+    },
+    {
+      "keys": [
+        "interface:options_keybind_showtab_2"
+      ],
+      "english_hash": "85ce30a6f59878c861d20faaa1fb895ec171c1fd5ada047a59f96ad50c5a0907",
+      "ru": "Показать вкладку 2"
+    },
+    {
+      "keys": [
+        "interface:options_keybind_showtab_3"
+      ],
+      "english_hash": "533c605d97c090b1fdd1f7f6c76f5bcdf456f81ccdebffcfdd403e6f74340b48",
+      "ru": "Показать вкладку 3"
+    },
+    {
+      "keys": [
+        "interface:options_keybind_showtab_4"
+      ],
+      "english_hash": "f531b9ec585e73ae6b7b753b97f4cee884a8cb22ea5ef14a94ce80d567d2b76d",
+      "ru": "Показать вкладку 4"
+    },
+    {
+      "keys": [
+        "interface:options_keybind_showtab_5"
+      ],
+      "english_hash": "8351d011372c20f4e14256976bdb0a2af14afabe9d91e1ba3db43d26e737e158",
+      "ru": "Показать вкладку 5"
+    },
+    {
+      "keys": [
+        "interface:options_keybind_showtab_6"
+      ],
+      "english_hash": "7584cc153a4afe5c5483d202bc35ae6a317f2e90b052cae30399bb9af5f5a3cf",
+      "ru": "Показать вкладку 6"
+    },
+    {
+      "keys": [
+        "interface:options_keybind_showtab_7"
+      ],
+      "english_hash": "29625b619d94bfb3a087291523188fb9d1ddac392cd1e6ccae0415c72a2189ee",
+      "ru": "Показать вкладку 7"
+    },
+    {
+      "keys": [
+        "interface:options_keybind_showtab_8"
+      ],
+      "english_hash": "60f034e7ba01c4571ef08a51f8482357ea93edcaca513c92311442fe49198923",
+      "ru": "Показать вкладку 8"
+    },
+    {
+      "keys": [
+        "interface:options_label_smart_casting_type_tip"
+      ],
+      "english_hash": "c21cb563e9bd1a43223acea2fe350aad5f23159d10eda780ca753f6b6419c1eb",
+      "ru": "Позволяет применять способности в точке курсора без дополнительного щелчка мышью.\\n- В режиме «При отпускании» способность применяется при отпускании горячей клавиши.\\n- В режиме «При нажатии» способность применяется при нажатии горячей клавиши."
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_inventory_dragdrop_tip"
+      ],
+      "english_hash": "c457d1b70eae1f0848b5a1bdbbb697a6b0543d6f937c35eabe26027b0139afbe",
+      "ru": "Позволяет перетаскивать предметы между ячейками инвентаря или на землю. Отключите, чтобы случайно не перемещать и не выбрасывать предметы в бою. Предмет всё ещё можно взять правой кнопкой мыши и выбросить сочетанием Ctrl+Shift+щелчок."
+    },
+    {
+      "keys": [
+        "interface:options_simple_self_activate_tp_text"
+      ],
+      "english_hash": "8ba38ece792328ed48b6027268d5e99645abb5b56d11c772bac7ef5ffdb00774",
+      "ru": "Горячая клавиша для применения Teleportation Stone на себя"
+    },
+    {
+      "keys": [
+        "interface:options_double_activate_abilities_tip"
+      ],
+      "english_hash": "bc73805367a689f5aaeec5e32d1b646d54f33da06c33fe574a3bc5866d0caf96",
+      "ru": "Двойной щелчок по некоторым предметам и способностям автоматически применяет их на вашего героя без выбора цели. Например, Homecoming Stone телепортирует героя на базу, а зелье здоровья применяется на него самого."
+    },
+    {
+      "keys": [
+        "interface:options_enable_hide_expanded_altinfo"
+      ],
+      "english_hash": "014721797b5ad9c12789c074033fd6ece7da728dec1ee58cc9f90b8e8123e5be",
+      "ru": "Скрывать расширенную дополнительную информацию"
+    },
+    {
+      "keys": [
+        "interface:options_trouble_faq_intro"
+      ],
+      "english_hash": "d13b67cafc5a7792f1f0a752eff38a7de96e06c5ed7f63366f912949a060c499",
+      "ru": "Ниже приведены ответы на частые вопросы. Более подробные сведения и прямое обращение в ^yслужбу поддержки^* доступны по адресу ^y{value}^*."
+    },
+    {
+      "keys": [
+        "interface:options_trouble_faq1_a"
+      ],
+      "english_hash": "090f16473d44a126afe7aef78255b259a67c9d0484fa4da74aaa3849443c46cd",
+      "ru": "Откройте ^y{value}^* и измените пароль в левой части страницы."
+    },
+    {
+      "keys": [
+        "interface:multi_unit_control_disabled_tip"
+      ],
+      "english_hash": "6bdc1da8fcf39b3fe442aa05fa2104717ebc6dcccd9e2b34183d2a7f5b7fc61f",
+      "ru": "Управление группой юнитов сейчас недоступно."
+    },
+    {
+      "keys": [
+        "interface:replay_viewer_game_options"
+      ],
+      "english_hash": "c0760d70ec3e1fe2e805651b0fdecf44110d5be559670453e79fed4da751ec2d",
+      "ru": "Параметры игры: {options}"
+    },
+    {
+      "keys": [
+        "interface:game_lobby_options"
+      ],
+      "english_hash": "5db573da2dd7787c6f0d31cedc084a74a1ef7e262088f4142bbc7d2da4cb09e2",
+      "ru": "^555Параметры игры:^* {options}"
+    },
+    {
+      "keys": [
+        "interface:specui_options_showHotkeys_txt"
+      ],
+      "english_hash": "6a7d679e3e64c59f4e79f481c31d776d236f987a80cb64b5612466272fc021ff",
+      "ru": "Показывает горячие клавиши в интерфейсе наблюдателя."
+    },
+    {
+      "keys": [
+        "interface:specui_options_miniMode_txt"
+      ],
+      "english_hash": "6257d5a56d81164973781d97783a3cd8d0007f450d0f4d4c559299c4f8ed6432",
+      "ru": "Уменьшает размер элементов на экране. Требуется перезапуск HoN."
+    },
+    {
+      "keys": [
+        "interface:specui_options_miniMode1_txt"
+      ],
+      "english_hash": "6257d5a56d81164973781d97783a3cd8d0007f450d0f4d4c559299c4f8ed6432",
+      "ru": "Уменьшает размер элементов на экране. Требуется перезапуск HoN."
+    },
+    {
+      "keys": [
+        "interface:specui_options_miniMode2_txt"
+      ],
+      "english_hash": "6257d5a56d81164973781d97783a3cd8d0007f450d0f4d4c559299c4f8ed6432",
+      "ru": "Уменьшает размер элементов на экране. Требуется перезапуск HoN."
+    },
+    {
+      "keys": [
+        "interface:specui_options_miniMode3_txt"
+      ],
+      "english_hash": "6257d5a56d81164973781d97783a3cd8d0007f450d0f4d4c559299c4f8ed6432",
+      "ru": "Уменьшает размер элементов на экране. Требуется перезапуск HoN."
+    },
+    {
+      "keys": [
+        "interface:specui_options_popupCD"
+      ],
+      "english_hash": "1f3507140c3272f91cf9f72ab2151cd822642c969ef791d1422d226b5037b8d7",
+      "ru": "Всплывающий индикатор перезарядки"
+    },
+    {
+      "keys": [
+        "interface:options_hdr_paperwhite_tip"
+      ],
+      "english_hash": "1d57552ec7751a39ff510c6c54d910a2b922f5d183f15999eb867ea07394bf47",
+      "ru": "Задаёт яркость рассеянного белого и интерфейса. Увеличьте значение, если HUD выглядит тусклым, и уменьшите, если он слишком яркий."
+    },
+    {
+      "keys": [
+        "interface:options_hdr_tonemap_tip"
+      ],
+      "english_hash": "38ad1a5d7d4be19d7cf2c5734cd3dc34b00c851ba31f4ebcb4e3771bcf7ca830",
+      "ru": "Filmic плавно сжимает яркие области к пиковому значению; Clamp жёстко ограничивает их на пике; Reinhard сжимает весь диапазон."
+    },
+    {
+      "keys": [
+        "interface:options_hdr_tonemap_ui"
+      ],
+      "english_hash": "911457c38d67b00bbc4fb7ae6370561766d0ea0ec9a992e4422bb795ceefbd19",
+      "ru": "Тональная компрессия интерфейса"
+    },
+    {
+      "keys": [
+        "interface:options_hdr_tonemap_ui_tip"
+      ],
+      "english_hash": "61db8f690ccccda4ff322cb8318b9538fd95ff726fb899e406543b0bdd95a19c",
+      "ru": "Применяет тональную компрессию не только к сцене, но и к интерфейсу. Если отключено, интерфейс отображается без неё поверх обработанной сцены."
+    },
+    {
+      "keys": [
+        "interface:options_hdr_sdr_grade"
+      ],
+      "english_hash": "360b9d8941023a92ac62dbb7d98de63138a2b9dc3be68937764a53889ed876c5",
+      "ru": "Цветокоррекция сцены (SDR)"
+    },
+    {
+      "keys": [
+        "interface:options_hdr_sdr_grade_tip"
+      ],
+      "english_hash": "391d6ed05a5cc70461a3b059bd4f4964f4788eb9f1d0a627e5fe509c8333d637",
+      "ru": "Применяет настройки HDR-цветокоррекции — контраст, насыщенность и тональную компрессию — также на обычном дисплее. Если отключено, сохраняется исходный вид SDR."
+    },
+    {
+      "keys": [
+        "interface:options_simple_constraincur"
+      ],
+      "english_hash": "b825aa5258bcce0044eb7d424ece32a8866f9e076a5c649c86ef2e357a02dfed",
+      "ru": "Когда окно HoN активно, курсор не выходит за его пределы"
+    },
+    {
+      "keys": [
+        "interface:options_show_death_summary_button"
+      ],
+      "english_hash": "5ba4cd1c6d344fc346299f50e0c3578a663dad7d04535e5a2c917871b0a05c89",
+      "ru": "Всегда показывать кнопку «Сводка смерти»"
+    },
+    {
+      "keys": [
+        "interface:options_label_center_screen_keybind_tooltip"
+      ],
+      "english_hash": "e5b031bf7e8becffb37ac977f8000a6cf7afbd392e451845a05b5366f72f738c",
+      "ru": "Центрирует камеру на основном выбранном юните, которым вы обычно управляете в данный момент."
+    },
+    {
+      "keys": [
+        "interface:options_slider_creep_health_bar_transparency_tip"
+      ],
+      "english_hash": "05b17b2d5b6a8949b0e514f8535c4346045a3d213b0de385095b79fc78d99b56",
+      "ru": "Задаёт прозрачность полосы здоровья крипа, пока его здоровье не достигнет указанного порога."
+    },
+    {
+      "keys": [
+        "interface:options_simple_unitreact"
+      ],
+      "english_hash": "7aa72160d2e55b1fce7b1f29e895b8aabc5bb76136d61f7cc0405bfe2bd59b91",
+      "ru": "Юнит реагирует на взаимодействие"
+    },
+    {
+      "keys": [
+        "interface:multi_unit_control_on"
+      ],
+      "english_hash": "a81f11585b1506d64fbb02b2364ad5f51115b4cc535ab0b4a5ee6e062c974065",
+      "ru": "Управление группой юнитов включено"
+    },
+    {
+      "keys": [
+        "interface:multi_unit_control_off"
+      ],
+      "english_hash": "e6837d50c9bdf7ff4568cbd04ee549a584c4ea18964463ba6463f3867a6d49bc",
+      "ru": "Управление группой юнитов отключено"
+    },
+    {
+      "keys": [
+        "interface:multi_unit_control_disabled"
+      ],
+      "english_hash": "6c772fc813aaa632223aeca0fa70c64500391d79204ac47042fa10cd8f517b2b",
+      "ru": "Управление группой юнитов недоступно"
+    },
+    {
+      "keys": [
+        "interface:options_altportraits"
+      ],
+      "english_hash": "a21637bf9d4a6bb05bbca5daab7c1c337ecdec67e36c9d53d8992a541c36f97f",
+      "ru": "Показывать портреты альтернативных обликов"
+    },
+    {
+      "keys": [
+        "interface:options_auto_dampen_tip"
+      ],
+      "english_hash": "3a920d09c8eca64ab057026d6503d8042b46f204a0b888df5ad77d17408bf029",
+      "ru": "При использовании голосового чата громкость остальных звуков игры можно автоматически снижать. Настройте степень приглушения ползунком."
+    },
+    {
+      "keys": [
+        "interface:options_auto_region_max_ping_sub_text2"
+      ],
+      "english_hash": "e584c1e4e20c2b6e88c2a35fdc851e495f1941af944aebdbfce347f83240a765",
+      "ru": "Максимально допустимый пинг при поиске матча с автоматическим выбором региона."
+    },
+    {
+      "keys": [
+        "interface:options_auto_region_max_ping_tip_text1"
+      ],
+      "english_hash": "24083fca126cd64a4b62dbb03caf4f0b426b10d868a3558a8470ae9a8dc0116f",
+      "ru": "Задаёт максимально допустимый пинг сервера при поиске матча с автоматическим выбором региона."
+    },
+    {
+      "keys": [
+        "interface:options_bind_instructions_button"
+      ],
+      "english_hash": "6adbd16ba77e05f1a06d717a954a45241074632153f7ba3467327f28ca76240f",
+      "ru": "Чтобы выбрать новую привязку, ^yнажмите^* клавишу или кнопку мыши."
+    },
+    {
+      "keys": [
+        "interface:options_bind_instructions_impulse"
+      ],
+      "english_hash": "0d1a3c6a5c19610b1aaaa623fd957c03ebd12f3b3522fef988af0794e560eafb",
+      "ru": "Чтобы выбрать новую привязку, ^yнажмите^* нужную комбинацию клавиш."
+    },
+    {
+      "keys": [
+        "interface:options_brightMax_tip"
+      ],
+      "english_hash": "054f16b638707584fe04d8b76367eac50a35182879787c9b981f5a3da2928ce1",
+      "ru": "Настраивает максимальную яркость сцены и порог яркости для эффекта свечения. (По умолчанию: 2.0)"
+    },
+    {
+      "keys": [
+        "interface:options_brightMin_tip"
+      ],
+      "english_hash": "141fca53ec05f947a4db1a1d2ef09e11a984d819b93310919877e26210639d3c",
+      "ru": "Настраивает минимальную яркость сцены и порог яркости для эффекта свечения. (По умолчанию: 1.0)"
+    },
+    {
+      "keys": [
+        "interface:options_brightScale_tip"
+      ],
+      "english_hash": "aa6e9d607c8f0244bc9b68fc6553617bd8fca223493c831389c3a2769df94fd0",
+      "ru": "Настраивает масштаб яркости сцены и интенсивность эффекта свечения. (По умолчанию: 1.0)"
+    },
+    {
+      "keys": [
+        "interface:options_btn_restart_tutorial_tip"
+      ],
+      "english_hash": "463ab1362a331f415430d95390202e7125b895fd9cf69888514bb07b69e6f301",
+      "ru": "Повторно открывает обучающие слайды для новых игроков."
+    },
+    {
+      "keys": [
+        "interface:options_button_ok"
+      ],
+      "english_hash": "843ac01149cced785dfebd0028d3b03ba78e286e1c6f9517ebfcdb609d97af4c",
+      "ru": "ОК"
+    },
+    {
+      "keys": [
+        "interface:options_button_voice"
+      ],
+      "english_hash": "87bf2bc08589f0bd4a078db145c34ad5e14b8fda53c3ae65b78601294913df95",
+      "ru": "Голосовой чат"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_animated_portraits"
+      ],
+      "english_hash": "ae7d0bf7e3f48bc846ccb9670880022a7018bcd15c3b2b3c9662f7e15e91d1c0",
+      "ru": "Анимированные портреты"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_animated_portraits_tip"
+      ],
+      "english_hash": "8568469c5f1c9285d7171e92009d5dcb30b2d81214b0f150f71c317984e83c60",
+      "ru": "Включает анимацию портретов на нижней панели интерфейса."
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_banjo_sound"
+      ],
+      "english_hash": "3e4a949029a527b79f1120734b90259bc273a3db3e1a94600b30932c65a24a56",
+      "ru": "Звук банджо при выходе"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_banjo_sound_tip"
+      ],
+      "english_hash": "0ccf5931befc7ba72e5ff006fafe1ed8781e2764bbfc67ff8b49bf602c1c2a83",
+      "ru": "Воспроизводит классический звук банджо при выходе из клиента HoN."
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_cg_toolPersistantTargetIndicatorEnable"
+      ],
+      "english_hash": "a5931dab45af373a78e72de98e863d0a8d4c0a0422fb862dae044e4604e140e5",
+      "ru": "Сохранять индикатор применения"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_cg_toolPersistantTargetIndicatorEnable_tip"
+      ],
+      "english_hash": "2bf6c51051dd558ac313539a58050693532f1fcb728a96f573539732d3f4b2d4",
+      "ru": "Индикатор применения остаётся в выбранной области, пока герой не сможет начать применение способности."
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_ff_health"
+      ],
+      "english_hash": "84a6d3a50f50de9e6d79ff400e4ad785439771904bc0e65ba37775b385126a49",
+      "ru": "Деления на полосах здоровья"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_ff_health_per_pip"
+      ],
+      "english_hash": "c033d4c7c441886f5df62a09e4e8cd276a26c14a5b3b4859add34001cec0dfcb",
+      "ru": "Здоровья на деление"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_ff_health_per_pip_tip"
+      ],
+      "english_hash": "16ee90dfc65a8a5ee1b3f082861cbdf4228cf4b6fb0f816d1758996ef4849058",
+      "ru": "Количество здоровья, соответствующее одному крупному делению. Значение по умолчанию: 1000."
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_ff_health_per_sub_pip"
+      ],
+      "english_hash": "e1d96e27870e2588971b764b7407b8ab72be813163e9b4a4a1b09a1760f34ce5",
+      "ru": "Здоровья на малое деление"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_ff_health_per_sub_pip_tip"
+      ],
+      "english_hash": "9d328fe0a6c66cf090f11c4f3a3e3580d2e78b53ab5cc655d7927ec6c93d7862",
+      "ru": "Количество здоровья, соответствующее одному малому делению. Значение по умолчанию: 200."
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_ff_health_pip"
+      ],
+      "english_hash": "1c11743d818bc8b938599f8034b2e0edd6088649d385a560c4ff3a01e1221880",
+      "ru": "Показывать крупные деления"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_ff_health_sub_pip"
+      ],
+      "english_hash": "bf9e697a1ada1b347f4188553868beccb21779218d6b9904f1cba991fd2617fe",
+      "ru": "Показывать малые деления"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_frame_queuing_disabled_flush_frame_end"
+      ],
+      "english_hash": "a72131238852b32e2d989b378dc90493c3af118eec2425fd39e165fc03e89a68",
+      "ru": "Отключено (сброс в конце кадра)"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_frame_queuing_disabled_flush_frame_start"
+      ],
+      "english_hash": "73015e693f8c42e0799bbc0edc502d41491d620fc56bffa4b5dbb1fdb9f7bec9",
+      "ru": "Отключено (сброс в начале кадра)"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_goldlerp"
+      ],
+      "english_hash": "4731eeae27b4492c49a6ecb0870b7be4330c5e3676713324e55c37ea3d6a73f5",
+      "ru": "Плавное изменение количества золота"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_goldlerp_tip"
+      ],
+      "english_hash": "ccab0f2053cfe2375b484d9bf3bda26dd27a093844a9febb051b764d58772c4d",
+      "ru": "Плавно изменяет отображаемое количество золота до текущего значения за 350 мс."
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_graphics_triple_buffering_tip"
+      ],
+      "english_hash": "ef17c508f14e1bcbc5d16018091bfefd945926cda135ddebc9b928e72cd1ad8d",
+      "ru": "Использует дополнительный кадровый буфер видеокарты. Это может повысить плавность, но потребует больше видеопамяти."
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_ground_sprite"
+      ],
+      "english_hash": "6447b120bec4a0cad107002408fc45561da2c601e1263f5161c6f3e765f20dbf",
+      "ru": "Показывать наземные спрайты"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_hero_holdaftermove_tip"
+      ],
+      "english_hash": "64c1a37a3ade7ef3f476431cd2d0fbfc416923dd1706321ce77eb940868c53eb",
+      "ru": "После выполнения всех команд герой удерживает позицию и не начинает автоматически атаковать ближайших врагов."
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_hovershowselectionring"
+      ],
+      "english_hash": "b431ccd6f37139a3b0dd17c7ecd443e260643c7b101e349d7bbc639a20e125ad",
+      "ru": "Контур при наведении"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_hovershowselectionring_tip"
+      ],
+      "english_hash": "8c6bb86a8543f3bba475c6618d769834e37736e7091e4ef9ad4f69954d3c52d5",
+      "ru": "Подсвечивает контуром юнита, на которого наведён курсор."
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_no_switch_to_hidden_hero"
+      ],
+      "english_hash": "c2849dd25e01b1469dcea371d7501e8b57e7eac7cb4ab73150a2dc200f3d1e95",
+      "ru": "Не переключаться на героя вне экрана"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_portrait_overlay"
+      ],
+      "english_hash": "21b78b8bf26d26871c506c6474d0bb133ca9db5f0f8b037b57465f30a5e50102",
+      "ru": "Индикатор юнитов вне экрана"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_reverse_minimap"
+      ],
+      "english_hash": "d8d686da79749da383349ff0b0e09e13d9528548d380c5e1832384effd9910be",
+      "ru": "Переместить мини-карту вправо"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_right_click_deny"
+      ],
+      "english_hash": "0d705aed4e858020d7aa7cf16cb30518c7d209350bf3acb13779ead1c8afd8d4",
+      "ru": "Добивание союзников правой кнопкой"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_right_click_deny_tooltip"
+      ],
+      "english_hash": "cac29b066fba3d62e564f61f947f6a14d970a63446876caa28d953e6176a9473",
+      "ru": "Позволяет атаковать союзных крипов с низким запасом здоровья правой кнопкой мыши, чтобы добить их."
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_safe_channel"
+      ],
+      "english_hash": "b75aba884a34d7448b6ad50ba2b104d3246f1538498c08026209e5226f38c4ec",
+      "ru": "Защита прерываемых способностей"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_safe_channel_tip"
+      ],
+      "english_hash": "bc9168b20db10692d88af23c7f85850a30c229ec573aba165a1a42bc88269f8a",
+      "ru": "Движение или применение другой способности не прерывает уже выполняемую поддерживаемую способность."
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_show_crit"
+      ],
+      "english_hash": "30c7b16908f3007c4466646015fae3fb8e9965dff6d32c6e02b590f5d7af41c1",
+      "ru": "Показывать критический урон"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_show_death_recap_on_death_tip"
+      ],
+      "english_hash": "bd83607ed81f2ff35f07b32549a6aa17f9862816c53cd6a174974e12101f4002",
+      "ru": "Автоматически открывает сводку после смерти. Отключите, чтобы открывать её вручную кнопкой «Сводка смерти»."
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_show_deny"
+      ],
+      "english_hash": "d2871c6ca47048a9d0f295ab6f2571b7ae40b759c4f8043f251956504c8814bf",
+      "ru": "Показывать эффект добивания"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_show_exp"
+      ],
+      "english_hash": "438ebb7eaee47951f5c8cab87b1be9edb3f9a1affc34ca928ecd2c53da5750ae",
+      "ru": "Показывать полученный опыт"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_show_gold"
+      ],
+      "english_hash": "1367b4c1b479b5b495fcdacb6e047b8f4139cad85927c8b18d1fe6046c19a322",
+      "ru": "Показывать полученное золото"
+    },
+    {
+      "keys": [
+        "interface:options_screen_show_gold_tip"
+      ],
+      "english_hash": "ddc7ea7bdd05b64fea8ff424a2b5d611f2bc4e64bcacc0c84838267fb6a4bbe7",
+      "ru": "Показывает количество полученного золота."
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_showplayerring"
+      ],
+      "english_hash": "5269396f4625bc308726ed9ecb05acf0360f4df1baa69c5f94503234a5d28c49",
+      "ru": "Контур своего героя"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_smart_unit_selection"
+      ],
+      "english_hash": "729136d6dc06e0875a76d8fb670b6e7af7ea24ea7a46e7c3c710dd75412ce8dd",
+      "ru": "Умный выбор юнитов"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_smart_unit_selection_tip"
+      ],
+      "english_hash": "8877f479c09836f532bdb495b8dd9b03c3b969a83d3a4ac358823946bcaf4af5",
+      "ru": "Выбирает ближайшего к курсору юнита, а не ближайшего к камере, и упрощает выбор юнитов, особенно у их ног."
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_sound_muteMusic"
+      ],
+      "english_hash": "0fd291bfeb2f4ec6fcb6c2946917c7b88f86c02013f2cc6c0d775e88a6e286dd",
+      "ru": "Отключить музыку"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_sound_mutePings"
+      ],
+      "english_hash": "1e7d44decb2ec058e693ec406221d0934f366f1c7eb427afbd189e23bcd7f1e4",
+      "ru": "Отключить голосовые оповещения пингов"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_team_or_player_color"
+      ],
+      "english_hash": "c0e460d8d80870f1a60ebb11a9a67e1d04c4caf09527da234fe717182baaf5ed",
+      "ru": "Использовать индивидуальные цвета игроков"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_view_operation"
+      ],
+      "english_hash": "f5bb008c84b42fb3bd5bc69b2a6db0e4ed8c861b73e14de5f4aded2237ee8bd9",
+      "ru": "Управление обзором"
+    },
+    {
+      "keys": [
+        "interface:options_classic_login_tip_text"
+      ],
+      "english_hash": "a303bee03840040289f12a3ba9d0bf629f90545d4e2766a4b21215a905236e6d",
+      "ru": "Включает классический экран входа и его анимацию. Требуются перезапуск игры и классический интерфейс (отключите «Новый основной интерфейс»)."
+    },
+    {
+      "keys": [
+        "interface:options_disable_all_sounds_tip"
+      ],
+      "english_hash": "98cf7dd4e1cd315fc73373932827bcac5a6363f9fcb8610124c345254e72a71a",
+      "ru": "Полностью отключает звуковую систему. Это может улучшить работу на компьютерах с небольшим объёмом оперативной памяти. (Требуется перезапуск)"
+    },
+    {
+      "keys": [
+        "interface:options_dropdown_show_combat_log_always"
+      ],
+      "english_hash": "d9b17bc54bd6cbf0a890acf47e4351244c838730e2bdb995c716d412729414e0",
+      "ru": "Показывать в реальном времени"
+    },
+    {
+      "keys": [
+        "interface:options_hoverhighlightstrength"
+      ],
+      "english_hash": "ee4b4af6fb607a597c7e8557e9d5a1a849492f8343b6edfd08fe7a2ceaea475f",
+      "ru": "Интенсивность подсветки при наведении"
+    },
+    {
+      "keys": [
+        "interface:options_label_self_cast_keybind"
+      ],
+      "english_hash": "d03729bad923762a7ca05c729248ea4a7e507a361f7c8f5c59e75362b2dfa416",
+      "ru": "Модификатор применения на себя"
+    },
+    {
+      "keys": [
+        "interface:options_slider_creep_health_bar_transparency"
+      ],
+      "english_hash": "3f246eff7ed25115b1482c204ba78a417232903c13ce6f38d18ca3dc0f1db7f2",
+      "ru": "Прозрачность полос здоровья крипов"
+    },
+    {
+      "keys": [
+        "interface:options_slider_creep_health_bar_threshold"
+      ],
+      "english_hash": "6d200121f98b3c0c7f8e61fa48eb60c3c71c4827627f2c6ca41397690b8d453d",
+      "ru": "Порог прозрачности полос здоровья крипов"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_mute_announcer"
+      ],
+      "english_hash": "02d60e79161bc9f2dd59235f9a3d7290ac09d98747c5e6e233fd6b4bc9fdf041",
+      "ru": "Отключить диктора"
+    },
+    {
+      "keys": [
+        "interface:options_checkbox_mute_announcer_tip"
+      ],
+      "english_hash": "89aa92b78513e505bf84f35a116145c869a035739bbb569f664289a23093d8c3",
+      "ru": "Отключает голос диктора."
+    },
+    {
+      "keys": [
+        "interface:options_time_between_announcer_callouts"
+      ],
+      "english_hash": "b2b64d91fbd69d2736f5fea5c986e2dbcb20153b0febe94ca0034b1526e18206",
+      "ru": "Интервал между репликами диктора"
+    },
+    {
+      "keys": [
+        "interface:options_time_between_announcer_callouts_tip"
+      ],
+      "english_hash": "296c386db3ae826369a3e61ff9416d45b17f6de7fe358b1074a24064a36937e7",
+      "ru": "Интервал между репликами диктора в миллисекундах."
+    },
+    {
+      "keys": [
+        "interface:options_newannouncervolume"
+      ],
+      "english_hash": "5b4216d68485a26a4fd8fac03cab91354df62085e9945d4e76bd95f9c6e7ab0e",
+      "ru": "Громкость событийного диктора (%)"
+    },
+    {
+      "keys": [
+        "interface:options_newannouncervolume_tip"
+      ],
+      "english_hash": "5324cf5baace776774fe6d3e17d72ffe9e7fe8110e2e940a7f4676444333eed4",
+      "ru": "Настраивает громкость событийного диктора. Базовый уровень — 100%."
+    },
+    {
+      "keys": [
+        "interface:options_mutenewannouncer"
+      ],
+      "english_hash": "0f9ae101ab508fda97fcdb1b4c2e146cef64f6fed7b5524078f9e0ad0c171c4d",
+      "ru": "Отключить событийного диктора"
+    },
+    {
+      "keys": [
+        "interface:options_mutenewannouncer_tip"
+      ],
+      "english_hash": "3ec20209dfc30bff772f4591fa35b1bdb169b2bf7a8ce7bed8f960c9738dce08",
+      "ru": "Отключает все реплики событийного диктора."
+    },
+    {
+      "keys": [
+        "interface:options_muteautomissingannouncer"
+      ],
+      "english_hash": "63d391f7fdd103132f092ca7c5d9e6b34616c240e664ad86f938db523f3e49de",
+      "ru": "Отключить оповещения об исчезновении героев"
+    },
+    {
+      "keys": [
+        "interface:options_muteautomissingannouncer_tip"
+      ],
+      "english_hash": "a5feca856584dca0732e976cd1484ab594937b9ce264afab6eda0976ac70d7bd",
+      "ru": "Отключает реплики диктора об исчезновении вражеских героев с линии."
+    },
+    {
+      "keys": [
+        "interface:options_mutekillcalloutannouncer"
+      ],
+      "english_hash": "5f0bf9eaf68d3d1ed483f5140bb630d1f867d5efba5bc319db897155e6be4296",
+      "ru": "Отключить оповещения об убийствах героев"
+    },
+    {
+      "keys": [
+        "interface:options_mutekillcalloutannouncer_tip"
+      ],
+      "english_hash": "b4bab2186f6b47d731e847a0e49c82c28a726d553860ba39b4c03199d263dee2",
+      "ru": "Отключает реплики диктора об убийствах героев."
+    },
+    {
+      "keys": [
+        "interface:options_muteherospottedcalloutannouncer"
+      ],
+      "english_hash": "66cbb98efb6a206ace97198937937e0645cdc2f98d8f2a1a2ba6a6ca3b6fa088",
+      "ru": "Отключить оповещения об обнаружении героев"
+    },
+    {
+      "keys": [
+        "interface:options_muteherospottedcalloutannouncer_tip"
+      ],
+      "english_hash": "5e158ce9750017a35628e2593b08618772b837386c7ad1492dd089cc67f7ca8b",
+      "ru": "Отключает реплики диктора об обнаружении героев."
+    },
+    {
+      "keys": [
+        "interface:options_muteruneinfocalloutannouncer"
+      ],
+      "english_hash": "907f0f57d43815b56655f742675043d8d8947296501cdc6c0d8094bf01c28f4b",
+      "ru": "Отключить оповещения о рунах"
+    },
+    {
+      "keys": [
+        "interface:options_muteruneinfocalloutannouncer_tip"
+      ],
+      "english_hash": "887c03b7a253b632a06bdf46168cca0a1932c86abce409e5d3d15736407fa60b",
+      "ru": "Отключает реплики диктора с информацией о рунах."
+    },
+    {
+      "keys": [
+        "interface:options_simple_reactdelay"
+      ],
+      "english_hash": "c836683af7a8ab2636d193da7483eaa18964287cb85905a581cf812009abc9ca",
+      "ru": "Задержка между реакциями юнитов"
+    },
+    {
+      "keys": [
+        "entities:TargetScheme_all_heroes"
+      ],
+      "english_hash": "abcbb744a8b6f450209f8433fb6be3c49d3f10d709b88a91a988c731252835c5",
+      "ru": "Все герои"
+    },
+    {
+      "keys": [
+        "entities:Option_AllHeroes"
+      ],
+      "english_hash": "abcbb744a8b6f450209f8433fb6be3c49d3f10d709b88a91a988c731252835c5",
+      "ru": "Все герои"
+    }
+  ]
+}

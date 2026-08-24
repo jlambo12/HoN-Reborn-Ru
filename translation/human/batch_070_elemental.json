@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_070_ELEMENTAL",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_Elemental1_name"], "ru": "Replicate"},
+    {"keys": ["entities:Ability_Elemental1_description", "entities:Ability_Elemental1_description_simple"], "ru": "Каждая атака по противнику добавляет один заряд. Накопив 6 зарядов, Elemental разделяется на 2 Elementals с полным запасом здоровья и оставшимся временем жизни."},
+    {"keys": ["entities:Ability_Elemental1_effect_header"], "ru": "Эффекты состояния"}
+  ]
+}

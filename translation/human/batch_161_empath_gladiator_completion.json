@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_161_EMPATH_GLADIATOR_COMPLETION",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:State_Empath_Ability1_Enemy_FRAME_effect"],
+      "english_hash": "077ecf4e41b8e12402fb9492cf6012e66bef13e49457a7ea28fd8600b50e3f3f",
+      "ru": "{20,30,40,50} чистого урона в секунду"
+    },
+    {
+      "keys": [
+        "entities:State_Empath_Ability1_Inside_FRAME_effect",
+        "entities:State_Empath_Ability1_Self_FRAME_effect"
+      ],
+      "english_hash": "234e74dd583a0b9935c42a31514c5a259b5d348fb40fb967a9f251bd929787b6",
+      "ru": "Восстанавливает {20,30,40,50} здоровья в секунду"
+    },
+    {
+      "keys": ["entities:State_Empath_Ability2_Effects_FRAME_effect"],
+      "english_hash": "189fff2ef739a47c4c8e6c3d8794674da525f111507c11f32bd3895f18b94b79",
+      "ru": "50 магического урона в секунду"
+    },
+    {
+      "keys": ["entities:State_Empath_Ability4_Self_description"],
+      "english_hash": "e8df04a34fbfedd0f09c3cfc3eb2d2120e2765187b92847672ebc69c542ab712",
+      "ru": "Empath находится внутри другого героя!"
+    },
+    {
+      "keys": ["entities:State_Empath_Ability4_Speed_description"],
+      "english_hash": "74a6de70307ad92aa15b7530fa31db179ff0d7e560741786968f7a2f80eca41a",
+      "ru": "Empath ускорила этого героя на 150 единиц; бонус постепенно уменьшается до 0 за 2 секунды."
+    },
+    {
+      "keys": ["entities:State_Empath_Ability4_Target_description"],
+      "english_hash": "63c69faa96b0b295151057ca0a84ab027e155ad304c3d699b95a2b55f8ad83dd",
+      "ru": "Empath находится внутри!"
+    },
+    {
+      "keys": ["entities:State_Empath_Ability4_Target_description:ult_boost"],
+      "english_hash": "84187915c406d89b2f723b9804f492004e8c039797ebf8bda4dfe27a6808b7a8",
+      "ru": "Empath находится внутри и даёт вам эффекты ^gStaff of the Master^*"
+    },
+    {
+      "keys": ["entities:State_Gladiator_Ability2_FRAME_effect"],
+      "english_hash": "ea3510dc664d734053533c759bff78ee4a0f45bd7275532a402913bdebacc327",
+      "ru": "По окончании телепортируется обратно в Colosseum"
+    },
+    {
+      "keys": ["entities:State_Gladiator_Ability4_FRAME_effect"],
+      "english_hash": "cf75bb8df1d9f861e18856c600d5e8016fc7a704c1f5656539243dcbf5d4cf42",
+      "ru": "Поглощает 50% получаемого урона\\nПосле окончания усиления поглощённый урон наносится за {5,6,7} секунд\\n\\nУрон наносится как прямое снятие здоровья"
+    },
+    {
+      "keys": ["entities:State_Gladiator_Ability4_Sotm_FRAME_effect"],
+      "english_hash": "d4b2ceeb3be119ef2f0d449a66d38db021f24dfe952b505838dcc10afbd659f1",
+      "ru": "Поглощает 50% получаемого урона."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_221_RUNTIME_SCREENSHOT_FIXES",
+  "catalog_apply": true,
+  "reviewed_by": "Codex runtime screenshot review 2026-08-24",
+  "entries": [
+    {
+      "keys": ["entities:Popup_multicast"],
+      "english_hash": "30335ee5909e111b90f68832c90d6f088e24d1700b8f11fca02c610c391aa995",
+      "ru": "МУЛЬТИКАСТ x{value}!"
+    },
+    {
+      "keys": ["entities:TargetScheme_all_units"],
+      "english_hash": "e5d878b1ace03a4e52719ab26540ed2844d468e18563ce905f1b48b856005d21",
+      "ru": "Все существа"
+    },
+    {
+      "keys": ["game_messages:action_target_self"],
+      "english_hash": "85bc0f95858d757232c2f3662d3edb11168ddbfb426bfc240b478dc444308c9b",
+      "ru": "На себя"
+    },
+    {
+      "keys": ["game_messages:area_kongors_pit"],
+      "english_hash": "d518648d85c76e47777fe42da57bb4a56c017c12b079039b54b6ed788a029499",
+      "ru": "Логово Конгора"
+    },
+    {
+      "keys": ["game_messages:kill0", "game_messages:kill1", "game_messages:kill2", "game_messages:kill3"],
+      "english_hash": "e9ffcef4a473f3bd6a16182e65791247ab93c4e03ee0cb93a28ec46072ace4cb",
+      "ru": "{killer_color}{killer}^*^; убивает {victim_color}{victim}^*^; выстрелом в голову и получает ^y{gold}^* золота!!"
+    },
+    {
+      "keys": ["game_messages:kill4"],
+      "english_hash": "97f0a75cb7e46bdbd3192e1e7a56aed3f3d2bb45ac59052c4ab577d0e4b04b2e",
+      "ru": "{killer_color}{killer}^*^; убивает {victim_color}{victim}^*^; выстрелом в голову и получает ^y{gold}^* золота!"
+    },
+    {
+      "keys": ["interface:boss_info_kongor_ability4_desc"],
+      "english_hash": "ba3b7dfe328df8900302381f7f980ab98be5e4c7a0ac856a11e73eeb7d439fc6",
+      "ru": "Снижает длительность отрицательных эффектов и оглушения на 70%, а также даёт 70% сопротивления замедлению. При оглушении эти показатели повышаются ещё на 15%, но не более чем до 100%.\\n\\nВампиризм врагов при атаке Конгора снижен на 50%."
+    },
+    {
+      "keys": ["interface:boss_info_kongor_reward2_name"],
+      "english_hash": "a36fc700c1db8413a9981d7459a5854c59d798f2147e6bc3eb6f88e43e7573e3",
+      "ru": "Призыв союзного Конгора"
+    },
+    {
+      "keys": ["interface:boss_info_scaling_header"],
+      "english_hash": "f1766cc4ec8d9f77a705fb038ed4a1bfcccf1230fb88c83e1b5cdd76b7fb9cec",
+      "ru": "Усиление с каждым возрождением"
+    },
+    {
+      "keys": ["interface:options_label_smart_casting_type"],
+      "english_hash": "98df71feef68692bb5daafd8748fd29f89640ece54638fdc89b6c82b36095f37",
+      "ru": "Режим быстрого применения"
+    },
+    {
+      "keys": ["interface:options_smartcastingtype_key_up"],
+      "english_hash": "083be6d3669337e2725a1794c0137549a311a467e417289bbf2da76772473a59",
+      "ru": "При отпускании клавиши"
+    },
+    {
+      "keys": ["interface:player_role_hardsupport"],
+      "english_hash": "115c34816b8b91b233ffeb13dd4c9707c0bfe3c9dbf45a087f0e04e284b05fab",
+      "ru": "Поддержка"
+    },
+    {
+      "keys": ["interface:player_role_softsupport"],
+      "english_hash": "bd89fbcdf9577269796f9206af0f9b4d8f6789071f9081adae375dad56084d39",
+      "ru": "Роум"
+    },
+    {
+      "keys": ["interface:player_role_soloofflane"],
+      "english_hash": "5fdfc2c8c0fbc92022cc15cf43bbc29f90e818ac973908910c1fb9fa2f55f07d",
+      "ru": "Оффлейн"
+    },
+    {
+      "keys": ["interface:player_role_jungle"],
+      "english_hash": "349b3190be299fcce50a5d411d5d4155e9885d1dc76cda6858ac60bf965d6f30",
+      "ru": "Лес"
+    },
+    {
+      "keys": ["interface:status_effect_stun"],
+      "english_hash": "4b63b96ae5c589ab93aa1024699b1137f822d73f3f4d6cd2749bbf4fa9193440",
+      "ru": "Оглушение"
+    },
+    {
+      "keys": ["interface:status_effect_slow"],
+      "english_hash": "4b2bebbf33aeb7aea11cbab9d95019a647ca038b638f99f593aae85b986ed2e2",
+      "ru": "Замедление"
+    }
+  ]
+}

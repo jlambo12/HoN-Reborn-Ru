@@ -1,0 +1,24 @@
+{
+  "schema_version":1,"batch_id":"HUMAN_RU_217_ITEM_BOTTLE","reviewed_by":"Codex manual gameplay localization",
+  "entries":[
+    {"keys":["entities:Item_Bottle_IMPACT_effect","entities:Item_Bottle_IMPACT_effect:bottle_1","entities:Item_Bottle_IMPACT_effect:bottle_2","entities:Item_Bottle_IMPACT_effect:bottle_3"],"english_hash":"afb8ae8025a328f8ff748cc851ec925610400286f3cb4598ada8e69104d6109a","ru":"Восстанавливает вам ^o135 здоровья^* и ^o80 маны^* за ^o3 секунды^*. Рассеивается при получении урона."},
+    {"keys":["entities:Item_Bottle_IMPACT_effect:bottle_damage"],"english_hash":"932250a47a29c66db6751128dd7535abf7b03c4eb5b904f3ba7ff10a0215f8e5","ru":"Накладывает на вас ^oДвойной урон^* на ^o45 секунд^*."},
+    {"keys":["entities:Item_Bottle_IMPACT_effect:bottle_empty"],"english_hash":"b7df05a8de36e72b094b85affaf190cf43617bbbf92c5d38c0f0d48b73f4c2e3","ru":"Нажмите правой кнопкой или выберите ^oруну^*, чтобы сохранить её на срок ^oдо 2 минут^*.\\n\\nСохранение руны ^oполностью наполняет^* бутылку."},
+    {"keys":["entities:Item_Bottle_IMPACT_effect:bottle_illusion"],"english_hash":"4135fba008583483340744d0e9160b9e455f8c922a383d454281f3defb962af0","ru":"Даёт вам 30% сокращения перезарядки и затрат маны на 45 секунд. Создаёт две ваши иллюзии, которые наносят 35% урона, получают 300% урона и существуют 75 секунд."},
+    {"keys":["entities:Item_Bottle_IMPACT_effect:bottle_merricks"],"english_hash":"dabe6ea0c83f2830d91b96dc9c0aea0aab34b1d676a7ceccac309a448cc790a1","ru":"Даёт владельцу 35 золота и ещё по 2 золота за каждую прошедшую минуту."},
+    {"keys":["entities:Item_Bottle_IMPACT_effect:bottle_movespeed"],"english_hash":"acd2169ca01b23e73e14fee09917066db81488e2d082c63d00c20750aec38880","ru":"Накладывает на вас ^oУскорение^* на ^o30 секунд^*."},
+    {"keys":["entities:Item_Bottle_IMPACT_effect:bottle_regen"],"english_hash":"96de2cef642cc1d51d61527b1fb8cb9a64b05a694fe818e7eca3c2953758c681","ru":"Накладывает на вас ^oРегенерацию^* на ^o30 секунд^*."},
+    {"keys":["entities:Item_Bottle_IMPACT_effect:bottle_stealth"],"english_hash":"322cf968c4ff7139ad4c6622fbdb9a17dff31597e11987263155b55983d60a2f","ru":"Накладывает на вас ^oНевидимость^* на ^o60 секунд^*."},
+    {"keys":["entities:Item_Bottle_IMPACT_effect:bottle_super"],"english_hash":"b47930f884b4c9266a9d636720c6ea955e6c12a44bcd53e64f0675522aaaf232","ru":"Накладывает на вас ^oэффекты суперруны^* на ^o60 секунд^*."},
+    {"keys":["entities:Item_Bottle_description"],"english_hash":"1a65943bfbcecfc5a27aad0bd3e41b311bb470dc210c74a294f43a309c4cf1f4","ru":"Расходует заряд при использовании. Наполняется у Колодца или при подборе рун."},
+    {"keys":["entities:Item_Bottle_description_simple"],"english_hash":"c09d52779c425cd61e189209f89ef86daf2826cfc9fcf23feffe4422d55db190","ru":"Восстанавливает здоровье и ману за 3 секунды. Наполняется у Колодца и хранит руны."},
+    {"keys":["entities:Item_Bottle_effect_header:bottle_damage"],"english_hash":"e1e1cf4fc7ff6491ce304beb658e727cf9de1e092be1c80c87713bc90dbbe2d8","ru":"Эффекты двойного урона"},
+    {"keys":["entities:Item_Bottle_effect_header:bottle_merricks"],"english_hash":"6f3852bee575c8b7454843e0b5a43afa3871d30a9934a67a8eae461676227d9d","ru":"Эффекты бутылки"},
+    {"keys":["entities:Item_Bottle_effect_header:bottle_movespeed"],"english_hash":"6fbb72731becc420420ea95e65e4c0b01bc04021a4ff26ae32cce3fa958c3a90","ru":"Эффекты ускорения"},
+    {"keys":["entities:Item_Bottle_effect_header:bottle_regen"],"english_hash":"324aac27dafeabe0b4be6ba051df3d67f8f1d4fd5147f83b4a361231c3f1b5e9","ru":"Эффекты регенерации"},
+    {"keys":["entities:Item_Bottle_effect_header:bottle_stealth"],"english_hash":"e6d2ddd9c07420f09e7dc827e99e7d645dde5405f66f6b86190fa4657422bb87","ru":"Эффекты невидимости"},
+    {"keys":["entities:Item_Bottle_effect_header:bottle_super"],"english_hash":"4b4e37b5476bcef1bec8c38780599add6af18d6e694c4e833b1eb804ccce188a","ru":"Эффекты суперруны"},
+    {"keys":["entities:State_Bottle_FRAME_effect"],"english_hash":"225c5cfd35a606b378d42c764c3eb49bc7adbe984c5814781457a8eadc43f207","ru":"41.67 здоровья в секунду\\nРассеивается при получении урона не от линейного крипа и не от нейтрального босса"},
+    {"keys":["entities:Item_Bottle_effect_header"],"english_hash":"6e5e7bc5e96f838352cde0fcff351520eab9cd6b12ecb43e9b30ed6fd98f6777","ru":"Эффекты состояния"}
+  ]
+}

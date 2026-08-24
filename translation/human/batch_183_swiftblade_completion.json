@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_183_SWIFTBLADE_COMPLETION",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Swiftblade1_IMPACT_effect"],
+      "english_hash": "af20dbe9a4a6411df71d28787222e2a2367bdfcaf115cfee87fc508a571c9f6d",
+      "ru": "Наносит юнитам в радиусе ^o{75,95,115,135} магического урона в секунду^* и на время действия накладывает на себя ^oBlade Frenzy^*. Длится 5 секунд.\\n\\nВо время Blade Frenzy Swiftblade не может наносить критические удары.\\n\\nПри активации снимает все отрицательные эффекты."
+    },
+    {
+      "keys": ["entities:Ability_Swiftblade1_description"],
+      "english_hash": "4876c9590468d22e2cbf10f44ea333d6d93734ed9a949a9a20bdf0d392ec5609",
+      "ru": "Swiftblade входит в состояние Blade Frenzy. Он получает невосприимчивость к магии и каждую секунду наносит большой урон всем противникам поблизости, сохраняя возможность передвигаться.\\n\\nНевосприимчивость к магии этой способности имеет ^428модификатор активации^* совместно со Shrunken Head и Void Talisman."
+    },
+    {
+      "keys": ["entities:Ability_Swiftblade1_description_simple"],
+      "english_hash": "4c6cb5c1af5930447efb4c4abf20416af2a2c3c73133743b7e6259eede9a2a5f",
+      "ru": "Входит в состояние ^oBlade Frenzy на 5 секунд^*, ^oнанося противникам поблизости {75,95,115,135} магического урона в секунду^*, но не может наносить критические удары.\\n\\nСнимает отрицательные эффекты и даёт ^oневосприимчивость к магии^*."
+    },
+    {
+      "keys": ["entities:Ability_Swiftblade1_effect_header"],
+      "english_hash": "4a09798e8736ec5a726404443ba4aae94bedff08c0cffb6a9e9db1b6e989907d",
+      "ru": "Эффекты Blade Frenzy"
+    },
+    {
+      "keys": ["entities:Ability_Swiftblade2_IMPACT_effect"],
+      "english_hash": "5d0893d6ce56086f871161648eaff36adc70a0995004b5963c22d815fe41cb1d",
+      "ru": "Активируйте, чтобы ^oблокировать все входящие обычные атаки на {1.6,1.9,2.2,2.5} секунды^* и ответить обычными атаками Swiftblade на следующие ^o{1,2,3,4} атаки героев^* за это время. Ответные атаки активируют Way of the Sword."
+    },
+    {
+      "keys": ["entities:Ability_Swiftblade2_IMPACT_effect:hiro_Counterstrike"],
+      "english_hash": "011c7d334a67c57b91038b62fbe3dc645ab49b4dbcc1302f00ace33bad63eb2f",
+      "ru": "^gВыберите противника, чтобы ^oатаковать его и телепортироваться к нему^*, наложив ^oзамедление передвижения на 80% на 1.5 секунды.^*^*"
+    },
+    {
+      "keys": ["entities:Ability_Swiftblade2_IMPACT_effect:ult_boost"],
+      "english_hash": "2fdf806764826a1a6f8ca688bf39b9b16354f8f18601dab098ef9ae00b91c8c5",
+      "ru": "Активируйте, чтобы ^oблокировать все входящие обычные атаки на 2.5 секунды^* и ответить обычными атаками Swiftblade на следующие ^o{1,2,3,4} атаки героев^* за это время. Ответные атаки активируют Way of the Sword.\\n\\n^gЕсли во время Counter Attack будет заблокирована атака героя, по окончании способности Swiftblade становится неуязвимым на 1 секунду, а Counter Attack на следующие 5 секунд заменяется на Counter Strike.\\n\\nВыберите противника, чтобы применить Counter Strike: атаковать его, телепортироваться к нему и замедлить передвижение на 80% на 1.5 секунды.^*"
+    },
+    {
+      "keys": ["entities:Ability_Swiftblade2_description"],
+      "english_hash": "a40c618b403fe70f5cc2a0d2edb9679c8800ca7ca408336796bb816a72e793cb",
+      "ru": "Долгие тренировки в ближнем бою позволили Swiftblade в совершенстве овладеть искусством ответных атак.\\n\\nПассивно даёт ^o{10,15,20,25}% вероятности^* нанести атакующему вражескому герою урон своей атаки. Во время действия Counter Attack этот эффект отключён."
+    },
+    {
+      "keys": ["entities:Ability_Swiftblade2_description2"],
+      "english_hash": "523948361e21b7427982a2ccaaed587078bc0145dd849c052f9ba58daf61264a",
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff:^* если во время Counter Attack будет заблокирована атака героя, по окончании способности Swiftblade становится неуязвимым на 1 секунду, а Counter Attack на следующие 5 секунд заменяется на Counter Strike. Выберите противника, чтобы применить Counter Strike: атаковать его, телепортироваться к нему и замедлить передвижение на 80% на 1.5 секунды."
+    },
+    {
+      "keys": ["entities:Ability_Swiftblade2_description_simple:hiro_Counterstrike"],
+      "english_hash": "011c7d334a67c57b91038b62fbe3dc645ab49b4dbcc1302f00ace33bad63eb2f",
+      "ru": "^gВыберите противника, чтобы ^oатаковать его и телепортироваться к нему^*, наложив ^oзамедление передвижения на 80% на 1.5 секунды.^*^*"
+    },
+    {
+      "keys": ["entities:Ability_Swiftblade2_description_simple:ult_boost"],
+      "english_hash": "f95c3141ea367f26de7b60af7a6eb170ed3e63708195bd10923cdd438e1c2221",
+      "ru": "Даёт ^o{10,15,20,25}% вероятности^* нанести урон своей атаки ^oатакующему^* вражескому герою. Во время действия Counter Attack этот эффект отключён.\\n\\nАктивируйте, чтобы ^oблокировать все входящие обычные атаки на 2.5 секунды^* и ^oотвечать своими обычными атаками^* на следующие ^o{1,2,3,4} атаки героев^* за это время. Ответные атаки ^oактивируют Way of the Sword^*.\\n\\n^gЕсли во время Counter Attack будет заблокирована атака героя, по окончании способности Swiftblade становится неуязвимым на 1 секунду, а Counter Attack на следующие 5 секунд заменяется на Counter Strike.\\n\\nВыберите противника, чтобы применить Counter Strike: атаковать его, телепортироваться к нему и замедлить передвижение на 80% на 1.5 секунды.^*"
+    },
+    {
+      "keys": ["entities:Ability_Swiftblade3_ATTACK_IMPACT_effect"],
+      "english_hash": "3704f24b91524044f6f0b2f87299822629b33e6daeab30ecfd0d2ec7127cf8bc",
+      "ru": "{15,20,25,30}% вероятности нанести критический удар с множителем 1.75"
+    },
+    {
+      "keys": ["entities:Ability_Swiftblade3_description"],
+      "english_hash": "1dcab947cfda386632e7df9415d5a9eaff5e3169c952e6348e5331492bd5c57b",
+      "ru": "Непревзойдённое владение мечом позволяет Swiftblade наносить удары в самые уязвимые места, давая каждой атаке вероятность стать критической."
+    },
+    {
+      "keys": ["entities:Ability_Swiftblade3_description_simple"],
+      "english_hash": "0cead4e022ff418c8060e777cf41db7801556c6714218b5b5e8d1a0a72df9f6f",
+      "ru": "Даёт ^o{15,20,25,30}% вероятности^* нанести ^oкритический удар с множителем 1.75^*."
+    },
+    {
+      "keys": ["entities:Ability_Swiftblade3_effect_header"],
+      "english_hash": "6e5e7bc5e96f838352cde0fcff351520eab9cd6b12ecb43e9b30ed6fd98f6777",
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:Ability_Swiftblade4_IMPACT_effect"],
+      "english_hash": "986fc94a450e3ec2b2d72c9dd20d26defcac2da191968c076282108c52670257",
+      "ru": "Телепортируется к случайным целям {3,5,8} раз, нанося каждой 200 физического урона и кратковременно оглушая её. На время действия накладывает на себя Swift Slashes. При применении сбрасывает перезарядку атаки.\\n\\nКроме того, при каждой телепортации во время Swift Slashes Swiftblade может совершить дополнительные обычные атаки, число которых зависит от его скорости атаки."
+    },
+    {
+      "keys": ["entities:Ability_Swiftblade4_IMPACT_effect:ult_boost"],
+      "english_hash": "e38f26168e26d822396b7985cfb62aaa1941eedfcf287378ae4b54600fa7cdc6",
+      "ru": "Телепортируется к случайным целям ^g{5,7,10}^* раз, нанося каждой 200 физического урона. На время действия накладывает на себя Swift Slashes. При применении сбрасывает перезарядку атаки.\\n\\nКроме того, при каждой телепортации во время Swift Slashes Swiftblade может совершить дополнительные обычные атаки, число которых зависит от его скорости атаки."
+    },
+    {
+      "keys": ["entities:Ability_Swiftblade4_description"],
+      "english_hash": "35fe289519f744a614ab3e36f8af23a5b42002e0e656e81c8a7098b77e8ea14b",
+      "ru": "Swiftblade с такой скоростью атакует случайные цели поблизости, что кажется, будто он телепортируется к ним. Цели выбираются случайно, и одна цель может быть выбрана несколько раз."
+    },
+    {
+      "keys": ["entities:Ability_Swiftblade4_description2"],
+      "english_hash": "1c3f25bd3eeb5823192c026d45d10e230840dead6e4885418fa6af6d0dc9fd43",
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff:^* увеличивает число телепортаций с {3,5,8} до {5,7,10} и сокращает перезарядку до {110,100,90} секунд."
+    },
+    {
+      "keys": ["entities:Ability_Swiftblade4_description_simple"],
+      "english_hash": "3c21323e1608359c6393801b75527ef6980e723e8d1f66810d6bcb032ea38bb1",
+      "ru": "Стремительно рубит вражеского юнита и ^oкратковременно оглушает^* его, затем снова атакует его или других противников поблизости, становясь ^oнеуязвимым^*, нанося ^o200 физического урона^* и ^oтелепортируясь к цели^*. При применении сбрасывает перезарядку атаки.\\n\\n^oSwift Slashes^* совершает до ^o{3,5,8} ударов^*; во время ^oSwift Slashing^* могут срабатывать обычные атаки.\\n\\n^gStaff of the Master^* увеличивает число ударов Swift Slashes до ^o{5,7,10}^* и сокращает перезарядку до ^o{110,100,90} секунд^*."
+    },
+    {
+      "keys": ["entities:Ability_Swiftblade4_description_simple:ult_boost"],
+      "english_hash": "9cdcb30ca314a104f7e0a0608869066c904250963a0a1f65dee1c89f5bd297ca",
+      "ru": "Стремительно рубит вражеского юнита и ^oкратковременно оглушает^* его, затем снова атакует его или других противников поблизости, становясь ^oнеуязвимым^*, нанося ^o200 физического урона^* и ^oтелепортируясь к цели^*. При применении сбрасывает перезарядку атаки.\\n\\^oSwift Slashes^* совершает до ^g{5,7,10} ударов^*; во время ^oSwift Slashing^* могут срабатывать обычные атаки."
+    },
+    {
+      "keys": ["entities:Ability_Swiftblade4_effect_header"],
+      "english_hash": "6744e65baf616de0e32c7528057f402bae576ec5b051791ae3a281a0c601a0d1",
+      "ru": "Эффекты Swift Slashes"
+    },
+    {
+      "keys": ["entities:State_Swiftblade_Ability1_Tooltip_FRAME_effect"],
+      "english_hash": "448a07849f0bde4c9c8e2ac4ab71e3dfe919f85969908f8f0a00a21bd53dd6f3",
+      "ru": "{75,95,115,135} магического урона в секунду"
+    },
+    {
+      "keys": ["entities:State_Swiftblade_Ability2_FRAME_effect"],
+      "english_hash": "12f5ac9d1c7ca81f2245cbeeeb3aa68b7eb7cd794a93afd355be66a2399cbc37",
+      "ru": "Блокирует все атаки\\nОтвечает на атаки героев, пока есть заряды"
+    },
+    {
+      "keys": ["entities:State_Swiftblade_Ability2_Modifier_FRAME_effect"],
+      "english_hash": "fac4bc80d3b579d427feee3a4a64199ed759688f43a9fba70eaac238a18774ef",
+      "ru": "Позволяет Swiftblade использовать Counter Strike"
+    }
+  ]
+}

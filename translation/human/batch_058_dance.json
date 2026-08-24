@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_058_DANCE",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_Dance_name"], "ru": "Emote"},
+    {"keys": ["entities:Ability_Dance_description", "entities:Ability_Dance_description_simple"], "ru": "Используйте эмоцию, чтобы показать свои лучшие танцевальные движения прямо на поле боя!"},
+    {"keys": ["entities:Ability_Dance_description_simple:ability_dance_disabled"], "ru": "Эта эмоция недоступна данному герою."}
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_170_WRETCHED_HAG",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_WretchedHag1_IMPACT_effect"],
+      "english_hash": "8ac416ec0ab124e77538394e610dcb18bd28c6a2aca7c824b58b3e57ab9ad434",
+      "ru": "Накладывает Haunted на цель на 15 секунд."
+    },
+    {
+      "keys": ["entities:Ability_WretchedHag1_description"],
+      "english_hash": "16c7cf5cc3afd095b071bc69ed8155a146880ec33caaf99cd1382b75037e8733",
+      "ru": "Wretched Hag насылает на цель летучую мышь, которая замедляет передвижение и периодически наносит урон."
+    },
+    {
+      "keys": ["entities:Ability_WretchedHag1_description_simple"],
+      "english_hash": "75ce4807d96e8b07118ce9414e4c2643814c40479bf8dbff79238a3f487af475",
+      "ru": "^oНасылает^* летучую мышь на вражеского юнита, наносит ^o{50,75,100,125} магического урона^* и на 15 секунд ^oзамедляет передвижение на {-20,-30,-40,-50}% с постепенно ослабевающим эффектом^*. За время действия цель получает ^o{15,25,40,50} магического урона каждые 3 секунды^*."
+    },
+    {
+      "keys": [
+        "entities:Ability_WretchedHag1_effect_header",
+        "entities:Ability_WretchedHag4_effect_header"
+      ],
+      "english_hash": "1f970af076c58462d6be8a980526ce2fce3fba11a7cd25b5b90f39cf35af574a",
+      "ru": "Эффекты Haunted"
+    },
+    {
+      "keys": ["entities:Ability_WretchedHag2_IMPACT_effect"],
+      "english_hash": "30ee9b474a2bd8260846748d79da13783c71df128781a29432ae467ac1e963e4",
+      "ru": "Телепортируется в выбранную точку."
+    },
+    {
+      "keys": ["entities:Ability_WretchedHag2_description"],
+      "english_hash": "84db0215476f388ba39cf1b5663e99a5ab20a4fe7a295e967c4211dc17b19e2b",
+      "ru": "Wretched Hag исчезает во вспышке тьмы и мгновенно появляется в выбранной точке."
+    },
+    {
+      "keys": ["entities:Ability_WretchedHag2_description_simple"],
+      "english_hash": "e2819d7c5106f98044061eb40e56d4278a8a89a10a8e1ba205a449d7df95c7f7",
+      "ru": "^oТелепортируется^* в выбранную точку."
+    },
+    {
+      "keys": ["entities:Ability_WretchedHag3_IMPACT_effect"],
+      "english_hash": "c0d95470abd7460715ac71d37043e5fffcf53c72f0be5caf58f900b07c24af2c",
+      "ru": "Наносит целям в области {85,165,225,300} магического урона."
+    },
+    {
+      "keys": ["entities:Ability_WretchedHag3_description"],
+      "english_hash": "94c4fde4ca76fe672798497a7469ba7648642fe8e42bb86d5c9b6f30285961d8",
+      "ru": "Wretched Hag испускает высокочастотный крик, который наносит урон всем ближайшим противникам."
+    },
+    {
+      "keys": ["entities:Ability_WretchedHag3_description_simple"],
+      "english_hash": "6edd9282980a51127841fa807aefa7143c3074d33a68370e6fc86c8d6749d6ca",
+      "ru": "Испускает высокочастотный крик и наносит противникам вокруг ^o{85,165,225,300} магического урона^*."
+    },
+    {
+      "keys": ["entities:Ability_WretchedHag4_IMPACT_effect"],
+      "english_hash": "f1df1b30f80922d6c262697e0b7a8757bdada1ceb622253b3f6e107824dbe3f9",
+      "ru": "Наносит целям вдоль линии длиной 900 ^o{300,425,550} магического урона^* и накладывает Haunted. Радиус линии увеличивается от 100 в начале до 300 в конце."
+    },
+    {
+      "keys": ["entities:Ability_WretchedHag4_IMPACT_effect:ult_boost"],
+      "english_hash": "676508cec6de24a9e78f246c640034aaeb6c7165eee0048d69c664bbe3dd5ffc",
+      "ru": "Наносит целям вдоль линии длиной 900 ^g{350,550,750} урона превосходящей магией^*. Радиус линии увеличивается от 100 в начале до 300 в конце."
+    },
+    {
+      "keys": ["entities:Ability_WretchedHag4_description"],
+      "english_hash": "8e20a009c101894c24940d22d2c1bd01595bde3f169be1bb44f395e0607f87d3",
+      "ru": "Wretched Hag выпускает в выбранном направлении поток волшебных летучих мышей, который наносит большой урон всем противникам на пути."
+    },
+    {
+      "keys": ["entities:Ability_WretchedHag4_description2"],
+      "english_hash": "dc03045d8d3d8104e18bfbc1b59b0f1eba11244c0999af49dc8b30a1397ff685",
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff:^* меняет тип урона на урон превосходящей магией, увеличивает его до {350,550,750} и сокращает перезарядку до 80 секунд."
+    },
+    {
+      "keys": ["entities:Ability_WretchedHag4_description_simple"],
+      "english_hash": "cca0a1d23f5d1764e3ce5b5ce80dc75a15353bd48cd47f0007040216475d7648",
+      "ru": "Выпускает в выбранном направлении поток волшебных летучих мышей, который наносит противникам в конусе ^o{300,425,550} магического урона^*. Накладывает на всех задетых текущий уровень ^oHaunt^*.\\n\\n^gStaff of the Master^* меняет тип урона на ^oурон превосходящей магией^*, увеличивает его до ^o{350,550,750}^* и сокращает перезарядку до ^o80 секунд^*."
+    },
+    {
+      "keys": ["entities:Ability_WretchedHag4_description_simple:ult_boost"],
+      "english_hash": "668a3b4a66bf4288f9c89c8fd99adb368cde5bd935c3514de94098194988aa1e",
+      "ru": "Выпускает в выбранном направлении поток волшебных летучих мышей, который наносит в конусе ^g{350,550,750} урона превосходящей магией^*. Накладывает на всех задетых текущий уровень ^oHaunt^*."
+    },
+    {
+      "keys": ["entities:State_WretchedHag_Ability1_FRAME_effect"],
+      "english_hash": "5bfcd1d2528a2c2d2ffb17afa38bc74d1eaad44023de4d750c8e3d4a3d48d59f",
+      "ru": "Сразу наносит {50,75,100,125} магического урона\\nКаждые 3 секунды наносит {15,25,40,50} магического урона\\nСначала замедляет передвижение на {20,30,40,50}%; эффект исчезает за 7 секунд."
+    },
+    {
+      "keys": ["entities:State_WretchedHag_Ability4_FRAME_effect"],
+      "english_hash": "974a18275ced413bae10c3aca3645bd20259996b772a547fc2f92a4099698e89",
+      "ru": "Для действия Haunted необходимо изучить Haunt.\\nСразу наносит {50,75,100,125} магического урона\\nКаждые 3 секунды наносит {15,25,40,50} магического урона\\nСначала замедляет передвижение на {20,30,40,50}%; эффект исчезает за 7 секунд."
+    }
+  ]
+}

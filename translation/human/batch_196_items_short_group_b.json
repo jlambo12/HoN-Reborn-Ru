@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_196_ITEMS_SHORT_GROUP_B",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Item_CrushingClaws_description_simple"],
+      "english_hash": "b2b6c29682daab58ebdd46b1a6af398f2e040cf0b5a2e05b524479df26c4ac16",
+      "ru": "^9773 силы^*"
+    },
+    {
+      "keys": ["entities:Item_DancingBlade_description_simple"],
+      "english_hash": "48d6b517fbb20451670a7655e71369f9baf12700a108fdf65fb4912ae926c14d",
+      "ru": "^79725 ловкости^*"
+    },
+    {
+      "keys": ["entities:Item_DuckBoots_description_simple"],
+      "english_hash": "d3b5afb2f941071bd7f9cb798f4108ecdb4476cb7a46eb453610bd2614825b8b",
+      "ru": "^7973 ловкости^*"
+    },
+    {
+      "keys": ["entities:Item_EmberstoneBracers_FRAME_effect"],
+      "english_hash": "c56b5aa35e0dac95631f9be4c87486bfa664be8689fe92100ec982eaaae42199",
+      "ru": "\\nПри нанесении непериодического урона накладывает отрицательный эффект, снижающий ^oскорость передвижения^* на 40% и постепенно исчезающий за 0.5 секунды. Может ^oсрабатывать на одной цели раз в 2 секунды^*."
+    },
+    {
+      "keys": ["entities:Item_EmberstoneBracers_description"],
+      "english_hash": "a78cc4111a5f832ccddca91637b0925219b2d09427523eec3f7472b80546db5b",
+      "ru": "Реликвия, опалённая и явленная миру смертью вечной ^rFirebird^*.\\n\\nПредмет содержит пассивный ^yмодификатор сокращения перезарядки способностей^*, который не складывается с другими предметами, имеющими ^yмодификатор сокращения перезарядки способностей^*."
+    },
+    {
+      "keys": ["entities:Item_Energizer_IMPACT_effect"],
+      "english_hash": "bf6357e7f7005c9597219486f89a07683be0078afd0518dfaa6f30c721fd7c77",
+      "ru": "Активируйте, чтобы дать союзникам в радиусе ^o50 скорости передвижения и 25 скорости атаки^* на ^o6 секунд^*.\\n\\nПодконтрольные игрокам юниты, не являющиеся героями, получают возможность проходить сквозь юнитов."
+    },
+    {
+      "keys": ["entities:Item_Energizer_description_simple"],
+      "english_hash": "b1444e42f20c6a65b5c5a6b91d504c59c31cf175e32c287dc7f532bd3e1d5fdd",
+      "ru": "Активируйте, чтобы дать союзникам поблизости 50 скорости передвижения и 25 скорости атаки на 6 секунд."
+    },
+    {
+      "keys": ["entities:Item_EtherJewel_description_simple"],
+      "english_hash": "4cf7f702d17759df0b1bf875ea999afa4b1d6bf5364a8d5c4de8fee026eb704b",
+      "ru": "100 маны"
+    },
+    {
+      "keys": ["entities:Item_EtherJewel_effect_header"],
+      "english_hash": "a58eca8b02e89a683b1607432bd91b1722ec4f598c1ba14dac40dbaddbf97ce0",
+      "ru": "Эффекты Ether Jewel"
+    },
+    {
+      "keys": ["entities:Item_FlamekeeperOath_IMPACT_effect"],
+      "english_hash": "661454673eb9f045e18a6276f20ac0dc855c04e056ff2ca83fbc6392bea457c7",
+      "ru": "Выберите союзника в пределах 600 единиц, чтобы восстановить ему 300 здоровья. Все юниты в радиусе 400 от цели отталкиваются к точке на расстоянии 400 единиц от неё."
+    },
+    {
+      "keys": ["entities:Item_Fleetfeet_description_simple"],
+      "english_hash": "6a7fa5b9ec73df3d7b3e809b06f3294a8904c3e9e2a4078b7c69516c3e572325",
+      "ru": "^7976 ловкости^*"
+    },
+    {
+      "keys": ["entities:Item_FluffyFleetingFeather_IMPACT_effect"],
+      "english_hash": "5b4c79b7c1d496fdd42f49ffbb8a0de971028bca6a0639e0f3cdb7c4acbf8601",
+      "ru": "^oТелепортируется^* к выбранному союзнику и даёт вам обоим ^o10% скорости передвижения^* на 2 секунды."
+    },
+    {
+      "keys": ["entities:Item_FortifiedBracer_description_simple"],
+      "english_hash": "ee8a8309449f8d63478f432f989d03f62691bad64b208865c7a08f000b309afe",
+      "ru": "6 силы\\n3 ловкости\\n3 интеллекта"
+    },
+    {
+      "keys": ["entities:Item_GlovesOfTheSwift_description_simple"],
+      "english_hash": "0b9f9707097cb812e50f3b39d167514dbd87ceadf0dc41eeda01fd314fa4eecb",
+      "ru": "^09915 скорости атаки^*"
+    },
+    {
+      "keys": ["entities:Item_Glowstone_description_simple"],
+      "english_hash": "c99cd386c8dc69cfadca7bf6a877b9819f3d273323daebffebccae69800291eb",
+      "ru": "200 здоровья\\n120 маны"
+    },
+    {
+      "keys": ["entities:Item_GoldenReach_FRAME_effect"],
+      "english_hash": "2d5046b165e7158832c23a1452377cdb6e2d8b671dc1e95c9a6249a302b0d519",
+      "ru": "\\nПолучение урона из любого источника снимает бонус ^oскорости передвижения^* на 5 секунд.\\n\\nЗа убийство вражеского юнита вы получаете дополнительно 5 золота."
+    },
+    {
+      "keys": ["entities:Item_GuardianRing_description_simple"],
+      "english_hash": "7edf6b18016d7b0462e8797230050037dfca3ea4e0b8c17ee2eefd5cd3b14c36",
+      "ru": "2 брони"
+    },
+    {
+      "keys": ["entities:Item_HelmOfTheFirelands_FRAME_effect"],
+      "english_hash": "35dcaae1770912d8b2c4da27938f62eef6b798066001f5e24f21fb35bbc57d69",
+      "ru": "\\nКаждая ^o5-я атака^* создаёт иллюзию на 5 секунд. Иллюзия наносит 35% урона, получает 300% урона и ^oне может активировать^* этот предмет."
+    },
+    {
+      "keys": ["entities:Item_HelmOfTheVictim_description_simple"],
+      "english_hash": "ea173410f4701ed203f598e0dc7cdd552702e7e56951933c9250e60989707b47",
+      "ru": "5 брони\\n3 здоровья в секунду"
+    },
+    {
+      "keys": ["entities:Item_HolyHandGrenade_IMPACT_effect"],
+      "english_hash": "8c575876a00ea27d33eab88a1aa815cf101800ecfa2fa236498f0b1e2ccd356c",
+      "ru": "Тратит половину вашей ^oтекущей маны^*, чтобы бросить бомбу в выбранную точку. Через 2.5 секунды она взрывается и наносит всем противникам в радиусе 500 ^oмагический урон^*, равный 100% потраченной маны."
+    },
+    {
+      "keys": ["entities:Item_IconOfTheGoddess_description_simple"],
+      "english_hash": "141fc47432d38779f610edd626f32a7ccab03fccae6519ffd0f83ddb217c1d14",
+      "ru": "Даёт дополнительное восстановление здоровья и маны за смерть каждого вражеского героя поблизости."
+    },
+    {
+      "keys": ["entities:Item_IconOfTheGoddess_effect_header"],
+      "english_hash": "78c98d9462295ed8a8b6ec22f154724d0e588ac1e7633998e3d5dc9efcf72f9b",
+      "ru": "Эффекты Gift of the Goddess"
+    },
+    {
+      "keys": ["entities:Item_Impaler_description"],
+      "english_hash": "f4027d2cc9b5edd846315afcd9eb3e986884b7baf3da4ea5deeb730325ad6040",
+      "ru": "Улучшает врождённую способность Logger's Hatchet до Impaler, увеличивая урон по крипам.\\n\\nПри продаже золото не возвращается."
+    },
+    {
+      "keys": ["entities:Item_Impaler_description_simple"],
+      "english_hash": "085ff37651f1a251c3f93a6fcce58e0bec9d999aced0221b394f442899553e10",
+      "ru": "Улучшает Logger's Hatchet до Impaler, увеличивая урон по крипам."
+    },
+    {
+      "keys": ["entities:Item_JadeSpire_description"],
+      "english_hash": "c9a481d3f91bd62a8d62105e94a29a7b42f5400195ceab149fd7f80ae910a174",
+      "ru": "Увеличивает дальность применения способностей и предметов на 150.\\n\\nЭффект не складывается сам с собой.\\n\\n^rНе увеличивает дальность применения^* Stagger героя Drunken Master и Side Step героя Bushwack."
+    },
+    {
+      "keys": ["entities:Item_JadeSpire_description_simple"],
+      "english_hash": "b724a8c740e42c62f9568016aa6bc4730b9628b667c44891ae134de3e931d4de",
+      "ru": "Дополнительная дальность применения"
+    },
+    {
+      "keys": ["entities:Item_FlamekeeperOath_description", "entities:Item_FluffyFleetingFeather_description", "entities:Item_GoldenReach_description", "entities:Item_HelmOfTheFirelands_description", "entities:Item_HolyHandGrenade_description"],
+      "english_hash": "2e629a6a49bced6062c96616472ffe671f183581c030bfe5f7a08ca6909e5563",
+      "ru": "Реликвия, опалённая и явленная миру смертью вечной ^rFirebird^*."
+    },
+    {
+      "keys": ["entities:Item_CrushingClaws_effect_header", "entities:Item_DancingBlade_effect_header", "entities:Item_DuckBoots_effect_header", "entities:Item_Fleetfeet_effect_header", "entities:Item_FortifiedBracer_effect_header", "entities:Item_GlovesOfTheSwift_effect_header", "entities:Item_Glowstone_effect_header", "entities:Item_GuardianRing_effect_header", "entities:Item_HelmOfTheVictim_effect_header"],
+      "english_hash": "6e5e7bc5e96f838352cde0fcff351520eab9cd6b12ecb43e9b30ed6fd98f6777",
+      "ru": "Эффекты состояния"
+    }
+  ]
+}

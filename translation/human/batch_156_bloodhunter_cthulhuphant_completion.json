@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_156_BLOODHUNTER_CTHULHUPHANT_COMPLETION",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:State_BloodHunter_Ability1_Debuff_FRAME_effect"],
+      "english_hash": "4f4d6201b38ee41c7ce148c63de6550fc821d06a7e980f62528cf7b259c1e4eb",
+      "ru": "Получает {10,20,30,40} магического урона в секунду\\nАтака Blood Hunter продлевает Безмолвие на 1 секунду"
+    },
+    {
+      "keys": ["entities:State_BloodHunter_Ability2_CreepAbility_description"],
+      "english_hash": "c8e60e85cdba5fa9b1edc3a38a505147ae8436b803bde58ebaa72cddc8f09c11",
+      "ru": "Открытая способность поглощённого противника."
+    },
+    {
+      "keys": ["entities:State_BloodHunter_Ability2_description"],
+      "english_hash": "c96b9c5cbf0738774d10de7cd45e2a7230814cbb487f4bce7af083ae0842766b",
+      "ru": "Если вы погибнете под действием эффекта, Blood Hunter восстановит {15,30,45,60}% от вашего максимального здоровья. Не действует на иллюзии."
+    },
+    {
+      "keys": ["entities:State_BloodHunter_Ability4_FRAME_effect"],
+      "english_hash": "714f1047f1c62de25c76dd8342c286c8a2df699c9c8e801f674b56be2b839498",
+      "ru": "Получает урон превосходящей магией в размере {40,60,80}% пройденного расстояния\\n\\nТелепортации Teleportation Stone и Post Haste при принудительном перемещении юнита не вызывают урон от Hemorrhage."
+    },
+    {
+      "keys": ["entities:State_Cthulhuphant_Ability2_description"],
+      "english_hash": "6a1c6d987188fa00309ee77455c94b2f842d759552dedfa816e53595941c4a08",
+      "ru": "Вы сметаете всё на своём пути!"
+    },
+    {
+      "keys": ["entities:State_Cthulhuphant_Ability4_Look_FRAME_effect"],
+      "english_hash": "3e5db9ecb55347adee820a3810eeb42d3c28cdef73529315ae616523028ecf29",
+      "ru": "Когда заряды упадут до 0, сойдёт с ума и будет вынужден атаковать Cthulhuphant"
+    },
+    {
+      "keys": ["entities:State_Cthulhuphant_Ability4_Self_description"],
+      "english_hash": "708b9400039f48398f3014911ca42efd44d66fc7668417fc7dde3b98a5201631",
+      "ru": "Противники, которые слишком долго смотрят на вас, сходят с ума и начинают вас атаковать"
+    },
+    {
+      "keys": ["entities:State_Cthulhuphant_Ability4_description"],
+      "english_hash": "4edab684dd9302274ed1206f55b6f48c80941f468d19e1c7bb8f0ca5b2eee559",
+      "ru": "Вы сошли с ума!"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_089_GLYPHS",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_Glyph_Hellbourne_name"], "ru": "Demonic Fortification"},
+    {"keys": ["entities:Ability_Glyph_Legion_name"], "ru": "Fortification of Sol"},
+    {"keys": ["entities:Ability_Glyph_Hellbourne_description", "entities:Ability_Glyph_Hellbourne_description_simple", "entities:Ability_Glyph_Legion_description", "entities:Ability_Glyph_Legion_description_simple"], "ru": "На несколько секунд защищает все союзные строения, значительно повышая их броню."},
+    {"keys": ["entities:Ability_Glyph_Hellbourne_description2", "entities:Ability_Glyph_Hellbourne_effect_header2", "entities:Ability_Glyph_Hellbourne_tooltip_flavor", "entities:Ability_Glyph_Legion_description2", "entities:Ability_Glyph_Legion_effect_header2", "entities:Ability_Glyph_Legion_tooltip_flavor"], "ru": " "},
+    {"keys": ["entities:Ability_Glyph_Hellbourne_effect_header", "entities:Ability_Glyph_Legion_effect_header"], "ru": "Эффекты Fortified"},
+    {"keys": ["entities:Ability_Glyph_Hellbourne_IMPACT_effect", "entities:Ability_Glyph_Legion_IMPACT_effect"], "ru": "Накладывает Fortified на все союзные строения на 4 секунды."}
+  ]
+}

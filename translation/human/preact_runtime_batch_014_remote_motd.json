@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "batch_id": "PREACT_RUNTIME_014_REMOTE_MOTD",
+  "scope": "Russian MOTD shell and current live API content",
+  "reviewed_by": "Codex manual translation 2026-08-24",
+  "rows": [
+    {"source_file":"preact-remote/src/app.tsx","english":"./components/Motd","russian":"./components/motd","expected_matches":1},
+    {"source_file":"preact-remote/src/components/motd.tsx","english":"./Motd.css","russian":"./motd.css","expected_matches":1},
+    {"source_file":"preact-remote/src/components/motd.tsx","english":"const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];","russian":"const MONTHS = ['янв.', 'февр.', 'мар.', 'апр.', 'мая', 'июн.', 'июл.', 'авг.', 'сент.', 'окт.', 'нояб.', 'дек.'];","expected_matches":1},
+    {"source_file":"preact-remote/src/components/motd.tsx","english":"function tagText(item: MotdItem): string {\n  return item.tagLabel || item.template;\n}","russian":"const RU_TEXT: Record<string, string> = {\n  'Patch': 'ПАТЧ', 'Event': 'СОБЫТИЕ', 'Balance': 'БАЛАНС', 'Community': 'СООБЩЕСТВО',\n  'Payment Options': 'СПОСОБЫ ОПЛАТЫ', 'Moderation': 'МОДЕРАЦИЯ', 'Matchmaking Update': 'ОБНОВЛЕНИЕ ПОДБОРА',\n  'Patch 0.12.5 is now LIVE': 'Патч 0.12.5 уже доступен',\n  'Play with your friends, wait less for a game, and a new Legendary avatar for Corrupted Disciple': 'Играйте с друзьями, быстрее находите матчи и встречайте новый легендарный облик Corrupted Disciple.',\n  'Xsolla Payment Added': 'Добавлена оплата через Xsolla',\n  'Xsolla is live. GCash, Maya, TrueMoney, local bank transfer, Pix and Boleto now work at checkout. If you could never complete a purchase, try again.': 'Xsolla уже подключена. При оформлении покупки доступны GCash, Maya, TrueMoney, местные банковские переводы, Pix и Boleto. Если раньше оплатить не удавалось, попробуйте снова.',\n  'GM Recruitment': 'Набор игровых модераторов',\n  'We are recruiting Game Masters. Review reports, earn GM Points and an in-game icon, and get a direct line to the dev team. Good standing required.': 'Мы набираем игровых модераторов. Рассматривайте жалобы, получайте очки GM и значок в игре, общайтесь напрямую с разработчиками. Требуется хорошая репутация.',\n  'Play With Friends Matchmaking Update': 'Обновление подбора матчей для игры с друзьями',\n  'Play with your friends again. Rating gaps no longer block a party, Role Tokens pay you for offering support, and duos now get lanes together.': 'Снова играйте с друзьями. Разница рейтинга больше не блокирует группу, за готовность играть поддержкой выдаются жетоны ролей, а дуэты стараются ставить на одну линию.',\n  'Read Patch Notes': 'Читать описание патча', 'Purchase Jade': 'Купить Jade', 'Apply Now': 'Подать заявку',\n};\nfunction localize(text: string): string { return RU_TEXT[text] || text; }\nfunction tagText(item: MotdItem): string {\n  return localize(item.tagLabel || item.template);\n}","expected_matches":1},
+    {"source_file":"preact-remote/src/components/motd.tsx","english":"{cta.label}","russian":"{localize(cta.label)}","expected_matches":2},
+    {"source_file":"preact-remote/src/components/motd.tsx","english":"{item.title}","russian":"{localize(item.title)}","expected_matches":2},
+    {"source_file":"preact-remote/src/components/motd.tsx","english":"{item.body}","russian":"{localize(item.body)}","expected_matches":2},
+    {"source_file":"preact-remote/src/components/motd.tsx","english":"Latest Updates","russian":"Последние обновления","expected_matches":2},
+    {"source_file":"preact-remote/src/components/motd.tsx","english":"Couldn't load news","russian":"Не удалось загрузить новости","expected_matches":1},
+    {"source_file":"preact-remote/src/components/motd.tsx","english":"We couldn't reach the news service. Check your connection and try again.","russian":"Сервис новостей недоступен. Проверьте подключение и повторите попытку.","expected_matches":1},
+    {"source_file":"preact-remote/src/components/motd.tsx","english":"Retry","russian":"Повторить","expected_matches":1},
+    {"source_file":"preact-remote/src/components/motd.tsx","english":"No news right now","russian":"Сейчас новостей нет","expected_matches":1},
+    {"source_file":"preact-remote/src/components/motd.tsx","english":"Check back soon for the latest patches, events, and updates.","russian":"Загляните позже, чтобы узнать о новых патчах, событиях и обновлениях.","expected_matches":1},
+    {"source_file":"preact-remote/src/components/motd.tsx","english":"Message of the Day","russian":"Новости дня","expected_matches":1},
+    {"source_file":"preact-remote/src/components/motd.tsx","english":"Refresh","russian":"Обновить","expected_matches":1},
+    {"source_file":"preact-remote/src/components/motd.tsx","english":"Quick Links","russian":"Полезные ссылки","expected_matches":1},
+    {"source_file":"preact-remote/src/components/motd.tsx","english":"Join the community","russian":"Присоединиться к сообществу","expected_matches":1},
+    {"source_file":"preact-remote/src/components/motd.tsx","english":"Website","russian":"Сайт","expected_matches":1},
+    {"source_file":"preact-remote/src/components/motd.tsx","english":"Support","russian":"Поддержка","expected_matches":1},
+    {"source_file":"preact-remote/src/components/motd.tsx","english":"Get help","russian":"Получить помощь","expected_matches":1},
+    {"source_file":"preact-remote/src/components/motd.tsx","english":"All rights reserved.","russian":"Все права защищены.","expected_matches":1}
+  ]
+}

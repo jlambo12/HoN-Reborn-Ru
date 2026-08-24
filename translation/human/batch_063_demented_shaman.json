@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_063_DEMENTED_SHAMAN",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_DementedShaman1_name"], "ru": "Entangle"},
+    {"keys": ["entities:Ability_DementedShaman1_description"], "ru": "Шаман опутывает противника лозами, ненадолго мини-оглушает и замедляет его. Затем лозы сжимаются и наносят цели периодический урон."},
+    {"keys": ["entities:Ability_DementedShaman1_description_simple"], "ru": "Опутывает противника лозами, ^oмини-оглушает^* его и накладывает ^oзамедление передвижения на 55%^*, которое за 2 секунды усиливается до ^o{55,70,85,100}%^*. Затем цель ^oоглушается на {0.3,0.6,0.9,1.2} секунды^* и за 8 секунд получает ^o{80,120,160,200} физического урона^*."},
+    {"keys": ["entities:Ability_DementedShaman1_IMPACT_effect"], "ru": "Накладывает на противника ^oмини-оглушение^* и замедление передвижения на 55%, которое за 2 секунды усиливается до ^o{55,70,85,100}%^*. Затем ^oоглушает на {0.3,0.6,0.9,1.2} секунды^* и за 8 секунд наносит ^o{80,120,160,200} физического урона^*."},
+    {"keys": ["entities:Ability_DementedShaman1_effect_header"], "ru": "Эффекты Entangled"},
+    {"keys": ["entities:Ability_DementedShaman1_description_name"], "ru": ""},
+    {"keys": ["entities:Ability_DementedShaman1_tooltip_flavor"], "ru": "Скажи сорнякам «Нет!»"},
+
+    {"keys": ["entities:Ability_DementedShaman2_name"], "ru": "Healing Wave"},
+    {"keys": ["entities:Ability_DementedShaman2_description"], "ru": "Шаман выпускает ядовитую волну, которая перескакивает между союзниками и наносит урон окружающим их противникам."},
+    {"keys": ["entities:Ability_DementedShaman2_description_simple"], "ru": "Восстанавливает союзнику ^o{80,100,120,140} здоровья^*. Лечение ^oмгновенно перескакивает^* на ближайшие ^o{2,3,4,5} союзных целей^*, нанося вокруг каждой ^o{80,100,120,140} физического урона^*."},
+    {"keys": ["entities:Ability_DementedShaman2_IMPACT_effect"], "ru": "Восстанавливает союзнику ^o{80,100,120,140} здоровья^*. Лечение мгновенно перескакивает на ближайшие ^o{2,3,4,5} союзных целей^*, нанося вокруг каждой ^o{80,100,120,140} физического урона^*."},
+    {"keys": ["entities:Ability_DementedShaman2_effect_header"], "ru": "Эффекты состояния"},
+    {"keys": ["entities:Ability_DementedShaman2_tooltip_flavor"], "ru": "Не плачь, это всего лишь царапина."},
+
+    {"keys": ["entities:Ability_DementedShaman3_name"], "ru": "Unbreakable"},
+    {"keys": ["entities:Ability_DementedShaman3_description"], "ru": "Шаман накладывает на выбранного союзника Unbreakable и на короткое время не позволяет ему погибнуть."},
+    {"keys": ["entities:Ability_DementedShaman3_description_simple"], "ru": "Накладывает на союзника ^oUnbreakable^* на ^o5 секунд^* и даёт ему ^o{20,30,40,50} урона от атаки^*. При получении ^oсмертельного урона^* здоровье цели устанавливается на ^o{100,180,260,340} + ^o{3,4,5,6}% от её максимального здоровья^*.\\n\\nПока способность не перезаряжается, ^oUnbreakable постоянно действует на вас^* до получения смертельного урона и срабатывает как обычно, но ^oне даёт дополнительный урон^*."},
+    {"keys": ["entities:Ability_DementedShaman3_description_simple:OnlyMidMap"], "ru": "^rMid Wars:^* накладывает на союзника ^oUnbreakable^* на ^o5 секунд^* и даёт ему ^o{20,30,40,50} урона от атаки^*. При получении ^oсмертельного урона^* здоровье цели устанавливается на ^o{80,150,220,290} + ^o{2,3,4,5}% от её максимального здоровья^*.\\n\\nПока способность не перезаряжается, ^oUnbreakable постоянно действует на вас^* до получения смертельного урона и срабатывает как обычно, но ^oне даёт дополнительный урон^*.\\n\\n^rMid Wars:^* перезарядка составляет ^o{60,50,40,30} секунд^*."},
+    {"keys": ["entities:Ability_DementedShaman3_effect_header"], "ru": "Эффекты Unbreakable"},
+    {"keys": ["entities:Ability_DementedShaman3_tooltip_flavor"], "ru": "Без боли нет результата."},
+
+    {"keys": ["entities:Ability_DementedShaman4_name"], "ru": "Storm Cloud"},
+    {"keys": ["entities:Ability_DementedShaman4_name:ult_boost"], "ru": "^gThunderstorm Cloud*^*"},
+    {"keys": ["entities:Ability_DementedShaman4_description"], "ru": "Шаман создаёт бурю в выбранной точке. Все герои, оказавшиеся в области в момент её появления, получают эффект: броня союзников постепенно повышается, а броня противников — снижается."},
+    {"keys": ["entities:Ability_DementedShaman4_description_simple"], "ru": "Создаёт ^oStorm Cloud^* в выбранной точке и на ^o{10,15,20} секунд^* поражает всех героев в радиусе 575.\\n\\nПротивники теряют по ^o2 брони в секунду^* вплоть до ^o-{10,15,20} брони^*, а затем восстанавливают эту ^oброню^* до конца действия. Союзники получают по ^o2 брони в секунду^* вплоть до ^o{10,15,20} брони^*, а затем теряют эту ^oброню^* до конца действия.\\n\\n^gStaff of the Master^* усиливает изменение брони, увеличивает длительность до ^o{18,24,30} секунд^* и радиус до ^o800^*."},
+    {"keys": ["entities:Ability_DementedShaman4_description_simple:ult_boost"], "ru": "Создаёт ^oStorm Cloud^* в выбранной точке и поражает всех героев ^gна {18,24,30} секунд в радиусе 800^*.\\n\\nПротивники теряют по ^o2 брони в секунду^* вплоть до ^g-{18,24,30} брони^*, а затем восстанавливают броню до конца действия. Союзники получают по ^o2 брони в секунду^* вплоть до ^g{18,24,30} брони^*, а затем теряют её до конца действия."},
+    {"keys": ["entities:Ability_DementedShaman4_description2"], "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* усиливает изменение брони, увеличивает длительность до ^o{18,24,30} секунд^* и радиус до ^o800^*."},
+    {"keys": ["entities:Ability_DementedShaman4_description2:ult_boost"], "ru": "\\r"},
+    {"keys": ["entities:Ability_DementedShaman4_IMPACT_effect"], "ru": "Накладывает ^oStorm Shield^* на союзников и ^oStorm Strike^* на противников в выбранной области на {10,15,20} секунд."},
+    {"keys": ["entities:Ability_DementedShaman4_IMPACT_effect:ult_boost"], "ru": "Накладывает ^oStorm Shield^* на союзников и ^oStorm Strike^* на противников в выбранной области на ^g{18,24,30} секунд."},
+    {"keys": ["entities:Ability_DementedShaman4_effect_header"], "ru": "Эффекты Storm Shield"},
+    {"keys": ["entities:Ability_DementedShaman4_effect_header2"], "ru": "Эффекты Storm Strike"},
+    {"keys": ["entities:Ability_DementedShaman4_tooltip_flavor"], "ru": "Чувствую приближение бури!"}
+  ]
+}

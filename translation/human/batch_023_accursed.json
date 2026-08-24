@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_023_ACCURSED",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Accursed1_name"],
+      "ru": "Cauterize"
+    },
+    {
+      "keys": ["entities:Ability_Accursed1_description"],
+      "ru": "Жертвуя частью собственного здоровья, Accursed вызывает вокруг цели огненный взрыв, который наносит урон противнику или исцеляет союзника."
+    },
+    {
+      "keys": ["entities:Ability_Accursed1_description_simple"],
+      "ru": "Ценой ^o{50,75,100,125} магического урона^* себе вызывает вокруг цели взрыв, который наносит ^o{100,150,200,250} магического урона^*, если это ^oпротивник^*, или восстанавливает ^o{100,150,200,250} здоровья^*, если это ^oсоюзник^*."
+    },
+    {
+      "keys": ["entities:Ability_Accursed1_IMPACT_effect"],
+      "ru": "Наносит вражеским юнитам ^o{100,150,200,250} магического урона^* или восстанавливает союзным юнитам ^o{100,150,200,250} здоровья^*. Accursed получает ^o{50,75,100,125} магического урона^*."
+    },
+    {
+      "keys": ["entities:Ability_Accursed1_tooltip_flavor"],
+      "ru": "От любви до ненависти — один огненный взрыв."
+    },
+    {
+      "keys": ["entities:Ability_Accursed2_name"],
+      "ru": "Fire Shield"
+    },
+    {
+      "keys": ["entities:Ability_Accursed2_description"],
+      "ru": "Accursed окружает союзника огненным щитом, который снимает отрицательные эффекты и защищает от урона. Поглотив предельное количество урона, щит взрывается и наносит ближайшим противникам равный ему магический урон."
+    },
+    {
+      "keys": ["entities:Ability_Accursed2_description_simple"],
+      "ru": "Окружает союзника огненным щитом на ^o15 секунд^*, снимает ^oотрицательные эффекты и оглушение^* и поглощает до ^o{110,140,170,200} урона^*.\\n\\nПоглотив предельное количество урона, щит взрывается и наносит ближайшим противникам ^o{110,140,170,200} магического урона^*."
+    },
+    {
+      "keys": ["entities:Ability_Accursed2_description_simple:OnlyMidMap"],
+      "ru": "^rMid Wars:^* окружает союзника огненным щитом на ^o12 секунд^*, снимает ^oотрицательные эффекты и оглушение^* и поглощает до ^o{110,140,170,200} урона^*.\\n\\nПоглотив предельное количество урона, щит взрывается и наносит ближайшим противникам ^o{110,140,170,200} магического урона^*.\\n\\n^rMid Wars:^* перезарядка — ^o{16,15,14,13} секунд^*."
+    },
+    {
+      "keys": ["entities:Ability_Accursed2_effect_header"],
+      "ru": "Эффекты Fire Shield"
+    },
+    {
+      "keys": ["entities:Ability_Accursed2_IMPACT_effect"],
+      "ru": "Снимает отрицательные эффекты и оглушение, затем накладывает на цель Fire Shield на 15 секунд."
+    },
+    {
+      "keys": ["entities:Ability_Accursed2_IMPACT_effect:OnlyMidMap"],
+      "ru": "^rMid Wars:^* снимает отрицательные эффекты и оглушение, затем накладывает на цель Fire Shield на 12 секунд. Перезарядка — ^o{16,15,14,13} секунд^*."
+    },
+    {
+      "keys": ["entities:Ability_Accursed2_tooltip_flavor"],
+      "ru": "Вот, примерь!"
+    },
+    {
+      "keys": ["entities:Ability_Accursed3_name"],
+      "ru": "Sear"
+    },
+    {
+      "keys": ["entities:Ability_Accursed3_description"],
+      "ru": "Атаки и способности накладывают на противников Sear на 2 секунды, а на союзников или самого Accursed — Burning Strikes на 4.5 секунды."
+    },
+    {
+      "keys": ["entities:Ability_Accursed3_description_simple"],
+      "ru": "Атаки и способности накладывают на противников ^oSear^*, который на 2 секунды снижает их ^oскорость передвижения на {-5,-10,-15,-20}%^*. Союзники, атакующие цель под действием ^oSear^*, получают ^o{10,20,30,40} скорости атаки^* и ^o10% скорости передвижения^*.\\n\\nАктивируйте, чтобы на 4 секунды создать на земле ^oSearing Flame^*. Пламя наносит противникам ^o{10,20,30,40} магического урона в секунду^* и ^oвосстанавливает вам {8,12,16,20} + {0.4,0.6,0.8,1}% максимального здоровья в секунду^*."
+    },
+    {
+      "keys": ["entities:Ability_Accursed3_effect_header"],
+      "ru": "Эффекты Sear"
+    },
+    {
+      "keys": ["entities:Ability_Accursed3_effect_header2"],
+      "ru": "Эффекты Burning Strikes"
+    },
+    {
+      "keys": ["entities:Ability_Accursed3_IMPACT_effect"],
+      "ru": "На 4 секунды создаёт на земле Searing Flame, которое наносит противникам ^o{10,20,30,40} магического урона в секунду^* и ^oвосстанавливает вам {8,12,16,20} + {0.4,0.6,0.8,1}% максимального здоровья в секунду^*."
+    },
+    {
+      "keys": ["entities:Ability_Accursed3_tooltip_flavor"],
+      "ru": "Я ПЛАВЛЮСЬ!"
+    },
+    {
+      "keys": ["entities:Ability_Accursed4_name"],
+      "ru": "Flame Consumption"
+    },
+    {
+      "keys": ["entities:Ability_Accursed4_description"],
+      "ru": "Accursed окружает себя мощным огненным вихрем, который обращает получаемый урон в восстановление здоровья."
+    },
+    {
+      "keys": ["entities:Ability_Accursed4_description2"],
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* время действия увеличивается до {5,6,7} секунд, а способность можно применять под действием Silence или оглушения."
+    },
+    {
+      "keys": ["entities:Ability_Accursed4_description_simple"],
+      "ru": "Окружает вас мощным огненным вихрем, снимает ^oотрицательные эффекты^* и в течение ^o{3,4,5} секунд^* преобразует ^o100% получаемого урона в восстановление здоровья^*.\\n\\n^gStaff of the Master^* увеличивает время действия до ^o{5,6,7} секунд^* и позволяет применять Flame Consumption под действием Silence или оглушения."
+    },
+    {
+      "keys": ["entities:Ability_Accursed4_effect_header"],
+      "ru": "Эффекты Protective Flames"
+    },
+    {
+      "keys": ["entities:Ability_Accursed4_IMPACT_effect"],
+      "ru": "Снимает отрицательные эффекты и накладывает на себя Protective Flames на ^o{3,4,5} секунд^*."
+    },
+    {
+      "keys": ["entities:Ability_Accursed4_name:ult_boost"],
+      "ru": "^gBurning Consumption*^*"
+    },
+    {
+      "keys": ["entities:Ability_Accursed4_description2:ult_boost"],
+      "ru": "\\r"
+    },
+    {
+      "keys": ["entities:Ability_Accursed4_IMPACT_effect:ult_boost"],
+      "ru": "Снимает отрицательные эффекты ^gи оглушение^*, затем накладывает на себя Protective Flames на ^g{5,6,7}^* секунд.\\n\\n^gМожно применять под действием Silence или оглушения.^*"
+    },
+    {
+      "keys": ["entities:Ability_Accursed4_description_simple:ult_boost"],
+      "ru": "Окружает вас мощным огненным вихрем, снимает ^oотрицательные эффекты^* и ^gоглушение^* и в течение ^o{5,6,7} секунд^* преобразует ^o100% получаемого урона в восстановление здоровья^*. ^gМожно применять под действием Silence или оглушения^*."
+    },
+    {
+      "keys": ["entities:Ability_Accursed4_tooltip_flavor"],
+      "ru": "Дай мне пламя, дай мне жар — дай всё, чего желаю!"
+    }
+  ]
+}

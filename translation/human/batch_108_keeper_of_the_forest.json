@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_108_KEEPER_OF_THE_FOREST",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_KeeperOfTheForest1_description"],
+      "ru": "Keeper of the Forest обращается к силе леса, чтобы скрыть и усилить союзника. Выбранное существо получает невидимость с задержкой 1 секунду, броню и восстановление здоровья."
+    },
+    {
+      "keys": ["entities:Ability_KeeperOfTheForest1_description_simple"],
+      "ru": "Использует власть над лесом, чтобы ^oусилить^* союзное существо или строение, дав ему ^o{3,4,5,6} восстановления здоровья и брони^*, а также ^oCamouflage^* — невидимость с задержкой 1 секунду и +10% скорости передвижения — на ^o{15,30,45,60} секунд^*. Невидимость сохраняется только рядом с деревом.\\n\\nЕсли существо под действием ^oCamouflage^* атакует из невидимости, ^oего следующая атака накладывает Root на {1.25,1.5,1.75,2} секунды и наносит 70 магического урона в секунду^*."
+    },
+    {
+      "keys": ["entities:Ability_KeeperOfTheForest1_effect_header"],
+      "ru": "Эффекты Camouflage"
+    },
+    {
+      "keys": ["entities:Ability_KeeperOfTheForest1_effect2_header"],
+      "ru": "Эффекты Nature's Protection"
+    },
+    {
+      "keys": ["entities:Ability_KeeperOfTheForest1_tooltip_flavor"],
+      "ru": "Удар из тени."
+    },
+    {
+      "keys": ["entities:Ability_KeeperOfTheForest1_IMPACT_effect"],
+      "ru": "Выберите союзное существо или строение, чтобы дать ему ^o{3,4,5,6} восстановления здоровья и брони^* (+1 для строений), а также ^oневидимость с задержкой 1 секунду и +10% скорости передвижения^* на ^o{15,30,45,60} секунд.^* Невидимость сохраняется только рядом с деревом и не действует на строения.\\n\\n- Невидимость сохраняется, пока в пределах 400 единиц есть дерево."
+    },
+    {
+      "keys": ["entities:State_KeeperOfTheForest_Ability1_name"],
+      "ru": "Camouflage"
+    },
+    {
+      "keys": ["entities:State_KeeperOfTheForest_Ability1_FRAME_effect"],
+      "ru": "Развеивается через 0,8 секунды, если в пределах 400 единиц от существа нет дерева.\\nПрименение Nature's Guidance рядом с деревом не развеивает этот эффект.\\nЕсли вы не иллюзия Keeper of the Forest, следующая атака накладывает Root на {1.25,1.5,1.75,2} секунды и наносит 70 магического урона в секунду."
+    },
+    {
+      "keys": ["entities:State_KeeperOfTheForest_Ability1_Armor_name"],
+      "ru": "Nature's Protection"
+    },
+    {
+      "keys": ["entities:State_KeeperOfTheForest_Ability1_Root_name"],
+      "ru": "Nature's Grasp"
+    },
+    {
+      "keys": ["entities:Ability_KeeperOfTheForest2_description"],
+      "ru": "Keeper of the Forest связывает свой разум с ближайшими деревьями и оживляет их."
+    },
+    {
+      "keys": ["entities:Ability_KeeperOfTheForest2_description_simple"],
+      "ru": "Связывает разум с ближайшими деревьями и оживляет ^o4^* из них. ^oAnimated Trees^* имеют ^o{18,22,26,30} урона от атаки и {390,460,530,600} здоровья^*, а также ^o300 скорости передвижения + 1,75 за уровень героя^*. Одновременно можно иметь до ^o4 Animated Trees^*.\\n\\nДля всех ваших способностей ^oAnimated Trees^* считаются ^oдеревьями^*."
+    },
+    {
+      "keys": ["entities:Ability_KeeperOfTheForest2_tooltip_flavor"],
+      "ru": "ЭНТЫ ИДУТ!"
+    },
+    {
+      "keys": ["entities:Pet_KeeperOfTheForest_Ability2_name"],
+      "ru": "Animated Tree"
+    },
+    {
+      "keys": ["entities:Ability_KeeperOfTheForest3_description"],
+      "ru": "Keeper of the Forest черпает силу из окружающего леса, усиливая свои атаки рядом с оживлёнными деревьями."
+    },
+    {
+      "keys": ["entities:Ability_KeeperOfTheForest3_description2"],
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff:^* даёт активную способность, которая зачаровывает дерево и обеспечивает Clearvision в радиусе 800 вокруг него."
+    },
+    {
+      "keys": ["entities:Ability_KeeperOfTheForest3_description_simple"],
+      "ru": "Получает ^o{5,10,15,20} скорости атаки^* за каждое ^oAnimated Tree^* в ^oрадиусе 900^*, но не более ^o{25,50,75,100}^*.\\n\\nАтаки с ^oвероятностью 20%^* создают ^oMinor Animated Tree^* на ^o20 секунд^* (вероятность уменьшается на 40% за каждое уже созданное дерево), а против неподвижных героев вероятность равна ^o100%^*. Дерево имеет ^o{170,205,240,275} здоровья^*, ^o{18,22,26,30} урона от атаки^* и ^o300 скорости передвижения + 1,75 за уровень героя^*.\\n\\nДля ^oиллюзий^* вероятность срабатывания составляет 33% от исходной.\\n\\n^gStaff of the Master^* даёт активную способность, которая зачаровывает дерево и обеспечивает Clearvision в радиусе 800 вокруг него."
+    },
+    {
+      "keys": ["entities:Ability_KeeperOfTheForest3_description_simple:ult_boost"],
+      "ru": "Получает ^o{5,10,15,20} скорости атаки^* за каждое ^oAnimated Tree^* в ^oрадиусе 900^*, но не более ^o{25,50,75,100}^*.\\n\\n^gВыберите дерево, чтобы зачаровать его и получить Clearvision в радиусе 800 вокруг него.^*\\n\\nАтаки с ^oвероятностью 20%^* создают ^oMinor Animated Tree^* на ^o20 секунд^* (вероятность уменьшается на 40% за каждое уже созданное дерево), а против неподвижных героев вероятность равна ^o100%^*. Дерево имеет ^o{170,205,240,275} здоровья^*, ^o{18,22,26,30} урона от атаки^* и ^o300 скорости передвижения + 1,75 за уровень героя^*.\\n\\nДля ^oиллюзий^* вероятность срабатывания составляет 33% от исходной."
+    },
+    {
+      "keys": ["entities:Ability_KeeperOfTheForest3_tooltip_flavor"],
+      "ru": "У меня было дерево..."
+    },
+    {
+      "keys": ["entities:Ability_KeeperOfTheForest3_IMPACT_effect"],
+      "ru": "Пассивно получает ^o{5,10,15,20} скорости атаки^* за каждое Animated Tree в радиусе 900 (не более 5).\\n\\nАтаки с вероятностью 20% (за каждое созданное этой способностью Animated Tree вероятность последовательно умножается на 0,6) или 100% против неподвижных героев ^oсоздают Animated Tree^* на 20 секунд. Дерево имеет {170,205,240,275} здоровья, {18,22,26,30} урона от атаки и 300 скорости передвижения. Для иллюзий вероятность создания Animated Tree составляет 33% от исходной."
+    },
+    {
+      "keys": ["entities:Ability_KeeperOfTheForest3_IMPACT_effect:ult_boost"],
+      "ru": "^gВыберите дерево, чтобы зачаровать его и получить Clearvision в радиусе 800 вокруг него. Эффект сохраняется, пока зачарованное дерево живо.^*\\n\\nПассивно получает ^o{5,10,15,20} скорости атаки^* за каждое Animated Tree в радиусе 900 (не более 5).\\n\\nАтаки с вероятностью 20% (за каждое созданное этой способностью Animated Tree вероятность последовательно умножается на 0,6) или 100% против неподвижных героев ^oсоздают Animated Tree^* на 20 секунд. Дерево имеет {170,205,240,275} здоровья, {18,22,26,30} урона от атаки и 300 скорости передвижения. Для иллюзий вероятность создания Animated Tree составляет 33% от исходной."
+    },
+    {
+      "keys": ["entities:Pet_KeeperOfTheForest_Ability3_name"],
+      "ru": "Minor Animated Tree"
+    },
+    {
+      "keys": ["entities:Ability_KeeperOfTheForest4_description"],
+      "ru": "Keeper of the Forest призывает подземные корни, чтобы наложить на противников Disarm и Immobilize, одновременно нанося им периодический урон."
+    },
+    {
+      "keys": ["entities:Ability_KeeperOfTheForest4_description_simple"],
+      "ru": "Призывает подземные корни, которые накладывают на ближайших противников ^oImmobilize^* и ^oDisarm^*, наносят ^o125 магического урона в секунду^* в течение ^o{2,3,4} секунд^* и ^oоглушают^* всех поражённых на ^o0,5 секунды^*. На время действия вы получаете ^oUnitwalking^*.\\n\\n^oЭффект также исходит от всех ближайших Animated Trees.^*\\n\\n^gStaff of the Master^* создаёт рядом с каждым поражённым вражеским героем 3 ^oAnimated Trees^* на ^o40 секунд^*."
+    },
+    {
+      "keys": ["entities:Ability_KeeperOfTheForest4_effect_header"],
+      "ru": "Эффекты Root"
+    },
+    {
+      "keys": ["entities:Ability_KeeperOfTheForest4_tooltip_flavor"],
+      "ru": "Лес сражается вместе со мной!"
+    },
+    {
+      "keys": ["entities:Ability_KeeperOfTheForest4_IMPACT_effect"],
+      "ru": "При активации накладывает на ближайших противников ^oImmobilize^* и ^oDisarm^*, наносит ^o125 магического урона в секунду^* в течение ^o{2,3,4} секунд^* и даёт вам ^oUnitwalking на время действия^*. Также ^oоглушает^* всех поражённых на ^o0,5 секунды^*.\\n\\n^oЭффект также исходит от Animated Trees в пределах 925 единиц.^*"
+    },
+    {
+      "keys": ["entities:Ability_KeeperOfTheForest4_description2"],
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff:^* создаёт рядом с каждым поражённым вражеским героем 3 Animated Trees. Каждое дерево имеет 600 здоровья, 30 урона от атаки и 300 скорости передвижения и существует 40 секунд."
+    },
+    {
+      "keys": ["entities:Ability_KeeperOfTheForest4_description_simple:ult_boost", "entities:Ability_KeeperOfTheForest4_IMPACT_effect:ult_boost"],
+      "ru": "Призывает подземные корни, которые накладывают на ближайших противников ^oImmobilize^* и ^oDisarm^*, наносят ^o125 магического урона в секунду^* в течение ^o{2,3,4} секунд^* и ^oоглушают^* всех поражённых на ^o0,5 секунды^*. На время действия вы получаете ^oUnitwalking^*.\\n\\n^oЭффект также исходит от ближайших Animated Trees.^*\\n\\n^gСоздаёт рядом с каждым поражённым вражеским героем 3 Animated Trees на 40 секунд.^*"
+    },
+    {
+      "keys": ["entities:State_KeeperOfTheForest_Ability4_FRAME_effect", "entities:State_KeeperOfTheForest_Ability4_FRAME_effect:kotf_R_active"],
+      "ru": "125 магического урона в секунду.\\n\\nРазвеивание сокращает оставшуюся длительность эффекта на 80% и делает его неразвеиваемым."
+    },
+    {
+      "keys": ["entities:State_KeeperOfTheForest_Ability4_Unpurgeable_FRAME_effect", "entities:State_KeeperOfTheForest_Ability4_Unpurgeable_FRAME_effect:kotf_R_active"],
+      "ru": "125 магического урона в секунду."
+    },
+    {
+      "keys": ["entities:Pet_KeeperOfTheForest_Ability4_SotM_name"],
+      "ru": "Animated Tree"
+    },
+    {
+      "keys": ["entities:Hero_KeeperOfTheForest_description"],
+      "ru": "Древний защитник леса, Keeper of the Forest сражается за цветущие земли Newerth, о которых заботился всю свою долгую жизнь. Духовная связь с деревьями позволяет ему видеть их глазами, укрываться среди них и даже превращать их в беспощадное оружие."
+    },
+    {
+      "keys": ["entities:Hero_KeeperOfTheForest_role"],
+      "ru": "Keeper of the Forest обладает силой и бронёй настоящего древесного ствола, но его единственная мощная атакующая способность — Root. Тем не менее Nature's Protection и высокий прирост силы позволяют ему без опаски добывать золото."
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_KeeperOfTheForest_1"],
+      "ru": "Приберегите Nature's Veil для начала боя или отступления. Оказавшись в опасности, без колебаний применяйте Root, чтобы обездвижить противников в большой области."
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_KeeperOfTheForest_2"],
+      "ru": "Если у противников есть обнаружение невидимости, Portal Key поможет занять позицию и поймать их с помощью Root."
+    },
+    {
+      "keys": ["interface:hero_tip_defensive_tip_Hero_KeeperOfTheForest_1"],
+      "ru": "Shrunken Head, Nullfire Blade, Geometer's Bane и другие источники невосприимчивости к магии или развеивания мгновенно снимают Root. Купите обнаружение невидимости, чтобы Keeper of the Forest не застал команду врасплох."
+    },
+    {
+      "keys": ["interface:hero_tip_defensive_tip_Hero_KeeperOfTheForest_2"],
+      "ru": "Shieldbreaker и Hellflower отлично помогают убивать выносливых героев вроде Keeper of the Forest. Nullfire Blade также снимает его Nature's Veil."
+    }
+  ]
+}

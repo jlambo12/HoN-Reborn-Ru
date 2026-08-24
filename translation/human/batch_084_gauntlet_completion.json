@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_084_GAUNTLET_COMPLETION",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_Gauntlet1_name", "entities:Ability_Gauntlet1_effect_header"], "ru": "Infernal Instability"},
+
+    {"keys": ["entities:Ability_Gauntlet2_name"], "ru": "Grapple"},
+    {"keys": ["entities:Ability_Gauntlet2_description2", "entities:Ability_Gauntlet2_effect_header", "entities:Ability_Gauntlet2_effect_header2"], "ru": ""},
+
+    {"keys": ["entities:Ability_Gauntlet3_name"], "ru": "Enfeeble"},
+
+    {"keys": ["entities:Ability_Gauntlet4_name"], "ru": "Gauntlet Blast"},
+    {"keys": ["entities:Ability_Gauntlet4_effect_header"], "ru": "Поглощён силой"},
+    {"keys": ["entities:Ability_Gauntlet4_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_Gauntlet4_name:ult_boost"], "ru": "^gGauntlet Punch!*^*"},
+    {"keys": ["entities:Ability_Gauntlet4_description2:ult_boost"], "ru": "\\r"},
+    {"keys": ["entities:Ability_Gauntlet4_Sub_name"], "ru": "Rocket Fist"}
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_094_HEADLESS_BOSS",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_HeadlessBoss1_name"], "ru": "Reckless Horseman Q"},
+    {"keys": ["entities:Ability_HeadlessBoss1_description_simple", "entities:Ability_HeadlessBoss1_IMPACT_effect"], "ru": "Выберите точку, чтобы призвать в области зловещие лозы. Через 4 секунды появляется область радиусом 300, которая существует ^o4 секунды^*.\\n\\nНа находящихся внутри противников постоянно накладывается эффект, который наносит ^o75 магического урона в секунду и снижает броню на 5^*."},
+
+    {"keys": ["entities:Ability_HeadlessBoss2_name"], "ru": "Reckless Horseman W"},
+    {"keys": ["entities:Ability_HeadlessBoss2_description_simple", "entities:Ability_HeadlessBoss2_IMPACT_effect"], "ru": "Запускает в выбранную точку Possessed Pumpkin, которая приземляется через ^o2 секунды^* и прикрепляется к вражескому существу или земле.\\n\\nЧерез 8 секунд она взрывается в радиусе 240, наносит ^o200 магического урона и накладывает Hex на всех противников в области на 3 секунды^*."},
+
+    {"keys": ["entities:Ability_HeadlessBoss3_name"], "ru": "Reckless Horseman E"},
+    {"keys": ["entities:Ability_HeadlessBoss3_description", "entities:Ability_HeadlessBoss3_description_simple"], "ru": "Пассивно ^oсокращает длительность отрицательных эффектов на 75%^*.\\n\\nЗа каждый 1% недостающего здоровья Reckless Horseman получает 3 к урону атаки."},
+
+    {"keys": ["entities:Ability_HeadlessBoss4_name"], "ru": "Reckless Horseman R"},
+    {"keys": ["entities:Ability_HeadlessBoss4_description_simple", "entities:Ability_HeadlessBoss4_IMPACT_effect"], "ru": "Выберите вражеское существо, чтобы Reckless Horseman устремился к нему с максимальной скоростью передвижения. Приблизившись к цели на 250 ед., он проносится сквозь неё, ^oвысоко подбрасывает всех противников на пути и оглушает их на 1,6 секунды^*. Поражённые противники также получают ^o200 физического урона^*."}
+  ]
+}

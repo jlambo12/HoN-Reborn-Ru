@@ -1,0 +1,61 @@
+---
+import DownloadButton from './DownloadButton.astro';
+import HeroParallax from './HeroParallax.astro';
+import { site } from '../config/site';
+---
+
+<main class="hero" data-hero>
+  <HeroParallax />
+
+  <header class="site-header">
+    <span class="site-header__mark"></span>
+    <span>{site.name}</span>
+  </header>
+
+  <section class="hero__content" aria-labelledby="hero-title">
+    <img
+      class="hero__logo"
+      src="/brand/hon-reborn-logo.webp"
+      width="900"
+      height="672"
+      alt="Heroes of Newerth Reborn"
+      fetchpriority="high"
+    />
+    <h1 id="hero-title">HoN Reborn <span>на русском</span></h1>
+    <DownloadButton url={site.downloadUrl} />
+  </section>
+
+  <footer class="site-footer">
+    <span>honreborn.ru</span>
+    <span>Неофициальная русская локализация</span>
+  </footer>
+</main>
+
+<script>
+  const hero = document.querySelector<HTMLElement>('[data-hero]');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const finePointer = window.matchMedia('(pointer: fine)');
+  let frame = 0;
+
+  const reset = () => {
+    if (!hero) return;
+    hero.style.setProperty('--pointer-x', '0');
+    hero.style.setProperty('--pointer-y', '0');
+  };
+
+  hero?.addEventListener('pointermove', (event) => {
+    if (reducedMotion.matches || !finePointer.matches) return;
+    const bounds = hero.getBoundingClientRect();
+    const x = ((event.clientX - bounds.left) / bounds.width - 0.5) * 2;
+    const y = ((event.clientY - bounds.top) / bounds.height - 0.5) * 2;
+
+    cancelAnimationFrame(frame);
+    frame = requestAnimationFrame(() => {
+      hero.style.setProperty('--pointer-x', x.toFixed(3));
+      hero.style.setProperty('--pointer-y', y.toFixed(3));
+    });
+  });
+
+  hero?.addEventListener('pointerleave', reset);
+  reducedMotion.addEventListener('change', reset);
+</script>

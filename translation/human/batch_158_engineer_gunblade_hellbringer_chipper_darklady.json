@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_158_ENGINEER_GUNBLADE_HELLBRINGER_CHIPPER_DARKLADY",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:State_Engineer_Ability2_Regen_FRAME_effect"],
+      "english_hash": "3c300b9d0409fb9b85a273ae3f2aa11e9dd9c31996d7faf5cc58866facc00864",
+      "ru": "По окончании полностью восстанавливает здоровье Turret"
+    },
+    {
+      "keys": ["entities:State_Engineer_Ability3_FRAME_effect"],
+      "english_hash": "ab699cd1ea8d151ee85b61bb550a7fb4588ea99830778761f18774ea33902476",
+      "ru": "Сразу даёт 25 дополнительной скорости атаки и каждую секунду добавляет ещё 25.\\nПередаётся башням и турелям в радиусе 500."
+    },
+    {
+      "keys": ["entities:State_Engineer_Ability4_Zap_FRAME_effect"],
+      "english_hash": "a482eb2feeba499b096639c5d96949fd88f7a8990c10a74ee1b987d72941164d",
+      "ru": "Сначала замедляет скорость передвижения на 100%; эффект постепенно ослабевает"
+    },
+    {
+      "keys": ["entities:State_Engineer_Ability4_Zap_Immunity_FRAME_effect"],
+      "english_hash": "d35ab575b9b63db5957dd7b7f8800056270ee4a523fc9195f081ccbce78c1bc9",
+      "ru": "Получает {50,75,100} магического урона в секунду"
+    },
+    {
+      "keys": ["entities:State_Engineer_Ability4_Zap_Immunity_FRAME_effect:ult_boost"],
+      "english_hash": "08f5dcb6fe17109fcdda52231299749ed91caa2a0cc5dba4666ed307b76f12f4",
+      "ru": "Получает {50,75,100} + ^g1.5% от максимального здоровья^* магического урона в секунду"
+    },
+    {
+      "keys": ["entities:State_Gunblade_Ability1_Slow_description"],
+      "english_hash": "c8878bd5cf8d7b3f0c99270dc95041ea42e55a51bb030a8588e3fe4414391ba4",
+      "ru": "Замедлен пулями!"
+    },
+    {
+      "keys": ["entities:State_Gunblade_Ability2_description"],
+      "english_hash": "c00fbebeadb86b8f67d6961ff6a371dd4d7d80a5842b41caf0ad9b0d4260ddcc",
+      "ru": "Поглощает урон и движется быстрее!"
+    },
+    {
+      "keys": ["entities:State_Gunblade_Ability4_Reduced_FRAME_effect"],
+      "english_hash": "3fcf3c4f8095e09fe38b33cb4104d4ad3fc72d5f696f24b8fdf26cb8a2ac6358",
+      "ru": "Наносит Gunblade на 25% меньше урона"
+    },
+    {
+      "keys": [
+        "entities:State_Gunblade_Ability4_Reduced_description",
+        "entities:State_Gunblade_Ability4_Reduced_description:ult_boost"
+      ],
+      "english_hash": "cd060df86121247dbc3a049ad0c52850f4ba556d8452608e9de59e0b12a71e06",
+      "ru": "Броня снижена!"
+    },
+    {
+      "keys": ["entities:State_Hellbringer_Ability2_FRAME_effect"],
+      "english_hash": "4bc9034cd3304d0494d2c139cdbcf52da3082174547bbb6307c6b2063df6886a",
+      "ru": "Наносит магический урон {5,6,7,8} раз с интервалом в 1 секунду. Первый урон равен 10, каждый следующий увеличивается на 10."
+    },
+    {
+      "keys": ["entities:State_Hellbringer_Ability3_FRAME_effect"],
+      "english_hash": "a7da5243af9fa6b5de1aacf6437444786b22bac023a57291eb67ae2ceaa5ff54",
+      "ru": "Восстанавливает Hellbringer здоровье в размере {15,20,25,30}% всего полученного урона."
+    },
+    {
+      "keys": ["entities:State_Hellbringer_Ability3_Heal_FRAME_effect"],
+      "english_hash": "9945f524a52ef19c5e69c07e1253e99de7231f49ce2a321da6b0fff124fd04fa",
+      "ru": "Восстанавливает Hellbringer здоровье в размере {4,8,12,16}% всего нанесённого урона."
+    },
+    {
+      "keys": ["entities:State_Hellbringer_Ability4_FRAME_effect"],
+      "english_hash": "77ebe13f44ba5fc9741c12f117ba8ae70d470d5ffeb76f5ca8ac157553af89a3",
+      "ru": "За 3 секунды получает {50,100,150} магического урона"
+    },
+    {
+      "keys": ["entities:State_Chipper_Ability1_FRAME_effect"],
+      "english_hash": "c831c2e1827aeade1dbf048a2507ccf5165e9698260533694ed2fb52f15c7c16",
+      "ru": "{15,20,25,30} магического урона в секунду"
+    },
+    {
+      "keys": ["entities:State_Chipper_Ability2_Tooltip_FRAME_effect"],
+      "english_hash": "621d05f8b977e205c5610563ccede47aea08417b1acbc6510ec9d3088290a452",
+      "ru": "10% замедления передвижения\\n{0.1,0.3,0.5,0.7}% дополнительного замедления передвижения за заряд\\n{0.1,0.2,0.3,0.4}% замедления скорости атаки за заряд"
+    },
+    {
+      "keys": ["entities:State_Chipper_Ability3_Buff_FRAME_effect"],
+      "english_hash": "06ff8ca3184b7f90b009fc7b80e74071c4bc2e3c928d1720b090c06b0b2c7830",
+      "ru": "Поглощает {105,200,295,380} магического урона после его снижения.\\nThe Chipper получает ману в размере половины поглощённого урона."
+    },
+    {
+      "keys": ["entities:State_Chipper_Ability4_DOT_FRAME_effect"],
+      "english_hash": "3b703599b93d64b7115005f879416f0f14ac1135dc6a9558c31edd271c07c754",
+      "ru": "{200,300,400} начального магического урона\\n{75,125,175} магического урона в секунду"
+    },
+    {
+      "keys": ["entities:State_Chipper_Ability4_Slow_description"],
+      "english_hash": "a575e06f46a4e86495e837dea8a2839ffb9b9bb3de8eab9ababda82e240e9791",
+      "ru": "Сначала замедляет скорость передвижения на 80%; эффект постепенно ослабевает за {2,3,4} секунды"
+    },
+    {
+      "keys": ["entities:State_DarkLady_Ability1_ATTACK_IMPACT_effect"],
+      "english_hash": "c343896bcd5488f9878425fa9526c66f0a29c8e706dedcfa6a19af8abc7a48ad",
+      "ru": "Накладывает на цель Безмолвие на 2.5 секунды"
+    },
+    {
+      "keys": ["entities:State_DarkLady_Ability1_FRAME_effect"],
+      "english_hash": "96782b29d42a8166d866cabc1586ddf5a890987e7f8fbdfad818ec90b8bcaf7a",
+      "ru": "Атаки накладывают на цель Безмолвие на 2.5 секунды"
+    },
+    {
+      "keys": ["entities:State_DarkLady_Ability2_FRAME_effect"],
+      "english_hash": "145ebb47d8a987167eac10edea60f90571af4720d1bdf6c667cb2aa1286c935d",
+      "ru": "Сначала снижает скорость передвижения на 60%; полная скорость восстанавливается за {2,3,4,5} секунды."
+    },
+    {
+      "keys": ["entities:State_DarkLady_Ability4_FRAME_effect"],
+      "english_hash": "2ed6792ac7757a641373b086565e523694c11e22e7be458bace117d5fb7e8d77",
+      "ru": "Уменьшает радиус обзора до {500,450,400} и отключает общий обзор с союзниками."
+    }
+  ]
+}

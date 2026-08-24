@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_117_MOON_QUEEN",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_MoonQueen1_description"],
+      "ru": "Moon Queen призывает силу луны, чтобы поразить выбранного противника, нанеся ему урон и ненадолго оглушив."
+    },
+    {
+      "keys": ["entities:Ability_MoonQueen1_description_simple"],
+      "ru": "Призывает силу луны, чтобы поразить противника: наносит ^o{75,150,225,300} магического урона^* и ^oоглушает на 1 секунду^*."
+    },
+    {
+      "keys": ["entities:Ability_MoonQueen1_effect_header", "entities:Ability_MoonQueen2_effect_header", "entities:Ability_MoonQueen3_effect_header", "entities:Ability_MoonQueen4_effect_header"],
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:Ability_MoonQueen1_IMPACT_effect"],
+      "ru": "Наносит цели ^o{75,150,225,300} магического урона^* и ^oоглушает её на 1 секунду^*."
+    },
+    {
+      "keys": ["entities:Ability_MoonQueen1_tooltip_flavor"],
+      "ru": "Ощути лунный лазер."
+    },
+    {
+      "keys": ["entities:Ability_MoonQueen2_description"],
+      "ru": "Мастерское владение Luna Shuriken позволяет Moon Queen направлять его рикошетом от основной цели в дополнительных противников."
+    },
+    {
+      "keys": ["entities:Ability_MoonQueen2_description_simple"],
+      "ru": "Ваши атаки ^oотскакивают ещё до {1,2,3,5} раз^*. С каждым отскоком урон ^oснижается на 25%^*, а при попадании по зданию — на 50%. Атака не может повторно отскочить в уже поражённую цель.\\n\\n^oПереключите режим^*, чтобы отскоки поражали только вражеских героев."
+    },
+    {
+      "keys": ["entities:Ability_MoonQueen2_description_simple:Ability_MoonQueen2_active"],
+      "ru": "Ваши атаки ^oотскакивают ещё до {1,2,3,5} раз^*. С каждым отскоком урон ^oснижается на 25%^*, а при попадании по зданию — на 50%. Атака не может повторно отскочить в уже поражённую цель.\\n\\n^oПереключите режим^*, чтобы отскоки поражали всех вражеских существ."
+    },
+    {
+      "keys": ["entities:Ability_MoonQueen2_IMPACT_effect"],
+      "ru": "Во включённом режиме атаки по героям отскакивают только в других видимых вражеских героев."
+    },
+    {
+      "keys": ["entities:Ability_MoonQueen2_ATTACK_IMPACT_effect", "entities:Ability_MoonQueen2_ATTACK_IMPACT_effect:Ability_MoonQueen2_active"],
+      "ru": "Ваши атаки ^oотскакивают ещё до {1,2,3,5} раз^*. С каждым отскоком урон ^oснижается на 25%^*, а при попадании по зданию — на 50%. Атака не может повторно отскочить в уже поражённую цель."
+    },
+    {
+      "keys": ["entities:Ability_MoonQueen2_tooltip_flavor"],
+      "ru": "Возьми один — передай дальше."
+    },
+    {
+      "keys": ["entities:Ability_MoonQueen3_description"],
+      "ru": "Moon Queen излучает силу луны, увеличивая урон дальних атак окружающих союзников."
+    },
+    {
+      "keys": ["entities:Ability_MoonQueen3_description2"],
+      "ru": "Увеличивает радиус ночного обзора Moon Queen на 800."
+    },
+    {
+      "keys": ["entities:Ability_MoonQueen3_description_simple", "entities:Ability_MoonQueen3_description_simple:Krixi_Aura_Toggle_All"],
+      "ru": "Увеличивает ваш ^oночной обзор на 800^* и окружает аурой, которая повышает базовый урон ближайших союзных существ дальнего боя на ^o{5,10,15,20}%^*. ^oНочью бонус к базовому урону увеличивается до {15,20,25,30}%^*.\\n\\n^oПереключите режим^*, чтобы аура действовала только на ближайших союзных героев дальнего боя."
+    },
+    {
+      "keys": ["entities:Ability_MoonQueen3_description_simple:Krixi_Aura_Toggle_Heroes"],
+      "ru": "Увеличивает ваш ^oночной обзор на 800^* и окружает аурой, которая повышает базовый урон ближайших союзных героев дальнего боя на ^o{5,10,15,20}%^*. ^oНочью бонус к базовому урону увеличивается до {15,20,25,30}%^*.\\n\\n^oПереключите режим^*, чтобы аура действовала на всех ближайших союзных существ дальнего боя."
+    },
+    {
+      "keys": ["entities:Ability_MoonQueen3_IMPACT_effect"],
+      "ru": "При использовании аура будет действовать только на союзных героев."
+    },
+    {
+      "keys": ["entities:Ability_MoonQueen3_IMPACT_effect:Krixi_Aura_Toggle_All"],
+      "ru": "При использовании аура начнёт действовать только на союзных героев."
+    },
+    {
+      "keys": ["entities:Ability_MoonQueen3_IMPACT_effect:Krixi_Aura_Toggle_Heroes"],
+      "ru": "При использовании аура начнёт действовать на всех союзных существ."
+    },
+    {
+      "keys": ["entities:Ability_MoonQueen3_tooltip_flavor"],
+      "ru": "Да пребудет с тобой сила!"
+    },
+    {
+      "keys": ["entities:Ability_MoonQueen4_description"],
+      "ru": "Moon Queen в течение короткого времени раз за разом обрушивает Moon Beam на случайных противников поблизости."
+    },
+    {
+      "keys": ["entities:Ability_MoonQueen4_description_simple"],
+      "ru": "Обрушивает гнев луны: на ^o{6,8,10} секунды^* наступает ночь, а случайных противников вокруг поражают ^o{5,8,11} Moon Beams^* — не более ^o4 лучей в одну цель^*.\\n\\nКаждый луч наносит ^o{200,250,300} магического урона^*, но ^oне оглушает^*.\\n\\n^gStaff of the Master^* увеличивает количество Moon Beams до ^o{6,12,18}^*, максимум попаданий в одну цель — до ^o{6,9,12}^*, сокращает промежуток между лучами, добавляет Mini-Stun и сокращает перезарядку до ^o90 секунд^*."
+    },
+    {
+      "keys": ["entities:Ability_MoonQueen4_description_simple:ult_boost"],
+      "ru": "Обрушивает гнев луны: на ^o{6,8,10} секунды^* наступает ночь, а случайных противников вокруг поражают ^g{6,12,18} Moon Beams^* — не более ^g{6,9,12} лучей в одну цель^*.\\n\\nКаждый луч наносит ^o{200,250,300} магического урона^* и накладывает на цель ^gMini-Stun^*."
+    },
+    {
+      "keys": ["entities:Ability_MoonQueen4_description2"],
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* Увеличивает количество лучей с {5,8,11} до {6,12,18}, а максимальное число попаданий в одну цель — с 4 до {6,9,12}; сокращает промежуток между лучами, добавляет Mini-Stun и уменьшает перезарядку до 90 секунд."
+    },
+    {
+      "keys": ["entities:Ability_MoonQueen4_IMPACT_effect"],
+      "ru": "На ^o{6,8,10} секунды^* наступает ночь. За ^o{2.4,4.2,6} секунды^* по случайным целям в радиусе выпускается {5,8,11} Moon Beams — не более 4 попаданий в одну цель.\\n\\nКаждый луч наносит ^o{200,250,300} магического урона^*."
+    },
+    {
+      "keys": ["entities:Ability_MoonQueen4_IMPACT_effect:ult_boost"],
+      "ru": "На ^o{6,8,10} секунды^* наступает ночь. За ^g{2.4,5,7.7} секунды^* по случайным целям в радиусе выпускается ^g{6,12,18}^* Moon Beams — не более ^g{6,9,12}^* попаданий в одну цель.\\n\\nКаждый луч наносит ^o{200,250,300} магического урона^* и накладывает на цель ^gMini-Stun^*."
+    },
+    {
+      "keys": ["entities:Ability_MoonQueen4_tooltip_flavor"],
+      "ru": "Если первый тебя не убьёт..."
+    },
+    {
+      "keys": ["entities:Hero_MoonQueen_description"],
+      "ru": "Инсектоиды — лунные воины — не вмешивались в великую войну людей и зверей. Но когда Hellbourne стали угрожать Newerth, сама королева повела свой народ против демонов. Черпая силу в луне и единой воле своего улья, это диковинное создание стало могучей опорой Legion."
+    },
+    {
+      "keys": ["entities:Hero_MoonQueen_role"],
+      "ru": "Moon Queen особенно сильна в поздней игре: благодаря Multi-Strike она за считанные секунды расправляется с противниками и сносит здания. Moon Beam дополняет её обычные атаки и помогает изматывать врага, а Moon Finale быстро уничтожает противников, оставшихся в одиночестве."
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_MoonQueen_1"],
+      "ru": "Заманивайте противников в безлюдные места, чтобы уничтожить их с помощью Moon Finale. Mini-Stun от Moon Beam поможет не дать жертве уйти."
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_MoonQueen_2"],
+      "ru": "Играйте осторожно, пока Moon Finale недоступна. Из-за небольшого запаса здоровья и отсутствия способности для побега враги будут стараться убить вас."
+    },
+    {
+      "keys": ["interface:hero_tip_defensive_tip_Hero_MoonQueen_1"],
+      "ru": "Moon Finale наносит огромный урон одиночной цели, поэтому держитесь рядом с союзными существами и героями, чтобы распределить её удары между ними."
+    },
+    {
+      "keys": ["interface:hero_tip_defensive_tip_Hero_MoonQueen_2"],
+      "ru": "Старайтесь часто устраивать засады на Moon Queen в начале матча. Ей нечем спастись, поэтому она становится лёгкой целью; если же дать ей спокойно фармить, к поздней игре она наберёт огромную силу."
+    }
+  ]
+}

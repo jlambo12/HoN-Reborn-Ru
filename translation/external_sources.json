@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "bundle_files": [
+        {
+          "encoding": "utf-8",
+          "path": "bundle/bot_messages_en.str",
+          "sha256": "18ce6441a2c95f1c32c3c805b98e08652428fb846631039f732d5209875382b1",
+          "size_bytes": 13305,
+          "unique_keys": 155
+        },
+        {
+          "encoding": "utf-8-sig",
+          "path": "bundle/client_messages_en.str",
+          "sha256": "98221837f01fc07e4076b7f6c77f843588fdcda8d518a739ea62a3aebb15e20c",
+          "size_bytes": 70061,
+          "unique_keys": 656
+        },
+        {
+          "encoding": "utf-8-sig",
+          "path": "bundle/entities_en.str",
+          "sha256": "dba7be904015f8f903e7555f27cda49476adb4526e6ce225b22e8c1ee7588321",
+          "size_bytes": 2396990,
+          "unique_keys": 10533
+        },
+        {
+          "encoding": "utf-8-sig",
+          "path": "bundle/game_messages_en.str",
+          "sha256": "002247819b99bc0f8192c00ad0c4d59fdeb85c6f2a9a0b4b2b396407729d9e1c",
+          "size_bytes": 77326,
+          "unique_keys": 732
+        },
+        {
+          "encoding": "utf-8-sig",
+          "path": "bundle/interface_en.str",
+          "sha256": "b69dbe93cec67086d9208fb93de0074cfe69506f2e221676fcc942acd4d5ba1a",
+          "size_bytes": 921153,
+          "unique_keys": 7695
+        }
+      ],
+      "commit_author": "Xyling12 <xyling@github.com>",
+      "commit_date": "2026-08-10T14:09:24+04:00",
+      "commit_subject": "ci: add uninstaller to auto-build release",
+      "copyright": "Copyright (c) 2024-2026 HoN RU Community (Xyling12)",
+      "id": "hon_ru_pack_xyling12",
+      "source_role": "SECONDARY_TRANSLATION_CANDIDATE",
+      "approval_state": "NOT_APPROVED_FOR_DIRECT_MERGE",
+      "semantic_authority": false,
+      "runtime_preview": "DONOR_TEST_0_COMPLETE",
+      "license": "MIT",
+      "license_path": "C:\\HoN-Reborn-RU\\external\\HoN_RU_Pack\\LICENSE",
+      "license_sha256": "8aaa682bb8d0956a68ae62bfadead98f0f0ed6ecbd5d5ac443f8f2b55bb01324",
+      "local_path": "C:\\HoN-Reborn-RU\\external\\HoN_RU_Pack",
+      "pinned_commit": "9f276bf86037bffe9e6d208dacd99d19b4e666eb",
+      "provenance_note": "Repository and commit are pinned. The repository attributes the pack to HoN RU Community (Xyling12); independent per-string authorship/source provenance is not documented.",
+      "repository": "https://github.com/Xyling12/HoN_RU_Pack.git",
+      "reuse_condition": "Retain the MIT copyright and permission notice in copies or substantial portions.",
+      "worktree_clean": true
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_064_DEVOURER",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_Devourer1_name"], "ru": "Guttling Hook"},
+    {"keys": ["entities:Ability_Devourer1_description"], "ru": "Devourer запускает Guttling Hook в выбранного юнита или точку. Первый подходящий юнит, которого коснётся крюк, будет притянут к Devourer."},
+    {"keys": ["entities:Ability_Devourer1_description_simple"], "ru": "Запускает ^oGuttling Hook^* в выбранную точку и притягивает первого зацепленного юнита к себе. Противник получает ^oмини-оглушение^* и ^o{135,210,285,360} физического урона^*."},
+    {"keys": ["entities:Ability_Devourer1_IMPACT_effect"], "ru": "Запускает крюк, который цепляет первого органического юнита на пути. При попадании во врага наносит ^o{135,210,285,360} физического урона^* и ^oпритягивает цель^* к Devourer. Во время притягивания цель оглушена."},
+    {"keys": ["entities:Ability_Devourer1_effect_header"], "ru": "Эффекты состояния"},
+    {"keys": ["entities:Ability_Devourer1_tooltip_flavor"], "ru": "Иди сюда!"},
+
+    {"keys": ["entities:Ability_Devourer2_name"], "ru": "Decay"},
+    {"keys": ["entities:Ability_Devourer2_description"], "ru": "Devourer позволяет собственному телу разлагаться, постепенно теряет здоровье и выпускает ядовитый газ, который наносит урон и замедляет окружающих противников."},
+    {"keys": ["entities:Ability_Devourer2_description_simple"], "ru": "^oПереключаемая способность^*.\\n\\nНачинает разлагаться и выпускает ядовитый газ, ^rпостепенно расходуя собственное здоровье^*. Каждую секунду наносит окружающим противникам ^o{30,60,90,120} магического урона^* и ^oзамедляет их передвижение на -20%^*."},
+    {"keys": ["entities:Ability_Devourer2_IMPACT_effect"], "ru": "Во включённом состоянии каждую секунду наносит Devourer и окружающим противникам ^o{30,60,90,120} магического урона^*, а также накладывает на врагов ^oDecay^*. После выхода из области Decay действует ещё 2 секунды."},
+    {"keys": ["entities:Ability_Devourer2_effect_header"], "ru": "Эффекты Decay"},
+    {"keys": ["entities:Ability_Devourer2_tooltip_flavor"], "ru": "Что это за запах?"},
+
+    {"keys": ["entities:Ability_Devourer3_name"], "ru": "Cadaver Armor"},
+    {"keys": ["entities:Ability_Devourer3_description"], "ru": "Эта жуткая броня повышает магическую броню Devourer и навсегда увеличивает его силу за каждого погибшего поблизости противника."},
+    {"keys": ["entities:Ability_Devourer3_description_simple"], "ru": "Даёт ^o{0,2,3,4,5} магической брони^*.\\n\\nКогда поблизости погибает вражеский герой, ^oнавсегда^* увеличивает силу на ^o{0,1,1.25,1.5,1.75}^*."},
+    {"keys": ["entities:Ability_Devourer3_KILL_effect"], "ru": "За каждого погибшего поблизости противника навсегда увеличивает силу Devourer на ^o{0,1,1.25,1.5,1.75}^*."},
+    {"keys": ["entities:Ability_Devourer3_effect_header"], "ru": "Эффекты состояния"},
+    {"keys": ["entities:Ability_Devourer3_tooltip_flavor"], "ru": "Зло никогда не умирает!"},
+
+    {"keys": ["entities:Ability_Devourer4_name"], "ru": "Devour"},
+    {"keys": ["entities:Ability_Devourer4_description"], "ru": "Devourer хватает противника и пожирает его плоть, каждую секунду нанося огромный урон и увеличивая собственную мощь."},
+    {"keys": ["entities:Ability_Devourer4_description_simple"], "ru": "Пожирает плоть противника в течение до ^o3 секунд^*, каждую секунду наносит ^o{75,125,175} магического урона и восстанавливает себе столько же здоровья^*, а также ^oоглушает цель^*. За каждую секунду поддержания ^oDevour^* временно ^oувеличивает радиус Decay^*.\\n\\n^gStaff of the Master:^* даёт дополнительную способность ^oGorge^*. Она позволяет проглотить противника целиком, лишить его возможности действовать, каждую секунду отнимать ^o{55,95,135} здоровья^* и восстанавливать Devourer ^o{55,95,135} здоровья^*. На всё это время Devourer находится под действием ^oRestrain^*."},
+    {"keys": ["entities:Ability_Devourer4_description_simple:ult_boost", "entities:Ability_Devourer4_IMPACT_effect"], "ru": "Выберите противника и поддерживайте способность, чтобы каждую секунду наносить ^o{75,125,175} магического урона, восстанавливать Devourer столько же здоровья^* и оглушать цель в течение до ^o3 секунд^*. За каждую секунду поддержания Devour временно увеличивает радиус ^oDecay^*."},
+    {"keys": ["entities:Ability_Devourer4_description2"], "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* даёт дополнительную способность Gorge, позволяющую проглотить противника целиком."},
+    {"keys": ["entities:Ability_Devourer4_description2:ult_boost"], "ru": "\\r"},
+    {"keys": ["entities:Ability_Devourer4_effect_header"], "ru": "Эффекты Devour"},
+    {"keys": ["entities:Ability_Devourer4_tooltip_flavor"], "ru": "Дамер переродился!"},
+
+    {"keys": ["entities:Ability_Devourer4_Staff_name"], "ru": "^gGorge^*"},
+    {"keys": ["entities:Ability_Devourer4_Staff_description"], "ru": "Devourer проглатывает противника целиком, быстро переваривает его и восстанавливает собственное здоровье."},
+    {"keys": ["entities:Ability_Devourer4_Staff_description_simple"], "ru": "Проглатывает противника целиком на ^o3 секунды^*. Проглоченная цель не может действовать и каждую секунду теряет ^o{55,95,135} здоровья^*, а Devourer восстанавливает ^o{55,95,135} здоровья^*. На всё это время Devourer также находится под действием ^oRestrain^*. ^oСмерть^* или ^oтелепортация^* заставляет выплюнуть противника."},
+    {"keys": ["entities:Ability_Devourer4_Staff_IMPACT_effect"], "ru": "Проглатывает противника целиком на ^o3 секунды^*. Проглоченная цель не может действовать и каждую секунду теряет ^o{55,95,135} здоровья^*, а Devourer восстанавливает ^o{55,95,135} здоровья^*. ^oСмерть^* или ^oтелепортация^* заставляет выплюнуть противника."},
+    {"keys": ["entities:Ability_Devourer4_Staff_effect_header"], "ru": "Эффекты Gorge"},
+    {"keys": ["entities:Ability_Devourer4_Staff_tooltip_flavor"], "ru": "Если любишь — отпусти. А если вернётся, проглоти целиком."}
+  ]
+}

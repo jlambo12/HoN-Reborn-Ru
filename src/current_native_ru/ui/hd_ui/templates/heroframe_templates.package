@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package>
+
+	<template name="heroframe_top_resourcebar">
+		<!-- Resource Bar -->
+		<frame height="{height=0.33w}" width="{width=100%}" valign="{valign}" align="{align}" y="{y}" x="{x}"
+			color=".07 .07 .07" bordercolor=".07 .07 .07" borderthickness="{borderthickness=0.15h}" 
+			texture="/ui/frames/rounded_bg_solid.tga"
+		>
+			<frame name="heroframe_top_{barname}_{index}" noclick="1" width="50%"
+				style="resource-color-{barname}" borderthickness="{borderthickness=0.15h}"
+				texture="/ui/hd_ui/frames/rounded_grad_minor.tga"
+			>
+				<panel height="1" color="1 1 1 .2" rendermode="additive" noclick="1" />
+				<panel height="1" color="0 0 0 .3" valign="bottom" noclick="1" />
+				<panel width="1" color="1 1 1 .2" rendermode="additive" align="right" noclick="1" />
+			</frame>
+			<!-- Style Overlay -->
+			<image texture="/ui/hd_ui/alt_info/altinfo_grit_16_1.tga" color="1 1 1 .2" rendermode="additive" noclick="1" />
+		</frame>
+	</template>
+
+	<template name="heroframe_scoreboard_resourcebar">
+
+		<panel noclick="1" width="100%" height="50%">
+
+			<!-- Resource Bar-->
+			<!--
+				onloadlua="Tooltips:RegisterIngameTip('game', self, '{barname}' .. '_tooltip')"
+			-->
+			<frame height="80%" valign="center"
+				color="0 0 0 1" bordercolor="0 0 0 1" borderthickness="0.15h" 
+				texture="/ui/hd_ui/frames/rounded_grad_minor.tga" 
+			>
+				<frame name="heroframe_scoreboard_{barname}_{index}" noclick="1"
+					color="{color}" bordercolor="{color}" borderthickness="0.15h"
+					texture="/ui/hd_ui/frames/rounded_grad_minor.tga" 
+				>
+					<frame noclick="1"
+						color="1 1 1 0" bordercolor="1 1 1 .8" rendermode="additive" borderthickness="1p"
+						texture="/ui/frames/roundframe.tga" 
+					/>
+				</frame>
+
+			</frame>
+
+
+			<!-- Resource Label -->
+			<label name="heroframe_scoreboard_{barname}_label_{index}" noclick="1"
+				content="-" color="white" font="dyn_bold_8" textalign="center" textvalign="center" shadow="1" visible="0"
+			/>
+
+		</panel>
+
+	</template>
+
+	<template name="heroframe_scoreboard_status">
+		
+		<!-- Status Frame -->
+		<panel name="heroframe_scoreboard_{statusname}_{index}" noclick="1" width="100%" height="0" stickytoinvis="0" visible="0">
+
+			<!-- Icon -->
+			<image texture="{icon}" visible="{showicon=1}" noclick="1" size="1.5h" valign="center" color=".8 .8 .8" />
+
+			<!-- Label -->
+			<label visible="1" noclick="1" name="heroframe_scoreboard_{statusname}_label_{index}"
+				content="{text=-}" color="gray" shadow="1" font="dyn_bold_12" textalign="center" textvalign="center" x="{text_xoffset}"
+			/>
+
+		</panel>
+
+	</template>
+
+	<template name="heroframe_ability_indicators">
+		<panel name="heroframe_{type}_indicators_{index}" noclick="1" 
+			float="right" visible="1"  width="50%"
+		>
+			<!-- Q -->
+			<instance name="heroframe_ability_indicator" type="{type}" slot="0" index="{index}"
+				frametexture="ability_indicator"
+			/>
+
+			<!-- W -->
+			<instance name="heroframe_ability_indicator" type="{type}" slot="1" index="{index}"
+				frametexture="ability_indicator"
+			/>
+
+			<!-- E -->
+			<instance name="heroframe_ability_indicator" type="{type}" slot="2" index="{index}"
+				frametexture="ability_indicator"
+			/>
+
+			<!-- ULT Has it's own indicator -->
+
+		</panel>
+
+	</template>
+
+	<template name="heroframe_ability_indicator">
+		<panel noclick="1" width="33.33%">
+						
+			<!-- This passes in 'scoreboard' instead of type on purpose -->
+			<panel name="heroframe_{type}_abilitydot_{index}_{slot}" color=".3 .3 .3"
+				oninstantiatelua="Abilities:RegisterIndicator(self, '{slot}'..'{index}', '{slot}', '{index}', 'scoreboard')"
+			/>
+
+			<image name="heroframe_{type}_abilitygrad_{index}_{slot}"
+				texture="/ui/hd_ui/elements/grad_linear_vert.tga" vflip="1" y="-1" height="70%" valign="bottom" noclick="1"
+			/>
+			
+			<frame name="heroframe_{type}_abilityborder_{index}_{slot}"
+				borderthickness="1"
+				color="invisible" bordercolor="0 0 0"
+				noclick="1"
+			/>
+
+		</panel>
+	</template>
+
+	<template name="heroframe_indicator_spawn">
+		<panel noclick="1">
+			<instance name="heroframe_ability_indicators" attribute_padding=".4h" type="top" index="{index}" />
+		</panel>
+	</template>
+	
+	<template name="heroframe_vanity_slot">
+		<panel name="heroframe_top_vanityslot_root_{index}{id}" size="2.5h" align="center" visible="0" noclick="1">
+
+			<!-- Vanity Icon -->
+			<image name="heroframe_top_vanityslot_{index}{id}" texture="$invis" size="100%" usealphamask="1" alphamaskfile="/ui/hd_ui/mask/item_frame_cutout.tga" noclick="1" />
+
+			<!-- Frame -->
+			<image texture="/ui/hd_ui/elements/item_frame.tga" color=".4 .4 .4 1" size="100%" noclick="1" />
+			
+		</panel>
+	</template>
+
+	<template name="heroframe_top">
+		<panel name="heroframe_top_parent_{index}" noclick="1" visible="0"	
+			height="{height=100%}" grow="1" growinvis="0" align="{align}" valign="center" stickytoinvis="0"
+		>
+
+			<!-- Main Panel -->
+			<panel noclick="1" size="100%" float="right" grow="1" growinvis="0" align="{align}" stickytoinvis="0">
+
+				<!-- Left Dummy -->
+				<panel noclick="1" width=".5w" height="100%" stickytoinvis="0" visible="1" />
+
+				<panel noclick="1" width="3.1w" height="100%">
+				
+					<frame style="log_shadow" color="0 0 0 .5" bordercolor="0 0 0 .5" />
+					
+					<!-- Base -->
+					<frame name="heroframe_top_frametexture_{index}" texture="/ui/hd_ui/frames/rounded_bg_solid.tga" borderthickness=".1h" noclick="1" color="0 0 0" />
+
+					<panel name="heroframe_top_element_{index}" width="-2" height="-1" align="center">
+
+						<!-- Hero Icon -->
+						<panel name="heroframe_top_icon_parent_{index}" noclick="1" width="100%" height="100@">
+							<panel noclick="1" height="70%" color="cyan" clip="1">
+								<image name="heroframe_top_icon_{index}" noclick="1" texture="$invis" width="100%" height="100@" valign="center"/>
+							</panel>
+						</panel>
+
+						<!-- Health & Mana -->
+						<panel name="heroframe_top_resources_{index}" y="9%" height="24%" valign="bottom" visible="0" noclick="1" color="0 0 0">
+							<panel color="black" height="2" valign="bottom" y="2" noclick="1" />
+							<!-- Health -->
+							<instance name="heroframe_top_resourcebar" index="{index}" barname="health" height="52%" valign="top" width="-2" align="center" />
+							<!-- Mana -->
+							<instance name="heroframe_top_resourcebar" index="{index}" barname="mana" height="38%" valign="bottom" width="-2" align="center"  />
+						</panel>
+
+						<!-- Pre Ult XP - On Allies -->
+						<panel name="heroframe_top_xp_parent_{index}" x="-.08w" height="25%" width="-0.9w" texture="/ui/hd_ui/hero_frames/hero_xp_frame.tga" noclick="1" visible="1">
+							<panel x="6%" height="33.5%" width="96%" noclick="1">
+								<instance name="heroframe_top_resourcebar" index="{index}" barname="xp" borderthickness=".1h" height="100%" width="75%" />
+							</panel>
+						</panel>
+
+						<!-- Abilities - New Position 
+						
+						 	The original ability indicators used the function 'AllyAbilityInfo' for reference
+
+						-->
+						<panel name="heroframe_top_ability_pips_{index}" height="10%" valign="bottom" y="-16%" visible="1">
+							
+							<panel color="black" height="1" valign="bottom" y="1" noclick="1" />
+
+							<instance name="heroframe_ability_indicators" type="top" index="{index}" />
+
+							<!-- Ult Timer/Indicator -->
+							<panel width="49%" align="right" color="#666666" noclick="1">
+								<frame borderthickness="1" color="invisible" bordercolor="0 0 0" noclick="1" />
+
+								<panel name="heroframe_top_ability_ult_indicator_{index}">
+									<image texture="/ui/info/grad_vert.tga" color="0 0 0 .9" vflip="1" valign="bottom" y="-.1h" height="+.7h" noclick="1" />
+									<frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" borderthickness=".1h" color=".2 .2 .2" noclick="1" />
+									
+									<!-- Progress Bar -->
+									<frame name="heroframe_top_ability_ult_indicator_bar_{index}" clip="1" width="100%" texture="/ui/hd_ui/frames/rounded_bg_solid.tga" borderthickness=".1h" color="#ff9d6c" noclick="1">							
+										
+										<!-- Edge Treatments -->
+										<image texture="/ui/hd_ui/elements/grad_linear.tga" color="0 0 0 .2" width="300@" hflip="0" align="left" noclick="1" />
+										<image texture="/ui/hd_ui/elements/grad_linear.tga" color="0 0 0 .2" width="300@" hflip="1" align="right" noclick="1" />
+										<panel width="1" color="1 1 1 .2" rendermode="additive" align="right" noclick="1" />
+									</frame>
+
+									<image texture="/ui/hd_ui/elements/grad_linear.tga" hflip="0" width="90%" noclick="1" color="0 0 0 .2" />
+																	
+									<frame borderthickness="1" color="invisible" bordercolor="0 0 0" noclick="1"/>									
+
+								
+									<!-- Ult UP Marker -->
+									<panel name="heroframe_top_ability_ult_indicator_up_parent_{index}" noclick="1" visible="1">
+										<image name="heroframe_top_ability_ult_indicator_up_{index}" texture="/ui/hd_ui/hero_frames/hero_ult_marker.tga" width="248@" height="248%" color="#ff9d6c" valign="center" align="right" x="126@" noclick="1" />
+										<image texture="/ui/hd_ui/hero_frames/hero_ult_marker_star.tga" width="180@" height="180%" color="1 1 1 .25" rendermode="additive" valign="center" align="right" x="80@" noclick="1" />
+									</panel>
+								
+								</panel>
+							</panel>
+
+						</panel>
+
+
+						<!-- Dead -->
+						<panel name="heroframe_top_dead_{index}" noclick="1" visible="0">
+							<panel grow="1" regrow="1" noclick="1" height=".9w" valign="bottom" align="center" y="9%" float="right">
+								<image texture="/ui/hd_ui/icons/dead.tga" width="100@" height="100%" valign="center" />
+								<panel width=".25w" height="100%" noclick="1" />
+								<!-- Duration -->
+								<label name="heroframe_top_dead_label_{index}" noclick="1" content=""
+									font="dyn_bold_11" color="white" outline="1" fitx="1" height="100%" textvalign="center"
+								/>
+							</panel>
+						</panel>
+
+						<!-- AFK -->
+						<panel name="heroframe_top_afk_{index}" noclick="1" visible="0">
+							<frame noclick="1" height="1.2h" grow="1" align="center" y="37%" color="0 0 0 .8" bordercolor="0 0 0 .8" borderthickness="0.25h" texture="/ui/hd_ui/frames/rounded_bg_solid.tga">
+								<panel height="84%" valign="center" grow="1" float="right" noclick="1">
+									<image width="84@" height="84%" valign="center" texture="/ui/hd_ui/icons/clock.tga" style="color-red" x="0.2h" noclick="1"/>
+									<label height="84%" valign="center" noclick="1" content="general_afk" font="dyn_bold_7" shadow="1" textalign="center" textvalign="center" fitx="1" fitxpadding=".6h" style="color-red"/>										
+								</panel>
+								<frame texture="/ui/hd_ui/frames/border_normal.tga" color="invisible" borderthickness=".25h" style="border-color-red" noclick="1"/>
+							</frame>
+						</panel>
+
+						<!-- DC -->
+						<panel name="heroframe_top_dc_{index}" noclick="1" visible="0">
+							<!-- Blackout -->
+							<frame name="heroframe_top_dc_blackout_{index}" noclick="1" color="0 0 0 .66" bordercolor="0 0 0 .66" borderthickness="0.15h" texture="/ui/frames/rounded_bg_solid.tga" />
+							<panel noclick="1" visible="1">
+								<!-- DC Icon -->
+								<image noclick="1" texture="/ui/hd_ui/icons/net.tga" 
+									width="1.41w" height="1.41w"
+									align="center" valign="center"
+									y="-0.2w"
+								/>
+								<!-- DC Label -->
+								<label name="heroframe_top_dc_label_{index}" noclick="1" content="0"
+									font="dyn_bold_11" color="white" outline="1" textalign="center" textvalign="bottom" y="14%"
+								/>
+							</panel>
+						</panel>
+
+						<!-- Speaking -->
+						<panel name="heroframe_top_speaker_{index}" noclick="1" visible="0">
+							<panel noclick="1" visible="1">
+								
+								<!-- Speaker Icon -->
+								<image texture="/ui/hd_ui/icons/mic.tga" size="1.41w" y="-0.2w" style="center" noclick="1" />
+
+							</panel>
+						</panel>
+
+						<!-- Loading -->
+						<panel name="heroframe_top_loading_{index}" noclick="1" visible="0">
+							<!-- Blackout -->
+							<frame height="+10%" noclick="1" color="0 0 0 .5" bordercolor="0 0 0 .5" borderthickness="0.15h" texture="/ui/frames/rounded_bg_solid.tga" />
+							<!-- Loading Label-->
+							<label name="heroframe_top_loading_label_{index}" noclick="1" content="-"
+								font="dyn_bold_14" color="white" outline="1" textalign="center" textvalign="top" y="0.5w"
+							/>
+						</panel>
+
+						<!-- Missing -->
+						<panel name="heroframe_top_missing_{index}" noclick="1" visible="0">
+							<panel name="heroframe_top_missing_inner_{index}" noclick="1">
+								<!-- Missing Label -->
+								<label noclick="1" content="НЕ ВИДЕН"
+									font="dyn_9" color="white" shadow="1" y=".3w" textalign="center" textvalign="bottom"
+								/>
+							</panel>
+						</panel>
+
+						<!-- Vanity & Role -->
+						<panel name="heroframe_top_vanity_{index}" width="+25%" align="center" noclick="1">
+							<panel y="5.5h" float="bottom" style="grow_noinvis" align="center" padding="0.5h" noclick="1">
+
+								<!-- Role (Shown with Z)-->
+								<panel name="heroframe_top_rolepanel_{index}" height="2h" align="center" style="grow_noinvis" float="right" padding="0.3w" stickytoinvis="0" visible="0" noclick="1">
+
+									<image name="heroframe_top_roleicon_{index}" texture="/ui/hd_ui/icons/ping_moving.tga" size="0.8w" color=".85 .85 .85" noclick="1" />
+									<label name="heroframe_top_rolename_{index}" content="-" font="dyn_9" style="centerall" fitx="1" fity="1" color=".85 .85 .85" noclick="1" />
+
+								</panel>
+
+								<panel height="3h" align="center" valign="top" float="bottom" padding="0.4h" style="grow_noinvis" stickytoinvis="0" noclick="1">
+
+									<!-- Vanity Slots -->
+									<instance name="heroframe_vanity_slot" index="{index}" id="1" />
+									<instance name="heroframe_vanity_slot" index="{index}" id="2" />
+									<instance name="heroframe_vanity_slot" index="{index}" id="3" />
+									<instance name="heroframe_vanity_slot" index="{index}" id="4" />
+									<instance name="heroframe_vanity_slot" index="{index}" id="5" />
+									<instance name="heroframe_vanity_slot" index="{index}" id="6" />
+
+								</panel>
+
+							</panel>
+						</panel>
+
+						<!-- Terminated -->
+						<panel name="heroframe_top_terminated_{index}" noclick="1" visible="0">
+							<panel name="heroframe_top_terminated_inner_{index}" noclick="1">
+								<!-- Terminated Label -->
+								<label noclick="1" content="LEAVER"
+									font="dyn_9" color="white" outline="1" y=".3w" textalign="center" textvalign="bottom"
+								/>
+							</panel>
+						</panel>
+
+						<!-- Hero Level -->
+						<panel noclick="1" size="1.0w" align="right"
+							onloadlua=
+								"
+									self:SetAlign('right', '{right}' == '1')
+									self:SetX('0', '{right}' == '1')
+								"
+						>
+
+							<!-- Player Color -->
+							<image name="heroframe_top_playercolor_{index}" texture="/ui/hd_ui/hero_frames/hero_lvl_color.tga" noclick="1" color=".3 .3 .3 1" />
+
+							<!-- Dead Mask -->
+							<image name="heroframe_top_level_deadmask_{index}" texture="/ui/hd_ui/hero_frames/hero_lvl_color.tga" noclick="1" visible="0" color=".6 0 0"	/>
+
+							<!-- Frame -->
+							<image texture="/ui/hd_ui/hero_frames/hero_lvl_frame.tga" />									
+
+							<!-- Level -->
+							<label name="heroframe_top_level_{index}" color="1 1 1" font="dyn_bold_9" noclick="1" content="-"
+								style="textcenter" y="-20%" outline="1"
+							/>
+						</panel>
+
+						<!-- Item Catcher -->
+						<panel name="heroframe_top_itemcatcher_{index}" visible="0"
+							color="invisible" height="74%"
+							texture="/ui/info/drop.tga"
+							onmouseoverlua="self:SetColor('white')"
+							onmouseoutlua="self:SetColor('invisible')"
+						/>
+						<panel width="100%" height="0" visible="1" noclick="1">
+							<panel width="200%" height="11h" y="10h" align="center" valign="bottom" noclick="1">
+
+								<!-- Model Panel FX -->
+								<panel width="100%" height="10h" style="center" noclick="1">
+
+									<modelpanel width="100%" height="10h" visible="1" noclick="1"
+										watch="AlliesAndEnemiesTopPortraitEffect{index}"
+										ontriggerlua="self:SetEffect(param0)"
+										model="/shared/models/invis.mdf"
+										camerapos="0 50 0"
+										cameraangles="0 0 180"
+										camerafov="45"
+										depthclear="0"
+										depthcompress="1"
+									/>
+								</panel>
+							</panel>
+						</panel>
+
+						<!-- Kongor Lane Choice Marker (Show on player with Kongor lane selection ) -->
+						<image texture="/ui/hd_ui/icons/kongor.tga" y="2.5h" size="2.0h" color="1 1 1 .7" valign="bottom" align="center" noclick="1" visible="0"/>
+					</panel>
+
+				</panel>
+
+			</panel>
+
+
+		</panel>
+	</template>
+
+	<template name="heroframe_scoreboard_section_spacer">
+		<!-- Spacer -->
+		<panel noclick="1" width="1%" color="0 1 0 0" />
+	</template>
+
+	<template name="heroframe_scoreboard_section_cogitem">
+
+		<button name="scoreboard_cogwheel_{type}{index}" size="2h" color="invisible" valign="center" numstates="{states=2}" stickytoinvis="0"
+			oninstantiatelua="Scoreboard:SetupCogItem(self, '{type}', '{index}')"
+			onshowlua="Scoreboard:RefreshCogItemState(self, '{type}', '{index}')"
+			onmouseoverlua="Tooltips:TooltipHover_Game(self, 'scoreboard_' .. '{type}' .. '_tip', 'top') PlaySound('/shared/sounds/ui/ccpanel/button_over_02.wav')"
+			onmouseoutlua="Tooltips:TooltipHover_Game(false)"
+		>
+
+			<widgetstate statename="up">
+				<image texture="/ui/hd_ui/icons/{icon}" color="#66D183"/>
+			</widgetstate>
+			<widgetstate statename="over">
+				<image texture="/ui/hd_ui/icons/{icon}" style="color-orange"/>
+			</widgetstate>
+			<widgetstate statename="down" y="1">
+				<image texture="/ui/hd_ui/icons/{icon}"/>
+			</widgetstate>
+
+			<widgetstate statename="up2">
+				<image texture="/ui/hd_ui/icons/{icon}" color="1 .2 .2 1"/>
+			</widgetstate>
+			<widgetstate statename="over2">
+				<image texture="/ui/hd_ui/icons/{icon}" style="color-orange"/>
+			</widgetstate>
+			<widgetstate statename="down2" y="1">
+				<image texture="/ui/hd_ui/icons/{icon}"/>
+			</widgetstate>
+
+			<widgetstate statename="up3">
+				<image texture="/ui/hd_ui/icons/{icon}" color=".2 .2 1 1"/>
+			</widgetstate>
+			<widgetstate statename="over3">
+				<image texture="/ui/hd_ui/icons/{icon}" style="color-orange"/>
+			</widgetstate>
+			<widgetstate statename="down3" y="1">
+				<image texture="/ui/hd_ui/icons/{icon}"/>
+			</widgetstate>
+
+		</button>
+
+	</template>
+
+	<template name="heroframe_scoreboard_section_cogwheel">
+		<panel width="0%" noclick="1">
+
+			<!-- Expanded Menu -->
+			<panel name="heroframe_scoreboard_cogmenu_expanded{index}" valign="center" align="right" grow="1" width="100%" height="2.9h" noclick="1"
+				visible="0" onloadlua="self:SetAlign('left', '{right}' == '1')"
+			>
+
+				<panel noclick="1" width="100%" height="100%" align="center" color="0 1 0 0" grow="1">
+
+					<frame texture="/ui/frames/rounded_bg_solid.tga" noclick="1" 
+						bordercolor="#3A3A36" color="#3A3A36" borderthickness="1.1h" 
+						float="right" grow="1" regrow="1" growinvis="0" padding=".6h"
+						width="100%" height="100%"
+					>
+						<panel noclick="1" width="1h" height="100%" grow="1" onloadlua="self:SetWidth('1.6h', '{right}' == '1')" />
+
+						<!-- Cog Instances -->
+						<instance name="heroframe_scoreboard_section_cogitem" index="{index}" type="chat" icon="speak.tga" />
+						<instance name="heroframe_scoreboard_section_cogitem" index="{index}" type="voice" icon="mic.tga" />
+						<instance name="heroframe_scoreboard_section_cogitem" index="{index}" type="ping" icon="location.tga" />
+						<instance name="heroframe_scoreboard_section_cogitem" index="{index}" type="help" icon="ping.tga" />
+						<instance name="heroframe_scoreboard_section_cogitem" index="{index}" type="share" icon="shop_cat_supportive.tga" />
+						<instance name="heroframe_scoreboard_section_cogitem" index="{index}" type="avoid" icon="avoid.tga" states="1" />
+						<instance name="heroframe_scoreboard_section_cogitem" index="{index}" type="report" icon="attribute_strength.tga" states="1" />
+
+						<panel noclick="1" width="1h" height="0%" grow="1" onloadlua="self:SetWidth('1.6h', '{right}' ~= '1')" />
+					</frame>
+
+				</panel>
+
+			</panel>
+
+			<!-- Cogwheel -->
+			<panel width="2.9h" height="2.9h" align="center" valign="center"
+				oninstantiatelua="Scoreboard:SetupCog(self, '{index}')"
+			>
+
+				<!-- Circle Frame -->
+				<frame texture="/ui/frames/circle.tga" noclick="1" 
+					bordercolor="#3A3A36" color="#3A3A36" borderthickness="1h" 
+					width="100%" height="100%"
+				>
+
+					<!-- Settings Icon -->
+					<image texture="/ui/hd_ui/icons/settings.tga" color="white" align="center" valign="center" size="69%" noclick="1"/>
+
+				</frame>
+
+			</panel>
+
+		</panel>
+	</template>
+
+	<template name="heroframe_scoreboard_section_gpm">
+		
+		<panel noclick="1" width="12%">
+
+			<panel noclick="1" width="100%" grow="1" valign="center" float="bottom" padding="0.3h" hmargin="0.6h">
+
+				<!-- GPM -->
+				<panel name="heroframe_scoreboard_gpm_label_container_{index}"
+					grow="1" regrow="1" float="right"
+					onloadlua="self:SetAlign('right', '{left}' == '1')"
+					onmouseover="ShowWidget('scoreboard_gpm_tooltip');"
+					onmouseout="HideWidget('scoreboard_gpm_tooltip'));"
+				>
+					<label fitx="1" noclick="1"
+						content="+" style="h3,color-gold" textvalign="center"
+					/>
+					<label name="heroframe_scoreboard_gpm_label_{index}" fitx="1" fity="1" noclick="1"
+						content="-" style="h2,color-gold" textvalign="center"
+					/>
+				</panel>
+
+				<!-- Bounty -->
+				<panel name="heroframe_scoreboard_bounty_label_container_{index}"
+					grow="1" regrow="1" float="right"
+					onloadlua="self:SetAlign('right', '{left}' == '1')"
+					onmouseover="ShowWidget('scoreboard_bounty_tooltip');"
+					onmouseout="HideWidget('scoreboard_bounty_tooltip'));"
+				>
+					<panel width="1.2h">
+						<image texture="/ui/hd_ui/icons/dead.tga" size="1.0h" valign="center" color="#7A6933" />
+					</panel>
+					<label name="heroframe_scoreboard_bounty_label_{index}" fitx="1" fity="1" noclick="1"
+						content="-" color="#7A6933" font="dyn_bold_10" textalign="right" textvalign="center"
+					/>
+				</panel>
+
+			</panel>
+
+		</panel>
+	</template>
+
+	<template name="heroframe_scoreboard_section_hero">
+		<panel noclick="1" width="16%" height="100%">
+
+			<!-- Hero Frame -->
+			<panel name="heroframe_scoreboard_panel_{index}" noclick="1" width="100%" height="100%" float="right" align="{align}" stickytoinvis="0">
+
+				<!-- Left Side Abilities -->
+				<panel name="heroframe_scoreboard_abilities_left_{index}" noclick="1" width="2h" height="100%" stickytoinvis="0" />
+
+				<!-- Middle -->
+				<panel name="heroframe_scoreboard_element_{index}" width="-3.0h" height="100%">
+
+					<!-- Hero Icon -->
+					<panel name="heroframe_scoreboard_icon_parent_{index}" noclick="1" width="100%" height="100@" valign="center">
+						<!-- Hero Icon -->
+							<image name="heroframe_scoreboard_icon_{index}" noclick="1" texture="/shared/icons/off.tga" width="100%" height="100@" valign="center"
+								usealphamask="1" alphamaskfile="/ui/hd_ui/mask/scoreboard_hero_mask.tga"
+							/>
+					</panel>
+
+					<instance name="stone-border-frame" framesize=".6h" framecornersize="2.4h" height="76%" />
+
+					<!-- AFK -->
+					<panel name="heroframe_scoreboard_afk_{index}" noclick="1" visible="0">
+						<frame noclick="1" height="1.2h" grow="1" align="center" valign="bottom" y="-6%" color="0 0 0 .8" bordercolor="0 0 0 .8" borderthickness="0.25h" texture="/ui/hd_ui/frames/rounded_bg_solid.tga">
+							<panel height="100%" grow="1" float="right" noclick="1">
+								<image width="90@" height="90%" valign="center" texture="/ui/hd_ui/icons/clock.tga" style="color-red" x="0.2h" noclick="1"/>
+								<label height="90%" valign="center" noclick="1" content="general_afk" font="dyn_bold_9" shadow="1" shadowoffset="2" textalign="center" textvalign="center" fitx="1" fitxpadding=".6h" style="color-red"/>										
+							</panel>
+							<frame texture="/ui/hd_ui/frames/border_normal.tga" color="invisible" borderthickness=".25h" style="border-color-red" />
+						</frame>
+					</panel>
+
+					<!-- Loading -->
+					<panel name="heroframe_scoreboard_loading_{index}" noclick="1" visible="0">
+						
+						<!-- Blackout -->
+						<panel color="0 0 0 .5"/>
+
+						<!-- Loading Label-->
+						<label name="heroframe_scoreboard_loading_label_{index}" noclick="1" content="-"
+							font="dyn_bold_14" color="white" shadow="1" textalign="center" textvalign="top" y="1.4h"
+						/>
+					</panel>
+
+					<!-- Hero Level -->
+					<panel noclick="1">
+
+						<!-- Outer Panel --> <!-- It's using 100% width + a bit more to extend outwards -->
+						<panel noclick="1" color="1 0 0 0" y="-12%" width="+2.4h" align="center">
+
+							<panel noclick="1" width="2.8h" height="2.8h" x="-.2h" valign="center" color="0 0 1 0"
+								onloadlua="
+									self:SetAlign('right', '{right}' == '1')
+									self:SetX('.2h', '{right}' == '1')
+								"
+							>
+								<!-- Icon -->
+								<image name="heroframe_scoreboard_level_base_{index}" texture="/ui/hd_ui/elements/lvl2.tga" noclick="1" color="1 1 1" />
+
+								<!-- Player Color -->
+								<image name="heroframe_scoreboard_playercolor_{index}" texture="/ui/hd_ui/elements/lvl_player_color.tga" noclick="1" color=".3 .3 .3 1" />
+
+								<!-- Dead Mask -->
+								<image name="heroframe_scoreboard_level_deadmask_{index}" texture="/ui/hd_ui/elements/lvl_player_color.tga" noclick="1" color=".6 0 0" visible="0"/>
+
+								<!-- Level -->
+								<label name="heroframe_scoreboard_level_{index}" color="white" font="dyn_bold_10" noclick="1" content="-"
+									textalign="center" textvalign="center"
+									shadow="1" y="-0.35h" height="100%"
+								/>
+							</panel>
+
+						</panel>
+
+					</panel>
+
+					<!-- Role -->
+					<panel noclick="1">
+
+						<panel x="2.75h" onloadlua="self:SetX('-2.75h', '{right}' == '1')" noclick="1">
+
+							<!-- Role Icon -->
+							<frame name="heroframe_scoreboard_roleparent_{index}" texture="/ui/hd_ui/frames/rounded_grad_minor.tga" color=".3 .3 .3 1" bordercolor=".3 .3 .3 1" borderthickness="1.0h" size="2.1h" y="18%" style="center">
+								<image name="heroframe_scoreboard_roleicon_{index}" y="1" size="72%" style="center" texture="/ui/hd_ui/icons/role_carry.tga" noclick="1" />
+							</frame>
+
+						</panel>
+
+					</panel>
+
+				</panel>
+
+				<!-- Right Side Abilities (Scoreboard) -->
+				<panel name="heroframe_scoreboard_abilities_right_{index}" noclick="1" width="2h" height="100%" stickytoinvis="0"/>
+
+			</panel>
+
+			<!-- Ability Indicators -->
+			<!-- 
+			<panel noclick="1">
+				<panel name="heroframe_scoreboard_abilities_{index}" noclick="1" width="2h" align="right" onloadlua="self:SetAlign('left', '{right}' == '1')">
+					<instance name="heroframe_ability_indicators" attribute_padding="0" type="scoreboard" index="{index}" />
+				</panel>
+			</panel>
+			-->
+
+		</panel>
+	</template>
+
+	<template name="heroframe_scoreboard_kda">
+		<panel noclick="1" width="{width}">
+			<label name="heroframe_{frametype}_kda_{stat}_{index}"
+				style="{style=h3}" font="{font}" textvalign="center" textalign="center" color="{color=white}" noclick="1"
+				content="-"
+			/>
+		</panel>
+	</template>
+
+	<template name="heroframe_scoreboard_ckd">
+		<panel noclick="1" x="{x}" height="60%" float="right" grow="1" padding="0.3h" valign="center">
+			<image texture="{icon}" width="100@" height="100%" valign="center" noclick="1" color="{textcolor}" />
+			<label name="heroframe_{frametype}_ckd_{stat}_{index}" noclick="1" height="100%" fitx="1"
+				content="--" color="{textcolor}" font="dyn_10" shadow="1" valign="center" textalign="right" textvalign="center"
+			/>
+		</panel>
+	</template>
+
+	<template name="heroframe_scoreboard_score_instance">
+		<frame width="100%" height="100%" grow="{grow=1}" regrow="{grow=1}" float="{float}" padding=".5h" texture="/ui/hd_ui/frames/inset.tga" bordercolor=".5 .5 .5 .5" color=".5 .5 .5 .5" borderthickness=".25h">
+		
+			<!-- KDA -->
+			<panel width="{kdawidth=11.0h}" noclick="1" align="left"
+				onloadlua="self:SetAlign('right', '{right}' == '1')"
+			>
+				<!-- KDA Scores -->
+				<panel name="heroframe_scoreboard_kda_container_{frametype}_{index}" height="100%" style="grow_noinvis" float="right" noclick="0"
+				    onmouseover="ShowWidget('scoreboard_kda_tooltip');"
+				    onmouseout="HideWidget('scoreboard_kda_tooltip'));"
+				    onclicklua="if {frametype} == player and Input.IsAltDown() then SendGamePing('alt_scoreboard_kda', {ownerIndex}) end"
+				>
+					<instance name="heroframe_scoreboard_kda" font="{font=dyn_bold_12}" width="{width=3.1h}" stat="k" index="{index}" frametype="{frametype}" />
+					<label style="h3,text-muted,textcenter" font="{font=dyn_bold_12}" width="0.8h" noclick="1" content="/"/>
+					<instance name="heroframe_scoreboard_kda" font="{font=dyn_bold_12}" width="{width=3.1h}" stat="d" index="{index}" frametype="{frametype}" />
+					<label style="h3,text-muted,textcenter" font="{font=dyn_bold_12}" width="0.8h" noclick="1" content="/"/>
+					<instance name="heroframe_scoreboard_kda" font="{font=dyn_bold_12}" width="{width=3.1h}" stat="a" seperator="" index="{index}" frametype="{frametype}" />
+				</panel>
+
+			</panel>
+
+			<!-- Creep K/D -->
+			<panel noclick="1" height="100%" style="grow_noinvis" align="right"
+				onloadlua="self:SetAlign('left', '{right}' == '1')"
+			>
+				<panel height="100%" noclick="1" style="grow_noinvis" x="-.5h">
+					<panel name="heroframe_scoreboard_ck_container_{frametype}_{index}" height="100%" padding=".7h" float="right" style="grow_noinvis" noclick="0"
+						onmouseover="ShowWidget('scoreboard_creeps_tooltip');"
+						onmouseout="HideWidget('scoreboard_creeps_tooltip'));"
+						onloadlua="self:SetX('1h', '{right}' == '1')"
+				        onclicklua="if {frametype} == player and Input.IsAltDown() then SendGamePing('alt_scoreboard_ck', {ownerIndex}) end"
+					>
+						<instance name="heroframe_scoreboard_ckd" index="{index}" stat="ck" textcolor="#6CDE8B" icon="/ui/hd_ui/icons/ck.tga" frametype="{frametype}" />
+						<instance name="heroframe_scoreboard_ckd" index="{index}" stat="cd" textcolor="#FB9D4C" icon="/ui/hd_ui/icons/cd.tga" frametype="{frametype}" />
+					</panel>
+				</panel>			
+			</panel>
+			
+
+		</frame>
+	</template>
+
+	<template name="heroframe_scoreboard_section_status">
+		<!-- Name / Resources / Status / KDA -->
+		<panel noclick="1" width="45%">
+
+			<panel noclick="1" width="-1h" x="-.5h" align="right" onloadlua="self:SetAlign('left', '{right}' == '1'); self:SetX('.5h', '{right}' == '1')">
+
+				<!-- Name Label -->
+				<label name="heroframe_scoreboard_playername_label_{index}" noclick="1"
+					style="h3" content="-" textalign="{nameplatealign}"
+					y="0.5h"
+				/>
+
+				<!-- Buy Back Count -->
+				<panel name="heroframe_scoreboard_buyback_label_container_{index}"
+					y="0.7h" style="grow_noinvis" float="right" padding="0.3h"
+					onloadlua="self:SetAlign('right', '{left}' == '1')"
+					onmouseover="ShowWidget('scoreboard_buyback_tooltip');"
+					onmouseout="HideWidget('scoreboard_buyback_tooltip'));"
+				>
+					<panel width="1.1h" noclick="1">
+						<image texture="/ui/hd_ui/icons/tombstone.tga" color=".8 .8 .8 1" size="1.1h" valign="center" noclick="1" />
+					</panel>
+					<label name="heroframe_scoreboard_buyback_label_{index}" fitx="1" fity="1" noclick="1"
+						content="-" color="white" font="dyn_bold_10" textvalign="center"
+					/>
+				</panel>
+
+				<!-- Resources / Status / KDA (Container) -->
+				<panel noclick="1" y="-0.6h" height="40%" valign="bottom">
+
+					<!-- Resources / Status (hidden) -->
+					<panel noclick="1" align="left" visible="0" onloadlua="self:SetAlign('right', '{right}' == '1')">
+
+						<!-- Health/Mana Container -->
+						<panel name="heroframe_scoreboard_resources_{index}" noclick="1" width="90%" height="91%" align="center">
+
+							<panel noclick="1" width="100%" valign="bottom" float="bottom" padding="0">
+
+								<!-- Health -->
+								<instance name="heroframe_scoreboard_resourcebar" index="{index}" 
+									barname="health" color="0 .5 0 1"
+								/>
+
+								<!-- Mana -->
+								<instance name="heroframe_scoreboard_resourcebar" index="{index}"
+									barname="mana"
+									color="#187fd2"
+								/>
+
+							</panel>
+							
+						</panel>
+
+						<!-- Dead/Disconnect/Terminated Status -->
+						<panel noclick="1">
+
+							<panel noclick="1" width="75%" align="center" valign="center" grow="1" regrow="1" float="bottom">
+								
+								<!-- Dead Status -->
+								<instance name="heroframe_scoreboard_status" index="{index}"
+									statusname="dead" icon="/ui/hd_ui/icons/dead.tga"  text="-" text_xoffset="1h"
+								/>
+								<!-- Disconnect Status -->
+								<instance name="heroframe_scoreboard_status" index="{index}"
+									statusname="dc" icon="/ui/icons/disconnect.tga" text="-" text_xoffset="1h"
+								/>
+								<!-- Terminated Status-->
+								<instance name="heroframe_scoreboard_status" index="{index}"
+									statusname="terminated" icon="$invis" text="LEAVER" showicon="0"
+								/>
+
+							</panel>
+
+						</panel>
+
+						<!-- Missing -->
+						<panel name="heroframe_scoreboard_missing_{index}" visible="0" noclick="1" color="0 0 1 0">
+
+							<!-- Respawn Timer Label -->
+							<label noclick="1" content="Missing" color="gray" shadow="1" font="dyn_bold_12" textalign="center" textvalign="center" />
+
+						</panel>
+
+					</panel>
+
+					<!-- KDA -->
+					<instance name="heroframe_scoreboard_score_instance" index="{index}" grow="0" right="{right}" frametype="scoreboard" ownerIndex="{index}" />
+
+				</panel>
+
+			</panel>
+
+		</panel>
+	</template>
+
+	<template name="heroframe_scoreboard_item">
+		<panel noclick="1" width="34i">
+			<instance name="inventory_button_scoreboard" texture="{texture=/ui/hd_ui/icons/empty_pack.tga}" slot="{slot}" playerindex="{index}" type="scoreboard" item_size="100%" valign="center" />
+		</panel>
+	</template>
+
+	<template name="heroframe_scoreboard_section_items">
+		<!-- Items -->
+		<panel noclick="1" width="26%">
+			<panel noclick="1" height="48%" float="right" padding="0.3h" grow="1" align="right" onloadlua="self:SetAlign('left', '{right}' == '1'); self:SetX('0', '{right}' == '1')">
+				<instance name="heroframe_scoreboard_item" index="{index}" slot="48" />
+				<instance name="heroframe_scoreboard_item" index="{index}" slot="49" />
+				<instance name="heroframe_scoreboard_item" index="{index}" slot="50" />				
+				<instance name="heroframe_scoreboard_item" index="{index}" slot="63" texture="/ui/hd_ui/icons/eye.tga" />
+			</panel>
+			<panel noclick="1" valign="bottom" height="48%" float="right" padding="0.3h" grow="1" align="right" onloadlua="self:SetAlign('left', '{right}' == '1'); self:SetX('0', '{right}' == '1')">
+				<instance name="heroframe_scoreboard_item" index="{index}" slot="51" />
+				<instance name="heroframe_scoreboard_item" index="{index}" slot="52" />
+				<instance name="heroframe_scoreboard_item" index="{index}" slot="53" />				
+				<instance name="heroframe_scoreboard_item" index="{index}" slot="64" texture="/ui/hd_ui/icons/eye.tga" />
+			</panel>
+		</panel>
+	</template>
+
+	<template name="heroframe_scoreboard">
+		<panel name="heroframe_scoreboard_parent_{index}" noclick="1" visible="0" width="100%" height="{height=100%}" grow="1" growinvis="0" align="{align}" valign="center" stickytoinvis="0">
+			<panel name="heroframe_scoreboard_sections_{index}" noclick="1" size="100%" float="right" />
+		</panel>
+	</template>
+
+</package>

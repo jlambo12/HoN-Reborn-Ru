@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_004_PHOENIX",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Item_PhoenixEgg_description"],
+      "ru": "После смерти вы возродитесь с полным запасом здоровья и маны, если ^oEgg^* продержится ^o6 секунд^*.\\n\\nВражеские герои могут уничтожить ^oEgg^* своими атаками.\\n\\n^rМожно получить за убийство Phoenix.^*"
+    },
+    {
+      "keys": ["entities:Item_PhoenixEgg_description_simple"],
+      "ru": "Возрождает после смерти."
+    },
+    {
+      "keys": ["entities:Item_PhoenixEgg_effect_header"],
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:Item_Phoenix_ItemToken_description"],
+      "ru": "Даёт герою предмет из особого набора. Чем больше зарядов, тем выше Tier полученного предмета.\\n\\n^cНельзя использовать, если основной инвентарь заполнен.^*"
+    },
+    {
+      "keys": ["entities:Item_Phoenix_ItemToken_description_simple"],
+      "ru": "Даёт герою предмет, Tier которого зависит от числа зарядов.\\n\\n^cНельзя использовать, если основной инвентарь заполнен.^*"
+    },
+    {
+      "keys": ["entities:Item_PhoenixVeil_description"],
+      "ru": "Реликвия, рождённая в пламени после гибели вечной ^rFirebird^*.\\n\\nПассивно увеличивает ^yмагическую броню^*. Этот бонус не складывается с бонусом к ^yмагической броне^* от других предметов."
+    },
+    {
+      "keys": ["entities:Item_PhoenixVeil_IMPACT_effect"],
+      "ru": "Наносит всем противникам в радиусе 600 ^oмагический урон^*, равный 90 + накопленный урон. После применения весь накопленный урон теряется."
+    },
+    {
+      "keys": ["entities:State_Item_PhoenixTalon_Return_name"],
+      "ru": "Пикирование когтя"
+    },
+    {
+      "keys": ["entities:State_Item_PhoenixTalon_Amplify_name"],
+      "ru": "Коготь агонии"
+    },
+    {
+      "keys": ["entities:State_PhoenixBoss_Regen_Disabled_name"],
+      "ru": "Регенерация Phoenix отключена"
+    },
+    {
+      "keys": ["entities:State_PhoenixBoss_Scaling_name"],
+      "ru": "Древняя кровь"
+    },
+    {
+      "keys": ["entities:State_PhoenixBoss_Scaling_FRAME_effect"],
+      "ru": "Fluffylumps становится сильнее и мудрее."
+    },
+    {
+      "keys": ["entities:State_PhoenixBoss_GoldPile_Channel_name"],
+      "ru": "Кража золота"
+    },
+    {
+      "keys": ["entities:State_PhoenixBoss_GoldPile_Channel_description"],
+      "ru": "Насколько бессердечным нужно быть, чтобы красть золото у бедного дракона?"
+    },
+    {
+      "keys": ["entities:Ability_PhoenixBoss1_description_simple", "entities:Ability_PhoenixBoss1_IMPACT_effect"],
+      "ru": "Phoenix запускает огненный шар в небо^*, выбирая до 8 позиций героев в радиусе 600 и отмечая их на земле.\\n\\nПри падении шар наносит ^o100 магического урона^*, а затем поджигает цель, нанося ей всё больше ^oмагического урона в секунду^*, пока она не войдёт в ^cводу^* на земле."
+    },
+    {
+      "keys": ["entities:State_PhoenixBoss_Ability1_description"],
+      "ru": "Получает дополнительный магический урон в секунду: [5 + 0,5*заряды]\\n\\n^oВойдите в водоём, чтобы снять этот эффект^*"
+    },
+    {
+      "keys": ["entities:Ability_PhoenixBoss2_description_simple", "entities:Ability_PhoenixBoss2_IMPACT_effect"],
+      "ru": "Phoenix сбрасывает цепь с крыла и ударом отправляет её вперёд. Цепь наносит задетым противникам ^o150 магического урона^* и ^oоглушает их на 1,5 секунды^*.\\n\\nПосле небольшой задержки Phoenix взмахом головы возвращает цепь на крыло, повторно нанося те же эффекты противникам на обратном пути."
+    },
+    {
+      "keys": ["entities:Ability_PhoenixBoss3_description", "entities:Ability_PhoenixBoss3_description_simple"],
+      "ru": "Восстанавливает 5% здоровья в секунду. После получения урона регенерация отключается на 10 секунд.\\n\\nПотеряв 40% максимального здоровья, Phoenix отбрасывает ближайших противников и создаёт по торнадо рядом с каждым из них, но не более 16. Рядом с вражескими героями появляются более крупные торнадо.\\n\\nПосле небольшой задержки торнадо разлетаются от Phoenix и исчезают при столкновении. Они наносят ^o100 магического урона (крупные — 200) + 10% от максимального здоровья цели^* и ^oзамедляют передвижение на 40% на 2 секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_PhoenixBoss3_tooltip_flavor"],
+      "ru": "Я вновь восстану из пламени!"
+    },
+    {
+      "keys": ["entities:Ability_PhoenixBoss4_description", "entities:Ability_PhoenixBoss4_description_simple"],
+      "ru": "На ^o70%^* сокращает длительность отрицательных эффектов и оглушения, а также с той же эффективностью сопротивляется замедлению.\\n\\nПри оглушении эти показатели увеличиваются на 15% на 20 секунд. Перезарядка усиления — 6 секунд.\\n\\nПротивники, атакующие ^oPhoenix^*, восстанавливают кражей здоровья на 50% меньше."
+    },
+    {
+      "keys": ["entities:Ability_PhoenixBoss4_description_simple:boss_resist_1"],
+      "ru": "На ^o85%^* сокращает длительность отрицательных эффектов и оглушения, а также с той же эффективностью сопротивляется замедлению.\\n\\nПри оглушении эти показатели увеличиваются на 15% на 20 секунд. Перезарядка усиления — 6 секунд.\\n\\nПротивники, атакующие ^oPhoenix^*, восстанавливают кражей здоровья на 50% меньше."
+    },
+    {
+      "keys": ["entities:Ability_PhoenixBoss4_description_simple:boss_resist_max"],
+      "ru": "На ^o100%^* сокращает длительность отрицательных эффектов и оглушения, а также полностью сопротивляется замедлению.\\n\\nПротивники, атакующие ^oPhoenix^*, восстанавливают кражей здоровья на 50% меньше."
+    },
+    {
+      "keys": ["entities:State_PhoenixBoss_Lifesteal_Reduction_name"],
+      "ru": "Стойкость Phoenix"
+    },
+    {
+      "keys": ["game_messages:area_phoenix"],
+      "ru": "Гнездо Phoenix"
+    },
+    {
+      "keys": ["interface:map_caldavarphoenix"],
+      "ru": "Леса Калдавара (Phoenix)"
+    },
+    {
+      "keys": ["interface:shop_cat_title_phoenix"],
+      "ru": "Награды Phoenix"
+    },
+    {
+      "keys": ["interface:tutorial_slide_boss_phoenix"],
+      "ru": "Босс: Phoenix"
+    },
+    {
+      "keys": ["interface:tutorial_slide_phoenix_title"],
+      "ru": "БОСС: Phoenix"
+    },
+    {
+      "keys": ["interface:tutorial_slide_phoenix_desc"],
+      "ru": "Phoenix — нейтральный босс, который становится сильнее после каждого возрождения и даёт команде особое стратегическое преимущество. После победы над ним выпадает ^956Phoenix Egg^*, а герои получают мощные ^579предметы Phoenix^*."
+    },
+    {
+      "keys": ["interface:tutorial_slide_phoenix_egg"],
+      "ru": "Phoenix Egg"
+    },
+    {
+      "keys": ["interface:tutorial_slide_phoenix_egg_desc"],
+      "ru": "После смерти вы возродитесь с полным запасом здоровья и маны, если Egg продержится 6 секунд. Вражеские герои могут уничтожить Egg своими атаками."
+    },
+    {
+      "keys": ["interface:tutorial_slide_phoenix_token"],
+      "ru": "Phoenix Item Token"
+    },
+    {
+      "keys": ["interface:tutorial_slide_phoenix_token_desc"],
+      "ru": "Даёт герою предмет из особого набора. Чем больше зарядов, тем выше Tier полученного предмета."
+    },
+    {
+      "keys": ["interface:boss_info_phoenix_subtitle"],
+      "ru": "Phoenix"
+    },
+    {
+      "keys": ["interface:boss_info_phoenix_desc"],
+      "ru": "Phoenix — могущественный нейтральный босс, обитающий в огненном логове на карте «Леса Калдавара». В отличие от Kongor, он даёт награды, повышающие личную выживаемость героев. Phoenix очень подвижен, проходит сквозь деревья и юнитов и использует разрушительные огненные способности."
+    },
+    {
+      "keys": ["interface:boss_info_phoenix_stat_health"],
+      "ru": "^oЗдоровье:^* 4000"
+    },
+    {
+      "keys": ["interface:boss_info_phoenix_stat_armor"],
+      "ru": "^oБроня:^* 15"
+    },
+    {
+      "keys": ["interface:boss_info_phoenix_stat_magic_armor"],
+      "ru": "^oМагическая броня:^* 25"
+    },
+    {
+      "keys": ["interface:boss_info_phoenix_stat_damage"],
+      "ru": "^oУрон:^* 150"
+    },
+    {
+      "keys": ["interface:boss_info_phoenix_stat_movespeed"],
+      "ru": "^oСкорость передвижения:^* 350"
+    },
+    {
+      "keys": ["interface:boss_info_phoenix_stat_attack_range"],
+      "ru": "^oДальность атаки:^* 200 (ближний бой)"
+    },
+    {
+      "keys": ["interface:boss_info_phoenix_stat_attack_speed"],
+      "ru": "^oПерезарядка атаки:^* 1,55 с"
+    },
+    {
+      "keys": ["interface:boss_info_phoenix_stat_hp_regen"],
+      "ru": "^oРегенерация здоровья:^* 15/с"
+    },
+    {
+      "keys": ["interface:boss_info_phoenix_ability1_desc"],
+      "ru": "Запускает в небо огненные шары, выбирая до 8 позиций героев в радиусе 600 и отмечая их на земле.\\n\\nПри падении шар наносит 100 магического урона, а затем поджигает цель, нанося ей всё больше магического урона в секунду, пока она не войдёт в воду на земле."
+    },
+    {
+      "keys": ["interface:boss_info_phoenix_ability2_desc"],
+      "ru": "Отправляет цепь вперёд, нанося задетым противникам 150 магического урона и оглушая их на 1,5 секунды. После небольшой задержки возвращает цепь, повторно накладывая те же эффекты на обратном пути."
+    },
+    {
+      "keys": ["interface:boss_info_phoenix_ability3_desc"],
+      "ru": "Восстанавливает 5% здоровья в секунду. После получения урона регенерация отключается на 10 секунд.\\n\\nПотеряв 40% максимального здоровья, Phoenix отбрасывает ближайших противников и создаёт до 16 торнадо. Торнадо разлетаются в стороны, наносят 100/200 магического урона + 10% от максимального здоровья цели и замедляют передвижение на 40% на 2 секунды."
+    },
+    {
+      "keys": ["interface:boss_info_phoenix_ability4_desc"],
+      "ru": "На 70% сокращает длительность отрицательных эффектов и оглушения, а также с той же эффективностью сопротивляется замедлению. При оглушении эти показатели увеличиваются на 15%, но не могут превысить 100%.\\n\\nПротивники, атакующие Phoenix, восстанавливают кражей здоровья на 50% меньше."
+    },
+    {
+      "keys": ["interface:boss_info_phoenix_reward1_desc"],
+      "ru": "После смерти вы возродитесь с полным запасом здоровья и маны, если Egg продержится 6 секунд. Вражеские герои могут уничтожить Egg своими атаками. Можно получить за убийство Phoenix."
+    },
+    {
+      "keys": ["interface:boss_info_phoenix_reward2_desc"],
+      "ru": "Даёт случайный предмет из набора, зависящего от времени матча: Tier 1 (0–23 мин.), Tier 2 (25–33 мин.), Tier 3 (35–43 мин.), Tier 4 (45+ мин.). Среди наград есть уникальные предметы Phoenix: Heart of Fire, Obsidian Spear, Phoenix Talon и другие."
+    },
+    {
+      "keys": ["interface:boss_info_phoenix_scaling_desc"],
+      "ru": "Phoenix возрождается через 5 минут после гибели. Каждое возрождение даёт ему:\\n\\n^o+1500^* к максимальному здоровью\\n^o+30^* к урону\\n^o+1,5^* к броне\\n^o+1,5^* к магической броне\\n\\n^oНаграда за убийство:^*\\n^o- Опыт:^* 1500 / 1750 / 2000 / 2250 / 2500\\n^o- Золото (убийце):^* 220 / 260 / 300 / 340 / 380\\n^o- Золото (команде):^* 145 / 160 / 175 / 190 / 205"
+    }
+  ]
+}

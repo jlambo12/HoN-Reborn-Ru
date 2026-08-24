@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_173_SAND_WRAITH",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_SandWraith1_IMPACT_effect"],
+      "english_hash": "02ec9ceb64388f1c91f38966fc2b1b2434519726d54ed58cdf66dd581d260dab",
+      "ru": "Направляет Desert's Curse во врага или точку на расстоянии до 2000. Задетые противники получают ^o{70,120,170,220} магического урона^*. При выборе врага за ним дополнительно появляется песчаный след, а ближайшие подконтрольные иллюзии Sand Wraith получают Haste и атакуют эту цель.\\n\\nНакладывает на Sand Wraith ^oFamiliar Ground^*, пока он находится на песке и ещё до 3 секунд после выхода. Накладывает на врагов ^oDesert's Curse^*, пока они находятся на песке и ещё до 1 секунды после выхода."
+    },
+    {
+      "keys": ["entities:Ability_SandWraith1_description"],
+      "english_hash": "8af170e6be5eae40e38191f24aee131f1151ed8badff3b3c9b21a43e1ca93546",
+      "ru": "Sand Wraith призывает бесконечное проклятие пустыни и покрывает землю впереди песком. Противники на песке замедляются, а Sand Wraith движется быстрее и проходит сквозь утёсы и деревья."
+    },
+    {
+      "keys": ["entities:Ability_SandWraith1_description_simple"],
+      "english_hash": "91b41a82cd7660a33fc86067fc7968566fe292a86bc48e2a3c6d089575c991db",
+      "ru": "Насылает бесконечное ^oDesert's Curse^* на врага или точку, выпускает линию песка и наносит всем задетым ^o{70,120,170,220} магического урона^*.\\n\\nЗадетые противники и враги на песке получают ^o{12,16,20,24}% замедления передвижения^*.\\n\\nНа песке и ещё 3 секунды после выхода вы можете ^oпроходить через любые препятствия^*. Ближайшие подконтрольные иллюзии получают Haste и атакуют выбранного способностью врага."
+    },
+    {
+      "keys": ["entities:Ability_SandWraith1_effect_header"],
+      "english_hash": "c173f93d26cde88417eab9e6d74d245cf98b26e21e5331904d80cd08135c0152",
+      "ru": "Familiar Ground"
+    },
+    {
+      "keys": ["entities:Ability_SandWraith1_effect_header2"],
+      "english_hash": "9e67ffa2acc4f0e44ca3683118a7527e796f6e3305c274b269a7d56d5c224d09",
+      "ru": "Desert's Curse"
+    },
+    {
+      "keys": ["entities:Ability_SandWraith2_IMPACT_effect"],
+      "english_hash": "fcf2066dba5eded5a6e31163fc06eb73382ba4444e2feeb46fb05ee4bcb0d738",
+      "ru": "Создаёт рядом 2 Sand Stalkers на 20 секунд. Применение также сбивает летящие снаряды и даёт неуязвимость на 0.2 секунды.\\n\\nSand Stalkers — иллюзии, которые наносят {25,30,35,40}% вашего урона и получают {400,350,300,250}% урона."
+    },
+    {
+      "keys": ["entities:Ability_SandWraith2_description"],
+      "english_hash": "6fe6376ca78cb80518b7028711de6a3d74eb806b65d38714a67435f3967e40fd",
+      "ru": "Sand Wraith рассыпается в песок и ненадолго становится неуязвимым. Когда песок собирается обратно, рядом появляются две его иллюзии."
+    },
+    {
+      "keys": ["entities:Ability_SandWraith2_description_simple"],
+      "english_hash": "7e6c2272aa98d5c3bdc64e666044c52f5fbfdfd5c226ec94abd4ab1c87f02afa",
+      "ru": "На 0.2 секунды рассыпается в песок, ^oсбивает летящие снаряды и становится неуязвимым^*. После возвращения создаёт рядом 2 ^oSand Stalkers^* на ^o20 секунд^*. Они наносят ^o{25,30,35,40}% вашего урона^* и получают на ^o{400,350,300,250}% больше урона^*."
+    },
+    {
+      "keys": ["entities:Ability_SandWraith3_description"],
+      "english_hash": "bcfe8d59b7090ccf34edacabbef2afb5070ea61e2d746a202e7ccb46d5c227c3",
+      "ru": "Жар пустынного солнца воспламеняет зазубренный клинок Sand Wraith и увеличивает скорость атаки героя и его иллюзий."
+    },
+    {
+      "keys": [
+        "entities:Ability_SandWraith3_description2",
+        "entities:Ability_SandWraith3_description_simple"
+      ],
+      "english_hash": "bdd8b7102bce10e3b706a98989316df724ead88b0fd5a74be4343aa9609e749e",
+      "ru": "Даёт вам и всем подконтрольным иллюзиям ^o{15,30,45,60} скорости атаки^*."
+    },
+    {
+      "keys": ["entities:Ability_SandWraith4_IMPACT_effect"],
+      "english_hash": "64a26b98e14035f86003f0f9e0f8743ba4dd31479d53a76826dfcb565c7d12be",
+      "ru": "Создаёт рядом с каждым вражеским героем иллюзию Sand Wraith на {4,5,6} секунд. Иллюзии неуправляемы и атакуют только героя, рядом с которым появились.\\n\\nНа время действия Mirage заменяется на Manifest. Применение Manifest мгновенно перемещает Sand Wraith на место ближайшей к выбранному герою иллюзии."
+    },
+    {
+      "keys": ["entities:Ability_SandWraith4_IMPACT_effect:SandWraith4_Active"],
+      "english_hash": "e6f34a0b84a915c6f44e2fefcb4cfd04385d525d752575472d7f0c61a17b6587",
+      "ru": "Перемещается на место ближайшей к выбранному герою иллюзии."
+    },
+    {
+      "keys": ["entities:Ability_SandWraith4_IMPACT_effect:ult_boost"],
+      "english_hash": "0e6c9141a1c8b716b198f6d1c2ffc5001400b55e84dd8b40a0db85306c4b3586",
+      "ru": "Создаёт рядом с каждым вражеским героем иллюзию Sand Wraith на {4,5,6} секунд. Иллюзии неуправляемы и атакуют только героя, рядом с которым появились.\\n\\nНа время действия Mirage заменяется на Manifest. Применение Manifest мгновенно перемещает Sand Wraith на место ближайшей к выбранному герою иллюзии. По прибытии герой на 2 секунды ^gобращает в бегство противников^* в радиусе 400, а затем на 4 секунды ^gзамедляет их передвижение^* на 15%."
+    },
+    {
+      "keys": ["entities:Ability_SandWraith4_description"],
+      "english_hash": "26d584f1ea3f4b28f040a8e2c9565545f2f7aa51ef411e6f4b443a248afb18a5",
+      "ru": "Sand Wraith обманывает разум врагов: рядом с каждым вражеским героем появляется его иллюзия и атакует его. В любой момент Sand Wraith может занять место одной из иллюзий."
+    },
+    {
+      "keys": ["entities:Ability_SandWraith4_description2"],
+      "english_hash": "93bf7a5a933a98918a838a8e2e6e7f51c727bfb514ddec6da04d503a9962a9bb",
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff:^* после телепортации обращает противников в радиусе 400 в бегство на 2 секунды, а затем замедляет их передвижение на 15% на 4 секунды."
+    },
+    {
+      "keys": ["entities:Ability_SandWraith4_description:SandWraith4_Active"],
+      "english_hash": "00300d5d0f768b1681e8a2eecaa95add391dabe5fc81b232fa1de020fdbcc2ea",
+      "ru": "Sand Wraith может занять место любой иллюзии, созданной Mirage."
+    },
+    {
+      "keys": ["entities:Ability_SandWraith4_description_simple"],
+      "english_hash": "51ac2d11c0b6b5b42c5eca773948607d6f86b407ecfaf60a7459f15cb36bc670",
+      "ru": "Обманывает разум ^oвсех вражеских героев на карте^* и ^oсоздаёт рядом с каждым вашу иллюзию^* на ^o{4,5,6} секунд^*.\\n\\n^oПовторное применение^* на вражеского героя телепортирует вас к ближайшей иллюзии и ставит на её место.\\n\\n^gStaff of the Master^*: после телепортации на 2 секунды ^oобращает противников в бегство^* в большой области, а затем замедляет их передвижение на 15% на 4 секунды. Пока иллюзия жива, она также обнаруживает и раскрывает врагов."
+    },
+    {
+      "keys": ["entities:Ability_SandWraith4_description_simple:SandWraith4_Active"],
+      "english_hash": "58adcd7dca56dce28a5d5c1b92d72f7fb1e24905fa8308cd81a711496d2eb97d",
+      "ru": "Выберите вражеского героя, чтобы занять место ближайшей к нему иллюзии."
+    },
+    {
+      "keys": ["entities:Ability_SandWraith4_description_simple:ult_boost"],
+      "english_hash": "3a169427f45087f9ac0b4498150239c0e67d12335e9d1b67e7e32fa75b5ac7b9",
+      "ru": "Обманывает разум ^oвсех вражеских героев на карте^*, ^oсоздаёт рядом с каждым вашу иллюзию^* и ^gобнаруживает и раскрывает их^*. Иллюзии существуют ^o{4,5,6} секунд^*.\\n\\n^oПовторное применение^* на вражеского героя телепортирует вас к ближайшей иллюзии и ставит на её место, ^gна 2 секунды обращая ближайших врагов в бегство, а затем замедляя их на 15% на 4 секунды.^*"
+    }
+  ]
+}

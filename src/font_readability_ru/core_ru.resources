@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resourcelist>
+	<fontface file="/core/fonts/hon_cond_intl.ttf">
+		<fontmap name="dyn_7" size="7" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.04h" />
+		<fontmap name="dyn_8" size="8" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.04h" />
+		<fontmap name="dyn_9" size="9" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.04h" />
+		<fontmap name="dyn_con_10" size="10" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.06h" />
+		<fontmap name="dyn_con_11" size="11" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.06h" />
+	</fontface>
+
+	<fontface file="/core/fonts/hon_intl.ttf">
+		<fontmap name="dyn_10" size="10" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.06h" />
+		<fontmap name="dyn_11" size="11" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.06h" />
+		<fontmap name="dyn_12" size="12" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.07h" />
+		<fontmap name="dyn_13" size="13" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.07h" />
+		<fontmap name="dyn_14" size="14" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.08h" />
+		<fontmap name="dyn_15" size="15" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.08h" />
+		<fontmap name="dyn_16" size="16" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.08h" />
+		<fontmap name="dyn_18" size="18" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.08h" />
+		<fontmap name="dyn_20" size="20" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.08h" />
+		<fontmap name="dyn_22" size="22" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.09h" />
+		<fontmap name="dyn_24" size="24" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.09h" />
+		<fontmap name="dyn_26" size="26" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.09h" />
+		<fontmap name="dyn_30" size="30" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.09h" />
+		<fontmap name="dyn_36" size="36" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.09h" />
+		<fontmap name="dyn_40" size="40" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.10h" />
+		<fontmap name="dyn_48" size="48" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.10h" />
+	</fontface>
+	
+	<fontface file="/core/fonts/hon_bold_intl.ttf">
+		<fontmap name="dyn_bold_7" size="7" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.04h" />
+		<fontmap name="dyn_bold_8" size="8" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.04h" />
+		<fontmap name="dyn_bold_9" size="9" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.05h" />
+		<fontmap name="dyn_bold_10" size="10" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.07h" />
+		<fontmap name="dyn_bold_11" size="11" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.07h" />
+		<fontmap name="dyn_bold_12" size="12" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.08h" />
+		<fontmap name="dyn_bold_13" size="13" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.08h" />
+		<fontmap name="dyn_bold_14" size="14" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.08h" />
+		<fontmap name="dyn_bold_15" size="15" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.08h" />
+		<fontmap name="dyn_bold_16" size="16" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.08h" />
+		<fontmap name="dyn_bold_18" size="18" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.08h" />
+		<fontmap name="dyn_bold_20" size="20" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.08h" />
+		<fontmap name="dyn_bold_22" size="22" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.09h" />
+		<fontmap name="dyn_bold_24" size="24" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.09h" />
+		<fontmap name="dyn_bold_26" size="26" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.09h" />
+		<fontmap name="dyn_bold_30" size="30" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.09h" />
+		<fontmap name="dyn_bold_36" size="36" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.09h" />
+		<fontmap name="dyn_bold_40" size="40" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.10h" />
+		<fontmap name="dyn_bold_48" size="48" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.10h" />
+	</fontface>
+
+	<fontface file="/core/fonts/hon_bold_intl.ttf">
+		<fontmap name="heading_10" size="10" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.07h" />
+		<fontmap name="heading_11" size="11" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.07h" />
+		<fontmap name="heading_12" size="12" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.08h" />
+		<fontmap name="heading_13" size="13" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.08h" />
+		<fontmap name="heading_14" size="14" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.08h" />
+		<fontmap name="heading_15" size="15" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.08h" />
+		<fontmap name="heading_16" size="16" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.08h" />
+		<fontmap name="heading_18" size="18" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.08h" />
+		<fontmap name="heading_20" size="20" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.08h" />
+		<fontmap name="heading_22" size="22" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.09h" />
+		<fontmap name="heading_24" size="24" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.09h" />
+		<fontmap name="heading_26" size="26" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.09h" />
+		<fontmap name="heading_30" size="30" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.09h" />
+		<fontmap name="heading_36" size="36" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.09h" />
+		<fontmap name="heading_40" size="40" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.10h" />
+		<fontmap name="heading_48" size="48" dynamic_fontsize="true" baseresolution="768" axis="y" gamma="1.5" outline="0.10h" />
+	</fontface>
+
+	<fontface file="/core/fonts/system.ttf">
+		<fontmap name="system_small" size="10" highdpisize="13" language="latin,turkish,latin5,cyrillic" gamma="1.5" outline="2.0" />
+		<fontmap name="system_medium" size="12" highdpisize="16" language="latin,turkish,latin5,cyrillic" gamma="1.5" outline="2.0" />
+		<fontmap name="system_large" size="22" highdpisize="24" language="latin,turkish,latin5,cyrillic" gamma="1.5" outline="2.0" />
+	</fontface>
+
+	<fontface file="/core/fonts/game.ttf">
+		<fontmap name="littletextpopup" size="16" dynamic_fontsize="true" baseresolution="768" axis="y" language="latin,turkish,latin5,cyrillic,thai" gamma="1.5" outline="0.16h" />
+	</fontface>
+
+	<cursor name="cursor" file="/core/cursors/arrow.cursor" />
+
+	<texture name="alphagrad" file="$alphagrad" />
+	<texture name="logo" file="/textures/logo.tga" />
+	<texture name="console_background" file="/core/textures/console_blank.tga" />
+</resourcelist>

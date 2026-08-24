@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_057_DAMPEER",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_Dampeer1_name"], "ru": "Terrorize"},
+    {"keys": ["entities:Ability_Dampeer1_description"], "ru": "Dampeer вселяет ужас в окружающих противников, наносит им урон и заставляет бесцельно метаться."},
+    {"keys": ["entities:Ability_Dampeer1_description_simple"], "ru": "Вселяет ужас в окружающих противников, наносит ^o{75,125,175,225} магического урона^* и накладывает ^oFear на 1 секунду^*.\\n\\nКаждая имеющаяся у Dampeer ^rEssence^* увеличивает урон на 40, а длительность Fear — на 0.25 секунды."},
+    {"keys": ["entities:Ability_Dampeer1_IMPACT_effect"], "ru": "Наносит ^o{75,125,175,225} магического урона^* и накладывает ^oFear^* на ^o1 секунду^*.\\n\\nКаждая имеющаяся ^rEssence^* увеличивает урон на 40, а длительность Fear — на 0.25 секунды."},
+    {"keys": ["entities:Ability_Dampeer1_effect_header"], "ru": "Эффекты Fear"},
+    {"keys": ["entities:Ability_Dampeer1_description2", "entities:Ability_Dampeer1_effect_header2", "entities:Ability_Dampeer1_LEARN_effect"], "ru": ""},
+    {"keys": ["entities:Ability_Dampeer1_tooltip_flavor"], "ru": "БУ!"},
+
+    {"keys": ["entities:Ability_Dampeer2_name"], "ru": "Vampiric Flight"},
+    {"keys": ["entities:Ability_Dampeer2_description"], "ru": "Dampeer летит к выбранному противнику, наносит урон всем врагам на пути и вытягивает из них жизненную силу."},
+    {"keys": ["entities:Ability_Dampeer2_description_simple"], "ru": "Летит к выбранному противнику. Пролетая сквозь врага, наносит ему ^o{80,110,140,170} магического урона^* и ^oвосстанавливает себе {16,22,28,34} здоровья^*.\\n\\nКаждая имеющаяся ^rEssence^* увеличивает урон на 30, а лечение — на 10."},
+    {"keys": ["entities:Ability_Dampeer2_IMPACT_effect"], "ru": "Летит к выбранной цели, наносит ^o{80,110,140,170} магического урона^* и ^oвосстанавливает {16,22,28,34} здоровья^* за каждого противника, сквозь которого пролетит.\\n\\nКаждая имеющаяся ^rEssence^* увеличивает урон на 30, а лечение — на 10."},
+    {"keys": ["entities:Ability_Dampeer2_description2", "entities:Ability_Dampeer2_effect_header", "entities:Ability_Dampeer2_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_Dampeer2_tooltip_flavor"], "ru": "Как летучая мышь из ада!"},
+
+    {"keys": ["entities:Ability_Dampeer3_name"], "ru": "Bloodthirst"},
+    {"keys": ["entities:Ability_Dampeer3_name:Dampeer_Aura_Heroes"], "ru": "Bloodthirst (Heroes)"},
+    {"keys": ["entities:Ability_Dampeer3_description"], "ru": "Dampeer и окружающие союзники получают вампиризм от атак."},
+    {"keys": ["entities:Ability_Dampeer3_description_simple"], "ru": "Даёт окружающим союзным юнитам ближнего боя ^o{15,20,25,30}% вампиризма^*, а юнитам дальнего боя — ^o{2.5,5,7.5,10}% вампиризма^*.\\n\\nПереключите способность, чтобы аура действовала только на союзных героев.\\n\\nКаждая имеющаяся ^rEssence^* даёт Dampeer 15 скорости атаки."},
+    {"keys": ["entities:Ability_Dampeer3_description_simple:Dampeer_Aura_Heroes"], "ru": "Даёт окружающим союзным героям ближнего боя ^o{15,20,25,30}% вампиризма^*, а героям дальнего боя — ^o{2.5,5,7.5,10}% вампиризма^*.\\n\\nПереключите способность, чтобы аура действовала на всех окружающих союзных юнитов.\\n\\Каждая имеющаяся ^rEssence^* даёт Dampeer 15 скорости атаки."},
+    {"keys": ["entities:Ability_Dampeer3_description2"], "ru": "Даёт союзникам ближнего боя {15,20,25,30}% вампиризма, а союзникам дальнего боя — {2.5,5,7.5,10}% вампиризма.\\n\\nКаждая ^rEssence^* даёт Dampeer 15 скорости атаки."},
+    {"keys": ["entities:Ability_Dampeer3_description2:Dampeer_Aura_Heroes"], "ru": "Даёт союзным героям ближнего боя {15,20,25,30}% вампиризма, а союзным героям дальнего боя — {2.5,5,7.5,10}% вампиризма.\\n\\nКаждая ^rEssence^* даёт Dampeer 15 скорости атаки."},
+    {"keys": ["entities:Ability_Dampeer3_IMPACT_effect"], "ru": "Переключает ауру на союзных героев."},
+    {"keys": ["entities:Ability_Dampeer3_IMPACT_effect:Dampeer_Aura_Heroes"], "ru": "Переключает ауру на всех союзных юнитов."},
+    {"keys": ["entities:Ability_Dampeer3_effect_header"], "ru": ""},
+    {"keys": ["entities:Ability_Dampeer3_tooltip_flavor"], "ru": "Кровавую Мэри — каждому!"},
+
+    {"keys": ["entities:Ability_Dampeer4_name"], "ru": "Consume"},
+    {"keys": ["entities:Ability_Dampeer4_name:ult_boost"], "ru": "^gConsume*^*"},
+    {"keys": ["entities:Ability_Dampeer4_description"], "ru": "Dampeer вырывает огромный кусок плоти противника, наносит урон и восстанавливает себе столько же здоровья."},
+    {"keys": ["entities:Ability_Dampeer4_description_simple", "entities:Ability_Dampeer4_IMPACT_effect"], "ru": "Вгрызается в противника, наносит ему ^o{200,300,400} магического урона^* и восстанавливает себе столько же здоровья. Каждая имеющаяся ^rEssence^* увеличивает урон на ^o{30,50,70}^*. Крипы погибают мгновенно.\\n\\nКаждое применение ^oConsume^* даёт одну ^rEssence^*, а убийство вражеского героя — 3 ^rEssences^*. Одновременно можно иметь не более ^c3 Essences^*. После смерти теряется 1 ^rEssence^*.\\n\\n^gStaff of the Master^* увеличивает предел Essence с 3 до 6. Если при смерти у Dampeer больше 3 Essences, он теряет 2 вместо 1."},
+    {"keys": ["entities:Ability_Dampeer4_description_simple:ult_boost", "entities:Ability_Dampeer4_IMPACT_effect:ult_boost"], "ru": "Вгрызается в противника, наносит ему ^o{200,300,400} магического урона^* и восстанавливает себе столько же здоровья. Каждая имеющаяся у Dampeer ^rEssence^* увеличивает урон на ^o{30,50,70}^*. Крипы погибают мгновенно.\\n\\nКаждое применение Consume даёт одну ^rEssence^*, а убийство вражеского героя с помощью Consume — 3 ^rEssences^*. Одновременно можно иметь не более ^g6 Essences^*. ^gПосле смерти теряется 1 заряд, если у вас не больше 3 Essence, иначе теряется 2^*."},
+    {"keys": ["entities:Ability_Dampeer4_description2"], "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* предел Essence увеличивается с 3 до 6, а после смерти теряется 3 Essence."},
+    {"keys": ["entities:Ability_Dampeer4_description2:ult_boost"], "ru": "^gДлительность Fear от Terrorize не может превышать 2 секунды.^*"},
+    {"keys": ["entities:Ability_Dampeer4_effect_header", "entities:Ability_Dampeer4_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_Dampeer4_tooltip_flavor"], "ru": "Ням или не ням? Вот в чём вопрос."}
+  ]
+}

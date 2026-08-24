@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "policy_version": "1.0.0",
+  "semantic_authority": "CURRENT_GAME_SOURCE",
+  "translation_candidate_order": [
+    "PROJECT_APPROVED",
+    "DONOR",
+    "PASS_C",
+    "CURRENT_EN_FALLBACK",
+    "FUTURE_MANUAL"
+  ],
+  "rules": {
+    "source_order_is_not_approval": true,
+    "approved_requires_current_source_hash_match": true,
+    "donor_is_candidate_only": true,
+    "pass_c_is_candidate_unless_explicitly_approved": true,
+    "mechanic_text_requires_current_context": true,
+    "complex_mechanics_never_auto_approved": true,
+    "item_proper_names_default": "KEEP_EN_SEARCHABLE",
+    "carry_role": "Керри",
+    "silence_status": "Безмолвие",
+    "perplex_status": "REVIEW_UNRESOLVED",
+    "tiers": ["Tier I", "Tier II", "Tier III", "Tier IV"]
+  },
+  "candidate_statuses": [
+    "APPROVED_EXISTING",
+    "DONOR_CANDIDATE",
+    "PASS_C_CANDIDATE",
+    "DONOR_STYLE_ONLY",
+    "DONOR_STALE",
+    "BOTH_SUSPICIOUS",
+    "NEW_CURRENT_CONTENT",
+    "KEEP_EN",
+    "REVIEW",
+    "STRUCTURAL_RISK",
+    "SEMANTIC_REVIEW_REQUIRED"
+  ],
+  "review_queues": [
+    "modern_ui",
+    "items_semantic",
+    "abilities_semantic",
+    "bosses_semantic",
+    "terminology",
+    "mixed_language",
+    "structural_risk",
+    "names_policy"
+  ],
+  "workflow": [
+    "CURRENT_SOURCE",
+    "MULTI_SOURCE_CANDIDATES",
+    "AUTOMATIC_FILTERING",
+    "CONTROLLED_BATCH",
+    "SEMANTIC_EDIT",
+    "VALIDATOR",
+    "TEST_BUILD",
+    "RUNTIME_QA",
+    "APPROVAL",
+    "TRANSLATION_MEMORY"
+  ]
+}

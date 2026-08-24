@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_040_BLACKSMITH",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Blacksmith1_name"],
+      "ru": "Fireball"
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith1_description"],
+      "ru": "Швыряет в противника раскалённый огненный шар, нанося урон и оглушая цель."
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith1_description_simple"],
+      "ru": "Швыряет во врага раскалённый ^oFireball^*, наносит ^o{95,155,215,275} магического урона^* и оглушает на ^o1.5 секунды^*. За каждое дополнительное срабатывание ^oдлительность оглушения увеличивается на 0.3^*."
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith1_effect_header", "entities:Ability_Blacksmith4_effect_header"],
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith1_IMPACT_effect"],
+      "ru": "Наносит цели {95,155,215,275} магического урона и оглушает её на 1.5 секунды. За каждое дополнительное срабатывание ^oдлительность оглушения увеличивается на 0.3^*."
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith1_tooltip_flavor"],
+      "ru": "Берегись углей."
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith2_name"],
+      "ru": "Flaming Hammer"
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith2_description"],
+      "ru": "Blacksmith бросает во врага Flaming Hammer, который взрывается при попадании. Взрыв поджигает цель: она получает периодический урон, замедляется и теряет магическую броню."
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith2_description_simple"],
+      "ru": "Бросает во врага ^oFlaming Hammer^* и поджигает его. Цель получает ^o{20,25,30,35} магического урона в секунду^*, её скорость передвижения снижается на ^o{-15,-20,-25,-30}%^*, а магическая броня постепенно уменьшается на ^o{-1,-2,-3,-4} в течение {5,6,7,8} секунд."
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith2_effect_header"],
+      "ru": "Эффекты Flaming Hammer"
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith2_IMPACT_effect"],
+      "ru": "Выпускает снаряд, который при попадании накладывает Flaming Hammer на цели в области на {5,6,7,8} секунд."
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith2_tooltip_flavor"],
+      "ru": "Поработаем молотом!"
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith3_name"],
+      "ru": "Frenzy"
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith3_description"],
+      "ru": "Blacksmith лучше всего мотивирует союзников жаром пламени. Безвредный огонь повышает скорость атаки, передвижения и применения способностей."
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith3_description_simple"],
+      "ru": "Накладывает на союзника ^oFrenzy^* на 30 секунд, давая ему ^o{6,9,12,15}% скорости передвижения^*, ^o{20,30,40,50} скорости атаки^* и ^o{30} скорости применения^*. ^oВы^* дополнительно получаете 10% скорости передвижения и {10,15,20,25} скорости атаки."
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith3_effect_header"],
+      "ru": "Эффекты Frenzy"
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith3_IMPACT_effect"],
+      "ru": "Накладывает на цель Frenzy на 30 секунд."
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith3_tooltip_flavor"],
+      "ru": "Я горю, горю для тебя!"
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith4_name"],
+      "ru": "Chaotic Flames"
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith4_description", "entities:Ability_Blacksmith4_description:ult_boost"],
+      "ru": "Blacksmith привык играть с огнём и усиливает остальные способности. При их применении есть шанс получить гораздо более мощный результат."
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith4_description_simple"],
+      "ru": "Даёт ^oFireball^* и ^oFrenzy^* шанс ^oсработать несколько раз^*, максимум — ^o{2,3,4} раза^*.\\n\\nСокращает перезарядку ^oFireball^* на ^o{1,2,3} секунды^*, но увеличивает расход маны на ^o{10,40,70}^*.\\nУвеличивает область действия ^oFlaming Hammer^* на ^o{100,200,300}^*.\\nСокращает перезарядку ^oFrenzy^* на ^o{5,10,15} секунд^*.\\n\\n^gStaff of the Master^* добавляет к способности ^oRisky Cast^*: за 30% максимальной маны применяет к вражескому юниту ^oFireball 4-го уровня^*.\\n\\nВаши ^oобычные атаки^* также с вероятностью 15% ^oприменяют Fireball, Flaming Hammer и/или Frenzy^*. Эти применения не могут сработать многократно и не используют общую перезарядку с обычными способностями."
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith4_description2"],
+      "ru": "^gStaff of the Master^* добавляет к способности ^oRisky Cast^*: за 30% максимальной маны применяет к вражескому юниту Fireball 4-го уровня.\\n\\nВаши обычные атаки также с вероятностью 15% применяют Fireball, Flaming Hammer и/или Frenzy. Эти применения не могут сработать многократно и не используют общую перезарядку с обычными способностями."
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith4_IMPACT_effect"],
+      "ru": "Даёт Fireball и Frenzy шанс сработать до {2,3,4} раз: ^o{30,35,35}% на 2 срабатывания^*, ^o{0,20,20}% на 3 срабатывания^* и ^o{0,0,15}% на 4 срабатывания^*.\\n\\n- Сокращает перезарядку Fireball на {1,2,3} секунды и увеличивает расход маны на {10,40,70}.\\n\\n- Увеличивает область действия Flaming Hammer на {100,200,300}.\\n\\n- Сокращает перезарядку Frenzy на {5,10,15} секунд."
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith4_tooltip_flavor"],
+      "ru": "А ведь говорили: не играй с огнём."
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith4_name:ult_boost"],
+      "ru": "^gRisky Cast!*^*"
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith4_description2:ult_boost"],
+      "ru": "^gТеперь обычные атаки с вероятностью 15% применяют Fireball, Flaming Hammer и/или Frenzy. Эти применения не могут сработать многократно и не используют общую перезарядку с обычными способностями.^*"
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith4_description_simple:ult_boost"],
+      "ru": "^cПрименение расходует 30% максимальной маны.^*\\n\\n^gВыберите вражеского юнита, чтобы применить к нему Fireball 4-го уровня.^*\\n\\nДаёт ^oFireball^* и ^oFrenzy^* шанс ^oсработать несколько раз^*, максимум — ^o{2,3,4} раза^*. Сокращает перезарядку ^oFireball^* на ^o{1,2,3} секунды^*, но увеличивает расход маны на ^o{10,40,70}^*; увеличивает область действия ^oFlaming Hammer^* на ^o{100,200,300}^* и сокращает перезарядку ^oFrenzy^* на ^o{5,10,15} секунд^*.\\n\\n^gПри атаке противника у вас есть 15%-ный шанс бесплатно применить любую способность, но такие применения не могут сработать многократно.^*"
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith4_IMPACT_effect:ult_boost"],
+      "ru": "^cПрименение расходует 30% максимальной маны.^*\\n\\n^gВыберите вражеского юнита, чтобы применить к нему Fireball 4-го уровня.^*\\n\\nПассивно даёт Fireball и Frenzy шанс сработать до {2,3,4} раз: ^o{30,35,35}% на 2 срабатывания^*, ^o{0,20,20}% на 3 срабатывания^* и ^o{0,0,15}% на 4 срабатывания^*.\\n\\n- Сокращает перезарядку Fireball на {1,2,3} секунды и увеличивает расход маны на {10,40,70}.\\n\\n- Увеличивает область действия Flaming Hammer на {100,200,300}.\\n\\n- Сокращает перезарядку Frenzy на {5,10,15} секунд."
+    },
+    {
+      "keys": ["entities:Ability_Blacksmith4_tooltip_flavor:ult_boost"],
+      "ru": "«Пусть случай решит! Risky Cast!»\\n— Patty Fleur, Tales of Vesperia"
+    }
+  ]
+}

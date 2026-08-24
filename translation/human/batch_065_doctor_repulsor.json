@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_065_DOCTOR_REPULSOR",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_DoctorRepulsor1_name"], "ru": "Magnetic Contraption"},
+    {"keys": ["entities:Ability_DoctorRepulsor1_description"], "ru": "Doctor Repulsor оставляет на земле одно из своих запатентованных магнитных устройств. Приблизившийся противник нарушает хрупкое магнитное поле и вызывает взрыв."},
+    {"keys": ["entities:Ability_DoctorRepulsor1_description_simple"], "ru": "Создаёт в своей позиции ^oContraption^*. Устройство ^oактивируется через 1 секунду и существует 16 секунд^*. Когда противник входит в ^oрадиус 235^*, ^oContraption^* взрывается и наносит ^o{105,160,215,270} магического урона^* в ^oрадиусе 260^*. Даёт вокруг себя 400 ^oбеспрепятственного обзора^*."},
+    {"keys": ["entities:Ability_DoctorRepulsor1_IMPACT_effect"], "ru": "Устанавливает ^oContraption^* в позиции Doctor Repulsor. Через 1 секунду устройство взрывается, если в пределах 235 единиц есть противник, и наносит {105,160,215,270} магического урона в радиусе 260. Contraption существует до 16 секунд.\\n\\nДаёт 400 беспрепятственного дневного и ночного обзора."},
+    {"keys": ["entities:Ability_DoctorRepulsor1_tooltip_flavor"], "ru": "Как вообще работают эти магниты?"},
+
+    {"keys": ["entities:Ability_DoctorRepulsor2_name"], "ru": "Opposite Charges"},
+    {"keys": ["entities:Ability_DoctorRepulsor2_description"], "ru": "Doctor Repulsor мгновенно намагничивает противника и оставляет у своих ног мощный магнит с противоположным зарядом. Цель оглушается и медленно притягивается к магниту."},
+    {"keys": ["entities:Ability_DoctorRepulsor2_description_simple"], "ru": "Намагничивает противника, ^oпритягивает его к Doctor Repulsor^* и ^oоглушает на {1.2,1.5,1.8,2.1} секунды^*."},
+    {"keys": ["entities:Ability_DoctorRepulsor2_IMPACT_effect"], "ru": "Устанавливает магнит в позиции Doctor Repulsor. Оглушает цель на {1.2,1.5,1.8,2.1} секунды и в течение этого времени притягивает её к магниту."},
+    {"keys": ["entities:Ability_DoctorRepulsor2_effect_header"], "ru": "Эффекты Magnetized"},
+    {"keys": ["entities:Ability_DoctorRepulsor2_tooltip_flavor"], "ru": "Два минуса дают правильный плюс."},
+
+    {"keys": ["entities:Ability_DoctorRepulsor3_name"], "ru": "Electric Frenzy"},
+    {"keys": ["entities:Ability_DoctorRepulsor3_name:ult_boost"], "ru": "^gElectric Fury^*"},
+    {"keys": ["entities:Ability_DoctorRepulsor3_description"], "ru": "Каждое применение способности заряжает капсулу Doctor Repulsor избыточной энергией. Следующая атака высвобождает заряд, наносит дополнительный урон по области и бьёт током задетых противников."},
+    {"keys": ["entities:Ability_DoctorRepulsor3_description_simple"], "ru": "После ^oприменения способности^* заряжает Doctor Repulsor энергией. Следующая атака наносит в радиусе 300 ^o{40,60,80,100} дополнительного магического урона^* и на 0.6 секунды снижает ^oскорость передвижения на -80%, а скорость атаки на -50^*.\\n\\n^gStaff of the Master^* добавляет к урону 3% максимальной маны Doctor Repulsor."},
+    {"keys": ["entities:Ability_DoctorRepulsor3_description_simple:ult_boost"], "ru": "После ^oприменения способности^* заряжает Doctor Repulsor энергией. Следующая атака наносит в радиусе 300 ^o{40,60,80,100} магического урона^* ^gплюс 3% максимальной маны^* и на 0.6 секунды снижает ^oскорость передвижения на -80%, а скорость атаки на -50^*."},
+    {"keys": ["entities:Ability_DoctorRepulsor3_ABILITY_IMPACT_effect"], "ru": "Следующая атака наносит вокруг цели {40,60,80,100} магического урона в радиусе 300 и накладывает Electric Frenzy на 0.6 секунды."},
+    {"keys": ["entities:Ability_DoctorRepulsor3_effect_header"], "ru": "Эффекты Fully Charged"},
+    {"keys": ["entities:Ability_DoctorRepulsor3_tooltip_flavor"], "ru": "Любому электрику до меня далеко."},
+
+    {"keys": ["entities:Ability_DoctorRepulsor4_name"], "ru": "Ludicrous Speed"},
+    {"keys": ["entities:Ability_DoctorRepulsor4_name:ult_boost"], "ru": "^gLudicrous Speed*^*"},
+    {"keys": ["entities:Ability_DoctorRepulsor4_description"], "ru": "Doctor Repulsor переводит капсулу в режим перегрузки и с невероятной скоростью летит к выбранной точке, расходуя ману. Он наносит урон всем юнитам на пути и уничтожает деревья."},
+    {"keys": ["entities:Ability_DoctorRepulsor4_ACTIVATE_COST_effect", "entities:Ability_DoctorRepulsor4_ACTIVATE_COST_effect:ult_boost"], "ru": "^cСтоимость маны: 11% максимальной маны^*"},
+    {"keys": ["entities:Ability_DoctorRepulsor4_description_simple"], "ru": "^cСтоимость маны: 11% максимальной маны^*.\\n\\nДаёт {2,3,4} + {0,40,80}% восстановления маны в секунду.\\n\\nЛетит к выбранной точке со ^oскоростью {1500,2000,2500}^* и ^oрасходует 10 + 0.9% максимальной маны за каждые 100 единиц пути^*. После остановки на 0.8 секунды ^oполучает Perplex^*.\\n\\nЗа каждые пройденные 100 единиц наносит ^o{10,15,20} магического урона^*.\\n\\n^gStaff of the Master^* убирает Perplex после остановки."},
+    {"keys": ["entities:Ability_DoctorRepulsor4_description_simple:ult_boost"], "ru": "^cСтоимость маны: 11% максимальной маны^*.\\n\\nДаёт ^o{2,3,4} + {0,40,80}% восстановления маны^* в секунду.\\n\\nЛетит к выбранной точке со ^oскоростью {1500,2000,2500}^* и ^oрасходует 10 + 0.9% максимальной маны за каждые 100 единиц пути^*.\\n\\nЗа каждые пройденные 100 единиц наносит ^o{10,15,20} магического урона^*."},
+    {"keys": ["entities:Ability_DoctorRepulsor4_description2"], "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* Doctor Repulsor больше не получает Perplex после остановки."},
+    {"keys": ["entities:Ability_DoctorRepulsor4_IMPACT_effect"], "ru": "Летит к выбранной точке со скоростью {1500,2000,2500}. Расходует 10 + 0.9% максимальной маны за каждые 100 единиц пути и мгновенно останавливается, если мана заканчивается. После остановки на 0.8 секунды ^oполучает Perplex^*.\\n\\nЗа каждые пройденные 100 единиц наносит {10,15,20} магического урона.\\n\\nВо время полёта неуязвим."},
+    {"keys": ["entities:Ability_DoctorRepulsor4_IMPACT_effect:ult_boost"], "ru": "Летит к выбранной точке со скоростью {1500,2000,2500}. Расходует 10 + 0.9% максимальной маны за каждые 100 единиц пути и мгновенно останавливается, если мана заканчивается.\\n\\nЗа каждые пройденные 100 единиц наносит {10,15,20} магического урона.\\n\\nВо время полёта неуязвим."},
+    {"keys": ["entities:Ability_DoctorRepulsor4_tooltip_flavor"], "ru": "Мы перешли на клетчатую скорость!"}
+  ]
+}

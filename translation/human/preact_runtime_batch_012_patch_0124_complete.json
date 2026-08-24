@@ -1,0 +1,2896 @@
+{
+  "schema_version": 1,
+  "batch_id": "PREACT_RUNTIME_PATCH_0124_DRAFT",
+  "scope": "Complete editorial text for patch 0.2.4",
+  "reviewed_by": "Machine draft with manual terminology and screenshot polish 2026-08-24",
+  "rows": [
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Faction",
+      "russian": "Фракция",
+      "expected_matches": 1,
+      "source_line": 54,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Hellbourne",
+      "russian": "Хеллборн",
+      "expected_matches": 1,
+      "source_line": 54,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Attack",
+      "russian": "Атака",
+      "expected_matches": 1,
+      "source_line": 55,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Melee, 150 range",
+      "russian": "Ближний бой, дальность 150",
+      "expected_matches": 1,
+      "source_line": 55,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Primary attribute",
+      "russian": "Первичный атрибут",
+      "expected_matches": 1,
+      "source_line": 56,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Strength",
+      "russian": "Сила",
+      "expected_matches": 2,
+      "source_line": 56,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Agility",
+      "russian": "Ловкость",
+      "expected_matches": 1,
+      "source_line": 58,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Intelligence",
+      "russian": "Интеллект",
+      "expected_matches": 1,
+      "source_line": 59,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Base damage",
+      "russian": "Базовый урон",
+      "expected_matches": 1,
+      "source_line": 60,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Base attack time",
+      "russian": "Базовое время атаки",
+      "expected_matches": 1,
+      "source_line": 61,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Movement speed",
+      "russian": "Скорость движения",
+      "expected_matches": 1,
+      "source_line": 62,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Armor",
+      "russian": "Броня",
+      "expected_matches": 1,
+      "source_line": 63,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Magic armor",
+      "russian": "Магическая броня",
+      "expected_matches": 1,
+      "source_line": 64,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Sight range",
+      "russian": "Дальность обзора",
+      "expected_matches": 1,
+      "source_line": 65,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "1 in 4",
+      "russian": "1 из 4",
+      "expected_matches": 2,
+      "source_line": 72,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "1 in 25",
+      "russian": "1 из 25",
+      "expected_matches": 2,
+      "source_line": 73,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Chance of a game far above your level, under 1000 rating",
+      "russian": "Шанс игры намного выше вашего уровня, ниже 1000 рейтинга",
+      "expected_matches": 1,
+      "source_line": 74,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "1 in 10",
+      "russian": "1 из 10",
+      "expected_matches": 2,
+      "source_line": 77,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "1 in 90",
+      "russian": "1 из 90",
+      "expected_matches": 2,
+      "source_line": 78,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Mid Wars games with a large skill spread",
+      "russian": "Игры Mid Wars с большим разбросом навыков",
+      "expected_matches": 1,
+      "source_line": 79,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "1 in 1,300",
+      "russian": "1 из 1300",
+      "expected_matches": 1,
+      "source_line": 82,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Seats placed out of bracket without a real reason - about half the old rate",
+      "russian": "Игроки, попавшие за пределы своей рейтинговой группы без веской причины — примерно вдвое реже прежнего",
+      "expected_matches": 1,
+      "source_line": 83,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "+25pp",
+      "russian": "+25 стр.",
+      "expected_matches": 1,
+      "source_line": 86,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Elite Mid Wars match rate",
+      "russian": "Доля найденных матчей в Elite Mid Wars",
+      "expected_matches": 1,
+      "source_line": 87,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Tarot",
+      "russian": "Tarot",
+      "expected_matches": 1,
+      "source_line": 94,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Gameplay",
+      "russian": "Gameplay",
+      "expected_matches": 2,
+      "source_line": 96,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Bound by Fate (E): No longer applies its slow and tether through magic immunity. Popping Shrunken Head, Protective Charm, Stone Hide or Blade Frenzy while the projectile was still in the air used to let it land in full. Casting at an already-immune target was correctly blocked - only the flight window was open.",
+      "russian": "Bound by Fate (E): больше не накладывает замедление и связь сквозь невосприимчивость к магии. Раньше Shrunken Head, Protective Charm, Stone Hide или Blade Frenzy, применённые во время полёта снаряда, не мешали ему полностью сработать. Применение на уже невосприимчивую цель блокировалось правильно — ошибка существовала только во время полёта.",
+      "expected_matches": 1,
+      "source_line": 98,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Night Hound",
+      "russian": "Night Hound",
+      "expected_matches": 1,
+      "source_line": 103,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Visual",
+      "russian": "Visual",
+      "expected_matches": 2,
+      "source_line": 105,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Smoke Bomb (Q): The thrown bomb is now visible. The projectile, its trail and its impact all render, and the throw art is cleared properly if the cast is cancelled.",
+      "russian": "Дымовая бомба (Q): брошенная бомба теперь видна. Снаряд, его след и удар все визуализируются, а изображение броска очищается должным образом, если применение заклинания отменено.",
+      "expected_matches": 1,
+      "source_line": 107,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Electrician",
+      "russian": "Electrician",
+      "expected_matches": 1,
+      "source_line": 112,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "His base model now uses the high-detail mesh as its default, rather than falling back to the standard one.",
+      "russian": "Его базовая модель теперь использует сетку высокой детализации по умолчанию, а не возвращается к стандартной.",
+      "expected_matches": 1,
+      "source_line": 116,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Sir Benzington",
+      "russian": "Sir Benzington",
+      "expected_matches": 1,
+      "source_line": 121,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Audio",
+      "russian": "Audio",
+      "expected_matches": 1,
+      "source_line": 123,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Sir Benzalot: The ultimate's landing line is now the avatar's own recording. Only the cast line was ever per-avatar, so every Benzalot landing spoke base Sir Benzington. The recording has shipped since the avatar was ported - it was never wired up.",
+      "russian": "Sir Benzalot: при приземлении ультимейта теперь звучит собственная реплика облика. Раньше уникальной была только реплика применения, а при каждом приземлении звучал базовый Sir Benzington. Нужная запись присутствовала с момента переноса облика, но не была подключена.",
+      "expected_matches": 1,
+      "source_line": 125,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Defiler",
+      "russian": "Defiler",
+      "expected_matches": 1,
+      "source_line": 130,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Master’s Legacy: Handing it to a Defiler now spawns her Staff of the Master spirits on Defiler, not on the hero who gave her the item. The giver visibly gained the ultimate upgrade and Defiler got nothing.",
+      "russian": "Master’s Legacy: при передаче предмета Defiler её духи Staff of the Master теперь появляются вокруг Defiler, а не героя, который передал предмет. Раньше улучшение ультимейта визуально получал передающий герой, а Defiler не получала ничего.",
+      "expected_matches": 1,
+      "source_line": 134,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Accursed",
+      "russian": "Accursed",
+      "expected_matches": 1,
+      "source_line": 145,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Fire Shield (W): Shield duration reduced from 15 to 12 seconds. Cooldown changed from 18 / 15 / 12 / 9 to 16 / 15 / 14 / 13 seconds.",
+      "russian": "Огненный щит (W): длительность щита уменьшена с 15 до 12 секунд. Время восстановления изменено с 18/15/12/9 на 16/15/14/13 секунд.",
+      "expected_matches": 1,
+      "source_line": 148,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Armadon",
+      "russian": "Armadon",
+      "expected_matches": 1,
+      "source_line": 153,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Armordillo (E): Rear damage reduction lowered from 16 / 24 / 32 / 40% to 8 / 16 / 24 / 32%. The Spine Burst threshold is unchanged at 130 blocked damage, and Staff of the Master still reduces by 40%.",
+      "russian": "Броненосец (E): уменьшение урона сзади уменьшено с 16/24/32/40% до 8/16/24/32%. Порог Spine Burst не изменился и составляет 130 блокированного урона, а значение Staff of the Master по-прежнему снижается на 40%.",
+      "expected_matches": 1,
+      "source_line": 156,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Chipper",
+      "russian": "Chipper",
+      "expected_matches": 2,
+      "source_line": 161,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Rocket Barrage (Q): The long-range bonus is cut from 7% to 4% of the target's maximum Health, and now needs 2250 units of travel instead of 2000.",
+      "russian": "Ракетный залп (Q): бонус дальнего действия уменьшен с 7% до 4% от максимального здоровья цели, и теперь требуется 2250 единиц перемещения вместо 2000.",
+      "expected_matches": 1,
+      "source_line": 164,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Demented Shaman",
+      "russian": "Demented Shaman",
+      "expected_matches": 2,
+      "source_line": 170,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Unbreakable (E): On fatal damage, Health is now set to 80 / 150 / 220 / 290 plus 2 / 3 / 4 / 5% of maximum Health, down from 100 / 180 / 260 / 340 plus 3 / 4 / 5 / 6%. Cooldown increased from 50 / 40 / 30 / 20 to 60 / 50 / 40 / 30 seconds.",
+      "russian": "Неуязвимый (E): при смертельном уроне здоровье теперь составляет 80/150/220/290 плюс 2/3/4/5% от максимального здоровья, а не 100/180/260/340 плюс 3/4/5/6%. Время восстановления увеличено с 50/40/30/20 до 60/50/40/30 секунд.",
+      "expected_matches": 1,
+      "source_line": 173,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Engineer",
+      "russian": "Engineer",
+      "expected_matches": 1,
+      "source_line": 178,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Steam Turret (W): The turret is now disabled while Engineer is more than 800 units away from it, and reactivates when he comes back inside that range. It no longer holds a lane on its own while he is somewhere else on the map.",
+      "russian": "Steam Turret (W): турель отключается, когда Engineer удаляется от неё более чем на 800 единиц, и снова включается после его возвращения. Она больше не может самостоятельно удерживать линию, пока Engineer находится в другой части карты.",
+      "expected_matches": 1,
+      "source_line": 181,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Flint Beastwood",
+      "russian": "Flint Beastwood",
+      "expected_matches": 2,
+      "source_line": 186,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Hollowpoint Shells (W): Proc chance reduced from 40% to 30%, and the stun from 0.05 / 0.1 / 0.15 / 0.2 to 0.04 / 0.08 / 0.12 / 0.16 seconds. Bonus damage is unchanged.",
+      "russian": "Hollowpoint Shells (W): вероятность срабатывания уменьшена с 40% до 30%, а время оглушения с 0,05/0,1/0,15/0,2 до 0,04/0,08/0,12/0,16 секунды. Бонусный урон не изменился.",
+      "expected_matches": 1,
+      "source_line": 189,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Jeraziah",
+      "russian": "Jeraziah",
+      "expected_matches": 1,
+      "source_line": 195,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Protective Charm (W): Cooldown increased from 24 to 30 seconds, and the buff now lasts 5 seconds instead of 6.",
+      "russian": "Защитное заклинание (W): время восстановления увеличено с 24 до 30 секунд, а положительный эффект теперь длится 5 секунд вместо 6.",
+      "expected_matches": 1,
+      "source_line": 198,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Rampage",
+      "russian": "Rampage",
+      "expected_matches": 1,
+      "source_line": 203,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Base Health raised by 120, Armor by 1 and Magic Armor by 2.",
+      "russian": "Базовое здоровье увеличено на 120, броня на 1 и магическая броня на 2.",
+      "expected_matches": 1,
+      "source_line": 206,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Thunderbringer",
+      "russian": "Thunderbringer",
+      "expected_matches": 2,
+      "source_line": 212,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Chain Lightning (Q): The search radius for each bounce is increased from 300 to 400, so chains carry across a fight far more reliably.",
+      "russian": "Цепная молния (Q): радиус поиска каждого отскока увеличен с 300 до 400, поэтому цепи переносят бой гораздо надежнее.",
+      "expected_matches": 1,
+      "source_line": 215,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Glacius",
+      "russian": "Glacius",
+      "expected_matches": 2,
+      "source_line": 225,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Tundra Blast (Q): The tooltip showed 110 / 160 / 210 / 260 damage. Mid Wars has always dealt 170 / 200 / 230 / 260, and now says so.",
+      "russian": "Tundra Blast (Q): во всплывающей подсказке указано 110/160/210/260 урона. Mid Wars всегда раздавал 170/200/230/260, и сейчас так говорит.",
+      "expected_matches": 1,
+      "source_line": 228,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Thunderstorm (R): The Mid Wars figures - 9 second duration, 4 / 5 / 6 strikes, 150 / 175 / 200 damage - are now on the tooltip.",
+      "russian": "Гроза (R): фигурки Mid Wars — длительность 9 секунд, 4/5/6 ударов, 150/175/200 урона – теперь находятся во всплывающей подсказке.",
+      "expected_matches": 1,
+      "source_line": 236,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Rocket Barrage (Q): Holding Staff of the Master used to swap the tooltip to a version with no Mid Wars figures at all, so it read 7% at 2000 units while the rocket ran 4% at 2250. Both Staff tooltips now carry the Mid Wars numbers.",
+      "russian": "Ракетный залп (Q): при удерживании посоха мастера подсказка менялась на версию, вообще не содержащую цифр середины войн, поэтому она отображала 7% при 2000 единицах, в то время как ракета запускала 4% в 2250. Обе всплывающие подсказки посоха теперь содержат цифры середины войны.",
+      "expected_matches": 1,
+      "source_line": 244,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Unbreakable (E): Same problem, same fix - the base and Staff tooltips now state the Mid Wars heal. The Thai tooltip had also drifted to numbers that matched neither the ability nor the English text; it is back in line.",
+      "russian": "Неуязвимый (E): та же проблема, то же исправление — во всплывающих подсказках к базе и посоху теперь указано исцеление в середине войны. Всплывающая подсказка на тайском языке также изменилась на цифры, которые не соответствовали ни способностям, ни английскому тексту; оно снова в порядке.",
+      "expected_matches": 1,
+      "source_line": 252,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Dead Eye (E): The tooltip claimed the vision bonus dropped alongside the attack range in Mid Wars. Only attack range changes.",
+      "russian": "Мертвый глаз (E): во всплывающей подсказке говорилось, что в Mid Wars бонус к обзору снижается вместе с дальностью атаки. Меняется только дальность атаки.",
+      "expected_matches": 1,
+      "source_line": 260,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Client",
+      "russian": "Client",
+      "expected_matches": 7,
+      "source_line": 267,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "The single highest-volume fatal crash is fixed - over 1,000 reports in a fortnight. Work queued up by the game module could still be run after that module had been unloaded, and faulted on the very next frame. It fired at the end of every local game, practice game and replay.",
+      "russian": "Исправлен единственный фатальный сбой самого большого объема — более 1000 отчетов за две недели. Работа, поставленная в очередь игровым модулем, все еще могла быть запущена после выгрузки этого модуля, и в следующем кадре произошел сбой. Он срабатывал в конце каждой местной игры, тренировочной игры и повтора.",
+      "expected_matches": 1,
+      "source_line": 268,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Fixed a crash on the minimap. The interface thread and the game thread traced the world at the same time through one shared scratch buffer, and either one could pull it out from under the other. 405 reports in a fortnight.",
+      "russian": "Исправлен сбой мини-карты. Потоки интерфейса и игры могли одновременно выполнять трассировку мира через общий временный буфер и мешать друг другу. За две недели получено 405 отчётов.",
+      "expected_matches": 1,
+      "source_line": 272,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Fixed a family of voice chat crashes. The audio mixer could read a voice stream the main thread had already destroyed, and voice teardown could run against an audio system that had already been shut down - reachable from joining, leaving, muting, or simply talking.",
+      "russian": "Исправлена группа сбоев голосового чата. Аудиомикшер мог обращаться к голосовому потоку, уже удалённому основным потоком, а завершение голосовой связи — к уже выключенной аудиосистеме. Ошибка возникала при входе, выходе, отключении микрофона и даже во время обычного разговора.",
+      "expected_matches": 1,
+      "source_line": 276,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Fixed crashes when the client is torn down or restarted. A failed start or a shutdown left chat, matchmaking and voice callbacks running with no client behind them.",
+      "russian": "Исправлены сбои при закрытии и перезапуске клиента. После неудачного запуска или завершения работы обработчики чата, подбора матчей и голосовой связи продолжали работать без самого клиента.",
+      "expected_matches": 1,
+      "source_line": 280,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Fixed crashes during shutdown caused by leftover registrations outliving the game module, including the HTML panel bridge and the bot script callbacks. 216 reports in a fortnight.",
+      "russian": "Исправлены сбои при завершении работы: некоторые зарегистрированные обработчики, включая мост HTML-панелей и вызовы скриптов ботов, продолжали существовать после выгрузки игрового модуля. За две недели получено 216 отчётов.",
+      "expected_matches": 1,
+      "source_line": 284,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Fixed a crash in the announcer sound system, where a reload could leave a live handle pointing at nothing.",
+      "russian": "Исправлен сбой в звуковой системе диктора, из-за которого при перезагрузке живой дескриптор мог указывать в никуда.",
+      "expected_matches": 1,
+      "source_line": 288,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Crash reports now carry your account, the phase the client was in, and the release - so a crash during loading is no longer indistinguishable from a network failure.",
+      "russian": "В отчетах о сбоях теперь указывается ваша учетная запись, фаза, на которой находился клиент, и версия, поэтому сбой во время загрузки больше не отличается от сбоя сети.",
+      "expected_matches": 1,
+      "source_line": 292,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Server",
+      "russian": "Server",
+      "expected_matches": 1,
+      "source_line": 295,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Aborted matches are now recorded together with the players who failed to connect, instead of being reconstructible only by hand-reading logs across 27 hosts.",
+      "russian": "Прерванные матчи теперь записываются вместе с игроками, которым не удалось подключиться, а не восстанавливаются только путем ручного чтения журналов на 27 хостах.",
+      "expected_matches": 1,
+      "source_line": 296,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Loading patch notes...",
+      "russian": "Загрузка примечаний к патчу...",
+      "expected_matches": 1,
+      "source_line": 304,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Patch 0.12.4",
+      "russian": "Patch 0.12.4",
+      "expected_matches": 1,
+      "source_line": 916,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Patch 0.12.4 Notes",
+      "russian": "Примечания к патчу 0.12.4",
+      "expected_matches": 1,
+      "source_line": 919,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "A major matchmaking overhaul, Kane joins the roster, and a new renderer under every HTML panel",
+      "russian": "Масштабная переработка подбора матчей, новый герой Kane и новый рендерер для всех HTML-панелей",
+      "expected_matches": 1,
+      "source_line": 921,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "August 15, 2026",
+      "russian": "15 августа 2026 г.",
+      "expected_matches": 1,
+      "source_line": 924,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "A major overhaul of matchmaking.",
+      "russian": "Капитальный пересмотр системы подбора игроков.",
+      "expected_matches": 1,
+      "source_line": 933,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "The matchmaker no longer settles for the first workable game - it keeps improving a match until the pool genuinely has nothing better. Tighter games at every rating, guaranteed role coverage, and no more sitting in queue forever.",
+      "russian": "Система подбора больше не останавливается на первом допустимом варианте: она продолжает улучшать состав матча, пока среди ожидающих действительно не останется ничего лучше. Более равные игры на любом рейтинге, гарантированное распределение ролей и отсутствие бесконечных очередей.",
+      "expected_matches": 1,
+      "source_line": 933,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Kane joins the roster.",
+      "russian": "Kane пополняет список героев.",
+      "expected_matches": 1,
+      "source_line": 939,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "The Usurper brings a sword he throws and drags you back with, two auras he swaps between, and a duel nobody walks away from.",
+      "russian": "Узурпатор бросает меч и притягивает им врага обратно, переключается между двумя аурами и вызывает на дуэль, из которой никто не уходит невредимым.",
+      "expected_matches": 1,
+      "source_line": 939,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "A new Legendary avatar -",
+      "russian": "Новый легендарный облик —",
+      "expected_matches": 1,
+      "source_line": 943,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Lion Nighthound",
+      "russian": "Lion Nighthound",
+      "expected_matches": 4,
+      "source_line": 944,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Its own model, textures, voice set, store stage and bespoke effects on all four of Night Hound&apos;s abilities.",
+      "russian": "Собственная модель, текстуры, полный набор реплик, сцена в магазине и особые эффекты для всех четырёх способностей Night Hound.",
+      "expected_matches": 1,
+      "source_line": 945,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "A new Epic avatar -",
+      "russian": "Новый эпический облик —",
+      "expected_matches": 1,
+      "source_line": 949,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Katana Kane",
+      "russian": "Katana Kane",
+      "expected_matches": 4,
+      "source_line": 950,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "shipping alongside the hero himself.",
+      "russian": "выпускаемый одновременно с самим героем.",
+      "expected_matches": 1,
+      "source_line": 951,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Origami, our new in-game HTML renderer.",
+      "russian": "Origami, наш новый внутриигровой HTML-рендерер.",
+      "expected_matches": 1,
+      "source_line": 954,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Profile, patch notes, news, lobby customization and match stats all draw through it now - they open faster, redraw less, and can finally use modern CSS and inline video.",
+      "russian": "Профиль, примечания к патчу, новости, настройка лобби и статистика матчей теперь доступны через него — они открываются быстрее, меньше перерисовываются и, наконец, могут использовать современный CSS и встроенное видео.",
+      "expected_matches": 1,
+      "source_line": 954,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "A Mid Wars balance pass.",
+      "russian": "Балансовый проход Mid Wars.",
+      "expected_matches": 1,
+      "source_line": 959,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Nine heroes retuned for the mode alone - Accursed, Armadon, Chipper, Demented Shaman, Engineer, Flint Beastwood, Jeraziah, Rampage and Thunderbringer. Nothing here touches the Forests of Caldavar.",
+      "russian": "Только для этого режима изменены девять героев: Accursed, Armadon, Chipper, Demented Shaman, Engineer, Flint Beastwood, Jeraziah, Rampage и Thunderbringer. Эти изменения не затрагивают Forests of Caldavar.",
+      "expected_matches": 1,
+      "source_line": 959,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "The three highest-volume client crashes are fixed.",
+      "russian": "Исправлены три наиболее частых сбоя клиента.",
+      "expected_matches": 1,
+      "source_line": 964,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Together they accounted for well over 1,600 crash reports in a fortnight.",
+      "russian": "За две недели на них пришлось более 1600 отчётов о сбоях.",
+      "expected_matches": 1,
+      "source_line": 964,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "A tree-wide art repair pass.",
+      "russian": "Масштабное исправление графических ресурсов.",
+      "expected_matches": 1,
+      "source_line": 968,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Roughly 1,450 broken asset references fixed, and 194 materials across 82 heroes, announcers, items and props put back on the current texture set - effects, team colour and ambient occlusion that had quietly stopped rendering are back.",
+      "russian": "Исправлено примерно 1450 неработающих ссылок на активы, а 194 материала для 82 героев, дикторов, предметов и реквизита возвращены в текущий набор текстур — эффекты, цвет команды и окружающая окклюзия, которые незаметно прекратили рендеринг, вернулись.",
+      "expected_matches": 1,
+      "source_line": 968,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Tarot&apos;s Bound by Fate no longer applies through magic immunity.",
+      "russian": "Способность Tarot Bound by Fate больше не действует сквозь невосприимчивость к магии.",
+      "expected_matches": 1,
+      "source_line": 975,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "New emote content:",
+      "russian": "Новые эмоции:",
+      "expected_matches": 1,
+      "source_line": 979,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "the Firecracker gesture and the R.I.P. kill effect.",
+      "russian": "жест Firecracker и эффект убийства R.I.P.",
+      "expected_matches": 1,
+      "source_line": 979,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "New Player Accounts are told why their hero pool is locked",
+      "russian": "Новым игрокам объясняют, почему часть героев недоступна",
+      "expected_matches": 1,
+      "source_line": 983,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": ", right above the queue button.",
+      "russian": ", прямо над кнопкой очереди.",
+      "expected_matches": 1,
+      "source_line": 983,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "This patch brings a major overhaul of our matchmaking system. The core change is simple to state and hard to do:",
+      "russian": "Этот патч вносит серьезные изменения в нашу систему подбора игроков. Основное изменение легко сформулировать, но сложно реализовать:",
+      "expected_matches": 1,
+      "source_line": 995,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "the matchmaker no longer settles",
+      "russian": "система подбора больше не останавливается",
+      "expected_matches": 1,
+      "source_line": 996,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": ". It keeps improving a match until the pool genuinely has nothing better to offer.",
+      "russian": ". Она продолжает улучшать состав, пока среди ожидающих действительно не останется лучшего варианта.",
+      "expected_matches": 1,
+      "source_line": 996,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Queue",
+      "russian": "Очередь",
+      "expected_matches": 1,
+      "source_line": 1020,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Joining and leaving is",
+      "russian": "Присоединение и выход",
+      "expected_matches": 1,
+      "source_line": 1023,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "instant",
+      "russian": "мгновенный",
+      "expected_matches": 1,
+      "source_line": 1023,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": ", even while the matchmaker is mid-search.",
+      "russian": ", даже во время активного поиска матча.",
+      "expected_matches": 1,
+      "source_line": 1023,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Population counts update live instead of freezing under load.",
+      "russian": "Число игроков в очереди обновляется в реальном времени и больше не замирает под нагрузкой.",
+      "expected_matches": 1,
+      "source_line": 1026,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Better matches at every level",
+      "russian": "Более качественные матчи на любом уровне",
+      "expected_matches": 1,
+      "source_line": 1031,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Under 1000 rating:",
+      "russian": "Рейтинг до 1000:",
+      "expected_matches": 1,
+      "source_line": 1034,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "your chance of landing in a game far above your level went from about",
+      "russian": "ваш шанс попасть в игру намного выше вашего уровня снизился примерно с",
+      "expected_matches": 1,
+      "source_line": 1034,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "to about",
+      "russian": "примерно",
+      "expected_matches": 2,
+      "source_line": 1035,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "1800+ players",
+      "russian": "1800+ игроков",
+      "expected_matches": 1,
+      "source_line": 1039,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "are grouped with their peers whenever enough are online.",
+      "russian": "подбираются с игроками своего уровня, когда в сети достаточно участников.",
+      "expected_matches": 1,
+      "source_line": 1039,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Out-of-bracket placements now only happen when there is a real reason - a thin pool, or a long wait. Unnecessary mismatches are down to roughly",
+      "russian": "Игроки теперь выходят за пределы своей рейтинговой группы только по реальной причине — когда в очереди мало участников или ожидание затянулось. Доля необоснованно неравных матчей снизилась примерно до",
+      "expected_matches": 1,
+      "source_line": 1043,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "1 seat in 1,300",
+      "russian": "1 место из 1300",
+      "expected_matches": 1,
+      "source_line": 1045,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": ", about half the old rate.",
+      "russian": ", примерно вдвое реже прежнего.",
+      "expected_matches": 1,
+      "source_line": 1045,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Forests of Caldavar",
+      "russian": "Forests of Caldavar",
+      "expected_matches": 1,
+      "source_line": 1051,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Peak hours are dramatically tighter. When the pool is deep, the share of very tight matches",
+      "russian": "В часы пик матчи стали заметно равнее. Когда в очереди много игроков, доля наиболее сбалансированных матчей",
+      "expected_matches": 1,
+      "source_line": 1054,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "nearly doubles",
+      "russian": "почти вдвое",
+      "expected_matches": 1,
+      "source_line": 1055,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Every ranked game is guaranteed proper role coverage, with hard support capable players on both teams.",
+      "russian": "В каждой рейтинговой игре гарантировано должное распределение ролей, а также поддержка игроков обеих команд.",
+      "expected_matches": 1,
+      "source_line": 1058,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Lobbies with a wide skill spread dropped by more than",
+      "russian": "Количество лобби с широким разбросом навыков сократилось более чем",
+      "expected_matches": 1,
+      "source_line": 1062,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "on busy days.",
+      "russian": "в загруженные дни.",
+      "expected_matches": 1,
+      "source_line": 1063,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Mid Wars",
+      "russian": "Mid Wars",
+      "expected_matches": 1,
+      "source_line": 1069,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Blowouts are nearly gone. Games with a large skill spread went from roughly",
+      "russian": "Разгромные матчи почти исчезли. Доля игр с большой разницей уровня снизилась примерно с",
+      "expected_matches": 1,
+      "source_line": 1072,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": ", with no change to wait times.",
+      "russian": ", без изменения времени ожидания.",
+      "expected_matches": 1,
+      "source_line": 1074,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Match ranges adapt to the live population - tighter at peak, wider when quiet - so off-peak players are not stranded.",
+      "russian": "Диапазон матчей адаптируется к живому населению — плотнее в часы пик, шире в период тишины, поэтому игроки в непиковые часы не оказываются в затруднительном положении.",
+      "expected_matches": 1,
+      "source_line": 1077,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Roughly",
+      "russian": "Примерно",
+      "expected_matches": 1,
+      "source_line": 1081,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "17 to 20%",
+      "russian": "от 17 до 20%",
+      "expected_matches": 1,
+      "source_line": 1081,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "more ranked Mid Wars games overall in our testing.",
+      "russian": "больше рейтинговых матчей Mid Wars по результатам наших тестов.",
+      "expected_matches": 1,
+      "source_line": 1081,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Roles",
+      "russian": "Роли",
+      "expected_matches": 1,
+      "source_line": 1088,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Your preference order is now",
+      "russian": "Ваш порядок предпочтений теперь",
+      "expected_matches": 1,
+      "source_line": 1091,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "fully honoured",
+      "russian": "полностью учитывается",
+      "expected_matches": 1,
+      "source_line": 1091,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": ". Last-choice assignments are meaningfully rarer, and first-choice rates went up.",
+      "russian": ". Последняя выбранная роль назначается заметно реже, а первая — чаще.",
+      "expected_matches": 1,
+      "source_line": 1091,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Never saved preferences? The default is now",
+      "russian": "Никогда не сохраняли настройки? По умолчанию теперь",
+      "expected_matches": 1,
+      "source_line": 1095,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Carry, Mid, Offlane, Soft Support, Hard Support, Jungle, Solo Offlane",
+      "russian": "Керри, Мид, Оффлейн, Роум, Поддержка, Лес, Соло-оффлейн",
+      "expected_matches": 1,
+      "source_line": 1097,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": ", matching the in-game screen. It previously defaulted to Hard Support first.",
+      "russian": ", как на игровом экране. Раньше первой по умолчанию шла основная поддержка.",
+      "expected_matches": 1,
+      "source_line": 1099,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Support players will not get pulled into someone else&apos;s wide match when a same-level game is forming for them.",
+      "russian": "Игроков поддержки больше не затягивает в чужой матч с большой разницей рейтинга, если для них собирается игра равного уровня.",
+      "expected_matches": 1,
+      "source_line": 1102,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Top of the ladder",
+      "russian": "Верх рейтинговой таблицы",
+      "expected_matches": 1,
+      "source_line": 1109,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Ratings above",
+      "russian": "Рейтинг выше",
+      "expected_matches": 1,
+      "source_line": 1112,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "are now treated as 2200 for matchmaking. Ratings that high are inflated by design, and treating them literally made it nearly impossible to match the top of the ladder together.",
+      "russian": "теперь считаются равными 2200 при подборе. Настолько высокие значения намеренно завышены, а буквальный учёт почти не позволял лучшим игрокам попадать в один матч.",
+      "expected_matches": 1,
+      "source_line": 1112,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Your rating is not changing",
+      "russian": "Ваш рейтинг не меняется",
+      "expected_matches": 1,
+      "source_line": 1115,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "- this just lets the best players actually find each other.",
+      "russian": "- это просто позволяет лучшим игрокам находить друг друга.",
+      "expected_matches": 1,
+      "source_line": 1115,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "High-rated players stuck in queue are now guaranteed a game whenever one is possible. If no tight match exists, the matchmaker widens in stages, and only accepts an imbalanced game as a last resort.",
+      "russian": "Игроки с высоким рейтингом теперь гарантированно получают матч, если его вообще можно собрать. Если равного состава нет, система поэтапно расширяет допустимый диапазон и соглашается на несбалансированный матч лишь в крайнем случае.",
+      "expected_matches": 1,
+      "source_line": 1119,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Escalated games never drop below our quality floor unless every stricter option has failed, and the widening only affects the players who earned it.",
+      "russian": "Качество эскалированных игр никогда не опускается ниже нашего минимального уровня, если только каждый более строгий вариант не терпит неудачу, а расширение затрагивает только тех игроков, которые его заслужили.",
+      "expected_matches": 1,
+      "source_line": 1124,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Elite Mid Wars match rates improved by roughly",
+      "russian": "Доля найденных матчей в Elite Mid Wars выросла примерно",
+      "expected_matches": 1,
+      "source_line": 1128,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "25 percentage points",
+      "russian": "25 процентных пунктов",
+      "expected_matches": 1,
+      "source_line": 1129,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "No more sitting in queue forever",
+      "russian": "Больше не придется вечно сидеть в очереди",
+      "expected_matches": 1,
+      "source_line": 1135,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "If your pool genuinely cannot seat you at normal ranges, you earn a wider search after a few minutes - exactly as wide as needed and no wider. Wide games exist only as the alternative to no game at all.",
+      "russian": "Если ваш бассейн действительно не может уместить вас на обычных дистанциях, через несколько минут вы получаете более широкий поиск — ровно настолько, насколько необходимо, и не шире. Широкие игры существуют только как альтернатива отсутствию игры вообще.",
+      "expected_matches": 1,
+      "source_line": 1137,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "If a tight match is possible, you get the tight match.",
+      "russian": "Если можно собрать равный матч, система соберёт именно его.",
+      "expected_matches": 1,
+      "source_line": 1140,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "This is the foundation, not the finish line. More improvements are already in development, targeted for late August / early September. Keep the feedback coming - we will be watching the data closely once this is live.",
+      "russian": "Это основа, а не финиш. Другие улучшения уже находятся в разработке и запланированы на конец августа/начало сентября. Продолжайте оставлять отзывы — мы будем внимательно следить за данными, как только они появятся в продаже.",
+      "expected_matches": 1,
+      "source_line": 1145,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Kane, the Usurper",
+      "russian": "Kane, Узурпатор",
+      "expected_matches": 1,
+      "source_line": 1159,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Hellbourne &middot; Strength &middot; Melee &middot; Initiator",
+      "russian": "Хеллборн &middot; Сила &middot; Рукопашный бой &middot; Инициатор",
+      "expected_matches": 1,
+      "source_line": 1161,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Kane the Usurper is an orphaned, mixed-breed warrior raised by Maliken to despise all forms of royalty and authority. His utopia is a Newerth bereft of crowns, with only the strongest and most savage allowed to hold dominion over others.",
+      "russian": "Kane Узурпатор — осиротевший воин смешанной крови, которого Maliken воспитал в ненависти к монархии и любой власти. Его идеал — Newerth без корон, где править другими дозволено лишь самым сильным и свирепым.",
+      "expected_matches": 1,
+      "source_line": 1167,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "A front line team fighter. Kane excels at leading the charge and locking down the enemy&apos;s carry while bolstering his team&apos;s strength.",
+      "russian": "Командный боец первой линии. Kane ведёт атаку, сдерживает вражеского керри и одновременно усиливает союзников.",
+      "expected_matches": 1,
+      "source_line": 1173,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Kane hero spotlight",
+      "russian": "Обзор героя Kane",
+      "expected_matches": 1,
+      "source_line": 1180,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Range",
+      "russian": "Дальность",
+      "expected_matches": 2,
+      "source_line": 1201,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Width",
+      "russian": "Ширина",
+      "expected_matches": 1,
+      "source_line": 1202,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Mana",
+      "russian": "Мана",
+      "expected_matches": 3,
+      "source_line": 1203,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Cooldown",
+      "russian": "Перезарядка",
+      "expected_matches": 3,
+      "source_line": 1204,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "16 / 14 / 12 / 10s",
+      "russian": "16 / 14 / 12 / 10 с",
+      "expected_matches": 1,
+      "source_line": 1204,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Throw your sword out at a target location, dealing",
+      "russian": "Бросает меч в указанную точку, нанося",
+      "expected_matches": 1,
+      "source_line": 1208,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Physical Damage, applying a",
+      "russian": "физического урона и замедляя",
+      "expected_matches": 1,
+      "source_line": 1209,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Movement Speed Slow for",
+      "russian": "скорость передвижения на",
+      "expected_matches": 1,
+      "source_line": 1210,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "4 seconds",
+      "russian": "4 секунды",
+      "expected_matches": 2,
+      "source_line": 1211,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "and pulling enemies hit back to you.",
+      "russian": ", после чего притягивает поражённых врагов обратно к Kane.",
+      "expected_matches": 1,
+      "source_line": 1211,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Also applies a charge of Kane&apos;s Anguish to everything it hits.",
+      "russian": "Также накладывает заряд Kane's Anguish на каждую поражённую цель.",
+      "expected_matches": 1,
+      "source_line": 1213,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Radius",
+      "russian": "Радиус",
+      "expected_matches": 1,
+      "source_line": 1223,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Toggle between two auras with a",
+      "russian": "Переключайтесь между двумя аурами с помощью",
+      "expected_matches": 1,
+      "source_line": 1229,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "2 second",
+      "russian": "2 секунды",
+      "expected_matches": 1,
+      "source_line": 1229,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "delay. Both affect Kane and allied heroes in range.",
+      "russian": "задержкой. Обе ауры действуют на Kane и союзных героев поблизости.",
+      "expected_matches": 1,
+      "source_line": 1229,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Offensive Force:",
+      "russian": "Offensive Force:",
+      "expected_matches": 1,
+      "source_line": 1234,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "a",
+      "russian": "а",
+      "expected_matches": 1,
+      "source_line": 1234,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "chance to critically strike for",
+      "russian": "шанс нанести критический удар",
+      "expected_matches": 1,
+      "source_line": 1235,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "1.5x",
+      "russian": "1,5x",
+      "expected_matches": 1,
+      "source_line": 1236,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "damage, and",
+      "russian": "урон и",
+      "expected_matches": 1,
+      "source_line": 1236,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "of missing Mana regenerated per second while not receiving damage for 8 seconds.",
+      "russian": "недостающей маны регенерируется в секунду, не получая урона в течение 8 секунд.",
+      "expected_matches": 1,
+      "source_line": 1237,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Defensive Might:",
+      "russian": "Defensive Might:",
+      "expected_matches": 1,
+      "source_line": 1241,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Armor, and",
+      "russian": "Броня и",
+      "expected_matches": 1,
+      "source_line": 1242,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "of missing Health regenerated per second while not receiving damage for 8 seconds.",
+      "russian": "недостающего здоровья восстанавливается в секунду, не получая урона в течение 8 секунд.",
+      "expected_matches": 1,
+      "source_line": 1242,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Kane&apos;s stance, model and animation set change with the aura.",
+      "russian": "Стойка, модель и набор анимаций Kane меняются вместе с аурой.",
+      "expected_matches": 1,
+      "source_line": 1247,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Type",
+      "russian": "Тип",
+      "expected_matches": 1,
+      "source_line": 1258,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Passive",
+      "russian": "Пассивный",
+      "expected_matches": 1,
+      "source_line": 1258,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Duration",
+      "russian": "Продолжительность",
+      "expected_matches": 2,
+      "source_line": 1259,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Max charges",
+      "russian": "Макс. заряды",
+      "expected_matches": 1,
+      "source_line": 1260,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Your attacks and",
+      "russian": "Ваши атаки и",
+      "expected_matches": 1,
+      "source_line": 1264,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Waylay",
+      "russian": "Waylay",
+      "expected_matches": 3,
+      "source_line": 1264,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "apply a charge of",
+      "russian": "накладывают заряд",
+      "expected_matches": 1,
+      "source_line": 1264,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Kane&apos;s Anguish",
+      "russian": "Kane's Anguish",
+      "expected_matches": 1,
+      "source_line": 1265,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "to enemies and towers for",
+      "russian": "врагам и башням за",
+      "expected_matches": 1,
+      "source_line": 1265,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Each charge makes the target deal",
+      "russian": "Каждый заряд уменьшает наносимый целью",
+      "expected_matches": 1,
+      "source_line": 1270,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "less Attack Damage.",
+      "russian": "меньше урона от атаки.",
+      "expected_matches": 1,
+      "source_line": 1270,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Each charge makes the target take bonus damage equal to",
+      "russian": "Каждый заряд заставляет цель получать дополнительный урон, равный",
+      "expected_matches": 1,
+      "source_line": 1274,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "5% of its own Attack Damage",
+      "russian": "5% от собственного урона от атаки",
+      "expected_matches": 1,
+      "source_line": 1275,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "when Kane attacks it.",
+      "russian": "когда её атакует Kane.",
+      "expected_matches": 1,
+      "source_line": 1275,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Works on towers.",
+      "russian": "Работает на башнях.",
+      "expected_matches": 1,
+      "source_line": 1277,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "3.5 / 4.25 / 5s",
+      "russian": "3,5/4,25/5 с",
+      "expected_matches": 1,
+      "source_line": 1289,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "70 / 65 / 60s",
+      "russian": "70 / 65 / 60 с",
+      "expected_matches": 1,
+      "source_line": 1291,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Target an enemy hero or tower to force both you and the target to attack each other for",
+      "russian": "Нацельтесь на вражеского героя или башню, чтобы заставить вас и цель атаковать друг друга в течение",
+      "expected_matches": 1,
+      "source_line": 1295,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "seconds.",
+      "russian": "секунды.",
+      "expected_matches": 1,
+      "source_line": 1296,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Both units are Sighted, Revealed and move at maximum speed; the target is Silenced and Perplexed.",
+      "russian": "Оба юнита видны, обнаружены и движутся с максимальной скоростью; цель замолчала и в недоумении.",
+      "expected_matches": 1,
+      "source_line": 1300,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Kane gains",
+      "russian": "Kane получает",
+      "expected_matches": 1,
+      "source_line": 1304,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Attack Speed for the duration, and applies a charge of Kane&apos;s Anguish to the target.",
+      "russian": "к скорости атаки на время действия и накладывает на цель заряд Kane's Anguish.",
+      "expected_matches": 1,
+      "source_line": 1304,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Used on a",
+      "russian": "Используется на",
+      "expected_matches": 1,
+      "source_line": 1308,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "tower",
+      "russian": "башня",
+      "expected_matches": 1,
+      "source_line": 1308,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": ", the cooldown drops to",
+      "russian": ", время восстановления снижается до",
+      "expected_matches": 1,
+      "source_line": 1308,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "20 seconds",
+      "russian": "20 секунд",
+      "expected_matches": 1,
+      "source_line": 1309,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "instead.",
+      "russian": "вместо.",
+      "expected_matches": 1,
+      "source_line": 1309,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "If your duel target dies while Face Off is active, Face Off permanently gains",
+      "russian": "Если ваша цель дуэли умирает во время действия Face Off, Face Off навсегда получает",
+      "expected_matches": 1,
+      "source_line": 1312,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "4 / 6 / 8 charges",
+      "russian": "4 / 6 / 8 зарядов",
+      "expected_matches": 1,
+      "source_line": 1313,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": ". Each charge is worth",
+      "russian": ". Каждый заряд стоит",
+      "expected_matches": 1,
+      "source_line": 1313,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "1 Attack Damage",
+      "russian": "1 урон от атаки",
+      "expected_matches": 1,
+      "source_line": 1314,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": ", but lies dormant until Staff of the Master is active.",
+      "russian": ", но не действует без Staff of the Master.",
+      "expected_matches": 1,
+      "source_line": 1314,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Staff of the Master",
+      "russian": "Staff of the Master",
+      "expected_matches": 2,
+      "source_line": 1319,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Staff of the Master:",
+      "russian": "Staff of the Master:",
+      "expected_matches": 1,
+      "source_line": 1320,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "wakes the dormant charges, granting",
+      "russian": "пробуждает дремлющие заряды, предоставляя",
+      "expected_matches": 1,
+      "source_line": 1320,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "1 Attack Damage per charge",
+      "russian": "1 урон от атаки за заряд",
+      "expected_matches": 1,
+      "source_line": 1321,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": ". During a Face Off, Kane also takes",
+      "russian": ". Во время Face Off Kane также получает",
+      "expected_matches": 1,
+      "source_line": 1321,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "50% less damage",
+      "russian": "На 50% меньше урона",
+      "expected_matches": 1,
+      "source_line": 1322,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "from every source other than his target.",
+      "russian": "из любого источника, кроме его цели.",
+      "expected_matches": 1,
+      "source_line": 1322,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "The footage below is captured on the Katana avatar - the abilities are Kane&apos;s own.",
+      "russian": "В ролике ниже показан облик Katana, но сами способности принадлежат Kane.",
+      "expected_matches": 1,
+      "source_line": 1329,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Balance of Power",
+      "russian": "Balance of Power",
+      "expected_matches": 2,
+      "source_line": 1340,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Offensive / Defensive stance",
+      "russian": "Наступательная/оборонительная позиция",
+      "expected_matches": 2,
+      "source_line": 1344,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Steel Resolve",
+      "russian": "Steel Resolve",
+      "expected_matches": 2,
+      "source_line": 1348,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Face Off",
+      "russian": "Face Off",
+      "expected_matches": 2,
+      "source_line": 1352,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Recommended items:",
+      "russian": "Рекомендуемые предметы:",
+      "expected_matches": 1,
+      "source_line": 1357,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Mana Potion, Minor Totem, Runes of the Blight, Health Potion and Homecoming Stone to open, into Bottle, Plated Greaves, Astrolabe, Nome&apos;s Wisdom, Replenish, Barrier Idol and Behemoth&apos;s Heart.",
+      "russian": "Начальные предметы: Mana Potion, Minor Totem, Runes of the Blight, Health Potion и Homecoming Stone. Затем: Bottle, Plated Greaves, Astrolabe, Nome's Wisdom, Replenish, Barrier Idol и Behemoth's Heart.",
+      "expected_matches": 1,
+      "source_line": 1357,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "The panels in the client that are built as web pages have been running on a third-party embedded browser. That has been replaced with",
+      "russian": "Панели клиента, созданные в виде веб-страниц, запускались во встроенном браузере стороннего производителя. Это было заменено на",
+      "expected_matches": 1,
+      "source_line": 1369,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Origami",
+      "russian": "Origami",
+      "expected_matches": 1,
+      "source_line": 1370,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": ", our own renderer, built on upstream WebKit and tuned for the game client.",
+      "russian": ", наш собственный рендерер, построенный на основе исходного WebKit и настроенный для игрового клиента.",
+      "expected_matches": 1,
+      "source_line": 1370,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Profile",
+      "russian": "Профиль",
+      "expected_matches": 1,
+      "source_line": 1375,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Patch Notes",
+      "russian": "Примечания к патчу",
+      "expected_matches": 1,
+      "source_line": 1376,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "News / MOTD",
+      "russian": "Новости / МОТД",
+      "expected_matches": 1,
+      "source_line": 1377,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Lobby Customization",
+      "russian": "Настройка лобби",
+      "expected_matches": 1,
+      "source_line": 1378,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Match Stats",
+      "russian": "Статистика матча",
+      "expected_matches": 1,
+      "source_line": 1379,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Ladder",
+      "russian": "Рейтинг",
+      "expected_matches": 1,
+      "source_line": 1380,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Panels open faster and stay smooth",
+      "russian": "Панели открываются быстрее и работают плавно",
+      "expected_matches": 1,
+      "source_line": 1385,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "GPU rasterization is on by default, and a panel only redraws the region that actually changed instead of the whole page every frame.",
+      "russian": "Растеризация с помощью графического процессора включена по умолчанию, и панель каждый кадр перерисовывает только ту область, которая фактически изменилась, а не всю страницу.",
+      "expected_matches": 1,
+      "source_line": 1387,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Reopening is close to instant",
+      "russian": "Открытие почти мгновенное",
+      "expected_matches": 1,
+      "source_line": 1392,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Panels now keep a real disk cache and persistent cookies between sessions, so a panel you have already opened does not refetch everything.",
+      "russian": "Панели теперь сохраняют реальный дисковый кеш и постоянные файлы cookie между сеансами, поэтому уже открытая панель не обновляет все.",
+      "expected_matches": 1,
+      "source_line": 1394,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Video works inside panels",
+      "russian": "Видео работает прямо в панелях",
+      "expected_matches": 1,
+      "source_line": 1399,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Patch notes and news can play inline video and audio, decoded natively, with the codec bundled in the client. Nothing to install.",
+      "russian": "Примечания к обновлениям и новости могут воспроизводить встроенное видео и аудио, декодированные в собственном коде, с помощью кодека, встроенного в клиент. Нечего устанавливать.",
+      "expected_matches": 1,
+      "source_line": 1401,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Modern CSS",
+      "russian": "Современный CSS",
+      "expected_matches": 1,
+      "source_line": 1406,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Panels can use current CSS features, which means the in-game patch notes are a faithful port of this page rather than a stripped-down rebuild.",
+      "russian": "Панели могут использовать текущие функции CSS, а это означает, что внутриигровые примечания к патчу являются точным портом этой страницы, а не урезанной перестройкой.",
+      "expected_matches": 1,
+      "source_line": 1408,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "On the back of that,",
+      "russian": "На фоне этого",
+      "expected_matches": 1,
+      "source_line": 1415,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "every patch notes page in the client has been re-ported from this website",
+      "russian": "каждая страница с примечаниями к патчу в клиенте была перенесена с этого сайта.",
+      "expected_matches": 1,
+      "source_line": 1415,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "- all 23 of them, back to 0.7.0, rather than only the current one. Clips that used to be a still image, or nothing at all, now play in the client exactly as they do here.",
+      "russian": "- все 23 из них вернулись к версии 0.7.0, а не только к текущей. Клипы, которые раньше были неподвижными изображениями или вообще ничем, теперь воспроизводятся в клиенте точно так же, как и здесь.",
+      "expected_matches": 1,
+      "source_line": 1416,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Panels also scroll with the mouse wheel again, animated images no longer stick on a single frame, and closing a panel no longer leaves a queue of work to run all at once the next time you open one - which is what made reopening a panel crash.",
+      "russian": "Панели также снова прокручиваются с помощью колеса мыши, анимированные изображения больше не застревают в одном кадре, а закрытие панели больше не оставляет очередь работ, которые нужно запустить сразу при следующем открытии - именно это и приводило к сбою при повторном открытии панели.",
+      "expected_matches": 1,
+      "source_line": 1422,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Legendary",
+      "russian": "Legendary",
+      "expected_matches": 1,
+      "source_line": 1439,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Jade",
+      "russian": "Jade",
+      "expected_matches": 4,
+      "source_line": 1443,
+      "decision": "KEEP_EN"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Night Hound &middot; not marketable",
+      "russian": "Night Hound &middot; не продаётся на торговой площадке",
+      "expected_matches": 1,
+      "source_line": 1450,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "A full re-imagining rather than a recolour: its own model, textures and materials, a store stage with bespoke lighting, an animated marketplace title, and a complete voice set - selection, flavour, movement, attack, out-of-mana, cooldown and taunt lines.",
+      "russian": "Полностью новый образ, а не перекраска: собственные модель, текстуры и материалы, отдельная сцена в магазине с особым освещением, анимированное название и полный набор реплик — выбор героя, особые фразы, движение, атака, нехватка маны, перезарядка и насмешки.",
+      "expected_matches": 1,
+      "source_line": 1456,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Smoke Bomb (Q):",
+      "russian": "Smoke Bomb (Q):",
+      "expected_matches": 1,
+      "source_line": 1468,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "new cast, projectile, trail and impact effects, plus its own gadget and state art.",
+      "russian": "новые эффекты применения, снаряда, следа и попадания, а также собственная графика устройства и состояния.",
+      "expected_matches": 1,
+      "source_line": 1468,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Pounce (W):",
+      "russian": "Pounce (W):",
+      "expected_matches": 1,
+      "source_line": 1472,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "new leap effects with dedicated warp-in and warp-out art, including its own",
+      "russian": "новые эффекты прыжка со специальными изображениями перехода и выхода, включая собственный",
+      "expected_matches": 1,
+      "source_line": 1472,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Staff of the Master state.",
+      "russian": "состояние Staff of the Master.",
+      "expected_matches": 1,
+      "source_line": 1475,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Backstab (E):",
+      "russian": "Backstab (E):",
+      "expected_matches": 1,
+      "source_line": 1478,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "new impact and strike effects, plus a dedicated back-attack effect.",
+      "russian": "новые эффекты попадания и удара, включая отдельный эффект атаки со спины.",
+      "expected_matches": 1,
+      "source_line": 1478,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Invisibility (R):",
+      "russian": "Invisibility (R):",
+      "expected_matches": 1,
+      "source_line": 1482,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "new state and respawn effects.",
+      "russian": "новое состояние и эффекты возрождения.",
+      "expected_matches": 1,
+      "source_line": 1482,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "New VFX, voice, animations and ability icons.",
+      "russian": "Новые визуальные эффекты, голос, анимация и значки способностей.",
+      "expected_matches": 1,
+      "source_line": 1484,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Smoke Bomb",
+      "russian": "Smoke Bomb",
+      "expected_matches": 1,
+      "source_line": 1493,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Pounce",
+      "russian": "Pounce",
+      "expected_matches": 1,
+      "source_line": 1497,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Backstab",
+      "russian": "Backstab",
+      "expected_matches": 1,
+      "source_line": 1501,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Invisibility",
+      "russian": "Invisibility",
+      "expected_matches": 1,
+      "source_line": 1505,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Epic",
+      "russian": "Эпический",
+      "expected_matches": 1,
+      "source_line": 1516,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Kane &middot; not marketable",
+      "russian": "Kane &middot; не продаётся на торговой площадке",
+      "expected_matches": 1,
+      "source_line": 1527,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Kane&apos;s alternate avatar arrives with him. The ronin blade, shield and mask get their own model and materials, on a dedicated store stage, with its own voice set and reworked effects across all four abilities.",
+      "russian": "Вместе с Kane появляется его альтернативный облик. Клинок, щит и маска ронина получили собственные модели и материалы, отдельную сцену в магазине, набор реплик и переработанные эффекты всех четырёх способностей.",
+      "expected_matches": 1,
+      "source_line": 1533,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Store &amp; Marketplace",
+      "russian": "Магазин и торговая площадка",
+      "expected_matches": 1,
+      "source_line": 1571,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "The featured banner carousel on the store front page now carries",
+      "russian": "Карусель баннеров на главной странице магазина теперь содержит",
+      "expected_matches": 1,
+      "source_line": 1574,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "four",
+      "russian": "четыре",
+      "expected_matches": 1,
+      "source_line": 1575,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "rotating banners - Lion Nighthound, Katana Kane, Demon Emerald Warden and Harlequin Tarot - with a fourth pagination dot to match.",
+      "russian": "вращающихся баннера: Lion Nighthound, Katana Kane, Demon Emerald Warden и Harlequin Tarot; для них добавлена четвёртая точка переключения.",
+      "expected_matches": 1,
+      "source_line": 1575,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Dark Mana Magebane moves down into the featured grid.",
+      "russian": "Dark Mana Magebane перемещён в сетку избранных товаров.",
+      "expected_matches": 1,
+      "source_line": 1578,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Store model stages for the new avatars ship with their own lighting setup and corrected scale.",
+      "russian": "Сцены новых обликов в магазине получили собственное освещение и правильный масштаб моделей.",
+      "expected_matches": 1,
+      "source_line": 1580,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "A balance pass aimed squarely at Mid Wars. Every change below is scoped to the mode - none of it touches the Forests of Caldavar.",
+      "russian": "Балансный переход, нацеленный прямо на Mid Wars. Каждое изменение ниже относится к данному режиму — ни одно из них не затрагивает леса Калдавара.",
+      "expected_matches": 1,
+      "source_line": 1596,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Hero changes",
+      "russian": "Изменения героев",
+      "expected_matches": 1,
+      "source_line": 1601,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Tooltips that were lying to you",
+      "russian": "Ошибки в подсказках",
+      "expected_matches": 1,
+      "source_line": 1606,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Several abilities have behaved differently in Mid Wars for a long time while the tooltip kept showing the Forests of Caldavar figures. Those tooltips now read the Mid Wars values.",
+      "russian": "Некоторые способности долгое время вели себя по-разному в Mid Wars, хотя во всплывающей подсказке продолжали отображаться фигурки Лесов Калдавара. В этих подсказках теперь указаны значения Mid Wars.",
+      "expected_matches": 1,
+      "source_line": 1608,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Icon of the Goddess",
+      "russian": "Icon of the Goddess",
+      "expected_matches": 1,
+      "source_line": 1614,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "also now states its Mid Wars regeneration of 7.5 Health per second.",
+      "russian": "теперь также указывает регенерацию 7,5 здоровья в секунду в Mid Wars.",
+      "expected_matches": 1,
+      "source_line": 1614,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Reflection, environment fill and rim light on hero materials now dim in shadow instead of staying fully lit, so a hero standing in the trees no longer glows as if the sun were still on them. Direct light is unchanged.",
+      "russian": "Отражение, заливка окружающей среды и окружающий свет на материалах героев теперь тускнеют в тени, а не остаются полностью освещенными, поэтому герой, стоящий на деревьях, больше не светится, как если бы на них все еще светилось солнце. Прямой свет не меняется.",
+      "expected_matches": 1,
+      "source_line": 1625,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "A large sweep through the content tree for art that had stopped loading. Broken asset references are down from roughly",
+      "russian": "Проведена масштабная проверка графических ресурсов, которые перестали загружаться. Число сломанных ссылок на ресурсы сократилось примерно с",
+      "expected_matches": 1,
+      "source_line": 1636,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "to",
+      "russian": "к",
+      "expected_matches": 1,
+      "source_line": 1637,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": ", and the ones that remain are now guarded so they cannot come back.",
+      "russian": ", а те, что остались, теперь охраняются, поэтому они не могут вернуться.",
+      "expected_matches": 1,
+      "source_line": 1638,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Materials back on the right textures",
+      "russian": "Материалы вернулись на правильные текстуры",
+      "expected_matches": 1,
+      "source_line": 1643,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "194 materials across 82 heroes, announcers, items, NPCs, world props and store stages were still asking for texture paths from before the remaster. 58 of them were binding channels that no longer exist, which meant they had been rendering without ambient occlusion, team colour or emissive - so team colours and glow returned on a long list of heroes that had quietly lost them.",
+      "russian": "194 материала у 82 героев, комментаторов, предметов, NPC, объектов мира и сцен магазина всё ещё ссылались на пути текстур до ремастера. В 58 материалах использовались уже несуществующие каналы, поэтому пропали затенение окружения, командные цвета и свечение. Теперь эти эффекты снова отображаются у всех затронутых героев.",
+      "expected_matches": 1,
+      "source_line": 1645,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "27 missing effect textures were recovered, and three shaders that had been written but never shipped are back:",
+      "russian": "Было восстановлено 27 отсутствующих текстур эффектов, а также возвращены три шейдера, которые были написаны, но так и не выпущены:",
+      "expected_matches": 1,
+      "source_line": 1652,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Predator Frostfield",
+      "russian": "Predator Frostfield",
+      "expected_matches": 1,
+      "source_line": 1653,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "&apos;s ability refraction and",
+      "russian": ": эффект преломления способности и",
+      "expected_matches": 1,
+      "source_line": 1653,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Behemoth",
+      "russian": "Behemoth",
+      "expected_matches": 1,
+      "source_line": 1654,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "&apos;s Frostfield Twitch ice had both been failing to load outright.",
+      "russian": ": лёд эффекта Frostfield Twitch вообще не загружались.",
+      "expected_matches": 1,
+      "source_line": 1654,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Effects that never played",
+      "russian": "Эффекты, которые никогда не играли",
+      "expected_matches": 1,
+      "source_line": 1660,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Dark Lady",
+      "russian": "Dark Lady",
+      "expected_matches": 1,
+      "source_line": 1663,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "and her",
+      "russian": "и ее",
+      "expected_matches": 1,
+      "source_line": 1663,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Vampira",
+      "russian": "Vampira",
+      "expected_matches": 1,
+      "source_line": 1663,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "avatar: the attack impact effect pointed at a folder that does not exist, so it has never rendered. Each now plays its own art.",
+      "russian": "облик: эффект попадания атаки ссылался на несуществующую папку и никогда не отображался. Теперь у каждого облика воспроизводится собственный эффект.",
+      "expected_matches": 1,
+      "source_line": 1663,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "and",
+      "russian": "и",
+      "expected_matches": 2,
+      "source_line": 1668,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Tempest",
+      "russian": "Tempest",
+      "expected_matches": 1,
+      "source_line": 1668,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": ": their ice effects had a normal map bound to a file that never existed, and now match the canonical ice material.",
+      "russian": ": их ледяные эффекты имели карту нормалей, привязанную к файлу, которого никогда не существовало, и теперь соответствуют каноническому материалу льда.",
+      "expected_matches": 1,
+      "source_line": 1668,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Legionnaire Divine",
+      "russian": "Legionnaire Divine",
+      "expected_matches": 1,
+      "source_line": 1673,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": ": the ultimate weapon is back on the shader that gives it its gold treatment.",
+      "russian": ": оружие ультимейта снова использует шейдер, придающий ему золотой вид.",
+      "expected_matches": 1,
+      "source_line": 1673,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Engineer Briar",
+      "russian": "Engineer Briar",
+      "expected_matches": 1,
+      "source_line": 1677,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": ": water splash effects resolve again.",
+      "russian": ": эффекты брызг воды снова отображаются.",
+      "expected_matches": 1,
+      "source_line": 1677,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Towers, barracks and dwellings",
+      "russian": "Башни, казармы и жилища",
+      "expected_matches": 1,
+      "source_line": 1680,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": ": death animations, debris models and impact sounds restored across both factions.",
+      "russian": ": анимация смерти, модели обломков и звуки ударов восстановлены для обеих фракций.",
+      "expected_matches": 1,
+      "source_line": 1680,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Kongor",
+      "russian": "Конгор",
+      "expected_matches": 1,
+      "source_line": 1684,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": ", the",
+      "russian": ",",
+      "expected_matches": 1,
+      "source_line": 1684,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Phoenix",
+      "russian": "Phoenix",
+      "expected_matches": 1,
+      "source_line": 1684,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "and the elephant boss: corpse fade, respawn and impact art repaired.",
+      "russian": "и босс-слон: исправлены исчезновение тела, эффекты возрождения и попаданий.",
+      "expected_matches": 1,
+      "source_line": 1684,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Firecracker",
+      "russian": "Firecracker",
+      "expected_matches": 1,
+      "source_line": 1700,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Gesture",
+      "russian": "Жест",
+      "expected_matches": 1,
+      "source_line": 1711,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Target another hero - or a tombstone - and light one under them.",
+      "russian": "Нацельтесь на другого героя (или надгробие) и зажгите его под ним.",
+      "expected_matches": 1,
+      "source_line": 1714,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "&ldquo;Have a blast!&rdquo;",
+      "russian": "«Отрывайтесь!»",
+      "expected_matches": 1,
+      "source_line": 1715,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "R.I.P.",
+      "russian": "R.I.P.",
+      "expected_matches": 1,
+      "source_line": 1724,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Kill Effect",
+      "russian": "Эффект убийства",
+      "expected_matches": 1,
+      "source_line": 1735,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Your victim gets a tombstone, planted four seconds after the kill, with its own audio sting.",
+      "russian": "Ваша жертва получает надгробие, установленное через четыре секунды после убийства, со своим собственным звуковым эффектом.",
+      "expected_matches": 1,
+      "source_line": 1738,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Existing emotes",
+      "russian": "Существующие эмоции",
+      "expected_matches": 1,
+      "source_line": 1745,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Bodybuilder",
+      "russian": "Bodybuilder",
+      "expected_matches": 1,
+      "source_line": 1748,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "has been remade - new model, new animation, new textures and a new lift sound, plus a redone store preview.",
+      "russian": "переделан - новая модель, новая анимация, новые текстуры и новый звук лифта, плюс переделанный превью магазина.",
+      "expected_matches": 1,
+      "source_line": 1748,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Goal",
+      "russian": "Goal",
+      "expected_matches": 1,
+      "source_line": 1752,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "has had its scale retuned so it reads at the same size as the rest of the taunt set.",
+      "russian": "его масштаб был перенастроен, и теперь он читается того же размера, что и остальная часть набора насмешек.",
+      "expected_matches": 1,
+      "source_line": 1752,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "New Player Accounts are told why",
+      "russian": "Учетным записям новых игроков объясняется, почему",
+      "expected_matches": 1,
+      "source_line": 1765,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "A notice above",
+      "russian": "Уведомление выше",
+      "expected_matches": 1,
+      "source_line": 1767,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Enter Queue",
+      "russian": "Войти в очередь",
+      "expected_matches": 1,
+      "source_line": 1767,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "now states that New Player Accounts can only pick heroes for their assigned role, and that all heroes unlock at 100 matches - or sooner with Veteran Status. When Veteran Status is on sale and you do not own it, the notice carries a purchase button that opens the store&apos;s own confirmation dialog.",
+      "russian": "теперь сообщает, что новые учётные записи могут выбирать героев только для назначенной роли, а все герои открываются после 100 матчей — либо раньше при наличии Veteran Status. Если статус продаётся и ещё не приобретён, в уведомлении появляется кнопка покупки с обычным окном подтверждения магазина.",
+      "expected_matches": 1,
+      "source_line": 1767,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Previously the only signal was the sprout glyph next to your name, which also marks other players - so it read as name decoration rather than a restriction on the match you were about to queue for.",
+      "russian": "Раньше единственным сигналом был значок ростка рядом с вашим именем, который также отмечает других игроков, поэтому он воспринимался как украшение имени, а не как ограничение на матч, на который вы собирались встать в очередь.",
+      "expected_matches": 1,
+      "source_line": 1774,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "The notice steps aside when a queue notice - a ban, a rating disparity or a four-stack warning - needs the space.",
+      "russian": "Уведомление отодвигается в сторону, когда уведомление об очереди — бан, несоответствие рейтингов или предупреждение о четырех стопках — требует места.",
+      "expected_matches": 1,
+      "source_line": 1779,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Failed equips are no longer silent",
+      "russian": "Ошибки экипировки теперь отображаются",
+      "expected_matches": 1,
+      "source_line": 1785,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Equipping or unequipping an item in the store used to do nothing at all when the server refused it. It now raises a",
+      "russian": "Раньше экипировка или деэкипировка предмета в магазине вообще ничего не давала, когда сервер отказывался от него. Теперь возникает",
+      "expected_matches": 1,
+      "source_line": 1787,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Could not equip",
+      "russian": "Не удалось экипировать",
+      "expected_matches": 1,
+      "source_line": 1788,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Could not unequip",
+      "russian": "Не удалось снять снаряжение",
+      "expected_matches": 1,
+      "source_line": 1789,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "dialog telling you to reopen the store and try again.",
+      "russian": "диалоговое окно с предложением снова открыть магазин и повторить попытку.",
+      "expected_matches": 1,
+      "source_line": 1789,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "The emote wheel no longer keeps a slot the server rejected either - a drop that was refused is rolled back instead of leaving the wheel showing an emote you do not have equipped.",
+      "russian": "Колесо эмоций больше не имеет слота, отклоненного сервером — отказ от выпадения откатывается, а не оставляет колесо, показывающее эмоцию, которую вы не используете.",
+      "expected_matches": 1,
+      "source_line": 1792,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Several ways an update could fail, or could never finish, are fixed. If you have been stuck re-downloading the same patch, this is the one that unblocks you.",
+      "russian": "Исправлено несколько причин, по которым обновление могло завершиться неудачно или никогда не завершиться. Если вы застряли при повторной загрузке одного и того же патча, именно этот патч вас разблокирует.",
+      "expected_matches": 1,
+      "source_line": 1820,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "The update that never ended.",
+      "russian": "Обновление, которое никогда не заканчивалось.",
+      "expected_matches": 1,
+      "source_line": 1825,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "The updater walked the install to work out what it still needed, but never looked inside the folder holding the new renderer&apos;s runtime files. Those never counted as installed, so the client applied the patch in full and then immediately offered the same download again - with no error anywhere.",
+      "russian": "Программа обновления проверяла установку, чтобы определить недостающие файлы, но не заглядывала в каталог компонентов нового рендерера. Они всегда считались отсутствующими, поэтому клиент полностью устанавливал патч и тут же снова предлагал ту же загрузку — без единого сообщения об ошибке.",
+      "expected_matches": 1,
+      "source_line": 1825,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "The update that aborted before it started.",
+      "russian": "Обновление, которое было прервано до запуска.",
+      "expected_matches": 1,
+      "source_line": 1832,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Top-level files were matched by their contents rather than by their name, so two files with identical bytes both resolved to the same entry. The second one collided with the first, the update failed, and every file it had already replaced was left empty.",
+      "russian": "Файлы верхнего уровня сопоставлялись по содержимому, а не по имени, поэтому два файла с одинаковыми байтами разрешались в одну и ту же запись. Второй столкнулся с первым, обновление не удалось, и каждый файл, который он уже заменил, остался пустым.",
+      "expected_matches": 1,
+      "source_line": 1832,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "The five gigabyte re-download.",
+      "russian": "Пятигигабайтная повторная загрузка.",
+      "expected_matches": 1,
+      "source_line": 1838,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "A hashing library upgrade changed what our own tools computed for identical bytes, so the client stopped recognising content it already had on disk and the launcher could self-update in a loop. The patch protocol now uses a pinned implementation, so archives and manifests already out in the wild keep matching.",
+      "russian": "Обновление библиотеки хеширования изменило то, что наши собственные инструменты вычисляли для идентичных байтов, поэтому клиент перестал распознавать контент, который уже был у него на диске, и программа запуска могла самостоятельно обновляться в цикле. Протокол исправлений теперь использует закрепленную реализацию, поэтому уже существующие архивы и манифесты продолжают совпадать.",
+      "expected_matches": 1,
+      "source_line": 1838,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "The Visual C++ runtime now ships with the client",
+      "russian": "Среда выполнения Visual C++ теперь поставляется вместе с клиентом.",
+      "expected_matches": 1,
+      "source_line": 1845,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "rather than being policed on your machine. The old check could get stuck in a state where it refused to update until it had repaired a system component it was not able to reach, so the bad file was never replaced and every launch repeated it.",
+      "russian": "вместо того, чтобы подвергаться контролю на вашей машине. Старая проверка могла застрять в состоянии, когда она отказывалась обновляться до тех пор, пока не будет исправлен компонент системы, к которому она не могла получить доступ, поэтому плохой файл никогда не заменялся, и каждый запуск повторял его.",
+      "expected_matches": 1,
+      "source_line": 1845,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Force Casting From Current Position",
+      "russian": "Применение с текущей позиции",
+      "expected_matches": 1,
+      "source_line": 1859,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "no longer applies to",
+      "russian": "больше не применяется к",
+      "expected_matches": 1,
+      "source_line": 1859,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Ward of Sight",
+      "russian": "Ward of Sight",
+      "expected_matches": 1,
+      "source_line": 1860,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Ward of Revelation",
+      "russian": "Ward of Revelation",
+      "expected_matches": 1,
+      "source_line": 1860,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": ". The option clamps an out-of-range cast to max range and casts immediately, which for a ward meant planting it beside the spot you clicked rather than in it. Every other ability is unchanged.",
+      "russian": ". Эта опция ограничивает применение за пределами дальности до максимальной дальности и применяет немедленно, что для варда означало установку его рядом с местом, на которое вы щелкнули, а не в нем. Все остальные способности не изменяются.",
+      "expected_matches": 1,
+      "source_line": 1860,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "The loading screen names the stage it is actually on.",
+      "russian": "Экран загрузки теперь показывает фактический этап процесса.",
+      "expected_matches": 1,
+      "source_line": 1866,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "During the shader precache it read the literal word &ldquo;loading&rdquo; instead of the real stage, and filled the console with one error per resource.",
+      "russian": "Во время предварительного кэширования шейдера он прочитал буквальное слово &ldquo;loading&rdquo; вместо реальной сцены и заполнил консоль одной ошибкой на каждый ресурс.",
+      "expected_matches": 1,
+      "source_line": 1866,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "The item shop category icons are back.",
+      "russian": "Значки категорий магазина предметов вернулись.",
+      "expected_matches": 1,
+      "source_line": 1871,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Every category on the legacy shop tabs, and several on the standard ones, pointed at an icon path that does not exist, so the tabs sat blank.",
+      "russian": "Каждая категория на вкладках устаревшего магазина и несколько на стандартных указывала на несуществующий путь к значку, поэтому вкладки оставались пустыми.",
+      "expected_matches": 1,
+      "source_line": 1871,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Fixed a store crash on Riptide.",
+      "russian": "Исправлен сбой в магазине на Riptide.",
+      "expected_matches": 1,
+      "source_line": 1876,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "His store preview referenced a material through a path the model could not resolve, and took the store down with it.",
+      "russian": "Его предварительный просмотр магазина ссылался на материал по пути, который модель не могла разрешить, и вместе с ним удалял магазин.",
+      "expected_matches": 1,
+      "source_line": 1876,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Store model scale is corrected for",
+      "russian": "Исправлен масштаб модели в магазине для",
+      "expected_matches": 1,
+      "source_line": 1880,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": ", and",
+      "russian": "и",
+      "expected_matches": 1,
+      "source_line": 1880,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "was showing the wrong stage backdrop.",
+      "russian": "показывал неправильный фон сцены.",
+      "expected_matches": 1,
+      "source_line": 1881,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Hidden states - Bottle&apos;s refill, the melee building attack-range marker - no longer try to draw a status icon they do not have, and the",
+      "russian": "Скрытые состояния — пополнение Bottle и индикатор дальности атаки строений в ближнем бою — больше не пытаются показать отсутствующий значок состояния, а",
+      "expected_matches": 1,
+      "source_line": 1884,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Kiss",
+      "russian": "Kiss",
+      "expected_matches": 1,
+      "source_line": 1886,
+      "decision": "MANUAL_POLISH"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "emote&apos;s state icon resolves again.",
+      "russian": "значок состояния эмоции Kiss снова загружается правильно.",
+      "expected_matches": 1,
+      "source_line": 1886,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "KA",
+      "russian": "КА",
+      "expected_matches": 1,
+      "source_line": 1900,
+      "decision": "MACHINE_DRAFT_REVIEWED_NEXT"
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",
+      "english": "Kane",
+      "russian": "Kane",
+      "expected_matches": 1,
+      "source_line": 1905,
+      "decision": "MANUAL_POLISH"
+    }
+  ]
+}

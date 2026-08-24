@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_077_FIRECAT",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_Firecat1_name"], "ru": "Fire Breath"},
+    {"keys": ["entities:Ability_Firecat1_description"], "ru": "Fire выдыхает пламя перед собой, нанося противникам урон и поджигая их."},
+    {"keys": ["entities:Ability_Firecat1_description2"], "ru": ""},
+    {"keys": ["entities:Ability_Firecat1_description_simple"], "ru": "Выберите существо или точку, чтобы выпустить конус пламени. Он наносит ^o{100,175,250} магического урона^*, а затем ещё ^o{30,60,90} магического урона за 3 секунды^*."},
+    {"keys": ["entities:Ability_Firecat1_tooltip_flavor"], "ru": ""},
+    {"keys": ["entities:Ability_Firecat1_IMPACT_effect"], "ru": "Наносит целям в конусе шириной 90 градусов и радиусом 600 ^o{100,175,250} магического урона^*. Затем в течение 3 секунд наносит ещё {10,20,30} магического урона в секунду."},
+
+    {"keys": ["entities:Ability_Firecat2_name"], "ru": "Fire Fang"},
+    {"keys": ["entities:Ability_Firecat2_description"], "ru": "Fire огненной вспышкой бросается к выбранному противнику, наносит ему урон и ненадолго оглушает."},
+    {"keys": ["entities:Ability_Firecat2_description2"], "ru": ""},
+    {"keys": ["entities:Ability_Firecat2_description_simple"], "ru": "Выберите вражеское существо, чтобы броситься к нему, нанести ^o{60,120,180} магического урона^* и ^oоглушить на 0,5 секунды^*."},
+    {"keys": ["entities:Ability_Firecat2_tooltip_flavor"], "ru": ""},
+    {"keys": ["entities:Ability_Firecat2_IMPACT_effect"], "ru": "Прыгает к выбранной цели, при попадании наносит {60,120,180} магического урона и оглушает её на 0,5 секунды."},
+
+    {"keys": ["entities:Ability_Firecat3_name"], "ru": "Together in Spirit"},
+    {"keys": ["entities:Ability_Firecat3_description"], "ru": "Fire и Ice связаны, как бы далеко друг от друга они ни оказались, и всегда могут за считаные секунды воссоединиться."},
+    {"keys": ["entities:Ability_Firecat3_description2"], "ru": ""},
+    {"keys": ["entities:Ability_Firecat3_description_simple"], "ru": "При активации начинает применение длительностью ^o3 секунды^*. После его завершения Fire мгновенно телепортируется к Ice."},
+    {"keys": ["entities:Ability_Firecat3_tooltip_flavor"], "ru": ""},
+    {"keys": ["entities:Ability_Firecat3_IMPACT_effect"], "ru": "После применения длительностью 3 секунды телепортирует Fire к Ice."},
+    {"keys": ["entities:Ability_Firecat3_CHANNEL_START_effect", "entities:Ability_Firecat3_CHANNEL_END_effect"], "ru": ""},
+
+    {"keys": ["entities:Ability_Firecat3b_name"], "ru": "Together in Bright Spirit"},
+    {"keys": ["entities:Ability_Firecat3b_description"], "ru": "Fire и Light связаны, как бы далеко друг от друга они ни оказались, и всегда могут за считаные секунды воссоединиться."},
+    {"keys": ["entities:Ability_Firecat3b_description2"], "ru": ""},
+    {"keys": ["entities:Ability_Firecat3b_description_simple"], "ru": "При активации начинает применение длительностью ^o3 секунды^*. После его завершения Fire мгновенно телепортируется к Light, а пассивная способность Light — Lightning Form — уходит на перезарядку."},
+    {"keys": ["entities:Ability_Firecat3b_tooltip_flavor"], "ru": ""},
+    {"keys": ["entities:Ability_Firecat3b_IMPACT_effect"], "ru": "После применения длительностью 3 секунды телепортирует Fire к Light и отправляет пассивную способность Light — Lightning Form — на перезарядку."},
+    {"keys": ["entities:Ability_Firecat3b_CHANNEL_START_effect", "entities:Ability_Firecat3b_CHANNEL_END_effect"], "ru": ""},
+
+    {"keys": ["entities:Ability_Firecat4_name"], "ru": "Rebirth"},
+    {"keys": ["entities:Ability_Firecat4_description"], "ru": "Fire и Ice вновь объединяются и возрождают Gemini."},
+    {"keys": ["entities:Ability_Firecat4_description2"], "ru": ""},
+    {"keys": ["entities:Ability_Firecat4_description_simple"], "ru": "При активации начинает применение длительностью ^o1,25 секунды^*. После его завершения ^oвоссоздаёт Gemini^* в текущей точке. Текущий процент здоровья и маны Gemini равен большему из соответствующих значений Fire и Ice. Способность недоступна, если Fire и Ice находятся более чем в ^o300 ед. друг от друга^*."},
+    {"keys": ["entities:Ability_Firecat4_tooltip_flavor"], "ru": ""},
+    {"keys": ["entities:Ability_Firecat4_IMPACT_effect"], "ru": "Заставляет Fire и Ice одновременно применить Rebirth. Через 1,25 секунды они вновь объединяются в Gemini, а текущий процент здоровья и маны Gemini становится равен большему из двух соответствующих значений. Fire и Ice должны находиться не дальше 300 ед. друг от друга. Rebirth прерывается, если Fire или Ice получает Безмолвие или оглушение."},
+    {"keys": ["entities:Ability_Firecat4_name:ult_boost"], "ru": "^gRebirth*^*"},
+    {"keys": ["entities:Ability_Firecat4_description_simple:ult_boost", "entities:Ability_Firecat4_IMPACT_effect:ult_boost"], "ru": "При активации начинает применение длительностью ^o1,25 секунды^*. После его завершения ^oвоссоздаёт Gemini^* в текущей точке. Текущий процент здоровья и маны Gemini равен ^gнаибольшему из соответствующих значений Fire, Ice и Light^*. Способность недоступна, если Fire, Ice и Light находятся более чем в ^o300 ед. друг от друга^*."},
+    {"keys": ["entities:Ability_Firecat4_CHANNEL_START_effect", "entities:Ability_Firecat4_CHANNEL_END_effect"], "ru": ""}
+  ]
+}

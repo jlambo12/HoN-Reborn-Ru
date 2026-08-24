@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_143_OPHELIAS_PACT",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Item_OpheliasPact_description"],
+      "ru": "Каждый игрок может купить предмет один раз. Его нельзя выбросить. Награды остаются навсегда.\\n\\nЗаключите договор с Ophelia. Наберите ^g25 очков^*, чтобы открыть постоянное улучшение ^oRaven^* на выбор.\\n\\n^oКак получать очки:^*\\n— Помочь в убийстве: ^g+1 очко^*\\n— Сложить нейтральный лагерь: ^g+3 очка^*\\n— Установить Ward of Sight: ^g+2 очка^*\\n— Уничтожить вражеский Ward of Sight: ^g+3 очка^*\\n— Разместить Raven: ^g+1 очко^*\\n\\nНабрав 25 очков, выберите одну из трёх постоянных наград:\\n\\n^pWatcher's Unity^*: ^oRaven^* получает +300 к дальности обзора, +30 секунд длительности и даёт Clearvision на 10 секунд после приземления.\\n\\n^cRavenSeer^*: даёт ауру, которая обнаруживает ^oRavens^* в радиусе 1000, и +400 к дальности применения ^oRavens^*.\\n\\n^rRavenBane^*: при приземлении ^oRaven^* уничтожает вражеских ^oRavens^* в радиусе 1300. За каждого уничтоженного вражеского ^oRaven^* перезарядка ^oRaven^* сокращается на 30 секунд.\\n\\nВсе награды дополнительно дают 50 золота за убийство вражеских ^oRavens^*."
+    },
+    {
+      "keys": ["entities:Item_OpheliasPact_description_simple"],
+      "ru": "Получайте очки за действия поддержки и, набрав 25, выберите постоянное улучшение Raven."
+    },
+    {
+      "keys": ["entities:Item_OpheliasPact_effect_header"],
+      "ru": "Эффекты Ophelia's Pact"
+    },
+    {
+      "keys": ["entities:Item_OpheliasPact_shop_flavor"],
+      "ru": "Ophelia заботится о джунглях."
+    },
+    {
+      "keys": ["entities:State_OpheliasPact_name"],
+      "ru": "Ophelia's Pact (задание)"
+    },
+    {
+      "keys": ["entities:State_OpheliasPact_description"],
+      "ru": "Наберите ^g25 очков^*, чтобы открыть постоянное улучшение ^oRaven^*.\\n\\n^oОчки за действия:^*\\n— Помощь в убийстве: ^g+1^*\\n— Сложенный нейтральный лагерь: ^g+3^*\\n— Установленный Ward of Sight: ^g+2^*\\n— Уничтоженный вражеский Ward: ^g+3^*\\n— Размещённый Raven: ^g+1^*"
+    },
+    {
+      "keys": ["entities:State_OpheliasPact_description:quest_opheliaspact_State111"],
+      "ru": "Задание ^gвыполнено!^* Выберите награду справа."
+    },
+    {
+      "keys": ["entities:State_OpheliasPact_PermaBuff1_name"],
+      "ru": "Ophelia's Might"
+    },
+    {
+      "keys": ["entities:State_OpheliasPact_PermaBuff3_name"],
+      "ru": "Ophelia's Blessing"
+    },
+    {
+      "keys": ["interface:custom_ui_button_OpheliaQuest1_title"],
+      "ru": "^oНаграда Ophelia: RavenBane^*"
+    },
+    {
+      "keys": ["interface:custom_ui_button_OpheliaQuest1_body"],
+      "ru": "При приземлении ^oRaven^* уничтожает вражеских ^oRavens^* в радиусе 1300. За каждого уничтоженного вражеского ^oRaven^* перезарядка ^oRaven^* сокращается на 30."
+    },
+    {
+      "keys": ["interface:custom_ui_button_OpheliaQuest2_title"],
+      "ru": "^oНаграда Ophelia: RavenSeer^*"
+    },
+    {
+      "keys": ["interface:custom_ui_button_OpheliaQuest2_body"],
+      "ru": "^oRaven^* получает +400 к дальности применения. Героя окружает аура, которая обнаруживает ^oRavens^* в радиусе 1000."
+    },
+    {
+      "keys": ["interface:custom_ui_button_OpheliaQuest3_title"],
+      "ru": "^oНаграда Ophelia: Watcher's Unity^*"
+    },
+    {
+      "keys": ["interface:custom_ui_button_OpheliaQuest3_body"],
+      "ru": "^oRaven^* получает +300 к дальности обзора, +30 секунд длительности и даёт Clearvision на 10 секунд после приземления."
+    }
+  ]
+}

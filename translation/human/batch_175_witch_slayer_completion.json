@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_175_WITCH_SLAYER_COMPLETION",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_WitchSlayer1_IMPACT_effect"],
+      "english_hash": "a63607cd17f0f43c16c0eca7251d0fc80ff8fc55ca4be571ca8c6f150eaac246",
+      "ru": "Создаёт Graveyard длиной 700 в выбранном направлении. Задетые противники взлетают в воздух на 0.52 секунды, а после приземления получают {100,150,200,250} магического урона и оглушаются на {0.8,1.2,1.6,2} секунды."
+    },
+    {
+      "keys": ["entities:Ability_WitchSlayer1_description"],
+      "english_hash": "358efc8a70ba53f5fb8965d321bed5d8d99823ef0ae882280385b68d9c2d3e13",
+      "ru": "Witch Slayer создаёт перед собой временное кладбище. Вражеские юниты, оказавшиеся на святой земле при его появлении, получают урон и оглушаются."
+    },
+    {
+      "keys": ["entities:Ability_WitchSlayer1_description_simple"],
+      "english_hash": "032a8ff6c247f9a70a8dbebcdda8a35f255ea40f8a45f4c6145030ed84e27102",
+      "ru": "Поражает противников вдоль выбранной линии, наносит ^o{100,150,200,250} магического урона^* и ^oоглушает на {1.3,1.7,2.1,2.5} секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_WitchSlayer2_IMPACT_effect"],
+      "english_hash": "dd63982bc8f839eafb6d49f96ffcc8d01aaa228551af93d7b5a451fc6c8f60d3",
+      "ru": "Накладывает на противника Miniaturization на {1.25,2,2.75,3.5} секунды и замедляет его передвижение на 100%. Мгновенно уничтожает вражеские иллюзии и рассеивает скрытность."
+    },
+    {
+      "keys": ["entities:Ability_WitchSlayer2_description"],
+      "english_hash": "af51b0b6e1c123b9f39904a74b6d5953378a1a7211b76b3e982272a49d6163ad",
+      "ru": "Witch Slayer овладел силой камня в своей перчатке и может уменьшить противника, ненадолго сделав его беспомощным."
+    },
+    {
+      "keys": ["entities:Ability_WitchSlayer2_description_simple"],
+      "english_hash": "57fb714929a443e677c8da047535971f2e0d9a40ef3543b847a1d58403eb7d48",
+      "ru": "Превращает противника в уменьшенную версию себя на ^o{1.25,2,2.75,3.5} секунды^*: цель ^oдвижется медленнее и не может атаковать, применять способности или использовать предметы^*. Мгновенно уничтожает вражеские иллюзии и рассеивает скрытность."
+    },
+    {
+      "keys": ["entities:Ability_WitchSlayer2_effect_header"],
+      "english_hash": "d6085c500fc64f76259e0ecc252ee7cdfe94437d8164994ce7f48368d280e221",
+      "ru": "Эффекты Miniaturization"
+    },
+    {
+      "keys": ["entities:Ability_WitchSlayer3_IMPACT_effect"],
+      "english_hash": "13c0bef01faad48a8c3698c0ed8bf010c042f8554b907120ffcf45ba6494eb37",
+      "ru": "На время поддержания накладывает на цель Power Drain. Witch Slayer получает столько же маны, сколько отнимает у цели.\\n\\nМгновенно уничтожает иллюзии."
+    },
+    {
+      "keys": ["entities:Ability_WitchSlayer3_description"],
+      "english_hash": "13e9219b55788273db6bf5cc715720cfdcef2ceb8cb1db6c4f87af1df66f3a84",
+      "ru": "За долгие годы Witch Slayer научился отнимать силу врагов и использовать её для себя."
+    },
+    {
+      "keys": ["entities:Ability_WitchSlayer3_description_simple"],
+      "english_hash": "e33892fe6bedbe54df83f42df34eca7c46b0c6796ca2659345d09db6cbb69193",
+      "ru": "В течение 4 секунд отнимает у противника ^o{25,50,75,100} маны в секунду^*.\\n\\nМгновенно уничтожает вражеские иллюзии."
+    },
+    {
+      "keys": ["entities:Ability_WitchSlayer3_effect_header"],
+      "english_hash": "4874c4eb91a9688cfa28b56991018d08d274acfbc9f4050593a75ff927b9559a",
+      "ru": "Эффекты Power Drain"
+    },
+    {
+      "keys": ["entities:Ability_WitchSlayer4_IMPACT_effect"],
+      "english_hash": "daf620f574abc22fd0367646a7ff952fc665c57898951be9d41d461beabd9641",
+      "ru": "Наносит цели {550,750,950} магического урона."
+    },
+    {
+      "keys": ["entities:Ability_WitchSlayer4_IMPACT_effect:ult_boost"],
+      "english_hash": "5c225eed3598e870d70b17c7a162a626a22ffb2a92cf7e48c88e030b037dfd4c",
+      "ru": "Наносит цели ^g{750,950,1150}^* урона превосходящей магией."
+    },
+    {
+      "keys": ["entities:Ability_WitchSlayer4_description"],
+      "english_hash": "eddb6b19d66a38c229a275e013517c4cddfb8f50c676da4efaa3346d25fb783d",
+      "ru": "Когда других вариантов не остаётся, Witch Slayer стреляет во врага Silver Bullet. После попадания от цели обычно остаётся множество мелких кусочков."
+    },
+    {
+      "keys": ["entities:Ability_WitchSlayer4_description:ult_boost"],
+      "english_hash": "99a9955c8f5a9d5c3511d36c28d3fbd7ac241dd17aa4dd6b753ab739fe8a9aa0",
+      "ru": "Когда других вариантов не остаётся, Witch Slayer выпускает из оружия ^gHeavenly Blast^*. После попадания от цели обычно остаётся множество мелких, но благословлённых кусочков."
+    },
+    {
+      "keys": ["entities:Ability_WitchSlayer4_description_simple"],
+      "english_hash": "66c1bc692a49a665641461ad0d8930ccfd5833beb8b84424768f2202d7ef72ea",
+      "ru": "Стреляет во вражеского юнита ^oSilver Bullet^* и наносит ^o{550,750,950} магического урона^*.\\n\\nЕсли поражённый вражеский герой погибает в течение ^o5 секунд^*, способность получает заряд, навсегда увеличивающий урон на ^o25^*.\\n\\n^gStaff of the Master^* меняет тип урона на ^oурон превосходящей магией^*, ^oувеличивает урон до {750,950,1150}^*, а пуля ^oпробивает основную цель^* и поражает противников ^oвдоль линии^*, нанося каждой следующей цели на 15% меньше урона."
+    },
+    {
+      "keys": ["entities:Ability_WitchSlayer4_description_simple:ult_boost"],
+      "english_hash": "ac51998f1c28c46840c5e212203d1d58a8a6ca4df6e4b00e7b0d5dff35af7146",
+      "ru": "Стреляет во вражеского юнита ^oSilver Bullet^*, наносит ^g{750,950,1150} урона превосходящей магией^*, ^gпробивает основную цель и поражает противников вдоль линии, нанося каждой следующей цели на 15% меньше урона^*.\\n\\nЕсли поражённый вражеский герой погибает в течение ^o5 секунд^*, способность получает заряд, навсегда увеличивающий урон на ^o25^*."
+    },
+    {
+      "keys": ["entities:State_WitchSlayer_Ability2_FRAME_effect"],
+      "english_hash": "1f8523bfadb493522343f8a3a3e8c7510bca05d54086e078f8ba2db0e31f2a4a",
+      "ru": "Базовая скорость передвижения снижена до 100.\\nОтменяет уклонение"
+    },
+    {
+      "keys": ["entities:State_WitchSlayer_Ability3_FRAME_effect"],
+      "english_hash": "348791b1bda5c548543203c4e37ecab8dc744a83ce2752819580187c4cf4fa69",
+      "ru": "Теряет {25,50,75,100} маны в секунду"
+    },
+    {
+      "keys": ["entities:State_WitchSlayer_Ability4_Stack_description"],
+      "english_hash": "3cbf5c643407343c7be16cbdc0a18b3c463f154a389cab0a42dc5b8d3054bcb6",
+      "ru": "Если погибнет в течение 5 секунд, Silver Bullet Witch Slayer получит заряд"
+    },
+    {
+      "keys": ["entities:State_WitchSlayer_Ability4_Stackdisplay_description"],
+      "english_hash": "9c64b00253c988f26124a512abd2adc46a211a6b729399d02edc63e106aa4a27",
+      "ru": "Каждый заряд увеличивает урон на 25"
+    }
+  ]
+}

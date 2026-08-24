@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_100_IOYN_STATES",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:State_IoynStone_Damage_name"],
+      "ru": "Ioyn Damage"
+    },
+    {
+      "keys": ["entities:State_IoynStone_Illusion_name"],
+      "ru": "Ioyn Mystic"
+    },
+    {
+      "keys": ["entities:State_IoynStone_MoveSpeed_name"],
+      "ru": "Ioyn Speed"
+    },
+    {
+      "keys": ["entities:State_IoynStone_Regen_name"],
+      "ru": "Ioyn Regeneration"
+    },
+    {
+      "keys": ["entities:State_IoynStone_Stealth_Fade_name"],
+      "ru": "Переход в невидимость..."
+    },
+    {
+      "keys": ["entities:State_IoynStone_Stealth_Fade_FRAME_effect"],
+      "ru": "Невидимость с задержкой перехода 2 секунды."
+    },
+    {
+      "keys": ["entities:State_IoynStone_Stealth_name"],
+      "ru": "Ioyn Stealth"
+    },
+    {
+      "keys": ["entities:State_IoynStone_Refreshment_name"],
+      "ru": "Ioyn Refreshment"
+    }
+  ]
+}

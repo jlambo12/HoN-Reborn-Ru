@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_081_FLYING_COURIER",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_FlyingCourier1_name"], "ru": "Speed Burst"},
+    {"keys": ["entities:Ability_FlyingCourier1_description"], "ru": "Winged Courier получает огромный прирост скорости передвижения."},
+    {"keys": ["entities:Ability_FlyingCourier1_description_simple"], "ru": "При активации даёт максимальную скорость передвижения на 20 секунд."},
+    {"keys": ["entities:Ability_FlyingCourier1_effect_header"], "ru": "Эффекты Speed Burst"},
+    {"keys": ["entities:Ability_FlyingCourier1_IMPACT_effect"], "ru": "Накладывает на Winged Courier эффект Burst на 20 секунд."},
+
+    {"keys": ["entities:Ability_FlyingCourier2_name"], "ru": "Courier Shield"},
+    {"keys": ["entities:Ability_FlyingCourier2_description"], "ru": "Окружает курьера непробиваемым щитом, который на 4 секунды защищает его от любого урона и заклинаний."},
+    {"keys": ["entities:Ability_FlyingCourier2_description_simple"], "ru": "При активации даёт неуязвимость на 4 секунды."},
+    {"keys": ["entities:Ability_FlyingCourier2_effect_header"], "ru": "Эффекты Courier Shield"},
+    {"keys": ["entities:Ability_FlyingCourier2_IMPACT_effect"], "ru": "Накладывает на Winged Courier эффект Courier Shield на 4 секунды."},
+
+    {"keys": ["entities:Ability_FlyingCourier3_name"], "ru": "Delivery"},
+    {"keys": ["entities:Ability_FlyingCourier3_description", "entities:Ability_FlyingCourier3_description_simple"], "ru": "Winged Courier летит к вашему герою и переносит принадлежащие вам предметы в его инвентарь, если там достаточно места."},
+    {"keys": ["entities:Ability_FlyingCourier3_IMPACT_effect"], "ru": "Передаёт принадлежащие вам предметы герою."},
+
+    {"keys": ["entities:Ability_FlyingCourier4_name"], "ru": "Homeward Bound"},
+    {"keys": ["entities:Ability_FlyingCourier4_description", "entities:Ability_FlyingCourier4_description_simple"], "ru": "Winged Courier возвращается на базу."},
+    {"keys": ["entities:Ability_FlyingCourier4_IMPACT_effect"], "ru": "Летит к ближайшему союзному фонтану."}
+  ]
+}

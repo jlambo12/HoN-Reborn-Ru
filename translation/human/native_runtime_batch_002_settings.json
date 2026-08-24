@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "batch_id": "NATIVE_RUNTIME_002_SETTINGS",
+  "reviewed_by": "Codex settings runtime review",
+  "rows": [
+    {
+      "source_file": "ui/options.interface",
+      "english": "Search Options...",
+      "russian": "Поиск настроек...",
+      "expected_matches": 3
+    },
+    {
+      "source_file": "juvio_options.json",
+      "english": "Juvio Options",
+      "russian": "Настройки Juvio",
+      "expected_matches": 1
+    },
+    {
+      "source_file": "juvio_options.json",
+      "english": "Fullscreen (Borderless Window)",
+      "russian": "Полноэкранный режим (без рамки)",
+      "expected_matches": 1
+    },
+    {
+      "source_file": "juvio_options.json",
+      "english": "Windowed",
+      "russian": "Оконный режим",
+      "expected_matches": 1
+    },
+    {
+      "source_file": "juvio_options.json",
+      "english": "\"Low\"",
+      "russian": "\"Низкое\"",
+      "expected_matches": 1
+    },
+    {
+      "source_file": "juvio_options.json",
+      "english": "\"Medium\"",
+      "russian": "\"Среднее\"",
+      "expected_matches": 1
+    },
+    {
+      "source_file": "juvio_options.json",
+      "english": "\"High\"",
+      "russian": "\"Высокое\"",
+      "expected_matches": 1
+    }
+  ]
+}

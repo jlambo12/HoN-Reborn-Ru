@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_148_PARASITE_34",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Parasite3_description"],
+      "ru": "Любая цель, которую атакует Parasite, получает от него больше урона и наносит ему меньше урона.\\n\\nDraining Venom накладывается, когда вы атакуете цель заражённым юнитом или применяете к ней способность."
+    },
+    {
+      "keys": ["entities:Ability_Parasite3_description_simple"],
+      "ru": "Пассивно: атаки и способности против юнитов, не являющихся боссами, накладывают Draining Venom. На ^o{6,12,18,24}%^* снижает урон цели по Parasite и увеличивает урон Parasite по этой цели.\\n\\nDraining Venom накладывается, когда вы атакуете цель заражённым юнитом или применяете к ней способность."
+    },
+    {
+      "keys": ["entities:Ability_Parasite3_effect_header"],
+      "ru": "Эффекты Draining Venom"
+    },
+    {
+      "keys": ["entities:Ability_Parasite3_tooltip_flavor"],
+      "ru": "Меня не достать!"
+    },
+    {
+      "keys": ["entities:Ability_Parasite3_ATTACK_IMPACT_effect"],
+      "ru": "Накладывает на цель Draining Venom на 3 секунды. Не действует на боссов."
+    },
+    {
+      "keys": ["entities:State_Parasite_Ability3_FRAME_effect"],
+      "ru": "Получает от Parasite на {6,12,18,24}% больше урона и наносит Parasite на {6,12,18,24}% меньше урона."
+    },
+    {
+      "keys": ["entities:Ability_Parasite4_description"],
+      "ru": "Parasite похищает сильные стороны врагов, передавая им собственные слабости."
+    },
+    {
+      "keys": ["entities:Ability_Parasite4_description_simple"],
+      "ru": "Выберите врага, чтобы прыгнуть к нему, ^oобменять свои Debuffs на его Buffs^*, нанести ^o{250,350,450} магического урона^* и наложить ^oБезмолвие на {2,3,4} секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_Parasite4_tooltip_flavor"],
+      "ru": "Давай меняться!"
+    },
+    {
+      "keys": ["entities:Ability_Parasite4_IMPACT_effect"],
+      "ru": "Прыгает к выбранному врагу.\\n\\nПри попадании передаёт цели ваши Debuffs, а вам — её Buffs.\\n\\nНаносит {250,350,450} магического урона и накладывает на цель Безмолвие на {2,3,4} секунды."
+    },
+    {
+      "keys": ["entities:State_Parasite_Ability4_name"],
+      "ru": "Sapped~!"
+    },
+    {
+      "keys": ["entities:State_Parasite_Ability4_SelfDisarm_name"],
+      "ru": "Leapin'"
+    },
+    {
+      "keys": ["entities:Hero_Parasite_description"],
+      "ru": "Пока мир наверху полыхал, в глубочайших расщелинах Newerth, в первобытной жиже, медленно развивалась и размножалась отвратительная смесь разумных студней, болезнетворных организмов и прочих обитателей глубин. Из этой зловонной ямы явился Parasite — омерзительно разумный и воплощённо хаотичный злодей."
+    },
+    {
+      "keys": ["entities:Hero_Parasite_role"],
+      "ru": "Parasite — лесной герой, чрезвычайно сильный в схватках один на один. Он может постоянно участвовать в нападениях на вражеских героев, не отставая при этом по развитию за счёт нейтралов."
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_Parasite_1"],
+      "ru": "В опасной ситуации вселение в крипа помогает спастись. Особенно хороша катапульта: она даст вам невосприимчивость к магии."
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_Parasite_2"],
+      "ru": "Лучших найденных крипов стоит приберечь для нападения на вражеских героев."
+    },
+    {
+      "keys": ["interface:hero_tip_defensive_tip_Hero_Parasite_1"],
+      "ru": "Когда Parasite вселяется в крипа, значок героя исчезает с мини-карты. Следите за одинокими значками крипов: в одном из них может скрываться Parasite."
+    },
+    {
+      "keys": ["interface:hero_tip_defensive_tip_Hero_Parasite_2"],
+      "ru": "Parasite наносит высокий взрывной магический урон. Магическая броня — например, Mystic Vestments — поможет пережить его комбинацию."
+    }
+  ]
+}

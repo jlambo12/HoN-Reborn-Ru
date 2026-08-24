@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_088_GLADIATOR",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_Gladiator1_name"], "ru": "Pitfall"},
+    {"keys": ["entities:Ability_Gladiator1_description"], "ru": "Арены гладиаторов полны ям и ловушек. Gladiator может призвать дух арены где угодно, создав Spike Trap, которая сработает через некоторое время. Попавшие в неё противники получают урон, подбрасываются и замедляются."},
+    {"keys": ["entities:Ability_Gladiator1_description_simple"], "ru": "Создаёт ^oPitfall^* в выбранной точке. Через ^o1,5 секунды^* ловушка подбрасывает противников на ^o1,5 секунды^*, наносит ^o{75,150,225,300} магического урона^* и ^oснижает скорость передвижения на 30%^* на ^o{1,2,3,4} секунды^*.\\n\\nПосле срабатывания временно даёт обзор вокруг ^oPitfall^*."},
+    {"keys": ["entities:Ability_Gladiator1_description2"], "ru": ""},
+    {"keys": ["entities:Ability_Gladiator1_effect_header"], "ru": "Эффекты Spiked!"},
+    {"keys": ["entities:Ability_Gladiator1_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_Gladiator1_tooltip_flavor"], "ru": "Ты идёшь вни... то есть вверх!"},
+    {"keys": ["entities:Ability_Gladiator1_IMPACT_effect"], "ru": "Создаёт в выбранной точке Pitfall, видимую только союзникам. Через 1,5 секунды ловушка наносит противникам в области {75,150,225,300} магического урона, подбрасывает их на 1,5 секунды и накладывает Spiked! на {1,2,3,4} секунды.\\n\\nПосле срабатывания вокруг Pitfall действует беспрепятственный обзор радиусом 400 днём и ночью."},
+
+    {"keys": ["entities:Ability_Gladiator2_name"], "ru": "Showdown"},
+    {"keys": ["entities:Ability_Gladiator2_description"], "ru": "Поединки один на один — смысл жизни гладиатора, и он может бросить вызов кому угодно и когда угодно. Через несколько секунд цель возвращается туда, где получила вызов, и бой начинается!"},
+    {"keys": ["entities:Ability_Gladiator2_description_simple"], "ru": "Отмечает существо эффектом ^oShowdown^* и возвращает его в отмеченную точку через ^r4 секунды^*, если это ^rпротивник^*, или через ^c7 секунд^*, если это ^cсоюзник^*. Способность можно ^oактивировать повторно^*, чтобы вернуть цель раньше. Временно даёт обзор вокруг метки ^oShowdown^*."},
+    {"keys": ["entities:Ability_Gladiator2_description2"], "ru": ""},
+    {"keys": ["entities:Ability_Gladiator2_effect_header"], "ru": "Эффекты Challenged to Fight"},
+    {"keys": ["entities:Ability_Gladiator2_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_Gladiator2_tooltip_flavor"], "ru": "Держись у башни, я верну беглецов!"},
+    {"keys": ["entities:Ability_Gladiator2_IMPACT_effect"], "ru": "Призывает Colosseum в месте нахождения цели и накладывает на неё Challenged to Fight на 4 секунды.\\n\\nПовторная активация досрочно телепортирует отмеченное существо к Colosseum. Существа с иммунитетом к магии не телепортируются.\\n\\nВокруг Colosseum на 5 секунд появляется беспрепятственный обзор радиусом 1000 днём и ночью."},
+    {"keys": ["entities:Ability_Gladiator2_name:gladiator_return"], "ru": "I Have No Patience"},
+    {"keys": ["entities:Ability_Gladiator2_description:gladiator_return"], "ru": "Гладиаторы не славятся терпением. Gladiator может в любой момент вернуть вызванную на бой цель и немедленно начать поединок."},
+    {"keys": ["entities:Ability_Gladiator2_description_simple:gladiator_return"], "ru": "Телепортирует цель Showdown обратно в отмеченную точку."},
+    {"keys": ["entities:Ability_Gladiator2_tooltip_flavor:gladiator_return"], "ru": ""},
+    {"keys": ["entities:Ability_Gladiator2_IMPACT_effect:gladiator_return"], "ru": "Мгновенно возвращает цель с Challenged to Fight к Colosseum."},
+
+    {"keys": ["entities:Ability_Gladiator3_name"], "ru": "Flagellation"},
+    {"keys": ["entities:Ability_Gladiator3_description"], "ru": "Владеть лишь одним оружием — слабость. Gladiator освоил множество видов оружия, но в качестве дополнительного предпочитает кнут: им легко достать противника на большом расстоянии."},
+    {"keys": ["entities:Ability_Gladiator3_description_simple"], "ru": "Усиливает следующую атаку: она наносит ^o{20,40,60,80} дополнительного урона^* и ^o100% чистого урона по области радиусом {380,420,460,500}^*.\\n\\nПри атаке союзного существа добавляется только 0,5x дополнительного урона."},
+    {"keys": ["entities:Ability_Gladiator3_description2", "entities:Ability_Gladiator3_effect_header", "entities:Ability_Gladiator3_effect_header2", "entities:Ability_Gladiator3_FRAME_effect", "entities:Ability_Gladiator3_ATTACK_START_effect"], "ru": ""},
+    {"keys": ["entities:Ability_Gladiator3_tooltip_flavor"], "ru": "Если сомневаешься — доставай кнут."},
+
+    {"keys": ["entities:Ability_Gladiator4_name"], "ru": "Call to Arms"},
+    {"keys": ["entities:Ability_Gladiator4_name:ult_boost"], "ru": "^gCall to Arms*^*"},
+    {"keys": ["entities:Ability_Gladiator4_description"], "ru": "У гладиаторов всегда находятся союзники там, где их не ждут. Gladiator призывает Chariot, которая воодушевляет союзников и топчет противников."},
+    {"keys": ["entities:Ability_Gladiator4_description_simple"], "ru": "Призывает Chariot, которая движется к выбранной точке и ^oусиливает союзников^* на своём пути, давая им ^o10% к скорости передвижения^* и ^o50% снижения входящего урона^* на ^o6 секунд^*. Сниженный урон снимается со здоровья после окончания эффекта.\\n\\nВ конечной точке Chariot наносит противникам ^o{300,450,600} магического урона^* и ^oоглушает их на 1 секунду^*. Во время движения Chariot даёт обзор, который ненадолго сохраняется после удара.\\n\\n^gStaff of the Master:^* союзные герои могут запрыгнуть в Chariot. Каждый герой увеличивает урон на 10%, а радиус — на 75; отложенный урон после окончания эффекта больше не наносится."},
+    {"keys": ["entities:Ability_Gladiator4_description_simple:ult_boost"], "ru": "Призывает Chariot, которая движется к выбранной точке и ^oусиливает союзников^* на своём пути, давая им ^o10% к скорости передвижения^* и ^o50% снижения входящего урона^* на ^o6 секунд^*.\\n\\nВ конечной точке Chariot наносит противникам ^o{300,450,600} магического урона^* и ^oоглушает их на 1 секунду^*. Во время движения Chariot даёт обзор, который ненадолго сохраняется после удара. ^gСоюзные герои могут запрыгнуть в Chariot; каждый из них увеличивает урон на 10%, а радиус — на 75.^*"},
+    {"keys": ["entities:Ability_Gladiator4_description2"], "ru": ""},
+    {"keys": ["entities:Ability_Gladiator4_effect_header"], "ru": "Эффекты Call to Arms"},
+    {"keys": ["entities:Ability_Gladiator4_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_Gladiator4_tooltip_flavor"], "ru": "Это не Спарта... ЭТО NEWERTH!"},
+    {"keys": ["entities:Ability_Gladiator4_IMPACT_effect"], "ru": "Призывает позади Gladiator Chariot, которая проезжает 2000 ед. в выбранном направлении. На пройденных союзников Chariot накладывает Call to Arms на 6 секунд.\\n\\nВ конечной точке Chariot наносит противникам в радиусе 450 {300,450,600} магического урона и оглушает их на 1 секунду.\\n\\nВокруг Chariot действует беспрепятственный обзор радиусом 800 днём и ночью. Обзор сохраняется ещё 3,34 секунды."}
+  ]
+}

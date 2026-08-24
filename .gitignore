@@ -1,0 +1,50 @@
+# Local configuration
+project.json
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+
+# JavaScript / Astro
+**/node_modules/
+website/dist/
+website/.astro/
+website/source-assets/
+
+# Generated builds, backups, caches, and local QA evidence
+build/*
+!build/.gitkeep
+backups/*
+!backups/.gitkeep
+dist/
+translation/cache/
+translation/runtime/
+reports/
+translation/reports/*
+!translation/reports/controlled_001_validation.json
+!translation/reports/controlled_001_runtime_build.json
+!translation/reports/controlled_002_validation.json
+!translation/reports/controlled_002_source_resolution.json
+!translation/reports/CONTROLLED_002_CANDIDATE_REPORT.md
+!translation/reports/controlled_003_validation.json
+!translation/reports/controlled_003_runtime_build.json
+!translation/reports/controlled_003_all_current_decisions.jsonl
+
+# Local upstream/donor snapshots are reproducible but not redistributable here
+src/upstream/
+src/extended_ru/
+external/
+
+# Historical review bundles and OS/editor files
+HoN-Reborn-RU-*.zip
+*.user
+*.suo
+.DS_Store
+Thumbs.db

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_083_GADGETS",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_Gadget_EmeraldWarden3_name"], "ru": "Trigger Overgrowth"},
+    {"keys": ["entities:Ability_Gadget_EmeraldWarden3_description_simple", "entities:Ability_Gadget_EmeraldWarden3_IMPACT_effect"], "ru": "Уничтожает этот ^oOvergrowth^* и активирует его: противники поблизости обездвиживаются и в течение ^o{1.5,2,2.5,3} секунды^* получают ^o{60,70,80,90} магического урона в секунду (в 1,5x больше существа, не являющиеся героями)^*.\\n\\nСпособность нельзя применить в течение 1,5 секунды после размещения Overgrowth."},
+
+    {"keys": ["entities:Ability_Gadget_Monarch3_name"], "ru": "Detonate"},
+    {"keys": ["entities:Ability_Gadget_Monarch3_description"], "ru": "Взрывает Noxious Nightcrawler, превращая его в Noxious Cloud."},
+    {"keys": ["entities:Ability_Gadget_Monarch3_description_simple"], "ru": "Взрывает выбранного Noxious Nightcrawler и создаёт огромный Noxious Cloud."},
+    {"keys": ["entities:Ability_Gadget_Monarch3_IMPACT_effect"], "ru": "Заставляет выбранного Noxious Nightcrawler применить Detonate и превратиться в Noxious Cloud. Противники внутри Noxious Cloud каждую секунду получают ^o{15,22,28,35} магического урона^*, а их скорость передвижения снижается на ^o{20,25,30,35}%^*. Noxious Cloud даёт беспрепятственный обзор радиусом 400."},
+
+    {"keys": ["entities:Ability_Gadget_Scout2_name"], "ru": "Destroy Electric Eye"},
+    {"keys": ["entities:Ability_Gadget_Scout2_description"], "ru": "Уничтожает этот Electric Eye, позволяя Scout самому выбрать, какой Electric Eye исчезнет перед размещением нового."},
+    {"keys": ["entities:Ability_Gadget_Scout2_description_simple"], "ru": "При активации уничтожает этот Electric Eye. Это позволяет Scout самому выбрать, какой Electric Eye исчезнет перед размещением нового."},
+    {"keys": ["entities:Ability_Gadget_Scout2_IMPACT_effect"], "ru": "Уничтожает этот Electric Eye."},
+
+    {"keys": ["entities:Ability_Gadget_Scout2_2_name"], "ru": "Detonate"},
+    {"keys": ["entities:Ability_Gadget_Scout2_2_description"], "ru": "Взрывает ближайший Electric Eye и накладывает Безмолвие на противников поблизости."},
+    {"keys": ["entities:Ability_Gadget_Scout2_2_description_simple"], "ru": "Взрывает этот Electric Eye и накладывает на противников в радиусе 450 Безмолвие на {2,3,4,5} секунды."},
+    {"keys": ["entities:Ability_Gadget_Scout2_2_IMPACT_effect"], "ru": "Взрывает этот Electric Eye и накладывает на противников в радиусе 450 Безмолвие на {2,3,4,5} секунды. У всех Electric Eyes общая перезарядка способности Detonate."}
+  ]
+}

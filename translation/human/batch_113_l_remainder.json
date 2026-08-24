@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_113_L_REMAINDER",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Building_LegionRepeater1_name"],
+      "ru": "Святилище"
+    },
+    {
+      "keys": ["entities:Building_LegionRepeater3_name", "entities:Building_LegionRepeater4_name", "entities:Building_LegionRepeater6_name"],
+      "ru": "Хижина"
+    },
+    {
+      "keys": ["entities:Building_LegionStore_name"],
+      "ru": "Обсерватория"
+    },
+    {
+      "keys": ["entities:Building_LegionWell_Reborn_name"],
+      "ru": "Колодец жизни"
+    },
+    {
+      "keys": ["entities:State_LegionHealingWell_name"],
+      "ru": "Лечебный колодец"
+    },
+    {
+      "keys": ["entities:State_LegionHealingWell_Speed_name"],
+      "ru": "Лечебный колодец (скорость)"
+    },
+    {
+      "keys": ["entities:State_LegionHealingWell_Speed_FRAME_effect"],
+      "ru": "Развеивается при вступлении в бой."
+    },
+    {
+      "keys": ["entities:Ability_LoggersHatchet_description_simple", "entities:Ability_LoggersHatchet_IMPACT_effect"],
+      "ru": "Выберите ^oдерево^*, чтобы запустить в него снаряд и ^oуничтожить его^*."
+    },
+    {
+      "keys": ["entities:Ability_LoggersHatchet_IMPACT_effect:impaler_upgrade"],
+      "ru": "Уничтожает выбранное ^oдерево^* или наносит ваш ^oурон от атаки^* выбранному ^oвражескому крипу, гаджету или варду^*."
+    },
+    {
+      "keys": ["entities:Ability_LoggersHatchet_FRAME_effect:creepdamage_ranged"],
+      "ru": "+10 урона по вражеским существам, не являющимся героями."
+    },
+    {
+      "keys": ["entities:Ability_LoggersHatchet_FRAME_effect:creepdamage_melee"],
+      "ru": "+20 урона по вражеским существам, не являющимся героями."
+    },
+    {
+      "keys": ["entities:Building_Legion_Beacon_name"],
+      "ru": "Маяк Legion"
+    },
+    {
+      "keys": ["entities:State_Lightbrand_Burning_name"],
+      "ru": "Searing"
+    },
+    {
+      "keys": ["entities:State_Lightbrand_Burning_FRAME_effect:lightbrand_searing"],
+      "ru": "9 магического урона за заряд в секунду."
+    },
+    {
+      "keys": ["entities:State_LexTalionis_Aura_name"],
+      "ru": "Lex Talionis (аура)"
+    }
+  ]
+}

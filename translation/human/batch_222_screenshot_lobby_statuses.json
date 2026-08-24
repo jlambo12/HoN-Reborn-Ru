@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_222_SCREENSHOT_LOBBY_STATUSES",
+  "scope": "Lobby ban panel and in-match status labels from screenshot review",
+  "catalog_apply": true,
+  "reviewed_by": "Codex manual screenshot review 2026-08-24",
+  "entries": [
+    {"keys":["interface:ban_pick_desc"],"english_hash":"2957903c6c79cfe937b95d344cfc9bd0e28d186e1cc10259f209f6a97e4813bd","ru":"Выберите героев для возможного запрета в порядке приоритета — от первого к последнему."},
+    {"keys":["interface:ban_pick_clear"],"english_hash":"5bc371236aad6d33900f3178016bd6511c0cfb385471045440a43eef07725f12","ru":"Очистить"},
+    {"keys":["interface:slowed_title"],"english_hash":"851048823b87faa3ea81132afad085f7d46c259da0ce6206e47b865018018f8a","ru":"Замедление"},
+    {"keys":["interface:stunned_title"],"english_hash":"6f9e89b67d77112fe25395befc2692931d3ff19a5b4d61065a23c39237fb4e16","ru":"Оглушение"},
+    {"keys":["interface:rooted_title"],"english_hash":"160c721fc313838bb05cb4c69faf3f97ec3ad3fa6775d4fb56a72f83c251962e","ru":"Обездвиживание"},
+    {"keys":["interface:silenced_title"],"english_hash":"472d834bd07f8a0a341e276137795ee65fcfc56de6c09cdd7453d476b549eaad","ru":"Безмолвие"}
+  ]
+}

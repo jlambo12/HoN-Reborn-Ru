@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_071_ELEPHANT_BOSS",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_ElephantBoss1_name"], "ru": "Sleeping Powder"},
+    {"keys": ["entities:Ability_ElephantBoss1_description", "entities:Ability_ElephantBoss1_description_simple"], "ru": "При активации запускает снаряд в воздух. После падения он распыляет Sleeping Powder, накладывает на всех юнитов в области ^oпостепенно усиливающееся замедление передвижения^*, а затем ^oусыпляет их на 3 секунды^*."},
+    {"keys": ["entities:Ability_ElephantBoss2_name"], "ru": "Water Cannon"},
+    {"keys": ["entities:Ability_ElephantBoss2_description", "entities:Ability_ElephantBoss2_description_simple"], "ru": "При активации выпускает поток воды в выбранном направлении. Противники в области получают ^o20% своего максимального здоровья в виде магического урона^*."},
+    {"keys": ["entities:Ability_ElephantBoss3_name"], "ru": "Geysers"},
+    {"keys": ["entities:Ability_ElephantBoss3_description", "entities:Ability_ElephantBoss3_description_simple"], "ru": "При активации создаёт гейзеры в случайных точках вокруг Songkranstein. Коснувшийся гейзера противник выбрасывается за пределы ямы и получает ^o20% своего максимального здоровья в виде магического урона^*."},
+    {"keys": ["entities:Ability_ElephantBoss4_name"], "ru": "Water Spouts"},
+    {"keys": ["entities:Ability_ElephantBoss4_description", "entities:Ability_ElephantBoss4_description_simple"], "ru": "При активации Songkranstein выпускает 3 вращающихся Water Spouts. При касании они ^oотталкивают противников^*, каждую секунду наносят ^o10% максимального здоровья в виде магического урона^* и ^oзамедляют на 50%^*."}
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_188_TUNDRA_COMPLETION",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Tundra1_IMPACT_effect"],
+      "english_hash": "32b1ee51237f50ce8a2ab21b08aed02424e016ea88cacec3367d3729ff94fb6d",
+      "ru": "Все задетые ледяными осколками цели получают до ^o{140,210,280,350} магического урона^*. Каждый осколок может один раз нанести противнику 50% указанного урона.\\n\\nСпособность уничтожает деревья и во время действия даёт беспрепятственный дневной и ночной обзор в радиусе 500."
+    },
+    {
+      "keys": ["entities:Ability_Tundra1_description"],
+      "english_hash": "cb319d1c9a2d7bad3807a1e01a9ef0b5d86661cc3da3c3faf59807d2d2959110",
+      "ru": "Tundra по своей воле создаёт смертоносные ледяные шипы и выпускает две волны в сторону врагов. Осколки изгибаются к цели и уничтожают деревья на пути."
+    },
+    {
+      "keys": ["entities:Ability_Tundra1_description2"],
+      "english_hash": "bb0de281251930ec0951a5ebea690025e5438ed265f861113ac7c69a3762214f",
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff:^* сокращает перезарядку до 4 секунд."
+    },
+    {
+      "keys": ["entities:Ability_Tundra1_description_simple"],
+      "english_hash": "d78c112e4c4d6768d25cdf70abbc7f045107a937ffa1cc7a0dc6ae37db7ea10f",
+      "ru": "Выпускает в выбранную точку две изгибающиеся волны смертоносных ^oPiercing Shards^*, каждая из которых наносит ^o{70,105,140,175} магического урона^*. Уничтожает деревья.\\n\\n^gStaff of the Master^* сокращает перезарядку способности до 4 секунд."
+    },
+    {
+      "keys": ["entities:Ability_Tundra1_description_simple:ult_boost"],
+      "english_hash": "0a7185a15ccfb0242e10d316ce1f2781080020bf672a886f872026e58bc0cbf4",
+      "ru": "Выпускает в выбранную точку две изгибающиеся волны смертоносных ^oPiercing Shards^*, каждая из которых наносит ^o{70,105,140,175} магического урона^*. Уничтожает деревья."
+    },
+    {
+      "keys": ["entities:Ability_Tundra2_IMPACT_effect"],
+      "english_hash": "b79b81d4a90f14b155fb2da315e7a0dd646c6cb3e8bf4b7bd13e30fdbd262346",
+      "ru": "При применении совершает рывок к цели и ^oатакует^* её при столкновении. Также ^oзамедляет её передвижение на 40% на 2 секунды^* и накладывает ^oCold Shoulder^* на 8 секунд."
+    },
+    {
+      "keys": ["entities:Ability_Tundra2_description"],
+      "english_hash": "c20ed931b624e7ebc96780c54029a028308d4b89812eca884ff5a3c3a595c1ed",
+      "ru": "Tundra устремляется к врагу и при столкновении покрывает его льдом. По такой цели союзники атакуют быстрее, а каждая их атака замедляет её передвижение."
+    },
+    {
+      "keys": ["entities:Ability_Tundra2_description_simple"],
+      "english_hash": "d1c5d6d1834868e5515ca452463b4e45a32f00737f2044764999c1acf990618a",
+      "ru": "Совершает сквозь любую местность рывок к противнику, ^oатакует^* его при столкновении и ^oзамедляет передвижение на 40% на 2 секунды^*. В течение следующих 8 секунд каждый союзник, атакующий цель, получает ^o{0,20,40,60,80} скорости атаки^* на 2 секунды."
+    },
+    {
+      "keys": ["entities:Ability_Tundra2_effect_header"],
+      "english_hash": "6d9cf890f2b77bbeaee88983cca429d7ebefe9990523238b910926b78cd7214c",
+      "ru": "Эффекты Cold Shoulder"
+    },
+    {
+      "keys": ["entities:Ability_Tundra3_IMPACT_effect"],
+      "english_hash": "8fdd1e5456dc917b73cb50d267daf35e222af455575eb9811b3a633fac52c1e1",
+      "ru": "Призывает ^oCoeurl^* с {350,400,450,500} здоровья, {15,25,35,45} урона атаки и дальностью атаки 550. Обычные атаки ^oCoeurl^* на 3 секунды дают ^o-{10,20,30,40} скорости атаки и -{10,20,30,40}% скорости передвижения^*.\\n\\nПассивно призывает летающего разведчика ^oShiver^*, который следует за вами со ^oскоростью {300,325,350,375}^* и даёт ^o{750,900,1050,1200} беспрепятственного обзора^*. ^oShiver^* также ^oневидим^* для противников, пока они не приблизятся, и погибает от ^o1 удара^*."
+    },
+    {
+      "keys": ["entities:Ability_Tundra3_IMPACT_effect:ult_boost"],
+      "english_hash": "87ea88363de3d53c05b0f8e710ab7f13509b6a4a57e7ce94b9af01bf15e86807",
+      "ru": "Призывает ^g2 Coeurl^* с ^g{900,1000,1100,1200} здоровья^*, {15,25,35,45} урона атаки и дальностью атаки 550. Обычные атаки ^oCoeurl^* на 3 секунды дают ^o-{10,20,30,40} скорости атаки и -{10,20,30,40}% скорости передвижения^*.\\n\\nПассивно призывает летающего разведчика ^oShiver^*, который следует за вами со ^oскоростью {300,325,350,375}^* и даёт ^o{750,900,1050,1200} беспрепятственного обзора^*. ^oShiver^* также ^oневидим^* для противников, пока они не приблизятся, и погибает от ^o1 удара^*."
+    },
+    {
+      "keys": ["entities:Ability_Tundra3_Patrol_IMPACT_effect"],
+      "english_hash": "c35ad6b9f4053fb0a171af93cd6410d1f4db0b03274da8cda2274c97b79b357c",
+      "ru": "При применении приказывает ^oпатрулировать^* между текущей и выбранной точками, двигаясь туда и обратно и атакуя встреченных противников.\\n\\nМожно применить к союзному юниту, чтобы следовать за ним и атаковать его врагов."
+    },
+    {
+      "keys": ["entities:Ability_Tundra3_Patrol_Passive_IMPACT_effect"],
+      "english_hash": "b8b87e0fb9b4d18c6bcce75ac2bae16c326fb5139af2eb1f3ad5e11394a1ded0",
+      "ru": "При применении приказывает ^oпатрулировать^* между текущей и выбранной точками, двигаясь туда и обратно.\\n\\nМожно применить к союзному юниту, чтобы следовать за ним."
+    },
+    {
+      "keys": ["entities:Ability_Tundra3_Patrol_Passive_description", "entities:Ability_Tundra3_Patrol_description"],
+      "english_hash": "120a17efdd55c280da4220c7e9d412e437984bd16e3abf0ad3d9ddda5f03beef",
+      "ru": "Патрулирует между текущей и выбранной точками."
+    },
+    {
+      "keys": ["entities:Ability_Tundra3_Patrol_Passive_description_simple"],
+      "english_hash": "87e84525f8d1e5f517568dd0cefd4bcba8043315dcc044cfc69b3e363eeb9c94",
+      "ru": "При применении приказывает ^oпатрулировать^* между текущей и выбранной точками."
+    },
+    {
+      "keys": ["entities:Ability_Tundra3_Patrol_description_simple"],
+      "english_hash": "f68d42227605c576bc2a8673cc7b2cf7165cd71fdb42709e8cf2769bbd6444e5",
+      "ru": "При применении приказывает ^oпатрулировать^* между текущей и выбранной точками, атакуя встреченных противников."
+    },
+    {
+      "keys": ["entities:Ability_Tundra3_Pet2_IMPACT_effect", "entities:Ability_Tundra3_Pet2_description_simple"],
+      "english_hash": "30d138987d89391016d82400f953a8dd14883810769034e69db396005cee6c66",
+      "ru": "^oМгновенно телепортируется к Tundra.^*\\n\\nЕсли Shiver получает урон, способность перезаряжается 3 секунды."
+    },
+    {
+      "keys": ["entities:Ability_Tundra3_Pet_Coeurl_Ability1_ATTACK_IMPACT_effect"],
+      "english_hash": "b4dfaaa94cc9eb0dd8df4e92019279c809f7ac17400542b601555284c6dff126",
+      "ru": "Накладывает Winter's Bite на 3 секунды"
+    },
+    {
+      "keys": ["entities:Ability_Tundra3_Pet_Coeurl_Ability1_description"],
+      "english_hash": "71795ceebb81ab226ce9ec9b8de07c9aa373bfdd703dc0f15e4530c6839bcc9f",
+      "ru": "Coeurl не только старейший в прайде, но и единственный, кто овладел морозным укусом льда. Вместо когтей и зубов он бросает во врагов лёд, ненадолго замедляя их каждым попаданием."
+    },
+    {
+      "keys": ["entities:Ability_Tundra3_Pet_Coeurl_Ability1_description_simple"],
+      "english_hash": "0b2ca7e6c243658fa81d826ab9af18c17c87b94d6d7dfb28ef66d55e8f0c674a",
+      "ru": "Накладывает ^o-{10,20,30,40}% скорости передвижения и -{10,20,30,40} скорости атаки^*."
+    },
+    {
+      "keys": ["entities:Ability_Tundra3_Pet_Coeurl_Ability1_effect_header"],
+      "english_hash": "f3e1f77bb402d074e9dab49f8e40afc8780036f21648022f66f7ec48e36612ad",
+      "ru": "Эффекты Winter's Bite"
+    },
+    {
+      "keys": ["entities:Ability_Tundra3_Pet_IMPACT_effect", "entities:Ability_Tundra3_Pet_description_simple"],
+      "english_hash": "10aad66c8a739a888873f077c978532f3f25d0ba91f25f221e1e85cbc6e3a710",
+      "ru": "Возвращается в ^oрежим следования^*."
+    },
+    {
+      "keys": ["entities:Ability_Tundra3_Sub_IMPACT_effect"],
+      "english_hash": "aed6a2571f96ac170bed6168465abe811d36ba06b4579ecb4cdbfca4c86dd611",
+      "ru": "Отправляет ^oShiver^* в выбранную точку или, при применении к себе, возвращает его в режим следования.\\n\\nВ режиме следования Shiver автоматически телепортируется к вам, если отстанет более чем на 3000 единиц."
+    },
+    {
+      "keys": ["entities:Ability_Tundra3_Sub_description", "entities:Ability_Tundra3_Sub_description_simple"],
+      "english_hash": "e4d8146fd5fa9cb43d633a5f6cda309f04e202fdd92b50432ef78b1d25cfe800",
+      "ru": "Отправляет ^oShiver^* в выбранную точку или применяется к себе, чтобы он снова следовал за вами.\\n\\nПосле смерти ^oShiver^* способность перезаряжается ^c{80,70,60,50} секунд^*."
+    },
+    {
+      "keys": ["entities:Ability_Tundra3_description2"],
+      "english_hash": "4c034f0e2461d5c69bc6c40ce56ac0c2359d9d73c1c21a8dbd04d383744b1faa",
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff:^* призывает дополнительного Coeurl и увеличивает его максимальное здоровье до {900,1000,1100,1200}."
+    },
+    {
+      "keys": ["entities:Ability_Tundra3_description_simple"],
+      "english_hash": "1871e91ea555bdd52e5cdb22965fd0bba7d12996f0b0c651efcd4da46206a8e4",
+      "ru": "Пассивно призывает летающего разведчика ^oShiver^*, который следует за вами со ^oскоростью {300,325,350,375}^* и даёт ^o{750,900,1050,1200} беспрепятственного обзора^*. ^oShiver^* также ^oневидим^* для противников, пока они не приблизятся, и погибает от ^o1 удара^*.\\n\\nПризывает ^oCoeurl^* с {350,400,450,500} здоровья, {15,25,35,45} урона атаки и дальностью атаки 550. Обычные атаки ^oCoeurl^* на 3 секунды дают ^o-{10,20,30,40} скорости атаки и -{10,20,30,40}% скорости передвижения^*.\\n\\n^gStaff of the Master:^* призывает дополнительного ^oCoeurl^* и увеличивает максимальное здоровье ^oCoeurl^* до {900,1000,1100,1200}."
+    },
+    {
+      "keys": ["entities:Ability_Tundra3_description_simple:ult_boost"],
+      "english_hash": "958f716e467e88b22c3858a7834677ccba660e8c1526ec5951265cd0382fe8d2",
+      "ru": "Пассивно призывает летающего разведчика ^oShiver^*, который следует за вами со ^oскоростью {300,325,350,375}^* и даёт ^o{750,900,1050,1200} беспрепятственного обзора^*. ^oShiver^* также ^oневидим^* для противников, пока они не приблизятся, и погибает от ^o1 удара^*.\\n\\nПризывает ^g2 Coeurl^* с ^g{900,1000,1100,1200} здоровья^*, {15,25,35,45} урона атаки и дальностью атаки 550. Обычные атаки ^oCoeurl^* на 3 секунды дают ^o-{10,20,30,40} скорости атаки и -{10,20,30,40}% скорости передвижения^*.\\n\\n"
+    },
+    {
+      "keys": ["entities:Ability_Tundra4_IMPACT_effect"],
+      "english_hash": "42c918d84f6fb360c61d54450207cc93bfb333cec516e9e7747346d97f5a1d1d",
+      "ru": "Наносит цели ^o{150,225,300} магического урона^* и ^oоглушает^* её на ^o{3,3.5,4} секунды^*.\\n\\nВсех между Tundra и целью отталкивает в сторону на 240 единиц, наносит им ^o{150,225,300} магического урона^* и накладывает ^oAvalanche^* на ^o{2,3,4} секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_Tundra4_description"],
+      "english_hash": "e5997b510ec296aadfbe8e734d131fee72c901533dec47f7959b4181e87d852e",
+      "ru": "В ярости Tundra управляет самой горой, обрушивая на цель кусок ледника и отбрасывая находящихся рядом вражеских героев."
+    },
+    {
+      "keys": ["entities:Ability_Tundra4_description_simple"],
+      "english_hash": "60a3112cef104bc8cd33f170b2f078294c7a23136d66ec0bef0a656af715e21d",
+      "ru": "Обрушивает на противника кусок ледника, нанося ^o{150,225,300} магического урона^* и ^oоглушая на {3,3.5,4} секунды^*. Противники между Tundra и целью получают ^o{150,225,300} магического урона^*, ^o-50% скорости передвижения и атаки на {2,3,4} секунды^* и отталкиваются в сторону."
+    },
+    {
+      "keys": ["entities:Ability_Tundra4_effect_header"],
+      "english_hash": "e06fa8c046c634edf3db88a6c239331afb4e57726d3b8705ff7644e93605984c",
+      "ru": "Эффекты Avalanche"
+    },
+    {
+      "keys": ["entities:State_Tundra_Ability2_Debuff_FRAME_effect"],
+      "english_hash": "7882c71c17b1ce2ec3e243ff8f292e4aab0dc7390a94e414771725fd31176b4d",
+      "ru": "Увеличивает скорость атаки по этой цели на {0,20,40,60,80}\\n\\nПри атаке накладывает Cold Shouldered! на атакующего и Cold Feet на цель на 2 секунды"
+    }
+  ]
+}

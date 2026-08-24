@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface name="avoid_player" noclick="1">
+
+	<!-- Packages -->
+	<include file="hd_ui/styles.package" />
+	<include file="hd_ui/templates/shared_templates_global.package"/>	
+	<include file="hd_ui/tooltips/tooltip_templates.package" />
+
+	<template name="avoid_player_contents">
+		<panel width="100%" float="bottom" padding="2h" style="grow_noinvis" reverse="1" noclick="1">
+
+			<!-- Header -->
+			<panel width="100%" style="grow_noinvis" noclick="1">
+				<label name="avoid_player_name_label" content="Avoiding Player: ---" width="-3.0h" align="center" textalign="center" fity="1" fitypadding="1.0h" style="text_base" font="dyn_12" sticky="0" wrap="1"/>
+			</panel>
+			
+			<!-- Reason -->
+			<panel width="100%" style="grow_noinvis" noclick="1">
+				<panel height="6h" width="{width=100%}" noclick="1" style="sticky">
+					<panel width="80%" height="-1h" style="center" noclick="1">
+
+						<label style="text_base" noclick="1" content="Reason:" />
+
+						<!-- Search -->
+						<panel height="2.8h" valign="bottom">						
+
+							<instance name="combobox_hd" itemwidth="100%" maxlistheight="6" listbgheight="12.7h" id="avoid_player_dropdown" enabled="{enabled=1}"
+								onselectlua="AvoidPlayer:OnReasonSelect()"
+							/>
+							
+						</panel>
+
+					</panel>
+				</panel>
+
+			</panel>
+
+			<!-- Note -->
+			<panel width="100%" float="bottom" style="grow_noinvis" noclick="1">
+
+				<panel width="80%" height="2h" align="center" noclick="1">
+					<label style="text_base" noclick="1" content="Note:" />
+				</panel>
+
+				<!-- Textbox -->
+				<frame width="80%" height="3h" texture="/ui/hd_ui/frames/rounded_grad_minor.tga" color=".12 .12 .12" borderthickness=".25h" style="center" noclick="1">
+
+					<frame style="textinput_frame" noclick="1">
+						<textbox name="avoid_player_note_textbox"								
+							maxlength="30"
+							enabled="1"
+							style="textbox_input"
+							textcolor=".6 .6 .6"
+							
+							xonloadlua="self:SetInputLine('Поиск...') self:SetCallback('onchange', function(self) Communicator:OnSearchInputChange(self) end)"
+							xonfocuslua="Communicator:OnSearchFocused(self)"
+							xonesclua="Communicator:OnSearchCancel(self)"
+
+						/>
+					</frame>
+				</frame>
+
+			</panel>
+
+			<!-- Confirm -->
+			<panel width="100%" style="grow_noinvis" noclick="1">
+				<instance name="button_hd" button_name="avoidplayer_confirm_btn" width="12h" height="3h" align="center" valign="center" font="dyn_12"
+					label="Подтвердить"
+					onclicklua="AvoidPlayer:Confirm()"
+				/>
+			</panel>
+
+		</panel> 
+	</template>
+
+	<!-- CORE -->
+	<panel name="avoid_player_panel" color="0 0 0 .67" visible="0"
+		onloadlua="AvoidPlayer:Init()"
+	>
+		<panel width="32h" style="center,grow_noinvis" noclick="1">
+
+			<!-- Frame -->
+			<instance name="modal_base_frame" />
+
+			<panel width="100%" float="bottom" grow="1" noclick="1">
+
+				<!-- Spacer -->
+				<panel height="2.0h" noclick="1"/>					
+
+				<!-- Content -->
+				<panel width="100%" grow="1" float="bottom" padding="1.0h" noclick="1">
+					<instance name="avoid_player_contents" />
+				</panel>
+
+				<!-- Spacer -->
+				<panel height="1.7h" noclick="1"/>
+
+			</panel>
+
+			<!-- Header -->
+			<instance name="modal_header"
+				label="avoid_player"
+				lbl="popup_header"
+				watch="HostErrorMessage"
+				ontrigger="SetText(param0);"
+				onclicklua="AvoidPlayer:Close()"
+				show_close="1"
+			/>
+
+		</panel>
+	</panel>
+
+	<!-- LUA -->
+	<lua file="/ui/scripts/shared/avoid_player.lua" />
+
+</interface>

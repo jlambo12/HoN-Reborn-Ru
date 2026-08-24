@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_032_APEX_COMPLETION",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Apex1_name"],
+      "ru": "Decimate"
+    },
+    {
+      "keys": ["entities:Ability_Apex1_tooltip_flavor", "entities:Ability_Apex2_tooltip_flavor", "entities:Ability_Apex3_tooltip_flavor", "entities:Ability_Apex4_tooltip_flavor"],
+      "ru": ""
+    },
+    {
+      "keys": ["entities:Ability_Apex2_name"],
+      "ru": "Fire Surge"
+    },
+    {
+      "keys": ["entities:Ability_Apex3_name"],
+      "ru": "The Burning Ember"
+    },
+    {
+      "keys": ["entities:Ability_Apex3_name:ult_boost"],
+      "ru": "^gThe Burning Ember*^*"
+    },
+    {
+      "keys": ["entities:Ability_Apex3_description2:ult_boost"],
+      "ru": "\\r"
+    },
+    {
+      "keys": ["entities:Ability_Apex4_name"],
+      "ru": "Armageddon"
+    }
+  ]
+}

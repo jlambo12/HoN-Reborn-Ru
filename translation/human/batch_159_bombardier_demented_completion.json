@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_159_BOMBARDIER_DEMENTED_COMPLETION",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:State_Bombardier_Ability1_Ally_description"],
+      "english_hash": "72202cf9581f9bae0b1054d819589828896aaae1b40a8ea47db143064a4ec700",
+      "ru": "Кто-то подложил вам бомбу!\\nКаждый заряд продлевает оглушение Sticky Bomb на 1 секунду"
+    },
+    {
+      "keys": [
+        "entities:State_Bombardier_Ability1_Ground_Bomb_description",
+        "entities:State_Bombardier_Ability1_Modifier_description"
+      ],
+      "english_hash": "5db16c5edf2a7b3e31d246bdcd4da4a219579088bd29a69663d49d6277d22c2a",
+      "ru": "Пока действует эффект, Sticky Bomb получает один заряд каждые 2 секунды"
+    },
+    {
+      "keys": [
+        "entities:State_Bombardier_Ability1_Ground_Bomb_description2",
+        "entities:State_Bombardier_Ability1_Modifier_description2"
+      ],
+      "english_hash": "9de63864960e1199d39188675fbbfc0a9825aa205efc554875881b28d495a467",
+      "ru": "Каждый заряд продлевает оглушение Sticky Bomb на 1 секунду"
+    },
+    {
+      "keys": ["entities:State_Bombardier_Ability1_description"],
+      "english_hash": "847521e033a59d8e13ecfbbdb2fb79a083c0435f03975b5f067162ed607c16f0",
+      "ru": "Кто-то подложил вам бомбу!\\nКаждый заряд продлевает оглушение от взрыва на 1 секунду.\\n\\nБомба существует 6 секунд, если Bombardier не взорвёт её раньше."
+    },
+    {
+      "keys": ["entities:State_Bombardier_Ability3_description"],
+      "english_hash": "5b2005da1c47ee0e51a1f9010226a741f11b5f2e1d6879f52f6e433dd35148a5",
+      "ru": "Когда Bombardier наносит вам урон, вы получаете ^o{20,30,40,50} магического урона^*, а вокруг вас в радиусе 250 появляется заряд\\nСрабатывает, только если зарядов меньше 6"
+    },
+    {
+      "keys": ["entities:State_Bombardier_Ability4_Napalm_FRAME_effect"],
+      "english_hash": "a701778fcf5744860f3830cad42702205e06eac1dfb5009a2fedda03936bd8ed",
+      "ru": "{60,90,120} магического урона в секунду"
+    },
+    {
+      "keys": ["entities:State_DementedShaman_Ability1_Damage_FRAME_effect"],
+      "english_hash": "7cdfeb7320e3ca9f2cf8874597a7af9b4e527b9d09b9b4d902009a6994a52ab0",
+      "ru": "За 8 секунд получает {80,120,160,200} физического урона"
+    },
+    {
+      "keys": ["entities:State_DementedShaman_Ability3_FRAME_effect"],
+      "english_hash": "4e695b2aa6a903e358e0c648ca2fdffc75c055f0980499e8e3e12ab3addc1c17",
+      "ru": "При получении смертельного урона запас здоровья становится равен ^o{100,180,260,340}^* + ^o{3,4,5,6}% от максимального здоровья^*."
+    },
+    {
+      "keys": ["entities:State_DementedShaman_Ability3_FRAME_effect:OnlyMidMap"],
+      "english_hash": "983eed51661a2486a2c811c14b80809e864858ad723960eeb4acb1b79482ede3",
+      "ru": "^rMid Wars:^* при получении смертельного урона запас здоровья становится равен ^o{80,150,220,290}^* + ^o{2,3,4,5}% от максимального здоровья^*."
+    },
+    {
+      "keys": ["entities:State_DementedShaman_Ability4_Enemies_FRAME_effect"],
+      "english_hash": "db775bdfc2f6e76b996c22a2694664c28edede4348df5c49e134f3f5dfe27a04",
+      "ru": "Теряет ^o2 брони в секунду^*, пока штраф не достигнет -{10,15,20}; затем броня восстанавливается до конца действия"
+    },
+    {
+      "keys": ["entities:State_DementedShaman_Ability4_Enemies_FRAME_effect:ult_boost"],
+      "english_hash": "97cbd8b64659e390e18744c6158d86a9a080a1f125bf61496153138ea0a5a7ca",
+      "ru": "Теряет ^o2 брони в секунду^*, пока штраф не достигнет -{18,24,30}; затем броня восстанавливается до конца действия"
+    },
+    {
+      "keys": ["entities:State_DementedShaman_Ability4_FRAME_effect"],
+      "english_hash": "607a4dcb51bdc41350b4aaaaffdc9796cc2fb940ac381c9e4cf1810f9c563367",
+      "ru": "Получает ^o2 брони в секунду^*, пока бонус не достигнет {10,15,20}; затем броня уменьшается до конца действия"
+    },
+    {
+      "keys": ["entities:State_DementedShaman_Ability4_FRAME_effect:ult_boost"],
+      "english_hash": "944a717c7457abae698996792c8fc125cfb013d4cb38c0c320fe845d1b1b2050",
+      "ru": "Получает ^o2 брони в секунду^*, пока бонус не достигнет {18,24,30}; затем броня уменьшается до конца действия"
+    }
+  ]
+}

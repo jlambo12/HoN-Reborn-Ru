@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_024_ADRENALINE",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Adrenaline1_name"],
+      "ru": "Shard Blast"
+    },
+    {
+      "keys": ["entities:Ability_Adrenaline1_description"],
+      "ru": "Adrenaline выпускает веер осколков в выбранном направлении. Если они заденут нескольких вражеских героев, часть маны и времени перезарядки способности возвращается."
+    },
+    {
+      "keys": ["entities:Ability_Adrenaline1_description_simple", "entities:Ability_Adrenaline1_IMPACT_effect"],
+      "ru": "Выберите направление, чтобы выпустить быстрый пробивающий осколок. Он наносит поражённым противникам магический урон в размере ^o{75,110,145,180} + {30,40,50,60}% вашей силы^* (0.75x урона юнитам, не являющимся героями) и накладывает базовое ^o15%-ное замедление скорости передвижения на 2 секунды^*. Каждый осколок усиливает замедление на 5%; эффект суммируется до ^o{1,2,3,4} раз^*.\\n\\nЕсли осколок ^cзаденет 2 или более вражеских героев^*, на 7 секунд ^oсокращает перезарядку на 0.6 секунды и расход маны на {10,15,20,25}^* (не более 2 срабатываний). За каждого поражённого вражеского героя перезарядка Rush сокращается на 1 секунду."
+    },
+    {
+      "keys": ["entities:Ability_Adrenaline1_tooltip_flavor", "entities:Ability_Adrenaline2_tooltip_flavor", "entities:Ability_Adrenaline3_tooltip_flavor", "entities:Ability_Adrenaline4_description2"],
+      "ru": ""
+    },
+    {
+      "keys": ["entities:Ability_Adrenaline2_name"],
+      "ru": "Rush"
+    },
+    {
+      "keys": ["entities:Ability_Adrenaline2_description"],
+      "ru": "Adrenaline совершает рывок в выбранном направлении, нанося противникам большой урон, и ускоряется, если проходит сквозь вражеского героя."
+    },
+    {
+      "keys": ["entities:Ability_Adrenaline2_description_simple", "entities:Ability_Adrenaline2_IMPACT_effect"],
+      "ru": "Выберите точку, чтобы совершить к ней рывок и нанести магический урон в размере ^o{80,120,160,200} + {30,40,50,60}% вашей силы^*. Пройдя сквозь вражеского героя, Adrenaline на 3 секунды получает ^o{10,12,14,16}% скорости передвижения^*. Эффект суммируется до 2 раз."
+    },
+    {
+      "keys": ["entities:Ability_Adrenaline3_name"],
+      "ru": "Ember Shard"
+    },
+    {
+      "keys": ["entities:Ability_Adrenaline3_description"],
+      "ru": "Ember Shard позволяет Adrenaline привязывать вражеских героев и притягивать их к себе, если они отойдут слишком далеко."
+    },
+    {
+      "keys": ["entities:Ability_Adrenaline3_description_simple", "entities:Ability_Adrenaline3_IMPACT_effect"],
+      "ru": "Активируйте, чтобы ^oсбросить задержку между атаками^* и на 8 секунд усилить следующую атаку с помощью Ember Shard. Она наносит прорубающий урон в размере ^o100% вашего урона от атаки в радиусе {250,300,350,400}^*, а также ^oнакладывает Restrain и привязывает поражённых вражеских героев на {2,2.5,3,3.5} секунды^*.\\n\\nЕсли расстояние между привязанным вражеским героем и Adrenaline ^oпревысит 650 единиц, герой будет притянут к Adrenaline^*. Во время притягивания противник оглушён и находится под действием Restrain, а после него ^oзамедляется на 25% и вновь получает Restrain на {0.8,1.2,1.6,2} секунды^*. Максимальная дальность притягивания — 700 единиц."
+    },
+    {
+      "keys": ["entities:Ability_Adrenaline4_name"],
+      "ru": "Death's Halo"
+    },
+    {
+      "keys": ["entities:Ability_Adrenaline4_description"],
+      "ru": "Adrenaline окружает себя Death's Halo, запирая внутри всех юнитов и не позволяя им покинуть область."
+    },
+    {
+      "keys": ["entities:Ability_Adrenaline4_description_simple", "entities:Ability_Adrenaline4_IMPACT_effect"],
+      "ru": "Активируйте, чтобы на ^o{4,4.5,5} секунды^* создать вокруг Adrenaline Death's Halo и окружить область стенами из осколков. ^oВсе оказавшиеся внутри Death's Halo юниты не могут покинуть область^*. Если юнит всё же окажется снаружи, его принудительно телепортирует обратно внутрь Death's Halo, в пределы половины радиуса способности.\\n\\nПока способность действует, ^oAdrenaline получает 100% сопротивления замедлению и 100% скорости передвижения, а также по {3,4,5} силы, 5 скорости атаки, 1 брони и 1 магической брони за каждого пойманного реального героя^* (2x за вражеского героя). Максимум — 7 зарядов.\\n\\nЧерез 2 секунды после применения Adrenaline может досрочно отменить Death's Halo. Death's Halo уничтожается, если Adrenaline погибает. Каждый раз, когда Adrenaline получает суммарный урон в размере 25% максимального здоровья, время действия Death's Halo сокращается на 1 секунду."
+    },
+    {
+      "keys": ["entities:Ability_Adrenaline4_description_simple:adrenaline_R_collapsable", "entities:Ability_Adrenaline4_IMPACT_effect:adrenaline_R_collapsable"],
+      "ru": "Активируйте, чтобы прекратить действие Death's Halo."
+    }
+  ]
+}

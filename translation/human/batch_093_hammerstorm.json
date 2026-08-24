@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_093_HAMMERSTORM",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_Hammerstorm1_name"], "ru": "Hammer Throw"},
+    {"keys": ["entities:Ability_Hammerstorm1_name:ult_boost"], "ru": "^gHammer Leap*^*"},
+    {"keys": ["entities:Ability_Hammerstorm1_description"], "ru": "Hammerstorm бросает могучий молот в выбранного противника, нанося урон и оглушая всех рядом с местом попадания."},
+    {"keys": ["entities:Ability_Hammerstorm1_description2"], "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* увеличивает дальность до 900 и скорость снаряда. В течение следующих 3 секунд способность можно применить повторно, чтобы телепортироваться к лежащему молоту и нанести противникам в области урон атаки Hammerstorm."},
+    {"keys": ["entities:Ability_Hammerstorm1_description2:ult_boost", "entities:Ability_Hammerstorm1_description2:hammerstorm_Q_active"], "ru": "\\r"},
+    {"keys": ["entities:Ability_Hammerstorm1_description_simple"], "ru": "Бросает могучий молот в противника, наносит целям поблизости ^o{toolvalue1} магического урона^* и ^oоглушает их на {toolvalue2} секунды^*.\\n\\n^gStaff of the Master^* увеличивает дальность до ^o900^* и скорость снаряда. В течение следующих 3 секунд способность можно ^oприменить повторно^*, чтобы ^oтелепортироваться^* к лежащему молоту и нанести противникам в области урон атаки Hammerstorm."},
+    {"keys": ["entities:Ability_Hammerstorm1_description_simple:ult_boost"], "ru": "Бросает могучий молот в противника, наносит целям поблизости ^o{toolvalue1} магического урона^* и ^oоглушает их на {toolvalue2} секунды^*.\\n\\n^gВ течение следующих 3 секунд примените способность повторно, чтобы перелететь к молоту и нанести противникам в области урон атаки Hammerstorm.^*"},
+    {"keys": ["entities:Ability_Hammerstorm1_description_simple:hammerstorm_Q_active", "entities:Ability_Hammerstorm1_IMPACT_effect:hammerstorm_Q_active"], "ru": "Телепортирует Hammerstorm к лежащему молоту."},
+    {"keys": ["entities:Ability_Hammerstorm1_effect_header"], "ru": "Эффекты состояния"},
+    {"keys": ["entities:Ability_Hammerstorm1_IMPACT_effect"], "ru": "Бросает молот, который при попадании наносит целям в области ^o{toolvalue1} магического урона^* и ^oоглушает^* их на ^o{toolvalue2} секунды^*."},
+    {"keys": ["entities:Ability_Hammerstorm1_IMPACT_effect:ult_boost"], "ru": "Бросает молот, который при попадании наносит целям в области ^o{toolvalue1} магического урона^* и ^oоглушает^* их на ^o{toolvalue2} секунды^*.\\n\\n^gВ течение следующих 3 секунд способность можно применить повторно, чтобы телепортироваться к лежащему молоту и нанести противникам в области урон атаки Hammerstorm.^*"},
+    {"keys": ["entities:Ability_Hammerstorm1_tooltip_flavor"], "ru": "Олимпиада, встречай меня!"},
+
+    {"keys": ["entities:Ability_Hammerstorm2_name", "entities:Ability_Hammerstorm2_effect_header"], "ru": "Galvanize"},
+    {"keys": ["entities:Ability_Hammerstorm2_description"], "ru": "По сравнению с Hammerstorm все остальные — неудачники. К счастью, его великолепие настолько велико, что боевой клич воодушевляет союзников поблизости, повышая их броню и скорость передвижения."},
+    {"keys": ["entities:Ability_Hammerstorm2_description_simple"], "ru": "Пассивно даёт ^o{toolvalue1} брони^*.\\n\\nМощный боевой клич воодушевляет союзников поблизости и на ^o5 секунд^* даёт им ^o15% к скорости передвижения^* и ^o{toolvalue2} брони^*."},
+    {"keys": ["entities:Ability_Hammerstorm2_IMPACT_effect"], "ru": "При активации накладывает ^oGalvanize^* на Hammerstorm и союзников в радиусе 600 на ^o5 секунд^*."},
+    {"keys": ["entities:Ability_Hammerstorm2_tooltip_flavor"], "ru": "Почему я настолько великолепен?"},
+
+    {"keys": ["entities:Ability_Hammerstorm3_name"], "ru": "Mighty Swing"},
+    {"keys": ["entities:Ability_Hammerstorm3_description"], "ru": "Hammerstorm атакует с огромной силой, и его удары поражают не только основную цель, но и противников поблизости."},
+    {"keys": ["entities:Ability_Hammerstorm3_description_simple"], "ru": "Даёт атакам ^o{toolvalue1}% урона по области^*. Способность можно включать и выключать."},
+    {"keys": ["entities:Ability_Hammerstorm3_effect_header"], "ru": "Эффекты состояния"},
+    {"keys": ["entities:Ability_Hammerstorm3_IMPACT_effect:on"], "ru": "При применении выключает Mighty Swing."},
+    {"keys": ["entities:Ability_Hammerstorm3_ATTACK_IMPACT_effect", "entities:Ability_Hammerstorm3_ATTACK_IMPACT_effect:on"], "ru": "Наносит противникам в области ^o{toolvalue1}% урона^*."},
+    {"keys": ["entities:Ability_Hammerstorm3_tooltip_flavor"], "ru": "Я справлюсь со всеми вами."},
+    {"keys": ["entities:Ability_Hammerstorm3_IMPACT_effect:off"], "ru": "При применении включает Mighty Swing."},
+    {"keys": ["entities:Ability_Hammerstorm3_name:off"], "ru": "Mighty Swing (Off)"},
+    {"keys": ["entities:Ability_Hammerstorm3_ATTACK_IMPACT_effect:off"], "ru": ""},
+
+    {"keys": ["entities:Ability_Hammerstorm4_name"], "ru": "Brute Strength"},
+    {"keys": ["entities:Ability_Hammerstorm4_description"], "ru": "Hammerstorm высвобождает скрытую внутри дикую ярость и на некоторое время значительно повышает свой урон атаки."},
+    {"keys": ["entities:Ability_Hammerstorm4_description2"], "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* после активации создаёт ауру, которая увеличивает базовый урон других союзных героев в радиусе 900 на {toolvalue2}%."},
+    {"keys": ["entities:Ability_Hammerstorm4_description2:ult_boost"], "ru": "\\r"},
+    {"keys": ["entities:Ability_Hammerstorm4_description_simple"], "ru": "Высвобождает дикую ярость и на ^o30 секунд^* добавляет атакам ^o{toolvalue1}% базового урона^*.\\n\\n^gStaff of the Master:^* после активации создаёт ауру, которая увеличивает базовый урон других союзных героев в радиусе 900 на {toolvalue2}%."},
+    {"keys": ["entities:Ability_Hammerstorm4_description_simple:ult_boost"], "ru": "Высвобождает дикую ярость и на ^o30 секунд^* добавляет атакам ^o{toolvalue1}% базового урона^*, а другим союзным героям в радиусе 900 даёт ^gауру с {toolvalue2}% базового урона^*."},
+    {"keys": ["entities:Ability_Hammerstorm4_effect_header"], "ru": "Эффекты Brute Strength"},
+    {"keys": ["entities:Ability_Hammerstorm4_IMPACT_effect"], "ru": "Накладывает на Hammerstorm ^oBrute Strength^* на ^o30 секунд^*."},
+    {"keys": ["entities:Ability_Hammerstorm4_IMPACT_effect:ult_boost"], "ru": "Накладывает на Hammerstorm ^oBrute Strength^* на ^o30 секунд^*.\\n\\n^gПосле активации создаёт ауру, которая увеличивает базовый урон других союзных героев в радиусе 900 на {toolvalue2}%.^*"},
+    {"keys": ["entities:Ability_Hammerstorm4_tooltip_flavor"], "ru": "У меня два билета на шоу мускулов!"}
+  ]
+}

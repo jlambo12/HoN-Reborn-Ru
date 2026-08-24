@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "policy_version": "1.1.0",
+  "rules": [
+    {"id": "FORBID-CARRY-LITERAL", "source_term": "Carry", "context": "hero_role", "forbidden": ["нести", "переносить"]},
+    {"id": "FORBID-SILENCE-LITERAL", "source_term": "Silence", "context": "gameplay_status", "forbidden": ["без звука"]},
+    {"id": "FORBID-PERPLEX-LITERAL", "source_term": "Perplex", "context": "gameplay_status", "forbidden": ["в недоумении"]},
+    {"id": "FORBID-UNITWALKING-TRANSLIT", "source_term": "unitwalking", "context": "movement_mechanic", "forbidden": ["юнитволкинг"]},
+    {"id": "FORBID-STAFF-ALIASES", "source_term": "Staff of the Master", "context": "item_reference", "forbidden": ["Персонал Мастера", "Стафф", "Посох Мастера", "Аганим", "Аганимский скипетр"]},
+    {"id": "FORBID-COOLDOWN-SLANG", "source_term": "Cooldown", "context": "player_facing", "forbidden": ["КД"]}
+  ],
+  "global_review_phrases": ["без звука", "в недоумении", "юнитволкинг", "Персонал Мастера", "Посох Мастера", "Аганимский скипетр"]
+}

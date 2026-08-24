@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_131_M_BASIC_ITEMS",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Item_MajorTotem_description_simple"],
+      "ru": "^9774 силы^*\\n^7974 ловкости^*\\n^7794 интеллекта^*"
+    },
+    {
+      "keys": ["entities:Item_MajorTotem_effect_header", "entities:Item_Manatube_effect_header", "entities:Item_Marchers_effect_header", "entities:Item_MarkOfTheNovice_effect_header", "entities:Item_MightyBlade_effect_header", "entities:Item_MinorTotem_effect_header", "entities:Item_MysticVestments_effect_header"],
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:Item_ManaBattery_description"],
+      "ru": "Получает заряд каждый раз, когда находящийся поблизости ^oпротивник применяет заклинание^*. При активации расходует все заряды."
+    },
+    {
+      "keys": ["entities:Item_ManaBattery_description_simple"],
+      "ru": "Поглощает энергию вражеских заклинаний. Разряжается, чтобы восстановить немного здоровья и маны."
+    },
+    {
+      "keys": ["entities:Item_ManaBattery_IMPACT_effect"],
+      "ru": "Восстанавливает ^o10 здоровья^* и ^o15 маны за каждый заряд^*. Не более ^c10 зарядов^*."
+    },
+    {
+      "keys": ["entities:State_ManaBattery_FRAME_effect"],
+      "ru": "+1 заряд каждый раз, когда вражеский герой в пределах дальности применяет заклинание."
+    },
+    {
+      "keys": ["entities:Item_ManaPotion_description"],
+      "ru": "Расходуемый предмет."
+    },
+    {
+      "keys": ["entities:Item_ManaPotion_description_simple"],
+      "ru": "Восстанавливает выбранной цели 125 маны за 20 секунд."
+    },
+    {
+      "keys": ["entities:Item_ManaPotion_effect_header"],
+      "ru": "Эффекты Mana Potion"
+    },
+    {
+      "keys": ["entities:Item_ManaPotion_shop_flavor"],
+      "ru": "Простое алхимическое снадобье, которое постепенно восполняет магическую энергию."
+    },
+    {
+      "keys": ["entities:Item_ManaPotion_IMPACT_effect"],
+      "ru": "Накладывает на цель ^oMana Potion^* на ^o20 секунд^*, восстанавливая за это время ^o125 маны^*."
+    },
+    {
+      "keys": ["entities:State_ManaPotion_FRAME_effect"],
+      "ru": "Рассеивается при получении урона от источника, который не является линейным крипом, боссом или нейтральным NPC."
+    },
+    {
+      "keys": ["entities:Item_Manatube_description_simple"],
+      "ru": "100% регенерации маны"
+    },
+    {
+      "keys": ["entities:Item_Manatube_shop_flavor"],
+      "ru": "Особое устройство для усиления магической энергии владельца. Manatube наполняет его силой, почерпнутой из лей-линий Newerth, и ускоряет восстановление маны."
+    },
+    {
+      "keys": ["entities:Item_Marchers_description2"],
+      "ru": "Предмет пассивно даёт ^yскорость передвижения^*. Этот бонус не суммируется с таким же предметом или другими сапогами."
+    },
+    {
+      "keys": ["entities:Item_Marchers_description_simple"],
+      "ru": "^oМодификатор передвижения^*\\n45 скорости передвижения"
+    },
+    {
+      "keys": ["entities:Item_Marchers_shop_flavor"],
+      "ru": "Затворник-изобретатель создал Marchers, чтобы облегчить тяготы военных походов и позволить солдатам двигаться гораздо быстрее. В итоге их просто заставили маршировать столько же часов, но на большие расстояния."
+    },
+    {
+      "keys": ["entities:Item_MarkOfTheNovice_description_simple"],
+      "ru": "^7793 интеллекта^*"
+    },
+    {
+      "keys": ["entities:Item_MarkOfTheNovice_shop_flavor"],
+      "ru": "Десятилетиями странствующие колдуны и чародеи оставляли Mark of the Novice в колыбели ребёнка, чьи звёздные знаки предвещали жизнь, посвящённую изучению &#34;магии&#34; — непостижимых для простого народа сил природы. Практической ценности у таких безделушек почти нет, но они всё же обостряют ум и готовят владельца к пути могущества."
+    },
+    {
+      "keys": ["entities:Item_MightyBlade_description_simple"],
+      "ru": "^97710 силы^*"
+    },
+    {
+      "keys": ["entities:Item_MightyBlade_shop_flavor"],
+      "ru": "Mighty Blades — технологически усовершенствованное древковое оружие, прежде всего повышающее силу владельца."
+    },
+    {
+      "keys": ["entities:Item_MinorTotem_description_simple"],
+      "ru": "^9771 силы^*\\n^7971 ловкости^*\\n^7791 интеллекта^*"
+    },
+    {
+      "keys": ["entities:Item_MinorTotem_shop_flavor"],
+      "ru": "Простое подношение одному из младших лесных духов, почитаемых зверями. Minor Totems вселяют в владельца уверенность, которая проявляется небольшим повышением всех характеристик."
+    },
+    {
+      "keys": ["entities:Item_MysticVestments_description2"],
+      "ru": "Предмет пассивно даёт ^yмагическую броню^*. Этот бонус не суммируется с другими предметами на ^yмагическую броню^*."
+    },
+    {
+      "keys": ["entities:Item_MysticVestments_description_simple"],
+      "ru": "^oМодификатор магической брони^*\\n5 магической брони"
+    },
+    {
+      "keys": ["entities:Item_MysticVestments_shop_flavor"],
+      "ru": "Искусные ткачи зверей создают Mystic Vestments с бесконечным терпением: это и символ веры, и практичная защита. Каждая нить благословлена молитвами о защите и пропитана особым маслом, секрет которого знают лишь шаманы зверей, поэтому воины высоко ценят эти тонкие рубахи как оберег от магии."
+    }
+  ]
+}

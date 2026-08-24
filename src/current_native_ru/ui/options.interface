@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface name="options" noclick="1" luatable="1" onreloadlua="">
+
+	<!-- Styles -->
+	<style name="options_category_btn" width="10%" />
+	<style name="options_centerscroll" texture="/ui/hd_ui/input_controls/scrollbar.tga" width="1.8h" handlewidth="1.8h" handleheight="5.4h" slotwidth="0.6h" slotheight="1" align="right" />
+
+	<include file="/ui/hd_ui/styles.package" />
+	<include file="/ui/hd_ui/templates/options_manager_templates.package"/>
+	<include file="/ui/hd_ui/templates/shared_templates_global.package" />
+	<include file="/ui/hd_ui/tooltips/tooltip_templates.package" />
+	
+	<childinterface file="/ui/confirmations.interface" />
+
+	<!-- Templates -->
+	<template name="simple_advanced_toggle_btn">
+		<panel width="100%" style="grow_noinvis" visible="{visible=1}">
+			<button
+				name="{button_name}"
+				group="{group}"
+				width="{btn_width=100%}"
+				height="1.4h"
+				align="{align=center}" valign="center"
+				color="invisible"
+				numstates="2"			
+				interactive="false"
+				onclick="{onclick}"
+				onclicklua="{onclicklua}"
+			>
+				<widgetstate statename="up">
+					<panel height="100%" float="right" padding="0.4h" align="center" style="grow_noinvis">
+						<image texture="{icon=/ui/hd_ui/icons/plus_circle.tga}" width="100@" height="100%" color="#ffab01c1"/>
+						<label fitx="1" textvalign="center" style="tip_textMedium" color="#ffab01c1" content="Show {label}" />
+					</panel>
+				</widgetstate>
+				<widgetstate statename="over">
+					<panel height="100%" float="right" padding="0.4h" align="center" style="grow_noinvis">
+						<image texture="{icon=/ui/hd_ui/icons/plus_circle.tga}" width="100@" height="100%" color="#ffab01"/>
+						<label fitx="1" textvalign="center" style="tip_textMedium" color="#ffab01" content="Show {label}" />
+					</panel>
+				</widgetstate>
+				<widgetstate statename="down">
+					<panel y="1" height="100%" float="right" padding="0.4h" align="center" style="grow_noinvis">
+						<image texture="{icon=/ui/hd_ui/icons/plus_circle.tga}" width="100@" height="100%" color="#ffab01"/>
+						<label fitx="1" textvalign="center" style="tip_textMedium" color="#ffab01" content="Show {label}" />
+					</panel>
+				</widgetstate>
+				<widgetstate statename="up2">
+					<panel height="100%" float="right" padding="0.4h" align="center" style="grow_noinvis">
+						<image texture="{icon=/ui/hd_ui/icons/minus_circle.tga}" width="100@" height="100%" color="#ffab01c1"/>
+						<label fitx="1" textvalign="center" style="tip_textMedium" color="#ffab01c1" content="Hide {label}" />
+					</panel>
+				</widgetstate>
+				<widgetstate statename="over2">
+					<panel height="100%" float="right" padding="0.4h" align="center" style="grow_noinvis">
+						<image texture="{icon=/ui/hd_ui/icons/minus_circle.tga}" width="100@" height="100%" color="#ffab01"/>
+						<label fitx="1" textvalign="center" style="tip_textMedium" color="#ffab01" content="Hide {label}" />
+					</panel>
+				</widgetstate>
+				<widgetstate statename="down2">
+					<panel height="100%" float="right" padding="0.4h" align="center" style="grow_noinvis">
+						<image texture="{icon=/ui/hd_ui/icons/minus_circle.tga}" width="100@" height="100%" color="#ffab01c1"/>
+						<label fitx="1" textvalign="center" style="tip_textMedium" color="#ffab01c1" content="Hide {label}" />
+					</panel>
+				</widgetstate>
+			</button>
+		</panel>
+	</template>
+
+	<template name="options_hd_items_scrollbar">
+		<scrollbar name="options_hd_items_scrollbar" style="options_centerscroll"
+			minvalue="0"
+			maxvalue="360"
+			step="1"
+			value="0"
+			vertical="true"
+			onslidelua="self:DoEvent()"
+			oneventlua="HoN_OptionsManager:UpdateScrollerEvent(self:GetValue())"
+		/>
+	</template>
+
+	<template name="options_manager_tab_bar">
+		<panel name="options_manager_tab_bar_{name}" width="-2.2h" height="60%" style="center" float="right" padding=".8h" noclick="1" visible="false"></panel>
+	</template>
+
+	<template name="option_tip">
+		<floater name="option_tip_generic" width="16h" grow="1" regrow="1" y="1.8h" align="center" valign="bottom" noclick="1" visible="0">
+			<instance name="tooltip_base_frame" color=".4 .4 .4 .9" />
+			<!-- Label -->
+			<label name="option_tip_generic_label" y=".2h" fity="1" style="text_base" wrap="1" content=""/>			
+		</floater>
+	</template>
+
+	<instance name="option_tip" />
+
+	<!-- Options XML -->
+	<panel name="options_hd" y="12h" width="74h" style="grow_noinvis" align="center" visible="0" cangrab="1"
+		onshowlua="HoN_OptionsManager:OnShow()"
+		onhidelua="HoN_OptionsManager:OnHide()"
+	>
+		
+		<!-- Frame -->
+		<instance name="tooltip_base_frame" color="1 1 1 .95" />
+
+		<panel style="tip_contents" noclick="1">
+
+			<!-- Top Menus -->
+			<panel width="100%" float="bottom" reverse="1" style="grow_noinvis" noclick="1">
+
+				<!-- Header -->
+				<panel width="100%" height="5.8h" noclick="1">
+
+					<instance name="tooltip_header_base" />
+
+					<panel style="tip_header_content" y="10%" noclick="1">
+						
+						<panel name="options_manager_projects_tabs_parent" width="-3h" height="100%" valign="center" float="right" padding=".8h" noclick="1">
+							<!-- Filled in by Lua -->
+						</panel>
+
+						<!-- Close -->
+						<instance name="closexbutton" valign="center" align="right" onclicklua="HoN_OptionsManager:ShowConfirmationDialogOnExitIfNeeded()" />
+
+					</panel>
+				</panel>
+
+				<!-- Sub Header -->
+				<panel width="100%" height="4.0h" noclick="1">
+					<panel y="-0.8h" name="options_manager_tabs_parent" width="100%" noclick="1">
+
+						<instance name="tooltip_subheader_base" color=".6 .6 .6 1" />
+
+						<!-- Filled in by Lua -->
+
+					</panel>
+				</panel>
+
+			</panel>		
+
+			<!-- Body -->
+			<panel style="tip_body">
+
+				<panel style="tip_body_contents" reverse="1" visible="1">
+					
+					<!-- Options Parent -->
+					<panel width="100%" height="55h" clip="1" noclick="1">
+
+						<!-- !Instantiated Options! -->
+						<panel name="options_manager_controls_parent" width="-2h" style="grow_noinvis" noclick="1" />
+
+						<!-- Scroller Helper -->
+						<panel size="100%" processonlyscrollandmovement="1" onloadlua="HoN_OptionsManager:RegisterScroll(self)" />
+
+						<!-- Scroll Bar -->
+						<instance name="options_hd_items_scrollbar" />
+
+					</panel>
+					
+					<!-- Spacer -->
+					<panel height=".3h" noclick="1" />
+
+					<!-- Footer -->
+					<panel height="3.2h" noclick="1">
+
+						<!-- Search -->
+						<panel width="40%" noclick="1">
+							<frame style="textinput_frame">
+
+								<textbox name="shop_hd_search_entry" placeholder="Search" maxlength="250" style="textbox_input"
+									onshow="SetFocus(false);"
+									onhide="SetFocus(false); EraseInputLine();"
+									onfocus="EraseInputLine();"
+									onesc="self:SetInputLine('Поиск настроек...')"
+									onloadlua="self:SetInputLine('Поиск настроек...')"
+									onchangelua="if (self:GetValue() ~= 'Поиск настроек...') then HoN_OptionsManager:Search(self:GetValue()) end"
+								/>
+
+							</frame>
+						</panel>
+
+						<!-- Buttons -->
+						<panel width="-45%" align="right" noclick="1" >
+
+							<panel height="100%" align="right" float="right" padding="1.4h" style="grow_noinvis" noclick="right">
+
+								<!-- Cancel Button -->
+								<instance name="button_hd" button_name="options_hd_btn_discard" width="8h" style="btn_secondary" label="general_discard" visible="0" onclicklua="HoN_OptionsManager.DiscardChanges(false)" />
+
+								<!-- Save/Apply Button -->
+								<instance name="button_hd" button_name="options_hd_btn_apply" width="8h" label="general_apply" enabled="false" onclicklua="HoN_OptionsManager.ApplyChanges()" />
+
+							</panel>
+
+						</panel>
+					</panel>
+
+					<!-- Spacer -->
+					<panel height=".7h" style="sticky" noclick="1" />
+
+				</panel>
+
+			</panel>
+
+		</panel>
+
+	</panel>
+	
+	<!-- Tip -->
+	<instance name="reset_controls_confirm" visible="0" />
+	<instance name="reset_overrides_confirm" visible="0" />
+	<instance name="options_discard_confirm" visible="0" />
+	<instance name="options_override_conflict_confirm" visible="0" />
+	<instance name="options_restart_confirm" visible="0" />
+
+	<!-- LUA -->
+	<lua file="/ui/scripts/shared/options_keybind_manager.lua" />
+	<lua file="/ui/scripts/shared/options_manager.lua" instantiates="options_keybind,options_manager_tab,options_manager_tab_contents,options_checkbox,options_keybind_checkbox,option_dropdown,option_slider,options_keybind_button_binder,options_slider" />
+
+</interface>

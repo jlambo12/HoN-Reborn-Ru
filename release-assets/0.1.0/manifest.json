@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "version": "0.1.0",
+  "file": "resources0.jz",
+  "sha256": "d83b881e3726e6b1bcae615e11f4cccf0cb1e091be50f962ffa705d0383305c1",
+  "size_bytes": 3263204,
+  "members": 54,
+  "crc": "PASS",
+  "automated_tests": "PASS",
+  "runtime_verified": false,
+  "runtime_status": "Login screen passed; authenticated and in-match visual QA remains."
+}
+

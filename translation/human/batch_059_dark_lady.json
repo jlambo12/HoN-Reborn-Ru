@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_059_DARK_LADY",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_DarkLady1_name"], "ru": "Dark Blades"},
+    {"keys": ["entities:Ability_DarkLady1_description"], "ru": "The Dark Lady пробуждает зловещую энергию своих Wrath Blades. Её атаки временно наносят больше базового урона и накладывают на противников Безмолвие, не позволяя применять заклинания и способности."},
+    {"keys": ["entities:Ability_DarkLady1_description_simple"], "ru": "На ^o{3,4,5,6} секунд^* наполняет ^oDark Blades^* зловещей энергией. Атаки получают ^o{35,50,65,80}% дополнительного базового урона^* и при попадании ^oнакладывают Безмолвие на 2.5 секунды^*."},
+    {"keys": ["entities:Ability_DarkLady1_IMPACT_effect"], "ru": "Накладывает Dark Blades на The Dark Lady на {3,4,5,6} секунд."},
+    {"keys": ["entities:Ability_DarkLady1_effect_header"], "ru": "Эффекты Dark Blades"},
+    {"keys": ["entities:Ability_DarkLady1_tooltip_flavor"], "ru": "Эти клинки решат твою судьбу!"},
+
+    {"keys": ["entities:Ability_DarkLady2_name"], "ru": "Taint Soul"},
+    {"keys": ["entities:Ability_DarkLady2_description"], "ru": "The Dark Lady подчиняет и оскверняет душу противника, ненадолго нанося ему урон и снижая скорость передвижения."},
+    {"keys": ["entities:Ability_DarkLady2_description_simple"], "ru": "Оскверняет душу противника, наносит ^o{75,100,125,150} магического урона^* и накладывает постепенно ослабевающее ^oзамедление передвижения на 60%^* на ^o{2,3,4,5} секунд^*."},
+    {"keys": ["entities:Ability_DarkLady2_effect_header"], "ru": "Эффекты Tainted Soul"},
+    {"keys": ["entities:Ability_DarkLady2_tooltip_flavor"], "ru": "Я хочу поглотить твою душу."},
+
+    {"keys": ["entities:Ability_DarkLady3_name"], "ru": "Charging Strikes"},
+    {"keys": ["entities:Ability_DarkLady3_name:ult_boost"], "ru": "^gThousand Cuts^*"},
+    {"keys": ["entities:Ability_DarkLady3_description"], "ru": "The Dark Lady с невероятной скоростью устремляется к выбранной точке и атакует всех противников на своём пути."},
+    {"keys": ["entities:Ability_DarkLady3_description_simple"], "ru": "Несётся к выбранной точке, огибая препятствия, и мгновенно атакует каждого противника на пути. Каждая следующая цель получает ^oна 15% меньше урона^*.\\n\\nПосле рывка The Dark Lady на ^o6 секунд^* получает ^o{30,45,60,75} скорости атаки^*.\\n\\n^gStaff of the Master:^* увеличивает ^oдальность применения до 750/850/950/1050^*. Убийство сбрасывает перезарядку способности, а косвенное убийство или содействие сокращает её на 50%."},
+    {"keys": ["entities:Ability_DarkLady3_description_simple:ult_boost"], "ru": "Несётся к выбранной точке, огибая препятствия, и мгновенно атакует каждого противника на пути, нанося ^g100% урона от атаки^*.\\n\\nПосле рывка The Dark Lady на ^o6 секунд^* получает ^o{30,45,60,75} скорости атаки^*.\\n\\n^gУбийство сбрасывает перезарядку способности, а косвенное убийство или содействие сокращает её на 50%.^*"},
+    {"keys": ["entities:Ability_DarkLady3_description2:ult_boost"], "ru": "\\r"},
+    {"keys": ["entities:Ability_DarkLady3_IMPACT_effect"], "ru": "Несётся к выбранной точке и один раз атакует каждого противника, оказавшегося рядом с ней. Каждая следующая атака во время рывка наносит на 15% меньше урона, чем предыдущая.\\n\\nПосле завершения рывка накладывает на The Dark Lady Zeal на 6 секунд."},
+    {"keys": ["entities:Ability_DarkLady3_IMPACT_effect:ult_boost"], "ru": "Несётся к выбранной точке и один раз атакует каждого противника, оказавшегося рядом с ней. Каждая следующая атака во время рывка наносит ^gполный урон^*.\\n\\nПосле завершения рывка накладывает на The Dark Lady Zeal на 6 секунд.\\n\\n^gУбийство сбрасывает перезарядку способности, а косвенное убийство или содействие сокращает её на 50%.^*"},
+    {"keys": ["entities:Ability_DarkLady3_effect_header"], "ru": "Эффекты Zeal"},
+    {"keys": ["entities:Ability_DarkLady3_tooltip_flavor"], "ru": "Разрешите пройти без очереди?"},
+
+    {"keys": ["entities:Ability_DarkLady4_name"], "ru": "Cover of Darkness"},
+    {"keys": ["entities:Ability_DarkLady4_description"], "ru": "Призывая глубинную тёмную силу, The Dark Lady отравляет разум всех вражеских героев в области. Они слегка замедляются, перестают видеть то, что видят союзники, а их собственный радиус обзора сокращается."},
+    {"keys": ["entities:Ability_DarkLady4_description_simple"], "ru": "Отравляет разум вражеских героев в области, на ^o{4,5,6} секунд^* накладывает ^oзамедление передвижения на {20,25,30}%^* и ^oUnlinked Vision^*. Их ^oрадиус обзора сокращается до {500,450,400} единиц^*, а обзор от любых других источников пропадает."},
+    {"keys": ["entities:Ability_DarkLady4_IMPACT_effect"], "ru": "Накладывает Darkness на цели в области на {4,5,6} секунд."},
+    {"keys": ["entities:Ability_DarkLady4_effect_header"], "ru": "Эффекты Darkness"},
+    {"keys": ["entities:Ability_DarkLady4_tooltip_flavor"], "ru": "Ты совсем один — рядом никого!"}
+  ]
+}

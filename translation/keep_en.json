@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "policy_version": "1.0.0",
+  "rules": [
+    {
+      "id": "KEEP-ITEM-PROPER-NAMES",
+      "match": {"category": "item_name", "runtime_role": "DISPLAY_TEXT"},
+      "policy": "KEEP_EN",
+      "reason": "Название в ссылке должно совпадать с searchable названием в магазине."
+    },
+    {
+      "id": "KEEP-STAFF-OF-THE-MASTER",
+      "match": {"exact_text": "Staff of the Master"},
+      "policy": "KEEP_EN",
+      "reason": "Search consistency между магазином и описаниями способностей."
+    },
+    {
+      "id": "KEEP-TIER-I",
+      "match": {"exact_text": "Tier I"},
+      "policy": "KEEP_EN",
+      "reason": "Утверждённый tier label."
+    },
+    {
+      "id": "KEEP-TIER-II",
+      "match": {"exact_text": "Tier II"},
+      "policy": "KEEP_EN",
+      "reason": "Утверждённый tier label."
+    },
+    {
+      "id": "KEEP-TIER-III",
+      "match": {"exact_text": "Tier III"},
+      "policy": "KEEP_EN",
+      "reason": "Утверждённый tier label."
+    },
+    {
+      "id": "KEEP-TIER-IV",
+      "match": {"exact_text": "Tier IV"},
+      "policy": "KEEP_EN",
+      "reason": "Утверждённый tier label."
+    }
+  ]
+}

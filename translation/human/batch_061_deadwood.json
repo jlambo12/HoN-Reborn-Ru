@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_061_DEADWOOD",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_Deadwood1_name"], "ru": "Rotten Grasp"},
+    {"keys": ["entities:Ability_Deadwood1_description"], "ru": "Призывая глубинную порчу из-под земли, Deadwood после небольшой задержки опутывает корнями всех в выбранной области."},
+    {"keys": ["entities:Ability_Deadwood1_description_simple"], "ru": "Через ^o1.2 секунды^* призывает подземную порчу и накладывает на противников в области ^oRotten Grasp^*. За время действия эффект наносит ^o{100,150,200,250} физического урона^*, ^oобездвиживает^* цель и снижает её броню на ^o{-1,-2,-3,-4}^* в течение ^o{1.5,2,2.5,3} секунд^*."},
+    {"keys": ["entities:Ability_Deadwood1_IMPACT_effect"], "ru": "Через 1.2 секунды создаёт в выбранной точке корни на {1.5,2,2.5,3} секунды. На ступивших в них противников накладывается Rotten Grasp."},
+    {"keys": ["entities:Ability_Deadwood1_effect_header"], "ru": "Эффект Rotten Grasp"},
+    {"keys": ["entities:Ability_Deadwood1_tooltip_flavor"], "ru": "Ты этого не предвидишь..."},
+
+    {"keys": ["entities:Ability_Deadwood2_name"], "ru": "Uproot"},
+    {"keys": ["entities:Ability_Deadwood2_name:deadwood_ihasatree"], "ru": "Oakbolt"},
+    {"keys": ["entities:Ability_Deadwood2_name:ult_boost"], "ru": "^gOakbolt*^*"},
+    {"keys": ["entities:Ability_Deadwood2_description"], "ru": "Deadwood вырывает дерево из земли. Пока дерево у него в руках, он может бросить его в противника, мини-оглушить и замедлить цель."},
+    {"keys": ["entities:Ability_Deadwood2_description:ult_boost"], "ru": "Deadwood ^gпостоянно держит дерево^*, которое может бросить в противника ^gи не потерять^*, мини-оглушив и замедлив цель."},
+    {"keys": ["entities:Ability_Deadwood2_description_simple"], "ru": "Вырывает дерево из земли и получает ^o{15,30,45,60} урона на 4 атаки^*.\\n\\nПока дерево в руках, выберите противника, чтобы бросить его: нанести физический урон в размере урона атаки, наложить ^oмини-оглушение^* и постепенно ослабевающее ^oзамедление передвижения на -75%^*. Если дерево всё ещё в руках во время последней усиленной атаки, ^oOakbolt^* применяется автоматически.\\n\\n^gStaff of the Master:^* атаки наносят ^o50% физического урона по области^*, каждая 4-я атака мини-оглушает и замедляет цель, а ^oпостоянное дерево^* не теряется после броска."},
+    {"keys": ["entities:Ability_Deadwood2_description_simple:ult_boost"], "ru": "^gDeadwood постоянно держит дерево, которое увеличивает^* урон на ^o{15,30,45,60}^*.\\n\\n^gАтаки наносят вокруг цели 50% физического урона по области^*.\\n\\n^gКаждая 4-я атака мини-оглушает цель и накладывает постепенно ослабевающее замедление на 1 секунду^*.\\n\\nВыберите противника, чтобы бросить в него дерево, нанести физический урон в размере урона атаки, наложить ^oмини-оглушение^* и постепенно ослабевающее ^oзамедление передвижения на -75%^*.\\n\\n^gПосле броска Deadwood не теряет дерево^*."},
+    {"keys": ["entities:Ability_Deadwood2_description2:ult_boost"], "ru": "^gАтаки наносят вокруг цели 50% физического урона по области^*"},
+    {"keys": ["entities:Ability_Deadwood2_IMPACT_effect"], "ru": "Вырывает дерево из земли и получает ^o{15,30,45,60} урона на 4 атаки^*.\\n\\nПока дерево в руках, выберите противника, чтобы бросить его: нанести физический урон в размере урона атаки, наложить ^oмини-оглушение^* и постепенно ослабевающее ^oзамедление передвижения на -75%^*."},
+    {"keys": ["entities:Ability_Deadwood2_IMPACT_effect:deadwood_ihasatree"], "ru": "Бросает дерево в цель, оглушает её на 0.1 секунды, наносит физический урон в размере урона атаки и накладывает Son of a Birch на {1.5,2,2.5,3} секунды. Не оглушает и не замедляет невосприимчивых к магии юнитов.\\n\\nЕсли дерево всё ещё в руках во время последней усиленной атаки, Oakbolt применяется автоматически. При броске в дерево уничтожает его при попадании."},
+    {"keys": ["entities:Ability_Deadwood2_IMPACT_effect:ult_boost"], "ru": "Бросает дерево в цель, оглушает её на 0.1 секунды, наносит физический урон в размере урона атаки и накладывает Son of a Birch на {1.5,2,2.5,3} секунды. Не оглушает и не замедляет невосприимчивых к магии юнитов."},
+    {"keys": ["entities:Ability_Deadwood2_effect_header"], "ru": "Эффект Uproot"},
+    {"keys": ["entities:Ability_Deadwood2_effect_header:deadwood_ihasatree", "entities:Ability_Deadwood2_effect_header:ult_boost"], "ru": "Эффект Son of a Birch"},
+    {"keys": ["entities:Ability_Deadwood2_tooltip_flavor"], "ru": "Дерево отлично подходит на роль оружия."},
+    {"keys": ["entities:Ability_Deadwood2_tooltip_flavor:deadwood_ihasatree", "entities:Ability_Deadwood2_tooltip_flavor:ult_boost"], "ru": "Вдохновлено Stormbolt."},
+
+    {"keys": ["entities:Ability_Deadwood3_name"], "ru": "Clearcutting"},
+    {"keys": ["entities:Ability_Deadwood3_description"], "ru": "Позволяет Deadwood проходить сквозь деревья."},
+    {"keys": ["entities:Ability_Deadwood3_description_simple"], "ru": "При активации на 10 секунд даёт ^o{30,45,60,75} скорости передвижения^* и позволяет ^oпроходить сквозь деревья, уничтожая их^*.\\n\\nУничтожив дерево, Deadwood ненадолго получает ещё ^o{30,45,60,75} скорости передвижения^* и ^o{25,50,75,100}% сопротивления замедлению^*."},
+    {"keys": ["entities:Ability_Deadwood3_IMPACT_effect"], "ru": "Накладывает на Deadwood ^oClearcutting^* на ^o10 секунд^*."},
+    {"keys": ["entities:Ability_Deadwood3_effect_header"], "ru": "Эффекты Clearcutting"},
+    {"keys": ["entities:Ability_Deadwood3_tooltip_flavor"], "ru": "С дороги, иду напролом!"},
+
+    {"keys": ["entities:Ability_Deadwood4_name"], "ru": "Willowmaker"},
+    {"keys": ["entities:Ability_Deadwood4_name:ult_boost"], "ru": "^gWillowmaker*^*"},
+    {"keys": ["entities:Ability_Deadwood4_description"], "ru": "Deadwood — древняя и могучая сила. Он бьёт противника рукой-пнём, наносит огромный урон и похищает силу цели."},
+    {"keys": ["entities:Ability_Deadwood4_description_simple"], "ru": "Выберите противника, чтобы на 7 секунд получить ^o40% его силы^* и нанести ^o{200,400,600} физического урона^* плюс ^oдополнительный физический урон^*, зависящий от 40% силы цели.\\n\\n^oОглушает на 1.5 секунды^* и на 5 секунд накладывает постепенно ослабевающее ^oзамедление передвижения на 100%^*.\\n\\n^gЭффект Staff of the Master:^* увеличивает длительность Strength Sap до 30 секунд и сокращает перезарядку до {85,65,45} секунд."},
+    {"keys": ["entities:Ability_Deadwood4_description_simple:ult_boost"], "ru": "Выберите противника, чтобы получить ^o40% его силы^* на ^g30 секунд^* и нанести ^o{200,400,600} физического урона^* плюс ^oдополнительный физический урон^*, зависящий от 40% силы цели.\\n\\n^oОглушает на 1.5 секунды^* и на 5 секунд накладывает постепенно ослабевающее ^oзамедление передвижения на 100%^*."},
+    {"keys": ["entities:Ability_Deadwood4_description2"], "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* увеличивает длительность Strength Sap до 30 секунд и сокращает перезарядку до {85,65,45} секунд."},
+    {"keys": ["entities:Ability_Deadwood4_description2:ult_boost"], "ru": "\\r"},
+    {"keys": ["entities:Ability_Deadwood4_IMPACT_effect"], "ru": "Выберите противника, чтобы на 7 секунд получить ^o40% его силы^* и нанести ^o{200,400,600} физического урона^* плюс дополнительный физический урон в размере ^o21x40% силы цели^*.\\n\\n^oОглушает на 1.5 секунды^* и на 5 секунд накладывает постепенно ослабевающее ^oзамедление передвижения на 100%^*."},
+    {"keys": ["entities:Ability_Deadwood4_IMPACT_effect:ult_boost"], "ru": "Выберите противника, чтобы получить ^o40% его силы^* на ^g30 секунд^* и нанести ^o{200,400,600} физического урона^* плюс дополнительный физический урон в размере ^o21x40% силы цели^*.\\n\\n^oОглушает на 1.5 секунды^* и на 5 секунд накладывает постепенно ослабевающее ^oзамедление передвижения на 100%^*."},
+    {"keys": ["entities:Ability_Deadwood4_effect_header"], "ru": "Эффект Willowmaker"},
+    {"keys": ["entities:Ability_Deadwood4_tooltip_flavor"], "ru": "Deadwood... УДАР!"}
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_069_ELECTRICIAN",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_Electrician1_name"], "ru": "Static Grip"},
+    {"keys": ["entities:Ability_Electrician1_description"], "ru": "Electrician удерживает противника статическим разрядом, не позволяя ему двигаться, атаковать, применять способности и использовать предметы."},
+    {"keys": ["entities:Ability_Electrician1_description_simple"], "ru": "^oСоздаёт^* связь с противником и удерживает его с помощью ^oStatic Grip^* в течение до ^o{2,2.4,2.8,3.2} секунд^*. Каждую секунду наносит ^o{40,50,60,70} магического урона^*, ^oоглушает и обездвиживает^* цель.\\n\\nСвязь разрывается, если эффект с цели ^oрассеивается^* или расстояние между ней и Electrician ^oпревышает 750 единиц^*."},
+    {"keys": ["entities:Ability_Electrician1_IMPACT_effect"], "ru": "Связывается с выбранным противником и накладывает Static Grip на срок до ^o{2,2.4,2.8,3.2} секунд^*, а также состояния ^oStunned^* и ^oRooted^*.\\n\\nСвязь разрывается, если эффект досрочно рассеивается с цели или расстояние между ней и Electrician превышает 750 единиц."},
+    {"keys": ["entities:Ability_Electrician1_effect_header"], "ru": "Эффекты Static Grip"},
+    {"keys": ["entities:Ability_Electrician1_tooltip_flavor"], "ru": "Выруби рубильник!"},
+
+    {"keys": ["entities:Ability_Electrician2_name"], "ru": "Electric Shield"},
+    {"keys": ["entities:Ability_Electrician2_name:ult_boost"], "ru": "^gElectric Shield*^*"},
+    {"keys": ["entities:Ability_Electrician2_description"], "ru": "Electrician создаёт вокруг себя электрический щит, который поглощает часть входящего урона."},
+    {"keys": ["entities:Ability_Electrician2_description_simple"], "ru": "На ^o12 секунд^* создаёт щит, расходуя до ^o20% максимальной маны^* (требуется не менее 10 маны). Щит поглощает ^o50% входящего урона^*, вплоть до ^o{0.75,0.9,1.05,1.2}x потраченной при применении маны^*, и наносит окружающим противникам ^o{15,30,45,60} магического урона в секунду^*. Можно активировать во время поддержания другой способности.\\n\\n^gStaff of the Master^* превращает Electric Shield в ^oпереключаемую способность^*. Если мана Electrician опускается до 0, наносящая урон аура Electric Shield продолжает действовать."},
+    {"keys": ["entities:Ability_Electrician2_description_simple:ult_boost"], "ru": "^gПереключаемая способность^*.\\nНа ^o12 секунд^* создаёт щит, расходуя до ^o20% максимальной маны^* (требуется не менее 10 маны). Щит поглощает ^o50% входящего урона^*, вплоть до ^o{0.75,0.9,1.05,1.2}x потраченной при применении маны^*, и наносит окружающим противникам ^o{15,30,45,60} магического урона в секунду^*. Можно активировать во время поддержания другой способности."},
+    {"keys": ["entities:Ability_Electrician2_description2"], "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* Electric Shield становится переключаемой способностью. Если мана Electrician опускается до 0, наносящая урон аура Electric Shield продолжает действовать."},
+    {"keys": ["entities:Ability_Electrician2_description2:ult_boost"], "ru": "\\r"},
+    {"keys": ["entities:Ability_Electrician2_effect_header"], "ru": "Эффекты Electric Shield"},
+    {"keys": ["entities:Ability_Electrician2_effect_header2"], "ru": "Эффекты Electric Aura"},
+    {"keys": ["entities:Ability_Electrician2_tooltip_flavor"], "ru": "Не тычь в меня вилкой."},
+
+    {"keys": ["entities:Ability_Electrician3_name"], "ru": "Energy Absorption"},
+    {"keys": ["entities:Ability_Electrician3_description"], "ru": "Electrician выпускает вокруг себя заряд энергии, наносит противникам урон и сжигает их ману. За каждую задетую цель с маной он восстанавливает часть собственной маны и получает 50 скорости передвижения."},
+    {"keys": ["entities:Ability_Electrician3_description_simple"], "ru": "Выпускает вокруг себя энергию, наносит противникам ^o{85,150,215,280} магического урона^* и сжигает ^o{8,10,12,14}% их максимальной маны. За каждую задетую цель восстанавливает ^o{15,20,25,30} маны^* (x3 за героя). Если задет хотя бы один противник, на ^o7 секунд^* получает ^o25 скорости передвижения^* и ещё ^o5 за каждую задетую цель^* (максимальная прибавка — 40)."},
+    {"keys": ["entities:Ability_Electrician3_IMPACT_effect"], "ru": "Наносит окружающим противникам {85,150,215,280} магического урона и сжигает {8,10,12,14}% их максимальной маны.\\n\\nЗа каждого задетого вражеского юнита восстанавливает {15,20,25,30} маны (втрое больше за вражеского героя). Если задет хотя бы один противник, накладывает на Electrician Energy Absorption на 7 секунд."},
+    {"keys": ["entities:Ability_Electrician3_effect_header"], "ru": "Эффекты Energy Absorption"},
+    {"keys": ["entities:Ability_Electrician3_tooltip_flavor"], "ru": "У меня случилось отключение!"},
+
+    {"keys": ["entities:Ability_Electrician4_name"], "ru": "Cleansing Shock"},
+    {"keys": ["entities:Ability_Electrician4_name:ult_boost"], "ru": "^gCleansing Shock*^*"},
+    {"keys": ["entities:Ability_Electrician4_description"], "ru": "Electrician поражает выбранного юнита разрядом. С союзника он снимает отрицательные эффекты и ускоряет его, а с противника снимает усиления и замедляет его."},
+    {"keys": ["entities:Ability_Electrician4_description_simple"], "ru": "Посылает в юнита мощный разряд. С ^oпротивника^* он ^oснимает усиления^* и накладывает постепенно ослабевающее ^oзамедление передвижения на {40,60,80}%^*, а с ^oсоюзника^* ^oснимает отрицательные эффекты^* и ^oповышает его скорость передвижения на {30,40,50}%^*.\\n\\nМгновенно уничтожает вражеские иллюзии^* и ^oнаносит призванным вражеским юнитам {700,850,1000} чистого урона^*. Разряд ^oперескакивает ещё на {0,1,2} ближайшие цели^*.\\n\\n^gStaff of the Master:^* увеличивает радиус эффекта до 700. При применении к противнику также создаёт союзную область Cleansing Shock, а при применении к союзнику — вражескую."},
+    {"keys": ["entities:Ability_Electrician4_description_simple:ult_boost", "entities:Ability_Electrician4_IMPACT_effect:ult_boost"], "ru": "Посылает в юнита мощный разряд. С ^oпротивника^* он ^oснимает усиления^* и накладывает постепенно ослабевающее ^oзамедление передвижения на {40,60,80}%^*, а с ^oсоюзника^* ^oснимает отрицательные эффекты^* и ^oповышает его скорость передвижения на {30,40,50}%^*.\\n\\nМгновенно уничтожает вражеские иллюзии^* и ^oнаносит призванным вражеским юнитам {700,850,1000} чистого урона^*. Разряд ^oперескакивает ещё на {0,1,2} ближайшие цели^* и ^gпри применении к противнику также создаёт союзную область Cleansing Shock, а при применении к союзнику — вражескую^*."},
+    {"keys": ["entities:Ability_Electrician4_description2"], "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* увеличивает радиус эффекта до 700. При применении к противнику также создаёт союзную область Cleansing Shock, а при применении к союзнику — вражескую."},
+    {"keys": ["entities:Ability_Electrician4_description2:ult_boost"], "ru": "\\r"},
+    {"keys": ["entities:Ability_Electrician4_IMPACT_effect"], "ru": "Выберите противника, чтобы снять с него усиления и ^oналожить постепенно ослабевающее замедление передвижения на {40,60,80}%^*, либо союзника или себя, чтобы снять отрицательные эффекты и ^oповысить скорость передвижения на {30,40,50}%^*.\\n\\nМгновенно уничтожает вражеские иллюзии^* и ^oнаносит призванным вражеским юнитам {700,850,1000} чистого урона^*. Разряд ^oперескакивает ещё на {0,1,2} ближайшие цели^*."},
+    {"keys": ["entities:Ability_Electrician4_effect_header"], "ru": "Эффекты Cleansed"},
+    {"keys": ["entities:Ability_Electrician4_effect_header2"], "ru": "Эффекты Shocked"}
+  ]
+}

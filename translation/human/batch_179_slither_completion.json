@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_179_SLITHER_COMPLETION",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Slither1_IMPACT_effect"],
+      "english_hash": "673b423cd364f6c8b5a71758cae5a3f79fdbdc72fa6bcac02b464a37819b6b1a",
+      "ru": "Выплёскивает токсины по линии, нанося ^o{75,90,105,120} магического урона^* и накладывая ^oзамедление передвижения на 50%, постепенно ослабевающее^* в течение 6 секунд.\\n\\nЗадетые противники дополнительно получают ^o{15,30,45,60} магического урона каждые 2 секунды в течение 10 секунд^*."
+    },
+    {
+      "keys": ["entities:Ability_Slither1_description"],
+      "english_hash": "094bb59e845191763508c09c1b492455732949ef8ffcfb9ec473efa7ffb94399",
+      "ru": "Slither выпускает поток токсинов в выбранном направлении, заражая всех задетых противников. Они получают начальный и периодический урон, а их скорость передвижения снижается."
+    },
+    {
+      "keys": ["entities:Ability_Slither1_description_simple"],
+      "english_hash": "673b423cd364f6c8b5a71758cae5a3f79fdbdc72fa6bcac02b464a37819b6b1a",
+      "ru": "Выплёскивает токсины по линии, нанося ^o{75,90,105,120} магического урона^* и накладывая ^oзамедление передвижения на 50%, постепенно ослабевающее^* в течение 6 секунд.\\n\\nЗадетые противники дополнительно получают ^o{15,30,45,60} магического урона каждые 2 секунды в течение 10 секунд^*."
+    },
+    {
+      "keys": ["entities:Ability_Slither1_effect_header"],
+      "english_hash": "407d1ae204dc2f57830e348be7b209e811177a12372362198dab8a30a76d55ab",
+      "ru": "Эффекты Poison Spray"
+    },
+    {
+      "keys": ["entities:Ability_Slither2_IMPACT_effect"],
+      "english_hash": "6c3272b036274f3ffa096d724be5d525e6ee29ab57f2523af9e52f3f13f8e1e3",
+      "ru": "Создаёт Toxin Ward в выбранной точке. Он существует 40 секунд, имеет ^o{60,110,160,210} здоровья^*, наносит ^o{10,20,30,40} физического урона^* за атаку с интервалом 1.5 секунды, а его атаки продлевают на цели все периодические эффекты способностей Slither на 1 секунду. Имеет 650 дневного и ночного обзора.\\n\\nОдин заряд восстанавливается каждые ^c5 секунд^*. Максимум — ^c{1,1,2,3} заряда^*."
+    },
+    {
+      "keys": ["entities:Ability_Slither2_description"],
+      "english_hash": "9f6290dc34031a44960c84a9f036e458cab693d898bde9b18874bab962bad3b4",
+      "ru": "Slither призывает в выбранной точке тотем, который атакует противников поблизости, наносит небольшой урон и замедляет их. Тотем невосприимчив к магии."
+    },
+    {
+      "keys": ["entities:Ability_Slither2_description_simple"],
+      "english_hash": "1f191c3da600521f72312fc1eef1ef73c2c6810d65d00f73cbc9753c9c7017a2",
+      "ru": "Призывает ^oToxin Ward^* в выбранной точке на ^o40 секунд^*.\\n\\nToxin Wards имеют ^o{60,110,160,210} здоровья^* и наносят ^o{10,20,30,40} физического урона^*. Атака ^oToxin Ward^* ^oпродлевает все периодические отрицательные эффекты Slither^* на цели на ^o1 секунду^*.\\n\\nМожно накопить не более ^c{1,1,2,3} зарядов^*, получая один каждые ^c5 секунд^*."
+    },
+    {
+      "keys": ["entities:Ability_Slither2_effect_header"],
+      "english_hash": "6e5e7bc5e96f838352cde0fcff351520eab9cd6b12ecb43e9b30ed6fd98f6777",
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:Ability_Slither3_ATTACK_IMPACT_effect"],
+      "english_hash": "4f6e369532154a693ffb6da36e39493b9e5f66762cc130ee46203fa4b38e3770",
+      "ru": "Накладывает на цель ^oToxicity^* на ^o8 секунд^*. Иллюзии накладывают Toxicity только на 2.66 секунды."
+    },
+    {
+      "keys": ["entities:Ability_Slither3_description"],
+      "english_hash": "382e2d5d0c61597c52eee7a4faca5fe0e99bb08e1f608fa8f3155f736d571243",
+      "ru": "Slither отравляет свои атаки. Они наносят периодический урон в течение 8 секунд, слегка замедляют цель и снижают её восстановление здоровья."
+    },
+    {
+      "keys": ["entities:Ability_Slither3_description_simple"],
+      "english_hash": "7d9a49f49294267353dc0f7fade21915f91e29c40623e5b18cc72fb7e6e7182c",
+      "ru": "Ваши атаки дополнительно наносят ^o{48,96,144,192} магического урона за 8 секунд^*. На это время ^oвосстановление здоровья противника снижается на {20,40,60,80}%^*, а ^oскорость передвижения — на {6,9,12,15}%^*."
+    },
+    {
+      "keys": ["entities:Ability_Slither3_effect_header"],
+      "english_hash": "67b5d0ec81dd95cdf965304c5c9f1fc60f66bffc44714b845f623b0ecaaa6523",
+      "ru": "Эффекты Toxicity"
+    },
+    {
+      "keys": ["entities:Ability_Slither4_IMPACT_effect"],
+      "english_hash": "b70b5cdc786362c14f6205112173e77850f5c4665e6a15ff64c3a6bedc116fcd",
+      "ru": "Накладывает ^oAcidic Poison^* на цели в радиусе действия на ^o12 секунд^*. На 3 секунды даёт Slither беспрепятственный дневной и ночной обзор в радиусе 800."
+    },
+    {
+      "keys": ["entities:Ability_Slither4_description"],
+      "english_hash": "fb787a2e0f247e9615196ec9ec0fbdf70dadff2f46c15d92ec51d50b4a3b0e7c",
+      "ru": "Slither распространяет яд во все стороны. Задетые противники заражаются и получают периодический урон. Без усиления яд не смертелен и не может снизить здоровье цели ниже 1."
+    },
+    {
+      "keys": ["entities:Ability_Slither4_description2"],
+      "english_hash": "d145e71e4685cb945fdf8484c9e5a15bfb9f665821e04246f5049088b84c2922",
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff:^* увеличивает урон в секунду с {35,55,75} до {60,90,120} и делает его смертельным. Сокращает перезарядку до 60 секунд."
+    },
+    {
+      "keys": ["entities:Ability_Slither4_description_simple"],
+      "english_hash": "95e7ce68fecd45706da738eb5f92354f2b8d56a8ac0ed64224b5582e30e52104",
+      "ru": "Отравляет противников в большой области вокруг вас, нанося ^o{420,660,900} несмертельного магического урона за 12 секунд^*. При применении даёт обзор вокруг вас.\\n\\n^gStaff of the Master^* ^oувеличивает урон до {720,1080,1440} и делает его смертельным^*. ^oСокращает перезарядку до 60 секунд^*."
+    },
+    {
+      "keys": ["entities:Ability_Slither4_description_simple:ult_boost"],
+      "english_hash": "c5a7be3918d1414ca71a5ff1696ce05c888d2a3125a4a361862c4dea7aa60037",
+      "ru": "Отравляет противников в большой области вокруг вас, нанося ^g{720,1080,1440} смертельного магического урона^* за ^o12 секунд^*. При применении даёт обзор вокруг вас."
+    },
+    {
+      "keys": ["entities:Ability_Slither4_effect_header"],
+      "english_hash": "4d95c08351c40dd68bdef72f5e6fa2c04c77659ef6537801e8ace59026a45090",
+      "ru": "Эффекты Acidic Poison"
+    },
+    {
+      "keys": ["entities:Ability_Slither4_effect_header:ult_boost"],
+      "english_hash": "4d95c08351c40dd68bdef72f5e6fa2c04c77659ef6537801e8ace59026a45090",
+      "ru": "Эффекты Acidic Poison"
+    },
+    {
+      "keys": ["entities:State_Slither_Ability1_DoT_FRAME_effect"],
+      "english_hash": "ecb54836220bcffb6085814a40ba3eee4b8d55a7bc514591920ffee188ad5073",
+      "ru": "{15,30,45,60} магического урона каждые 2 секунды"
+    },
+    {
+      "keys": ["entities:State_Slither_Ability1_FRAME_effect"],
+      "english_hash": "45162bdc8152dfba41ccb5df096fbf0ef04042d84579db73778898af437eb373",
+      "ru": "Сначала замедляет передвижение на 50%; эффект постепенно ослабевает в течение 6 секунд"
+    },
+    {
+      "keys": ["entities:State_Slither_Ability3_FRAME_effect"],
+      "english_hash": "c4e08fc43ae32d2185eac897c9eb7135b6277b1fd9919e740c3af20b8f228276",
+      "ru": "{6,12,18,24} магического урона в секунду"
+    },
+    {
+      "keys": ["entities:State_Slither_Ability4_FRAME_effect"],
+      "english_hash": "69954b4d39dd7ce3e3200ad7d40d2d15670269c44a750d8e389a6b873a42f059",
+      "ru": "{35,55,75} несмертельного магического урона в секунду"
+    },
+    {
+      "keys": ["entities:State_Slither_Ability4_FRAME_effect:ult_boost"],
+      "english_hash": "bce56c24ed741df3c959900e66ad7665063d0218a58c14bc1e3c1407d3c13344",
+      "ru": "^g{60,90,120} смертельного^* магического урона в секунду"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_053_CORRUPTED_DISCIPLE",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_CorruptedDisciple1_name"], "ru": "Electric Tide"},
+    {"keys": ["entities:Ability_CorruptedDisciple1_description"], "ru": "Corrupted Disciple выпускает из своей сферы электрическую волну, которая расходится вокруг него, а затем возвращается, нанося урон всем на пути."},
+    {"keys": ["entities:Ability_CorruptedDisciple1_description_simple"], "ru": "Выпускает электрическую волну, которая наносит противникам вокруг от ^o{35,55,75,95} до {75,115,155,195} магического урона^*.\\n\\nЧем ^oдальше противник^* от Corrupted Disciple, тем больше урон. Волна наносит урон ^oи при расширении, и при возвращении^*. Ненадолго открывает обзор вокруг героя."},
+    {"keys": ["entities:Ability_CorruptedDisciple1_IMPACT_effect"], "ru": "Наносит задетым электрической волной противникам от ^o{35,55,75,95}^* до ^o{75,115,155,195} магического урона^*. Чем дальше цель, тем больше урон. Волна наносит урон и при расширении, и при возвращении.\\n\\nНа 4 секунды даёт беспрепятственный дневной и ночной обзор радиусом 800 вокруг Corrupted Disciple."},
+    {"keys": ["entities:Ability_CorruptedDisciple1_tooltip_flavor"], "ru": "Всё хорошее — прочь, всё плохое — сюда."},
+
+    {"keys": ["entities:Ability_CorruptedDisciple2_name"], "ru": "Corrupted Conduit"},
+    {"keys": ["entities:Ability_CorruptedDisciple2_description"], "ru": "Corrupted Disciple связывает себя с противником, похищая его урон и усиливая собственные атаки. Пока связь действует, он видит цель."},
+    {"keys": ["entities:Ability_CorruptedDisciple2_description_simple"], "ru": "Связывает Corrupted Disciple с вражеским героем, похищая его урон от атаки и давая обзор вокруг цели. За 10 секунд ^oпохищает^* до ^o{65,130,195,260} урона от атаки^*. После разрыва связи ^oпохищенный урон сохраняется ещё 13 секунд^*.\\n\\nСвязь разрывается досрочно, если цель отойдёт более чем на 200 единиц от ^oмаксимальной дальности применения^*."},
+    {"keys": ["entities:Ability_CorruptedDisciple2_IMPACT_effect"], "ru": "Связывает Corrupted Disciple с выбранным противником. Пока связь действует, каждые 0.2 секунды накладывает на обоих по заряду Corrupted Conduit и похищает вплоть до ^o{65,130,195,260} урона от атаки^*.\\n\\nСвязь разрывается через 10 секунд или если цель отойдёт более чем на 200 единиц от максимальной дальности применения.\\n\\nПосле разрыва похищенный урон сохраняется ещё 13 секунд.\\n\\nПока связь действует, даёт беспрепятственный дневной и ночной обзор радиусом 800 вокруг цели. Максимум — 50 зарядов."},
+    {"keys": ["entities:Ability_CorruptedDisciple2_effect_header"], "ru": "Corrupted Conduit (противник)"},
+    {"keys": ["entities:Ability_CorruptedDisciple2_effect_header2"], "ru": "Corrupted Conduit (Corrupted Disciple)"},
+    {"keys": ["entities:Ability_CorruptedDisciple2_tooltip_flavor"], "ru": "То, что было твоим, теперь моё."},
+
+    {"keys": ["entities:Ability_CorruptedDisciple3_name"], "ru": "Static Discharge"},
+    {"keys": ["entities:Ability_CorruptedDisciple3_description"], "ru": "Сфера Corrupted Disciple заряжает его тело электричеством, повышает скорость передвижения и бьёт током противников, которые пытаются применить к нему заклинание."},
+    {"keys": ["entities:Ability_CorruptedDisciple3_description_simple"], "ru": "Даёт ^o+{4,8,12,16}% скорости передвижения^*. Противники, применившие к Corrupted Disciple направленную способность, получают ^o{40,80,120,160} магического урона^* и на {0.6,0.9,1.2,1.5} секунды ^o-80% скорости передвижения^*."},
+    {"keys": ["entities:Ability_CorruptedDisciple3_IMPACT_effect"], "ru": "Когда вражеский герой применяет к Corrupted Disciple направленную способность или предмет, наносит ему ^o{40,80,120,160} магического урона^* и накладывает Static Discharge на ^o{0.6,0.9,1.2,1.5} секунды^*."},
+    {"keys": ["entities:Ability_CorruptedDisciple3_effect_header"], "ru": "Эффекты Static Discharge"},
+    {"keys": ["entities:Ability_CorruptedDisciple3_tooltip_flavor"], "ru": "Не трогай плазменный шар!"},
+
+    {"keys": ["entities:Ability_CorruptedDisciple4_name"], "ru": "Overload"},
+    {"keys": ["entities:Ability_CorruptedDisciple4_name:ult_boost"], "ru": "^gSupercharged*^*"},
+    {"keys": ["entities:Ability_CorruptedDisciple4_description"], "ru": "Corrupted Disciple перегружает броню электричеством. Она раз за разом поражает окружающую цель с наименьшим запасом здоровья и снижает её броню."},
+    {"keys": ["entities:Ability_CorruptedDisciple4_description_simple"], "ru": "На ^o20 секунд^* перегружает броню электричеством. Каждые ^o{0.8,0.7,0.6} секунды^* наносит ^o{37.5,50,62.5} физического урона^* и снижает броню на ^o-1^* у ^oокружающей цели с наименьшим запасом здоровья^*. Всегда отдаёт приоритет противнику под действием ^oCorrupted Conduit^*.\\n\\n^gStaff of the Master^* увеличивает ^oчастоту разрядов до одного в {0.7,0.6,0.5} секунды^* и позволяет им ^oотскочить ещё к 2 целям^*."},
+    {"keys": ["entities:Ability_CorruptedDisciple4_description_simple:ult_boost"], "ru": "На ^o20 секунд^* перегружает броню электричеством. Каждые ^g{0.7,0.6,0.5} секунды^* наносит ^o{37.5,50,62.5} физического урона^*, снижает броню на ^o-1^* у ^oокружающей цели с наименьшим запасом здоровья^* и ^gдважды отскакивает дальше^*. Всегда отдаёт приоритет противнику под действием ^oCorrupted Conduit^*."},
+    {"keys": ["entities:Ability_CorruptedDisciple4_description2"], "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* сокращает интервал между разрядами с {0.8,0.7,0.6} до {0.7,0.6,0.5} секунды и позволяет им отскочить ещё к 2 целям."},
+    {"keys": ["entities:Ability_CorruptedDisciple4_description2:ult_boost"], "ru": "\\r"},
+    {"keys": ["entities:Ability_CorruptedDisciple4_effect_header"], "ru": "Эффекты Jolted"},
+    {"keys": ["entities:Ability_CorruptedDisciple4_IMPACT_effect"], "ru": "Каждые ^o{0.8,0.7,0.6} секунды^* выпускает разряд в цель с наименьшим запасом здоровья в радиусе 525. Разряд наносит ^o{37.5,50,62.5} физического урона^* и накладывает один заряд Jolted на 3 секунды.\\n\\nВсегда отдаёт приоритет противнику под действием Corrupted Conduit. Длительность — 20 секунд."},
+    {"keys": ["entities:Ability_CorruptedDisciple4_IMPACT_effect:ult_boost"], "ru": "Каждые ^g{0.7,0.6,0.5}^* секунды выпускает разряд в цель с наименьшим запасом здоровья в радиусе 525. Разряд наносит {37.5,50,62.5} физического урона, накладывает один заряд Jolted на 3 секунды и ^gдважды отскакивает к следующим целям с наименьшим запасом здоровья^*.\\n\\nВсегда отдаёт приоритет противнику под действием Corrupted Conduit. Длительность — 20 секунд."},
+    {"keys": ["entities:Ability_CorruptedDisciple4_tooltip_flavor"], "ru": "Слишком много энергии!"}
+  ]
+}

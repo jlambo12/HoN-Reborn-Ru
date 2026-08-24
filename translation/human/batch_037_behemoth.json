@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_037_BEHEMOTH",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Behemoth1_name"],
+      "ru": "Fissure"
+    },
+    {
+      "keys": ["entities:Ability_Behemoth1_name:behemoth_ability1_Self"],
+      "ru": "Fissure (Collapse)"
+    },
+    {
+      "keys": ["entities:Ability_Behemoth1_description"],
+      "ru": "Мощным ударом ствола Behemoth раскалывает землю, наносит урон и оглушает противников перед собой, а также оставляет непроходимую земляную насыпь."
+    },
+    {
+      "keys": ["entities:Ability_Behemoth1_description_simple"],
+      "ru": "Раскалывает землю и создаёт в выбранном направлении ^oнепроходимую стену^*. Вражеские юниты получают ^o{125,175,225,275} магического урона^* и ^oоглушаются на {1.3,1.45,1.6,1.75} секунды^*.\\n\\nСтена существует ^o{6.5,7,7.5,8} секунд^*; её можно ^oразрушить досрочно повторной активацией^*."
+    },
+    {
+      "keys": ["entities:Ability_Behemoth1_effect_header", "entities:Ability_Behemoth3_effect_header", "entities:Ability_Behemoth4_effect_header"],
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:Ability_Behemoth1_IMPACT_effect", "entities:Ability_Behemoth1_IMPACT_effect:behemoth_ability1_Self"],
+      "ru": "Наносит каждой цели на линии ^o{125,175,225,275} магического урона^* и ^oоглушает её на {1.3,1.45,1.6,1.75} секунды^*. Оставляет ^oнепроходимую земляную насыпь на {6.5,7,7.5,8} секунд^*.\\n\\n^oАктивируйте способность повторно^*, чтобы разрушить стену досрочно."
+    },
+    {
+      "keys": ["entities:Ability_Behemoth1_tooltip_flavor"],
+      "ru": "Вот черта — и ты её перешёл!"
+    },
+    {
+      "keys": ["entities:Ability_Behemoth2_name"],
+      "ru": "Enrage"
+    },
+    {
+      "keys": ["entities:Ability_Behemoth2_name:ult_boost"],
+      "ru": "^gEnrage*^*"
+    },
+    {
+      "keys": ["entities:Ability_Behemoth2_description", "entities:Ability_Behemoth2_Sub_description"],
+      "ru": "Behemoth даёт волю ярости, усиливая свою следующую атаку."
+    },
+    {
+      "keys": ["entities:Ability_Behemoth2_description2"],
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* открывает дополнительную способность Enraged Leap. Выберите точку в пределах 800 от Behemoth, чтобы сбить наведение вражеских снарядов, прыгнуть туда, применить Enrage и вызвать эффекты Heavyweight. Enrage также даёт True Strike.\\n\\nПерезарядка Enraged Leap — 8 секунд; её применение запускает перезарядку Enrage. Применение Enrage запускает у Enraged Leap перезарядку этой способности."
+    },
+    {
+      "keys": ["entities:Ability_Behemoth2_description2:ult_boost"],
+      "ru": "\\r"
+    },
+    {
+      "keys": ["entities:Ability_Behemoth2_description_simple"],
+      "ru": "Усиливает вашу ^oследующую атаку^* в течение 14 секунд: она наносит дополнительно ^o{125,200,275,350}% базового урона^*.\\n\\n^gStaff of the Master:^* открывает Enraged Leap, позволяя ^oпрыгнуть в выбранную точку^* в пределах 800 от Behemoth, сбить наведение вражеских снарядов и применить ^oEnrage^* при приземлении. ^oEnrage^* также даёт ^oTrue Strike^*.\\n\\n^oПрименение любой из двух способностей запускает перезарядку другой^*."
+    },
+    {
+      "keys": ["entities:Ability_Behemoth2_description_simple:ult_boost"],
+      "ru": "Усиливает вашу ^oследующую атаку^* в течение 14 секунд: она наносит дополнительно ^o{125,200,275,350}% базового урона^*."
+    },
+    {
+      "keys": ["entities:Ability_Behemoth2_effect_header", "entities:Ability_Behemoth2_Sub_effect_header"],
+      "ru": "Эффекты Enraged"
+    },
+    {
+      "keys": ["entities:Ability_Behemoth2_IMPACT_effect", "entities:Ability_Behemoth2_IMPACT_effect:ult_boost"],
+      "ru": "Накладывает на себя ^oEnraged^* на 14 секунд или до следующей атаки."
+    },
+    {
+      "keys": ["entities:Ability_Behemoth2_tooltip_flavor", "entities:Ability_Behemoth2_Sub_tooltip_flavor"],
+      "ru": "Ты зашёл слишком далеко."
+    },
+    {
+      "keys": ["entities:Ability_Behemoth2_Sub_name", "entities:Ability_Behemoth2_Sub_name:ult_boost"],
+      "ru": "^gEnraged Leap*^*"
+    },
+    {
+      "keys": ["entities:Ability_Behemoth2_Sub_description_simple", "entities:Ability_Behemoth2_Sub_description_simple:ult_boost"],
+      "ru": "^oПрыгает^* в выбранную точку, ^oсбивает наведение^* вражеских снарядов и на 14 секунд усиливает следующую атаку: она наносит дополнительно ^o{125,200,275,350}% базового урона^* и получает ^oTrue Strike^*."
+    },
+    {
+      "keys": ["entities:Ability_Behemoth2_Sub_IMPACT_effect", "entities:Ability_Behemoth2_Sub_IMPACT_effect:ult_boost"],
+      "ru": "Прыгает в выбранную точку, ^oсбивает наведение^* вражеских снарядов и на 14 секунд усиливает следующую атаку: она наносит дополнительно ^o{125,200,275,350}% базового урона^* и получает ^oTrue Strike^*."
+    },
+    {
+      "keys": ["entities:Ability_Behemoth3_name"],
+      "ru": "Heavyweight"
+    },
+    {
+      "keys": ["entities:Ability_Behemoth3_description"],
+      "ru": "Каждое применение способности Behemoth сотрясает землю, наносит урон и оглушает ближайших противников."
+    },
+    {
+      "keys": ["entities:Ability_Behemoth3_description_simple"],
+      "ru": "При ^oприменении способности^* наносит ближайшим противникам ^o{40,60,80,100} магического урона^* и ^oоглушает их на {0.6,0.9,1.2,1.5} секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_Behemoth3_ABILITY_IMPACT_effect"],
+      "ru": "Наносит противникам в радиусе 300 вокруг себя ^o{40,60,80,100} магического урона^* и оглушает их на ^o{0.6,0.9,1.2,1.5} секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_Behemoth3_tooltip_flavor"],
+      "ru": "Грохот в джунглях!"
+    },
+    {
+      "keys": ["entities:Ability_Behemoth4_name"],
+      "ru": "Shockwave"
+    },
+    {
+      "keys": ["entities:Ability_Behemoth4_description"],
+      "ru": "Behemoth изо всех сил бьёт по земле и создаёт вокруг себя сокрушительную ударную волну. Она отражается от ближайших противников, поэтому урон растёт вместе с числом вражеских юнитов вокруг."
+    },
+    {
+      "keys": ["entities:Ability_Behemoth4_description_simple", "entities:Ability_Behemoth4_IMPACT_effect"],
+      "ru": "Изо всех сил бьёт по земле и наносит ближайшим противникам ^o{200,275,350} урона превосходящей магией^*. Каждый поражённый противник создаёт дополнительную ударную волну, которая наносит ^o{30,45,60} магического урона^* за каждого вражеского юнита в области."
+    },
+    {
+      "keys": ["entities:Ability_Behemoth4_tooltip_flavor"],
+      "ru": "Меня всё ещё слегка потряхивает!"
+    }
+  ]
+}

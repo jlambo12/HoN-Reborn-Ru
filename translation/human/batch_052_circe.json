@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_052_CIRCE",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {"keys": ["entities:Ability_Circe1_name"], "ru": "Entrapment"},
+    {"keys": ["entities:Ability_Circe1_description"], "ru": "Circe выпускает сгусток тёмной энергии, который обездвиживает первого задетого вражеского героя. Когда обездвиживание заканчивается, сгусток перескакивает на другого противника поблизости."},
+    {"keys": ["entities:Ability_Circe1_description_simple"], "ru": "Выпускает сгусток энергии в направлении выбранной точки.\\n\\nПервый задетый вражеский герой получает ^o{80,140,200,260} магического урона^* и ^oобездвиживается^* на ^o{2,2.5,3,3.5}^* секунды.\\n\\nКогда Entrapment заканчивается, эффект перескакивает на другого противника поблизости, снова нанося урон и обездвиживая его."},
+    {"keys": ["entities:Ability_Circe1_IMPACT_effect"], "ru": "Наносит первому задетому вражескому герою {80,140,200,260} магического урона и накладывает Entrapment на {2,2.5,3,3.5} секунды. Когда Entrapment заканчивается, снаряд один раз перескакивает на другого вражеского героя в радиусе 350 и повторно накладывает свои эффекты."},
+    {"keys": ["entities:Ability_Circe1_effect_header"], "ru": "Эффекты Entrapment"},
+    {"keys": ["entities:Ability_Circe1_description2", "entities:Ability_Circe1_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_Circe1_tooltip_flavor"], "ru": "Моя красота буквально лишает подвижности."},
+
+    {"keys": ["entities:Ability_Circe2_name"], "ru": "Doppelganger"},
+    {"keys": ["entities:Ability_Circe2_description"], "ru": "Circe создаёт подконтрольную копию выбранного героя."},
+    {"keys": ["entities:Ability_Circe2_description_simple"], "ru": "Выберите героя, чтобы ^oсоздать его иллюзию^* под вашим управлением на {14,16,18,20} секунд. Иллюзия получает 350% урона и наносит 33% урона.\\n\\nЕсли целью был противник, на 2 секунды ^oзамедляет его передвижение на 20%^*.\\n\\nМожно применить к точке на земле, чтобы создать там иллюзию Circe."},
+    {"keys": ["entities:Ability_Circe2_IMPACT_effect"], "ru": "Создаёт подконтрольную иллюзию выбранного героя на {14,16,18,20} секунд. Иллюзия получает 350% урона и наносит 33% урона.\\n\\nЕсли целью был противник, на 2 секунды замедляет его передвижение на 20% и приказывает иллюзии атаковать его.\\n\\nМожно применить к точке на земле, чтобы создать там иллюзию Circe.\\n\\n— Иллюзии не могут атаковать строения, если Circe находится дальше чем в 1000 единицах."},
+    {"keys": ["entities:Ability_Circe2_description2", "entities:Ability_Circe2_effect_header", "entities:Ability_Circe2_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_Circe2_tooltip_flavor"], "ru": "Мне не нужны союзники. Я создаю их сама."},
+
+    {"keys": ["entities:Ability_Circe3_name"], "ru": "Deceive"},
+    {"keys": ["entities:Ability_Circe3_description"], "ru": "Circe словно растворяется в тенях, оставляя вместо себя обманчивую копию."},
+    {"keys": ["entities:Ability_Circe3_description_simple"], "ru": "При активации мгновенно ^oстановится невидимой^* и оставляет иллюзию на ^o{4,6,8,10}^* секунд."},
+    {"keys": ["entities:Ability_Circe3_IMPACT_effect"], "ru": "Даёт Circe невидимость с задержкой исчезновения 0 секунд и Unitwalking на {4,6,8,10} секунд, а также создаёт её иллюзию на {4,6,8,10} секунд.\\n\\nИллюзия получает 300% урона и наносит 33% урона.\\n\\nПосле появления иллюзия выполняет последний отданный вами приказ."},
+    {"keys": ["entities:Ability_Circe3_description2", "entities:Ability_Circe3_effect_header"], "ru": ""},
+    {"keys": ["entities:Ability_Circe3_tooltip_flavor"], "ru": "Ошибка 404: Circe не найдена."},
+
+    {"keys": ["entities:Ability_Circe4_name"], "ru": "Twisted Visage"},
+    {"keys": ["entities:Ability_Circe4_description"], "ru": "Circe заглядывает глубоко в душу цели и копирует её сущность."},
+    {"keys": ["entities:Ability_Circe4_description_simple"], "ru": "Выберите вражеского героя и поддерживайте способность 2 секунды. После завершения Circe на 15 секунд становится ^oкопией этого героя^* вместе с его предметами и способностями. В этой форме она наносит ^o{70,85,100}% урона^*."},
+    {"keys": ["entities:Ability_Circe4_IMPACT_effect"], "ru": "После завершения поддержания Circe становится копией вражеского героя, восстанавливает всю ману и сбрасывает перезарядку всех скопированных способностей и предметов. В этой форме она наносит {70,85,100}% урона. Длительность — 15 секунд.\\n\\nПоддержание прерывается, если цель отойдёт дальше чем на 1500 единиц."},
+    {"keys": ["entities:Ability_Circe4_description2", "entities:Ability_Circe4_effect_header", "entities:Ability_Circe4_effect_header2"], "ru": ""},
+    {"keys": ["entities:Ability_Circe4_tooltip_flavor"], "ru": "В косплее мне нет равных!"}
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_011_TREMBLE",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Tremble1_description"],
+      "ru": "Tremble призывает из-под земли огромный рой насекомых. Рой защищает его от атак с расстояния и душит ближайших противников."
+    },
+    {
+      "keys": ["entities:Ability_Tremble1_description_simple", "entities:Ability_Tremble1_IMPACT_effect"],
+      "ru": "Призывает рой насекомых на 5 секунд. Противники внутри роя получают ^o{30,45,60,75} физического урона в секунду^*, а противники ^oза пределами роя наносят Tremble на {20,30,40,50}% меньше урона^*."
+    },
+    {
+      "keys": ["entities:Ability_Tremble1_tooltip_flavor"],
+      "ru": "Жуки не докучают?"
+    },
+    {
+      "keys": ["entities:State_Tremble_Ability1_Damage_description"],
+      "ru": "{30,45,60,75} физического урона в секунду"
+    },
+    {
+      "keys": ["entities:State_Tremble_Ability1_description"],
+      "ru": "Урон от источников за пределами роя снижен на {20,30,40,50}%\\nНаносит противникам вокруг {30,45,60,75} физического урона в секунду"
+    },
+    {
+      "keys": ["entities:Ability_Tremble2_description", "entities:Ability_Tremble2_description_simple"],
+      "ru": "Создавайте Terror Mounds вместе с Boris и перемещайтесь между ними под землёй. После изучения способности одна Terror Mound появляется у союзного фонтана. Внутри Terror Mounds вы получаете ^o{15,20,25,30}% скорости передвижения^*, возможность ^oпроходить сквозь юнитов^*, ^o{2,3,4,5} восстановления здоровья и ^oмаскировку^*. Также открывается Terror Port для перемещения между норами. Если с помощью Terror Port переместиться к Terror Mound у союзного фонтана, время перезарядки сокращается до 10 секунд.\\n\\nМаксимум — {2,4,6,8} Terror Mounds."
+    },
+    {
+      "keys": ["entities:Ability_Tremble2_tooltip_flavor", "entities:Ability_Tremble2a_tooltip_flavor"],
+      "ru": "Не думаю, что это кроличья нора, Alice."
+    },
+    {
+      "keys": ["entities:State_Tremble_Ability2_name"],
+      "ru": "Terror Mound (маскировка)"
+    },
+    {
+      "keys": ["entities:State_Tremble_Ability2_Teleport_description"],
+      "ru": "Terror Port доступен.\\nМожно переместиться под землёй к другой Terror Mound."
+    },
+    {
+      "keys": ["entities:Ability_Tremble2a_description"],
+      "ru": "Tremble отправляет Boris построить Terror Mound, внутри которой становится невидимым и движется быстрее."
+    },
+    {
+      "keys": ["entities:Ability_Tremble2a_description_simple", "entities:Ability_Tremble2a_IMPACT_effect"],
+      "ru": "Выберите точку и отправьте Boris построить там Terror Mound. Для уничтожения норы требуется 3 атаки или 6 атак из-за её пределов.\\n\\nВнутри Terror Mounds вы получаете ^o{15,20,25,30}% скорости передвижения^*, возможность ^oпроходить сквозь юнитов^*, ^o{2,3,4,5} восстановления здоровья и ^oмаскировку^*.\\n\\nМаксимум — ^c{2,4,6,8} Terror Mounds^*."
+    },
+    {
+      "keys": ["entities:Ability_Tremble2b_description", "entities:Ability_TremblePet2b_description"],
+      "ru": "Все Terror Mounds соединены. Tremble может перемещаться под землёй от одной норы к другой."
+    },
+    {
+      "keys": ["entities:Ability_Tremble2b_description_simple", "entities:Ability_Tremble2b_IMPACT_effect"],
+      "ru": "Выберите Terror Mound, чтобы после ^o3 секунд поддержания^* переместиться к ней.\\n\\nСпособность можно применить только внутри Terror Mound. Если с помощью Terror Port переместиться к норе у союзного фонтана, время перезарядки сокращается до 10 секунд. ^rНельзя переместиться слишком близко к вражеской базе.^*"
+    },
+    {
+      "keys": ["entities:Ability_Tremble2b_tooltip_flavor"],
+      "ru": "Примитивный портал Aperture Science!"
+    },
+    {
+      "keys": ["entities:Ability_Tremble2c_description", "entities:Ability_Tremble2c_description_simple"],
+      "ru": "Уничтожает выбранную Terror Mound."
+    },
+    {
+      "keys": ["entities:Ability_Tremble3_description", "entities:Ability_Tremble3_description_simple", "entities:Ability_TremblePet3_description_simple", "entities:Ability_TremblePet3_ATTACK_IMPACT_effect"],
+      "ru": "Пассивно обычные атаки на ^o3 секунды^* замедляют передвижение цели на ^o{15,25,35,45}%^* и снижают её броню на ^o{1,2,3,4}^*."
+    },
+    {
+      "keys": ["entities:Ability_Tremble4_description"],
+      "ru": "Призывает Shudder на помощь в бою."
+    },
+    {
+      "keys": ["entities:Ability_Tremble4_description2"],
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff of the Master:^* также призывает управляемого Shudder с 1400 здоровья и способностями Terror Mounds, Impalers и Razor Carapace, блокирующей 30 урона."
+    },
+    {
+      "keys": ["entities:Ability_Tremble4_description_simple"],
+      "ru": "На 40 секунд призовите рядом неуязвимого и неуправляемого Shudder. Он атакует ту же цель, что и Tremble, и имеет ^o{70,105,140} урона атаки^*.\\n\\nНа 40 секунд Hive Mind заменяется на Ensnare. Активируйте её, чтобы ^oобездвижить выбранного противника на {3,3.75,4.5} секунды^*.\\n\\n^gStaff of the Master^* также призывает постоянного управляемого Shudder с дополнительными преимуществами."
+    },
+    {
+      "keys": ["entities:Ability_Tremble4_description_simple:Tremble_R_Modifier", "entities:Ability_Tremble4_IMPACT_effect:Tremble_R_Modifier"],
+      "ru": "Активируйте, чтобы ^oобездвижить выбранного противника на {3,3.75,4.5} секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_Tremble4_description_simple:ult_boost", "entities:Ability_Tremble4_IMPACT_effect:ult_boost"],
+      "ru": "На 40 секунд призовите рядом неуязвимого и неуправляемого Shudder. Он атакует ту же цель, что и Tremble, и имеет ^o{70,105,140} урона атаки^*. ^gТакже призывается постоянный управляемый Shudder с {90,120,150} урона атаки^*. У него ^g{1000,1400,1800} здоровья, Ensnare, Terror Mounds, Impalers и Razor Carapace, блокирующая 30 урона.^*\\n\\nНа 40 секунд Hive Mind заменяется на Ensnare. Активируйте её, чтобы ^oобездвижить выбранного противника на {3,3.75,4.5} секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_Tremble4_IMPACT_effect"],
+      "ru": "Призывает рядом Shudder на 40 секунд. Shudder неуязвим, неуправляем, следует за Tremble и атакует ту же цель, нанося ^o{70,105,140} урона за атаку^*.\\n\\nНа 40 секунд Hive Mind заменяется на Ensnare. Активируйте её, чтобы ^oобездвижить выбранного противника на {3,3.75,4.5} секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_Tremble4_tooltip_flavor"],
+      "ru": "О, это я карманного размера."
+    },
+    {
+      "keys": ["entities:State_Tremble_Ability4_Modifier_FRAME_effect"],
+      "ru": "Пока эффект действует, Hive Mind заменена на Ensnare"
+    },
+    {
+      "keys": ["entities:Ability_TremblePet1_description"],
+      "ru": "Boris заключает противника в споры, обездвиживая его."
+    },
+    {
+      "keys": ["entities:Ability_TremblePet1_description_simple"],
+      "ru": "Выберите противника, чтобы ^oобездвижить его на {3,3.75,4.5} секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_TremblePet1_IMPACT_effect"],
+      "ru": "^oПриковывает^* выбранного противника к месту на ^o{3,3.75,4.5} секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_TremblePet2_description", "entities:Ability_TremblePet2_description_simple"],
+      "ru": "Создавайте Terror Mounds и перемещайтесь между ними под землёй. Внутри Terror Mounds вы получаете ^o{15,20,25,30}% скорости передвижения^*, возможность ^oпроходить сквозь юнитов^*, ^o{2,3,4,5} восстановления здоровья и ^oмаскировку^*. Также открывается Terror Port для перемещения между норами.\\n\\nTerror Mounds погибают после 4 атак и вне боя восстанавливают 100 здоровья в секунду.\\n\\nМаксимум — {2,4,6,8} Terror Mounds."
+    },
+    {
+      "keys": ["entities:Ability_TremblePet2a_description"],
+      "ru": "Shudder строит Terror Mound, внутри которой становится невидимым и движется быстрее."
+    },
+    {
+      "keys": ["entities:Ability_TremblePet2a_description_simple", "entities:Ability_TremblePet2a_IMPACT_effect"],
+      "ru": "Постройте Terror Mound в позиции Shudder. Для уничтожения норы требуется 3 атаки или 6 атак из-за её пределов.\\n\\nВнутри Terror Mounds вы получаете ^o{15,20,25,30}% скорости передвижения^*, возможность ^oпроходить сквозь юнитов^*, ^o{2,3,4,5} восстановления здоровья и ^oмаскировку^*.\\n\\nМаксимум — ^c{2,4,6,8} Terror Mounds^*."
+    },
+    {
+      "keys": ["entities:Ability_TremblePet2b_description_simple"],
+      "ru": "Выберите Terror Mound, чтобы после ^o3 секунд поддержания^* переместиться к ней. Способность можно применить только внутри Terror Mound."
+    },
+    {
+      "keys": ["entities:Ability_TremblePet2b_IMPACT_effect"],
+      "ru": "Выберите Terror Mound, чтобы после 3 секунд поддержания переместиться к ней.\\n\\nСпособность можно применить только внутри Terror Mound."
+    },
+    {
+      "keys": ["entities:Ability_TremblePet3_description"],
+      "ru": "Пассивно увеличивает урон атак и замедляет цель."
+    },
+    {
+      "keys": ["entities:Ability_TremblePet3_effect_header"],
+      "ru": "Эффекты Impalers"
+    },
+    {
+      "keys": ["entities:Ability_TremblePet4_description"],
+      "ru": "Boris покрыт пластинами органического панциря."
+    },
+    {
+      "keys": ["entities:Ability_TremblePet4_description2", "entities:Ability_TremblePet4_description_simple"],
+      "ru": "Пассивно блокирует ^o{10,20,30} урона^*."
+    },
+    {
+      "keys": ["entities:Hero_Tremble_description"],
+      "ru": "Скверна Hellbourne распространилась по всему Newerth — и проникла глубоко под землю. Из затвердевших недр поднялся Tremble, закованный в панцирь бессмертный ужас, пробуждённый, чтобы сеять хаос в рядах Legion. Его появление возвещают загадочные изменения рельефа, а путь отступления отмечает цепочка трупов."
+    },
+    {
+      "keys": ["entities:Hero_Tremble_role"],
+      "ru": "Tremble — очень мобильный ганкер и пушер. Он скрывается под Terror Mounds и с помощью Impalers почти полностью лишает ничего не подозревающих противников скорости. Tremble может призвать Shudder — питомца, способного действовать самостоятельно и использовать многие способности своего хозяина."
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_Tremble_1"],
+      "ru": "Управляйте Boris отдельно: пусть он замедляет и обездвиживает преследователей, пока Tremble отступает. По пути размещайте Terror Mounds, чтобы двигаться быстрее."
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_Tremble_2"],
+      "ru": "Разместите Terror Mounds на базе и во вражеской части карты, чтобы быстро возвращаться домой или выходить на охоту с помощью Terror Port."
+    },
+    {
+      "keys": ["interface:hero_tip_defensive_tip_Hero_Tremble_1"],
+      "ru": "У Tremble нет способности, прерывающей поддержание. Носите с собой Homecoming Stone, чтобы спастись от него телепортацией."
+    },
+    {
+      "keys": ["interface:hero_tip_defensive_tip_Hero_Tremble_2"],
+      "ru": "Уничтожайте Terror Mounds Tremble при любой возможности, но не делайте этого в одиночку: он может переместиться к норе с помощью Terror Port и убить вас."
+    }
+  ]
+}

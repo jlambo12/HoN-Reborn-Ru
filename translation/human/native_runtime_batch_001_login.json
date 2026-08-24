@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "batch_id": "NATIVE_RUNTIME_001_LOGIN",
+  "rows": [
+    {
+      "source_file": "ui/fe3/sections/login_form.package",
+      "english": "All rights reserved",
+      "source_encoding": "ascii",
+      "russian": "Все права защищены",
+      "expected_matches": 1
+    }
+  ]
+}

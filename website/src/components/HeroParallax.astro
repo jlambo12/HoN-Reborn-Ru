@@ -1,0 +1,65 @@
+---
+import { heroImageLayers } from '../config/heroLayers';
+---
+
+<div class="hero-art" aria-hidden="true">
+  <div class="hero-art__fallback"></div>
+  {heroImageLayers.map((layer) => (
+    <div
+      class={`hero-art__image hero-art__image--${layer.name}`}
+      style={`--depth: ${layer.depth}; --position: ${layer.position ?? 'center'}; background-image: url('${layer.src}')`}
+    ></div>
+  ))}
+  <div class="hero-art__video-shell">
+    <video
+      class="hero-art__video"
+      poster="/hero/caldavar-official.webp"
+      muted
+      loop
+      playsinline
+      preload="none"
+      tabindex="-1"
+    >
+      <source data-src="/hero/hon-reborn-gameplay.webm" type="video/webm" />
+      <source data-src="/hero/hon-reborn-gameplay.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="hero-art__legion"></div>
+  <div class="hero-art__hellbourne"></div>
+  <div class="hero-art__fog hero-art__fog--back"></div>
+  <div class="hero-art__fog hero-art__fog--front"></div>
+  <div class="hero-art__shade"></div>
+</div>
+
+<script>
+  const video = document.querySelector<HTMLVideoElement>('.hero-art__video');
+  const desktop = window.matchMedia('(min-width: 769px)');
+  const fullMotion = window.matchMedia('(prefers-reduced-motion: no-preference)');
+  const saveData = 'connection' in navigator
+    && Boolean((navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData);
+
+  const updateVideo = () => {
+    if (!video || saveData) return;
+
+    if (desktop.matches && fullMotion.matches) {
+      if (!video.dataset.loaded) {
+        video.querySelectorAll<HTMLSourceElement>('source[data-src]').forEach((source) => {
+          source.src = source.dataset.src ?? '';
+        });
+        video.dataset.loaded = 'true';
+        video.load();
+      }
+
+      video.play().catch(() => video.classList.remove('is-ready'));
+      return;
+    }
+
+    video.pause();
+    video.classList.remove('is-ready');
+  };
+
+  video?.addEventListener('playing', () => video.classList.add('is-ready'));
+  desktop.addEventListener('change', updateVideo);
+  fullMotion.addEventListener('change', updateVideo);
+  updateVideo();
+</script>

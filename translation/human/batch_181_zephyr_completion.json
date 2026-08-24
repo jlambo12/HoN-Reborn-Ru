@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_181_ZEPHYR_COMPLETION",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Zephyr1_IMPACT_effect"],
+      "english_hash": "fb919d58ae63863571c0a17f2a867ad075e306ab91ad3b8f75fcf95f144e237e",
+      "ru": "Все юниты в конусе ветра ^oотталкиваются^* в его направлении, получают ^o{70,140,210,280} магического урона^* и оглушаются на 0.1 секунды."
+    },
+    {
+      "keys": ["entities:Ability_Zephyr1_description"],
+      "english_hash": "8c71e7a54e0cbbf5444a08ddeb5341d3387f47dc1a50357343662b82083be94a",
+      "ru": "Zephyr вызывает порыв ветра в выбранном направлении, отталкивая задетых противников и нанося им урон."
+    },
+    {
+      "keys": ["entities:Ability_Zephyr1_description_simple"],
+      "english_hash": "fe37047044fa4dfd5ecdc88c9689ac9a98a3de9d639d9a1a82307ebecf0eea8e",
+      "ru": "Вызывает ^oпорыв ветра^* в выбранном направлении, ^oотталкивая противников^*, нанося ^o{70,140,210,280} магического урона^* и ^oкратковременно оглушая^* их."
+    },
+    {
+      "keys": ["entities:Ability_Zephyr1_effect_header"],
+      "english_hash": "6e5e7bc5e96f838352cde0fcff351520eab9cd6b12ecb43e9b30ed6fd98f6777",
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:Ability_Zephyr2_IMPACT_effect"],
+      "english_hash": "ad95c06898e1077a00a8850dce5926254b2f4c37c0ab416cea6ada2eeb30d1c5",
+      "ru": "Поглощает один Cyclone, ^oвосстанавливая 20 здоровья^*."
+    },
+    {
+      "keys": ["entities:Ability_Zephyr2_KILL_effect"],
+      "english_hash": "7996c752f1f7ad5cf6e42b762549b0997c2ab47cbaaa341e20adf2e7eea96001",
+      "ru": "Создаёт Cyclone, который существует ^o40 секунд^* и наносит задетым противникам ^o9 магического урона в секунду^*.\\n\\nПри поглощении Cyclone восстанавливает Zephyr ^o20 здоровья^*. Столько же здоровья восстанавливается, когда время Cyclone истекает.\\n\\nКроме того, один Cyclone появляется каждые 20 секунд.\\n\\nОдновременно может существовать не более ^c{3,5,7,9} Cyclones^*."
+    },
+    {
+      "keys": ["entities:Ability_Zephyr2_KILL_effect:ult_boost"],
+      "english_hash": "5c2dbb3f733d6ea2242d2e303fcd1e010678b7e3d40e0b89b7823abe7a097360",
+      "ru": "Создаёт Cyclone, который существует ^o40 секунд^* и наносит задетым противникам ^o9 магического урона в секунду^*.\\n\\nПри поглощении Cyclone восстанавливает Zephyr ^o20 здоровья^*. Столько же здоровья восстанавливается, когда время Cyclone истекает.\\n\\nКроме того, один Cyclone появляется каждые ^g4^* секунды.\\n\\nОдновременно может существовать не более ^g{7,9,11,13} Cyclones^*."
+    },
+    {
+      "keys": ["entities:Ability_Zephyr2_description"],
+      "english_hash": "112d7cfb05bdbc70598a929bdf8662ac6d0c4f082a3055c4413c940eae68f649",
+      "ru": "За каждого убитого юнита Zephyr создаёт небольшой Cyclone. Они автоматически движутся вокруг него и наносят урон задетым противникам. По команде Zephyr может поглотить Cyclone и восстановить здоровье."
+    },
+    {
+      "keys": ["entities:Ability_Zephyr2_description2"],
+      "english_hash": "17af268f5b1a40606a1178d97b3917e02a0d85b60b718b473671948e00bbd371",
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff:^* увеличивает максимальное число Cyclones до {7,9,11,13} и сокращает интервал их пассивного появления до 4 секунд."
+    },
+    {
+      "keys": ["entities:Ability_Zephyr2_description_simple"],
+      "english_hash": "0375ce2c1803446d576292420d88fa06116832879d71b3de654edbf04ccf45a1",
+      "ru": "Создаёт ^oCyclone каждые 20 секунд^* или при убийстве юнита; одновременно может существовать не более ^o{3,5,7,9} Cyclones^*. Каждый ^oCyclone^* наносит вокруг Zephyr ^o9 магического урона в секунду^* и существует 40 секунд.\\n\\nАктивируйте, чтобы поглотить один ^oCyclone^*, ^oвосстановив 20 здоровья^*. Столько же здоровья восстанавливается по истечении времени ^oCyclone^*.\\n\\n^gStaff of the Master^* ^oувеличивает максимальное число Cyclones до {7,9,11,13}^* и ^oсокращает интервал их появления до 4 секунд^*."
+    },
+    {
+      "keys": ["entities:Ability_Zephyr2_description_simple:ult_boost"],
+      "english_hash": "519ed922ae83496475d8cd8d87ccfa0f3916e3243f1f6f4536ca37964a2e60cc",
+      "ru": "Создаёт ^oCyclone^* каждые ^g4 секунды^* или при убийстве юнита; одновременно может существовать не более ^g{7,9,11,13} Cyclones^*. Каждый ^oCyclone^* наносит вокруг Zephyr ^o9 магического урона в секунду^* и существует 40 секунд.\\n\\nАктивируйте, чтобы поглотить один ^oCyclone^*, ^oвосстановив 20 здоровья^*. Столько же здоровья восстанавливается по истечении времени ^oCyclone^*."
+    },
+    {
+      "keys": ["entities:Ability_Zephyr2_effect_header"],
+      "english_hash": "6e5e7bc5e96f838352cde0fcff351520eab9cd6b12ecb43e9b30ed6fd98f6777",
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:Ability_Zephyr3_description"],
+      "english_hash": "fb64039554fd5ed5cdfb568807ca44eb6429afab4aa544adb7f929cb05de6d9c",
+      "ru": "Даёт ^o{15,25,35,45}% уклонения^*, если атакующий использует ^oдальнюю атаку^* и находится ^oза пределами радиуса 250^*."
+    },
+    {
+      "keys": ["entities:Ability_Zephyr3_description2"],
+      "english_hash": "db92a8e205256aff6914fd8d39caef3278d9bf770ebba835304fb1249dbef360",
+      "ru": "Способность обладает свойством ^yуклонения^*. Эффекты уклонения не складываются: автоматически используется эффект предмета или способности с наибольшей вероятностью уклонения."
+    },
+    {
+      "keys": ["entities:Ability_Zephyr3_description_simple"],
+      "english_hash": "fb64039554fd5ed5cdfb568807ca44eb6429afab4aa544adb7f929cb05de6d9c",
+      "ru": "Даёт ^o{15,25,35,45}% уклонения^*, если атакующий использует ^oдальнюю атаку^* и находится ^oза пределами радиуса 250^*."
+    },
+    {
+      "keys": ["entities:Ability_Zephyr4_IMPACT_effect"],
+      "english_hash": "2cf9cbcbedeba7d586fd9cb94501722ef0cfcfd2930ac15d13d533a0970043c7",
+      "ru": "Создаёт Typhoon в выбранной точке. Пока он активен, Zephyr получает ^o1 Cyclone в секунду^*, а на противников, остающихся в радиусе 550, накладывается ^oHarsh Winds^*.\\n\\nЧисло зарядов зависит от расстояния до центра Typhoon: чем ближе противник, тем больше зарядов он получает.\\n\\nTyphoon существует {6,8,10} секунд."
+    },
+    {
+      "keys": ["entities:Ability_Zephyr4_IMPACT_effect:ult_boost"],
+      "english_hash": "d484f6c9a2aae940b4013a714dc294019bde39820c8ad1a550347279cd390daa",
+      "ru": "Создаёт Typhoon в выбранной точке. Пока он активен, Zephyr получает ^o1 Cyclone в секунду^*, а на противников, остающихся в радиусе ^g825^*, накладывается ^oHarsh Winds^*.\\n\\nЧисло зарядов зависит от расстояния до центра Typhoon: чем ближе противник, тем больше зарядов он получает.\\n\\nTyphoon существует ^g{8,10,12} секунд^*."
+    },
+    {
+      "keys": ["entities:Ability_Zephyr4_description"],
+      "english_hash": "9682af1ea426a329a1b6da892ee60cc7519ab0bf6f33e811be599fe52de53a13",
+      "ru": "Zephyr создаёт могучий Typhoon, который замедляет находящихся рядом юнитов и наносит им урон. Чем ближе противник к центру, тем сильнее урон и замедление.\\nПока Typhoon активен, он даёт беспрепятственный дневной и ночной обзор в радиусе 600."
+    },
+    {
+      "keys": ["entities:Ability_Zephyr4_description2"],
+      "english_hash": "7711ca1ac8589bf64b1ea4940efc783193ddd98d2aeb52b99548e29ed5fa3dec",
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff:^* увеличивает радиус до 825, а длительность — до {8,10,12} секунд."
+    },
+    {
+      "keys": ["entities:Ability_Zephyr4_description_simple"],
+      "english_hash": "e7511cb73f7e5e47e63ab5f768b261c1fd4c9164fb10b836ecc52f2c1cc77f7b",
+      "ru": "Создаёт могучий Typhoon в выбранной точке, который наносит противникам поблизости до ^o{60,80,100} магического урона в секунду^* и замедляет их передвижение вплоть до ^o-99%^*. Эффекты усиливаются по мере приближения к ^oцентру^*.\\n\\nTyphoon существует ^o{6,8,10} секунд^* и создаёт один Cyclone в секунду.\\n\\n^gStaff of the Master^* увеличивает радиус до ^o825^*, а ^oдлительность — до {8,10,12} секунд^*."
+    },
+    {
+      "keys": ["entities:Ability_Zephyr4_description_simple:ult_boost"],
+      "english_hash": "b930c21c2f72a28d98fc2fdb62bcd997da00e2437754958d8b41426b3ad73d79",
+      "ru": "Создаёт могучий Typhoon в выбранной точке, который наносит противникам поблизости до ^o{60,80,100} магического урона в секунду^* и замедляет их передвижение вплоть до ^o-99%^*. Эффекты усиливаются по мере приближения к ^oцентру^*.\\n\\nTyphoon существует ^g{8,10,12} секунд^* и создаёт один Cyclone в секунду."
+    },
+    {
+      "keys": ["entities:Ability_Zephyr4_effect_header"],
+      "english_hash": "9c70c741236fccbde0b2ad463895ebfda614060d41570aaa8c74fc2d60694025",
+      "ru": "Эффекты Harsh Winds"
+    },
+    {
+      "keys": ["entities:State_Zephyr_Ability2_Timer_description"],
+      "english_hash": "0f8540b7908649f3a7b361a68bee406d95bc8f6d395cf863cac6db46ecc69d35",
+      "ru": "По истечении времени создаёт Cyclone."
+    },
+    {
+      "keys": ["entities:State_Zephyr_Ability4_Debuff_FRAME_effect"],
+      "english_hash": "22d9ec74cff573b85beec6440578db357e9bcfe55137560a4fa9147136a033c2",
+      "ru": "Наносит до {60,80,100} магического урона в секунду"
+    }
+  ]
+}

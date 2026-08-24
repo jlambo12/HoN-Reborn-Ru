@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_160_DEVOURER_ELECTRICIAN_COMPLETION",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:State_Devourer_Ability2_Damage_FRAME_effect"],
+      "english_hash": "f4e8c872777795ae7cf52072071acf0a066a08064b69bf3456881a9cd2139a7c",
+      "ru": "20% замедления скорости передвижения\\n{30,60,90,120} магического урона в секунду"
+    },
+    {
+      "keys": ["entities:State_Devourer_Ability2_Self_FRAME_effect"],
+      "english_hash": "c9580af1c7d5fd7002841f6c63a6f578f0cbd017faf3b05ca73383f11a29d3a2",
+      "ru": "{30,60,90,120} магического урона в секунду"
+    },
+    {
+      "keys": ["entities:State_Devourer_Ability4_FRAME_effect"],
+      "english_hash": "bab09c6964f2f3eae4dff4dd04c894e88f3b5b50f0f0f417a426b12dd2b4943f",
+      "ru": "Получает {75,125,175} магического урона в секунду"
+    },
+    {
+      "keys": ["entities:State_Devourer_Ability4_Staff_FRAME_effect"],
+      "english_hash": "8c68c94f03e004730ed1f1fa433488f29d9cb013d1af492538cfabbf5b20b5e8",
+      "ru": "Теряет {55,95,135} здоровья в секунду"
+    },
+    {
+      "keys": ["entities:State_Devourer_Ability4_Staff_Self_FRAME_effect"],
+      "english_hash": "f6c8815471950e7c7bf4dac26286b7a050740d002542aa698c2b1eeadb1f12a5",
+      "ru": "Восстанавливает {55,95,135} здоровья в секунду\\nПолучение урона сокращает оставшееся время действия."
+    },
+    {
+      "keys": [
+        "entities:State_Devourer_Ability4_Stage1_FRAME_effect",
+        "entities:State_Devourer_Ability4_Stage2_FRAME_effect",
+        "entities:State_Devourer_Ability4_Stage3_FRAME_effect"
+      ],
+      "english_hash": "706a8a9995b54b33344724392e0ed6e3335b1c55f9434d5e82210eb3f114df12",
+      "ru": "Радиус Decay увеличен"
+    },
+    {
+      "keys": ["entities:State_Electrician_Ability1_FRAME_effect"],
+      "english_hash": "e94808b9fa99dd8d73107b92f5c09458a43430659ee43e1f3a0f0328b9a15e4d",
+      "ru": "{40,50,60,70} магического урона в секунду"
+    },
+    {
+      "keys": ["entities:State_Electrician_Ability2_Areadamage_FRAME_effect"],
+      "english_hash": "56f96fc8a9704bbb55ac4aa1b39d15306f6bf26507261f8eaf6b0b76e62c1e4a",
+      "ru": "{15,30,45,60} магического урона в секунду"
+    },
+    {
+      "keys": ["entities:State_Electrician_Ability2_FRAME_effect"],
+      "english_hash": "d790481d74dd44b7220dd2273c8cf92fc255d8d2700e13509f44ccd5828599ee",
+      "ru": "Поглощает 50% полученного урона после его снижения, но не более чем в {0.75,0.9,1.05,1.2} раза больше маны, затраченной на применение."
+    },
+    {
+      "keys": ["entities:State_Electrician_Ability2_SotM_FRAME_effect"],
+      "english_hash": "eec4c6f26a8c10606241a2ed81b5a560f0c41ed1230791bfc746b2096ec3d042",
+      "ru": "Поглощает 50% полученного урона после его снижения"
+    },
+    {
+      "keys": [
+        "entities:State_Electrician_Ability2_SotM_description",
+        "entities:State_Electrician_Ability2_description"
+      ],
+      "english_hash": "8d1e5605ac3ab52d2f381efcb1f853264e79f2b0449c118667736be00ca042d1",
+      "ru": "Предотвращает входящий урон, расходуя ману\\n\\nНаносит противникам в радиусе 300 {15,30,45,60} магического урона в секунду"
+    },
+    {
+      "keys": ["entities:State_Electrician_Ability3_FRAME_effect"],
+      "english_hash": "32da462fd186f43f4ee7d89fede692267f30e4818ae6884fe88a908099dad165",
+      "ru": "+5 к скорости передвижения за каждого противника, поражённого Energy Absorption; общий бонус не может превышать 40"
+    }
+  ]
+}

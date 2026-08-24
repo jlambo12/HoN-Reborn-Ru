@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_189_PYROMANCER_COMPLETION",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Pyromancer1_IMPACT_effect"],
+      "english_hash": "5cd60af732a47af15d904c7806b6e2d3952dda331499fb62a5209f206c8a4d59",
+      "ru": "Наносит целям на линии длиной 900 {110,180,250,320} магического урона. Радиус линии увеличивается с 70 в начале до 275 в конце."
+    },
+    {
+      "keys": ["entities:Ability_Pyromancer1_description", "entities:Ability_PyromancerTutorial1_description"],
+      "english_hash": "ead6a83a8046a8802427a781b5c072a90c4c433ea1a7bc8d3561e2d49b201fbd",
+      "ru": "Pyromancer выпускает феникса, который наносит урон противникам на линии."
+    },
+    {
+      "keys": ["entities:Ability_Pyromancer1_description_simple"],
+      "english_hash": "2e11c4a49ead7b7310d4fcb16000bfc0dc2c1a478d74aa256e16c978645bb711",
+      "ru": "Выпускает феникса по конусу, нанося задетым противникам ^o{110,180,250,320} магического урона^*."
+    },
+    {
+      "keys": ["entities:Ability_Pyromancer1_effect_header", "entities:Ability_Pyromancer2_effect_header", "entities:Ability_Pyromancer4_effect_header", "entities:Ability_PyromancerTutorial1_effect_header", "entities:Ability_PyromancerTutorial2_effect_header", "entities:Ability_PyromancerTutorial4_effect_header"],
+      "english_hash": "6e5e7bc5e96f838352cde0fcff351520eab9cd6b12ecb43e9b30ed6fd98f6777",
+      "ru": "Эффекты состояния"
+    },
+    {
+      "keys": ["entities:Ability_Pyromancer2_IMPACT_effect"],
+      "english_hash": "f1e49d42bc1cd898323f4b1e9bfcff91774894983d0f64a62214dbfbb3c248b6",
+      "ru": "Через 0.5 секунды наносит целям в радиусе ^o{80,130,180,230} магического урона^* и ^oоглушает их на {1.6,1.9,2.2,2.5} секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_Pyromancer2_description", "entities:Ability_PyromancerTutorial2_description"],
+      "english_hash": "30566f272ee8477ed6cfa33315e1df3da0eadb07dcf11aba60ae7cf28b153709",
+      "ru": "Pyromancer призывает в выбранной точке могучего огненного дракона-элементаля, нанося противникам в области урон и оглушая их."
+    },
+    {
+      "keys": ["entities:Ability_Pyromancer2_description_simple"],
+      "english_hash": "52c249c2be92c97d5a6ad7bbbaeb0398cfc237d0b2f285d7eac2bbc8d1838292",
+      "ru": "Призывает в выбранной точке пламя могучего дракона-элементаля, нанося противникам в радиусе ^o{80,130,180,230} магического урона^* и ^oоглушая их на {1.6,1.9,2.2,2.5} секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_Pyromancer3_IMPACT_effect"],
+      "english_hash": "c1da61f7301de0ab5fc6aa53c372aca0488e42726ed914c1879dd14e56d45e55",
+      "ru": "Ваши атаки и способности накладывают заряд Burning! на 3 секунды, в том числе на вражеские здания, нанося ^o{1,2,3,4} магического урона в секунду за заряд^*. Иллюзии накладывают заряд каждой третьей атакой.\\n\\nПосле применения заклинания на 6 секунд даёт суммируемый бонус: ^o{2,3,4,5}% скорости передвижения^* и ^o{15,30,45,60} скорости атаки^*. Не более 3 зарядов.\\n\\n^oПри активации^* мгновенно даёт до ^o3 зарядов Fervor^*."
+    },
+    {
+      "keys": ["entities:Ability_Pyromancer3_description", "entities:Ability_PyromancerTutorial3_description"],
+      "english_hash": "d98d6876decca8a77ac390382e5165d46548dce45468250e6844a7e3402d79eb",
+      "ru": "Овладев внутренним пламенем, Pyromancer после применения заклинаний увеличивает скорость применения, атаки и передвижения, а своими атаками и способностями ненадолго поджигает всё, во что попадает."
+    },
+    {
+      "keys": ["entities:Ability_Pyromancer3_description_simple"],
+      "english_hash": "85a0391fcbaf310921db691ee26a23a170fc2c960ff96f66c0667203f809991c",
+      "ru": "Даёт ^o{30,45,60,75} скорости применения^*.\\n\\nВаши атаки и способности накладывают ^oBurning!^* на вражеских юнитов и здания на 3 секунды, нанося ^o{1,2,3,4} магического урона в секунду за заряд^*. Иллюзии накладывают заряд каждой третьей атакой.\\n\\nПосле применения заклинания на 6 секунд даёт суммируемый бонус: ^o{2,3,4,5}% скорости передвижения^* и ^o{15,30,45,60} скорости атаки^*. Не более ^o3^* зарядов.\\n\\n^oПри активации^* мгновенно даёт до ^o3 зарядов Fervor^*."
+    },
+    {
+      "keys": ["entities:Ability_Pyromancer3_effect_header", "entities:Ability_PyromancerTutorial3_effect_header"],
+      "english_hash": "995adb93c152dfc3fbcf9681d57ffe16ba38c31f412985d2a65020d1e1698602",
+      "ru": "Эффекты Fervor"
+    },
+    {
+      "keys": ["entities:Ability_Pyromancer4_IMPACT_effect"],
+      "english_hash": "28d27f76ed2e8f18e2aa82b86e8b755b15d23cd82baed0316f5a39e306357f5a",
+      "ru": "Наносит цели {450,725,1000} магического урона."
+    },
+    {
+      "keys": ["entities:Ability_Pyromancer4_IMPACT_effect:ult_boost"],
+      "english_hash": "431d7ed069e0ce75c37caaadc7b1d26fd50bb735bc70143a304ee6580760f189",
+      "ru": "Наносит цели ^g{750,1000,1250}^* магического урона и ^g50% этого урона противникам в радиусе 600.^*"
+    },
+    {
+      "keys": ["entities:Ability_Pyromancer4_description", "entities:Ability_PyromancerTutorial4_description"],
+      "english_hash": "57989587e9d912c9edffeff4c637fd72c470c477ca715a867211a1761cb07bb8",
+      "ru": "Используя дарованную Sol силу, Pyromancer бросает во врага раскалённый огненный шар, нанося огромный урон."
+    },
+    {
+      "keys": ["entities:Ability_Pyromancer4_description2"],
+      "english_hash": "bfc2ad8fab77fcd834adbe0e81b3a436e4f2f8b3a6f0aed9bf7d0b0b3b521abc",
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff:^* увеличивает урон с {450,725,1000} до {750,1000,1250} и наносит 50% урона противникам в радиусе 600."
+    },
+    {
+      "keys": ["entities:Ability_Pyromancer4_description_simple"],
+      "english_hash": "97551506ff34cdd3b457ff5b52f6b18add5c5e35dadf85e9940d1b9626b1a3ae",
+      "ru": "Бросает во вражеского юнита раскалённый огненный шар, нанося ему ^o{450,725,1000} магического урона^*.\\n\\n^gStaff of the Master^* увеличивает урон до ^o{750,1000,1250}^* и наносит ^o50% урона противникам в радиусе 600^*."
+    },
+    {
+      "keys": ["entities:Ability_Pyromancer4_description_simple:ult_boost"],
+      "english_hash": "f9eb1785e7289bee71509a8c3109a407bd3160d9215e2f7805da6726f388d003",
+      "ru": "Бросает во вражеского юнита раскалённый огненный шар, нанося ^g{750,1000,1250} магического урона^* и ^g50% урона противникам в радиусе 600.^*"
+    },
+    {
+      "keys": ["entities:Ability_PyromancerTutorial1_IMPACT_effect"],
+      "english_hash": "97c9aea8c3564ab913f10827d056b4d5d006e7e62bb761c4ce04d2b279e70976",
+      "ru": "Наносит каждой цели на линии {100,170,240,310} магического урона."
+    },
+    {
+      "keys": ["entities:Ability_PyromancerTutorial1_description_simple"],
+      "english_hash": "842beb1674dfac96060c27be22aa5febfea30dfe4ff23614abd84103f9971ce1",
+      "ru": "Выберите точку, чтобы выпустить в её направлении волну огня, нанося задетым противникам ^o{100,170,240,310} магического урона^*."
+    },
+    {
+      "keys": ["entities:Ability_PyromancerTutorial2_IMPACT_effect"],
+      "english_hash": "333992523c9f5eb6fff4480d3933c9ede05411c62be37a91f005bfb09513bfe1",
+      "ru": "Наносит каждой цели в радиусе {90,150,210,280} магического урона и оглушает её на 1.6 секунды."
+    },
+    {
+      "keys": ["entities:Ability_PyromancerTutorial2_description_simple"],
+      "english_hash": "e88e11946f713f094d26db4048d387c071c5ba1e2757815cbdac1905a8ee14b4",
+      "ru": "Выберите точку, чтобы нанести противникам в радиусе ^o{90,150,210,280} магического урона^* и ^oоглушить их на 1.6 секунды^*."
+    },
+    {
+      "keys": ["entities:Ability_PyromancerTutorial3_ABILITY_IMPACT_effect"],
+      "english_hash": "9c78615e375641c6db7b472a7b6813664b0245dc32e98abf7d03b5fded2dcee9",
+      "ru": "Накладывает на себя один заряд Fervor на 6 секунд. Не более 3 зарядов."
+    },
+    {
+      "keys": ["entities:Ability_PyromancerTutorial3_IMPACT_effect"],
+      "english_hash": "758404531c743900b7df26b46eead1bb6d3c1c2518916db5b4017e998bf637c3",
+      "ru": "Ваши атаки и способности накладывают заряд Burning! на 3 секунды. Burning! можно накладывать на здания.\\n\\nИллюзии накладывают заряд Burning! каждой третьей атакой."
+    },
+    {
+      "keys": ["entities:Ability_PyromancerTutorial3_description_simple"],
+      "english_hash": "9a946fb87e856990b693e61f6bbb5274bafeb95bbc491f34789e2be757f27416",
+      "ru": "Пассивно даёт ^o{10,20,30,40} скорости применения^*. После применения заклинания на 6 секунд даёт суммируемый бонус: ^o{2,3,4,5}% скорости передвижения^* и ^o{20,30,40,50} скорости атаки^*.\\n\\nТакже атаки и способности Pyromancer накладывают на задетых противников и здания суммируемый эффект, наносящий ^o{1,2,3,4} магического урона в секунду^*."
+    },
+    {
+      "keys": ["entities:Ability_PyromancerTutorial3_effect_header2"],
+      "english_hash": "2b28d9d24144d0a9a1632e1a6b892d468003fe45ed2b4eeccaa34f0aaf7537f7",
+      "ru": "Эффекты Burning!"
+    },
+    {
+      "keys": ["entities:Ability_PyromancerTutorial4_IMPACT_effect"],
+      "english_hash": "0dff6e185b02c72c6bea5853c4b255f9af3ebd8dd237c23a841d0302b666a659",
+      "ru": "Наносит цели {450,675,950} магического урона."
+    },
+    {
+      "keys": ["entities:Ability_PyromancerTutorial4_IMPACT_effect:ult_boost"],
+      "english_hash": "7da73f9afe5b69ae05fd3ec3dc57b66376c8372c43f3d2e764ce663989e87d9a",
+      "ru": "Наносит цели ^g{650,875,1150}^* магического урона.\\n\\n^gЕсли цель погибает, наносит 50% урона противникам в радиусе 600.^*"
+    },
+    {
+      "keys": ["entities:Ability_PyromancerTutorial4_description2"],
+      "english_hash": "ab4f8e8ea44ae95da45a0c83790d8793ca94e8d489d730a9c534d14657174a4c",
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff:^* увеличивает урон с {450,675,950} до {650,875,1150}. Если цель погибает, наносит 50% урона в области радиусом 600."
+    },
+    {
+      "keys": ["entities:Ability_PyromancerTutorial4_description_simple"],
+      "english_hash": "9fd0e6bbab51f669b00f2e225977b49862fafc80d6cbcc59d620408c899640b4",
+      "ru": "Выберите вражеского юнита, чтобы нанести ему ^o{450,675,950} магического урона^*.\\n\\n^gStaff of the Master^* увеличивает наносимый урон.\\n\\nЕсли цель погибает, наносит 50% урона в области радиусом 600."
+    },
+    {
+      "keys": ["entities:Ability_PyromancerTutorial4_description_simple:ult_boost"],
+      "english_hash": "26156ce1292df7037f97ddba0b552934d26127af5f232f089cca0e22a810762b",
+      "ru": "Выберите вражеского юнита, чтобы нанести ему ^g{650,875,1150}^* ^oмагического урона^*.\\n\\n^gЕсли цель погибает, наносит 50% урона в области радиусом 600.^*"
+    },
+    {
+      "keys": ["entities:State_PyromancerTutorial_Ability3_Burning_Building_FRAME_effect", "entities:State_PyromancerTutorial_Ability3_Burning_FRAME_effect", "entities:State_Pyromancer_Ability3_Burning_Building_FRAME_effect", "entities:State_Pyromancer_Ability3_Burning_FRAME_effect"],
+      "english_hash": "5abe47e39b2e472ecb792a4ae7a52aafff63e08b0a8b2be8562761e379f12817",
+      "ru": "{1,2,3,4} магического урона в секунду за заряд"
+    }
+  ]
+}

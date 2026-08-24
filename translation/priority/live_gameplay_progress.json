@@ -1,0 +1,36 @@
+{
+  "active_heroes": 106,
+  "active_items": 210,
+  "complete_heroes": 106,
+  "complete_items": 208,
+  "excluded": [
+    "hero biographies and roles",
+    "hero voice/bot lines",
+    "tooltip/shop flavor",
+    "internal metadata",
+    "entity names"
+  ],
+  "outputs": {
+    "hero_context": "C:\\HoN-Reborn-RU\\translation\\context\\live\\hero_context_packs.jsonl",
+    "item_context": "C:\\HoN-Reborn-RU\\translation\\context\\live\\item_context_packs.jsonl",
+    "next_work": "C:\\HoN-Reborn-RU\\translation\\priority\\live_next_work.jsonl",
+    "owner_progress": "C:\\HoN-Reborn-RU\\translation\\priority\\live_owner_progress.jsonl",
+    "queue": "C:\\HoN-Reborn-RU\\translation\\priority\\live_gameplay_queue.jsonl",
+    "snapshot": "C:\\HoN-Reborn-RU\\translation\\priority\\live_scope_snapshot.json"
+  },
+  "queue_rows": 3384,
+  "result": "PASS",
+  "schema_version": 1,
+  "scope_status_counts": {
+    "hero": {
+      "DONE": 2584
+    },
+    "item": {
+      "DONE": 800
+    }
+  },
+  "status_counts": {
+    "DONE": 3384
+  },
+  "upstream_sha256": "eec2d8bc50200874e8aa368b980d1d67b45f637ffad4fb39030c4749c324af76"
+}

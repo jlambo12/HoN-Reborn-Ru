@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_154_GEOMANCER_GLACIUS_COMPLETION",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:State_Geomancer_Ability1_Self_FRAME_effect"],
+      "english_hash": "1970c91293805f83a187acd4b19a36e274edca21f537322a0dec84123a09f844",
+      "ru": "Нельзя выбрать целью"
+    },
+    {
+      "keys": ["entities:State_Geomancer_Ability2_FRAME_effect"],
+      "english_hash": "0818dfddf2fe1079525b8729c551424841fe08c59b917b82ccd7e26099843e5f",
+      "ru": "{35,40,45,50} магического урона в секунду.\\n\\nВо время движения урон снижается на 50%."
+    },
+    {
+      "keys": ["entities:State_Geomancer_Ability3_FRAME_effect"],
+      "english_hash": "8edca8afbdebb377052a8532bf03655c7c9664e89549d79c1d0b2ef34621c181",
+      "ru": "Обнаруживает противников в радиусе {1200,1800,2400,3000} каждые 2 секунды\\nБлижний бой\\nНевидим\\nРаскрывается противникам в радиусе 400"
+    },
+    {
+      "keys": ["entities:State_Glacius_Ability1_FRAME_effect"],
+      "english_hash": "24f88cc3196cfcaccf0f8616769a3212e77e7fb928f3ff02dda313754e1de362",
+      "ru": "Сначала замедляет скорость передвижения на {25,30,35,40}%; эффект постепенно ослабевает"
+    },
+    {
+      "keys": ["entities:State_Glacius_Ability2_FRAME_effect"],
+      "english_hash": "ebed2bad2493c1165324468f61a0001567e6127563e72e05fd70ec1e744105c9",
+      "ru": "85 магического урона в секунду"
+    },
+    {
+      "keys": ["entities:State_Glacius_Ability4_Sotm_FRAME_effect"],
+      "english_hash": "41f98431225c76d4c1a71154cec44d3f119f6e6c9589ea1d0375413bbe8b5f96",
+      "ru": "Снижение урона на 50%"
+    }
+  ]
+}

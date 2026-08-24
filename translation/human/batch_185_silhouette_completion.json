@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_185_SILHOUETTE_COMPLETION",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Silhouette1_IMPACT_effect", "entities:Ability_Silhouette1_description_simple"],
+      "english_hash": "e4c4b50569a6b37ade7abf1eb75445f0bfb79ef65e911c35ca98186656e03dce",
+      "ru": "Пока способность не перезаряжается, вокруг Silhouette вращаются ^o{1,2,3,4} клинка^*, нанося задетым противникам ^o45 магического урона^*.\\n\\nАктивируйте, чтобы выпустить клинки наружу и нанести задетым противникам ^o{75,150,225,300} магического урона^*.\\n\\n^gStaff of the Master:^* при атаке вражеского героя клинки летят к цели, каждый наносит 100 магического урона, накладывает 1 заряд Relentless Salvo и запускает перезарядку способности. Каждая обычная атака сокращает её перезарядку на 1.5 секунды."
+    },
+    {
+      "keys": ["entities:Ability_Silhouette1_description"],
+      "english_hash": "781dc4ac7f5786a33e2ad5e4314cc9e73bd056e238e8e9f7cae58bb54c559679",
+      "ru": "Смертоносные клинки кружатся вокруг Silhouette подобно лепесткам лотоса. Она может выпустить их наружу, прорубая ряды противников."
+    },
+    {
+      "keys": ["entities:Ability_Silhouette1_description_simple:ult_boost"],
+      "english_hash": "6b97fa3de77f75e7ea0d6f62927497117cf7bc51db6ca0d517c24f2954f86253",
+      "ru": "Пока способность не перезаряжается, вокруг Silhouette вращаются ^o{1,2,3,4} клинка^*, нанося задетым противникам ^o45 магического урона^*.\\n\\nАктивируйте, чтобы выпустить клинки наружу и нанести задетым противникам ^o{75,150,225,300} магического урона^*.\\n\\n^gПри атаке вражеского героя клинки летят к цели, каждый наносит 100 магического урона, накладывает 1 заряд Relentless Salvo и запускает перезарядку способности. Каждая обычная атака сокращает её перезарядку на 1.5 секунды.^*"
+    },
+    {
+      "keys": ["entities:Ability_Silhouette2_Go_IMPACT_effect"],
+      "english_hash": "4cdf0b4bc4458d6bfe44350e47cb6d87b1caa490b9009038ad317cac26299f2c",
+      "ru": "Активируйте, чтобы Silhouette стремительно переместилась к дереву, за которое зацеплена. Задетые по пути противники получают {80,130,180,230} магического урона и оглушение на {1} секунду."
+    },
+    {
+      "keys": ["entities:Ability_Silhouette2_Go_description"],
+      "english_hash": "beb49f3ecf38d3bbae9bf499b32e5a6593419def2ac2d383f3580542effe1c14",
+      "ru": "Любимый танец Silhouette — тот, в котором она пляшет на головах врагов, пролетая над ними."
+    },
+    {
+      "keys": ["entities:Ability_Silhouette2_Go_description_simple"],
+      "english_hash": "0c316197834ce074521beceba276384a0320e3eb76907839b1826755bc80f480",
+      "ru": "Активируйте, чтобы Silhouette стремительно переместилась к дереву, за которое зацеплена. Задетые по пути противники получают ^o{80,130,180,230} магического урона^* и ^oоглушение на {1} секунду^*."
+    },
+    {
+      "keys": ["entities:Ability_Silhouette2_IMPACT_effect"],
+      "english_hash": "3a74b6ebef975ffa5e2aeef92e75e49467d5a9a2c23f7f02f9a93593efae0edc",
+      "ru": "Выберите точку, чтобы выпустить крюк и зацепиться цепью за первое встреченное дерево. Цепь существует 6 секунд или пока не растянется на 1800 единиц.\\n\\nПока Silhouette зацеплена за дерево, она получает 100 скорости передвижения, а Tree Grapple заменяется двумя дополнительными способностями: Sky Dance и Log Bolas.\\n\\nSky Dance и Log Bolas наносят {80,130,180,230} магического урона и оглушают на 1 секунду."
+    },
+    {
+      "keys": ["entities:Ability_Silhouette2_Pull_IMPACT_effect"],
+      "english_hash": "65c23fa4c47301065668ac79cb18b213a5838bf38b067c06939faa4573a2ab47",
+      "ru": "Активируйте, чтобы уничтожить дерево, за которое зацеплена Silhouette, и притянуть его к ней. Задетые деревом противники получают {80,130,180,230} магического урона и оглушение на {1} секунду."
+    },
+    {
+      "keys": ["entities:Ability_Silhouette2_Pull_description"],
+      "english_hash": "965c0bbd8b8c55b5bb897ab664c8af1855e3033c9746317151c569cd3455659c",
+      "ru": "Silhouette вырывает дерево с корнем и использует ствол как оружие, притягивая его к себе."
+    },
+    {
+      "keys": ["entities:Ability_Silhouette2_Pull_description_simple"],
+      "english_hash": "78d14e7d92136dcf9d2fc2f5cc5a16bcd5ace070ec3ef13df5740aaf5f96fc2a",
+      "ru": "Активируйте, чтобы уничтожить дерево, за которое зацеплена Silhouette, и притянуть его к ней. Задетые деревом противники получают ^o{80,130,180,230} магического урона^* и ^oоглушение на {1} секунду^*."
+    },
+    {
+      "keys": ["entities:Ability_Silhouette2_description"],
+      "english_hash": "52b5e4fcf391e86f190b15ba08fa3ee77ac581bdb68bba40d020d0936fcb0d7c",
+      "ru": "Верный крюк позволяет Silhouette совершать невероятные боевые трюки: перелетать от дерева к дереву и оглушать врагов древесными стволами."
+    },
+    {
+      "keys": ["entities:Ability_Silhouette2_description_simple"],
+      "english_hash": "8178806493a4903683fce03acdf82f70bbcaf0814722975fb87373aa480ef58d",
+      "ru": "Выберите точку, чтобы выпустить крюк и зацепиться цепью за первое встреченное дерево на ^o6 секунд^*.\\n\\nПока Silhouette зацеплена за дерево, она получает ^o100 скорости передвижения^*, а Tree Grapple заменяется двумя дополнительными способностями: ^oSky Dance^* (перемещает Silhouette к дереву) и ^oLog Bolas^* (притягивает дерево к Silhouette).\\n\\nSky Dance и Log Bolas наносят подконтрольным игрокам юнитам ^o{80,130,180,230} магического урона и оглушают на 1 секунду^*."
+    },
+    {
+      "keys": ["entities:Ability_Silhouette3_FRAME_effect"],
+      "english_hash": "5b93cfc0901dda3e6e5b5362839047c3a5fa44b5a10c6a5177910103ba28f297",
+      "ru": "Ваши атаки накладывают на цель Relentless Salvo на 10 секунд, суммирующийся до 15 раз. За каждый заряд на цели атаки отдельным срабатыванием наносят {4,8,12,16} дополнительного физического урона.\\n\\nПосле применения готовой способности Silhouette получает {400} скорости атаки на 2 атаки или 4 секунды.\\n\\nИллюзии могут накладывать заряды Relentless Salvo, но не наносят дополнительный урон."
+    },
+    {
+      "keys": ["entities:Ability_Silhouette3_description"],
+      "english_hash": "80fffe8b812c49cb7524a9696dc598431d60a06f7cd2f8295d88d9ed7f170d85",
+      "ru": "Каждая последовательная атака Silhouette по одной цели становится сильнее. После применения способности она также пользуется возможностью быстро нанести серию ударов."
+    },
+    {
+      "keys": ["entities:Ability_Silhouette3_description_simple"],
+      "english_hash": "484f23d2528b2be9e422cfbff9e8131b7d6d193d98e64691247e048886122a97",
+      "ru": "Ваши атаки накладывают на цель ^oRelentless Salvo^* на 10 секунд, суммирующийся до 15 раз. За каждый заряд на цели атаки наносят ^o{4,8,12,16} дополнительного физического урона^*.\\n\\nПосле применения готовой способности Silhouette получает ^o{400} скорости атаки на 2 атаки или 4 секунды^*.\\n\\nИллюзии могут накладывать заряды ^oRelentless Salvo^*, но не наносят дополнительный урон."
+    },
+    {
+      "keys": ["entities:Ability_Silhouette4_IMPACT_effect"],
+      "english_hash": "f2b0c5510b126378bafcd1f8bf18b830810580d43012ca11b975a09206fbdacb",
+      "ru": "Активируйте, чтобы сбить с себя летящие снаряды, снять все положительные и отрицательные эффекты и создать Shadow. Эта иллюзия существует {20,30,40} секунд, получает {200,150,100}% обычного урона и наносит 100% обычного урона.\\n\\nСоздаёт дополнительную способность, позволяющую Silhouette поменяться местами с Shadow."
+    },
+    {
+      "keys": ["entities:Ability_Silhouette4_Swap_IMPACT_effect", "entities:Ability_Silhouette4_Swap_description_simple"],
+      "english_hash": "88c9be821d3593ddc225e45fb49bb91edc9d4a80e327627187b10e727f02d07a",
+      "ru": "Silhouette и её Shadow меняются местами.\\n\\nВремя применения начинается с 0 и увеличивается на 0.1 секунды за каждые 1000 единиц между Silhouette и Shadow, но не более чем до 0.5 секунды."
+    },
+    {
+      "keys": ["entities:Ability_Silhouette4_description"],
+      "english_hash": "a2339ebd1f881bd7059d28111cf6aec21d9efe7d99d0b385fc80147ba456b34e",
+      "ru": "Silhouette создаёт полностью повторяющую её иллюзию и может меняться с ней местами, ещё сильнее запутывая врагов."
+    },
+    {
+      "keys": ["entities:Ability_Silhouette4_description_simple"],
+      "english_hash": "ba25bf8fd878a456b0208b1c1cab0ed8b48ea1a86fec40ba66dcb7b4c7c6a8f2",
+      "ru": "^oСбивает с себя летящие снаряды^*, снимает все ^oположительные и отрицательные эффекты^* и создаёт ^oShadow^*. ^oShadow^* — иллюзия, которая существует ^o{20,30,40} секунд^*, получает ^o{200,150,100}% обычного урона^* и наносит ^o100% обычного урона^*.\\n\\nСоздаёт дополнительную способность, позволяющую поменяться местами с ^oShadow^*."
+    },
+    {
+      "keys": ["entities:State_Silhouette_Ability2_Hooker_description", "entities:State_Silhouette_Ability2_Hooker_description_simple"],
+      "english_hash": "dfd1052b731c748a0b14959df7fcecb9cfb5bcd7c30467b449c140e437bfe487",
+      "ru": "Вы зацеплены за дерево и можете взаимодействовать с ним."
+    },
+    {
+      "keys": ["entities:State_Silhouette_Ability3_Enemy_description", "entities:State_Silhouette_Ability3_Enemy_description_simple"],
+      "english_hash": "ffa226a8f6e9d6c29515ac3280d742ee775d7eb51f4d91d48140dd5a3711ad07",
+      "ru": "За каждый заряд получает {4,8,12,16} дополнительного физического урона от атак Silhouette."
+    },
+    {
+      "keys": ["entities:State_Silhouette_Ability3_description", "entities:State_Silhouette_Ability3_description_simple"],
+      "english_hash": "2d1ea6a4ad40f203a42583c46172d66dbb7f476a91a783ee215f99f0f0395182",
+      "ru": "Silhouette быстро совершит две атаки подряд."
+    }
+  ]
+}

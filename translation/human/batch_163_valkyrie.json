@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_163_VALKYRIE",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Valkyrie1_IMPACT_effect"],
+      "english_hash": "9576481afeffdc31db1b647833468d79b0d9a592b17d3d3948957b79390094ce",
+      "ru": "Наносит видимым вражеским юнитам вокруг себя ^o{75,150,225,300} магического урона^*.\\n\\nДополнительно наносит ^o{50,100,150,200} магического урона^* одному видимому противнику в радиусе 300, ^oотдавая приоритет героям^*."
+    },
+    {
+      "keys": ["entities:Ability_Valkyrie1_description"],
+      "english_hash": "5ffa8b24cf378b7854eb0bacdff7d38e937eee62525855c1a9ae51ead27274c1",
+      "ru": "Valkyrie призывает нескольких боевых дев, которые наносят урон ближайшим противникам."
+    },
+    {
+      "keys": ["entities:Ability_Valkyrie1_description_simple"],
+      "english_hash": "b6a116902d3bc2f5293502d20121affc1264b6d40edb3209bf7422b4ebcb5b08",
+      "ru": "Призывает нескольких боевых дев, нанося видимым ближайшим противникам ^o{75,150,225,300} магического урона^*.\\n\\nДополнительно наносит ^o{50,100,150,200} магического урона^* одному видимому противнику рядом с вами, ^oотдавая приоритет героям^*."
+    },
+    {
+      "keys": ["entities:Ability_Valkyrie2_description"],
+      "english_hash": "5f825065457d0061c6240e2cf7f44a6c35eeafba8bdcca537ea03680a343e027",
+      "ru": "Valkyrie бросает Javelin of Light в выбранном направлении. Первый задетый противник получает урон и оглушается. Длительность оглушения зависит от пройденного копьём расстояния."
+    },
+    {
+      "keys": ["entities:Ability_Valkyrie2_description2"],
+      "english_hash": "6cf4388c28ceabb8c5a7ff1e549750bb03cddec2b560dc67c34c351218a2d79a",
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff:^* применяет Call of the Valkyrie текущего уровня вокруг каждой цели, поражённой копьём."
+    },
+    {
+      "keys": ["entities:Ability_Valkyrie2_description_simple"],
+      "english_hash": "31e567a9cd35c45cf458fed32d24f43f54113d6fd68b0bcd9cdb4c51e3e28f2f",
+      "ru": "Бросает ^oJavelin of Light^* в выбранном направлении.\\n\\nПервый поражённый ^oкопьём^* противник получает ^o{90,180,270,360} магического урона^* и ^oоглушается на 0.5 секунды^*. В зависимости от ^oпройденного копьём^* расстояния оглушение длится ^oдо 5 секунд^*, а дополнительный ^oмагический урон достигает {100,200,300,400}^*.\\n\\n^gStaff of the Master^* применяет ^oCall of the Valkyrie^* вокруг поражённой цели."
+    },
+    {
+      "keys": ["entities:Ability_Valkyrie2_description_simple:ult_boost"],
+      "english_hash": "498e9e193a8a8d3f311b7515914766915165d63a0f4d0dc3c4c3bdf0d03c8728",
+      "ru": "Бросает ^oJavelin of Light^* в выбранном направлении.\\n\\nПервый поражённый ^oкопьём^* противник получает ^o{90,180,270,360} магического урона^*, ^oоглушается на 0.5 секунды^*, а ^gвокруг него применяется Call of the Valkyrie^*. В зависимости от ^oпройденного копьём^* расстояния оглушение длится ^oдо 5 секунд^*, а дополнительный ^oмагический урон достигает {100,200,300,400}^*."
+    },
+    {
+      "keys": ["entities:Ability_Valkyrie3_IMPACT_effect"],
+      "english_hash": "a48dc0ce5b9c9228fdbfcff6351d0ca35255e4733be3407f015f202852e7afde",
+      "ru": "Перемещается ^oвперёд на {600,700,800,900} единиц^*. После приземления накладывает ^oCourageous Leap^* на себя на 10 секунд и на союзных героев вокруг на 5 секунд."
+    },
+    {
+      "keys": ["entities:Ability_Valkyrie3_description"],
+      "english_hash": "b40778fff696751068811b69a9b7386a4a8c2f4251a50008cc4f867d3c2709ab",
+      "ru": "Valkyrie прыгает вперёд, устремляясь в бой. При приземлении её отвага увеличивает ближайшим союзным героям скорость передвижения и атаки."
+    },
+    {
+      "keys": ["entities:Ability_Valkyrie3_description_simple"],
+      "english_hash": "ad23fbf3972eb50224b4098b863a8aee7b6488639420cd1aace50317c87041ba",
+      "ru": "^oПрыгает^* вперёд на ^o{600,700,800,900} единиц^*, устремляясь в бой.\\n\\nПосле приземления даёт ближайшим союзникам ^o{5,10,15,20}% скорости передвижения и {10,20,30,40} скорости атаки^*."
+    },
+    {
+      "keys": ["entities:Ability_Valkyrie3_effect_header"],
+      "english_hash": "2f99a5b57eccc2600c599c54a846b236fe4257d41203963495b2f01f659888aa",
+      "ru": "Эффекты Courageous Leap"
+    },
+    {
+      "keys": ["entities:Ability_Valkyrie4_IMPACT_effect"],
+      "english_hash": "c5e0cd2f94fcc17c80008bf8a46b154360c669d4e4c6e31017e6b715b548384b",
+      "ru": "Накладывает Prism на всех союзных героев на ^o{14,16,18}^* секунд."
+    },
+    {
+      "keys": ["entities:Ability_Valkyrie4_description"],
+      "english_hash": "7656c57f8449895a6c5faa095e0c9d114adbe4fac10c9835f0f6c06235fa5b9e",
+      "ru": "Valkyrie преломляет свет и скрывает всех союзных героев на карте."
+    },
+    {
+      "keys": ["entities:Ability_Valkyrie4_description_simple"],
+      "english_hash": "ca798e1f7c87472bd91050763165723747e2af5078bf3d7392b38f05886327c7",
+      "ru": "Преломляет свет, давая всем союзным героям ^oскрытность и {10,12,14}% скорости передвижения на ^o{14,16,18}^* секунд^*. Переход в скрытность занимает ^o{2,1.75,1.5} секунды^*. Вы получаете ^oсодействие^*, когда затронутый союзник убивает вражеского героя не далее 1700 единиц от вас."
+    },
+    {
+      "keys": ["entities:Ability_Valkyrie4_effect_header"],
+      "english_hash": "d69d1c2a6915630299f41e7b0e68ef78e2baad6e8af96696a1674689da768a78",
+      "ru": "Эффекты Prism"
+    },
+    {
+      "keys": ["entities:State_Valkyrie_Ability4_FRAME_effect"],
+      "english_hash": "493224a611afc3674e93993ab866e765371d5abab87d05807b15276f27c84ed9",
+      "ru": "Не прекращается при атаке или применении способностей\\nValkyrie получает содействие, когда затронутый союзный герой убивает вражеского героя не далее 1700 единиц от неё"
+    }
+  ]
+}

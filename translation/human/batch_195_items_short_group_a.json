@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_195_ITEMS_SHORT_GROUP_A",
+  "reviewed_by": "Codex manual gameplay localization",
+  "entries": [
+    {
+      "keys": ["entities:Item_AcolytesStaff_description_simple"],
+      "english_hash": "e1a7463d7b6140580970f532e4d45e863ea42ffea99d68b8d136289bcbfdef53",
+      "ru": "^77925 интеллекта^*"
+    },
+    {
+      "keys": ["entities:Item_AlacrityBand_description_simple"],
+      "english_hash": "9eeba5ac9dd7c4dddce5486db688078fedbc12b4ba642970271f38aedcd47403",
+      "ru": "^09930 скорости атаки^*"
+    },
+    {
+      "keys": ["entities:Item_ApprenticesRobe_description_simple"],
+      "english_hash": "14dbff46bb99f43436d3b52f95e13fdf274b2ced5a8997ad7b26b5e70ba9dc17",
+      "ru": "^7796 интеллекта^*"
+    },
+    {
+      "keys": ["entities:Item_Arcana_description_simple"],
+      "english_hash": "ec49ca7f39b8dc58a946408e05e39830f017ccdd86fd3ef451526afb4e5605ab",
+      "ru": "6 интеллекта\\n50% восстановления маны\\n10 урона"
+    },
+    {
+      "keys": ["entities:Item_AxeOfTheMalphai_description_simple"],
+      "english_hash": "07e2df43e3367f85608559ee2c70243b5ee1a048316b56dbc72930e70f84db86",
+      "ru": "^97725 силы^*"
+    },
+    {
+      "keys": ["entities:Item_Beastheart_description_simple"],
+      "english_hash": "6ddadb2b773c9af43f97990bd0904aae6b69e260c4790c62bfa46d87d5b7be0e",
+      "ru": "215 здоровья"
+    },
+    {
+      "keys": ["entities:Item_BeltOfVitality_description"],
+      "english_hash": "4f953acffc01b588722aa7ac727130b5740e905f96687d10f9b4f235337329cf",
+      "ru": "Предмет содержит ^yмодификатор сопротивления оглушению и отрицательным эффектам^*, который не складывается с другими такими модификаторами."
+    },
+    {
+      "keys": ["entities:Item_BeltOfVitality_description_simple"],
+      "english_hash": "6d44c1be2d6a0b9a3f1cd3a427ebc078ebc8466a3b389d43f4c2d7245cee50cb",
+      "ru": "Модификатор сопротивления ^oоглушению и отрицательным эффектам^*.\\n200 здоровья, 8 восстановления здоровья"
+    },
+    {
+      "keys": ["entities:Item_BlessedOrb_description_simple"],
+      "english_hash": "8fb0d6a9c6772d4fb2ca8544fd95996a2dd82bb07ec23e8ad61975118adfc498",
+      "ru": "^97710 силы^*\\n^79710 ловкости^*\\n^77910 интеллекта^*"
+    },
+    {
+      "keys": ["entities:Item_BloodRuby_description_simple"],
+      "english_hash": "c62592db879fe4bf97ce7c0007a1d91f647c29bbed584651c1ef9938c097a7d0",
+      "ru": "150 здоровья"
+    },
+    {
+      "keys": ["entities:Item_BloodRuby_effect_header"],
+      "english_hash": "1dcc5c7d3c5e0d2ac03097c1e23855f8e125ea539aba2686f20406b8285432ae",
+      "ru": "Эффекты Blood Ruby"
+    },
+    {
+      "keys": ["entities:Item_BolsteringArmband_description_simple"],
+      "english_hash": "66f07dcc22f5ad9963c3f791857999031585b8082596f60279311b7ced2078bf",
+      "ru": "^9776 силы^*"
+    },
+    {
+      "keys": ["entities:Item_BrimstonePlate_FRAME_effect"],
+      "english_hash": "dfa3757d6488612c6e2042bf8e60c26c9aafa953403a3eeb62d325982fd1c8da",
+      "ru": "\\n^oПри получении атаки^* выпускает в атакующего снаряд, наносящий ^oмагический урон^* в размере 30 + 2% от вашего максимального здоровья, и снижает получаемое им исцеление на 25% на 2 секунды."
+    },
+    {
+      "keys": ["entities:Item_Broadsword_description_simple"],
+      "english_hash": "651e5ce98d4358412bbf733576bbe2ce06846a1ae11ac9f18b1ade517c38a4ce",
+      "ru": "18 урона"
+    },
+    {
+      "keys": ["entities:Item_BurningTemper_FRAME_effect"],
+      "english_hash": "ffb920cc7720796de8b1c074d106c3baef1f9631a53bf64974155836f97aa768",
+      "ru": "\\nВаши атаки дополнительно наносят ^oфизический урон^* в размере 2% от вашего ^oмаксимального здоровья^*."
+    },
+    {
+      "keys": ["entities:Item_BrimstonePlate_description", "entities:Item_BurningTemper_description", "entities:Item_HeartOfFire_description"],
+      "english_hash": "2e629a6a49bced6062c96616472ffe671f183581c030bfe5f7a08ca6909e5563",
+      "ru": "Реликвия, опалённая и явленная миру смертью вечной ^rFirebird^*."
+    },
+    {
+      "keys": ["entities:Item_CrimsonGuard_FRAME_effect"],
+      "english_hash": "33bc529a6a7248bc3d27408f662c20908a373e001989ef8c9e66c90c002a10a3",
+      "ru": "\\nЕсли при получении урона ваше здоровье опускается до 30% от максимального или ниже, вы получаете на 5 секунд защитный щит, поглощающий 1000 урона."
+    },
+    {
+      "keys": ["entities:Item_MastersLegacy_IMPACT_effect:item_masterslegacy_Unusable"],
+      "english_hash": "533d789f55a35ce6b158009156b1cea5aaf47f4683a84ac42b82fac9aad91b94",
+      "ru": "^rНельзя применить к другому союзнику, пока предмет не будет потерян^*\\n\\nВыберите другого союзного героя, чтобы ^oнавсегда усилить его способности^* всеми доступными эффектами Staff of the Master, если у него есть подходящая способность.\\n\\n^oЭто можно сделать только один раз^* и только для ещё не усиленного героя. Потеря предмета снимает усиление с союзника и запускает перезарядку предмета на 1 минуту."
+    },
+    {
+      "keys": ["entities:Item_NullStone_FRAME_effect"],
+      "english_hash": "da774c0202ab5c96b480fc21ed0f318884c64c11cc107e8e341fb7319198f98f",
+      "ru": "\\nПока предмет не перезаряжается, ^oнейтрализует одно направленное заклинание^*."
+    },
+    {
+      "keys": ["entities:Item_ObsidianSpear_FRAME_effect"],
+      "english_hash": "05df18482cce32ffbc7e1f7526cafa35f378119ba177e2f060d8f661effdc6e7",
+      "ru": "\\n^oПри убийстве героя или помощи^*: сокращает оставшуюся перезарядку основных способностей на 4 секунды."
+    },
+    {
+      "keys": ["entities:Item_PhoenixVeil_FRAME_effect"],
+      "english_hash": "73b21c51a4052de1f2c69aaa42f4cadfa5ca4942c0cbbfa4db6725688ae47230",
+      "ru": "\\nНакапливает 12% полученного урона, но не более 360 урона."
+    },
+    {
+      "keys": ["entities:Item_AcolytesStaff_effect_header", "entities:Item_AlacrityBand_effect_header", "entities:Item_ApprenticesRobe_effect_header", "entities:Item_Arcana_effect_header", "entities:Item_AxeOfTheMalphai_effect_header", "entities:Item_Beastheart_effect_header", "entities:Item_BlessedOrb_effect_header", "entities:Item_BolsteringArmband_effect_header", "entities:Item_Broadsword_effect_header", "entities:Item_Flayer_effect_header"],
+      "english_hash": "6e5e7bc5e96f838352cde0fcff351520eab9cd6b12ecb43e9b30ed6fd98f6777",
+      "ru": "Эффекты состояния"
+    }
+  ]
+}
