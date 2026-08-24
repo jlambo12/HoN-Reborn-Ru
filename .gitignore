@@ -12,6 +12,10 @@ __pycache__/
 .ruff_cache/
 .venv/
 
+# .NET build output
+**/bin/
+**/obj/
+
 # JavaScript / Astro
 **/node_modules/
 website/dist/

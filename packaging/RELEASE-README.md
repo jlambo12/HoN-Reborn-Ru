@@ -1,38 +1,24 @@
 # HoN Reborn RU v@@VERSION@@
 
-Неофициальная русская локализация HoN Reborn / Juvio для Windows.
+Автономный русификатор и Windows x64 Launcher для HoN Reborn / Juvio.
 
-## Установка
+## Рекомендуемая установка
 
-1. Убедитесь, что Juvio / HoN Reborn уже установлен и хотя бы раз запускался.
-2. Откройте PowerShell в этой папке.
-3. Выполните:
+Скачайте `HoNRebornRU-Setup.exe` со страницы GitHub Releases, установите приложение и запустите ярлык **HoN Reborn RU**. Никакие дополнительные компоненты (.NET, Python, Node.js, Git или архиваторы) не требуются.
 
-```powershell
-powershell -ExecutionPolicy Bypass -File .\Install.ps1 -Launch
-```
+## Portable-вариант
 
-Параметр `-Launch` можно убрать, если игру пока не нужно запускать.
+1. Запустите `HoNRebornRU.exe`.
+2. Нажмите **Установить / обновить**.
+3. Выберите способ запуска: официальный ярлык, GearUP или прямой Juvio.
 
-Установщик проверит SHA-256 архива и сохранит существующий extension в `%LOCALAPPDATA%\Juvio\extensions\backups\HoN-Reborn-RU`.
+Лаунчер проверяет GitHub Releases, SHA-256 и совместимость версии игры. Перед заменой существующего `extensions/resources0.jz` создаётся резервная копия.
 
-## Удаление
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\Uninstall.ps1
-```
-
-Скрипт восстановит extension, который был активен до установки. Если extension после установки изменился, удаление остановится, чтобы не потерять пользовательские данные.
-
-## Целостность
-
-SHA-256 файла `resources0.jz`:
+SHA-256 перевода:
 
 ```text
 @@SHA256@@
 ```
-
-Контрольные суммы всех файлов пакета находятся в `SHA256SUMS.txt`.
 
 Проект: https://github.com/jlambo12/HoN-Reborn-Ru
 

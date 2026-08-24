@@ -1,68 +1,54 @@
 [CmdletBinding()]
 param(
     [ValidatePattern('^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$')]
-    [string]$Version = "0.1.0",
-    [string]$OutputDirectory
+    [string]$Version = "0.1.0-beta.1",
+    [string]$LauncherDirectory,
+    [string]$OutputDirectory,
+    [string]$PythonCommand = "python"
 )
 
 $ErrorActionPreference = "Stop"
 $ProjectRoot = Split-Path -Parent $PSScriptRoot
-if (-not $OutputDirectory) {
-    $OutputDirectory = Join-Path $ProjectRoot "dist\release"
-}
-
+if (-not $LauncherDirectory) { $LauncherDirectory = Join-Path $ProjectRoot "dist\launcher" }
+if (-not $OutputDirectory) { $OutputDirectory = Join-Path $ProjectRoot "dist\release" }
+$LauncherDirectory = [IO.Path]::GetFullPath($LauncherDirectory)
+$OutputDirectory = [IO.Path]::GetFullPath($OutputDirectory)
 $AssetDirectory = Join-Path $ProjectRoot "release-assets\$Version"
-$Archive = Join-Path $AssetDirectory "resources0.jz"
-$ManifestPath = Join-Path $AssetDirectory "manifest.json"
-if (-not (Test-Path -LiteralPath $Archive -PathType Leaf)) {
-    throw "Release asset not found: $Archive"
-}
-if (-not (Test-Path -LiteralPath $ManifestPath -PathType Leaf)) {
-    throw "Release manifest not found: $ManifestPath"
-}
+$Translation = Join-Path $AssetDirectory "resources0.jz"
+$Launcher = Join-Path $LauncherDirectory "HoNRebornRU.exe"
+$Updater = Join-Path $LauncherDirectory "HoNRebornRU.Updater.exe"
+$UpdateManifest = Join-Path $OutputDirectory "update-manifest.json"
 
-$Manifest = Get-Content -LiteralPath $ManifestPath -Raw | ConvertFrom-Json
-$ArchiveSha256 = (Get-FileHash -LiteralPath $Archive -Algorithm SHA256).Hash.ToLowerInvariant()
-if ($Manifest.version -ne $Version -or $Manifest.sha256 -ne $ArchiveSha256) {
-    throw "Release manifest does not match resources0.jz."
+foreach ($Path in @($Translation, $Launcher, $Updater, $UpdateManifest)) {
+    if (-not (Test-Path -LiteralPath $Path -PathType Leaf)) { throw "Release input missing: $Path" }
 }
+& $PythonCommand (Join-Path $ProjectRoot "tools\verify_update_manifest.py") --directory $OutputDirectory
+if ($LASTEXITCODE -ne 0) { throw "Update manifest verification failed" }
 
 $StagingParent = [IO.Path]::GetFullPath((Join-Path $env:TEMP "HoN-Reborn-RU-package"))
 New-Item -ItemType Directory -Path $StagingParent -Force | Out-Null
 $Staging = [IO.Path]::GetFullPath((Join-Path $StagingParent ([guid]::NewGuid().ToString("N"))))
 $AllowedPrefix = $StagingParent.TrimEnd([IO.Path]::DirectorySeparatorChar) + [IO.Path]::DirectorySeparatorChar
-if (-not $Staging.StartsWith($AllowedPrefix, [StringComparison]::OrdinalIgnoreCase)) {
-    throw "Unsafe staging path: $Staging"
-}
-
+if (-not $Staging.StartsWith($AllowedPrefix, [StringComparison]::OrdinalIgnoreCase)) { throw "Unsafe staging path: $Staging" }
 New-Item -ItemType Directory -Path $Staging -Force | Out-Null
+
 try {
-    Copy-Item -LiteralPath $Archive -Destination (Join-Path $Staging "resources0.jz")
-    foreach ($TemplateName in @("Install.ps1", "Uninstall.ps1")) {
-        $TemplatePath = Join-Path $ProjectRoot "packaging\windows\$TemplateName"
-        $Rendered = (Get-Content -LiteralPath $TemplatePath -Raw).Replace("@@VERSION@@", $Version).Replace("@@SHA256@@", $ArchiveSha256)
-        Set-Content -LiteralPath (Join-Path $Staging $TemplateName) -Value $Rendered -Encoding UTF8
-    }
+    Copy-Item -LiteralPath $Translation -Destination (Join-Path $Staging "resources0.jz")
+    Copy-Item -LiteralPath $Launcher -Destination (Join-Path $Staging "HoNRebornRU.exe")
+    Copy-Item -LiteralPath $Updater -Destination (Join-Path $Staging "HoNRebornRU.Updater.exe")
+    Copy-Item -LiteralPath $UpdateManifest -Destination (Join-Path $Staging "update-manifest.json")
     $ReadmeTemplate = Get-Content -LiteralPath (Join-Path $ProjectRoot "packaging\RELEASE-README.md") -Raw
-    $RenderedReadme = $ReadmeTemplate.Replace("@@VERSION@@", $Version).Replace("@@SHA256@@", $ArchiveSha256)
+    $TranslationSha = (Get-FileHash -Algorithm SHA256 -LiteralPath $Translation).Hash.ToLowerInvariant()
+    $RenderedReadme = $ReadmeTemplate.Replace("@@VERSION@@", $Version).Replace("@@SHA256@@", $TranslationSha)
     Set-Content -LiteralPath (Join-Path $Staging "README.md") -Value $RenderedReadme -Encoding UTF8
-
-    $ChecksumLines = Get-ChildItem -LiteralPath $Staging -File | Sort-Object Name | ForEach-Object {
-        $Hash = (Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash.ToLowerInvariant()
-        "$Hash  $($_.Name)"
+    $InnerChecksums = Get-ChildItem -LiteralPath $Staging -File | Sort-Object Name | ForEach-Object {
+        "$((Get-FileHash -Algorithm SHA256 -LiteralPath $_.FullName).Hash.ToLowerInvariant())  $($_.Name)"
     }
-    Set-Content -LiteralPath (Join-Path $Staging "SHA256SUMS.txt") -Value $ChecksumLines -Encoding ASCII
-
+    Set-Content -LiteralPath (Join-Path $Staging "SHA256SUMS.txt") -Value $InnerChecksums -Encoding ASCII
     New-Item -ItemType Directory -Path $OutputDirectory -Force | Out-Null
-    $PackagePath = Join-Path $OutputDirectory "HoN-Reborn-RU-v$Version.zip"
-    if (Test-Path -LiteralPath $PackagePath) {
-        Remove-Item -LiteralPath $PackagePath -Force
-    }
-    Compress-Archive -Path (Join-Path $Staging "*") -DestinationPath $PackagePath -CompressionLevel Optimal
-    $PackageSha256 = (Get-FileHash -LiteralPath $PackagePath -Algorithm SHA256).Hash.ToLowerInvariant()
-    Set-Content -LiteralPath (Join-Path $OutputDirectory "SHA256SUMS.txt") -Value "$PackageSha256  $(Split-Path -Leaf $PackagePath)" -Encoding ASCII
+    $PackagePath = Join-Path $OutputDirectory "HoN-Reborn-RU-v$Version-portable.zip"
+    Compress-Archive -Path (Join-Path $Staging "*") -DestinationPath $PackagePath -CompressionLevel Optimal -Force
     Write-Host "Created: $PackagePath"
-    Write-Host "SHA-256: $PackageSha256"
 }
 finally {
     if (Test-Path -LiteralPath $Staging) {
@@ -72,4 +58,3 @@ finally {
         }
     }
 }
-

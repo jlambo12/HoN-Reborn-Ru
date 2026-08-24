@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "version": "0.1.0-beta.1",
+  "file": "resources0.jz",
+  "sha256": "99c562d00cc8c150f1354641c832cb854f1aa9632f48d7948db2bed2440b0830",
+  "size_bytes": 2630289,
+  "members": 49,
+  "crc": "PASS",
+  "automated_tests": "PASS",
+  "runtime_verified": false,
+  "runtime_status": "Login screen passed; authenticated and in-match visual QA remains for the beta channel."
+}

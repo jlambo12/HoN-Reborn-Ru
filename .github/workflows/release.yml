@@ -9,7 +9,7 @@ on:
       version:
         description: "Version without the v prefix"
         required: true
-        default: "0.1.0"
+        default: "0.1.0-beta.1"
 
 permissions:
   contents: write
@@ -22,7 +22,10 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: "3.14"
-      - name: Resolve version
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: "8.0.x"
+      - name: Resolve version and channel
         id: version
         shell: pwsh
         run: |
@@ -32,19 +35,53 @@ jobs:
           else {
               $Version = "${{ github.ref_name }}".TrimStart("v")
           }
+          $Channel = if ($Version.Contains("-")) { "beta" } else { "stable" }
           "version=$Version" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-      - name: Verify release overlay
+          "channel=$Channel" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+      - name: Run tests
+        run: python -m unittest discover -s tests -p "test_*.py" -v
+      - name: Verify translation overlay
         run: python tools/verify_release.py --version ${{ steps.version.outputs.version }}
-      - name: Build package
+      - name: Build autonomous launcher and updater
+        shell: pwsh
+        run: .\scripts\build_launcher.ps1 -LauncherVersion 1.0.0
+      - name: Create update manifest and assets
+        shell: pwsh
+        run: |
+          python tools/create_update_manifest.py `
+            --version "${{ steps.version.outputs.version }}" `
+            --channel "${{ steps.version.outputs.channel }}" `
+            --launcher-version "1.0.0" `
+            --translation "release-assets\${{ steps.version.outputs.version }}\resources0.jz" `
+            --launcher "dist\launcher\HoNRebornRU.exe" `
+            --updater "dist\launcher\HoNRebornRU.Updater.exe" `
+            --game-sha256 "eec2d8bc50200874e8aa368b980d1d67b45f637ffad4fb39030c4749c324af76" `
+            --output-directory "dist\release"
+          python tools/verify_update_manifest.py --directory "dist\release"
+      - name: Build portable package
         shell: pwsh
         run: .\scripts\package_release.ps1 -Version ${{ steps.version.outputs.version }}
+      - name: Install build-time setup compiler
+        shell: pwsh
+        run: choco install innosetup --yes --no-progress
+      - name: Build autonomous Setup.exe
+        shell: pwsh
+        run: .\scripts\build_setup.ps1 -Version ${{ steps.version.outputs.version }}
+      - name: Create release checksums
+        shell: pwsh
+        run: |
+          Get-ChildItem -LiteralPath "dist\release" -File |
+            Where-Object Name -ne "SHA256SUMS.txt" |
+            Sort-Object Name |
+            ForEach-Object { "$((Get-FileHash -Algorithm SHA256 -LiteralPath $_.FullName).Hash.ToLowerInvariant())  $($_.Name)" } |
+            Set-Content -LiteralPath "dist\release\SHA256SUMS.txt" -Encoding ASCII
       - name: Upload workflow artifact
         uses: actions/upload-artifact@v7
         with:
           name: HoN-Reborn-RU-v${{ steps.version.outputs.version }}
           path: dist/release/*
           if-no-files-found: error
-      - name: Publish GitHub prerelease
+      - name: Publish GitHub Release
         if: github.ref_type == 'tag'
         shell: pwsh
         env:
@@ -52,13 +89,19 @@ jobs:
         run: |
           $Version = "${{ steps.version.outputs.version }}"
           $Notes = "docs/release-notes/v$Version.md"
-          if (-not (Test-Path -LiteralPath $Notes)) {
-              throw "Release notes not found: $Notes"
-          }
-          gh release create "v$Version" `
-              "dist/release/HoN-Reborn-RU-v$Version.zip" `
-              "dist/release/SHA256SUMS.txt" `
-              --title "HoN Reborn RU v$Version" `
-              --notes-file $Notes `
-              --prerelease `
-              --verify-tag
+          if (-not (Test-Path -LiteralPath $Notes)) { throw "Release notes not found: $Notes" }
+          $Arguments = @(
+            "release", "create", "v$Version",
+            "dist/release/HoNRebornRU-Setup.exe",
+            "dist/release/HoNRebornRU.exe",
+            "dist/release/HoNRebornRU.Updater.exe",
+            "dist/release/resources0.jz",
+            "dist/release/update-manifest.json",
+            "dist/release/HoN-Reborn-RU-v$Version-portable.zip",
+            "dist/release/SHA256SUMS.txt",
+            "--title", "HoN Reborn RU v$Version",
+            "--notes-file", $Notes,
+            "--verify-tag"
+          )
+          if ("${{ steps.version.outputs.channel }}" -eq "beta") { $Arguments += "--prerelease" }
+          & gh @Arguments
