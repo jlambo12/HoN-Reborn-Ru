@@ -190,6 +190,6 @@ internal sealed partial class InstallService
     [GeneratedRegex("(?m)^SetSave\\s+\"host_locale\"\\s+\"([^\"]*)\".*$")]
     private static partial Regex HostLocaleRegex();
 
-    [GeneratedRegex("(?m)^SetSave\\s+\"host_locale\"\\s+\"[^\"]*\".*(?:\\r?\\n)?")]
+    [GeneratedRegex("(?m)^SetSave\\s+\"host_locale\"\\s+\"[^\"]*\"[^\\r\\n]*")]
     private static partial Regex HostLocaleLineRegex();
 }

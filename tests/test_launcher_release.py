@@ -56,6 +56,11 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn("FindReleaseAsync", source)
         self.assertIn("InstallAsync", source)
 
+    def test_locale_replacement_does_not_consume_the_next_line(self):
+        source = (LAUNCHER / "InstallService.cs").read_text(encoding="utf-8")
+        self.assertIn('[^\\\\r\\\\n]*', source)
+        self.assertNotIn('.*(?:\\\\r?\\\\n)?', source)
+
     def test_theme_asset_is_embedded(self):
         asset = LAUNCHER / "Assets" / "launcher-background.png"
         self.assertTrue(asset.is_file())
