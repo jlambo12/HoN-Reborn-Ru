@@ -68,6 +68,20 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn('GetProcessesByName("juvio")', install_source)
         self.assertNotIn('-host_locale ru', launch_source)
 
+    def test_locale_repair_preserves_encoding_and_splits_joined_commands(self):
+        source = (LAUNCHER / "InstallService.cs").read_text(encoding="utf-8")
+        self.assertIn("ReadTextPreservingEncoding", source)
+        self.assertIn("ConcatenatedLocaleCommandRegex", source)
+        self.assertIn("File.WriteAllText(temporary, text, encoding)", source)
+
+    def test_application_and_setup_icons_are_configured(self):
+        icon = LAUNCHER / "Assets" / "app-icon.ico"
+        self.assertTrue(icon.is_file())
+        self.assertGreater(icon.stat().st_size, 10_000)
+        self.assertEqual("Assets\\app-icon.ico", properties(LAUNCHER / "HoNRebornRu.Launcher.csproj")["ApplicationIcon"])
+        setup = (ROOT / "installer" / "HoNRebornRU.iss").read_text(encoding="utf-8")
+        self.assertIn("SetupIconFile=", setup)
+
     def test_theme_asset_is_embedded(self):
         asset = LAUNCHER / "Assets" / "launcher-background.png"
         self.assertTrue(asset.is_file())
@@ -76,12 +90,12 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn("EmbeddedResource", project)
 
     def test_beta_release_translation_manifest_matches_asset(self):
-        directory = ROOT / "release-assets" / "0.1.0-beta.3"
+        directory = ROOT / "release-assets" / "0.1.0-beta.4"
         manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
         archive = directory / manifest["file"]
         self.assertTrue(archive.is_file())
         self.assertEqual(archive.stat().st_size, manifest["size_bytes"])
-        self.assertEqual("0.1.0-beta.3", manifest["version"])
+        self.assertEqual("0.1.0-beta.4", manifest["version"])
 
     def test_setup_contains_both_autonomous_binaries(self):
         script = (ROOT / "installer" / "HoNRebornRU.iss").read_text(encoding="utf-8")

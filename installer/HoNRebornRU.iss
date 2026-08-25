@@ -21,6 +21,7 @@ DefaultGroupName=HoN Reborn RU
 DisableProgramGroupPage=yes
 OutputDir={#OutputRoot}
 OutputBaseFilename=HoNRebornRU-Setup
+SetupIconFile=..\launcher\HoNRebornRu.Launcher\Assets\app-icon.ico
 Compression=lzma2/ultra64
 SolidCompression=yes
 WizardStyle=modern

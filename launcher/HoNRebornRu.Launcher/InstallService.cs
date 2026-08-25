@@ -140,7 +140,7 @@ internal sealed partial class InstallService
         foreach (var path in LocalePaths())
         {
             var existed = File.Exists(path);
-            var text = existed ? File.ReadAllText(path) : "";
+            var (text, _) = ReadTextPreservingEncoding(path);
             var match = HostLocaleRegex().Match(text);
             result[path] = new LocaleState { FileExisted = existed, PreviousValue = match.Success ? match.Groups[1].Value : null };
         }
@@ -166,7 +166,10 @@ internal sealed partial class InstallService
     private static void SetLocale(string path, string? locale, bool removeWhenNull)
     {
         Directory.CreateDirectory(Path.GetDirectoryName(path)!);
-        var text = File.Exists(path) ? File.ReadAllText(path) : "";
+        var (text, encoding) = ReadTextPreservingEncoding(path);
+        // Older launcher builds could join the locale command to the next SetSave
+        // command. Repair that form before replacing the locale line.
+        text = ConcatenatedLocaleCommandRegex().Replace(text, "$1" + Environment.NewLine);
         var regex = HostLocaleLineRegex();
         if (locale is not null)
         {
@@ -178,8 +181,27 @@ internal sealed partial class InstallService
             text = regex.Replace(text, "", 1);
         }
         var temporary = path + ".honru.tmp";
-        File.WriteAllText(temporary, text, new UTF8Encoding(false));
+        File.WriteAllText(temporary, text, encoding);
         File.Move(temporary, path, true);
+    }
+
+    private static (string Text, Encoding Encoding) ReadTextPreservingEncoding(string path)
+    {
+        if (!File.Exists(path)) return ("", new UTF8Encoding(false));
+
+        using var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+        Span<byte> prefix = stackalloc byte[3];
+        var count = stream.Read(prefix);
+        Encoding encoding = count >= 2 && prefix[0] == 0xFF && prefix[1] == 0xFE
+            ? Encoding.Unicode
+            : count >= 2 && prefix[0] == 0xFE && prefix[1] == 0xFF
+                ? Encoding.BigEndianUnicode
+                : count >= 3 && prefix[0] == 0xEF && prefix[1] == 0xBB && prefix[2] == 0xBF
+                    ? new UTF8Encoding(true)
+                    : new UTF8Encoding(false);
+        stream.Position = 0;
+        using var reader = new StreamReader(stream, encoding, detectEncodingFromByteOrderMarks: true);
+        return (reader.ReadToEnd(), encoding);
     }
 
     private static IEnumerable<string> LocalePaths()
@@ -215,4 +237,7 @@ internal sealed partial class InstallService
 
     [GeneratedRegex("(?m)^SetSave\\s+\"host_locale\"\\s+\"[^\"]*\"[^\\r\\n]*")]
     private static partial Regex HostLocaleLineRegex();
+
+    [GeneratedRegex("(?m)^(SetSave\\s+\"host_locale\"\\s+\"[^\"\\r\\n]*\")(?=SetSave\\s+)")]
+    private static partial Regex ConcatenatedLocaleCommandRegex();
 }

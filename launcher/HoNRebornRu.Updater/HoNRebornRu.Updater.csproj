@@ -13,5 +13,6 @@
     <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
     <DebugType>embedded</DebugType>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>..\HoNRebornRu.Launcher\Assets\app-icon.ico</ApplicationIcon>
   </PropertyGroup>
 </Project>
