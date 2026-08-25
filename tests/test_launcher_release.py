@@ -89,7 +89,26 @@ class AutonomousLauncherTests(unittest.TestCase):
         models_source = (LAUNCHER / "Models.cs").read_text(encoding="utf-8")
         self.assertNotIn("GameLaunchMode.GearUp", game_source + ui_source)
         self.assertNotIn("GearUpShortcutPath", game_source + ui_source + models_source)
-        self.assertIn("сначала нажмите «Бустить»", ui_source)
+        self.assertIn("сначала нажмите «Бустить»".casefold(), ui_source.casefold())
+
+    def test_launcher_uses_the_custom_game_ui_without_standard_input_controls(self):
+        ui_source = (LAUNCHER / "MainForm.cs").read_text(encoding="utf-8")
+        theme_source = (LAUNCHER / "ThemeControls.cs").read_text(encoding="utf-8")
+        self.assertIn('UiButton("ИГРАТЬ", LauncherButtonKind.Primary)', ui_source)
+        self.assertIn("FormBorderStyle.None", ui_source)
+        self.assertIn("AutoScaleMode.Dpi", ui_source)
+        self.assertIn("LauncherRadioCard", ui_source + theme_source)
+        self.assertIn("LauncherProgressBar", ui_source + theme_source)
+        self.assertNotIn("new ComboBox", ui_source)
+        self.assertNotIn("new ProgressBar", ui_source)
+
+    def test_redesign_keeps_shortcut_and_support_tools_in_the_main_window(self):
+        ui_source = (LAUNCHER / "MainForm.cs").read_text(encoding="utf-8")
+        self.assertIn("ВЫБРАТЬ ЯРЛЫК", ui_source)
+        self.assertIn("_toolTip.SetToolTip", ui_source)
+        self.assertIn("ВОССТАНОВЛЕНИЕ", ui_source)
+        self.assertIn("ЖУРНАЛ", ui_source)
+        self.assertIn("РЕЛИЗЫ", ui_source)
 
     def test_locale_repair_preserves_encoding_and_splits_joined_commands(self):
         source = (LAUNCHER / "InstallService.cs").read_text(encoding="utf-8")
@@ -113,12 +132,12 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn("EmbeddedResource", project)
 
     def test_beta_release_translation_manifest_matches_asset(self):
-        directory = ROOT / "release-assets" / "0.1.0-beta.6"
+        directory = ROOT / "release-assets" / "0.1.0-beta.7"
         manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
         archive = directory / manifest["file"]
         self.assertTrue(archive.is_file())
         self.assertEqual(archive.stat().st_size, manifest["size_bytes"])
-        self.assertEqual("0.1.0-beta.6", manifest["version"])
+        self.assertEqual("0.1.0-beta.7", manifest["version"])
 
     def test_setup_contains_both_autonomous_binaries(self):
         script = (ROOT / "installer" / "HoNRebornRU.iss").read_text(encoding="utf-8")
