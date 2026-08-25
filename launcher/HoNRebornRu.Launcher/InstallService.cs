@@ -48,6 +48,7 @@ internal sealed partial class InstallService
         string? previousBackup = null;
         string? previousHash = null;
         Dictionary<string, LocaleState> previousLocales;
+        bool? localeSettingsModified;
         if (oldState is not null)
         {
             if (!File.Exists(InstalledArchive)) throw new InvalidOperationException("Установленный перевод был удалён вне лаунчера. Сначала выполните восстановление вручную.");
@@ -57,10 +58,12 @@ internal sealed partial class InstallService
             previousBackup = oldState.PreviousExtensionBackup;
             previousHash = oldState.PreviousExtensionSha256;
             previousLocales = oldState.PreviousLocales;
+            localeSettingsModified = oldState.LocaleSettingsModified;
         }
         else
         {
             previousLocales = CaptureLocales();
+            localeSettingsModified = false;
             if (File.Exists(InstalledArchive))
             {
                 previousHash = await Sha256Async(InstalledArchive, cancellationToken);
@@ -72,7 +75,6 @@ internal sealed partial class InstallService
             }
         }
 
-        SetRuntimeLocales(previousLocales);
         var temporary = Path.Combine(ExtensionDirectory, $".resources0-{Guid.NewGuid():N}.tmp");
         try
         {
@@ -98,7 +100,8 @@ internal sealed partial class InstallService
             PreviousExtensionBackup = previousBackup,
             PreviousExtensionSha256 = previousHash,
             BaseGameSha256 = baseHash,
-            PreviousLocales = previousLocales
+            PreviousLocales = previousLocales,
+            LocaleSettingsModified = localeSettingsModified
         });
         AppStorage.Log($"Installed translation {manifest.Version} ({installedHash}).");
     }
@@ -129,7 +132,9 @@ internal sealed partial class InstallService
         {
             File.Delete(InstalledArchive);
         }
-        RestoreLocales(state.PreviousLocales);
+        // Releases before beta.5 changed host_locale in startup.cfg. Restore that
+        // legacy change on uninstall, but never touch configs for new installs.
+        if (state.LocaleSettingsModified is not false) RestoreLocales(state.PreviousLocales);
         File.Delete(AppStorage.StatePath);
         AppStorage.Log("Restored previous extension and locale settings.");
     }
@@ -145,17 +150,6 @@ internal sealed partial class InstallService
             result[path] = new LocaleState { FileExisted = existed, PreviousValue = match.Success ? match.Groups[1].Value : null };
         }
         return result;
-    }
-
-    private static void SetRuntimeLocales(Dictionary<string, LocaleState> previousLocales)
-    {
-        var paths = LocalePaths().ToArray();
-        // Loading the core game itself as `ru` makes Juvio resolve core_ru.resources
-        // before the base archive fonts are available. Keep the user's original core
-        // locale and switch to Russian only when the extensions mod is initialized.
-        if (previousLocales.TryGetValue(paths[0], out var coreLocale))
-            SetLocale(paths[0], coreLocale.PreviousValue, removeWhenNull: true);
-        SetLocale(paths[1], "ru", removeWhenNull: false);
     }
 
     private static void RestoreLocales(Dictionary<string, LocaleState> locales)

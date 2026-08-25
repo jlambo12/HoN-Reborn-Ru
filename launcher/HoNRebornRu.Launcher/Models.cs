@@ -117,4 +117,5 @@ internal sealed class InstallationState
     public string? PreviousExtensionSha256 { get; set; }
     public string BaseGameSha256 { get; set; } = "";
     public Dictionary<string, LocaleState> PreviousLocales { get; set; } = new(StringComparer.OrdinalIgnoreCase);
+    public bool? LocaleSettingsModified { get; set; }
 }

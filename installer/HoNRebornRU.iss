@@ -47,7 +47,9 @@ Source: "{#BuildRoot}\HoNRebornRU.Updater.exe"; DestDir: "{app}"; Flags: ignorev
 
 [Icons]
 Name: "{autoprograms}\HoN Reborn RU"; Filename: "{app}\HoNRebornRU.exe"
+Name: "{autoprograms}\HoN Reborn RU — Играть"; Filename: "{app}\HoNRebornRU.exe"; Parameters: "--launch-game"; IconFilename: "{app}\HoNRebornRU.exe"
 Name: "{autodesktop}\HoN Reborn RU"; Filename: "{app}\HoNRebornRU.exe"; Tasks: desktopicon
+Name: "{autodesktop}\HoN Reborn RU — Играть"; Filename: "{app}\HoNRebornRU.exe"; Parameters: "--launch-game"; IconFilename: "{app}\HoNRebornRU.exe"; Tasks: desktopicon
 
 [Tasks]
 Name: "desktopicon"; Description: "Создать ярлык на рабочем столе"; GroupDescription: "Дополнительные ярлыки:"; Flags: checkedonce

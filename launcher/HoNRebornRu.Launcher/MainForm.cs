@@ -197,10 +197,11 @@ internal sealed class MainForm : Form
         try
         {
             SaveUiSettings();
-            _gameLauncher.Launch(_settings.LaunchMode, _settings);
-            SetStatus(_settings.LaunchMode == GameLaunchMode.GearUp
-                ? "GearUP открыт. Запустите HoN Reborn внутри GearUP."
-                : "Игра запущена.", 100);
+            var status = _gameLauncher.Launch(_settings.LaunchMode, _settings);
+            _launchButton.Text = _gameLauncher.GearUpPrepared
+                ? "ПОСЛЕ «БУСТИТЬ» — ЗАПУСТИТЬ ИГРУ"
+                : "ЗАПУСТИТЬ ИГРУ";
+            SetStatus(status, 100);
         }
         catch (Exception exception) { ShowError(exception); }
     }

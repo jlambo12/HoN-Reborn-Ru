@@ -47,7 +47,7 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn("Direct", source)
         self.assertIn("Heroes of Newerth Reborn.lnk", source)
         self.assertIn("GearUP.lnk", source)
-        self.assertIn('GetProcessesByName("juvio")', source)
+        self.assertIn('IsProcessRunning("juvio")', source)
 
     def test_headless_release_install_and_restore_hooks_exist(self):
         source = (LAUNCHER / "Program.cs").read_text(encoding="utf-8")
@@ -55,6 +55,8 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn('"--restore"', source)
         self.assertIn("FindReleaseAsync", source)
         self.assertIn("InstallAsync", source)
+        self.assertIn('"--launch-game"', source)
+        self.assertIn('"--create-play-shortcut"', source)
 
     def test_self_test_does_not_require_an_installed_game(self):
         source = (LAUNCHER / "SelfTest.cs").read_text(encoding="utf-8")
@@ -66,12 +68,23 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn('[^\\\\r\\\\n]*', source)
         self.assertNotIn('.*(?:\\\\r?\\\\n)?', source)
 
-    def test_core_locale_is_preserved_and_game_must_be_stopped(self):
+    def test_configs_are_not_changed_during_install_and_game_must_be_stopped(self):
         install_source = (LAUNCHER / "InstallService.cs").read_text(encoding="utf-8")
         launch_source = (LAUNCHER / "GameLauncher.cs").read_text(encoding="utf-8")
-        self.assertIn("SetRuntimeLocales(previousLocales)", install_source)
+        install_body = install_source.split("public async Task InstallAsync", 1)[1].split("public async Task RestoreAsync", 1)[0]
+        self.assertNotIn("SetLocale(", install_body)
+        self.assertNotIn("SetRuntimeLocales", install_source)
         self.assertIn('GetProcessesByName("juvio")', install_source)
-        self.assertNotIn('-host_locale ru', launch_source)
+        self.assertIn('-host_locale ru', launch_source)
+
+    def test_every_game_mode_uses_the_verified_localized_launch(self):
+        source = (LAUNCHER / "GameLauncher.cs").read_text(encoding="utf-8")
+        self.assertEqual(3, source.count("LaunchLocalizedJuvio();"))
+        self.assertIn('-mod \\"heroes of newerth;extensions\\" -host_locale ru', source)
+        self.assertIn('IsProcessRunning("gearup_booster")', source)
+        self.assertIn("if (!GearUpPrepared)", source)
+        self.assertIn("GearUpPrepared = true", source)
+        self.assertIn("Русский перевод не установлен", source)
 
     def test_locale_repair_preserves_encoding_and_splits_joined_commands(self):
         source = (LAUNCHER / "InstallService.cs").read_text(encoding="utf-8")
@@ -95,18 +108,27 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn("EmbeddedResource", project)
 
     def test_beta_release_translation_manifest_matches_asset(self):
-        directory = ROOT / "release-assets" / "0.1.0-beta.4"
+        directory = ROOT / "release-assets" / "0.1.0-beta.5"
         manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
         archive = directory / manifest["file"]
         self.assertTrue(archive.is_file())
         self.assertEqual(archive.stat().st_size, manifest["size_bytes"])
-        self.assertEqual("0.1.0-beta.4", manifest["version"])
+        self.assertEqual("0.1.0-beta.5", manifest["version"])
 
     def test_setup_contains_both_autonomous_binaries(self):
         script = (ROOT / "installer" / "HoNRebornRU.iss").read_text(encoding="utf-8")
         self.assertIn("HoNRebornRU.exe", script)
         self.assertIn("HoNRebornRU.Updater.exe", script)
         self.assertIn("{autopf}\\HoN Reborn RU", script)
+        self.assertIn("HoN Reborn RU — Играть", script)
+        self.assertIn('Parameters: "--launch-game"', script)
+
+    def test_localized_play_shortcut_uses_embedded_windows_shell_api(self):
+        source = (LAUNCHER / "ShortcutService.cs").read_text(encoding="utf-8")
+        self.assertIn("IShellLinkW", source)
+        self.assertIn('SetArguments(arguments)', source)
+        self.assertIn('SetIconLocation(targetPath, 0)', source)
+        self.assertNotIn("powershell", source.casefold())
 
 
 if __name__ == "__main__":

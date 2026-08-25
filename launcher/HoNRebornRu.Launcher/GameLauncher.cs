@@ -6,6 +6,7 @@ internal sealed class GameLauncher
 {
     private readonly string _juvioRoot = Path.Combine(
         Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Juvio");
+    public bool GearUpPrepared { get; private set; }
 
     public string? FindOfficialShortcut()
     {
@@ -30,32 +31,72 @@ internal sealed class GameLauncher
         return candidates.FirstOrDefault(File.Exists);
     }
 
-    public void Launch(GameLaunchMode mode, LauncherSettings settings)
+    public string Launch(GameLaunchMode mode, LauncherSettings settings)
     {
-        if (mode != GameLaunchMode.GearUp && Process.GetProcessesByName("juvio").Length > 0)
+        if (IsProcessRunning("juvio"))
             throw new InvalidOperationException("Heroes of Newerth Reborn уже запущена.");
 
+        string status;
         switch (mode)
         {
             case GameLaunchMode.OfficialShortcut:
-                ShellOpen(ResolveShortcut(settings.OfficialShortcutPath, FindOfficialShortcut(), "Официальный ярлык Heroes of Newerth Reborn не найден."));
+                GearUpPrepared = false;
+                _ = ResolveShortcut(settings.OfficialShortcutPath, FindOfficialShortcut(), "Официальный ярлык Heroes of Newerth Reborn не найден.");
+                LaunchLocalizedJuvio();
+                status = "Игра запущена через официальный Juvio с русским переводом.";
                 break;
             case GameLaunchMode.GearUp:
-                ShellOpen(ResolveShortcut(settings.GearUpShortcutPath, FindGearUpShortcut(), "Ярлык GearUP не найден."));
+                if (!GearUpPrepared)
+                {
+                    var gearUpShortcut = FindGearUpShortcut() ?? ResolveShortcut(
+                        settings.GearUpShortcutPath, null, "Ярлык GearUP не найден.");
+                    ShellOpen(gearUpShortcut);
+                    GearUpPrepared = true;
+                    status = "В GearUP нажмите «Бустить», затем вернитесь и нажмите кнопку запуска ещё раз.";
+                    break;
+                }
+                if (!IsProcessRunning("gearup_booster"))
+                    throw new InvalidOperationException("GearUP не запущен. Откройте его и включите ускорение.");
+                LaunchLocalizedJuvio();
+                GearUpPrepared = false;
+                status = "Игра запущена с русским переводом; GearUP уже работает.";
                 break;
             case GameLaunchMode.Direct:
-                var executable = Path.Combine(_juvioRoot, "bin", "juvio.exe");
-                if (!File.Exists(executable)) throw new FileNotFoundException("Juvio не найден.", executable);
-                Process.Start(new ProcessStartInfo
-                {
-                    FileName = executable,
-                    Arguments = "-mod \"heroes of newerth;extensions\"",
-                    WorkingDirectory = _juvioRoot,
-                    UseShellExecute = true
-                });
+                GearUpPrepared = false;
+                LaunchLocalizedJuvio();
+                status = "Игра запущена напрямую с русским переводом.";
                 break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(mode));
         }
         AppStorage.Log($"Started launch mode {mode}.");
+        return status;
+    }
+
+    private void LaunchLocalizedJuvio()
+    {
+        var translation = Path.Combine(_juvioRoot, "extensions", "resources0.jz");
+        if (!File.Exists(translation))
+            throw new FileNotFoundException("Русский перевод не установлен. Сначала установите его в Launcher.", translation);
+        var executable = Path.Combine(_juvioRoot, "bin", "juvio.exe");
+        if (!File.Exists(executable)) throw new FileNotFoundException("Juvio не найден.", executable);
+        Process.Start(new ProcessStartInfo
+        {
+            FileName = executable,
+            Arguments = "-mod \"heroes of newerth;extensions\" -host_locale ru",
+            WorkingDirectory = _juvioRoot,
+            UseShellExecute = true
+        });
+    }
+
+    private static bool IsProcessRunning(string processName)
+    {
+        var processes = Process.GetProcessesByName(processName);
+        try { return processes.Length > 0; }
+        finally
+        {
+            foreach (var process in processes) process.Dispose();
+        }
     }
 
     private static string ResolveShortcut(string? configured, string? detected, string error)
