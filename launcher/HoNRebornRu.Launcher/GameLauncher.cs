@@ -6,8 +6,6 @@ internal sealed class GameLauncher
 {
     private readonly string _juvioRoot = Path.Combine(
         Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Juvio");
-    public bool GearUpPrepared { get; private set; }
-
     public string? FindOfficialShortcut()
     {
         var candidates = new[]
@@ -16,17 +14,6 @@ internal sealed class GameLauncher
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Programs), "Juvio", "Heroes of Newerth.lnk"),
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonDesktopDirectory), "Heroes of Newerth Reborn.lnk"),
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonPrograms), "Juvio", "Heroes of Newerth.lnk")
-        };
-        return candidates.FirstOrDefault(File.Exists);
-    }
-
-    public string? FindGearUpShortcut()
-    {
-        var candidates = new[]
-        {
-            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory), "GearUP.lnk"),
-            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonDesktopDirectory), "GearUP.lnk"),
-            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonPrograms), "GearUP.lnk")
         };
         return candidates.FirstOrDefault(File.Exists);
     }
@@ -40,29 +27,11 @@ internal sealed class GameLauncher
         switch (mode)
         {
             case GameLaunchMode.OfficialShortcut:
-                GearUpPrepared = false;
                 _ = ResolveShortcut(settings.OfficialShortcutPath, FindOfficialShortcut(), "Официальный ярлык Heroes of Newerth Reborn не найден.");
                 LaunchLocalizedJuvio();
                 status = "Игра запущена через официальный Juvio с русским переводом.";
                 break;
-            case GameLaunchMode.GearUp:
-                if (!GearUpPrepared)
-                {
-                    var gearUpShortcut = FindGearUpShortcut() ?? ResolveShortcut(
-                        settings.GearUpShortcutPath, null, "Ярлык GearUP не найден.");
-                    ShellOpen(gearUpShortcut);
-                    GearUpPrepared = true;
-                    status = "В GearUP нажмите «Бустить», затем вернитесь и нажмите кнопку запуска ещё раз.";
-                    break;
-                }
-                if (!IsProcessRunning("gearup_booster"))
-                    throw new InvalidOperationException("GearUP не запущен. Откройте его и включите ускорение.");
-                LaunchLocalizedJuvio();
-                GearUpPrepared = false;
-                status = "Игра запущена с русским переводом; GearUP уже работает.";
-                break;
             case GameLaunchMode.Direct:
-                GearUpPrepared = false;
                 LaunchLocalizedJuvio();
                 status = "Игра запущена напрямую с русским переводом.";
                 break;

@@ -74,18 +74,24 @@ internal sealed class MainForm : Form
 
         body.Controls.Add(Caption("ЗАПУСК ИГРЫ", 480, 20));
         body.Controls.Add(SmallLabel("Способ запуска", 482, 62));
-        _launchMode.Items.AddRange(["Официальный ярлык", "GearUP", "Прямой запуск Juvio"]);
-        _launchMode.SelectedIndex = (int)_settings.LaunchMode;
+        _launchMode.Items.AddRange(["Официальный ярлык", "Прямой запуск Juvio"]);
+        _launchMode.SelectedIndex = _settings.LaunchMode == GameLaunchMode.Direct ? 1 : 0;
         _launchMode.Location = new Point(482, 88); _launchMode.Size = new Size(322, 28);
         _launchMode.SelectedIndexChanged += (_, _) => SaveUiSettings();
         body.Controls.Add(_launchMode);
-        _launchButton = ThemeButton("ЗАПУСТИТЬ ИГРУ", 482, 132, 322, Color.FromArgb(111, 75, 32));
+        body.Controls.Add(new Label
+        {
+            Text = "GearUP: сначала нажмите «Бустить», затем запускайте игру здесь.",
+            Location = new Point(482, 119), Size = new Size(322, 32),
+            ForeColor = Color.FromArgb(207, 170, 91), Font = new Font("Segoe UI", 8.5f)
+        });
+        _launchButton = ThemeButton("ЗАПУСТИТЬ ИГРУ", 482, 148, 322, Color.FromArgb(111, 75, 32));
         _launchButton.Click += (_, _) => LaunchSelected();
         body.Controls.Add(_launchButton);
-        var shortcutButton = ThemeButton("ВЫБРАТЬ ЯРЛЫК…", 482, 184, 156, Color.FromArgb(50, 61, 66));
+        var shortcutButton = ThemeButton("ВЫБРАТЬ ЯРЛЫК…", 482, 196, 156, Color.FromArgb(50, 61, 66));
         shortcutButton.Click += (_, _) => SelectShortcut();
         body.Controls.Add(shortcutButton);
-        var releasesButton = ThemeButton("СТРАНИЦА РЕЛИЗОВ", 648, 184, 156, Color.FromArgb(50, 61, 66));
+        var releasesButton = ThemeButton("СТРАНИЦА РЕЛИЗОВ", 648, 196, 156, Color.FromArgb(50, 61, 66));
         releasesButton.Click += (_, _) => GameLauncher.ShellOpen(_remote?.Release.HtmlUrl ?? "https://github.com/jlambo12/HoN-Reborn-Ru/releases");
         body.Controls.Add(releasesButton);
 
@@ -198,9 +204,6 @@ internal sealed class MainForm : Form
         {
             SaveUiSettings();
             var status = _gameLauncher.Launch(_settings.LaunchMode, _settings);
-            _launchButton.Text = _gameLauncher.GearUpPrepared
-                ? "ПОСЛЕ «БУСТИТЬ» — ЗАПУСТИТЬ ИГРУ"
-                : "ЗАПУСТИТЬ ИГРУ";
             SetStatus(status, 100);
         }
         catch (Exception exception) { ShowError(exception); }
@@ -210,8 +213,7 @@ internal sealed class MainForm : Form
     {
         using var dialog = new OpenFileDialog { Filter = "Ярлыки Windows (*.lnk)|*.lnk|Программы (*.exe)|*.exe", CheckFileExists = true };
         if (dialog.ShowDialog(this) != DialogResult.OK) return;
-        if (_settings.LaunchMode == GameLaunchMode.GearUp) _settings.GearUpShortcutPath = dialog.FileName;
-        else _settings.OfficialShortcutPath = dialog.FileName;
+        _settings.OfficialShortcutPath = dialog.FileName;
         AppStorage.Save(AppStorage.SettingsPath, _settings);
         SetStatus("Путь запуска сохранён.", 100);
     }

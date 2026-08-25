@@ -40,13 +40,13 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn("HttpClient", source)
         self.assertIn("SHA256", source)
 
-    def test_official_shortcut_gearup_and_direct_modes_exist(self):
+    def test_only_localized_official_and_direct_modes_exist(self):
         source = (LAUNCHER / "GameLauncher.cs").read_text(encoding="utf-8")
         self.assertIn("OfficialShortcut", source)
-        self.assertIn("GearUp", source)
         self.assertIn("Direct", source)
         self.assertIn("Heroes of Newerth Reborn.lnk", source)
-        self.assertIn("GearUP.lnk", source)
+        self.assertNotIn("GearUpPrepared", source)
+        self.assertNotIn("GearUP.lnk", source)
         self.assertIn('IsProcessRunning("juvio")', source)
 
     def test_headless_release_install_and_restore_hooks_exist(self):
@@ -79,12 +79,17 @@ class AutonomousLauncherTests(unittest.TestCase):
 
     def test_every_game_mode_uses_the_verified_localized_launch(self):
         source = (LAUNCHER / "GameLauncher.cs").read_text(encoding="utf-8")
-        self.assertEqual(3, source.count("LaunchLocalizedJuvio();"))
+        self.assertEqual(2, source.count("LaunchLocalizedJuvio();"))
         self.assertIn('-mod \\"heroes of newerth;extensions\\" -host_locale ru', source)
-        self.assertIn('IsProcessRunning("gearup_booster")', source)
-        self.assertIn("if (!GearUpPrepared)", source)
-        self.assertIn("GearUpPrepared = true", source)
         self.assertIn("Русский перевод не установлен", source)
+
+    def test_gearup_is_instruction_only_and_never_launched_by_launcher(self):
+        game_source = (LAUNCHER / "GameLauncher.cs").read_text(encoding="utf-8")
+        ui_source = (LAUNCHER / "MainForm.cs").read_text(encoding="utf-8")
+        models_source = (LAUNCHER / "Models.cs").read_text(encoding="utf-8")
+        self.assertNotIn("GameLaunchMode.GearUp", game_source + ui_source)
+        self.assertNotIn("GearUpShortcutPath", game_source + ui_source + models_source)
+        self.assertIn("сначала нажмите «Бустить»", ui_source)
 
     def test_locale_repair_preserves_encoding_and_splits_joined_commands(self):
         source = (LAUNCHER / "InstallService.cs").read_text(encoding="utf-8")
@@ -108,12 +113,12 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn("EmbeddedResource", project)
 
     def test_beta_release_translation_manifest_matches_asset(self):
-        directory = ROOT / "release-assets" / "0.1.0-beta.5"
+        directory = ROOT / "release-assets" / "0.1.0-beta.6"
         manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
         archive = directory / manifest["file"]
         self.assertTrue(archive.is_file())
         self.assertEqual(archive.stat().st_size, manifest["size_bytes"])
-        self.assertEqual("0.1.0-beta.5", manifest["version"])
+        self.assertEqual("0.1.0-beta.6", manifest["version"])
 
     def test_setup_contains_both_autonomous_binaries(self):
         script = (ROOT / "installer" / "HoNRebornRU.iss").read_text(encoding="utf-8")

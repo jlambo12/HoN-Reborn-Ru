@@ -87,7 +87,6 @@ internal enum ReleaseChannel
 internal enum GameLaunchMode
 {
     OfficialShortcut,
-    GearUp,
     Direct
 }
 
@@ -96,7 +95,6 @@ internal sealed class LauncherSettings
     public ReleaseChannel Channel { get; set; } = ReleaseChannel.Beta;
     public GameLaunchMode LaunchMode { get; set; } = GameLaunchMode.OfficialShortcut;
     public string? OfficialShortcutPath { get; set; }
-    public string? GearUpShortcutPath { get; set; }
     public bool CheckUpdatesAtStartup { get; set; } = true;
 }
 
