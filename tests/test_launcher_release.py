@@ -56,6 +56,11 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn("FindReleaseAsync", source)
         self.assertIn("InstallAsync", source)
 
+    def test_self_test_does_not_require_an_installed_game(self):
+        source = (LAUNCHER / "SelfTest.cs").read_text(encoding="utf-8")
+        self.assertNotIn("LocalApplicationData", source)
+        self.assertNotIn("game discovery", source)
+
     def test_locale_replacement_does_not_consume_the_next_line(self):
         source = (LAUNCHER / "InstallService.cs").read_text(encoding="utf-8")
         self.assertIn('[^\\\\r\\\\n]*', source)
