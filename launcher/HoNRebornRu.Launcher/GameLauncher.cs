@@ -49,7 +49,7 @@ internal sealed class GameLauncher
                 Process.Start(new ProcessStartInfo
                 {
                     FileName = executable,
-                    Arguments = "-mod \"heroes of newerth;extensions\" -host_locale ru",
+                    Arguments = "-mod \"heroes of newerth;extensions\"",
                     WorkingDirectory = _juvioRoot,
                     UseShellExecute = true
                 });

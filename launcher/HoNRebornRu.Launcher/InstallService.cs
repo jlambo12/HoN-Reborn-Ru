@@ -1,6 +1,7 @@
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Diagnostics;
 
 namespace HoNRebornRu.Launcher;
 
@@ -29,6 +30,7 @@ internal sealed partial class InstallService
 
     public async Task InstallAsync(string downloadedArchive, UpdateManifest manifest, CancellationToken cancellationToken)
     {
+        EnsureGameStopped();
         if (!File.Exists(BaseArchive)) throw new FileNotFoundException("HoN Reborn / Juvio не найден.", BaseArchive);
         var baseHash = await Sha256Async(BaseArchive, cancellationToken);
         if (manifest.CompatibleGameHashes.Count == 0 || !manifest.CompatibleGameHashes.Contains(baseHash, StringComparer.OrdinalIgnoreCase))
@@ -70,7 +72,7 @@ internal sealed partial class InstallService
             }
         }
 
-        SetRussianLocale();
+        SetRuntimeLocales(previousLocales);
         var temporary = Path.Combine(ExtensionDirectory, $".resources0-{Guid.NewGuid():N}.tmp");
         try
         {
@@ -103,6 +105,7 @@ internal sealed partial class InstallService
 
     public async Task RestoreAsync(CancellationToken cancellationToken)
     {
+        EnsureGameStopped();
         var state = ReadState() ?? throw new InvalidOperationException("Состояние установки не найдено.");
         if (!File.Exists(InstalledArchive)) throw new FileNotFoundException("Установленный перевод не найден.", InstalledArchive);
         var currentHash = await Sha256Async(InstalledArchive, cancellationToken);
@@ -144,9 +147,15 @@ internal sealed partial class InstallService
         return result;
     }
 
-    private void SetRussianLocale()
+    private static void SetRuntimeLocales(Dictionary<string, LocaleState> previousLocales)
     {
-        foreach (var path in LocalePaths()) SetLocale(path, "ru", removeWhenNull: false);
+        var paths = LocalePaths().ToArray();
+        // Loading the core game itself as `ru` makes Juvio resolve core_ru.resources
+        // before the base archive fonts are available. Keep the user's original core
+        // locale and switch to Russian only when the extensions mod is initialized.
+        if (previousLocales.TryGetValue(paths[0], out var coreLocale))
+            SetLocale(paths[0], coreLocale.PreviousValue, removeWhenNull: true);
+        SetLocale(paths[1], "ru", removeWhenNull: false);
     }
 
     private static void RestoreLocales(Dictionary<string, LocaleState> locales)
@@ -185,6 +194,20 @@ internal sealed partial class InstallService
         await using var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read, 1024 * 1024, true);
         var hash = await SHA256.HashDataAsync(stream, cancellationToken);
         return Convert.ToHexString(hash).ToLowerInvariant();
+    }
+
+    private static void EnsureGameStopped()
+    {
+        var processes = Process.GetProcessesByName("juvio");
+        try
+        {
+            if (processes.Length > 0)
+                throw new InvalidOperationException("Закройте Heroes of Newerth Reborn перед установкой или восстановлением перевода.");
+        }
+        finally
+        {
+            foreach (var process in processes) process.Dispose();
+        }
     }
 
     [GeneratedRegex("(?m)^SetSave\\s+\"host_locale\"\\s+\"([^\"]*)\".*$")]

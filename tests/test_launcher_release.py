@@ -61,6 +61,13 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn('[^\\\\r\\\\n]*', source)
         self.assertNotIn('.*(?:\\\\r?\\\\n)?', source)
 
+    def test_core_locale_is_preserved_and_game_must_be_stopped(self):
+        install_source = (LAUNCHER / "InstallService.cs").read_text(encoding="utf-8")
+        launch_source = (LAUNCHER / "GameLauncher.cs").read_text(encoding="utf-8")
+        self.assertIn("SetRuntimeLocales(previousLocales)", install_source)
+        self.assertIn('GetProcessesByName("juvio")', install_source)
+        self.assertNotIn('-host_locale ru', launch_source)
+
     def test_theme_asset_is_embedded(self):
         asset = LAUNCHER / "Assets" / "launcher-background.png"
         self.assertTrue(asset.is_file())
@@ -69,12 +76,12 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn("EmbeddedResource", project)
 
     def test_beta_release_translation_manifest_matches_asset(self):
-        directory = ROOT / "release-assets" / "0.1.0-beta.1"
+        directory = ROOT / "release-assets" / "0.1.0-beta.3"
         manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
         archive = directory / manifest["file"]
         self.assertTrue(archive.is_file())
         self.assertEqual(archive.stat().st_size, manifest["size_bytes"])
-        self.assertEqual("0.1.0-beta.1", manifest["version"])
+        self.assertEqual("0.1.0-beta.3", manifest["version"])
 
     def test_setup_contains_both_autonomous_binaries(self):
         script = (ROOT / "installer" / "HoNRebornRU.iss").read_text(encoding="utf-8")
