@@ -19,13 +19,13 @@ npm run build
 
 ## Ссылка на релиз
 
-Создайте `.env` на основе `.env.example` и укажите прямую ссылку на релизный ZIP:
+По умолчанию кнопка ведёт прямо на актуальный автономный установщик в GitHub Release. При необходимости ссылку можно переопределить через `.env`:
 
 ```dotenv
-PUBLIC_DOWNLOAD_URL=https://github.com/jlambo12/HoN-Reborn-Ru/releases/download/v0.1.0/HoN-Reborn-RU-v0.1.0.zip
+PUBLIC_DOWNLOAD_URL=https://github.com/jlambo12/HoN-Reborn-Ru/releases/download/v0.1.0-beta.6/HoNRebornRU-Setup.exe
 ```
 
-Если значение пустое, кнопка показывает, что первая сборка ещё готовится.
+При нажатии GitHub сразу отдаёт файл `HoNRebornRU-Setup.exe`, без промежуточного перехода на страницу релиза.
 
 ## Слои главного экрана
 

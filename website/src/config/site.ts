@@ -1,4 +1,6 @@
 const configuredDownloadUrl = import.meta.env.PUBLIC_DOWNLOAD_URL?.trim();
+const latestSetupUrl =
+  'https://github.com/jlambo12/HoN-Reborn-Ru/releases/download/v0.1.0-beta.6/HoNRebornRU-Setup.exe';
 
 export const site = {
   name: 'HoN Reborn RU',
@@ -6,5 +8,5 @@ export const site = {
   description:
     'Русская локализация HoN Reborn. Скачайте русификатор и запускайте игру на русском языке.',
   canonicalUrl: 'https://honreborn.ru',
-  downloadUrl: configuredDownloadUrl || null,
+  downloadUrl: configuredDownloadUrl || latestSetupUrl,
 } as const;

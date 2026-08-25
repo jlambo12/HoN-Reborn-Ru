@@ -8,7 +8,13 @@ const { url } = Astro.props;
 
 <div class="download">
   {url ? (
-    <a class="download-button" href={url} rel="noopener" data-download>
+    <a
+      class="download-button"
+      href={url}
+      download="HoNRebornRU-Setup.exe"
+      rel="noopener"
+      data-download
+    >
       <span class="download-button__energy" aria-hidden="true"></span>
       <span class="download-button__label">Скачать русификатор</span>
     </a>
@@ -25,7 +31,7 @@ const { url } = Astro.props;
     </button>
   )}
   <p class="download__status" id="download-status" aria-live="polite">
-    {url ? 'Релизный архив для Windows' : 'Первая сборка готовится'}
+    {url ? 'Автономный установщик для Windows x64' : 'Первая сборка готовится'}
   </p>
 </div>
 
