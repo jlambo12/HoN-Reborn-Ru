@@ -1,6 +1,7 @@
 import json
 import itertools
 import unittest
+import zipfile
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -80,8 +81,16 @@ class AutonomousLauncherTests(unittest.TestCase):
     def test_every_game_mode_uses_the_verified_localized_launch(self):
         source = (LAUNCHER / "GameLauncher.cs").read_text(encoding="utf-8")
         self.assertEqual(2, source.count("LaunchLocalizedJuvio();"))
-        self.assertIn('-mod \\"heroes of newerth;extensions\\" -host_locale ru', source)
+        self.assertNotIn('-mod', source)
+        self.assertIn('"heroes of newerth", "resources_ru0.jz"', source)
+        self.assertIn('Arguments = "-host_locale ru"', source)
         self.assertIn("Русский перевод не установлен", source)
+
+    def test_translation_is_installed_as_a_base_mod_overlay(self):
+        source = (LAUNCHER / "InstallService.cs").read_text(encoding="utf-8")
+        self.assertIn('"resources_ru0.jz"', source)
+        self.assertIn("RestoreLegacyExtensionAsync", source)
+        self.assertIn("SchemaVersion = 2", source)
 
     def test_gearup_is_instruction_only_and_never_launched_by_launcher(self):
         game_source = (LAUNCHER / "GameLauncher.cs").read_text(encoding="utf-8")
@@ -132,12 +141,25 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn("EmbeddedResource", project)
 
     def test_beta_release_translation_manifest_matches_asset(self):
-        directory = ROOT / "release-assets" / "0.1.0-beta.7"
+        directory = ROOT / "release-assets" / "0.1.0-beta.8"
         manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
         archive = directory / manifest["file"]
         self.assertTrue(archive.is_file())
         self.assertEqual(archive.stat().st_size, manifest["size_bytes"])
-        self.assertEqual("0.1.0-beta.7", manifest["version"])
+        self.assertEqual("0.1.0-beta.8", manifest["version"])
+
+    def test_beta8_is_a_thin_current_ui_overlay(self):
+        archive_path = ROOT / "release-assets" / "0.1.0-beta.8" / "resources0.jz"
+        with zipfile.ZipFile(archive_path) as archive:
+            names = set(archive.namelist())
+            interface = archive.read("stringtables/interface_ru.str").decode("utf-8")
+        self.assertNotIn("ui/fe3/sections/plinko_v2.package", names)
+        self.assertFalse(any(name.startswith("ui/fe3/sections/matchmaking") for name in names))
+        self.assertNotIn("ui/fe3/sections/store.package", names)
+        self.assertIn("player_role_soloofflane\tСоло-оффлейн", interface)
+        self.assertIn("boss_info_scaling_header\tУсиление с каждым возрождением", interface)
+        self.assertIn("producst_header_emotes\tЭмоции", interface)
+        self.assertIn("plinko_change_board\tСменить поле", interface)
 
     def test_setup_contains_both_autonomous_binaries(self):
         script = (ROOT / "installer" / "HoNRebornRU.iss").read_text(encoding="utf-8")

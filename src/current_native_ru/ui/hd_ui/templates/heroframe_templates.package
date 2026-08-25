@@ -288,7 +288,7 @@
 						<panel name="heroframe_top_missing_{index}" noclick="1" visible="0">
 							<panel name="heroframe_top_missing_inner_{index}" noclick="1">
 								<!-- Missing Label -->
-								<label noclick="1" content="НЕ ВИДЕН"
+								<label noclick="1" content="ВНЕ ОБЗОРА"
 									font="dyn_9" color="white" shadow="1" y=".3w" textalign="center" textvalign="bottom"
 								/>
 							</panel>

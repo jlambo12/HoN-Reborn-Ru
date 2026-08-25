@@ -44,7 +44,7 @@ internal sealed class GameLauncher
 
     private void LaunchLocalizedJuvio()
     {
-        var translation = Path.Combine(_juvioRoot, "extensions", "resources0.jz");
+        var translation = Path.Combine(_juvioRoot, "heroes of newerth", "resources_ru0.jz");
         if (!File.Exists(translation))
             throw new FileNotFoundException("Русский перевод не установлен. Сначала установите его в Launcher.", translation);
         var executable = Path.Combine(_juvioRoot, "bin", "juvio.exe");
@@ -52,7 +52,10 @@ internal sealed class GameLauncher
         Process.Start(new ProcessStartInfo
         {
             FileName = executable,
-            Arguments = "-mod \"heroes of newerth;extensions\" -host_locale ru",
+            // Keep the normal "Heroes of Newerth" mod active. Juvio then uses
+            // the player's existing Documents\Juvio\Heroes of Newerth profile
+            // instead of creating a separate, default "extensions" profile.
+            Arguments = "-host_locale ru",
             WorkingDirectory = _juvioRoot,
             UseShellExecute = true
         });

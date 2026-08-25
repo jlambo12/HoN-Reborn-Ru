@@ -106,7 +106,7 @@ internal sealed class LocaleState
 
 internal sealed class InstallationState
 {
-    public int SchemaVersion { get; set; } = 1;
+    public int SchemaVersion { get; set; } = 2;
     public string Product { get; set; } = "HoN-Reborn-RU";
     public string Version { get; set; } = "";
     public DateTimeOffset InstalledAt { get; set; }

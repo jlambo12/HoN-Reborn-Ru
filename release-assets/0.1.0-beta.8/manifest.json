@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "version": "0.1.0-beta.8",
+  "file": "resources0.jz",
+  "sha256": "547f9088e46fcf24530da535909c9ac8f94172eb71337be1224da1010718ce61",
+  "size_bytes": 2457516,
+  "members": 19,
+  "crc": "PASS",
+  "automated_tests": "PASS",
+  "runtime_verified": false,
+  "runtime_status": "Thin current-version overlay prepared from beta.7 runtime findings; pending player verification on Windows x64."
+}

@@ -22,7 +22,7 @@ npm run build
 По умолчанию кнопка ведёт прямо на актуальный автономный установщик в GitHub Release. При необходимости ссылку можно переопределить через `.env`:
 
 ```dotenv
-PUBLIC_DOWNLOAD_URL=https://github.com/jlambo12/HoN-Reborn-Ru/releases/download/v0.1.0-beta.7/HoNRebornRU-Setup.exe
+PUBLIC_DOWNLOAD_URL=https://github.com/jlambo12/HoN-Reborn-Ru/releases/download/v0.1.0-beta.8/HoNRebornRU-Setup.exe
 ```
 
 При нажатии GitHub сразу отдаёт файл `HoNRebornRU-Setup.exe`, без промежуточного перехода на страницу релиза.

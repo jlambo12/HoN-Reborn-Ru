@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_224_BETA8_RUNTIME_FIXES",
+  "catalog_apply": true,
+  "reviewed_by": "Codex beta.8 runtime screenshot review 2026-08-25",
+  "entries": [
+    {
+      "keys": ["interface:plinko_drop"],
+      "ru": "Бросить!"
+    },
+    {
+      "keys": ["interface:plinko_change_board"],
+      "ru": "Сменить поле"
+    },
+    {
+      "keys": ["interface:plinko_tier_1"],
+      "ru": "Обычный"
+    },
+    {
+      "keys": ["interface:plinko_tier_2"],
+      "ru": "Редкий"
+    },
+    {
+      "keys": ["interface:plinko_tier_3"],
+      "ru": "Эпический"
+    },
+    {
+      "keys": ["interface:plinko_tier_4"],
+      "ru": "Легендарный"
+    },
+    {
+      "keys": ["interface:plinko_claim_prize"],
+      "ru": "Забрать награду"
+    },
+    {
+      "keys": ["interface:plinko_cost"],
+      "ru": "Стоимость:"
+    },
+    {
+      "keys": ["interface:plinko_owned"],
+      "ru": "УЖЕ ЕСТЬ"
+    },
+    {
+      "keys": ["interface:plinko_pricing_title"],
+      "ru": "Стоимость попыток"
+    },
+    {
+      "keys": ["interface:plinko_pricing_desc"],
+      "ru": "Цена растёт с числом попыток за день"
+    },
+    {
+      "keys": ["interface:plinko_tier_1_range"],
+      "ru": "Попытка 1"
+    },
+    {
+      "keys": ["interface:plinko_tier_2_range"],
+      "ru": "Попытки 2–9"
+    },
+    {
+      "keys": ["interface:plinko_tier_3_range"],
+      "ru": "Попытки 10+"
+    },
+    {
+      "keys": ["interface:plinko_daily_drops_today"],
+      "ru": "Попыток сегодня: {count}"
+    }
+  ]
+}

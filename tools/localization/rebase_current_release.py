@@ -93,7 +93,12 @@ def main() -> int:
         for name in old.namelist():
             if name.endswith("/") or name.startswith("preact/"):
                 continue
-            if name == "core_ru.resources" or name.startswith("stringtables/") or name.startswith("ui/"):
+            # UI packages from the historical donor build are intentionally not
+            # carried forward. They replace current Juvio screens wholesale and
+            # caused stale matchmaking, Plinko, shop and role-priority layouts.
+            # Only reviewed overrides rebuilt from the exact CURRENT upstream are
+            # added below.
+            if name == "core_ru.resources" or name.startswith("stringtables/"):
                 members[name] = old.read(name)
 
     # Phase 2A native files were regenerated from the CURRENT upstream archive,
@@ -110,7 +115,7 @@ def main() -> int:
 
     required = {
         "core_ru.resources", "stringtables/entities_ru.str",
-        "stringtables/interface_ru.str", "ui/scripts/fe3/regions.lua",
+        "stringtables/interface_ru.str",
         *PREACT_MEMBERS,
     }
     if missing := sorted(required - members.keys()):

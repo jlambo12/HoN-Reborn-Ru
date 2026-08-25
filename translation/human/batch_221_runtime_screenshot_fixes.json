@@ -72,12 +72,22 @@
     {
       "keys": ["interface:player_role_soloofflane"],
       "english_hash": "5fdfc2c8c0fbc92022cc15cf43bbc29f90e818ac973908910c1fb9fa2f55f07d",
-      "ru": "Оффлейн"
+      "ru": "Соло-оффлейн"
     },
     {
       "keys": ["interface:player_role_jungle"],
       "english_hash": "349b3190be299fcce50a5d411d5d4155e9885d1dc76cda6858ac60bf965d6f30",
       "ru": "Лес"
+    },
+    {
+      "keys": ["interface:producst_header_emotes"],
+      "english_hash": "25521701981e1ad3ad9775facbda144460f98d48918470cf46e33d73b5189f61",
+      "ru": "Эмоции"
+    },
+    {
+      "keys": ["interface:vanity_cat_emotes"],
+      "english_hash": "2e2533f2abb84128525490048b89812b5198fa9ff0ead13ce71664c289e82376",
+      "ru": "ЭМОЦИИ"
     },
     {
       "keys": ["interface:status_effect_stun"],

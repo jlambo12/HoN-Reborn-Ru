@@ -386,7 +386,8 @@ internal sealed class MainForm : Form
         var state = _installer.ReadState();
         var juvioRoot = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Juvio");
         var gameFound = File.Exists(Path.Combine(juvioRoot, "bin", "juvio.exe"));
-        var translationFound = File.Exists(Path.Combine(juvioRoot, "extensions", "resources0.jz"));
+        var stateArchive = state?.SchemaVersion == 1 ? _installer.LegacyInstalledArchive : _installer.InstalledArchive;
+        var translationFound = File.Exists(stateArchive);
         var installed = version is not null && state is not null && translationFound;
 
         _installedValue.Text = version ?? "Не установлен";
