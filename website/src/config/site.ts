@@ -1,6 +1,6 @@
 const configuredDownloadUrl = import.meta.env.PUBLIC_DOWNLOAD_URL?.trim();
 const latestSetupUrl =
-  'https://github.com/jlambo12/HoN-Reborn-Ru/releases/download/v0.1.0-beta.8/HoNRebornRU-Setup.exe';
+  'https://github.com/jlambo12/HoN-Reborn-Ru/releases/download/v0.1.0-beta.12/HoNRebornRU-Setup.exe';
 
 export const site = {
   name: 'HoN Reborn RU',

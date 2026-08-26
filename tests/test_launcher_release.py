@@ -177,6 +177,13 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertEqual(archive.stat().st_size, manifest["size_bytes"])
         self.assertEqual("0.1.0-beta.12", manifest["version"])
 
+    def test_website_download_points_to_current_beta_setup(self):
+        site_config = (ROOT / "website" / "src" / "config" / "site.ts").read_text(encoding="utf-8")
+        self.assertIn(
+            "/releases/download/v0.1.0-beta.12/HoNRebornRU-Setup.exe",
+            site_config,
+        )
+
     def test_beta12_is_a_thin_current_ui_overlay_with_legacy_locale_aliases(self):
         archive_path = ROOT / "release-assets" / "0.1.0-beta.12" / "resources0.jz"
         with zipfile.ZipFile(archive_path) as archive:
