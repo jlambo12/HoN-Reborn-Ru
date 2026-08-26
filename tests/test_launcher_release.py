@@ -69,11 +69,20 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn('[^\\\\r\\\\n]*', source)
         self.assertNotIn('.*(?:\\\\r?\\\\n)?', source)
 
-    def test_configs_are_not_changed_during_install_and_game_must_be_stopped(self):
+    def test_localized_profile_is_prepared_safely_and_game_must_be_stopped(self):
         install_source = (LAUNCHER / "InstallService.cs").read_text(encoding="utf-8")
         launch_source = (LAUNCHER / "GameLauncher.cs").read_text(encoding="utf-8")
         install_body = install_source.split("public async Task InstallAsync", 1)[1].split("public async Task RestoreAsync", 1)[0]
-        self.assertNotIn("SetLocale(", install_body)
+        self.assertIn('SetLocale(LocalizedStartupPath, "ru"', install_body)
+        self.assertIn("SeedLocalizedProfile()", install_body)
+        self.assertIn('new[] { "startup.cfg", "game_settings_local.cfg", "voice_config.cfg", "login.cfg" }', install_source)
+        self.assertIn('if (name.Equals("login.cfg", StringComparison.OrdinalIgnoreCase))', install_source)
+        self.assertIn('sources.Add(Path.Combine(NormalProfileDirectory, "extensions", name))', install_source)
+        self.assertIn("OrderByDescending(path => File.GetLastWriteTimeUtc(path))", install_source)
+        self.assertIn('File.GetLastWriteTimeUtc(source) <= File.GetLastWriteTimeUtc(target)', install_source)
+        self.assertIn('$"{safeName}-before-', install_source)
+        self.assertIn("RollbackSeededProfile(seededProfile)", install_body)
+        self.assertIn("RestoreLocales(rollbackLocales)", install_body)
         self.assertNotIn("SetRuntimeLocales", install_source)
         self.assertIn('GetProcessesByName("juvio")', install_source)
         self.assertIn('startInfo.ArgumentList.Add("-host_locale")', launch_source)
@@ -85,19 +94,18 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn('"extensions", "resources0.jz"', source)
         self.assertIn('startInfo.ArgumentList.Add("-mod")', source)
         self.assertIn('startInfo.ArgumentList.Add("heroes of newerth;extensions")', source)
-        self.assertIn('startInfo.ArgumentList.Add("-config")', source)
-        self.assertIn('startInfo.ArgumentList.Add("Heroes of Newerth")', source)
+        self.assertNotIn('startInfo.ArgumentList.Add("-config")', source)
         self.assertIn('startInfo.ArgumentList.Add("-host_locale")', source)
         self.assertIn('startInfo.ArgumentList.Add("ru")', source)
         self.assertIn("Русский перевод не установлен", source)
 
-    def test_translation_uses_extension_resources_with_main_settings_profile(self):
+    def test_translation_uses_extension_resources_and_localized_settings_profile(self):
         source = (LAUNCHER / "InstallService.cs").read_text(encoding="utf-8")
         launch_source = (LAUNCHER / "GameLauncher.cs").read_text(encoding="utf-8")
         self.assertIn('Path.Combine(ExtensionDirectory, "resources0.jz")', source)
         self.assertIn("BackupCurrentExtensionAsync", source)
         self.assertIn("SchemaVersion = 3", source)
-        self.assertIn('startInfo.ArgumentList.Add("-config")', launch_source)
+        self.assertNotIn('startInfo.ArgumentList.Add("-config")', launch_source)
         self.assertNotIn("SetLocale(", launch_source)
 
     def test_gearup_is_instruction_only_and_never_launched_by_launcher(self):

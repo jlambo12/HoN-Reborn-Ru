@@ -55,15 +55,13 @@ internal sealed class GameLauncher
             WorkingDirectory = _juvioRoot,
             UseShellExecute = true
         };
-        // K2 treats the resource stack and the settings profile as separate
-        // command-line concepts. Load the translation as the last resource mod,
-        // while -config keeps ~/startup.cfg, game_settings_local.cfg and the
-        // other user files in the player's normal "Heroes of Newerth" profile.
-        // ArgumentList performs Windows quoting for the two values with spaces.
+        // The last resource mod also selects the K2 settings profile. Supplying
+        // -config "Heroes of Newerth" does not reuse the normal profile: it
+        // creates Documents\Juvio\Heroes of Newerth\extensions instead. Keep
+        // the verified extension profile; InstallService safely keeps its
+        // settings in sync without overwriting newer user changes.
         startInfo.ArgumentList.Add("-mod");
         startInfo.ArgumentList.Add("heroes of newerth;extensions");
-        startInfo.ArgumentList.Add("-config");
-        startInfo.ArgumentList.Add("Heroes of Newerth");
         startInfo.ArgumentList.Add("-host_locale");
         startInfo.ArgumentList.Add("ru");
         Process.Start(startInfo);

@@ -59,8 +59,12 @@ internal sealed partial class InstallService
         string? previousBaseBackup = null;
         string? previousBaseHash = null;
         string? migratedBaseHash = null;
-        var previousLocales = oldState?.PreviousLocales ?? new Dictionary<string, LocaleState>(StringComparer.OrdinalIgnoreCase);
-        bool? localeSettingsModified = false;
+        var shouldPrepareLocalizedProfile = oldState?.LocaleSettingsModified is not true;
+        var rollbackLocales = CaptureLocales();
+        var previousLocales = shouldPrepareLocalizedProfile
+            ? rollbackLocales
+            : oldState?.PreviousLocales ?? new Dictionary<string, LocaleState>(StringComparer.OrdinalIgnoreCase);
+        bool? localeSettingsModified = oldState?.LocaleSettingsModified ?? false;
         if (oldState?.SchemaVersion is 1 or 3)
         {
             if (!File.Exists(InstalledArchive)) throw new InvalidOperationException("Установленный перевод был удалён вне лаунчера. Сначала выполните восстановление вручную.");
@@ -97,6 +101,9 @@ internal sealed partial class InstallService
         var hadInstalledArchive = File.Exists(InstalledArchive);
         if (hadInstalledArchive) File.Copy(InstalledArchive, rollback, false);
         var stateSaved = false;
+        var localePrepared = false;
+        var profilePrepared = false;
+        var seededProfile = new ProfileSeedResult();
         try
         {
             File.Copy(downloadedArchive, temporary, true);
@@ -107,6 +114,12 @@ internal sealed partial class InstallService
             var installedHash = await Sha256Async(InstalledArchive, cancellationToken);
             if (!installedHash.Equals(downloadedHash, StringComparison.OrdinalIgnoreCase))
                 throw new IOException("Ошибка проверки установленного перевода.");
+
+            seededProfile = SeedLocalizedProfile();
+            profilePrepared = true;
+            localePrepared = true;
+            SetLocale(LocalizedStartupPath, "ru", removeWhenNull: false);
+            localeSettingsModified = true;
 
             AppStorage.Save(AppStorage.StatePath, new InstallationState
             {
@@ -130,6 +143,9 @@ internal sealed partial class InstallService
         {
             if (!stateSaved)
             {
+                if (localePrepared) RestoreLocales(rollbackLocales);
+                if (profilePrepared)
+                    RollbackSeededProfile(seededProfile);
                 if (hadInstalledArchive)
                     File.Move(rollback, InstalledArchive, true);
                 else
@@ -258,6 +274,88 @@ internal sealed partial class InstallService
             result[path] = new LocaleState { FileExisted = existed, PreviousValue = match.Success ? match.Groups[1].Value : null };
         }
         return result;
+    }
+
+    private string NormalProfileDirectory => Path.Combine(
+        Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Juvio", "Heroes of Newerth");
+
+    private string LocalizedProfileDirectory => Path.Combine(
+        Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Juvio", "extensions");
+
+    private string LocalizedStartupPath => Path.Combine(LocalizedProfileDirectory, "startup.cfg");
+
+    private ProfileSeedResult SeedLocalizedProfile()
+    {
+        var result = new ProfileSeedResult();
+        try
+        {
+            Directory.CreateDirectory(LocalizedProfileDirectory);
+            foreach (var name in new[] { "startup.cfg", "game_settings_local.cfg", "voice_config.cfg", "login.cfg" })
+            {
+                var target = Path.Combine(LocalizedProfileDirectory, name);
+                var sources = new List<string> { Path.Combine(NormalProfileDirectory, name) };
+                // beta.9 incorrectly created a nested profile with default game
+                // settings. Never migrate those defaults, but do preserve a newer
+                // authenticated session from its login.cfg.
+                if (name.Equals("login.cfg", StringComparison.OrdinalIgnoreCase))
+                    sources.Add(Path.Combine(NormalProfileDirectory, "extensions", name));
+                var source = sources
+                .Where(File.Exists)
+                .OrderByDescending(path => File.GetLastWriteTimeUtc(path))
+                .FirstOrDefault();
+                if (source is null ||
+                    (File.Exists(target) && File.GetLastWriteTimeUtc(source) <= File.GetLastWriteTimeUtc(target)))
+                    continue;
+
+                if (File.Exists(target))
+                {
+                    Directory.CreateDirectory(AppStorage.BackupRoot);
+                    var safeName = Path.GetFileNameWithoutExtension(name);
+                    var backup = Path.Combine(AppStorage.BackupRoot, $"{safeName}-before-{DateTime.Now:yyyyMMdd-HHmmss}-{Guid.NewGuid():N}.cfg");
+                    File.Copy(target, backup, false);
+                    result.ReplacedFiles[target] = backup;
+                }
+                else
+                {
+                    result.CreatedFiles.Add(target);
+                }
+                CopyProfileFile(source, target);
+            }
+            return result;
+        }
+        catch
+        {
+            RollbackSeededProfile(result);
+            throw;
+        }
+    }
+
+    private static void CopyProfileFile(string source, string target)
+    {
+        var temporary = target + $".honru-{Guid.NewGuid():N}.tmp";
+        try
+        {
+            File.Copy(source, temporary, false);
+            File.Move(temporary, target, true);
+        }
+        finally
+        {
+            if (File.Exists(temporary)) File.Delete(temporary);
+        }
+    }
+
+    private static void RollbackSeededProfile(ProfileSeedResult result)
+    {
+        foreach (var pair in result.ReplacedFiles)
+            File.Copy(pair.Value, pair.Key, true);
+        foreach (var path in result.CreatedFiles)
+            File.Delete(path);
+    }
+
+    private sealed class ProfileSeedResult
+    {
+        public List<string> CreatedFiles { get; } = new();
+        public Dictionary<string, string> ReplacedFiles { get; } = new(StringComparer.OrdinalIgnoreCase);
     }
 
     private static void RestoreLocales(Dictionary<string, LocaleState> locales)
