@@ -22,7 +22,8 @@ internal static class LauncherTheme
     public static GraphicsPath Rounded(Rectangle bounds, int radius)
     {
         var path = new GraphicsPath();
-        var diameter = Math.Max(2, radius * 2);
+        if (bounds.Width <= 0 || bounds.Height <= 0) return path;
+        var diameter = Math.Min(Math.Min(bounds.Width, bounds.Height), Math.Max(2, radius * 2));
         var arc = new Rectangle(bounds.X, bounds.Y, diameter, diameter);
         path.AddArc(arc, 180, 90);
         arc.X = bounds.Right - diameter;
@@ -57,6 +58,7 @@ internal sealed class LauncherCard : Panel
 
     protected override void OnPaint(PaintEventArgs e)
     {
+        if (Width <= 1 || Height <= 1) return;
         e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
         var bounds = new Rectangle(0, 0, Width - 1, Height - 1);
         using var path = LauncherTheme.Rounded(bounds, CornerRadius);
@@ -119,6 +121,7 @@ internal sealed class LauncherButton : Button
 
     protected override void OnPaint(PaintEventArgs e)
     {
+        if (Width <= 3 || Height <= 3) return;
         e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
         var bounds = new Rectangle(1, 1 + (_pressed ? 1 : 0), Width - 3, Height - 3);
         using var path = LauncherTheme.Rounded(bounds, CornerRadius);
@@ -193,6 +196,7 @@ internal sealed class LauncherRadioCard : Control
 
     protected override void OnPaint(PaintEventArgs e)
     {
+        if (Width <= 1 || Height <= 1) return;
         e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
         var bounds = new Rectangle(0, 0, Width - 1, Height - 1);
         using var path = LauncherTheme.Rounded(bounds, 8);
@@ -239,6 +243,7 @@ internal sealed class LauncherProgressBar : Control
 
     protected override void OnPaint(PaintEventArgs e)
     {
+        if (Width <= 1 || Height <= 1) return;
         e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
         var bounds = new Rectangle(0, 0, Width - 1, Height - 1);
         using var track = LauncherTheme.Rounded(bounds, Height / 2);

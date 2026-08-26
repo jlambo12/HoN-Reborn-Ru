@@ -106,13 +106,16 @@ internal sealed class LocaleState
 
 internal sealed class InstallationState
 {
-    public int SchemaVersion { get; set; } = 2;
+    public int SchemaVersion { get; set; } = 3;
     public string Product { get; set; } = "HoN-Reborn-RU";
     public string Version { get; set; } = "";
     public DateTimeOffset InstalledAt { get; set; }
     public string InstalledSha256 { get; set; } = "";
     public string? PreviousExtensionBackup { get; set; }
     public string? PreviousExtensionSha256 { get; set; }
+    public string? PreviousBaseOverlayBackup { get; set; }
+    public string? PreviousBaseOverlaySha256 { get; set; }
+    public string? MigratedBaseOverlaySha256 { get; set; }
     public string BaseGameSha256 { get; set; } = "";
     public Dictionary<string, LocaleState> PreviousLocales { get; set; } = new(StringComparer.OrdinalIgnoreCase);
     public bool? LocaleSettingsModified { get; set; }

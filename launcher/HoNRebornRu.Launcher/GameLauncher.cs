@@ -44,21 +44,29 @@ internal sealed class GameLauncher
 
     private void LaunchLocalizedJuvio()
     {
-        var translation = Path.Combine(_juvioRoot, "heroes of newerth", "resources_ru0.jz");
+        var translation = Path.Combine(_juvioRoot, "extensions", "resources0.jz");
         if (!File.Exists(translation))
             throw new FileNotFoundException("Русский перевод не установлен. Сначала установите его в Launcher.", translation);
         var executable = Path.Combine(_juvioRoot, "bin", "juvio.exe");
         if (!File.Exists(executable)) throw new FileNotFoundException("Juvio не найден.", executable);
-        Process.Start(new ProcessStartInfo
+        var startInfo = new ProcessStartInfo
         {
             FileName = executable,
-            // Keep the normal "Heroes of Newerth" mod active. Juvio then uses
-            // the player's existing Documents\Juvio\Heroes of Newerth profile
-            // instead of creating a separate, default "extensions" profile.
-            Arguments = "-host_locale ru",
             WorkingDirectory = _juvioRoot,
             UseShellExecute = true
-        });
+        };
+        // K2 treats the resource stack and the settings profile as separate
+        // command-line concepts. Load the translation as the last resource mod,
+        // while -config keeps ~/startup.cfg, game_settings_local.cfg and the
+        // other user files in the player's normal "Heroes of Newerth" profile.
+        // ArgumentList performs Windows quoting for the two values with spaces.
+        startInfo.ArgumentList.Add("-mod");
+        startInfo.ArgumentList.Add("heroes of newerth;extensions");
+        startInfo.ArgumentList.Add("-config");
+        startInfo.ArgumentList.Add("Heroes of Newerth");
+        startInfo.ArgumentList.Add("-host_locale");
+        startInfo.ArgumentList.Add("ru");
+        Process.Start(startInfo);
     }
 
     private static bool IsProcessRunning(string processName)

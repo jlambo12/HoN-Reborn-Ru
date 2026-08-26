@@ -386,7 +386,7 @@ internal sealed class MainForm : Form
         var state = _installer.ReadState();
         var juvioRoot = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Juvio");
         var gameFound = File.Exists(Path.Combine(juvioRoot, "bin", "juvio.exe"));
-        var stateArchive = state?.SchemaVersion == 1 ? _installer.LegacyInstalledArchive : _installer.InstalledArchive;
+        var stateArchive = state?.SchemaVersion == 2 ? _installer.BaseOverlayArchive : _installer.InstalledArchive;
         var translationFound = File.Exists(stateArchive);
         var installed = version is not null && state is not null && translationFound;
 
@@ -541,6 +541,11 @@ internal sealed class MainForm : Form
     protected override void OnPaintBackground(PaintEventArgs e)
     {
         e.Graphics.Clear(LauncherTheme.Background);
+        // WinForms can briefly report a zero-sized client area while the
+        // borderless window is being minimized/restored. GDI+ rejects a
+        // zero-sized LinearGradientBrush and used to surface its exception to
+        // the user instead of simply skipping that transient paint frame.
+        if (ClientSize.Width <= 0 || ClientSize.Height <= 0) return;
         if (_background is not null)
         {
             var scale = Math.Max(ClientSize.Width / (float)_background.Width, ClientSize.Height / (float)_background.Height);
@@ -560,6 +565,7 @@ internal sealed class MainForm : Form
     protected override void OnPaint(PaintEventArgs e)
     {
         base.OnPaint(e);
+        if (Width <= 1 || Height <= 1) return;
         using var border = new Pen(Color.FromArgb(65, 73, 80));
         e.Graphics.DrawRectangle(border, 0, 0, Width - 1, Height - 1);
     }
