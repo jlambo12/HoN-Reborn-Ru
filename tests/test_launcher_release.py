@@ -179,10 +179,13 @@ class AutonomousLauncherTests(unittest.TestCase):
 
     def test_website_download_points_to_current_beta_setup(self):
         site_config = (ROOT / "website" / "src" / "config" / "site.ts").read_text(encoding="utf-8")
+        download_button = (ROOT / "website" / "src" / "components" / "DownloadButton.astro").read_text(encoding="utf-8")
         self.assertIn(
             "/releases/download/v0.1.0-beta.12/HoNRebornRU-Setup.exe",
             site_config,
         )
+        self.assertIn("api.github.com/repos/jlambo12/HoN-Reborn-Ru/releases", download_button)
+        self.assertIn("candidate.name === 'HoNRebornRU-Setup.exe'", download_button)
 
     def test_beta12_is_a_thin_current_ui_overlay_with_legacy_locale_aliases(self):
         archive_path = ROOT / "release-assets" / "0.1.0-beta.12" / "resources0.jz"

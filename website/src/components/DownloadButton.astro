@@ -36,10 +36,28 @@ const { url } = Astro.props;
 </div>
 
 <script>
-  const downloadButton = document.querySelector('[data-download]');
+  const downloadButton = document.querySelector<HTMLAnchorElement>('[data-download]');
 
   downloadButton?.addEventListener('click', () => {
     downloadButton.classList.remove('is-flashing');
     requestAnimationFrame(() => downloadButton.classList.add('is-flashing'));
   });
+
+  // GitHub's /releases/latest redirect ignores prereleases. Resolve the newest
+  // published release through the API so beta builds also become available on
+  // the site automatically. The server-rendered URL remains a working fallback.
+  if (downloadButton) {
+    fetch('https://api.github.com/repos/jlambo12/HoN-Reborn-Ru/releases?per_page=20', {
+      headers: { Accept: 'application/vnd.github+json' },
+    })
+      .then((response) => response.ok ? response.json() : Promise.reject())
+      .then((releases: Array<{ draft: boolean; assets: Array<{ name: string; browser_download_url: string }> }>) => {
+        const asset = releases
+          .filter((release) => !release.draft)
+          .flatMap((release) => release.assets)
+          .find((candidate) => candidate.name === 'HoNRebornRU-Setup.exe');
+        if (asset) downloadButton.href = asset.browser_download_url;
+      })
+      .catch(() => { /* Keep the tested fallback URL. */ });
+  }
 </script>
