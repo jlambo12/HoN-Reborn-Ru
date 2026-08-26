@@ -57,6 +57,21 @@ def load_live_entities(upstream_sha: str) -> dict[str, str]:
     return payload
 
 
+def load_live_stringtables() -> dict[str, dict[str, str]]:
+    tables: dict[str, dict[str, str]] = {}
+    with zipfile.ZipFile(UPSTREAM) as archive:
+        for domain in MEMBERS:
+            member = f"stringtables/{domain}_en.str"
+            parsed: dict[str, str] = {}
+            for line in archive.read(member).decode("utf-8-sig").splitlines():
+                if "\t" not in line or line.lstrip().startswith("//"):
+                    continue
+                key, value = line.split("\t", 1)
+                parsed[key] = value.lstrip("\t")
+            tables[domain] = parsed
+    return tables
+
+
 def structural_tokens(text: str) -> dict[str, list[str]]:
     # Match the live queue validator: runtime placeholders, colour/markup tokens
     # and escaped line breaks are structural. Literal prose numbers are semantic
@@ -101,7 +116,7 @@ def apply_rows(data: bytes, rows: list[dict[str, Any]]) -> tuple[bytes, list[dic
     return "".join(lines).encode("utf-8"), changes
 
 
-def append_missing_entity_keys(data: bytes, rows: list[dict[str, Any]]) -> bytes:
+def append_missing_keys(data: bytes, rows: list[dict[str, Any]]) -> bytes:
     text = data.decode("utf-8-sig")
     existing = {
         line.split("\t", 1)[0]
@@ -131,6 +146,7 @@ def main() -> int:
     source_rows = load_jsonl(ROOT / "catalog" / "strings.jsonl")
     sources = {row["id"]: row for row in source_rows}
     live_entities = load_live_entities(expected_upstream_sha)
+    live_tables = load_live_stringtables()
     expanded: list[dict[str, Any]] = []
     batch_counts: dict[str, int] = {}
     for path in sorted((ROOT / "translation" / "human").glob("batch_*.json")):
@@ -145,6 +161,15 @@ def main() -> int:
                         current = live_entities[entity_key]
                         source = {
                             "namespace": "entities", "key": entity_key,
+                            "english": current,
+                            "english_hash": hashlib.sha256(current.encode("utf-8")).hexdigest(),
+                        }
+                if source is None and ":" in logical_key:
+                    domain, key = logical_key.split(":", 1)
+                    current = live_tables.get(domain, {}).get(key)
+                    if current is not None:
+                        source = {
+                            "namespace": domain, "key": key,
                             "english": current,
                             "english_hash": hashlib.sha256(current.encode("utf-8")).hexdigest(),
                         }
@@ -193,8 +218,7 @@ def main() -> int:
             raise SystemExit("Controlled 003 CRC failed")
         for domain, member in MEMBERS.items():
             baseline = base.read(member)
-            if domain == "entities":
-                baseline = append_missing_entity_keys(baseline, by_domain[domain])
+            baseline = append_missing_keys(baseline, by_domain[domain])
             rendered, domain_changes = apply_rows(baseline, by_domain[domain])
             if domain_changes:
                 overrides[member] = rendered

@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package>
+
+	<lua file="/ui/scripts/fe3/boss_info.lua" />
+
+	<!-- =========================================== -->
+	<!-- Boss Info Tab: Main Layout                   -->
+	<!-- =========================================== -->
+	<template name="boss_info">
+		<panel name="boss_info" width="100%" height="100%" visible="{visible=1}" noclick="0" processcursor="1" onshowlua="BossInfo:OnShow()">
+
+			<!-- Left Sidebar -->
+			<panel x="1h" width="20h" height="100%" noclick="1">
+
+				<!-- Section Title -->
+				<label x=".5h" y="1.0h" style="h1,color-orange" content="boss_info_title" noclick="1" />
+
+				<!-- Boss Selection Buttons -->
+				<panel name="boss_info_menu" width="100%" height="-4.5h" valign="bottom" float="bottom" padding="1h" noclick="1">
+
+					<instance name="boss_info_selector_button"
+						btn_name="boss_info_btn_kongor"
+						boss_id="kongor"
+						icon_path="/npcs/boss/kongor/icon.tga"
+						name_key="boss_info_kongor_name"
+						subtitle_key="boss_info_kongor_subtitle"
+						bg_color=".12 .1 .06 .9"
+						bg_hover=".2 .15 .05 .95"
+						bg_down=".18 .13 .03 .95"
+						bg_active=".25 .18 .03 1"
+						accent="#ffaa01"
+						accent_dim=".3 .25 .1 1"
+						accent_bright="#ffdd55"
+						name_idle=".9 .8 .5 1"
+						name_hover="#ffaa01"
+						sub_idle=".6 .6 .6 1"
+						sub_hover=".8 .7 .5 1"
+						sub_active=".9 .8 .5 1"
+					/>
+
+					<instance name="boss_info_selector_button"
+						btn_name="boss_info_btn_phoenix"
+						boss_id="phoenix"
+						icon_path="/npcs/boss/phoenix/icon.tga"
+						name_key="boss_info_phoenix_name"
+						subtitle_key="boss_info_phoenix_subtitle"
+						bg_color=".12 .06 .04 .9"
+						bg_hover=".2 .08 .03 .95"
+						bg_down=".18 .06 .02 .95"
+						bg_active=".25 .08 .02 1"
+						accent="#ff5522"
+						accent_dim=".3 .1 .05 1"
+						accent_bright="#ff8855"
+						name_idle=".9 .5 .3 1"
+						name_hover="#ff7744"
+						sub_idle=".6 .6 .6 1"
+						sub_hover=".8 .5 .3 1"
+						sub_active=".9 .6 .3 1"
+					/>
+
+				</panel>
+			</panel>
+
+			<!-- Right Detail Area -->
+			<panel name="boss_info_detail_container" width="-22h" height="100%" align="right">
+				<instance name="boss_info_detail_kongor" />
+				<instance name="boss_info_detail_phoenix" />
+			</panel>
+
+		</panel>
+	</template>
+
+	<!-- =========================================== -->
+	<!-- Boss Selector Button (Reusable)             -->
+	<!-- =========================================== -->
+	<template name="boss_info_selector_button">
+		<button name="{btn_name}" width="100%" height="8h" onclicklua="BossInfo:SelectBoss('{boss_id}')">
+			<widgetstate statename="up">
+				<frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" color="{bg_color}" borderthickness=".3h" noclick="1" />
+				<frame texture="/ui/hd_ui/frames/border_thin.tga" borderthickness=".3h" color="invisible" bordercolor="{accent_dim}" noclick="1" />
+				<panel width="-1h" style="center" noclick="1">
+					<panel width="6.5h" height="6.5h" valign="center" noclick="1">
+						<frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" color="0 0 0 .5" borderthickness=".2h" noclick="1" />
+						<image texture="{icon_path}" width="-0.4h" height="-0.4h" align="center" valign="center" noclick="1" />
+						<frame borderthickness="1" color="invisible" bordercolor="{accent_dim}" noclick="1" />
+					</panel>
+					<panel x="7h" width="-7h" valign="center" style="grow_noregrow_noinvis" float="bottom" noclick="1">
+						<label style="h2" color="{name_idle}" fity="1" content="{name_key}" noclick="1" />
+						<label style="text_base" color="{sub_idle}" fity="1" content="{subtitle_key}" noclick="1" />
+					</panel>
+				</panel>
+			</widgetstate>
+			<widgetstate statename="over">
+				<frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" color="{bg_hover}" borderthickness=".3h" noclick="1" />
+				<frame texture="/ui/hd_ui/frames/border_thin_grad_top.tga" borderthickness=".3h" color="invisible" bordercolor="{accent}" noclick="1" />
+				<panel width="-1h" style="center" noclick="1">
+					<panel width="6.5h" height="6.5h" valign="center" noclick="1">
+						<frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" color="0 0 0 .6" borderthickness=".2h" noclick="1" />
+						<image texture="{icon_path}" width="-0.4h" height="-0.4h" align="center" valign="center" noclick="1" />
+						<frame borderthickness="1" color="invisible" bordercolor="{accent}" noclick="1" />
+					</panel>
+					<panel x="7h" width="-7h" valign="center" style="grow_noregrow_noinvis" float="bottom" noclick="1">
+						<label style="h2" color="{name_hover}" fity="1" content="{name_key}" noclick="1" />
+						<label style="text_base" color="{sub_hover}" fity="1" content="{subtitle_key}" noclick="1" />
+					</panel>
+				</panel>
+			</widgetstate>
+			<widgetstate statename="down">
+				<frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" color="{bg_down}" borderthickness=".3h" noclick="1" />
+				<frame texture="/ui/hd_ui/frames/border_thin_grad_top.tga" borderthickness=".3h" color="invisible" bordercolor="{accent}" noclick="1" />
+				<panel width="-1h" style="center" noclick="1">
+					<panel width="6.5h" height="6.5h" valign="center" noclick="1">
+						<frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" color="0 0 0 .6" borderthickness=".2h" noclick="1" />
+						<image texture="{icon_path}" width="-0.4h" height="-0.4h" align="center" valign="center" noclick="1" />
+						<frame borderthickness="1" color="invisible" bordercolor="{accent}" noclick="1" />
+					</panel>
+					<panel x="7h" width="-7h" valign="center" style="grow_noregrow_noinvis" float="bottom" noclick="1">
+						<label style="h2" color="{name_hover}" fity="1" content="{name_key}" noclick="1" />
+						<label style="text_base" color="{sub_hover}" fity="1" content="{subtitle_key}" noclick="1" />
+					</panel>
+				</panel>
+			</widgetstate>
+			<widgetstate statename="disabled">
+				<frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" color="{bg_active}" borderthickness=".3h" noclick="1" />
+				<frame texture="/ui/hd_ui/frames/border_thin.tga" borderthickness=".3h" color="invisible" bordercolor="{accent}" noclick="1" />
+				<frame texture="/ui/hd_ui/frames/border_thin_grad_top.tga" borderthickness=".3h" color="invisible" bordercolor="{accent_bright}" noclick="1" />
+				<panel width="-1h" style="center" noclick="1">
+					<panel width="6.5h" height="6.5h" valign="center" noclick="1">
+						<frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" color="0 0 0 .6" borderthickness=".2h" noclick="1" />
+						<image texture="{icon_path}" width="-0.4h" height="-0.4h" align="center" valign="center" noclick="1" />
+						<frame borderthickness="1" color="invisible" bordercolor="{accent_bright}" noclick="1" />
+					</panel>
+					<panel x="7h" width="-7h" valign="center" style="grow_noregrow_noinvis" float="bottom" noclick="1">
+						<label style="h2" color="{name_hover}" fity="1" content="{name_key}" noclick="1" />
+						<label style="text_base" color="{sub_active}" fity="1" content="{subtitle_key}" noclick="1" />
+					</panel>
+				</panel>
+			</widgetstate>
+		</button>
+	</template>
+
+	<!-- =========================================== -->
+	<!-- KONGOR Detail Panel                         -->
+	<!-- =========================================== -->
+	<template name="boss_info_detail_kongor">
+		<panel name="boss_info_panel_kongor" width="100%" height="100%" visible="0" noclick="0" processcursor="1">
+
+			<!-- Scrollable Viewport -->
+			<panel name="boss_info_kongor_viewport" width="100%" height="100%" clip="1" noclick="1">
+				<panel name="boss_info_kongor_content" width="100%" style="grow_noregrow_noinvis" float="bottom" padding=".5h" noclick="1">
+
+					<!-- Banner -->
+					<panel width="100%" height="10h" noclick="1">
+						<frame texture="/ui/hd_ui/frames/rounded_grad_minor.tga" borderthickness=".5h" color=".12 .1 .03 .9" noclick="1" />
+						<frame texture="/ui/hd_ui/frames/border_thin_grad_top.tga" borderthickness=".5h" color="invisible" bordercolor=".7 .55 .1 .7" noclick="1" />
+						<panel width="-2h" style="center" noclick="1">
+							<panel size="8h" valign="center" noclick="1">
+								<frame texture="/ui/frames/squareglow.tga" width="+1h" height="+1h" align="center" valign="center" color="0 0 0 .6" borderthickness=".8h" noclick="1" />
+								<image texture="/npcs/boss/kongor/icon.tga" size="100%" noclick="1" />
+								<frame texture="/ui/hd_ui/frames/inner_glow.tga" borderthickness=".8h" color=".4 .3 .05 .3" noclick="1" />
+								<frame borderthickness="1" color="invisible" bordercolor=".6 .5 .2 .8" noclick="1" />
+							</panel>
+							<panel x="9.5h" width="-9.5h" valign="center" style="grow_noregrow_noinvis" float="bottom" noclick="1">
+								<label font="heading_20" color="#ffcc33" fity="1" outline="1" outlinecolor="0 0 0" content="boss_info_kongor_name" noclick="1" />
+								<label style="text_base" color=".7 .6 .3 1" fity="1" content="boss_info_kongor_subtitle" noclick="1" />
+							</panel>
+						</panel>
+					</panel>
+
+					<!-- Description -->
+					<panel width="100%" height=".6h" noclick="1" />
+					<panel width="100%" style="grow_noregrow_noinvis" noclick="1">
+						<label style="text_base" width="90%" color=".8 .8 .8 1" fity="1" wrap="1" shadow="1" content="boss_info_kongor_desc" noclick="1" />
+					</panel>
+
+					<!-- Stats -->
+					<panel width="100%" height="1h" noclick="1" />
+					<instance name="boss_info_section_header" header_text="boss_info_stats_header" header_color="#ffcc33" />
+					<instance name="boss_info_stats_panel"
+						stat1="boss_info_kongor_stat_health"
+						stat2="boss_info_kongor_stat_damage"
+						stat3="boss_info_kongor_stat_armor"
+						stat4="boss_info_kongor_stat_magic_armor"
+						stat5="boss_info_kongor_stat_movespeed"
+						stat6="boss_info_kongor_stat_attack_speed"
+						stat7="boss_info_kongor_stat_attack_range"
+						stat8="boss_info_kongor_stat_hp_regen"
+						panel_color=".06 .05 .02 .9"
+						border_color=".4 .3 .1 .5"
+					/>
+
+					<!-- Abilities -->
+					<panel width="100%" height="1h" noclick="1" />
+					<instance name="boss_info_section_header" header_text="boss_info_abilities_header" header_color="#ffcc33" />
+
+					<instance name="boss_info_ability_card"
+						icon_texture="/npcs/boss/kongor/ability_01/icon.tga"
+						ability_name="boss_info_kongor_ability1_name"
+						ability_desc="boss_info_kongor_ability1_desc"
+						card_color=".08 .07 .03 .9"
+						border_color=".5 .4 .1 .5"
+						name_color="#ffcc33"
+					/>
+					<instance name="boss_info_ability_card"
+						icon_texture="/npcs/boss/kongor/ability_02/icon.tga"
+						ability_name="boss_info_kongor_ability2_name"
+						ability_desc="boss_info_kongor_ability2_desc"
+						card_color=".08 .07 .03 .9"
+						border_color=".5 .4 .1 .5"
+						name_color="#ffcc33"
+					/>
+					<instance name="boss_info_ability_card"
+						icon_texture="/npcs/boss/kongor/ability_03/icon.tga"
+						ability_name="boss_info_kongor_ability3_name"
+						ability_desc="boss_info_kongor_ability3_desc"
+						card_color=".08 .07 .03 .9"
+						border_color=".5 .4 .1 .5"
+						name_color="#ffcc33"
+					/>
+					<instance name="boss_info_ability_card"
+						icon_texture="/npcs/boss/kongor/icon.tga"
+						ability_name="boss_info_kongor_ability4_name"
+						ability_desc="boss_info_kongor_ability4_desc"
+						card_color=".08 .07 .03 .9"
+						border_color=".5 .4 .1 .5"
+						name_color="#ffcc33"
+					/>
+
+					<!-- Rewards -->
+					<panel width="100%" height="1h" noclick="1" />
+					<instance name="boss_info_section_header" header_text="boss_info_rewards_header" header_color="#44ccff" />
+
+					<instance name="boss_info_reward_card"
+						icon_texture="/ui/hd_ui/icons/coins.tga"
+						reward_name="boss_info_kongor_reward1_name"
+						reward_desc="boss_info_kongor_reward1_desc"
+						card_color=".04 .06 .12 .9"
+						border_color=".15 .3 .55 .5"
+						name_color="#44ccff"
+					/>
+					<instance name="boss_info_reward_card"
+						icon_texture="/npcs/boss/kongor/summon/minimap_icon.tga"
+						reward_name="boss_info_kongor_reward2_name"
+						reward_desc="boss_info_kongor_reward2_desc"
+						card_color=".04 .06 .12 .9"
+						border_color=".15 .3 .55 .5"
+						name_color="#44ccff"
+					/>
+
+					<!-- Scaling -->
+					<panel width="100%" height="1h" noclick="1" />
+					<instance name="boss_info_section_header" header_text="Усиление с каждым возрождением" header_color="#bb77ff" />
+					<instance name="boss_info_scaling_panel" scaling_desc="boss_info_kongor_scaling_desc" />
+
+					<!-- Bottom Spacer -->
+					<panel width="100%" height="4h" noclick="1" />
+
+				</panel>
+
+				<!-- Scroll Capture -->
+				<panel size="100%" processonlyscrollandmovement="1" onloadlua="BossInfo:RegisterScroll(self, 'kongor')" />
+			</panel>
+
+			<!-- Scrollbar -->
+			<scrollbar name="boss_info_kongor_scrollbar"
+				texture="/ui/hd_ui/input_controls/scrollbar_mini.tga"
+				width=".8h" handlewidth=".5h" handleheight="4h"
+				slotwidth=".5h" slotheight="1"
+				align="right"
+				minvalue="0" maxvalue="100" step="1" value="0" vertical="true"
+				onslidelua="self:DoEvent()"
+				oneventlua="BossInfo:OnScroll('kongor', self:GetValue())"
+				visible="0"
+			/>
+		</panel>
+	</template>
+
+	<!-- =========================================== -->
+	<!-- PHOENIX Detail Panel                        -->
+	<!-- =========================================== -->
+	<template name="boss_info_detail_phoenix">
+		<panel name="boss_info_panel_phoenix" width="100%" height="100%" visible="0" noclick="0" processcursor="1">
+
+			<!-- Scrollable Viewport -->
+			<panel name="boss_info_phoenix_viewport" width="100%" height="100%" clip="1" noclick="1">
+				<panel name="boss_info_phoenix_content" width="100%" style="grow_noregrow_noinvis" float="bottom" padding=".5h" noclick="1">
+
+					<!-- Banner -->
+					<panel width="100%" height="10h" noclick="1">
+						<frame texture="/ui/hd_ui/frames/rounded_grad_minor.tga" borderthickness=".5h" color=".12 .04 .02 .9" noclick="1" />
+						<frame texture="/ui/hd_ui/frames/border_thin_grad_top.tga" borderthickness=".5h" color="invisible" bordercolor=".8 .3 .05 .7" noclick="1" />
+						<panel width="-2h" style="center" noclick="1">
+							<panel size="8h" valign="center" noclick="1">
+								<frame texture="/ui/frames/squareglow.tga" width="+1h" height="+1h" align="center" valign="center" color="0 0 0 .6" borderthickness=".8h" noclick="1" />
+								<image texture="/npcs/boss/phoenix/icon.tga" size="100%" noclick="1" />
+								<frame texture="/ui/hd_ui/frames/inner_glow.tga" borderthickness=".8h" color=".4 .15 .02 .3" noclick="1" />
+								<frame borderthickness="1" color="invisible" bordercolor=".7 .3 .1 .8" noclick="1" />
+							</panel>
+							<panel x="9.5h" width="-9.5h" valign="center" style="grow_noregrow_noinvis" float="bottom" noclick="1">
+								<label font="heading_20" color="#ff7744" fity="1" outline="1" outlinecolor="0 0 0" content="boss_info_phoenix_name" noclick="1" />
+								<label style="text_base" color=".7 .4 .2 1" fity="1" content="boss_info_phoenix_subtitle" noclick="1" />
+							</panel>
+						</panel>
+					</panel>
+
+					<!-- Description -->
+					<panel width="100%" height=".6h" noclick="1" />
+					<panel width="100%" style="grow_noregrow_noinvis" noclick="1">
+						<label style="text_base" width="90%" color=".8 .8 .8 1" fity="1" wrap="1" shadow="1" content="boss_info_phoenix_desc" noclick="1" />
+					</panel>
+
+					<!-- Stats -->
+					<panel width="100%" height="1h" noclick="1" />
+					<instance name="boss_info_section_header" header_text="boss_info_stats_header" header_color="#ff7744" />
+					<instance name="boss_info_stats_panel"
+						stat1="boss_info_phoenix_stat_health"
+						stat2="boss_info_phoenix_stat_damage"
+						stat3="boss_info_phoenix_stat_armor"
+						stat4="boss_info_phoenix_stat_magic_armor"
+						stat5="boss_info_phoenix_stat_movespeed"
+						stat6="boss_info_phoenix_stat_attack_speed"
+						stat7="boss_info_phoenix_stat_attack_range"
+						stat8="boss_info_phoenix_stat_hp_regen"
+						panel_color=".08 .03 .01 .9"
+						border_color=".5 .2 .08 .5"
+					/>
+
+					<!-- Abilities -->
+					<panel width="100%" height="1h" noclick="1" />
+					<instance name="boss_info_section_header" header_text="boss_info_abilities_header" header_color="#ff7744" />
+
+					<instance name="boss_info_ability_card"
+						icon_texture="/npcs/boss/phoenix/ability_01/icon.tga"
+						ability_name="boss_info_phoenix_ability1_name"
+						ability_desc="boss_info_phoenix_ability1_desc"
+						card_color=".08 .03 .01 .9"
+						border_color=".6 .2 .05 .5"
+						name_color="#ff7744"
+					/>
+					<instance name="boss_info_ability_card"
+						icon_texture="/npcs/boss/phoenix/ability_02/icon.tga"
+						ability_name="boss_info_phoenix_ability2_name"
+						ability_desc="boss_info_phoenix_ability2_desc"
+						card_color=".08 .03 .01 .9"
+						border_color=".6 .2 .05 .5"
+						name_color="#ff7744"
+					/>
+					<instance name="boss_info_ability_card"
+						icon_texture="/npcs/boss/phoenix/ability_03/icon.tga"
+						ability_name="boss_info_phoenix_ability3_name"
+						ability_desc="boss_info_phoenix_ability3_desc"
+						card_color=".08 .03 .01 .9"
+						border_color=".6 .2 .05 .5"
+						name_color="#ff7744"
+					/>
+					<instance name="boss_info_ability_card"
+						icon_texture="/npcs/boss/phoenix/ability_04/icon.tga"
+						ability_name="boss_info_phoenix_ability4_name"
+						ability_desc="boss_info_phoenix_ability4_desc"
+						card_color=".08 .03 .01 .9"
+						border_color=".6 .2 .05 .5"
+						name_color="#ff7744"
+					/>
+
+					<!-- Rewards -->
+					<panel width="100%" height="1h" noclick="1" />
+					<instance name="boss_info_section_header" header_text="boss_info_rewards_header" header_color="#44ccff" />
+
+					<instance name="boss_info_reward_card"
+						icon_texture="/items/basic/phoenix_egg/icon.tga"
+						reward_name="boss_info_phoenix_reward1_name"
+						reward_desc="boss_info_phoenix_reward1_desc"
+						card_color=".04 .06 .12 .9"
+						border_color=".15 .3 .55 .5"
+						name_color="#44ccff"
+					/>
+					<instance name="boss_info_reward_card"
+						icon_texture="/items/phoenix_rewards/_itemtoken/icon.tga"
+						reward_name="boss_info_phoenix_reward2_name"
+						reward_desc="boss_info_phoenix_reward2_desc"
+						card_color=".04 .06 .12 .9"
+						border_color=".15 .3 .55 .5"
+						name_color="#44ccff"
+					/>
+
+					<!-- Scaling -->
+					<panel width="100%" height="1h" noclick="1" />
+					<instance name="boss_info_section_header" header_text="Усиление с каждым возрождением" header_color="#bb77ff" />
+					<instance name="boss_info_scaling_panel" scaling_desc="boss_info_phoenix_scaling_desc" />
+
+					<!-- Bottom Spacer -->
+					<panel width="100%" height="4h" noclick="1" />
+
+				</panel>
+
+				<!-- Scroll Capture -->
+				<panel size="100%" processonlyscrollandmovement="1" onloadlua="BossInfo:RegisterScroll(self, 'phoenix')" />
+			</panel>
+
+			<!-- Scrollbar -->
+			<scrollbar name="boss_info_phoenix_scrollbar"
+				texture="/ui/hd_ui/input_controls/scrollbar_mini.tga"
+				width=".8h" handlewidth=".5h" handleheight="4h"
+				slotwidth=".5h" slotheight="1"
+				align="right"
+				minvalue="0" maxvalue="100" step="1" value="0" vertical="true"
+				onslidelua="self:DoEvent()"
+				oneventlua="BossInfo:OnScroll('phoenix', self:GetValue())"
+				visible="0"
+			/>
+		</panel>
+	</template>
+
+	<!-- =========================================== -->
+	<!-- Shared Sub-Templates                        -->
+	<!-- =========================================== -->
+	<!-- Section Header -->
+	<template name="boss_info_section_header">
+		<panel width="100%" height="2.4h" noclick="1">
+			<label style="h2" color="{header_color}" fity="1" valign="center" outline="1" outlinecolor="0 0 0" content="{header_text}" noclick="1" />
+			<panel height="1" width="100%" valign="bottom" noclick="1">
+				<frame texture="$white" color="{header_color}" height="1" width="100%" noclick="1" />
+			</panel>
+		</panel>
+		<panel width="100%" height=".4h" noclick="1" />
+	</template>
+
+	<!-- Stats Panel (Two-Column Grid) -->
+	<template name="boss_info_stats_panel">
+		<frame width="100%" style="grow_noregrow_noinvis" texture="/ui/hd_ui/frames/rounded_bg_solid.tga" color="{panel_color}" borderthickness=".3h" noclick="1">
+			<frame texture="/ui/hd_ui/frames/border_thin.tga" borderthickness=".3h" color="invisible" bordercolor="{border_color}" noclick="1" />
+			<panel width="-1.5h" style="center,grow_noregrow_noinvis" float="bottom" padding=".3h" noclick="1">
+				<panel height=".4h" width="100%" noclick="1" />
+				<panel width="100%" height="1.8h" noclick="1">
+					<panel width="50%" noclick="1">
+						<label font="dyn_bold_10" fity="1" shadow="1" content="{stat1}" noclick="1" />
+					</panel>
+					<panel width="50%" align="right" noclick="1">
+						<label font="dyn_bold_10" fity="1" shadow="1" content="{stat2}" noclick="1" />
+					</panel>
+				</panel>
+				<panel width="100%" height="1.8h" noclick="1">
+					<panel width="50%" noclick="1">
+						<label font="dyn_bold_10" fity="1" shadow="1" content="{stat3}" noclick="1" />
+					</panel>
+					<panel width="50%" align="right" noclick="1">
+						<label font="dyn_bold_10" fity="1" shadow="1" content="{stat4}" noclick="1" />
+					</panel>
+				</panel>
+				<panel width="100%" height="1.8h" noclick="1">
+					<panel width="50%" noclick="1">
+						<label font="dyn_bold_10" fity="1" shadow="1" content="{stat5}" noclick="1" />
+					</panel>
+					<panel width="50%" align="right" noclick="1">
+						<label font="dyn_bold_10" fity="1" shadow="1" content="{stat6}" noclick="1" />
+					</panel>
+				</panel>
+				<panel width="100%" height="1.8h" noclick="1">
+					<panel width="50%" noclick="1">
+						<label font="dyn_bold_10" fity="1" shadow="1" content="{stat7}" noclick="1" />
+					</panel>
+					<panel width="50%" align="right" noclick="1">
+						<label font="dyn_bold_10" fity="1" shadow="1" content="{stat8}" noclick="1" />
+					</panel>
+				</panel>
+				<panel height=".2h" width="100%" noclick="1" />
+			</panel>
+		</frame>
+	</template>
+
+	<!-- Ability Card -->
+	<template name="boss_info_ability_card">
+		<frame width="100%" style="grow_noregrow_noinvis" texture="/ui/hd_ui/frames/rounded_bg_solid.tga" color="{card_color}" borderthickness=".3h" noclick="1">
+			<frame texture="/ui/hd_ui/frames/border_thin.tga" borderthickness=".3h" color="invisible" bordercolor="{border_color}" noclick="1" />
+			<panel width="100%" style="grow_noregrow_noinvis" float="bottom" padding=".4h" noclick="1">
+				<panel height=".3h" width="100%" noclick="1" />
+				<panel width="-1.5h" style="center,grow_noregrow_noinvis" noclick="1">
+					<panel size="5h" noclick="1">
+						<frame texture="/ui/frames/squareglow.tga" width="+.8h" height="+.8h" align="center" valign="center" color="0 0 0 .5" borderthickness=".6h" noclick="1" />
+						<image texture="{icon_texture}" size="100%" noclick="1" />
+						<frame texture="/ui/hd_ui/frames/inner_glow.tga" borderthickness=".5h" color="0 0 0 .4" noclick="1" />
+						<frame borderthickness="1" color="invisible" bordercolor=".5 .5 .5 .6" noclick="1" />
+					</panel>
+					<panel x="6h" width="-6h" style="grow_noregrow_noinvis" float="bottom" padding=".15h" noclick="1">
+						<label font="dyn_bold_12" color="{name_color}" fity="1" outline="1" outlinecolor="0 0 0" content="{ability_name}" noclick="1" />
+						<panel height=".15h" width="100%" noclick="1" />
+						<label style="text_base" width="90%" color=".78 .78 .78 1" fity="1" wrap="1" shadow="1" content="{ability_desc}" noclick="1" />
+					</panel>
+				</panel>
+				<panel height=".3h" width="100%" noclick="1" />
+			</panel>
+		</frame>
+		<panel width="100%" height=".4h" noclick="1" />
+	</template>
+
+	<!-- Reward Card -->
+	<template name="boss_info_reward_card">
+		<frame width="100%" style="grow_noregrow_noinvis" texture="/ui/hd_ui/frames/rounded_bg_solid.tga" color="{card_color}" borderthickness=".3h" noclick="1">
+			<frame texture="/ui/hd_ui/frames/border_thin.tga" borderthickness=".3h" color="invisible" bordercolor="{border_color}" noclick="1" />
+			<panel width="100%" style="grow_noregrow_noinvis" float="bottom" padding=".4h" noclick="1">
+				<panel height=".3h" width="100%" noclick="1" />
+				<panel width="-1.5h" style="center,grow_noregrow_noinvis" noclick="1">
+					<panel size="4.2h" noclick="1">
+						<frame texture="/ui/frames/squareglow.tga" width="+.6h" height="+.6h" align="center" valign="center" color="0 0 0 .5" borderthickness=".5h" noclick="1" />
+						<image texture="{icon_texture}" size="100%" noclick="1" />
+						<frame texture="/ui/hd_ui/frames/inner_glow.tga" borderthickness=".4h" color="0 0 0 .4" noclick="1" />
+						<frame borderthickness="1" color="invisible" bordercolor=".5 .5 .5 .6" noclick="1" />
+					</panel>
+					<panel x="5.2h" width="-5.2h" style="grow_noregrow_noinvis" float="bottom" padding=".15h" noclick="1">
+						<label font="dyn_bold_11" color="{name_color}" fity="1" outline="1" outlinecolor="0 0 0" content="{reward_name}" noclick="1" />
+						<panel height=".1h" width="100%" noclick="1" />
+						<label style="text_base" width="90%" color=".78 .78 .78 1" fity="1" wrap="1" shadow="1" content="{reward_desc}" noclick="1" />
+					</panel>
+				</panel>
+				<panel height=".3h" width="100%" noclick="1" />
+			</panel>
+		</frame>
+		<panel width="100%" height=".4h" noclick="1" />
+	</template>
+
+	<!-- Scaling Panel -->
+	<template name="boss_info_scaling_panel">
+		<frame width="100%" style="grow_noregrow_noinvis" texture="/ui/hd_ui/frames/rounded_bg_solid.tga" color=".07 .04 .12 .9" borderthickness=".3h" noclick="1">
+			<frame texture="/ui/hd_ui/frames/border_thin.tga" borderthickness=".3h" color="invisible" bordercolor=".35 .2 .55 .5" noclick="1" />
+			<panel width="-2h" style="center,grow_noregrow_noinvis" float="bottom" padding=".5h" noclick="1">
+				<panel height=".3h" width="100%" noclick="1" />
+				<label style="text_base" width="90%" color=".85 .8 .9 1" fity="1" wrap="1" shadow="1" content="{scaling_desc}" noclick="1" />
+				<panel height=".3h" width="100%" noclick="1" />
+			</panel>
+		</frame>
+	</template>
+
+</package>

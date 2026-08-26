@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface name="main" noclick="1" alwaysupdate="true" luatable="1" onreloadlua="Main:OnReload()"
+	onload="
+		If(!VarExists('ui_canCreateGame'), CreateBool('ui_canCreateGame', false));
+		CreateBool('_loggedin', false);
+		CreateInt('_raceResult', 1);
+		CreateBool('_game_lobby_setPotentialAvatar', false);
+		CreateString('ui_lastSelectedUser', '');
+		CreateString('ui_lastHoveredUser', '');
+		CreateString('ui_currentChannel', '');
+		SleepWidget(1000,'PlayMusic(\'/music/menu.mp3\',true);');
+	"
+	onloadlua="
+		HoN_Region:Init()
+		Lobby:Init()
+		KeybindInitializer.Init()
+		Main:Init()
+		MarketplaceAnnounce:Init()
+		Login:Init()
+		NotificationsV2:Init()
+		ItemList:Init()
+		Tutorial:Init()
+		Matchmaking:Init()
+		HeroInfo:Init()
+		LobbyCommunicator:Init()
+		BanList_Shared:Init()
+		BanList_Play:Init()
+		BanList_Lobby:Init()
+		RolePick_Shared:Init()
+		RolePick_Play:Init()
+		RolePick_Lobby:Init()
+		Social_Panel:Init()
+		SoundManager:Init()
+		Social_IM:Init()
+		MatchStats:Init()
+		Store:Init()
+	"
+	references="/music/menu.mp3,/music/track_01.mp3,/music/track_02.mp3,/music/track_03.mp3,/music/track_04.mp3,/music/track_05.mp3,/music/track_06.mp3,/music/track_07.mp3,/music/track_08.mp3"
+>
+
+	<!-- Triggers -->
+	<include file="/ui/fe3/triggers.package" />
+
+	<!-- LUA -->
+	<lua file="/ui/scripts/shared/enums.lua" />
+	<lua file="/ui/scripts/shared/global_main.lua" />
+	<lua file="/ui/scripts/shared/widget_extensions.lua" />
+	<lua file="/ui/scripts/shared/widget_anims.lua" />
+	<lua file="/ui/scripts/shared/database.lua" />
+	<lua file="/ui/scripts/fe3/notifications_v2.lua" />
+	<lua file="/ui/scripts/fe3/social_im.lua" references="/ui/hd_ui/icons/send.tga,/ui/fe2/store/icons/account_icons/default.tga,/ui/fe2/elements/comm_current.tga,/ui/fe2/elements/comm_newmsg.tga" />
+	<lua file="/ui/scripts/fe3/social_panel.lua" references="/ui/hd_ui/icons/user_mult.tga,/ui/hd_ui/icons/house.tga,/ui/hd_ui/icons/location.tga,/ui/hd_ui/icons/net-no.tga,/ui/hd_ui/icons/ping_danger_noshadow.tga,/ui/hd_ui/icons/deny.tga,/ui/hd_ui/icons/star.tga" />
+	<lua file="/ui/scripts/shared/ban_list_shared.lua"
+		references="/ui/hd_ui/icons/edit.tga,/ui/hd_ui/frames/rounded_left_bg_solid_tl.tga,/ui/hd_ui/frames/rounded_left_bg_solid_t.tga,/ui/hd_ui/frames/rounded_left_bg_solid_tr.tga,/ui/hd_ui/frames/rounded_left_bg_solid_l.tga,/ui/hd_ui/frames/rounded_left_bg_solid_c.tga,/ui/hd_ui/frames/rounded_left_bg_solid_r.tga,/ui/hd_ui/frames/rounded_left_bg_solid_bl.tga,/ui/hd_ui/frames/rounded_left_bg_solid_b.tga,/ui/hd_ui/frames/rounded_left_bg_solid_br.tga,/ui/hd_ui/frames/rounded_right_bg_solid_tl.tga,/ui/hd_ui/frames/rounded_right_bg_solid_t.tga,/ui/hd_ui/frames/rounded_right_bg_solid_tr.tga,/ui/hd_ui/frames/rounded_right_bg_solid_l.tga,/ui/hd_ui/frames/rounded_right_bg_solid_c.tga,/ui/hd_ui/frames/rounded_right_bg_solid_r.tga,/ui/hd_ui/frames/rounded_right_bg_solid_bl.tga,/ui/hd_ui/frames/rounded_right_bg_solid_b.tga,/ui/hd_ui/frames/rounded_right_bg_solid_br.tga,/ui/hd_ui/frames/border_thin_tl.tga,/ui/hd_ui/frames/border_thin_t.tga,/ui/hd_ui/frames/border_thin_tr.tga,/ui/hd_ui/frames/border_thin_l.tga,/ui/hd_ui/frames/border_thin_c.tga,/ui/hd_ui/frames/border_thin_r.tga,/ui/hd_ui/frames/border_thin_bl.tga,/ui/hd_ui/frames/border_thin_b.tga,/ui/hd_ui/frames/border_thin_br.tga" />
+	<lua file="/ui/scripts/fe3/ban_list_play.lua" />
+	<lua file="/ui/scripts/fe3/ban_list_lobby.lua" />
+	<lua file="/ui/scripts/shared/role_pick_shared.lua" references="/ui/hd_ui/icons/drag.tga" />
+	<lua file="/ui/scripts/shared/role_tokens_shared.lua" references="/ui/hd_ui/icons/role_hardsupport.tga,/ui/hd_ui/icons/lock.tga" />
+	<lua file="/ui/scripts/fe3/role_pick_play.lua" />
+	<lua file="/ui/scripts/fe3/role_pick_lobby.lua" />
+	<lua file="/ui/scripts/fe3/player_hosted.lua" />
+	<lua file="/ui/scripts/fe3/game_lobby.lua"
+		references="/ui/hd_ui/icons/role_suicide.tga,
+	/ui/hd_ui/icons/kick_up.tga,
+	/ui/hd_ui/icons/kick_over.tga,
+	/ui/hd_ui/icons/kick_down.tga,
+	/ui/hd_ui/icons/kick_disabled.tga,
+	/ui/hd_ui/icons/crown.tga,
+	/ui/elements/role_map_elements/map_role_tooltip_carry.tga,
+	/ui/elements/role_map_elements/map_role_tooltip_hardsupport.tga,
+	/ui/elements/role_map_elements/map_role_tooltip_jungle.tga,
+	/ui/elements/role_map_elements/map_role_tooltip_mid.tga,
+	/ui/elements/role_map_elements/map_role_tooltip_offlane.tga,
+	/ui/elements/role_map_elements/map_role_tooltip_softsupport.tga,
+	/ui/elements/role_map_elements/map_role_tooltip_soloofflane.tga,
+	/ui/hd_ui/frames/lobby_herolist_tl.tga,
+	/ui/hd_ui/frames/lobby_herolist_t.tga,
+	/ui/hd_ui/frames/lobby_herolist_tr.tga,
+	/ui/hd_ui/frames/lobby_herolist_l.tga,
+	/ui/hd_ui/frames/lobby_herolist_c.tga,
+	/ui/hd_ui/frames/lobby_herolist_r.tga,
+	/ui/hd_ui/frames/lobby_herolist_bl.tga,
+	/ui/hd_ui/frames/lobby_herolist_b.tga,
+	/ui/hd_ui/frames/lobby_herolist_br.tga,
+
+	/shared/sounds/ui/lobby/button_jointeam.wav,
+	/shared/sounds/ui/lobby/button_lock.wav,
+	/shared/sounds/ui/lobby/player_joined.wav,
+	/shared/sounds/ui/lobby/player_left.wav,
+	/shared/sounds/ui/lobby/player_kicked.wav,
+	/shared/sounds/ui/lobby/player_locked.wav,
+	/shared/sounds/ui/lobby/player_unlocked.wav,
+	/shared/sounds/ui/lobby/balance.wav,
+
+	/shared/sounds/gameannouncer/core/roles/assigned_role_carry.wav,
+	/shared/sounds/gameannouncer/core/roles/assigned_role_hardsupport.wav,
+	/shared/sounds/gameannouncer/core/roles/assigned_role_jungle.wav,
+	/shared/sounds/gameannouncer/core/roles/assigned_role_mid.wav,
+	/shared/sounds/gameannouncer/core/roles/assigned_role_offlane.wav,
+	/shared/sounds/gameannouncer/core/roles/assigned_role_softsupport.wav,
+	/shared/sounds/gameannouncer/core/roles/assigned_role_soloofflane.wav,
+	/shared/sounds/gameannouncer/core/roles/carry.wav,
+	/shared/sounds/gameannouncer/core/roles/hard_support.wav,
+	/shared/sounds/gameannouncer/core/roles/jungle.wav,
+	/shared/sounds/gameannouncer/core/roles/mid.wav,
+	/shared/sounds/gameannouncer/core/roles/offlane.wav,
+	/shared/sounds/gameannouncer/core/roles/soft_support.wav,
+	/shared/sounds/gameannouncer/core/roles/solo_offlane.wav,
+
+	/shared/sounds/ui/ccpanel/cc_added_as_buddy.wav,
+	/shared/sounds/ui/ccpanel/cc_removed_as_buddy.wav,
+	/shared/sounds/ui/ccpanel/cc_buddy_added.wav,
+	/shared/sounds/ui/ccpanel/cc_buddy_removed.wav,
+	/shared/sounds/ui/ccpanel/cc_clan_add.wav,
+	/shared/sounds/ui/ccpanel/cc_buddy_online.wav,
+	/shared/sounds/ui/ccpanel/cc_buddy_offline.wav,
+	/shared/sounds/ui/ccpanel/cc_buddy_left_game.wav,
+	/shared/sounds/ui/ccpanel/cc_buddy_joined_game.wav,
+	/shared/sounds/ui/ccpanel/cc_recieved_channel_message.wav,
+	/shared/sounds/ui/ccpanel/cc_recieved_whisper.wav,
+	/shared/sounds/ui/ccpanel/cc_recieved_im.wav,
+	/shared/sounds/ui/ccpanel/cc_recieved_clan_message.wav,
+	/shared/sounds/ui/ccpanel/cc_sent_channel_message.wav,
+	/shared/sounds/ui/ccpanel/cc_sent_whisper.wav,
+	/shared/sounds/ui/ccpanel/cc_sent_im.wav,
+	/shared/sounds/ui/ccpanel/cc_sent_clan_message.wav,
+	/shared/sounds/ui/ccpanel/cc_game_invite.wav,
+	
+
+	/ui/fe3/plinko_v2/prize_list_frame_center.tga,
+	/ui/fe3/plinko_v2/prize_list_color_left.tga,
+	/ui/fe3/plinko_v2/prize_list_frame_left.tga,
+	/ui/fe3/plinko_v2/prize_list_color_right.tga,
+	/ui/fe3/plinko_v2/prize_list_frame_right.tga,
+	/ui/fe3/plinko_v2/prize_frame_glow.tga,
+	/ui/fe3/plinko_v2/prize_frame_corner_glow.tga,
+	/ui/fe3/plinko_v2/prize_frame_bottom.tga,
+	/ui/fe3/plinko_v2/puck.tga,
+	/ui/fe3/plinko_v2/puck_flash.tga,
+	/ui/fe3/plinko_v2/puck_shadow.tga,
+	/ui/hd_ui/icons/drag_gesture.tga,
+
+	/ui/fe3/plinko_v2/temp/super_board.tga,
+	/ui/fe3/plinko_v2/effects/tier_legendary.tga,
+	/ui/fe3/plinko_v2/effects/tickets_small.tga,
+	/ui/fe3/plinko_v2/effects/tier_epic.tga,
+	/ui/hd_ui/icons/x.tga,
+	
+	/ui/fe3/plinko_v2/bucket_tiers/tickets_big.tga,
+	/ui/fe3/plinko_v2/bucket_tiers/tier_rare.tga,
+	/ui/fe3/plinko_v2/bucket_tiers/tier_common.tga,
+	/ui/fe3/plinko_v2/bucket_tiers/tier_legendary.tga,
+	/ui/fe3/plinko_v2/bucket_tiers/tickets_small.tga,
+	/ui/fe3/plinko_v2/bucket_tiers/tier_epic.tga,
+	
+	/shared/sounds/ui/ccpanel/cc_game_join.wav"
+		instantiates="uidev_section_autostart,uidev_section_tools,uidev_section_settings" />
+
+	<lua file="/ui/scripts/fe3/keybind_initializer.lua" references="/default_keybinds.json,/defaults_of_legends.json,/defaults_of_the_ancients.json" />
+	<lua file="/ui/scripts/shared/tooltips.lua" />
+	<lua file="/ui/scripts/shared/modelpanel_shared.lua" />
+	<lua file="/ui/scripts/fe3/main.lua" references="/shared/sounds/ui/menu/slide_in_short.wav,/shared/sounds/ui/menu/slide_out_2.wav" />
+	<lua file="/ui/scripts/fe3/marketplace_announce.lua" />
+	<lua file="/ui/scripts/fe3/regions.lua" references="/ui/fe2/elements/flag_en.tga,/ui/fe2/elements/flag_fr.tga,/ui/fe2/elements/flag_de.tga,/ui/fe2/elements/flag_br.tga,/ui/fe2/elements/flag_es.tga,/ui/fe2/elements/flag_ro.tga,/ui/fe2/elements/flag_ru.tga,/ui/fe2/elements/flag_vn.tga,/ui/fe2/elements/flag_th.tga,/ui/fe2/elements/flag_id.tga,/ui/fe2/elements/flag_my.tga,/ui/fe2/elements/flag_cn.tga,/ui/fe2/elements/flag_ua.tga,/ui/fe2/elements/flag_tr.tga,/ui/fe2/elements/flag_ko.tga" />
+	<lua file="/ui/scripts/fe3/login.lua" references="/shared/sounds/ui/login_fail.wav" />
+	<lua file="/ui/scripts/shared/shop_shared.lua" references="/ui/hd_ui/elements/sort_cost_high.tga,/ui/hd_ui/elements/sort_cost_low.tga,/ui/hd_ui/icons/attribute_armor.tga,/ui/hd_ui/icons/attribute_attack.tga,/ui/hd_ui/icons/attribute_attack_speed.tga,/ui/hd_ui/icons/attribute_boots.tga,/ui/hd_ui/icons/attribute_magic.tga,/ui/hd_ui/icons/courier.tga,/ui/hd_ui/icons/deny.tga,/ui/hd_ui/icons/empty_pack.tga,/ui/hd_ui/icons/shop_cat_allitems.tga,/ui/hd_ui/icons/shop_cat_boots.tga,/ui/hd_ui/icons/shop_cat_consumables.tga,/ui/hd_ui/icons/shop_cat_damage.tga,/ui/hd_ui/icons/shop_cat_defense.tga,/ui/hd_ui/icons/shop_cat_enchantment.tga,/ui/hd_ui/icons/shop_cat_initiation.tga,/ui/hd_ui/icons/shop_cat_recommended.tga,/ui/hd_ui/icons/shop_cat_supportive.tga,/ui/hd_ui/elements/shop/cat_button_up.tga,/ui/hd_ui/frames/squareglow.tga,/ui/hd_ui/elements/shop/cat_button_selected.tga" />
+	<lua file="/ui/scripts/fe3/itemlist.lua" />
+	<lua file="/ui/scripts/fe3/tutorial.lua" />
+	<lua file="/ui/scripts/fe3/tutorial_slides.lua" />
+	<lua file="/ui/scripts/fe3/match_stats.lua" references="/ui/hd_ui/elements/arrow_up.tga,/ui/hd_ui/icons/building_dmg.tga,/ui/hd_ui/icons/xp.tga" />
+	<lua file="/ui/scripts/fe3/profile-v2.lua" />
+	<lua file="/ui/scripts/fe3/ladder_v2.lua" />
+	<lua file="/ui/scripts/fe3/matchmaking.lua" references="/ui/hd_ui/icons/stopwatch.tga,/maps/caldavarphoenix/icon.tga,/maps/midwars/icon.tga,/maps/showdown/icon.tga,/shared/sounds/ui/lobby/player_joined.wav,/shared/sounds/ui/lobby/match_found.wav,/shared/sounds/ui/lobby/player_kicked.wav,/shared/sounds/ui/lobby/player_left.wav,/shared/sounds/ui/button_click_03.wav,/ui/hd_ui/icons/role_unassigned.tga,/ui/icons/flags/unitedstates-east.tga,/ui/icons/flags/unitedstates-west.tga" instantiates="matchmaking_toggle_widgetstates" />
+	<lua file="/ui/scripts/shared/soundmanager.lua" />
+
+	<!-- Lib Button (This is just for now because communicator needs it apparently) -->
+	<lua file="/ui/scripts/shared/lib_button/lib_button.lua" />
+	<lua file="/ui/scripts/shared/lib_button/lib_button_handler_button2.lua" references="frame(/ui/info/button.tga),frame(/ui/info/button_over.tga),frame(/ui/info/button_down.tga),frame(/ui/frames/rounded_button_bg_white.tga)" />
+	<lua file="/ui/scripts/shared/lib_button/lib_button_handler_simpledepress.lua" />
+	<lua file="/ui/scripts/shared/lib_button/lib_button_handler_simpleability.lua" />
+
+	<!-- Styles -->
+	<include file="/ui/hd_ui/styles.package" />
+	<include file="/ui/hd_ui/styles_modelpanel.package" />
+
+	<!-- Templates -->
+	<include file="/ui/fe3/templates/fspanel_templates.package" />
+	<include file="/ui/fe3/templates/fe3_templates.package" /> <!-- FE3 Specific -->
+	<include file="/ui/hd_ui/templates/shared_templates_global.package" />
+	<include file="/ui/hd_ui/templates/general_templates.package" />
+	<include file="/ui/hd_ui/tooltips/tooltip_templates.package" />
+	<include file="/ui/fe3/templates/itemlist_templates.package" />
+	<include file="/ui/fe3/templates/player_hosted_templates.package" />
+	<include file="/ui/hd_ui/tooltips/tooltip_item.package" />
+	<include file="/ui/fe3/templates/filter_templates.package" />
+	<include file="/ui/fe3/templates/language_select_templates.package" />
+	<include file="/ui/fe3/templates/ban_select_templates.package" />
+	<include file="/ui/fe3/templates/role_pick_templates.package" />
+	<include file="/ui/fe3/templates/tutorial_templates.package" />
+	<include file="/ui/fe3/templates/notifications_v2_templates.package" />
+
+	<childinterface file="/ui/confirmations.interface" />
+
+	<!-- Sleeper Widget -->
+	<panel name="soundManSleeper" width="0" height="0" noclick="1" />
+	<panel name="fe3_sleeper" width="0" height="0" noclick="1" />
+	<panel name="fe3_sleeper2" width="0" height="0" noclick="1" />
+	<panel name="fe3_sleeper3" width="0" height="0" noclick="1" />
+	<panel name="fe3_background_image" width="0" height="0" noclick="1" />
+
+	<!-- Background Effect -->
+	<modelpanel name="fe3_background_effect" style="main_background_effect_style"
+		model="/core/null/invis.mdf"
+		anim="idle"
+		effect="/ui/hd_ui/elements/main/bg.effect"
+		width="100%" height="100%" align="center"
+		onloadlua="if Main:IsUltrawide() then self:SetCameraFov(9) end"
+		noclick="1"
+	/>
+
+	<!-- Seasonal Ice 
+	<image texture="/ui/hd_ui/effects/bg_flame_glow/textures/floor_smoke_white.tga" y="5h" height="25@" hflip="0" color=".95 .95 1 .5" rendermode="additive" noclick="1" />
+	<image texture="/ui/hd_ui/effects/bg_flame_glow/textures/floor_smoke_white.tga" y="-5h" vflip="1" valign="bottom" height="25@" color=".95 .95 1 .5" rendermode="additive" noclick="1" />
+	-->
+
+	<!-- Faded BG (In Game)-->
+	<panel name="fe3_ingame_click_blocker" color="invisible" visible="0" blockinput="1" />
+	<panel name="fe3_transparent_blackout" color="0 0 0 0.45"/>
+
+	<!-- Background Fire FX -->
+	<include file="/ui/fe3/sections/logo_fullscreen_fx.package" />
+
+	<!-- Create Game/Server List -->
+	<include file="/ui/fe3/sections/player_hosted.package" />
+
+	<!-- Lobby Communicator -->
+	<include file="/ui/fe3/sections/lobby_communicator.package" />
+
+	<!-- Game Lobby -->
+	<include file="/ui/fe3/sections/game_lobby.package" />
+
+	<!-- Plinko New -->
+	<include file="/ui/fe3/sections/plinko_v2.package" />
+
+	<!-- Hero List -->
+	<include file="/ui/fe3/sections/hero_list.package" />
+
+	<!-- Item List -->
+	<include file="/ui/fe3/sections/item_list.package" />
+
+	<!-- Patch Notes -->
+	<include file="/ui/fe3/sections/patch_notes.package" />
+
+	<!-- Tutorial (Library) -->
+	<include file="/ui/fe3/sections/tutorial_library.package" />
+
+	<!-- Boss Info -->
+	<include file="/ui/fe3/sections/boss_info.package" />
+
+	<!-- Matchmaking -->
+	<include file="/ui/fe3/sections/matchmaking.package" />
+
+	<!-- Shop -->
+	<include file="/ui/fe3/sections/shop.package" />
+
+	<!-- Ladder -->
+	<include file="/ui/fe3/sections/ladder.package" />
+
+	<!-- Store -->
+	<include file="/ui/fe3/sections/store.package"/>
+
+	<!-- Social Panel (Friends) -->
+	<include file="/ui/fe3/sections/social_panel.package" />
+
+	<!-- Hero Info -->
+	<include file="/ui/fe3/sections/hero_info.package" />
+
+	<!-- Profile V2 -->
+	<include file="/ui/fe3/sections/profilev2.package" />
+
+	<!-- Match Stats -->
+	<include file="/ui/fe3/sections/match_stats.package" />
+
+	<!-- MOTD -->
+	<include file="/ui/fe3/sections/motd.package" />
+
+	<!-- Notifications V2 -->
+	<include file="/ui/fe3/sections/notifications_v2.package" />
+
+	<!-- Bottom Bar -->
+	<include file="/ui/fe3/sections/bottom_bar.package" />
+
+	<!-- FS Panels -->
+	<panel width="-22w" y="10.2h" align="left" noclick="1" processcursor="1"
+		onloadlua="Main:ApplyUltrawideWidth(self, '-22w', '-39.1h')">
+
+		<panel name="fs_parent" noclick="1" processcursor="1">
+			<instance name="fs_panel" body="plinko" />
+			<instance name="fs_panel" body="game_lobby" />
+			<instance name="fs_panel" body="shop" />
+			<instance name="fs_panel" body="ladder" processcursor="1" />
+			<instance name="fs_panel" body="store" />
+			<instance name="fs_panel" body="profile" processcursor="1" />
+			<instance name="fs_panel" body="matchstats" processcursor="1" />
+			<instance name="fs_panel" body="motd" processcursor="1" />
+
+			<instance name="fs_panel_tabbed"
+				body="learn"
+				tab1="patch_notes" tab2="tutorial" tab3="hero_list" tab4="itemlist" tab5="boss_info" tab6=""
+				tabs="patch_notes:patchnotes_title:/ui/hd_ui/icons/news.tga,tutorial:tutorial_library_list_title:/ui/hd_ui/icons/mentorchat.tga,hero_list:general_hero_list:/ui/hd_ui/icons/ck.tga,itemlist:general_itemlist:/ui/hd_ui/icons/attribute_attack.tga,boss_info:boss_info_title:/ui/hd_ui/icons/phoenix.tga"
+			/>
+
+			<instance name="fs_panel_tabbed_extra"
+				body="play"
+				tab1="matchmaking" tab2="game_list" tab3="" tab4=""
+				tabs="matchmaking:ПОИСК МАТЧА,game_list:СВОИ ИГРЫ"
+				extra1="ban_list_core"
+				object1="BanList_Play"
+				extra2="role_pick_core"
+				object2="RolePick_Play"
+			/>
+		</panel>
+
+	</panel>
+
+	<!-- Notification Overlay (after FS Panels so notifications render above matchmaking/lobby) -->
+	<panel width="100%" height="-11.8h" y="-5.7h" valign="bottom" noclick="1">
+		<panel name="notificationsv2_overlay_anchor" height="50%" x="34h" align="left" valign="bottom" float="right" padding="1h" style="grow_noinvis" noclick="1"
+			onloadlua="if NotificationsV2 and NotificationsV2.SyncOverlayToSocialPanel then NotificationsV2:SyncOverlayToSocialPanel() end">
+			<instance name="notificationsv2_core" />
+		</panel>
+	</panel>
+
+	<!-- Marketplace Announcement -->
+	<include file="/ui/fe3/sections/marketplace_announce.package" />
+
+	<!-- Hero Info Panel -->
+	<instance name="hero_info_panel" />
+
+	<!-- Communicator -->
+	<include file="/ui/fe3/sections/communicator.package" />
+
+	<!-- Login Screen-->
+	<panel name="main_login_parent" noclick="1">
+
+		<!-- Login BG Image -->
+		<include file="/ui/fe3/sections/login_background.package" />
+
+		<!-- Login BG Effect NEEDS TO HIDE when not on login screen -->
+		<include file="/ui/fe3/sections/login_fullscreen_fx.package" />
+
+		<!-- Login Form -->
+		<include file="/ui/fe3/sections/login_form.package" />
+
+	</panel>
+
+	<!-- System Bar New -->
+	<include file="/ui/fe3/sections/system_bar.package" />
+
+	<!-- Matchmaking Waiting -->
+	<include file="/ui/fe3/sections/matchmaking_waiting.package" />
+
+	<!-- Click Off Area -->
+	<instance name="communicator_click_off_area" />
+
+	<!-- Social (IMs) -->
+	<include file="/ui/fe3/sections/social_im.package" />
+
+	<!-- Team Builder / Play -->
+	<include file="/ui/fe3/sections/team_builder.package" />
+
+	<!-- Replay Viewer -->
+	<include file="/ui/fe3/sections/replay_viewer.package" />
+
+	<!-- Tutorial (NPE) -->
+	<include file="/ui/fe3/sections/tutorial_npe.package" />
+
+	<!-- Shop Tooltips -->
+	<instance name="item_tooltip" id="itemlist_global_item_tooltip" watch="ItemList_GlobalItemTrigger" help="1" />
+	<instance name="shop_tip" />
+
+	<!-- Stadium Area (friends list + notifications) — included late so they render above lobby/store/matchmaking/custom-games but stay below dialogs and tooltips. -->
+	<include file="/ui/fe3/sections/stadium_area.package" />
+
+	<!-- Bottom-bar selector dropdowns (language + backend). Deliberately above the stadium area as
+	     the one exception, so their popup lists open above the friends list / notifications; dialogs
+	     and tooltips still render above them. Template defined in bottom_bar.package. -->
+	<instance name="bottom_bar_selectors_overlay" />
+
+	<!-- Dialogs / Confirmations -->
+	<include file="/ui/fe3/sections/dialogs.package" />
+
+	<!-- Main Generic Tooltips -->
+	<include file="/ui/hd_ui/tooltips/tooltip_main.package" />
+
+	<if condition="releaseStage_dev">
+		<include file="/ui/dev/autoplay.package" />
+		<include file="/ui/fe3/sections/playground.package" />
+		<include file="/ui/fe3/sections/playground_3d.package" />
+	</if>
+
+	<!-- Disclaimer -->
+	<include file="/ui/fe3/sections/disclaimer.package" />
+
+	<!-- Cache Blackout -->
+	<include file="/ui/fe3/sections/cache_blackout.package" />
+
+</interface>

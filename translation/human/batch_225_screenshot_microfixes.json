@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_225_SCREENSHOT_MICROFIXES",
+  "reviewed_by": "Player screenshots 2026-08-26",
+  "entries": [
+    {"keys":["interface:warning_text1"],"english_hash":"03e902c30c24d9257131965c33de55e9f132d526f5a4681360056120bb453184","ru":"Некоторые материалы в этой игре могут вас оскорбить"},
+    {"keys":["interface:warning_text2"],"english_hash":"9482758b42bb6fce987e961261b44fc366f712d76097c77a1c0a24a911b9e532","ru":"Играйте по своему усмотрению"},
+    {"keys":["interface:warning_dismiss"],"english_hash":"9b73f0bd9b3d4b3f88c08e9c9e269191af04502066ec4d4a513296b053ba87a6","ru":"Нажмите в любом месте, чтобы продолжить"},
+    {"keys":["interface:lang_en"],"english_hash":"ba118bf7fc9c1aedc1edb28a0aa86e0b43b681f222af6616e13c43be87815b06","ru":"Английский"},
+    {"keys":["interface:lang_ru"],"english_hash":"5bcc40adf6e0a2a9c9317f9ac01481271b45ffdd5850d96b562752eee8167b85","ru":"Русский"},
+    {"keys":["interface:lang_th"],"english_hash":"ad705ee19c048a9f50f95320e110b07cd3296c596c2fbdb8e3bd8971ef85efaf","ru":"Тайский"},
+    {"keys":["interface:ban_pick_title"],"english_hash":"4d5469c7be3b51309773b4cbd829f6acf31651bdcd6e0c9949d9a3bbcebad524","ru":"Запреты"},
+    {"keys":["interface:system_bar_buy_jades"],"english_hash":"d9af1a8284a08c971023e093c768b92b6b4d153812b577fb95153419ba08677e","ru":"КУПИТЬ"},
+    {"keys":["interface:rolepick_foot_last_loss"],"english_hash":"88484382331143af51b8d5a3d7d1425eaa38a57cc1b29d281b214a404f2c9459","ru":"В последнем матче вы потратили {delta} жетонов очереди ролей."}
+  ]
+}

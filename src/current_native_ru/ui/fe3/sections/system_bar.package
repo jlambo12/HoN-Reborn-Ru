@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package>
+
+	<!-- LUA -->
+	<lua file="/ui/scripts/fe3/system_bar.lua" />
+
+	<!-- Templates -->
+	<include file="/ui/fe3/templates/system_bar_templates.package" />
+
+	<template name="system_bar_profile"> <!-- SystemBar:ProfileClicked() onclicklua -->
+		<panel width="16h" height="80%" x=".5h" y="-0.2h" valign="center" float="right" padding=".5h" clip="1" 
+			onmouseoverlua="SystemBar:ProfileMouseOver(self, true)"
+			onmouseoutlua="SystemBar:ProfileMouseOver(self, false)"
+			onclicklua="SystemBar:ProfileClicked()"
+		>
+			
+			<!-- Profile Icon -->
+			<panel size="3.2h" valign="center" noclick="1">
+				<!-- Icon -->
+				<image name="sysbar_playericon" texture="/ui/common/ability_coverup.tga" size="93%" style="center" usealphamask="1" alphamaskfile="/ui/hd_ui/mask/item_frame_cutout.tga" noclick="1" />
+
+				<!-- Frame -->
+				<frame name="sysbar_playericon_frame" texture="/ui/hd_ui/frames/border_thin.tga" color=".4 .4 .4" borderthickness=".4h" noclick="1" />
+				<frame texture="/ui/hd_ui/frames/border_thin_grad_top.tga" color=".9 .9 .9 .6" borderthickness=".4h" noclick="1" />
+				
+
+			</panel>
+
+			<panel float="bottom" style="grow_noinvis" valign="center" noclick="1">
+
+				<!-- Player Name -->
+				<label name="sysbar_playername_label" content="-----" font="dyn_bold_11" color=".9 .9 .9 1" shadow="1" shadowoffset="2" fitx="1" fity="1" noclick="1" />
+
+				<!-- MMR -->
+				<label name="sysbar_playername_mmr" content="MMR: ----" font="dyn_9" color=".8 .8 .8 1" shadow="1" shadowoffset="2" fitx="1" fity="1" noclick="1" />
+
+			</panel>
+
+		</panel>
+	</template>
+
+	<template name="system_bar_section_left">
+		<panel width="25w" height="100%" align="left" noclick="1">
+
+			<!-- Spacer -->
+			<panel width="0.2w" height="100%" noclick="1" />
+
+			<!-- Profile -->
+			<instance name="system_bar_profile" />
+
+		</panel>
+	</template>
+
+	<template name="system_bar_section_right">
+		<panel width="34w" height="100%" align="right" noclick="1">
+			<panel height="100%" x="-.5h" float="left" align="right" style="grow_noinvis" noclick="1">
+
+				<!-- Close Game -->
+				<instance name="system_bar_topright_button" frametype="piece" btnType="red" button_id="exit" icon="/ui/hd_ui/icons/x.tga" icon_color="white"
+					onclicklua="Main:CloseButtonPressed()"
+					tooltip="Exit"
+				/>
+
+				<!-- Logout -->
+				<instance name="system_bar_topright_button" frametype="piece" btnType="gray" button_id="logout" icon="/ui/hd_ui/icons/logout.tga" icon_color=".8 .8 .8"
+					panel_name="system_bar_topright_button_logout_btn"
+					onclicklua="Login:Logout()"
+					tooltip="Logout"
+				/>
+
+				<!-- Disconnect -->
+				<instance name="system_bar_topright_button" frametype="piece" btnType="gray" button_id="disconnect" icon="/ui/hd_ui/icons/disconnect.tga" icon_color=".8 .8 .8"
+					panel_name="system_bar_topright_button_disconnect_btn"
+					onclicklua="Lobby:DisconnectButtonPressed()" visible="0"
+					tooltip="Disconnect"
+				/>
+
+				<!-- Notifications -->
+				<!-- <instance name="system_bar_topright_button" frametype="piece" btnType="gray" icon="/ui/hd_ui/icons/bell.tga" enabled="0" icon_color=".8 .8 .8" /> -->
+
+				<!-- Replays -->
+				<instance name="system_bar_topright_button" frametype="piece" btnType="gray" button_id="replays" icon="/ui/hd_ui/icons/replay.tga" icon_color=".8 .8 .8"
+					onclicklua="Main:ToggleBasicFadePanel('offline_replays')"
+					tooltip="Replays"
+				/>
+
+				<!-- MATCH STATS DEBUG TEST 
+				<instance name="system_bar_topright_button" frametype="piece" btnType="gray" icon="/ui/hd_ui/icons/ck.tga" icon_color=".8 .8 .8"
+					onclicklua="MatchStats:DebugTest()"
+					tooltip="Stats DEBUG"
+				/>
+				-->
+
+				<!-- AutoPlay Button -->
+				<!-- 
+				<if condition="releaseStage_dev">
+					<instance name="system_bar_topright_button" frametype="piece" btnType="gray" icon="/ui/hd_ui/icons/fast_forward.tga" icon_color=".8 .8 .8"
+						onclicklua="GetWidget('devui_panel'):ToggleVisible()"
+						tooltip="AutoPlay"
+					/>
+				</if>
+				 -->
+
+				<!-- MOTD / News -->
+				<instance name="system_bar_topright_button" frametype="piece" btnType="gray" button_id="motd" icon="/ui/hd_ui/icons/news.tga" icon_color=".8 .8 .8"
+					onclicklua="Main:FSPanelToggle('motd')"
+					tooltip="News"
+				/>
+
+				<!-- Settings -->
+				<instance name="system_bar_topright_button" frametype="end" btnType="gray" button_id="settings" icon="/ui/hd_ui/icons/settings.tga" icon_color=".8 .8 .8"
+					onclicklua="GetWidget('options_hd', 'options'):ToggleVisible()"
+					tooltip="Settings"
+				/>
+
+				<!-- System Time (Hidden on Narrow) -->
+				<panel width="8h" height="100%" align="right" style="sticky" noclick="1" onloadlua="if Main:IsNarrow() then self:SetVisible(0) end">
+
+					<label name="bottom_bar_systime_label" content="--:--" color="white" style="text_base,centerall" />
+
+				</panel>
+
+				<!-- Users Online -->
+				<panel width="7h" height="100%" align="right" noclick="1">
+					<instance name="system_bar_instance" size="1.6h" align="center" valign="center" id="users" label="0" text_style="h5" icon="/ui/hd_ui/icons/user_mult.tga" tooltip="main_lobby_playersonline" />
+				</panel>
+
+				<!-- Players in Queue -->
+				<panel width="7h" height="100%" align="right" noclick="1">
+					<instance name="system_bar_instance" size="1.6h" align="center" valign="center" id="queue" label="0" text_style="h5" icon="/ui/hd_ui/icons/clock.tga" tooltip="mm_in_queue" />
+				</panel>
+
+			</panel>
+		</panel>
+	</template>
+
+	<template name="system_bar_section_center">
+		<panel width="92h" height="11.5h" align="center" noclick="1">
+
+			<!-- Top Frame -->
+			<image texture="/ui/hd_ui/elements/systembar_top_area.tga" noclick="1" />
+
+			<!-- HoN Logo -->
+			<button
+				name="system_bar_home_btn"
+				width="118@" height="59%" y="-14.8%" x="-.04%" style="center" color="invisible"
+				onclicklua="PlaySound('/shared/sounds/ui/menu/button_click.wav') Main:FSPanelHome()"
+				onmouseoverlua="PlaySound('/shared/sounds/ui/button_over_01.wav') GetWidget('system_bar_home_btn_effect'):FadeIn(150)"
+				onmouseoutlua="GetWidget('system_bar_home_btn_effect'):FadeOut(150)"
+				enabled="0"
+			>
+				<widgetstate statename="up">
+					<image texture="/ui/hd_ui/elements/system_bar_honlogo.tga" style="center" noclick="1" />
+				</widgetstate>	
+				<widgetstate statename="over" y="-1">
+					<image texture="/ui/hd_ui/elements/system_bar_honlogo.tga" style="center" size="+.5%" noclick="1" />
+					<image texture="/ui/hd_ui/elements/system_bar_honlogo.tga" style="center" rendermode="additive" color="1 1 1 .2" size="+.5%" noclick="1" />
+				</widgetstate>	
+				<widgetstate statename="down">
+					<image texture="/ui/hd_ui/elements/system_bar_honlogo.tga" size="-1%" style="center" color=".7 .7 .7" noclick="1" />
+				</widgetstate>	
+				<widgetstate statename="disabled">
+					<image texture="/ui/hd_ui/elements/system_bar_honlogo.tga" noclick="1" />
+				</widgetstate>				
+			</button>
+
+			<!-- HoN Logo Hover Effect -->
+			<modelpanel name="system_bar_home_btn_effect"
+				width="20h" height="20h" y="-5h"
+				style="button_hover_effect_style"
+				effect="/ui/effects/logo_button.effect"
+				onshowlua="self:SetEffect('/ui/effects/logo_button.effect')"
+				valign="top"
+			/>
+
+			<!-- Buttons -->
+			<panel height="49.8%" y="4.6%" noclick="1">
+
+				<!-- Learn -->
+				<instance name="system_bar_bigbutton" x="5.7%" align="left" hflip="1" type="metal" text_style="fe3_topbar_menu" label="ОБУЧЕНИЕ" icon="/ui/hd_ui/icons/attribute_intelligence.tga" size="2.15h"
+					panel_name="learn"
+					onclicklua="Main:FSPanelToggle('learn')"
+				/>
+
+				<!-- Ladder -->
+				<instance name="system_bar_bigbutton" x="20.8%" align="left" hflip="1" type="metal" text_style="fe3_topbar_menu" label="РЕЙТИНГ" icon="/ui/hd_ui/icons/crown.tga" enabled="1"
+					panel_name="ladder"
+					onclicklua="LadderV2:Open()"
+				/>
+
+				<!-- Plinko -->
+				<instance name="system_bar_bigbutton" x="-20.8%" align="right" type="metal" text_style="fe3_topbar_menu" label="ПЛИНКО" icon="/ui/hd_ui/icons/chest.tga" size="1.9h" enabled="1"
+					panel_name="plinko_v2"
+					onclicklua="Main:FSPanelToggle('plinko_v2', Enum.FSPanelDisplay.Normal, false, Enum.FSPanelToggleType.Slide)"
+				/>
+
+				<!-- Store-->
+				<instance name="system_bar_bigbutton" x="-5.7%" align="right" type="blue" text_style="fe3_topbar_menu" label="МАГАЗИН" icon="/ui/hd_ui/icons/house.tga" enabled="1"
+					panel_name="store"
+					onclicklua="Store:OpenStore()"
+				/>
+
+			</panel>
+
+			<!-- Left Edge -->
+			<panel width="1" x="8h" height="6.0h" align="left" noclick="1">
+				<panel width="20w" height="100%" align="right" noclick="1">
+
+					<!-- Currency -->
+					<panel width="100%" valign="center" height="2.4h" noclick="1">
+						<panel align="left" width="36%" noclick="1">
+							<!-- Jade -->
+							<instance name="system_bar_purchase_currency" id="jade" label="0" text_style="h4,color-currency-jade" icon="/ui/hd_ui/elements/jade.tga" tooltip="currency_jade_tip" maxtooltipwidth="35h"
+								onclicklua="Main:GetWidget('vanity_external_jadebuy_dialog'):SetVisible(1)"
+							/>
+						</panel>
+
+						<panel align="left" x="36%" width="25%" noclick="1">
+							<!-- Tickets -->
+							<instance name="system_bar_currency" id="tickets" label="0" align="center" text_style="h4,color-currency-ticket" icon="/ui/hd_ui/elements/ticket.tga" tooltip="currency_tickets_tip" maxtooltipwidth="35h" />
+						</panel>
+
+						<panel align="right" width="39%" noclick="1">
+							<!-- Drops -->
+							<instance name="system_bar_currency" id="drops" label="0" align="center" text_style="h4,color-currency-drop" icon="/ui/fe3/plinko_v2/puck.tga" tooltip="currency_drops_tip" maxtooltipwidth="35h"
+								onclicklua="Main:FSPanelToggle('plinko_v2', Enum.FSPanelDisplay.Normal, false, Enum.FSPanelToggleType.Slide)"
+							/>
+						</panel>
+
+					</panel>
+
+				</panel>
+			</panel>
+
+
+		</panel>
+	</template>
+
+	<template name="system_bar_section_learn_selector">
+		<panel name="system_bar_section_learn_selector_panel" width="32h" height="3.6h" align="center" x="-30h" y="8h" visible="0" noclick="1">
+
+			<!-- Frame -->
+			<frame color="0 0 0 .7" bordercolor=".7 .7 .7" borderthickness="1" noclick="1" />
+
+			<!-- Hero List Btn -->
+			<instance name="button_hd" button_name="system_bar_btn1"
+				width="12.0h" height="3h" x="1h" align="left" valign="center"
+				label="Hero List"
+				onclicklua="SystemBar:ToggleLearnSelector() Main:FSPanelToggle('hero_list')"
+			/>
+
+			<!-- Close Btn -->
+			<instance name="button_hd" button_name="system_bar_btn2"
+				width="3.0h" height="3h" align="center" valign="center"
+				label="X"
+				onclicklua="SystemBar:ToggleLearnSelector()"
+			/>
+
+			<!-- Item List Btn -->
+			<instance name="button_hd" button_name="system_bar_btn3"
+				width="12.0h" height="3h" x="-1h" align="right" valign="center"
+				label="Item List"
+				onclicklua="SystemBar:ToggleLearnSelector() Main:FSPanelToggle('itemlist')"
+			/>
+
+		</panel>
+	</template>
+
+	<!-- Core -->
+	<panel name="system_bar_root" width="100%" height="6.0h" valign="top" visible="0" onloadlua="SystemBar:Init()" noclick="1">
+
+		<!-- Base -->
+		<image texture="/ui/hd_ui/elements/repeating_top_frame.tga" width="100%" utile="1" uscale=".2" height="11.8h" noclick="1" />
+
+		<!-- Center -->
+		<instance name="system_bar_section_center" />
+
+		<!-- Left Side -->
+		<instance name="system_bar_section_left" />
+
+		<!-- Right Side -->
+		<instance name="system_bar_section_right" />
+
+		<!-- Temp Learn Selector -->
+		<instance name="system_bar_section_learn_selector" />
+
+	</panel>
+
+</package>

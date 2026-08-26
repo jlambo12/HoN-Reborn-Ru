@@ -24,7 +24,7 @@ jobs:
       - name: Run portable unit tests
         run: python -m unittest tests/test_audit.py tests/test_launcher_release.py tests/test_live_gameplay_queue.py tests/test_validate_live_localization.py -v
       - name: Verify release overlay
-        run: python tools/verify_release.py --version 0.1.0-beta.11
+        run: python tools/verify_release.py --version 0.1.0-beta.12
       - name: Build autonomous launcher and updater
         shell: pwsh
         run: .\scripts\build_launcher.ps1 -LauncherVersion 1.0.10
@@ -37,10 +37,10 @@ jobs:
         shell: pwsh
         run: |
           python tools/create_update_manifest.py `
-            --version "0.1.0-beta.11" `
+            --version "0.1.0-beta.12" `
             --channel "beta" `
             --launcher-version "1.0.10" `
-            --translation "release-assets\0.1.0-beta.11\resources0.jz" `
+            --translation "release-assets\0.1.0-beta.12\resources0.jz" `
             --launcher "dist\launcher\HoNRebornRU.exe" `
             --updater "dist\launcher\HoNRebornRU.Updater.exe" `
             --game-sha256 "eec2d8bc50200874e8aa368b980d1d67b45f637ffad4fb39030c4749c324af76" `
@@ -48,7 +48,7 @@ jobs:
           python tools/verify_update_manifest.py --directory "dist\release"
       - name: Build distributable package
         shell: pwsh
-        run: .\scripts\package_release.ps1 -Version 0.1.0-beta.11
+        run: .\scripts\package_release.ps1 -Version 0.1.0-beta.12
 
   website:
     name: Website build

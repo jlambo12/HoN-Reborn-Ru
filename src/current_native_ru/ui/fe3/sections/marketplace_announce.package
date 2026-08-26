@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package>
+
+	<!-- Marketplace Announce -->
+	<template name="marketplace_mp_button">
+		<panel name="{root_name}" style="sticky" width="{root_width=100%}" height="{height=5h}" visible="{visible=1}">
+			<button name="{btn_name}" color="invisible" width="{width=66%}" height="100%" align="center" enabled="{enabled=1}"
+				onclicklua="PlaySound('/shared/sounds/ui/menu/button_click.wav') {onclicklua}"
+				references="/shared/sounds/ui/button_over_02.wav,/shared/sounds/ui/menu/button_click.wav"
+				onmouseoverlua="PlaySound('/shared/sounds/ui/button_over_02.wav') GetWidget('{btn_name}_effect'):FadeIn(150)"
+				onmouseoutlua="GetWidget('{btn_name}_effect'):FadeOut(150)"
+			>
+				<widgetstate statename="up">
+					<image texture="/ui/hd_ui/buttons/button_mp_center.tga" width="-100@" height="100%" align="center" color="1 1 1 1" noclick="1" />
+					<image texture="/ui/hd_ui/buttons/button_mp_left.tga" width="50@" height="100%" align="left" color="1 1 1 1" noclick="1" />
+					<image texture="/ui/hd_ui/buttons/button_mp_right.tga" width="50@" height="100%" align="right" color="1 1 1 1" noclick="1" />
+				</widgetstate>
+				<widgetstate statename="over">
+					<image texture="/ui/hd_ui/buttons/button_mp_center.tga" width="-100@" height="100%" align="center" color="1.12 1.12 1.12 1" noclick="1" />
+					<image texture="/ui/hd_ui/buttons/button_mp_left.tga" width="50@" height="100%" align="left" color="1.12 1.12 1.12 1" noclick="1" />
+					<image texture="/ui/hd_ui/buttons/button_mp_right.tga" width="50@" height="100%" align="right" color="1.12 1.12 1.12 1" noclick="1" />
+				</widgetstate>
+				<widgetstate statename="down">
+					<image texture="/ui/hd_ui/buttons/button_mp_center.tga" width="-100@" height="100%" align="center" color=".85 .85 .85 1" noclick="1" />
+					<image texture="/ui/hd_ui/buttons/button_mp_left.tga" width="50@" height="100%" align="left" color=".85 .85 .85 1" noclick="1" />
+					<image texture="/ui/hd_ui/buttons/button_mp_right.tga" width="50@" height="100%" align="right" color=".85 .85 .85 1" noclick="1" />
+				</widgetstate>
+				<widgetstate statename="disabled">
+					<image texture="/ui/hd_ui/buttons/button_mp_center.tga" width="-100@" height="100%" align="center" color=".7 .7 .7 .85" noclick="1" />
+					<image texture="/ui/hd_ui/buttons/button_mp_left.tga" width="50@" height="100%" align="left" color=".7 .7 .7 .85" noclick="1" />
+					<image texture="/ui/hd_ui/buttons/button_mp_right.tga" width="50@" height="100%" align="right" color=".7 .7 .7 .85" noclick="1" />
+				</widgetstate>
+
+				<modelpanel name="{btn_name}_effect" width="100%" height="100%" style="button_hover_effect_style" onshowlua="self:SetEffect('/ui/effects/marketplace_button.effect')" />
+
+				<label font="dyn_bold_14" shadow="1" y="-.125h" textalign="left" textvalign="center" valign="center" align="left" x="3h" width="52%" height="100%" content="{cta=GET IT NOW}" gradientstart="#ffffff" gradientmid="#d6a724" gradientmidpos="0.5" gradientend="#5f2f0c" gradientdirection="vertical" noclick="1" />
+
+				<panel height="100%" width="9h" align="right" valign="center" x="-2h" noclick="1">
+					<label name="{label_name}" font="dyn_bold_12" shadow="1" y="-.125h" color="1 1 1 1" align="left" valign="center" width="6h" height="100%" textalign="right" textvalign="center" content="{label=---}" noclick="1" />
+					<image texture="{icon}" size="2.2h" align="right" valign="center" noclick="1" />
+				</panel>
+			</button>
+		</panel>
+	</template>
+
+	<template name="marketplace_mp_demo_button">
+		<panel name="{root_name}" style="sticky" width="{root_width=100%}" height="{height=5h}" visible="{visible=1}">
+			<button name="{btn_name}" color="invisible" width="{width=100%}" height="100%" align="center" enabled="{enabled=1}"
+				onclicklua="PlaySound('/shared/sounds/ui/menu/button_click.wav') {onclicklua}"
+				references="/shared/sounds/ui/button_over_02.wav,/shared/sounds/ui/menu/button_click.wav"
+				onmouseoverlua="PlaySound('/shared/sounds/ui/button_over_02.wav') GetWidget('{btn_name}_effect'):FadeIn(150)"
+				onmouseoutlua="GetWidget('{btn_name}_effect'):FadeOut(150)"
+			>
+				<widgetstate statename="up">
+					<image texture="/ui/hd_ui/buttons/button_mp_center.tga" width="-100@" height="100%" align="center" color="1 1 1 1" noclick="1" />
+					<image texture="/ui/hd_ui/buttons/button_mp_left.tga" width="50@" height="100%" align="left" color="1 1 1 1" noclick="1" />
+					<image texture="/ui/hd_ui/buttons/button_mp_right.tga" width="50@" height="100%" align="right" color="1 1 1 1" noclick="1" />
+				</widgetstate>
+				<widgetstate statename="over">
+					<image texture="/ui/hd_ui/buttons/button_mp_center.tga" width="-100@" height="100%" align="center" color="1.12 1.12 1.12 1" noclick="1" />
+					<image texture="/ui/hd_ui/buttons/button_mp_left.tga" width="50@" height="100%" align="left" color="1.12 1.12 1.12 1" noclick="1" />
+					<image texture="/ui/hd_ui/buttons/button_mp_right.tga" width="50@" height="100%" align="right" color="1.12 1.12 1.12 1" noclick="1" />
+				</widgetstate>
+				<widgetstate statename="down">
+					<image texture="/ui/hd_ui/buttons/button_mp_center.tga" width="-100@" height="100%" align="center" color=".85 .85 .85 1" noclick="1" />
+					<image texture="/ui/hd_ui/buttons/button_mp_left.tga" width="50@" height="100%" align="left" color=".85 .85 .85 1" noclick="1" />
+					<image texture="/ui/hd_ui/buttons/button_mp_right.tga" width="50@" height="100%" align="right" color=".85 .85 .85 1" noclick="1" />
+				</widgetstate>
+				<widgetstate statename="disabled">
+					<image texture="/ui/hd_ui/buttons/button_mp_center.tga" width="-100@" height="100%" align="center" color=".7 .7 .7 .85" noclick="1" />
+					<image texture="/ui/hd_ui/buttons/button_mp_left.tga" width="50@" height="100%" align="left" color=".7 .7 .7 .85" noclick="1" />
+					<image texture="/ui/hd_ui/buttons/button_mp_right.tga" width="50@" height="100%" align="right" color=".7 .7 .7 .85" noclick="1" />
+				</widgetstate>
+
+				<modelpanel name="{btn_name}_effect" width="100%" height="100%" style="button_hover_effect_style" onshowlua="self:SetEffect('/ui/effects/marketplace_button.effect')" />
+				<image name="{btn_name}_play_icon" texture="/ui/hd_ui/icons/play.tga" size="1.8h" x="-3.2h" align="center" valign="center" color="#d6a724" visible="0" noclick="1" />
+				<label name="{btn_name}_label" font="dyn_bold_14" shadow="1" y="-.125h" textalign="center" textvalign="center" valign="center" align="center" width="100%" height="100%" content="{cta=DEMO}" gradientstart="#ffffff" gradientmid="#d6a724" gradientmidpos="0.5" gradientend="#5f2f0c" gradientdirection="vertical" noclick="1" />
+			</button>
+		</panel>
+	</template>
+
+	<template name="marketplace_countdown">
+		<panel name="marketplace_countdown{id}" x="{x=0}" width="6.4h" height="100%" noclick="1">
+			<label name="marketplace_countdown_value_{id}" y=".15h" width="100%" height="2.2h" style="h4" font="dyn_bold_15" content="{value}" textalign="center" textvalign="center" shadow="1" gradientstart="#ffffff" gradientend="#929292" gradientdirection="vertical" noclick="1" />
+			<label name="marketplace_countdown_unit_{id}" y="2.55h" width="100%" height="1.1h" style="text_label_xs" font="dyn_9" content="{unit}" textalign="center" textvalign="center" shadow="1" gradientstart="#ffffff" gradientmid="#c87f15" gradientmidpos="0.5" gradientend="#5f2f0c" gradientdirection="vertical" noclick="1" />
+		</panel>
+	</template>
+
+	<template name="marketplace_announce_showcase">
+		<panel width="100%" height="{height=36h}" y="-1h" noclick="1">
+			<panel width="100%" height="8.4h" valign="bottom" y="-4.5h" noclick="1">
+				<panel align="center" width="100%" height="2.4h" noclick="1">
+					<label name="marketplace_announce_subtitle_label{suffix}" y=".55h" width="100%" height="1.4h" valign="center" textalign="center" textvalign="center" font="dyn_bold_10" content="marketplace_header_subtitle" gradientstart="#ffffff" gradientmid="#c87f15" gradientmidpos="0.5" gradientend="#5f2f0c" gradientdirection="vertical" shadow="1" shadowcolor="0 0 0 1" noclick="1" visible="1" />
+				</panel>
+
+				<panel name="marketplace_announce_status_root{suffix}" y="4.5h" align="center" height="4.0h" width="100%" noclick="1" visible="0">
+					<label name="marketplace_announce_status_label{suffix}" y="1.35h" width="100%" height="1.3h" textalign="center" textvalign="center" font="dyn_bold_10" content="marketplace_header_subtitle" gradientstart="#ffffff" gradientmid="#c87f15" gradientmidpos="0.5" gradientend="#5f2f0c" gradientdirection="vertical" shadow="1" shadowcolor="0 0 0 1" noclick="1" />
+				</panel>
+
+				<!-- Countdown (target date also drives the auto-hide in lua) -->
+				<panel name="marketplace_announce_countdown_root" y="3h" align="center" height="4.0h" width="27h" noclick="1" visible="1">
+					<frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" borderthickness="1h" color=".1 0 .1 .65" width="100%" height="100%" clip="1" noclick="1">
+						<image texture="/ui/hd_ui/elements/grad_linear_vert.tga" align="center" width="93%" height="100%" color="0 0 0 0.5" noclick="1" />
+						<panel width="100%" height="100%" noclick="1">
+							<instance name="marketplace_countdown" id="days" unit="DAYS" value="05" x=".45h" />
+							<image texture="/ui/hd_ui/elements/white.tga" x="6.85h" width="1@" height="62%" valign="center" color="#d5a44e77" noclick="1" />
+							<instance name="marketplace_countdown" id="hours" unit="HOURS" value="04" x="7.15h" />
+							<image texture="/ui/hd_ui/elements/white.tga" x="13.55h" width="1@" height="62%" valign="center" color="#d5a44e77" noclick="1" />
+							<instance name="marketplace_countdown" id="mins" unit="MINUTES" value="17" x="13.85h" />
+							<image texture="/ui/hd_ui/elements/white.tga" x="20.25h" width="1@" height="62%" valign="center" color="#d5a44e77" noclick="1" />
+							<instance name="marketplace_countdown" id="secs" unit="SECONDS" value="59" x="20.55h" />
+						</panel>
+					</frame>
+				</panel>
+			</panel>
+
+			<panel height="5.6h" width="100%" valign="bottom" noclick="1">
+				<!-- Purchase Btn -->
+				<instance name="marketplace_mp_button" enabled="0" visible="1"
+					btn_name="marketplace_announce_purchase_button{suffix}"
+					cta="ПОЛУЧИТЬ"
+					icon="/ui/hd_ui/elements/jade.tga"
+					label_name="marketplace_announce_purchase_label{suffix}"
+					onclicklua="MarketplaceAnnounce:OpenProduct()"
+				/>
+
+			</panel>
+		</panel>
+	</template>
+
+	<frame name="marketplace_announce_root" x=".8h" y="7h" width="32.2h" style="grow_noregrow_noinvis" texture="/ui/hd_ui/frames/rounded_grad_minor.tga" color="#280a1d86" borderthickness=".5h" visible="0">
+
+		<!-- Drop shadow -->
+		<frame size="+2.4h" align="center" valign="center" texture="/ui/hd_ui/frames/squareglow.tga" color="0 0 0 .25" bordercolor="0 0 0 0.25" borderthickness="1h" noclick="1" />
+
+		<!-- Stage background - spans full card height, behind everything -->
+		<panel width="100%" height="100%" color="0 0 0 1" noclick="1" clip="1">
+			<image name="marketplace_announce_stage_background" texture="$invis" width="100@" height="100%" align="center" valign="center" style="center" visible="0" noclick="1" />
+			<modelpanel name="marketplace_announce_stage"
+				width="100%" height="100%" align="center"
+				model="/shared/models/invis.mdf"
+				style="marketplace_announce_stage_style"
+				noclick="1"
+			/>
+			<modelpanel name="marketplace_announce_stage_announcer"
+				width="100%" height="100%" align="center"
+				model="/shared/models/invis.mdf"
+				style="shop_fe3_announcer_stage_style"
+				visible="0"
+				noclick="1"
+			/>
+		</panel>
+
+		<!-- Title effect - renders BEFORE the character so character paints over it -->
+		<modelpanel name="marketplace_announce_title_effect" style="button_hover_effect_style" width="100%" height="60%" y="-2h" valign="top" visible="1" noclick="1"/>
+
+		<!-- Title banner image - renders BEFORE the character so character paints over it -->
+		<panel height="10h" noclick="1">
+			<image name="marketplace_announce_title_image" texture="/ui/fe3/elements/feature_avatar_title_1.png" y="3h" width="240@" height="120%" align="center" noclick="1" rendermode="none" />
+		</panel>
+
+		<!-- Character model - full card height, foreground UI renders on top -->
+		<panel width="100%" height="100%" noclick="1" clip="1">
+			<modelpanel name="marketplace_announce_modelpanel"
+				width="100%" height="100%"
+				style="marketplace_announce_modelpanel_style"
+				model="/core/null/invis.mdf"
+				anim="idle"
+			/>
+		</panel>
+	
+		<!-- Body -->
+		<panel y="12h" width="100%" style="grow_noregrow_noinvis" float="bottom" padding=".8h" noclick="1">
+			<instance name="marketplace_announce_showcase" />
+		</panel>
+
+		<!-- Header -->
+		<panel height="10h" noclick="1">
+				<image texture="/ui/hd_ui/elements/corner_grad.tga" x=".2h" y=".2h" width="100@" color="#fb992b2a" noclick="1" />
+
+				<!-- Content offset panel -->
+				<panel name="marketplace_announce_header_content" width="100%" height="100%" y="35%" noclick="1">
+
+					<label name="marketplace_announce_title_label" y="10%" width="90%" height="3h" align="center" style="h1" font="dyn_bold_16" fitx="1" color="#f6c45a" content="" textalign="center" textvalign="center" shadow="1" noclick="1" visible="0" />
+
+				</panel>
+		</panel>
+
+		<!-- Title effect was here - moved above the character panel so it renders behind -->
+
+		<modelpanel name="marketplace_announce_swap_effect" style="button_hover_effect_style" width="100%" height="100%" visible="0" noclick="1"/>
+
+		<!-- Expand -->
+		<button name="marketplace_announce_expand_button" size="2.4h" x="-1.5h" y="1.5h" align="right" valign="top" color="invisible"
+			onclick="PlaySound('/shared/sounds/ui/button_click_01.wav');"
+			onmouseover="PlaySound('/shared/sounds/ui/button_over_02.wav');"
+			onmouseoverlua="Tooltips:TooltipHover_Main(self, 'Expand Model Preview', 'bottom')"
+			onmouseoutlua="Tooltips:TooltipHover_Main(false)"
+			onclicklua="MarketplaceAnnounce:ShowModal()"
+		>
+			<widgetstate statename="up">
+				<image texture="/ui/hd_ui/icons/expand.tga" color=".85 .85 .85 1" size="2h" style="center" noclick="1" />
+			</widgetstate>
+			<widgetstate statename="over" >
+				<image texture="/ui/hd_ui/icons/expand.tga" color="1 1 1 1" size="2.1h" style="center" noclick="1" />
+			</widgetstate>
+			<widgetstate statename="down">
+				<image texture="/ui/hd_ui/icons/expand.tga" color=".85 .85 .85 1" size="2h" style="center" noclick="1" />
+			</widgetstate>
+		</button>
+
+		<!-- Featured frame border -->
+		<panel size="100%" noclick="1">
+			<image valign="center" width=".5h" align="left" texture="/ui/fe3/store/featured/featured_frame_l.tga" noclick="1"/>
+			<image valign="center" width=".5h" align="right" hflip="1" texture="/ui/fe3/store/featured/featured_frame_l.tga" noclick="1"/>
+			<image align="center" height=".5h" valign="top" texture="/ui/fe3/store/featured/featured_frame_t.tga" noclick="1"/>
+			<image align="center" height=".5h" valign="bottom" vflip="1" texture="/ui/fe3/store/featured/featured_frame_t.tga" noclick="1"/>
+			<image size="3h" align="left" valign="top" texture="/ui/fe3/store/featured/featured_frame_tl.tga" noclick="1"/>
+			<image size="3h" align="right" valign="top" hflip="1" texture="/ui/fe3/store/featured/featured_frame_tl.tga" noclick="1"/>
+			<image size="3h" align="left" valign="bottom" vflip="1" texture="/ui/fe3/store/featured/featured_frame_tl.tga" noclick="1"/>
+			<image size="3h" align="right" valign="bottom" hflip="1" vflip="1" texture="/ui/fe3/store/featured/featured_frame_tl.tga" noclick="1"/>
+		</panel>
+
+		<!-- Rarity ornate header banner sitting on top edge -->
+		<panel height="0" align="center" valign="top" noclick="1">
+			<panel height="3.0h" y="0" align="center" width="14h" style="grow_noinvis" noclick="1">
+				<image texture="/ui/fe3/store/featured/rarity_title.tga" width="100%" height="100%" noclick="1" />
+				<label name="marketplace_announce_rarity_label" y="-0.5h" valign="center" content="" style="h4" font="dyn_bold_13" textalign="center" textvalign="center" width="100%" height="100%" shadow="1" gradientstart="#ffffff" gradientmid="#c87f15" gradientmidpos="0.5" gradientend="#5f2f0c" gradientdirection="vertical" noclick="1" />
+			</panel>
+		</panel>
+
+	</frame>
+
+	<template name="marketplace_announce_include_badge">
+		<panel name="marketplace_announce_include_badge_{id}" width="5.25h" height="6.95h" align="center" visible="0" noclick="1">
+			<image name="marketplace_announce_include_badge_icon_{id}" texture="{icon=$invis}" width="100%" height="100%" align="center" valign="center" noclick="1" />
+			<modelpanel name="marketplace_announce_include_badge_effect_{id}" width="4.75h" height="4.75h" y=".28h" align="center" valign="top" style="button_hover_effect_style" visible="1" noclick="1" onshowlua="self:SetEffect('/ui/effects/marketplace_announce_badge.effect')" />
+			<label name="marketplace_announce_include_badge_label_{id}" y="5.2h" width="4.65h" height="1h" align="center" font="dyn_bold_9" fitx="1" fitxpadding=".2h" content="{label}" textalign="center" textvalign="center" shadow="1" gradientstart="#ffffff" gradientmid="#d6a724" gradientmidpos="0.5" gradientend="#5f2f0c" gradientdirection="vertical" noclick="1" />
+		</panel>
+	</template>
+
+	<panel name="marketplace_announce_modal_root" size="100%" color="0 0 0 .74" visible="0" onshowlua="self:BringToFront()">
+
+		<frame name="marketplace_announce_modal_frame" width="80@" height="80%" align="center" valign="center" texture="/ui/hd_ui/frames/rounded_grad_minor.tga" color="#280a1d86" borderthickness=".5h">
+
+			<!-- Drop shadow -->
+			<frame size="+2.4h" align="center" valign="center" texture="/ui/hd_ui/frames/squareglow.tga" color="0 0 0 .35" bordercolor="0 0 0 0.35" borderthickness="1h" noclick="1" />
+
+			<panel name="marketplace_announce_modal_viewport" width="100%" height="100%" color="0 0 0 1" noclick="1" clip="1">
+				<!-- Stage background - spans full card height, behind everything -->
+				<image name="marketplace_announce_stage_background_modal" texture="$invis" width="100@" height="100%" align="center" valign="center" style="center" visible="0" noclick="1" />
+				<modelpanel name="marketplace_announce_stage_modal"
+					width="100%" height="100%" align="center"
+					model="/shared/models/invis.mdf"
+					style="marketplace_announce_stage_modal_style"
+					noclick="1"
+				/>
+				<modelpanel name="marketplace_announce_stage_announcer_modal"
+					width="100%" height="100%" align="center"
+					model="/shared/models/invis.mdf"
+					style="shop_fe3_announcer_stage_style"
+					visible="0"
+					noclick="1"
+				/>
+
+				<!-- Title effect - renders BEFORE the character so character paints over it -->
+				<modelpanel name="marketplace_announce_title_effect_modal" style="button_hover_effect_style" width="100%" height="60%" y="-10h" valign="top" visible="1" noclick="1"/>
+
+				<!-- Title banner image - before character so character paints over it -->
+				<panel height="16h" width="100%" valign="top" noclick="1">
+					<image name="marketplace_announce_title_image_modal" texture="/ui/fe3/elements/feature_avatar_title_1.png" y="2h" width="200@" height="100%" align="center" noclick="1" rendermode="none" />
+					<label name="marketplace_announce_title_label_modal" y="4h" width="80%" height="4h" align="center" style="h1" font="dyn_bold_18" fitx="1" color="#f6c45a" content="" textalign="center" textvalign="center" shadow="1" noclick="1" visible="0" />
+				</panel>
+
+				<!-- Character model -->
+				<modelpanel name="marketplace_announce_modelpanel_modal"
+					width="100%" height="100%"
+					style="marketplace_announce_modelpanel_modal_style"
+					model="/core/null/invis.mdf"
+					anim="idle"
+				/>
+			</panel>
+
+			<!-- Close -->
+			<instance name="closexbutton" button_name="marketplace_announce_modal_close" size="2.25h" x="-1h" y="1h" align="right" valign="top" onclicklua="MarketplaceAnnounce:HideModal()" />
+
+			<panel name="marketplace_announce_includes_panel" y="-7h" width="40h" height="11.4h" align="center" valign="bottom" visible="0" noclick="1">
+				<image texture="/ui/fe3/elements/dpp/new_frame.png" width="40h" height="11.1h" align="center" y=".15h" noclick="1" />
+
+				<panel height="0" align="center" valign="top" noclick="1">
+					<panel height="1.5h" y="1.1h" align="center" width="14h" noclick="1">
+						<label name="marketplace_announce_includes_title" valign="center" content="INCLUDES NEW:" style="h4" font="dyn_bold_14" textalign="center" textvalign="center" width="100%" height="100%" shadow="1" gradientstart="#ffffff" gradientmid="#c87f15" gradientmidpos="0.5" gradientend="#5f2f0c" gradientdirection="vertical" noclick="1" />
+					</panel>
+				</panel>
+
+				<panel name="marketplace_announce_includes_badges" width="100%" height="6.0h" align="center" y="3.5h" noclick="1">
+					<instance name="marketplace_announce_include_badge" id="vfx" label="VFX" icon="/ui/fe3/elements/dpp/icon_vfx.png" />
+					<instance name="marketplace_announce_include_badge" id="sfx" label="SFX" icon="/ui/fe3/elements/dpp/icon_sfx.png" />
+					<instance name="marketplace_announce_include_badge" id="voice" label="VOICE" icon="/ui/fe3/elements/dpp/icon_voice.png" />
+					<instance name="marketplace_announce_include_badge" id="anims" label="ANIMS" icon="/ui/fe3/elements/dpp/icon_anims.png" />
+					<instance name="marketplace_announce_include_badge" id="icons" label="ICONS" icon="/ui/fe3/elements/dpp/icon_icons.png" />
+				</panel>
+			</panel>
+
+			<panel name="marketplace_announce_modal_action_panel" width="48h" height="8.4h" align="center" valign="bottom" y="-1h" noclick="1">
+				<label name="marketplace_announce_available_label_modal" y="-11.2h" width="100%" height="1.6h" font="dyn_bold_10" content="marketplace_header_subtitle" textalign="center" textvalign="center" shadow="1" gradientstart="#ffffff" gradientmid="#c87f15" gradientmidpos="0.5" gradientend="#5f2f0c" gradientdirection="vertical" noclick="1" visible="1" />
+
+				<panel name="marketplace_announce_modal_button_row" y="2.35h" width="46h" height="5h" align="center" noclick="1">
+					<panel width="22h" height="100%" align="left" noclick="1">
+						<instance name="marketplace_mp_button" root_name="marketplace_announce_purchase_button_modal_root" root_width="22h" enabled="0" visible="1" width="100%" height="5h"
+							btn_name="marketplace_announce_purchase_button_modal"
+							cta="ПОЛУЧИТЬ"
+							icon="/ui/hd_ui/elements/jade.tga"
+							label_name="marketplace_announce_purchase_label_modal"
+							onclicklua="MarketplaceAnnounce:OpenProduct()"
+						/>
+					</panel>
+
+					<panel width="22h" height="100%" align="right" noclick="1">
+						<instance name="marketplace_mp_demo_button" root_name="marketplace_announce_demo_button_modal_root" root_width="22h" visible="1" width="100%" height="5h"
+							btn_name="marketplace_announce_demo_button_modal"
+							cta="DEMO"
+							onclicklua="MarketplaceAnnounce:DemoProduct()"
+						/>
+					</panel>
+				</panel>
+			</panel>
+
+			<modelpanel name="marketplace_announce_swap_effect_modal" style="button_hover_effect_style" width="100%" height="100%" visible="0" noclick="1"/>
+
+			<!-- Featured frame border -->
+			<panel size="100%" noclick="1">
+				<image height="-2" valign="center" width=".5h" align="left" texture="/ui/fe3/store/featured/featured_frame_l.tga" noclick="1"/>
+				<image height="-2" valign="center" width=".5h" align="right" hflip="1" texture="/ui/fe3/store/featured/featured_frame_l.tga" noclick="1"/>
+				<image width="-2" align="center" height=".5h" valign="top" texture="/ui/fe3/store/featured/featured_frame_t.tga" noclick="1"/>
+				<image width="-2" align="center" height=".5h" valign="bottom" vflip="1" texture="/ui/fe3/store/featured/featured_frame_t.tga" noclick="1"/>
+				<image size="2.25h" align="left" valign="top" texture="/ui/fe3/store/featured/featured_frame_tl.tga" noclick="1"/>
+				<image size="2.25h" align="right" valign="top" hflip="1" texture="/ui/fe3/store/featured/featured_frame_tl.tga" noclick="1"/>
+				<image size="2.25h" align="left" valign="bottom" vflip="1" texture="/ui/fe3/store/featured/featured_frame_tl.tga" noclick="1"/>
+				<image size="2.25h" align="right" valign="bottom" hflip="1" vflip="1" texture="/ui/fe3/store/featured/featured_frame_tl.tga" noclick="1"/>
+			</panel>
+
+			<!-- Rarity ornate header banner -->
+			<panel height="0" align="center" valign="top" noclick="1">
+				<panel height="3.0h" y="0" align="center" width="14h" style="grow_noinvis" noclick="1">
+					<image texture="/ui/fe3/store/featured/rarity_title.tga" width="100%" height="100%" noclick="1" />
+					<label name="marketplace_announce_rarity_label_modal" y="-0.5h" valign="center" content="" style="h4" font="dyn_bold_13" textalign="center" textvalign="center" width="100%" height="1.8h" shadow="1" gradientstart="#ffffff" gradientmid="#c87f15" gradientmidpos="0.5" gradientend="#5f2f0c" gradientdirection="vertical" noclick="1" />
+				</panel>
+			</panel>
+
+		</frame>
+
+	</panel>
+
+</package>

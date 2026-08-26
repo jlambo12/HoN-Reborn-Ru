@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "batch_id": "PREACT_RUNTIME_017_CASEFOLD_LIVE_CTA",
+  "scope": "Uppercase CTA labels returned by the live MOTD API",
+  "reviewed_by": "Player screenshots 2026-08-26",
+  "apply_order": "post",
+  "rows": [
+    {
+      "source_file": "preact-remote/src/components/motd.tsx",
+      "english": "function localize(text: string): string { return RU_TEXT[text] || text; }",
+      "russian": "function localize(text: string): string {\n  const direct = RU_TEXT[text];\n  if (direct) return direct;\n  const folded = text.toLocaleLowerCase();\n  for (const [source, translated] of Object.entries(RU_TEXT)) {\n    if (source.toLocaleLowerCase() === folded) {\n      return text === text.toLocaleUpperCase() ? translated.toLocaleUpperCase() : translated;\n    }\n  }\n  return text;\n}",
+      "expected_matches": 1
+    }
+  ]
+}

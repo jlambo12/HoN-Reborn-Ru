@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "batch_id": "NATIVE_RUNTIME_005_SCREENSHOT_MICROFIXES",
+  "reviewed_by": "Player screenshots and exact CURRENT Juvio source 2026-08-26",
+  "rows": [
+    {"source_file":"ui/fe3/sections/system_bar.package","english":"label=\"LEARN\"","russian":"label=\"ОБУЧЕНИЕ\"","expected_matches":1},
+    {"source_file":"ui/fe3/sections/system_bar.package","english":"label=\"LADDER\"","russian":"label=\"РЕЙТИНГ\"","expected_matches":1},
+    {"source_file":"ui/fe3/sections/system_bar.package","english":"label=\"PLINKO\"","russian":"label=\"ПЛИНКО\"","expected_matches":1},
+    {"source_file":"ui/fe3/sections/system_bar.package","english":"label=\"STORE\"","russian":"label=\"МАГАЗИН\"","expected_matches":1},
+    {"source_file":"ui/fe3/main.interface","english":"tabs=\"matchmaking:Matchmaking,game_list:Custom Games\"","russian":"tabs=\"matchmaking:ПОИСК МАТЧА,game_list:СВОИ ИГРЫ\"","expected_matches":1},
+    {"source_file":"ui/fe3/templates/matchmaking_templates.package","english":"label=\"BEST BALANCE\"","russian":"label=\"ЛУЧШИЙ БАЛАНС\"","expected_matches":1},
+    {"source_file":"ui/fe3/templates/matchmaking_templates.package","english":"label=\"FAST QUEUE\"","russian":"label=\"БЫСТРАЯ ОЧЕРЕДЬ\"","expected_matches":1},
+    {"source_file":"ui/scripts/fe3/regions.lua","english":"return {'en', 'th'}","russian":"return {'en', 'ru', 'th'}","expected_matches":2},
+    {"source_file":"ui/fe3/sections/boss_info.package","english":"header_text=\"boss_info_scaling_header\"","russian":"header_text=\"Усиление с каждым возрождением\"","expected_matches":2},
+    {"source_file":"ui/fe3/sections/marketplace_announce.package","english":"cta=\"GET IT NOW\"","russian":"cta=\"ПОЛУЧИТЬ\"","expected_matches":2},
+    {"source_file":"ui/scripts/fe3/marketplace_announce.lua","english":"availabilityText = 'This Avatar is not marketable.'","russian":"availabilityText = 'Этот облик нельзя продать.'","expected_matches":1},
+    {"source_file":"ui/scripts/fe3/store_featured.lua","english":"common    = 'Common'","russian":"common    = 'Обычный'","expected_matches":1},
+    {"source_file":"ui/scripts/fe3/store_featured.lua","english":"uncommon  = 'Uncommon'","russian":"uncommon  = 'Необычный'","expected_matches":1},
+    {"source_file":"ui/scripts/fe3/store_featured.lua","english":"rare      = 'Rare'","russian":"rare      = 'Редкий'","expected_matches":1},
+    {"source_file":"ui/scripts/fe3/store_featured.lua","english":"epic      = 'Epic'","russian":"epic      = 'Эпический'","expected_matches":1},
+    {"source_file":"ui/scripts/fe3/store_featured.lua","english":"legendary = 'Legendary'","russian":"legendary = 'Легендарный'","expected_matches":1},
+    {"source_file":"ui/scripts/fe3/store_featured.lua","english":"NEW LEGENDARY AVATAR","russian":"НОВЫЙ ЛЕГЕНДАРНЫЙ ОБЛИК","expected_matches":3},
+    {"source_file":"ui/scripts/fe3/store_featured.lua","english":"NEW EPIC AVATAR","russian":"НОВЫЙ ЭПИЧЕСКИЙ ОБЛИК","expected_matches":1},
+    {"source_file":"ui/scripts/fe3/matchmaking.lua","english":"modeObjects[modeData.key].modeName:SetText(modeData.modeName)","russian":"modeObjects[modeData.key].modeName:SetText(({['Role Pick']='Выбор ролей', ['Single Draft']='Одиночный выбор', ['Banning Pick']='Выбор с запретами'})[modeData.modeName] or modeData.modeName)","expected_matches":1},
+    {"source_file":"ui/scripts/fe3/matchmaking.lua","english":"modeObjects[modeData.key].rankedLabel:SetText(modeData.modeName)","russian":"modeObjects[modeData.key].rankedLabel:SetText(({['Role Pick']='Выбор ролей', ['Single Draft']='Одиночный выбор', ['Banning Pick']='Выбор с запретами'})[modeData.modeName] or modeData.modeName)","expected_matches":1},
+    {"source_file":"ui/scripts/fe3/matchmaking.lua","english":"matchedWith = 'All players'","russian":"matchedWith = 'Все игроки'","expected_matches":2},
+    {"source_file":"ui/scripts/fe3/matchmaking.lua","english":"if minutes <= 0 then return 'None' end","russian":"if minutes <= 0 then return 'Нет' end","expected_matches":1},
+    {"source_file":"ui/scripts/fe3/matchmaking.lua","english":"if blockTopRoles <= 0 then return 'Normal' end","russian":"if blockTopRoles <= 0 then return 'Обычный' end","expected_matches":1}
+  ]
+}

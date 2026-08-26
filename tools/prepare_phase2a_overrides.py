@@ -133,8 +133,20 @@ def main() -> int:
     exact_preact_batches = []
     # Newer editorial completion batches intentionally contain longer source
     # passages than the earlier partial batches, so apply them first.
-    for batch_path in sorted((root / "translation" / "human").glob("preact_runtime_batch_*.json"), reverse=True):
-        payload = json.loads(batch_path.read_text(encoding="utf-8-sig"))
+    runtime_batch_paths = sorted((root / "translation" / "human").glob("preact_runtime_batch_*.json"))
+    runtime_batch_payloads = {
+        path: json.loads(path.read_text(encoding="utf-8-sig"))
+        for path in runtime_batch_paths
+    }
+    ordered_runtime_batches = [
+        path for path in reversed(runtime_batch_paths)
+        if runtime_batch_payloads[path].get("apply_order") != "post"
+    ] + [
+        path for path in runtime_batch_paths
+        if runtime_batch_payloads[path].get("apply_order") == "post"
+    ]
+    for batch_path in ordered_runtime_batches:
+        payload = runtime_batch_payloads[batch_path]
         batch_count = 0
         # Replace longer passages before their short JSX fragments (for
         # example a paragraph containing the standalone word "neither").

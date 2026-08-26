@@ -170,18 +170,24 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn("EmbeddedResource", project)
 
     def test_beta_release_translation_manifest_matches_asset(self):
-        directory = ROOT / "release-assets" / "0.1.0-beta.11"
+        directory = ROOT / "release-assets" / "0.1.0-beta.12"
         manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
         archive = directory / manifest["file"]
         self.assertTrue(archive.is_file())
         self.assertEqual(archive.stat().st_size, manifest["size_bytes"])
-        self.assertEqual("0.1.0-beta.11", manifest["version"])
+        self.assertEqual("0.1.0-beta.12", manifest["version"])
 
-    def test_beta10_is_a_thin_current_ui_overlay_with_legacy_locale_aliases(self):
-        archive_path = ROOT / "release-assets" / "0.1.0-beta.11" / "resources0.jz"
+    def test_beta12_is_a_thin_current_ui_overlay_with_legacy_locale_aliases(self):
+        archive_path = ROOT / "release-assets" / "0.1.0-beta.12" / "resources0.jz"
         with zipfile.ZipFile(archive_path) as archive:
             names = set(archive.namelist())
             interface = archive.read("stringtables/interface_ru.str").decode("utf-8")
+            system_bar = archive.read("ui/fe3/sections/system_bar.package").decode("utf-8")
+            main_ui = archive.read("ui/fe3/main.interface").decode("utf-8")
+            matchmaking = archive.read("ui/scripts/fe3/matchmaking.lua").decode("utf-8")
+            regions = archive.read("ui/scripts/fe3/regions.lua").decode("utf-8")
+            boss_info = archive.read("ui/fe3/sections/boss_info.package").decode("utf-8")
+            remote_motd = archive.read("preact-remote/dist/index.js").decode("utf-8")
             for domain in ("bot_messages", "client_messages", "entities", "game_messages", "interface"):
                 self.assertEqual(
                     archive.read(f"stringtables/{domain}_ru.str"),
@@ -194,6 +200,46 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn("boss_info_scaling_header\tУсиление с каждым возрождением", interface)
         self.assertIn("producst_header_emotes\tЭмоции", interface)
         self.assertIn("plinko_change_board\tСменить поле", interface)
+        self.assertIn("warning_dismiss\tНажмите в любом месте, чтобы продолжить", interface)
+        self.assertIn("lang_ru\tРусский", interface)
+        self.assertIn("rolepick_foot_last_loss\tВ последнем матче вы потратили {delta} жетонов очереди ролей.", interface)
+        self.assertIn("ui/fe3/sections/system_bar.package", names)
+        self.assertIn("ui/fe3/sections/boss_info.package", names)
+        self.assertIn("ui/scripts/fe3/matchmaking.lua", names)
+        self.assertIn('label="ОБУЧЕНИЕ"', system_bar)
+        self.assertIn("matchmaking:ПОИСК МАТЧА,game_list:СВОИ ИГРЫ", main_ui)
+        self.assertIn("['Role Pick']='Выбор ролей'", matchmaking)
+        self.assertIn("return {'en', 'ru', 'th'}", regions)
+        self.assertNotIn('header_text="boss_info_scaling_header"', boss_info)
+        self.assertIn("toLocaleLowerCase", remote_motd)
+        self.assertIn("Купить Jade", remote_motd)
+
+    def test_beta12_microfix_does_not_remove_or_modify_unreviewed_members(self):
+        base_path = ROOT / "release-assets" / "0.1.0-beta.11" / "resources0.jz"
+        candidate_path = ROOT / "release-assets" / "0.1.0-beta.12" / "resources0.jz"
+        allowed = {
+            "preact-remote/dist/index.js",
+            "stringtables/interface_en.str",
+            "stringtables/interface_ru.str",
+            "ui/fe3/main.interface",
+            "ui/fe3/sections/boss_info.package",
+            "ui/fe3/sections/marketplace_announce.package",
+            "ui/fe3/sections/system_bar.package",
+            "ui/fe3/templates/matchmaking_templates.package",
+            "ui/scripts/fe3/marketplace_announce.lua",
+            "ui/scripts/fe3/matchmaking.lua",
+            "ui/scripts/fe3/regions.lua",
+            "ui/scripts/fe3/store_featured.lua",
+        }
+        with zipfile.ZipFile(base_path) as base, zipfile.ZipFile(candidate_path) as candidate:
+            base_members = {name: base.read(name) for name in base.namelist()}
+            candidate_members = {name: candidate.read(name) for name in candidate.namelist()}
+        self.assertFalse(base_members.keys() - candidate_members.keys())
+        actual = {
+            name for name in candidate_members
+            if name not in base_members or candidate_members[name] != base_members[name]
+        }
+        self.assertEqual(allowed, actual)
 
     def test_rebase_restores_safe_legacy_locale_aliases_without_stale_screens(self):
         source = (ROOT / "tools" / "localization" / "rebase_current_release.py").read_text(encoding="utf-8")

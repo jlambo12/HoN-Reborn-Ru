@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "version": "0.1.0-beta.12",
+  "file": "resources0.jz",
+  "sha256": "114134b609f101c5bc9f7162596da33637a6cd1e3adf223be0b1abe1d751b99a",
+  "size_bytes": 3138711,
+  "members": 33,
+  "crc": "PASS",
+  "automated_tests": "PASS",
+  "runtime_verified": false,
+  "runtime_status": "Screenshot-driven thin microfix; exact-current UI overrides and archive-diff gate passed."
+}

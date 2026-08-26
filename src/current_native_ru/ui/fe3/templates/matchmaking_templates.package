@@ -1,0 +1,1020 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package>
+
+	<template name="matchmaking_toggle_state">
+		<frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" borderthickness=".3h" color="0 0 0 .85" />
+		<panel size="{toggle_size}" valign="{toggle_valign}" align="{toggle_align}" x="{x}" y="{y}">
+			<image texture="/ui/hd_ui/mask/misc_circle_cutout.tga" color="0 0 0 .5" />
+			<image texture="/ui/hd_ui/elements/misc_circle.tga" color=".3 .3 .3" />
+			<panel visible="{checked=1}">
+				<image texture="/ui/hd_ui/mask/misc_circle_cutout.tga" />
+				<image texture="{icon}" color="{thumb_color}" />
+		</panel>
+		</panel>
+		<frame texture="/ui/hd_ui/frames/border_thick.tga" borderthickness=".3h" color="{border_color}" />
+	</template>
+
+	<template name="matchmaking_toggle_widgetstates">
+		<widgetstate statename="up">					
+			<frame texture="/ui/hd_ui/frames/squareglow.tga" color="0 0 0 0" bordercolor="#2bdd726a" size="{glowsize=+.9h}" style="center" borderthickness="{glowthickness=.6h}" blockinput="0" noclick="1"/>
+			<instance name="matchmaking_toggle_state" toggle_align="{toggle_align}" toggle_valign="{toggle_valign=center}" x="{toggle_x=.6h}" y="{toggle_y}" toggle_size="{toggle_size=1.4h}" icon="/ui/hd_ui/icons/thumbs_up.tga" border_color="#2bb963" thumb_color="#2a9e58" />
+		</widgetstate>
+		<widgetstate statename="over">
+			<frame texture="/ui/hd_ui/frames/squareglow.tga" color="0 0 0 0" bordercolor="#2bdd726a" size="{glowsize=+.9h}" style="center" borderthickness="{glowthickness=.6h}" blockinput="0" noclick="1"/>
+			<instance name="matchmaking_toggle_state" toggle_align="{toggle_align}" toggle_valign="{toggle_valign=center}" x="{toggle_x=.6h}" y="{toggle_y}"  toggle_size="{toggle_size=1.4h}" icon="/ui/hd_ui/icons/thumbs_up.tga" border_color="#29ca69" thumb_color="#25a458" />
+		</widgetstate>
+		<widgetstate statename="down">
+			<instance name="matchmaking_toggle_state" toggle_align="{toggle_align}" toggle_valign="{toggle_valign=center}" x="{toggle_x=.6h}" y="{toggle_y}"  toggle_size="{toggle_size=1.4h}" icon="/ui/hd_ui/icons/thumbs_up.tga" border_color="#18783e" thumb_color="#18783e" />
+		</widgetstate>
+		<widgetstate statename="up2">
+			<instance name="matchmaking_toggle_state" toggle_align="{toggle_align}" toggle_valign="{toggle_valign=center}" checked="0" x="{toggle_x=.6h}" y="{toggle_y}"  toggle_size="{toggle_size=1.4h}" icon="$invis" border_color=".2 .2 .2" thumb_color="invisible" />
+		</widgetstate>
+		<widgetstate statename="over2">
+			<instance name="matchmaking_toggle_state" toggle_align="{toggle_align}" toggle_valign="{toggle_valign=center}" checked="0" x="{toggle_x=.6h}" y="{toggle_y}"  toggle_size="{toggle_size=1.4h}" icon="$invis" border_color=".3 .3 .3" thumb_color="invisible" />			
+		</widgetstate>
+		<widgetstate statename="down2">
+			<instance name="matchmaking_toggle_state" toggle_align="{toggle_align}" toggle_valign="{toggle_valign=center}" checked="0" x="{toggle_x=.6h}" y="{toggle_y}"  toggle_size="{toggle_size=1.4h}" icon="$invis" border_color=".2 .2 .2" thumb_color="invisible" />
+		</widgetstate>
+		<widgetstate statename="disabled">
+			<panel color="#212120d8" thumb_color="invisible" />	
+		</widgetstate>
+	</template>
+
+	<template name="matchmaking_invite_dialog_section">
+		<panel name="matchmaking_invite_dialog" width="25h" height="8h" visible="0" noclick="1">
+
+			<!-- Frame/BG -->
+			<instance name="modal_base_frame" color="1 1 1" />
+
+			<!-- Header -->
+			<panel width="100%" height="45%" noclick="1">
+				<label content="mm3_coop_inviteperson" style="h3" textvalign="center" x="1h" noclick="1" />
+				<instance name="closexbutton" x="-1h" align="right" valign="center" onclicklua="Matchmaking.invitePlayerPanel:SetVisible(0)" />
+			</panel>
+
+			<!-- Content -->
+			<panel width="100%" height="55%" valign="bottom" noclick="1">
+				
+				<!-- Player Name Input -->
+				<panel width="78%" height="3.3h" x="0.7h" align="left" valign="center" noclick="1">
+					<!-- Frame -->
+					<frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" color="0 0 0 .4" bordercolor="0 0 0 .4" borderthickness=".5h" noclick="1" />
+					<frame texture="/ui/hd_ui/frames/inset.tga" bordercolor=".5 .5 .5 1" color=".5 .5 .5 1" borderthickness=".5h" />
+
+					<!-- Input -->
+					<textbox name="matchmaking_invite_player_input" y=".2h" hmargin="0.8h" vmargin="0.4h" color="invisible" font="dyn_bold_11" textcolor=".9 .9 .9 1" shadow="1" maxlength="30" enabled="1"
+						onchangelua="Matchmaking:OnInviteInputChanged(self)"
+						onenterlua="Matchmaking:ConfirmInvitePlayerBtn()"
+					/>
+				</panel>
+
+				<!-- Invite Player Button -->
+				<panel width="18%" height="100%" align="right" noclick="1">
+					<instance name="button_hd" button_name="matchmaking_confirm_invite_player" width="3h" height="3h" align="center" valign="center" style="btn_sm"
+						show_icon="1" icon="/ui/hd_ui/icons/check_circle.tga" icon_size="60%"
+						onclicklua="Matchmaking:ConfirmInvitePlayerBtn()"
+					/>
+				</panel>
+
+			</panel>
+
+		</panel>
+	</template>
+
+	<template name="matchmaking_player_role_pref_instance">
+		<panel width="100%" height="2.4h" float="right" padding=".5h" noclick="1">
+			<image name="matchmaking_player_role_pref_image_{id}" size="2.0h" valign="center" />
+			<label name="matchmaking_player_role_pref_name_{id}" content="Role Name" style="text_base" valign="center" fity="1" noclick="1" />
+		</panel>
+	</template>
+
+	<template name="matchmaking_player_role_tooltip">
+		<floater name="matchmaking_player_role_tooltip" width="20h" style="grow_noinvis" x="-20h" visible="0">
+			<!-- Frame -->
+			<instance name="tooltip_base_frame" />
+
+			<panel hmargin="1.4h" vmargin="1h" width="100%" float="bottom" style="grow_noinvis">				
+				<label content="rolepick_config_title" fity="1" fitypadding=".5h" style="h3,color-green" sticky="0" noclick="1" />
+				<panel width="100%" float="bottom" padding=".25h" style="grow_noinvis">
+
+					<!-- Instantiate Players Role Prefs here -->
+					<instance name="matchmaking_player_role_pref_instance" id="1" />
+					<instance name="matchmaking_player_role_pref_instance" id="2" />
+					<instance name="matchmaking_player_role_pref_instance" id="3" />
+					<instance name="matchmaking_player_role_pref_instance" id="4" />
+					<instance name="matchmaking_player_role_pref_instance" id="5" />
+					<instance name="matchmaking_player_role_pref_instance" id="6" />
+					<instance name="matchmaking_player_role_pref_instance" id="7" />
+
+				</panel>
+
+				<panel height="0.8h"/><!-- Spacer -->
+			</panel>
+		</floater>
+	</template>
+
+	<template name="matchmaking_player">
+		<frame texture="/ui/hd_ui/frames/inset.tga" color=".2 .2 .2 .8" borderthickness=".3h" height="6h" noclick="1">
+
+			<!-- Player Filled Slot -->
+			<panel name="matchmaking_player_filled_root{id}" visible="0" noclick="1">
+
+				<!-- Pref Role -->
+				<panel texture="/ui/hd_ui/mask/misc_circle_cutout.tga" x=".5h" color=".15 .15 .15" size="3.6h" valign="center" noclick="1">
+					<image name="matchmaking_player_top_role{id}" size="2.1h" style="center"
+						onmouseoverlua="Matchmaking:PopulateRoles({id} + 1)"
+						onmouseout="HideWidget('matchmaking_player_role_tooltip');"
+					/>
+				</panel>
+
+				<panel x="-.5h" height="-1.4h" width="-5.5h" align="right" valign="center" noclick="1">
+
+					<!-- Profile Icon -->
+					<panel height="100%" width="100@" noclick="1">
+
+						<!-- Icon -->
+						<image name="matchmaking_player_icon{id}" texture="$invis" usealphamask="1" alphamaskfile="/ui/hd_ui/mask/square_rounded.tga" noclick="1" />
+
+						<!-- Frame -->
+						<frame texture="/ui/hd_ui/frames/border_normal.tga" style="color-gray-dark" borderthickness=".25h" />
+
+						<!-- Leader (Crown) Icon -->
+						<image name="matchmaking_player_crown{id}" size="2.0h" x="-.5h" y="-.5h" texture="/ui/hd_ui/icons/crown.tga" style="color-orange" visible="0" />
+
+					</panel>
+
+					<panel clip="1" width="-5.5h" align="right" valign="center" noclick="1">
+
+					<!-- Name/MMR -->
+						<panel width="100%" float="bottom" padding=".5h" style="grow_noinvis" valign="center" noclick="1">
+						
+							<panel width="100%" height="1.6h" float="right" style="grow_noinvis" noclick="1">
+								<label name="matchmaking_player_name{id}" style="h4,text_outline" fitx="1" fitxpadding=".75h" textvalign="center" noclick="1" />
+								<!-- Add Friend (Show if not Friends)  -->
+								<button
+									name="matchmaking_player_add_btn{id}"
+									color="invisible" width="100@" height="100%" align="left"
+									onmouseoverlua="Tooltips:TooltipHover_Main(self, 'general_add_friend', 'top')"
+									onmouseoutlua="Tooltips:TooltipHover_Main(false)"	
+									onclicklua="Matchmaking:AddFriend({id} + 1)"
+								>
+									<widgetstate statename="up">
+										<image texture="/ui/hd_ui/icons/user_add.tga" style="color-green"/>
+									</widgetstate>
+									<widgetstate statename="over">
+										<image texture="/ui/hd_ui/icons/user_add.tga" style="color-green-light" />
+									</widgetstate>
+									<widgetstate statename="down">
+										<image texture="/ui/hd_ui/icons/user_add.tga" style="color-green-dark" />
+									</widgetstate>
+								</button>
+							</panel>
+							<!-- MMR: FoC + MW with their map icons and a muted divider between -->
+							<panel width="100%" height="1.7h" float="right" style="grow_noinvis" noclick="1">
+								<panel width="7h" height="100%" align="left" onmouseoverlua="Tooltips:TooltipHover_Main(self, 'mm_mmr_caldavar_tip', 'top')" onmouseoutlua="Tooltips:TooltipHover_Main(false)">
+									<image texture="/maps/caldavarphoenix/icon.tga" size="1.5h" align="left" valign="center" noclick="1" />
+									<label name="matchmaking_player_caldavar_rating{id}" content="" style="text_base,text_muted" x="1.9h" align="left" valign="center" fity="1" noclick="1" />
+								</panel>
+								<panel width=".15h" height="65%" x="7h" align="left" valign="center" color=".45 .45 .45 .7" noclick="1" />
+								<panel width="7h" height="100%" x="7.8h" align="left" onmouseoverlua="Tooltips:TooltipHover_Main(self, 'mm_mmr_midwars_tip', 'top')" onmouseoutlua="Tooltips:TooltipHover_Main(false)">
+									<image texture="/maps/midwars/icon.tga" size="1.5h" align="left" valign="center" noclick="1" />
+									<label name="matchmaking_player_midwars_rating{id}" content="" style="text_base,text_muted" x="1.9h" align="left" valign="center" fity="1" noclick="1" />
+								</panel>
+							</panel>
+						</panel>
+					
+					</panel>
+
+				</panel>
+
+					<!-- Leave Group / Kick Player -->
+				<panel size="2.2h" x="-.6h" y="-.7h" valign="bottom" align="right" noclick="1">
+						<button
+							name="matchmaking_player_kick_btn{id}"
+							texture="/ui/fe3/elements/kick.tga" 
+						size="116%" style="center"
+							onmouseoverlua="Tooltips:TooltipHover_Main(self, 'game_menu_kick', 'top')"
+							onmouseoutlua="Tooltips:TooltipHover_Main(false)"	
+							onclicklua="Matchmaking:KickPlayer({id} + 1)"
+							visible="0"
+						/>
+						<button
+							name="matchmaking_player_leave_btn{id}"
+							texture="/ui/fe3/elements/leave.tga" 
+							onmouseoverlua="Tooltips:TooltipHover_Main(self, 'tmm_leavegroup', 'top')"
+							onmouseoutlua="Tooltips:TooltipHover_Main(false)"	
+							onclicklua="Matchmaking:LeaveGroup()"
+							visible="0"
+						/>
+					</panel>
+
+				</panel>
+
+
+			<!-- Player Empty Slot -->
+			<panel name="matchmaking_player_empty_root{id}" visible="1" noclick="1">
+
+				<!-- Empty Role -->
+				<panel texture="/ui/hd_ui/elements/misc_circle.tga" x=".5h" color=".15 .15 .15 .8" size="3.6h" valign="center" noclick="1">
+					<image texture="/ui/hd_ui/icons/shop_cat_defense.tga" size="2.6h" style="center" color=".2 .2 .2 .6" noclick="1" />
+				</panel>
+
+				<!-- Invite Contents -->
+				<panel width="-4h" align="right" noclick="1">
+
+					<!-- Invite Player Button -->
+					<instance name="button_hd" button_name="matchmaking_player_invite{id}" width="-2.4h" height="2.8h" style="center,btn_sm"
+						version="secondary" label="mm_invite_player"
+						onclicklua="Matchmaking:InvitePlayerButton(self)"
+					/>
+
+				</panel>
+
+			</panel>
+			
+		</frame>
+	</template>
+
+	<template name="matchmaking_team_feedback_meter_pip">
+		<frame width="2.4h" height="0.8h" valign="center" texture="/ui/hd_ui/frames/rounded_grad_minor.tga" borderthickness=".1h" color="{pip_color}" />
+	</template>
+
+	<template name="matchmaking_team_feedback_meter">
+		<panel width="100%" height="2.0h" float="right" padding="1h" style="grow_noinvis">
+			<!-- Team Size -->
+			<label width="10h" textvalign="center" style="text_base,text_muted" sticky="0" content="mm_team_size_{size}" />
+			<!-- Matched With/Against -->
+			<label width="16h" textvalign="center" style="text_base,text_muted" content="mm_team_size_{size}_matched" />
+			<!-- Queue Speed -->
+			<panel width="-28h" float="right" padding=".5h">
+				<instance name="matchmaking_team_feedback_meter_pip" pip_color="{pip_1_color=.5 .5 .5}" />
+				<instance name="matchmaking_team_feedback_meter_pip" pip_color="{pip_2_color=.5 .5 .5}" />
+				<instance name="matchmaking_team_feedback_meter_pip" pip_color="{pip_3_color=.5 .5 .5}" />
+				<instance name="matchmaking_team_feedback_meter_pip" pip_color="{pip_4_color=.5 .5 .5}" />
+				<instance name="matchmaking_team_feedback_meter_pip" pip_color="{pip_5_color=.5 .5 .5}" />
+			</panel>
+		</panel>
+	</template>
+
+	<template name="matchmaking_team_feedback_tooltip">
+		<floater name="matchmaking_team_feedback_tooltip" width="45h" style="grow_noinvis" x="2.5h" visible="0">
+			<!-- Frame -->
+			<instance name="tooltip_base_frame" />
+
+			<panel hmargin="1.4h" vmargin="1h" width="100%" float="bottom" style="grow_noinvis">				
+				<label content="mm_team_feedback_tooltip_header" fity="1" fitypadding=".25h" style="h2" color="white" sticky="0" noclick="1" />
+				<label content="mm_team_feedback_tooltip_info" fity="1" fitypadding="1h" style="text_base,text_muted" sticky="0" wrap="1" noclick="1" />
+				
+				<!-- Header -->
+				<panel width="100%" height="2.0h" float="right" padding="1h" style="grow_noinvis">
+					<!-- Team Size -->
+					<label width="10h" textvalign="center" style="text_base" color="white" sticky="0" content="mm_team_feedback_tooltip_table_teamsize" />
+					<!-- Matched With/Against -->
+					<label width="16h" textvalign="center" style="text_base" color="white" content="mm_team_feedback_tooltip_table_matching" />
+					<!-- Queue Speed -->
+					<label width="-28h" textvalign="center" style="text_base" color="white" content="mm_team_feedback_tooltip_table_speed" />
+				</panel>
+				<panel height="0.4h"/><!-- Spacer -->
+
+				<!-- Queue Meters -->
+				<panel width="100%" style="grow_noinvis" float="bottom">
+					<instance name="matchmaking_team_feedback_meter" size="solos" pip_1_color="#fcff41" pip_2_color="#fcff41" pip_3_color="#fcff41" pip_4_color="#fcff41" />
+					<panel height="1.1h"><panel height="1" width="-1h" valign="center" color=".4 .4 .4" /></panel>
+					<instance name="matchmaking_team_feedback_meter" size="duos" pip_1_color="#5cec49" pip_2_color="#5cec49" pip_3_color="#5cec49" pip_4_color="#5cec49" pip_5_color="#5cec49" />
+					<panel height="1.1h"><panel height="1" width="-1h" valign="center" color=".4 .4 .4" /></panel>
+					<instance name="matchmaking_team_feedback_meter" size="trios" pip_1_color="#e9a62b" pip_2_color="#e9a62b" pip_3_color="#e9a62b" />
+					<panel height="1.1h"><panel height="1" width="-1h" valign="center" color=".4 .4 .4" /></panel>
+					<instance name="matchmaking_team_feedback_meter" size="quads" pip_1_color="#c21e1e" pip_2_color="#c21e1e" />
+					<panel height="1.1h"><panel height="1" width="-1h" valign="center" color=".4 .4 .4" /></panel>
+					<instance name="matchmaking_team_feedback_meter" size="squads" pip_1_color="#c21e1e" pip_2_color="#c21e1e" />
+				</panel>
+
+				<panel height="1.2h"/><!-- Spacer -->
+			</panel>
+		</floater>
+	</template>
+
+	<template name="matchmaking_team_feedback">
+		<frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" borderthickness=".3h" color=".05 .05 .05" height="4h" style="sticky" noclick="1" visible="0">
+			<frame texture="/ui/hd_ui/frames/border_normal.tga" borderthickness=".3h" color=".2 .2 .2" noclick="1" />
+
+			<panel height="46%" valign="center" x=".5h" float="right"
+				onmouseover="ShowWidget('matchmaking_team_feedback_tooltip');"
+				onmouseout="HideWidget('matchmaking_team_feedback_tooltip');"
+			>
+				<!-- Feedback Icon 	-->
+				<panel width="134@" noclick="1">
+					<image name="matchmaking_team_feedback_queue_against_icon" texture="/ui/fe3/lobby/slot_color.tga" x=".4h" y="1" size="1.4h" valign="center" noclick="1" />
+				</panel>
+				<label style="text_base,text_muted" content="mm_team_queueing" textvalign="center" fitx="1" fitxpadding=".4h" noclick="1" />
+				<label name="matchmaking_team_feedback_queue_against" style="text_base" color="white" content="---" textvalign="center" fitx="1" fitxpadding=".5h" noclick="1" />
+
+			</panel>
+
+		</frame>
+	</template>
+
+	<template name="matchmaking_honor_rating_display">
+		<frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" borderthickness=".3h" color=".05 .05 .05" width="100%" height="10.4h" style="sticky" noclick="1">
+			<frame texture="/ui/hd_ui/frames/border_normal.tga" borderthickness=".3h" color=".2 .2 .2" noclick="1" />
+
+			<panel width="-2.2h" height="-2.0h" style="center" noclick="1">
+
+				<panel height="1.8h" float="right" noclick="1">
+					<label style="h4" shadow="0" fitx="1" content="mm_honor_title" textvalign="center" x=".8h" noclick="1"/>
+					<panel height="100%" style="grow_noinvis" noclick="1">
+						<image texture="/ui/hd_ui/icons/tip.tga" size="1.4h" valign="center" color=".6 .6 .6" noclick="1" />
+					</panel>
+				</panel>
+
+				<panel height="-2.3h" valign="bottom" noclick="1">					
+
+				<!-- Pentalty Points -->
+					<panel width="100@" noclick="1">
+						<!-- PP Icon -->
+					<image name="matchmaking_penalty_points_base" texture="/ui/hd_ui/elements/penalty-point-base.tga" color="#65FF60" noclick="1"/>
+						<label name="matchmaking_penalty_points_value" y="-.8h" style="textcenter,text_base,text_outline" font="dyn_bold_18" outlinecolor="0 0 0 .5" content="0" noclick="1" />
+						<label name="matchmaking_penalty_points_name" y="1.0h" style="textcenter,text_base,text_outline" font="dyn_9" outlinecolor="0 0 0 .5" content="---" noclick="1" />
+				</panel>
+
+				<!-- Honor Rating Info -->
+					<panel width="-115@" align="right" float="bottom" noclick="1">					
+					<!-- Queue Delay -->
+						<panel y=".25h" height="1.9h" noclick="1">
+							<label style="text_label,text_muted" textvalign="center" content="mm_honor_queue_delay" noclick="1"/>
+							<label name="matchmaking_queue_delay_value" textvalign="center" style="text_base" textalign="right" content="---" noclick="1"/>
+					</panel>
+					<!-- Matched With -->
+						<panel height="1.9h" noclick="1">
+							<label style="text_label,text_muted" textvalign="center" content="mm_honor_queue_matched_with" noclick="1"/>
+							<label name="matchmaking_queue_with" textvalign="center" style="text_base" textalign="right" content="---" noclick="1"/>
+					</panel>
+					<!-- Role Priority -->
+						<panel height="1.9h" noclick="1">
+							<label style="text_label,text_muted" textvalign="center" content="rolepick_config_title" noclick="1"/>
+							<label name="matchmaking_role_priority" textvalign="center" style="text_base" textalign="right" content="---" noclick="1"/>
+					</panel>
+
+				</panel>
+
+			</panel>
+
+			</panel>
+			<!-- Profile Click Catcher -->
+			<panel
+				onmouseoverlua="Tooltips:TooltipHover_Main(self, 'mm_honor_tip', 'top')"
+				onmouseoutlua="Tooltips:TooltipHover_Main(false)"
+				onclicklua="Matchmaking:OpenHonorSystem()"
+			/>
+			 
+		</frame>
+	</template>
+
+	<template name="matchmaking_npe_upsell_section">
+		<!-- sticky is what gives this zero height while hidden; without it the queue button moves -->
+		<panel name="matchmaking_npe_root" width="100%" style="sticky,grow_noinvis" visible="0" noclick="1">
+
+			<panel width="100%" height="9.6h" noclick="1">
+				<frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" borderthickness=".3h" color=".05 .05 .05" width="100%" height="100%" noclick="1">
+					<frame texture="/ui/hd_ui/frames/rounded_bottom_grad.tga" borderthickness=".3h" color="#3a2c0842" noclick="1" />
+					<frame texture="/ui/hd_ui/frames/border_normal.tga" borderthickness=".3h" color="#FACC1566" noclick="1" />
+
+					<panel texture="/ui/hd_ui/mask/misc_circle_cutout.tga" x="2h" color=".15 .15 .15" size="6h" valign="center" noclick="1">
+						<image texture="/shared/icons/emoji/newplayer.png" size="3.8h" style="center" noclick="1" />
+					</panel>
+
+					<panel x="9.6h" width="-33h" height="-1.2h" valign="center" float="bottom" style="grow_noinvis" noclick="1">
+						<label style="h4" shadow="0" color="#FACC15" height="2.4h" textvalign="center" content="mm_npe_title" noclick="1" />
+						<label style="text_base,text_muted,sticky" height="5.6h" wrap="1" content="mm_npe_body" noclick="1" />
+					</panel>
+
+					<panel name="matchmaking_npe_cta_divider" width=".15h" height="55%" x="-22.8h" align="right" valign="center" color=".45 .45 .45 .5" noclick="1" />
+
+					<!-- divider and column both hidden when no upgrade product is published; label carries the price, set from Lua -->
+					<panel name="matchmaking_npe_cta_col" width="19h" height="3.4h" x="-1.5h" align="right" valign="center" noclick="1">
+						<instance name="store_purchase_btn"
+							root_name="matchmaking_npe_cta_root"
+							btn_name="matchmaking_npe_cta_btn"
+							label_name="matchmaking_npe_cta_btn_label"
+							label="mm_npe_cta" label_style="h5"
+							icon="$invis" icon_visible="0" btn_padding="0"
+							btn_width="100%" height="100%" visible="1"
+							onclicklua="Matchmaking:BuyAccountUpgrade()"
+						/>
+					</panel>
+
+				</frame>
+			</panel>
+
+		</panel>
+	</template>
+
+	<template name="matchmaking_profile_section">
+		<frame texture="/ui/hd_ui/frames/inset.tga" color=".2 .2 .2 .8" borderthickness=".3h" height="6h" noclick="1">
+			<frame texture="/ui/hd_ui/frames/rounded_bottom_grad.tga" color="#0e382038" borderthickness=".3h" noclick="1"/>
+
+			<!-- Pref Role -->
+			<panel texture="/ui/hd_ui/mask/misc_circle_cutout.tga" x=".5h" color=".15 .15 .15" size="3.6h" valign="center" noclick="1">
+				<image name="matchmaking_profile_host_role" size="2.1h" style="center"
+					onmouseoverlua="Matchmaking:PopulateRoles(0)"
+					onmouseout="HideWidget('matchmaking_player_role_tooltip');"
+				/>
+			</panel>
+
+			<panel x="-.5h" height="-1.4h" width="-5.5h" align="right" valign="center" noclick="1">
+
+				<!-- Profile Icon -->
+				<panel height="100%" width="100@" noclick="1">
+
+					<!-- Icon -->
+					<image name="matchmaking_profile_section_leader_icon" texture="$invis" usealphamask="1" alphamaskfile="/ui/hd_ui/mask/square_rounded.tga" />
+
+					<!-- Frame -->
+					<frame texture="/ui/hd_ui/frames/border_normal.tga" style="color-gray-dark" borderthickness=".25h" />
+
+					<!-- Leader (Crown) Icon -->
+					<image name="matchmaking_profile_section_leader" size="2.2h" x="-.9h" y="-.8h" texture="/ui/hd_ui/icons/crown.tga" style="color-orange" visible="0" />
+
+				</panel>
+
+				<panel width="-5.5h" align="right" valign="center" noclick="1">
+			
+					<!-- Name / MMR -->
+					<panel width="100%" float="bottom" padding=".5h" style="grow_noinvis" valign="center" noclick="1">
+					
+						<panel width="100%" height="1.6h" float="right" style="grow_noinvis" noclick="1">
+							<label name="matchmaking_profile_section_playername" style="h3,text_outline" shadow="0" fitx="1" fitxpadding=".75h" textvalign="center" noclick="1" />
+							<!-- Add Friend (Show if not Friends)  -->
+							<button
+								name="matchmaking_profile_section_add_friend"
+								color="invisible" width="100@" height="100%" align="left"
+								onmouseoverlua="Tooltips:TooltipHover_Main(self, 'general_add_friend', 'top')"
+								onmouseoutlua="Tooltips:TooltipHover_Main(false)"	
+								onclicklua="Matchmaking:AddFriend(0)"
+							>
+								<widgetstate statename="up">
+									<image texture="/ui/hd_ui/icons/user_add.tga" style="color-green"/>
+								</widgetstate>
+								<widgetstate statename="over">
+									<image texture="/ui/hd_ui/icons/user_add.tga" style="color-green-light" />
+								</widgetstate>
+								<widgetstate statename="down">
+									<image texture="/ui/hd_ui/icons/user_add.tga" style="color-green-dark" />
+								</widgetstate>
+							</button>
+						</panel>
+						<!-- MMR: FoC + MW with their map icons and a muted divider between -->
+						<panel width="100%" height="1.7h" float="right" style="grow_noinvis" noclick="1">
+							<panel width="7h" height="100%" align="left" onmouseoverlua="Tooltips:TooltipHover_Main(self, 'mm_mmr_caldavar_tip', 'top')" onmouseoutlua="Tooltips:TooltipHover_Main(false)">
+								<image texture="/maps/caldavarphoenix/icon.tga" size="1.5h" align="left" valign="center" noclick="1" />
+								<label name="matchmaking_profile_section_caldavar_rating" content="" style="text_base,text_muted" x="1.9h" align="left" valign="center" fity="1" noclick="1" />
+							</panel>
+							<panel width=".15h" height="65%" x="7h" align="left" valign="center" color=".45 .45 .45 .7" noclick="1" />
+							<panel width="7h" height="100%" x="7.8h" align="left" onmouseoverlua="Tooltips:TooltipHover_Main(self, 'mm_mmr_midwars_tip', 'top')" onmouseoutlua="Tooltips:TooltipHover_Main(false)">
+								<image texture="/maps/midwars/icon.tga" size="1.5h" align="left" valign="center" noclick="1" />
+								<label name="matchmaking_profile_section_midwars_rating" content="" style="text_base,text_muted" x="1.9h" align="left" valign="center" fity="1" noclick="1" />
+							</panel>
+						</panel>
+					</panel>
+				
+				</panel>
+
+			</panel>
+
+			<!-- Leave Group / Kick Player -->
+			<panel size="2.2h" x="-.6h" y="-.7h" valign="bottom" align="right" noclick="1">
+				<button
+					name="matchmaking_player_kick_btn"
+					texture="/ui/fe3/elements/kick.tga" 
+					size="116%" style="center"
+					onmouseoverlua="Tooltips:TooltipHover_Main(self, 'game_menu_kick', 'top')"
+					onmouseoutlua="Tooltips:TooltipHover_Main(false)"	
+					onclicklua="Matchmaking:KickPlayer(0)"
+					visible="0"
+				/>
+				<button
+					name="matchmaking_player_leavegroup_btn"
+					texture="/ui/fe3/elements/leave.tga" 
+					onmouseoverlua="Tooltips:TooltipHover_Main(self, 'tmm_leavegroup', 'top')"
+					onmouseoutlua="Tooltips:TooltipHover_Main(false)"	
+					onclicklua="Matchmaking:LeaveGroup()"
+					visible="0"
+				/>
+			</panel>
+		</frame>
+	</template>
+
+	<template name="matchmaking_machine_tag_section">
+		<panel name="matchmaking_machine_tag_root" width="100%" style="grow_noinvis,sticky" visible="0" noclick="1">
+
+			<frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" size="100%" borderthickness=".3h" color=".05 .05 .05" noclick="1" />
+			<frame texture="/ui/hd_ui/frames/border_normal.tga" size="100%" borderthickness=".3h" color=".2 .2 .2" noclick="1" />
+
+			<panel width="100%" style="grow_noinvis" float="bottom" padding=".7h" noclick="1">
+				<panel height=".3h" noclick="1" />
+				
+				<!-- Status Feedback -->
+				<panel width="100%" style="grow_noregrow_noinvis" noclick="1">
+					<!-- Icon -->
+					<image name="matchmaking_machine_tag_icon" texture="/ui/hd_ui/icons/lock.tga" x="1.5h" size="3.0h" color=".6 .6 .6" valign="center" noclick="1" />
+					
+					<panel x="-1.5h" align="right" width="-6.5h" style="grow_noinvis" float="bottom" valign="center" noclick="1">
+						<!-- Label -->
+						<label name="matchmaking_machine_tag_label" style="text_base,text_outline" textalign="center" wrap="1" fity="1" fitypadding=".3h" noclick="1" />
+						<!-- Sub Label -->
+						<label name="matchmaking_machine_tag_sub_label" style="text_label,text_outline" textalign="center" wrap="1" fity="1" fitypadding=".3h" visible="0" noclick="1" />
+					</panel>
+				</panel>
+
+				<!-- Re-Tag Button (Shows if available) -->
+				<panel name="matchmaking_machine_tag_retag_root" style="sticky" width="100%" height="2.4h" visible="0" noclick="1">
+					<instance name="button_hd" button_name="matchmaking_machine_tag_retag_btn" label="mm_machine_tag_retag_btn"
+						width="-2.4h" align="center"
+						version="secondary" style="btn_sm"
+						onclicklua="Matchmaking:ShowRetagDialog()"
+					/>
+				</panel>
+
+				<panel height=".3h" noclick="1" />
+
+			</panel>
+
+		</panel>
+	</template>
+
+	<template name="matchmaking_join_section">
+		<!-- sticky: must flow below the statistics section, which itself moves with the growing mode columns -->
+		<panel width="100%" float="bottom" style="sticky,grow_noinvis" padding=".5h" noclick="1">
+
+
+			<!-- Warning Indicator -->
+			<panel width="100%" style="grow_noinvis,sticky" noclick="1">
+				<label name="matchmaking_group_notice_label" content="----" style="h5,text_outline" textalign="center" textvalign="center" wrap="1" fity="1" fitypadding=".5h" visible="0" noclick="1" />
+			</panel>
+
+			<!-- Join/Leave Que BTN -->
+			<panel width="100%" height="4.4h" style="sticky" noclick="1">
+
+				<instance name="button_hd" button_name="matchmaking_joinque_btn" label="mm_join_queue"
+					enabled="1" style="btn_lg,sticky"
+					onclicklua="Matchmaking:JoinOrLeaveQueueBtn()"
+				/>
+
+				<instance name="button_hd_deepblue" button_name="matchmaking_joinque_btn_inqueue" label="mm_join_queue" visible="0" shadow="false"
+					enabled="1" style="btn_lg,sticky"
+					onclicklua="Matchmaking:JoinOrLeaveQueueBtn()"
+				/>
+
+				<instance name="button_hd" button_name="matchmaking_joinque_penalty_btn" label="" version="red" visible="0" shadow="false"
+					enabled="1" style="btn_lg,sticky"
+					onclicklua="Matchmaking:JoinOrLeaveQueueBtn()"
+				/>
+
+				<instance name="button_hd" button_name="matchmaking_joinque_blocked_btn" label="" version="orange" visible="0" shadow="false"
+					enabled="1" style="btn_lg,sticky"
+					onclicklua="Matchmaking:JoinOrLeaveQueueBtn()"
+				/>
+
+			</panel>
+
+			<!-- Enforced Wait BTN
+			<panel name="matchmaking_penalty_wait" height="4.8h" align="center" valign="center" noclick="1" visible="0">
+				<instance name="button_hd" button_name="matchmaking_penalty_wait" label="" version="red"
+					width="100%" enabled="1" style="btn_lg,sticky"
+					onclicklua="Matchmaking:PenaltyWaitButtonPressed()"
+				/>
+				<panel height="100%" style="grow_noinvis" align="center" float="right" noclick="1">
+					<label textvalign="center" color=".9 .9 .9 1" outline="1" outlinecolor="0 0 0 .4" style="btn_lg,sticky" fitx="1" fitxpadding=".6h" content="mm_wait_timer_prepend" noclick="1" />
+					<label name="matchmaking_wait_timer" textvalign="center" color=".9 .9 .9 1" outline="1" outlinecolor="0 0 0 .4" style="btn_lg,sticky" fitx="1" fitxpadding=".6h" content="XX:XX" noclick="1" />
+					<label textvalign="center" color=".9 .9 .9 1" outline="1" outlinecolor="0 0 0 .4" style="btn_lg,sticky" fitx="1" content="mm_wait_timer_append" noclick="1" />					
+				</panel>
+			</panel>
+			 -->
+
+		</panel>
+	</template>
+
+	<template name="matchmaking_player_section">
+		<panel height="27h" noclick="1">
+			
+			<!-- Instantiated Players -->
+			<panel name="matchmaking_players_root" float="bottom" padding="1h" noclick="1" />
+
+		</panel>
+	</template>
+
+	<template name="matchmaking_flag">
+		<panel name="matchmaking_flag_root{flag}" width="11h" height="2.6h">
+
+			<!-- Toggle Button -->
+			<button
+				name="region_select_button{flag}"
+				color="invisible"
+				numstates="2"
+				enabled="0"
+				onmouseoverlua="Tooltips:TooltipHover_Main(self, '{region}', 'top')"
+				onmouseoutlua="Tooltips:TooltipHover_Main(false)"
+				onclicklua="Matchmaking:OnRegionClicked('{flag}')"				
+			>
+				<instance name="matchmaking_toggle_widgetstates" />
+			</button>
+
+			<!-- Flag Icon -->
+			<image name="matchmaking_flag_icon{flag}" texture="/ui/icons/flags/{flag_texture}" x="2.66h" size="2.2h" valign="center" noclick="1" />
+
+			<!-- Region Code -->
+			<label name="matchmaking_flag_code{flag}" style="text_label" x="5.5h" textvalign="center" content="---" noclick="1" />
+
+			<!-- Regions Disabled Tooltip Panel (Hide when regions enabled) -->
+			<panel
+				name="region_disabled_overlay{flag}"
+				visible="1"
+				noclick="1"
+				onmouseoverlua="Tooltips:TooltipHover_Main(self, 'options_disabled', 'top')"
+				onmouseoutlua="Tooltips:TooltipHover_Main(false)"
+			/>
+
+			<!-- Player Count Percentage -->
+			<panel name="matchmaking_flag_percentage_panel{flag}" noclick="1">
+				<!-- Percentage Label -->
+				<label name="matchmaking_flag_percentage{flag}"	content="--" style="text_label_small,text_muted" x="-.7h" textalign="right" textvalign="center" noclick="1"/>
+				<!-- Disabled State Overlay -->
+				<frame name="matchmaking_flag_percentage_disabled{flag}" texture="/ui/hd_ui/frames/rounded_bg_solid.tga" borderthickness=".2h" color=".1 .1 .1 0" visible="0" noclick="1" />
+
+			</panel>
+
+			<!-- Locked while an Unranked selection is active and this region cannot host it. Mirrors the
+			     role-priority lock. Declared last so it covers the flag, code and percentage; the tile is too
+			     small for the notice text, so that lives in the tooltip. -->
+			<frame
+				name="region_unranked_overlay{flag}"
+				texture="/ui/hd_ui/frames/rounded_grad_minor.tga" borderthickness=".25h" color=".1 .1 .1 .9"
+				visible="0"
+				onmouseoverlua="Tooltips:TooltipHover_Main(self, 'mm_unranked_regions_notice', 'top')"
+				onmouseoutlua="Tooltips:TooltipHover_Main(false)"
+			>
+				<image texture="/ui/hd_ui/icons/lock.tga" size="1.8h" align="center" valign="center" color=".8 .2 .2 .9" noclick="1" />
+				<frame texture="/ui/hd_ui/frames/border_thick.tga" borderthickness=".25h" color=".2 .2 .2" noclick="1" />
+			</frame>
+
+		</panel>
+	</template>
+
+	<template name="matchmaking_region_section">
+		<!-- Header: title + hover help explaining what the per-region percentages mean -->
+		<panel width="100%" height="3h" float="right" sticky="0" noclick="1">
+			<label content="mm_select_regions" fitx="1" height="100%" textvalign="center" style="h1,color-orange" noclick="1" />
+			<panel width="0.7h" height="100%" color="0 0 0 0" noclick="1" />
+			<panel height="100%" style="grow_noinvis" noclick="0"
+				onmouseoverlua="Tooltips:TooltipHover_Main(self, 'mm_regions_percentage_help', 'bottom', '42h')"
+				onmouseoutlua="Tooltips:TooltipHover_Main(false)"
+			>
+				<image texture="/ui/hd_ui/icons/tip.tga" size="1.5h" valign="center" y=".125h" color=".6 .6 .6" noclick="1" />
+			</panel>
+		</panel>
+
+		<!-- Instantiated Regions Listbox -->
+		<listbox name="matchmaking_region_root"
+			wrap="row"
+			color="invisible"
+			itemwidth="11.5h"
+			itemheight="3.1h"
+			height="6.2h"
+			select="0"
+			clearselection="1"
+			hoverselect="0"
+			hoverhighlight="0"
+			hscrollbar="0"
+			vscrollbar="0"
+			noclick="1"
+		/>
+	</template>
+
+	<template name="matchmaking_mode">
+		<panel name="matchmaking_mode_root{mode}" width="100%" height="6.6h" style="sticky" visible="0">
+
+			<!-- Toggle Button -->
+			<button
+				name="mode_select_button{mode}"
+				color="invisible"
+				numstates="2"
+				enabled="0"
+				visible="0"
+				onmouseoverlua="Tooltips:TooltipHover_Main(self, '{map}', 'top')"
+				onmouseoutlua="Tooltips:TooltipHover_Main(false)"
+				onclicklua="Matchmaking:OnModeClicked('{mode}')"			
+			>
+				<instance
+					name="matchmaking_toggle_widgetstates"
+					glowsize="+1.3h" glowthickness=".8h"
+					toggle_x="-1h" toggle_y="1.1h" toggle_size="1.9h" toggle_align="right" toggle_valign="top"				
+				/>
+			</button>
+
+			<panel width="-2.6h" height="-1.8h" style="center" noclick="1">
+
+				<panel width="-3.4h" height="-2.5h" align="left" valign="top" noclick="1">
+					<!-- Draft mode name — vertically centered as the card's anchor -->
+					<label name="matchmaking_mode_ranked_label{mode}" content="" style="{titlestyle=h3}" valign="center" fitx="1" fity="1" shadow="0" noclick="1"/>
+				</panel>
+
+				<!-- Map Name (Hidden)-->
+				<label name="matchmaking_mode_mapname{mode}" content="{label=---}" style="h4,text_outline" fity="1" visible="0" noclick="1" />
+
+				<!-- Mode Icon (Hidden) -->
+				<image name="matchmaking_mode_modeicon{mode}" texture="{icon}" size="5h" align="right" valign="center" noclick="1" visible="0" />
+
+				<!-- Details Row -->
+				<panel name="matchmaking_mode_details_row{mode}" height="1.9h" valign="bottom" noclick="1">
+
+					<!-- Divider -->
+					<panel height="1" valign="top" color="1 1 1 .1" rendermode="additive" noclick="1" />
+
+					<!-- Mode Name (Hidden legacy panel) -->
+					<panel name="matchmaking_mode_modename_panel{mode}" visible="0" noclick="1">
+						<label name="matchmaking_mode_modename{mode}" content="[ModeName]" style="text_label_small,text_muted" noclick="1" />
+					</panel>
+
+					<!-- Teamsize -->
+					<panel name="matchmaking_mode_teamsize_panel{mode}" valign="bottom" height="1.5h" noclick="1">
+						<label name="matchmaking_mode_players{mode}" content="5v5" style="text_label_small,text_muted" x=".3h" textalign="left" textvalign="center" noclick="1" />
+					</panel>
+
+					<!-- Popularity % -->
+					<panel name="matchmaking_mode_percentage_panel{mode}" valign="bottom" height="1.5h" noclick="1">
+						<!-- Percentage Label -->
+						<label name="matchmaking_mode_percentage{mode}"	content="--" style="text_label_small,text_muted" x="-.3h" textalign="right" textvalign="center" noclick="1"/>
+						<!-- Disabled State Overlay -->
+						<frame name="matchmaking_mode_percentage_disabled{mode}" texture="/ui/hd_ui/frames/rounded_bg_solid.tga" borderthickness=".2h" color=".1 .1 .1 0" visible="0" noclick="1" />
+					</panel>
+
+				</panel>
+
+			</panel>
+
+			<!-- Mode Disabled Tooltip Panel (Hide when modes enabled) -->
+			<frame
+				name="mode_disabled_overlay{mode}"
+				texture="/ui/hd_ui/frames/rounded_grad_minor.tga" borderthickness=".25h" color=".1 .1 .1 .85"
+				visible="1"
+				onmouseoverlua="Matchmaking:ShowModeDisabledTooltip(self, {mode})"
+				onmouseoutlua="Tooltips:TooltipHover_Main(false)"
+			>
+				<image texture="/ui/hd_ui/icons/lock.tga" height="40%" width="40@" color=".8 .2 .2 .9" style="center" noclick="1" />
+				<frame texture="/ui/hd_ui/frames/border_thick.tga" borderthickness=".25h" color=".2 .2 .2" noclick="1" />
+			</frame>
+
+		</panel>
+
+	</template>
+
+	<!-- Holds a 2-mode Ranked/Unranked group's cards side by side (left + right slot). The inner panel has no
+	     float so its children position by align (side by side) rather than stacking like the float=bottom row. -->
+	<template name="matchmaking_mode_row">
+		<panel name="matchmaking_mode_row{key}" width="100%" height="6.6h" style="sticky" float="bottom" noclick="1">
+			<panel width="100%" height="100%" noclick="1">
+				<panel name="matchmaking_mode_slotL{key}" width="49%" height="100%" align="left" noclick="1" />
+				<panel name="matchmaking_mode_slotR{key}" width="49%" height="100%" align="right" noclick="1" />
+			</panel>
+		</panel>
+	</template>
+
+	<!-- Ranked / Unranked group divider inside a map column -->
+	<template name="matchmaking_mode_group_header">
+		<panel name="matchmaking_mode_group_header_root{key}" width="100%" height="3.4h" style="sticky" float="bottom" noclick="1">
+			<label name="matchmaking_mode_group_header_label{key}" content="{label}" style="h3,color-orange,text_outline" shadow="0" valign="center" fitx="1" fity="1" noclick="1" />
+			<panel height="1" valign="bottom" color="1 1 1 .12" rendermode="additive" noclick="1" />
+		</panel>
+	</template>
+
+	<template name="matchmaking_modes_section">
+		<label content="mm_select_modes" fity="1" style="h1,color-orange,sticky" noclick="1" />
+
+		<panel width="100%" style="sticky,grow_noinvis" noclick="1">
+			
+			<!-- Caldavar Modes -->
+			<panel width="49%" style="grow_noinvis" texture="/ui/fe3/elements/caldavar.tga" noclick="1">
+
+				<panel width="100%" style="grow_noinvis" float="bottom" noclick="1">
+					<!-- Header -->
+					<frame texture="/ui/hd_ui/frames/rounded_top_bg_solid.tga" borderthickness=".5h" color=".1 .1 .1 .7" height="5h" noclick="1">
+						<panel width="-2.8h" height="-1.6h" style="center" noclick="1" >
+							<image texture="/maps/caldavarphoenix/icon.tga" width="100@" noclick="1" />
+							<label content="mode_RankedCaldavar" textvalign="center" width="-120@" align="right" style="h3,text_outline" shadow="0" noclick="1" />
+						</panel>
+						<panel height="1" valign="bottom" color="1 1 1 .1" rendermode="additive" noclick="1" />
+					</frame>				
+					<panel width="100%" style="grow_noinvis" noclick="1">
+						<!-- Instantiated Caldavar Modes -->
+						<panel name="matchmaking_modes_caldavar_root" width="-2h" align="center" style="grow_noinvis" float="bottom" padding="1.0h" noclick="1" />
+						<!-- Empty state -->
+						<label name="matchmaking_modes_caldavar_empty" content="mm_no_modes_available" style="h4,text_outline,text_muted" height="6h" width="100%" textalign="center" textvalign="center" visible="0" noclick="1" />
+					</panel>
+
+					<panel height="2h" noclick="1" />
+				</panel>
+				<frame texture="/ui/hd_ui/frames/border_normal.tga" borderthickness=".5h" color=".2 .2 .2" noclick="1" />
+			</panel>
+			
+			<!-- Midwars Modes -->
+			<panel width="49%" style="grow_noinvis" texture="/ui/fe3/elements/midwars.tga" align="right" noclick="1">
+				<panel width="100%" style="grow_noinvis" float="bottom" noclick="1">
+					<!-- Header -->
+					<frame texture="/ui/hd_ui/frames/rounded_top_bg_solid.tga" borderthickness=".5h" color=".1 .1 .1 .7" height="5h" noclick="1">
+						<panel width="-2.8h" height="-1.6h" style="center" noclick="1" >
+							<image texture="/maps/midwars/icon.tga" width="100@" noclick="1" />
+							<label content="mode_RankedMidwars" textvalign="center" width="-120@" align="right" style="h3,text_outline" shadow="0" noclick="1" />
+						</panel>
+						<panel height="1" valign="bottom" color="1 1 1 .1" rendermode="additive" noclick="1" />
+					</frame>				
+					<panel width="100%" style="grow_noinvis" noclick="1">
+						<!-- Instantiated Midwars Modes -->
+						<panel name="matchmaking_modes_midwars_root" width="-2h" align="center" style="grow_noinvis" float="bottom" padding="1.0h" noclick="1" />
+						<!-- Empty state -->
+						<label name="matchmaking_modes_midwars_empty" content="mm_no_modes_available" style="h4,text_outline,text_muted" height="6h" width="100%" textalign="center" textvalign="center" visible="0" noclick="1" />
+					</panel>
+					<panel height="2h" noclick="1" />			
+				</panel>
+				<frame texture="/ui/hd_ui/frames/border_normal.tga" borderthickness=".5h" color=".2 .2 .2" noclick="1" />
+			</panel>
+
+		</panel>
+
+	</template>
+
+	<template name="mm_tuning_tab_btn_state">
+		<widgetstate statename="{statename}">
+			
+			<image texture="/ui/hd_ui/buttons/button_{version}_{btn_state}_center.tga" color="{btn_color=1 1 1}" width="-50@" align="center" blockinput="0" noclick="1" />
+			<image texture="/ui/hd_ui/buttons/button_{version}_{btn_state}_left.tga" color="{btn_color=1 1 1}" width="25@" blockinput="0" noclick="1" />
+			<image texture="/ui/hd_ui/buttons/button_{version}_{btn_state}_right.tga" color="{btn_color=1 1 1}" width="25@" align="right" blockinput="0" noclick="1" />
+			
+			<!-- Left Split Cap-->
+			<image texture="/ui/hd_ui/buttons/button_split_left_{version}_{btn_state}_cap.tga" color="{btn_color=1 1 1}" width="50@" align="right" blockinput="0" noclick="1"
+				visible="{is_left}"
+			/>
+
+			<!-- Right Split Cap-->
+			<image texture="/ui/hd_ui/buttons/button_split_right_{version}_{btn_state}_cap.tga" color="{btn_color=1 1 1}" width="50@" align="left" blockinput="0" noclick="1"
+				visible="{is_right}"
+			/>
+
+		</widgetstate>
+	</template>
+
+	<template name="mm_tuning_tab_btn">
+		<button x="{x}" y="{y}" width="{width=100%}" height="{height=100%}" align="{align}" valign="{valign}"
+			name="{button_name}"
+			color="invisible"
+			enabled="{enabled}"
+			onmouseoverlua="if AtoB('{playsounds=true}') then PlaySound('/shared/sounds/ui/button_over_02.wav') end {onmouseoverlua}"
+			onclick="{onclick}"
+			onclicklua="PlaySound('{sound=/shared/sounds/ui/menu/button_click.wav}') {onclicklua}"
+			onenter="PlaySound('{sound='/shared/sounds/ui/ccpanel/button_click_02.wav}'); {onenter}"
+		>
+
+			<!-- Inner -->
+			<panel height="100%" align="center" float="right" padding="0.5h" style="grow_noinvis" noclick="1">
+
+				<!-- Icon -->
+				<image texture="{icon}" size="2h" color="{icon_color=white}" valign="center" />
+
+				<!-- Label -->
+				<label name="{button_name}_label" height="100%" textvalign="center" valign="center" color="{color=.9 .9 .9 1}" fitx="1"
+					shadow="{shadow=true}" shadowcolor="{shadowcolor=0 0 0 .6}" shadowoffset="{shadowoffset=2}" font="{font=dyn_11}" content="{label}"
+				/>
+
+		</panel>
+
+			<instance name="mm_tuning_tab_btn_state" statename="up" version="secondary" btn_state="up" is_left="{is_left=0}" is_right="{is_right=0}" />
+			<instance name="mm_tuning_tab_btn_state" statename="over" version="secondary" btn_state="over"  is_left="{is_left=0}" is_right="{is_right=0}"  />
+			<instance name="mm_tuning_tab_btn_state" statename="down" version="secondary" btn_state="up" btn_color=".8 .8 .8"  is_left="{is_left=0}" is_right="{is_right=0}" />
+			<instance name="mm_tuning_tab_btn_state" statename="disabled" version="{disabled_type=orange}" btn_state="up"  is_left="{is_left=0}" is_right="{is_right=0}" />
+		</button>
+	</template>
+
+	<template name="mm_fairness_tab_state">
+		<panel noclick="1">
+			
+			<!-- Frame -->
+			<frame texture="/ui/hd_ui/frames/rounded_grad_minor.tga" borderthickness=".8h" color="{bg_color}" noclick="1" />
+			
+			<!-- Content -->
+			<panel width="-2h" height="-1h" style="center" float="right" padding="1h" noclick="1">
+				
+				<!-- Icon -->
+				<image texture="{icon}" size="2.0h" valign="center" noclick="1" color="{icon_color}" />
+
+				<!-- Label -->
+				<label content="{label}" style="h5" shadow="0" color="{text_color}" valign="center" fity="1" fitx="1" noclick="1" />
+
+		</panel>
+		</panel>
+	</template>
+
+	<template name="mm_fairness_tab_widgetstates">
+		<widgetstate statename="up">
+			<instance name="mm_fairness_tab_state" icon="{icon}" label="{label}" bg_color=".12 .13 .15" icon_color=".5 .5 .5" text_color=".5 .5 .5" />
+		</widgetstate>
+
+		<widgetstate statename="over">
+			<instance name="mm_fairness_tab_state" icon="{icon}" label="{label}" bg_color=".16 .17 .19" icon_color=".65 .65 .65" text_color=".65 .65 .65" />
+		</widgetstate>
+
+		<widgetstate statename="down">
+			<instance name="mm_fairness_tab_state" icon="{icon}" label="{label}" bg_color=".14 .15 .17" icon_color=".6 .6 .6" text_color=".6 .6 .6" />
+		</widgetstate>
+
+		<widgetstate statename="up2">
+			<instance name="mm_fairness_tab_state" icon="{icon}" label="{label}" bg_color="{bg_color_selected}" icon_color="white" text_color="white" />
+		</widgetstate>
+
+		<widgetstate statename="over2">
+			<instance name="mm_fairness_tab_state" icon="{icon}" label="{label}" bg_color="{bg_color_selected_over}" icon_color="white" text_color="white" />
+		</widgetstate>
+		
+		<widgetstate statename="down2">
+			<instance name="mm_fairness_tab_state" icon="{icon}" label="{label}" bg_color="{bg_color_selected_down}" icon_color="white" text_color="white" />
+		</widgetstate>
+
+		<widgetstate statename="disabled">
+			<panel color="#212120d8" />
+		</widgetstate>
+	</template>
+
+	<template name="mm_fairness_tab">
+		<button name="{button_name}" width="49.5%" height="100%" align="{align}" color="invisible" numstates="2"
+			onmouseover="PlaySound('/shared/sounds/ui/ccpanel/button_over_01.wav')"
+			onclick="PlaySound('/shared/sounds/ui/button_click_06.wav')"
+			onmouseoverlua="Tooltips:TooltipHover_Main(self, '{tooltip}', 'top')"
+			onmouseoutlua="Tooltips:TooltipHover_Main(false)"
+			onclicklua="{onclicklua}"
+		>
+			<instance name="mm_fairness_tab_widgetstates" icon="{icon}" label="{label}" 
+				bg_color_selected="{bg_color_selected}"
+				bg_color_selected_over="{bg_color_selected_over}"
+				bg_color_selected_down="{bg_color_selected_down}"
+			/>
+		</button>
+	</template>
+
+	<template name="matchmaking_fairness_section">
+
+		<frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" borderthickness=".3h" color=".05 .05 .05" height="5.6h" style="sticky" noclick="1">
+		
+			<!-- Frame -->
+			<frame texture="/ui/hd_ui/frames/border_normal.tga" borderthickness=".3h" color=".2 .2 .2" noclick="1" />
+
+			<panel width="-1.2h" height="-1.3h" style="center" noclick="1">
+
+				<!-- Best Balance BTN -->
+				<instance name="mm_fairness_tab" button_name="mm_fairness_balance_btn" align="left"
+					label="ЛУЧШИЙ БАЛАНС" icon="/ui/hd_ui/icons/balance.tga"
+					bg_color_selected="#2563b8" bg_color_selected_over="#3574c9" bg_color_selected_down="#1a4f99"
+					tooltip="mm_tuning_best_balance_tooltip"
+					onclicklua="Matchmaking:OnBalanceBestClicked()"
+			/>	
+
+				<!-- Fast Queue BTN -->
+				<instance name="mm_fairness_tab" button_name="mm_fairness_speed_btn" align="right"
+					label="БЫСТРАЯ ОЧЕРЕДЬ" icon="/ui/hd_ui/icons/thunder.tga"
+					bg_color_selected="#c93d28" bg_color_selected_over="#da4e39" bg_color_selected_down="#b8321d"
+					tooltip="mm_tuning_fastest_queue_tooltip"
+					onclicklua="Matchmaking:OnBalanceFastClicked()"
+				/>
+
+		</panel>
+
+		</frame>
+
+	</template>
+
+	<!-- MM Stats -->
+	<template name="matchmaking_stat_instance">
+		<panel name="matchmaking_stat_panel_{label_tag}" width="100%" height="2.2h" noclick="1" visible="{visible=1}">
+			<label content="{content=---}" style="text_base" textvalign="center" noclick="1" />
+			<label name="matchmaking_stat_{label_tag=undefined}_label" content="--" style="text_base" textvalign="center" textalign="right" noclick="1" />
+		</panel>
+	</template>
+	
+	<template name="matchmaking_statistics_section">
+		<!-- sticky: the mode columns grow with their tile count, so this must flow below them rather than sit at a fixed offset -->
+		<frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" borderthickness=".3h" color=".05 .05 .05" height="5.4h" style="sticky" noclick="1">
+			<frame texture="/ui/hd_ui/frames/border_normal.tga" borderthickness=".3h" color=".2 .2 .2" noclick="1" />
+
+			<panel height="-1.0h" width="-2.6h" style="center" float="bottom" noclick="1">
+
+			<!-- Total Online Players -->
+			<instance name="matchmaking_stat_instance" content="mm_total_online" label_tag="online_players" />
+
+			<!-- Players in Queue -->
+			<instance name="matchmaking_stat_instance" content="mm_in_queue" label_tag="inqueue" />
+
+			<!-- Players in Matches -->
+			<instance name="matchmaking_stat_instance" content="mm_in_match" label_tag="inmatches" visible="0" />
+
+		</panel>
+		</frame>
+	</template>
+
+</package>
