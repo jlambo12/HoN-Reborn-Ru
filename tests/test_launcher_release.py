@@ -59,6 +59,11 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn('"--launch-game"', source)
         self.assertIn('"--create-play-shortcut"', source)
 
+    def test_release_discovery_uses_semantic_version_order(self):
+        source = (LAUNCHER / "UpdateClient.cs").read_text(encoding="utf-8")
+        self.assertIn("SemVersion.TryParse(release.TagName", source)
+        self.assertIn("OrderByDescending(candidate => candidate.Version)", source)
+
     def test_self_test_does_not_require_an_installed_game(self):
         source = (LAUNCHER / "SelfTest.cs").read_text(encoding="utf-8")
         self.assertNotIn("LocalApplicationData", source)
@@ -165,15 +170,15 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn("EmbeddedResource", project)
 
     def test_beta_release_translation_manifest_matches_asset(self):
-        directory = ROOT / "release-assets" / "0.1.0-beta.10"
+        directory = ROOT / "release-assets" / "0.1.0-beta.11"
         manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
         archive = directory / manifest["file"]
         self.assertTrue(archive.is_file())
         self.assertEqual(archive.stat().st_size, manifest["size_bytes"])
-        self.assertEqual("0.1.0-beta.10", manifest["version"])
+        self.assertEqual("0.1.0-beta.11", manifest["version"])
 
     def test_beta10_is_a_thin_current_ui_overlay_with_legacy_locale_aliases(self):
-        archive_path = ROOT / "release-assets" / "0.1.0-beta.10" / "resources0.jz"
+        archive_path = ROOT / "release-assets" / "0.1.0-beta.11" / "resources0.jz"
         with zipfile.ZipFile(archive_path) as archive:
             names = set(archive.namelist())
             interface = archive.read("stringtables/interface_ru.str").decode("utf-8")

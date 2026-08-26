@@ -9,7 +9,7 @@ on:
       version:
         description: "Version without the v prefix"
         required: true
-        default: "0.1.0-beta.10"
+        default: "0.1.0-beta.11"
 
 permissions:
   contents: write
@@ -44,14 +44,14 @@ jobs:
         run: python tools/verify_release.py --version ${{ steps.version.outputs.version }}
       - name: Build autonomous launcher and updater
         shell: pwsh
-        run: .\scripts\build_launcher.ps1 -LauncherVersion 1.0.9
+        run: .\scripts\build_launcher.ps1 -LauncherVersion 1.0.10
       - name: Create update manifest and assets
         shell: pwsh
         run: |
           python tools/create_update_manifest.py `
             --version "${{ steps.version.outputs.version }}" `
             --channel "${{ steps.version.outputs.channel }}" `
-            --launcher-version "1.0.9" `
+            --launcher-version "1.0.10" `
             --translation "release-assets\${{ steps.version.outputs.version }}\resources0.jz" `
             --launcher "dist\launcher\HoNRebornRU.exe" `
             --updater "dist\launcher\HoNRebornRU.Updater.exe" `

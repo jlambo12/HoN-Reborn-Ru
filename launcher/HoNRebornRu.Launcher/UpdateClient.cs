@@ -22,9 +22,18 @@ internal sealed class UpdateClient : IDisposable
         response.EnsureSuccessStatusCode();
         await using var stream = await response.Content.ReadAsStreamAsync(cancellationToken);
         var releases = await JsonSerializer.DeserializeAsync<List<GitHubRelease>>(stream, AppStorage.JsonOptions, cancellationToken) ?? [];
-        var candidates = releases.Where(release => !release.Draft && (channel == ReleaseChannel.Beta || !release.Prerelease));
-        foreach (var release in candidates)
+        var candidates = new List<(GitHubRelease Release, SemVersion Version)>();
+        foreach (var release in releases.Where(release => !release.Draft && (channel == ReleaseChannel.Beta || !release.Prerelease)))
         {
+            if (SemVersion.TryParse(release.TagName, out var version) && version is not null)
+                candidates.Add((release, version));
+        }
+
+        // GitHub does not guarantee semantic-version ordering here. In particular,
+        // beta.9 may be returned before beta.10, so always inspect newest first.
+        foreach (var candidate in candidates.OrderByDescending(candidate => candidate.Version))
+        {
+            var release = candidate.Release;
             var manifestAsset = release.Assets.FirstOrDefault(asset => asset.Name.Equals("update-manifest.json", StringComparison.OrdinalIgnoreCase));
             if (manifestAsset is null) continue;
             try
