@@ -2,8 +2,9 @@
 """Rebase the cumulative Russian mod onto the current game/PReact build.
 
 The result is intentionally a thin overlay: current game assets remain owned by
-the upstream archive, while the mod contains Russian stringtables, reviewed
-native overrides and a freshly compiled localized Preact entry bundle.
+the upstream archive, while the mod contains Russian stringtables, compatibility
+aliases for legacy English-only lookup paths, reviewed native overrides and a
+freshly compiled localized Preact entry bundle.
 """
 
 from __future__ import annotations
@@ -35,6 +36,7 @@ PREACT_MEMBERS = {
     "preact-remote/dist/index.js": PREACT_REMOTE_DIST / "index.js",
     "preact-remote/dist/assets/index.css": PREACT_REMOTE_DIST / "assets" / "index.css",
 }
+STRINGTABLE_DOMAINS = ("bot_messages", "client_messages", "entities", "game_messages", "interface")
 
 
 def sha256(path: Path) -> str:
@@ -113,9 +115,20 @@ def main() -> int:
     for name, path in PREACT_MEMBERS.items():
         members[name] = path.read_bytes()
 
+    # Several legacy native UI paths ignore host_locale and always resolve the
+    # English namespace. Runtime diagnosis proved that this produced raw keys or
+    # English labels even though the matching RU entries existed. Alias the exact
+    # current Russian tables instead of restoring stale whole-screen UI packages.
+    for domain in STRINGTABLE_DOMAINS:
+        ru_name = f"stringtables/{domain}_ru.str"
+        if ru_name not in members:
+            raise SystemExit(f"Required Russian stringtable missing: {ru_name}")
+        members[f"stringtables/{domain}_en.str"] = members[ru_name]
+
     required = {
         "core_ru.resources", "stringtables/entities_ru.str",
         "stringtables/interface_ru.str",
+        *(f"stringtables/{domain}_en.str" for domain in STRINGTABLE_DOMAINS),
         *PREACT_MEMBERS,
     }
     if missing := sorted(required - members.keys()):
@@ -156,6 +169,7 @@ def main() -> int:
         "human_input": {"path": str(HUMAN_BASE), "sha256": sha256(HUMAN_BASE), "reviewed_keys": human_report["reviewed_keys"]},
         "preact": {"source": str(PREACT_DIST), "translated_literals": override_report["preact_literals"], "cyrillic_characters": cyrillic},
         "native_current_files": len(current_native) + len(current_runtime_native),
+        "legacy_locale_aliases": list(STRINGTABLE_DOMAINS),
         "output": {"path": str(OUTPUT), "sha256": first, "size_bytes": OUTPUT.stat().st_size, "members": len(names), "crc": "PASS" if not corrupt else "FAIL"},
         "thin_overlay": True,
         "installed": False,

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "version": "0.1.0-beta.10",
+  "file": "resources0.jz",
+  "sha256": "90a254a138e41edfcc3f104110ea55ea02b2c990f1d97921b8878a212623d3fe",
+  "size_bytes": 3067239,
+  "members": 24,
+  "crc": "PASS",
+  "automated_tests": "PASS",
+  "runtime_verified": false,
+  "runtime_status": "Current-version thin overlay with five verified legacy locale aliases; pending final player visual verification on Windows x64."
+}

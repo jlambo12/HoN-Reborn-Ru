@@ -165,18 +165,23 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn("EmbeddedResource", project)
 
     def test_beta_release_translation_manifest_matches_asset(self):
-        directory = ROOT / "release-assets" / "0.1.0-beta.9"
+        directory = ROOT / "release-assets" / "0.1.0-beta.10"
         manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
         archive = directory / manifest["file"]
         self.assertTrue(archive.is_file())
         self.assertEqual(archive.stat().st_size, manifest["size_bytes"])
-        self.assertEqual("0.1.0-beta.9", manifest["version"])
+        self.assertEqual("0.1.0-beta.10", manifest["version"])
 
-    def test_beta9_is_a_thin_current_ui_overlay(self):
-        archive_path = ROOT / "release-assets" / "0.1.0-beta.9" / "resources0.jz"
+    def test_beta10_is_a_thin_current_ui_overlay_with_legacy_locale_aliases(self):
+        archive_path = ROOT / "release-assets" / "0.1.0-beta.10" / "resources0.jz"
         with zipfile.ZipFile(archive_path) as archive:
             names = set(archive.namelist())
             interface = archive.read("stringtables/interface_ru.str").decode("utf-8")
+            for domain in ("bot_messages", "client_messages", "entities", "game_messages", "interface"):
+                self.assertEqual(
+                    archive.read(f"stringtables/{domain}_ru.str"),
+                    archive.read(f"stringtables/{domain}_en.str"),
+                )
         self.assertNotIn("ui/fe3/sections/plinko_v2.package", names)
         self.assertFalse(any(name.startswith("ui/fe3/sections/matchmaking") for name in names))
         self.assertNotIn("ui/fe3/sections/store.package", names)
@@ -184,6 +189,12 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn("boss_info_scaling_header\tУсиление с каждым возрождением", interface)
         self.assertIn("producst_header_emotes\tЭмоции", interface)
         self.assertIn("plinko_change_board\tСменить поле", interface)
+
+    def test_rebase_restores_safe_legacy_locale_aliases_without_stale_screens(self):
+        source = (ROOT / "tools" / "localization" / "rebase_current_release.py").read_text(encoding="utf-8")
+        self.assertIn("STRINGTABLE_DOMAINS", source)
+        self.assertIn('members[f"stringtables/{domain}_en.str"] = members[ru_name]', source)
+        self.assertIn("UI packages from the historical donor build are intentionally not", source)
 
     def test_setup_contains_both_autonomous_binaries(self):
         script = (ROOT / "installer" / "HoNRebornRU.iss").read_text(encoding="utf-8")
