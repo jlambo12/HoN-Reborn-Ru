@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "batch_id": "PREACT_RUNTIME_018_PROFILE_COMPLETION",
+  "scope": "Remaining visible profile labels reported by player screenshots",
+  "reviewed_by": "Player profile screenshots 2026-08-27",
+  "rows": [
+    {
+      "source_file": "preact/src/layers/profile/components/penaltystatus/penaltystatus.tsx",
+      "english": "Show Honor System details",
+      "russian": "Показать сведения о системе чести",
+      "expected_matches": 1
+    },
+    {
+      "source_file": "preact/src/layers/profile/components/alltimerecords/alltimerecords.tsx",
+      "english": "Annihilations",
+      "russian": "Полные уничтожения",
+      "expected_matches": 1
+    },
+    {
+      "source_file": "preact/src/layers/profile/components/alltimerecords/alltimerecords.tsx",
+      "english": "Smackdowns",
+      "russian": "Сокрушения",
+      "expected_matches": 1
+    }
+  ]
+}

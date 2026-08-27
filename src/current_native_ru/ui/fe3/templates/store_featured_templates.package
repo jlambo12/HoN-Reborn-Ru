@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package>
+
+	<!--
+		[ ** STORE FEATURED TAB ** ]
+		Data driven by store_featured.lua StoreFeatured:Populate()
+
+		Layout:
+		- Top (~70%): Banner (left 65%) + 2x2 square grid (right 34.5%)
+		- Bottom (~30%): Marketplace row (4 landscape cards)
+	-->
+
+	<!-- Landscape product card (used in marketplace row) -->
+	<template name="store_featured_card">
+		<button name="store_featured_card_{id}" color="invisible" width="{width=24.6%}" height="100%"
+			onmouseoverlua="GetWidget('store_featured_card_effect_{id}'):FadeIn(150) GetWidget('store_featured_card_inner_glow_{id}'):SetBorderColor('.6 .8 .9 1')"
+			onmouseoutlua="GetWidget('store_featured_card_effect_{id}'):FadeOut(150) GetWidget('store_featured_card_inner_glow_{id}'):SetBorderColor('.2 .2 .2 .6')"
+		>
+			<!-- Outer Glow -->
+			<frame texture="/ui/hd_ui/frames/squareglow.tga" y=".2h" size="+.7h" style="center" borderthickness="0.7h" color="invisible" bordercolor="0 0 0 .6" />
+
+			<!-- Image -->
+			<panel clip="1" width="100%" height="100%" color=".18 .18 .18 1" noclick="1">
+				<image name="store_featured_card_image_{id}" texture="$invis" width="100%" height="100%" align="center" valign="center" noclick="1" />
+			</panel>
+
+			<!-- Gradient Overlay -->
+			<image texture="/ui/hd_ui/elements/grad_linear_vert.tga" color="0 0 0 .85" vflip="1" height="100%" valign="bottom" noclick="1" />
+
+			<!-- Inner Glow -->
+			<frame name="store_featured_card_inner_glow_{id}" width="100%" height="98.5%" valign="top" texture="/ui/hd_ui/frames/inner_glow.tga" borderthickness=".3h" bordercolor=".2 .2 .2 .6" color="invisible" noclick="1" />
+
+			<!-- Top Bevel -->
+			<image texture="/ui/hd_ui/elements/grad_linear_vert.tga" width="99%" height="1%" align="center" valign="top" y="0.15h" color="1 1 1 .35" noclick="1" />
+
+			<!-- Hover Effect -->
+			<modelpanel name="store_featured_card_effect_{id}"
+				width="100%" height="100%"
+				style="button_hover_effect_style"
+				effect="/ui/effects/product_button.effect"
+				onshowlua="self:SetEffect('/ui/effects/product_button.effect')"
+			/>
+
+			<!-- Rarity Border (bottom) -->
+			<frame name="store_featured_card_rarity_{id}" width="100%" height="4%" valign="bottom" texture="/ui/hd_ui/frames/rounded_bottom_grad.tga" borderthickness=".7h" bordercolor="invisible" color="invisible" noclick="1" />
+
+			<!-- Info Footer -->
+			<panel width="-2h" height="4.5h" align="center" valign="bottom" y="-0.4h" noclick="1">
+				<image name="store_featured_card_caticon_{id}" texture="$invis" height="3h" width="3h" valign="center" noclick="1" color=".5 .5 .5 1" />
+				<panel x="3.6h" width="-7h" height="100%" noclick="1">
+					<label name="store_featured_card_name_{id}" style="text_base" font="dyn_bold_12" color="1 1 1 1" width="100%" valign="center" y="0.5h" content="" noclick="1" />
+					<label name="store_featured_card_subtitle_{id}" style="text_base" font="dyn_9" color=".8 .8 .8 1" width="100%" valign="center" y="2h" content="" noclick="1" />
+				</panel>
+				<panel height="2h" align="right" valign="center" float="right" padding=".2h" noclick="1" style="grow_noinvis">
+					<image texture="/ui/hd_ui/elements/jade.tga" height="100%" width="100@" valign="center" noclick="1" />
+					<label name="store_featured_card_price_{id}" style="text_base" font="dyn_bold_12" color="#ffffffff" textvalign="center" fitx="1" content="" noclick="1" />
+				</panel>
+			</panel>
+
+		</button>
+	</template>
+
+	<!-- Square product tile (used in 2x2 grid) -->
+	<template name="store_featured_square_tile">
+		<button name="store_featured_square_{id}" align="{align=left}" color="invisible" width="100@" height="100%"
+			onmouseoverlua="GetWidget('store_featured_square_effect_{id}'):FadeIn(150) GetWidget('store_featured_square_glow_{id}'):SetBorderColor('.6 .8 .9 1')"
+			onmouseoutlua="GetWidget('store_featured_square_effect_{id}'):FadeOut(150) GetWidget('store_featured_square_glow_{id}'):SetBorderColor('.2 .2 .2 .6')"
+		>
+			<!-- Outer Glow -->
+			<frame texture="/ui/hd_ui/frames/squareglow.tga" y=".2h" size="+.7h" style="center" borderthickness="0.7h" color="invisible" bordercolor="0 0 0 .6" />
+
+			<!-- Image: Y at 100% height, width auto by aspect, X center-cropped via parent clip -->
+			<panel clip="1" width="100%" height="100%" color=".18 .18 .18 1" noclick="1">
+				<image name="store_featured_square_image_{id}" texture="$invis" height="100%" width="200@" align="center" valign="center" noclick="1" />
+			</panel>
+
+			<!-- Gradient Overlay -->
+			<image texture="/ui/hd_ui/elements/grad_linear_vert.tga" color="0 0 0 .85" vflip="1" height="60%" valign="bottom" noclick="1" />
+
+			<!-- Inner Glow -->
+			<frame name="store_featured_square_glow_{id}" width="100%" height="98.5%" valign="top" texture="/ui/hd_ui/frames/inner_glow.tga" borderthickness=".3h" bordercolor=".2 .2 .2 .6" color="invisible" noclick="1" />
+
+			<!-- Top Bevel -->
+			<image texture="/ui/hd_ui/elements/grad_linear_vert.tga" width="99%" height="1%" align="center" valign="top" y="0.15h" color="1 1 1 .35" noclick="1" />
+
+			<!-- Hover Effect -->
+			<modelpanel name="store_featured_square_effect_{id}"
+				width="100%" height="100%"
+				style="button_hover_effect_style"
+				effect="/ui/effects/product_button.effect"
+				onshowlua="self:SetEffect('/ui/effects/product_button.effect')"
+			/>
+
+			<!-- Rarity Border (bottom) -->
+			<frame name="store_featured_square_rarity_{id}" width="100%" height="4%" valign="bottom" texture="/ui/hd_ui/frames/rounded_bottom_grad.tga" borderthickness=".7h" bordercolor="invisible" color="invisible" noclick="1" />
+
+			<!-- Info Footer -->
+			<panel width="-2h" height="3.8h" align="center" valign="bottom" y="-0.3h" noclick="1">
+				<image name="store_featured_square_caticon_{id}" texture="$invis" height="2.5h" width="2.5h" valign="center" noclick="1" color=".5 .5 .5 1" />
+				<panel x="3h" width="-5.5h" height="100%" noclick="1">
+					<label name="store_featured_square_name_{id}" style="text_base" font="dyn_bold_10" color="1 1 1 1" width="100%" valign="center" y="0.3h" content="" noclick="1" />
+					<label name="store_featured_square_subtitle_{id}" style="text_base" font="dyn_8" color=".8 .8 .8 1" width="100%" valign="center" y="1.6h" content="" noclick="1" />
+				</panel>
+				<panel height="1.8h" align="right" valign="center" float="right" padding=".25h" noclick="1" style="grow_noinvis">
+					<image texture="/ui/hd_ui/elements/jade.tga" height="100%" width="100@" valign="center" noclick="1" />
+					<label name="store_featured_square_price_{id}" style="text_base" font="dyn_bold_10" color="#ffffffff" textvalign="center" fitx="1" content="" noclick="1" />
+				</panel>
+			</panel>
+
+			<!-- New Effect (top-left sparkle) -->
+			<modelpanel name="store_featured_square_new_effect_{id}"
+				size="5h" x="-.7h" y="-.7h" align="left" valign="top"
+				style="button_hover_effect_style"
+				effect="/ui/effects/product_new_featured.effect"
+				onshowlua="self:SetEffect('/ui/effects/product_new_featured.effect')"
+			/>
+
+		</button>
+	</template>
+
+	<template name="store_featured_banner_feature_badge">
+		<panel name="store_featured_banner_feature_{id}" width="4.35h" height="5.76h" align="left" visible="0" noclick="1">
+			<image texture="{icon}" width="100%" height="100%" align="center" valign="center" noclick="1" />
+			<label y="4.3h" width="3.85h" height=".85h" align="center" font="dyn_bold_7" fitx="1" fitxpadding=".1h" content="{label}" textalign="center" textvalign="center" shadow="1" gradientstart="#ffffff" gradientmid="#d6a724" gradientmidpos="0.5" gradientend="#5f2f0c" gradientdirection="vertical" noclick="1" />
+		</panel>
+	</template>
+
+	<!-- Featured Banner (left side of top section) -->
+	<template name="store_featured_banner">
+		<panel name="store_featured_banner_root" width="65%" height="100%" align="left" valign="top" noclick="1">
+
+			<!-- Background Image (fills banner) -->
+			<panel clip="1" width="100%" height="100%" noclick="1" >
+				<image name="store_featured_banner_image" texture="$invis" width="100%" height="56.25@" align="center" valign="center" noclick="1" />
+			</panel>
+
+			<!-- Bottom gradient overlay for text legibility -->
+			<image texture="/ui/hd_ui/elements/grad_linear_vert.tga" color="0 0 0 .9" vflip="1" width="100%" height="55%" valign="bottom" noclick="1" />
+
+			<!-- Subtle border -->
+			<frame width="100%" height="100%" color="invisible" borderthickness="2" bordercolor=".18 .18 .18 1" noclick="1" />
+
+			<!-- Bottom-left text block: price, tag, title, description -->
+			<panel width="-3h" height="15h" x="2h" valign="bottom" y="-5.5h" noclick="1">
+				<!-- Price row (jade icon + amount) -->
+				<panel height="3.4h" width="100%" noclick="1">
+					<image texture="/ui/hd_ui/elements/jade.tga" height="100%" width="100@" valign="center" align="left" noclick="1" />
+					<label name="store_featured_banner_price" x="4h" style="h1" font="dyn_bold_22" color="1 1 1 1" valign="center" textvalign="center" fitx="1" content="" noclick="1" />
+				</panel>
+				<!-- Small tag line -->
+				<label name="store_featured_banner_tag" y="3.8h" style="text_base" font="dyn_bold_9" color="1 1 1 .85" content="" noclick="1" />
+				<!-- Big title -->
+				<label name="store_featured_banner_title" y="5.6h" width="100%" style="h1" font="dyn_bold_22" color="1 1 1 1" content="" visible="0" shadow="1" noclick="1" />
+				<label name="store_featured_banner_title_common" y="5.6h" width="100%" style="h1" font="dyn_bold_22" content="" visible="0" gradientstart="#ffffff" gradientmid="#00d1ad" gradientmidpos="0.48" gradientend="#005f55" gradientdirection="vertical" shadow="1" noclick="1" />
+				<label name="store_featured_banner_title_uncommon" y="5.6h" width="100%" style="h1" font="dyn_bold_22" content="" visible="0" gradientstart="#f4fff7" gradientmid="#2ecc71" gradientmidpos="0.48" gradientend="#0d6232" gradientdirection="vertical" shadow="1" noclick="1" />
+				<label name="store_featured_banner_title_rare" y="5.6h" width="100%" style="h1" font="dyn_bold_22" content="" visible="0" gradientstart="#f3fbff" gradientmid="#0090d1" gradientmidpos="0.48" gradientend="#064d82" gradientdirection="vertical" shadow="1" noclick="1" />
+				<label name="store_featured_banner_title_epic" y="5.6h" width="100%" style="h1" font="dyn_bold_22" content="" visible="0" gradientstart="#f6d5ff" gradientmid="#b81fec" gradientmidpos="0.48" gradientend="#5e0a78" gradientdirection="vertical" shadow="1" noclick="1" />
+				<label name="store_featured_banner_title_legendary" y="5.6h" width="100%" style="h1" font="dyn_bold_22" content="" visible="0" gradientstart="#fff7df" gradientmid="#ff9000" gradientmidpos="0.48" gradientend="#7a3300" gradientdirection="vertical" shadow="1" noclick="1" />
+				<label name="store_featured_banner_description" y="9.1h" width="100%" height="1.8h" style="text_base" font="dyn_10" color="1 1 1 .82" content="" visible="0" noclick="1" />
+
+				<panel name="store_featured_banner_features" y="9.5h" width="100%" height="6h" visible="1" noclick="1">
+					<panel width="100%" height="100%" noclick="1">
+						<instance name="store_featured_banner_feature_badge" id="vfx" label="ЭФФЕКТЫ" icon="/ui/fe3/elements/dpp/icon_vfx.png" />
+						<instance name="store_featured_banner_feature_badge" id="sfx" label="ЗВУК" icon="/ui/fe3/elements/dpp/icon_sfx.png" />
+						<instance name="store_featured_banner_feature_badge" id="voice" label="ГОЛОС" icon="/ui/fe3/elements/dpp/icon_voice.png" />
+						<instance name="store_featured_banner_feature_badge" id="anims" label="АНИМАЦИИ" icon="/ui/fe3/elements/dpp/icon_anims.png" />
+						<instance name="store_featured_banner_feature_badge" id="icons" label="ЗНАЧКИ" icon="/ui/fe3/elements/dpp/icon_icons.png" />
+					</panel>
+				</panel>
+			</panel>
+
+			<!-- Bottom bar inside banner: Buttons (left) + Numbered Pagination (right) -->
+			<panel width="-3h" height="3.2h" x="1.5h" valign="bottom" y="-1.5h" noclick="1">
+				<!-- Buttons grouped at the left -->
+				<panel height="100%" align="left" valign="center" float="right" padding=".4h" style="grow_noinvis" noclick="1">
+					<instance name="button_hd" button_name="store_featured_banner_demo_btn" width="11h" version="secondary" label="general_demo"
+						onclicklua="StoreFeatured:OnBannerDemo()"
+					/>
+					<instance name="button_hd" button_name="store_featured_banner_preview_btn" width="11h" version="secondary" label="Предпросмотр"
+						onclicklua="StoreFeatured:OnBannerPreview()"
+					/>
+					<instance name="button_hd" button_name="store_featured_banner_unlock_btn" width="11h" version="primary" label="Открыть"
+						onclicklua="StoreFeatured:OnBannerUnlock()"
+					/>
+				</panel>
+				<!-- Numbered Pagination Boxes (1, 2, 3, 4) - clickable -->
+				<panel name="store_featured_banner_dots" height="100%" align="right" valign="center" float="right" padding=".3h" style="grow_noinvis" visible="0" noclick="1">
+					<button name="store_featured_banner_dot_0" width="2.6h" height="2.6h" color=".08 .08 .08 .9"
+						onclicklua="StoreFeatured:OnBannerPage(0)"
+					>
+						<frame name="store_featured_banner_dot_frame_0" width="100%" height="100%" color="invisible" borderthickness="1" bordercolor="1 1 1 1" noclick="1" />
+						<label name="store_featured_banner_dot_label_0" width="100%" height="100%" style="text_base" font="dyn_bold_10" color="1 1 1 1" textalign="center" textvalign="center" content="1" noclick="1" />
+					</button>
+					<button name="store_featured_banner_dot_1" width="2.6h" height="2.6h" color=".08 .08 .08 .7"
+						onclicklua="StoreFeatured:OnBannerPage(1)"
+					>
+						<frame name="store_featured_banner_dot_frame_1" width="100%" height="100%" color="invisible" borderthickness="1" bordercolor=".4 .4 .4 1" noclick="1" />
+						<label name="store_featured_banner_dot_label_1" width="100%" height="100%" style="text_base" font="dyn_bold_10" color=".75 .75 .75 1" textalign="center" textvalign="center" content="2" noclick="1" />
+					</button>
+					<button name="store_featured_banner_dot_2" width="2.6h" height="2.6h" color=".08 .08 .08 .7"
+						onclicklua="StoreFeatured:OnBannerPage(2)"
+					>
+						<frame name="store_featured_banner_dot_frame_2" width="100%" height="100%" color="invisible" borderthickness="1" bordercolor=".4 .4 .4 1" noclick="1" />
+						<label name="store_featured_banner_dot_label_2" width="100%" height="100%" style="text_base" font="dyn_bold_10" color=".75 .75 .75 1" textalign="center" textvalign="center" content="3" noclick="1" />
+					</button>
+					<button name="store_featured_banner_dot_3" width="2.6h" height="2.6h" color=".08 .08 .08 .7"
+						onclicklua="StoreFeatured:OnBannerPage(3)"
+					>
+						<frame name="store_featured_banner_dot_frame_3" width="100%" height="100%" color="invisible" borderthickness="1" bordercolor=".4 .4 .4 1" noclick="1" />
+						<label name="store_featured_banner_dot_label_3" width="100%" height="100%" style="text_base" font="dyn_bold_10" color=".75 .75 .75 1" textalign="center" textvalign="center" content="4" noclick="1" />
+					</button>
+				</panel>
+			</panel>
+
+		</panel>
+	</template>
+
+	<!-- 2x2 Square Grid (right side of top section) -->
+	<template name="store_featured_grid">
+		<panel name="store_featured_grid_root" width="34.5%" height="100%" align="left" valign="top" noclick="1">
+			<!-- Top row (2 tiles) -->
+			<panel name="store_featured_grid_row0" width="100%" height="49.2%" valign="top" noclick="1" />
+			<!-- Bottom row (2 tiles) -->
+			<panel name="store_featured_grid_row1" width="100%" height="49.2%" valign="bottom" noclick="1" />
+		</panel>
+	</template>
+
+	<!-- Featured Section Root -->
+	<template name="store_featured_section">
+		<panel name="store_featured_section_root" width="{width}" height="100%" visible="{visible=0}" color="invisible" noclick="1">
+			<!-- Top area: banner + grid -->
+			<panel name="store_featured_top_area" width="100%" height="68%" valign="top" float="right" padding="0.5%" noclick="1">
+				<instance name="store_featured_banner" />
+				<instance name="store_featured_grid" />
+			</panel>
+			<!-- Bottom area: marketplace row -->
+			<panel name="store_featured_marketplace_area" width="100%" height="30%" valign="bottom" noclick="1">
+				<label name="store_featured_row_title_marketplace" style="h1" font="dyn_bold_14" color="1 1 1 1" height="2.2h" content="ТОРГОВАЯ ПЛОЩАДКА" noclick="1" />
+				<panel name="store_featured_row_cards_marketplace" width="100%" height="-2.4h" valign="bottom" float="right" padding="0.5%" noclick="1" />
+			</panel>
+		</panel>
+	</template>
+
+</package>

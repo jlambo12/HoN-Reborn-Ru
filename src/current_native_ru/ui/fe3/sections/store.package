@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package>
+
+	<!-- LUA -->
+	<lua file="/ui/scripts/fe3/store_config.lua" />
+	<lua file="/ui/scripts/fe3/store_listpool.lua" />
+	<lua file="/ui/scripts/fe3/store.lua" />
+	<lua file="/ui/scripts/fe3/store_featured.lua" />
+
+	<!-- Templates -->
+	<include file="/ui/fe3/templates/store_templates.package" />
+	<include file="/ui/fe3/templates/store_featured_templates.package" />
+
+	<template name="store_hero_list_section">
+		<panel name="store_hero_list_section" width="{width}" height="{height}" x="{x}" visible="{visible=1}" valign="bottom" noclick="1">
+			<frame  texture="/ui/hd_ui/frames/rounded_bg_solid.tga" borderthickness=".4h" color=".07 .07 .09 .0" width="-1h" valign="bottom" noclick="1">
+				<frame texture="/ui/hd_ui/frames/inset.tga" color="0 0 0 .5" borderthickness=".4h"/>
+				
+				<!-- Hero Search/Filters -->
+				<instance name="store_hero_list_filters" target="{target}" object="{object}" />
+
+				<!-- Listbox -->
+				<instance name="store_listbox_alpha" id="store_listbox_alpha" />
+
+			</frame>
+		</panel>
+	</template>
+
+	<template name="store_product_grid_section">
+		<panel name="store_product_grid_root" width="{width}" height="{height}" valign="bottom" noclick="1" visible="{visible=1}">
+
+			<!-- Background Frame -->
+			<frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" borderthickness=".4h" color=".07 .07 .09 .0" width="-1h" height="-4.2h" valign="bottom" noclick="1">
+				<frame texture="/ui/hd_ui/frames/inset.tga" color="0 0 0 .5" borderthickness=".4h"/>
+			</frame>
+
+			<!-- Filter/Sorting -->
+			<instance name="store_product_filters" />
+
+			<!-- Product Listbox: holds a FIXED pool of visible tiles (virtualized); scrolling is
+			     driven by Lua (Store:GridWheel / the pool scroller below), which rebinds tile data
+			     instead of moving widgets. -->
+			<listbox
+				name="{listbox_name=store_product_grid_listbox}"
+				style="store_product_grid_scroller"
+				wrap="row"
+				itemheight="{itemheight}" itemwidth="{itemwidth}"
+				width="-1.5h" height="-4.5h" x="-0.25h" y="0.25h" align="center" valign="bottom"
+				scrollbaroffset="0.5h"
+				onmousewheeluplua="Store:GridWheel(-1)"
+				onmousewheeldownlua="Store:GridWheel(1)"
+			/>
+			<listbox
+				name="store_product_grid_icon_listbox"
+				style="store_product_grid_scroller"
+				wrap="row"
+				itemheight="20%" itemwidth="19.5%"
+				width="-1.5h" height="-4.5h" x="-0.25h" y="0.25h" align="center" valign="bottom"
+				scrollbaroffset="0.5h"
+				visible="0"
+				onmousewheeluplua="Store:GridWheel(-1)"
+				onmousewheeldownlua="Store:GridWheel(1)"
+			/>
+
+			<!-- Virtual scroll position for the tile pool (value = top data row, 0-based).
+			     Range is set from Lua: max = total data rows - visible rows. -->
+			<scrollbar noclick="0" name="store_product_grid_pool_scroller"
+				visible="0"
+				align="right"
+				valign="bottom"
+				x="-0.25h" y="0.25h"
+				width="0.8h"
+				height="-4.5h"
+				scrollbarsize=".5h"
+				handlewidth=".5h"
+				handleheight="4h"
+				texture="/ui/hd_ui/input_controls/scrollbar_mini.tga"
+				scrollbarplaceholder="1"
+				minvalue="0"
+				maxvalue="0"
+				step="1"
+				value="0"
+				vertical="1"
+				slotwidth="0.8h" slotheight="1"
+				onslidelua="Store:OnGridScrollbarSlide()"
+			/>
+
+		</panel>
+	</template>
+	
+	<template name="store_emote_wheel_section">
+		<panel name="store_emote_wheel_section_root" width="{width}" x="{x=0h}" noclick="1">
+			<frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" borderthickness=".4h" color=".07 .07 .09 0" width="-1h" height="-4.9h" valign="bottom" noclick="1">
+				<frame texture="/ui/hd_ui/frames/inset.tga" color="0 0 0 .5" borderthickness=".4h"/>
+
+			<panel height="25%" noclick="1">
+				<panel width="80%" style="grow_noinvis,center" float="bottom" noclick="1">
+					<label style="h1,color-blue-light" textalign="center" fity="1" wrap="1" content="vanity_emote_wheel_setup_title" />
+					<label style="text_base,text_muted" textalign="center" fity="1" wrap="1" content="vanity_emote_wheel_setup_desc" />
+				</panel>
+			</panel>
+
+			<!-- Wheel Slot Picker Container -->
+			<panel name="store_wheel_slot_picker_container" width="100%" height="80%" valign="bottom" noclick="1">
+
+				<!-- Top Wheel -->
+				<panel height="50%" noclick="1">
+
+					<instance name="store_emotewheel_slotpicker_root" wheel="1" />
+
+					<!-- Wheel 1 Equipped Emote Slots [INSTANTIATED] -->
+					<panel name="store_emote_item_wheel1" noclick="1" />
+
+				</panel>
+
+				<!-- Bottom Wheel -->
+				<panel height="50%" valign="bottom" noclick="1">
+
+					<instance name="store_emotewheel_slotpicker_root" wheel="2" />
+
+					<!-- Wheel 2 Equipped Emote Slots [INSTANTIATED] -->
+					<panel name="store_emote_item_wheel2" noclick="1" />
+
+				</panel>
+
+			</panel>
+
+			<!-- in game blocker overlay -->
+			<panel name="store_emote_wheel_overlay" width="100%" height="100%" color="0 0 0 .75" visible="0" y="0" noclick="1">
+				<panel width="-6h" float="bottom" padding="1h" style="center,grow_noinvis" noclick="1">
+					<panel height="6h" noclick="1">
+						<image texture="/ui/hd_ui/icons/lock.tga" color="1 1 1 .4" align="center" width="100@" />
+					</panel>
+					<label style="h1,color-blue-light" textalign="center" wrap="1" fity="1" content="vanity_emote_wheel_setup_disabled_title" />
+					<label style="text_base" textalign="center" wrap="1" fity="1" content="vanity_emote_wheel_setup_disabled_desc" />
+				</panel>
+			</panel>
+
+			</frame>
+		</panel>
+	</template>
+
+	<template name="store_model_viewer_panels">
+
+		<!-- [GENERIC] -->
+		<instance name="store_modelpanel_instance"
+			bg_visible="1" bg_texture="/content/stages/shared/store_bg.tga" bg_color="1 1 1 1" 
+			type="generic"
+		/>
+	
+		<!-- [AVATAR] -->
+		<instance name="store_modelpanel_instance"
+			bg_visible="1" bg_texture="/content/stages/shared/store_bg.tga" bg_color="1 1 1 1"
+			type="avatar"
+		/>
+	
+		<!-- [COURIER] -->
+		<instance name="store_modelpanel_instance"
+			bg_visible="1" bg_texture="/content/stages/shared/store_bg.tga" bg_color="1 1 1 1"
+			type="courier"
+		/>
+	
+		<!-- [WARD] -->
+		<instance name="store_modelpanel_instance"
+			bg_visible="1" bg_texture="/content/stages/shared/store_bg.tga" bg_color="1 1 1 1"
+			type="ward"
+		/>
+
+		<!-- [RAVEN] -->
+		<instance name="store_modelpanel_instance"
+			bg_visible="1" bg_texture="/content/stages/shared/store_bg.tga" bg_color="1 1 1 1"
+			type="raven"
+		/>
+
+		<!-- [ANNOUNCER] -->
+		<instance name="store_modelpanel_instance"
+			bg_visible="1" bg_texture="/content/stages/announcer/base/store_bg.tga" bg_color="1 1 1 1"
+			bg_effect_style="shop_fe3_announcer_stage_style"
+			type="announcer"
+		/>
+
+		<!-- [ROAST] -->
+		<instance name="store_modelpanel_instance"
+			bg_visible="1" bg_texture="/content/stages/shared/store_bg.tga" bg_color="1 1 1 1"
+			type="roast"
+		/>
+
+		<!-- [GESTURE] -->
+		<instance name="store_modelpanel_instance"
+			bg_visible="1" bg_texture="/content/stages/shared/store_bg.tga" bg_color="1 1 1 1"
+			type="gesture"
+		/>
+
+		<!-- [SHOUT] -->
+		<instance name="store_modelpanel_instance"
+			bg_visible="1" bg_texture="$invis" bg_color="1 1 1 1"
+			type="shout"
+		/>
+
+		<!-- [KILLEFFECT] -->
+		<instance name="store_modelpanel_instance"
+			bg_visible="1" bg_texture="/content/stages/shared/store_bg.tga" bg_color="1 1 1 1"
+			type="killeffect"
+		/>
+
+		<!-- [TELEPORT] -->
+		<instance name="store_modelpanel_instance"
+			bg_visible="1" bg_texture="/content/stages/shared/store_bg.tga" bg_color="1 1 1 1"
+			type="teleport"
+		/>
+		<!-- [ICON] -->
+		<instance name="store_modelpanel_instance"
+			bg_visible="1" bg_texture="/content/stages/shared/store_bg.tga" bg_color="1 1 1 1"
+			type="icon"
+		/>
+
+		<!-- [NAMECOLOR] -->
+		<instance name="store_modelpanel_instance"
+			bg_visible="1" bg_texture="/content/stages/shared/store_bg.tga" bg_color="1 1 1 1"
+			type="namecolor"
+		/>
+	
+	</template>
+
+	<template name="store_model_viewer_section">
+
+		<panel name="{panel_name=store_model_viewer_root}" width="{width}" height="{height}" x="{x}" valign="bottom" noclick="1">
+
+			<!-- 4:5 Aspect Container — matches product grid & hero list height -->
+			<panel width="80@" height="-4.2h" align="center" valign="bottom" noclick="1">
+
+				<!-- Outer Glow (same as product tiles) -->
+				<frame texture="/ui/hd_ui/frames/squareglow.tga" y=".2h" size="+.7h" style="center" borderthickness="0.7h" color="invisible" bordercolor="0 0 0 .6" noclick="1" />
+
+				<!-- Clipped Content Area (rounded mask like product tiles) -->
+				<panel name="store_model_viewer_clip" clip="1" color=".06 .06 .06 .9" usealphamask="0" alphamaskfile="/ui/hd_ui/mask/square_rounded.tga">
+
+					<!-- Model (full bleed) -->
+					<panel width="100%" height="100%" noclick="1">
+						<instance name="store_model_viewer_panels" />
+					</panel>
+
+					<!-- Gradient Overlay (bottom fade, same as product tiles) -->
+					<image texture="/ui/hd_ui/elements/grad_linear_vert.tga" color="0 0 0 .4" vflip="1" noclick="1" />
+
+					<!-- Account Vanity Overlay (for Icons / NameColors previews) -->
+					<panel name="store_model_viewer_account_vanity_overlay" x="6.8h" y="-6.6h" height="5.3h" visible="0" align="center" valign="center" noclick="1">
+						<!-- Profile Icon -->
+						<panel size="4.2h" valign="center" noclick="1">
+							<image name="store_model_viewer_preview_profile_icon" texture="$invis" noclick="1"/>
+						</panel>
+
+						<!-- Player Name -->
+						<label name="store_model_viewer_preview_namecolor" x="7.2h" color="1 1 1 1" font="dyn_14" height="100%" textvalign="center" content="" noclick="1" />
+					</panel>
+				</panel>
+
+				<!-- Inner Glow (same as product tiles) -->
+				<frame width="100%" height="100%" valign="top" texture="/ui/hd_ui/frames/inner_glow.tga" borderthickness=".2h" bordercolor="0 0 0 1" color="invisible" noclick="1" />
+
+				<!-- Top Bevel / Highlight (same as product tiles) -->
+				<image texture="/ui/hd_ui/elements/grad_linear_vert.tga" width="99%" height="0.5%" align="center" valign="top" y="0.15h" color="1 1 1 .35" noclick="1" />
+
+				<!-- Rarity Inner Border (colored by product rarity, hidden by default) -->
+				<frame name="{rarity_border_name=store_model_viewer_rarity_border}" width="100%" height="1%" valign="bottom" texture="/ui/hd_ui/frames/rounded_bg_solid.tga" borderthickness=".5h" bordercolor="invisible" color="invisible" visible="0" noclick="1" />
+
+				<!-- Drag proxy — C++ modelpanel handles all mouse rotation/zoom/inertia natively -->
+				<panel name="{drag_proxy_name=store_model_viewer_drag_proxy}" width="100%" height="100%" noclick="1" />
+
+				<!-- Title -->
+				<panel name="{title_panel_name=store_model_viewer_title_panel}" width="100%" height="3.2h" valign="{title_valign}" y="4.5%" noclick="1">
+					<!-- Background: feathered bar sized to text width from Lua -->
+					<frame name="store_model_viewer_title_bg" width="0" height="100%" align="center" texture="/ui/hd_ui/frames/squareglow.tga" borderthickness="1.5h" bordercolor="0 0 0 .5" color="0 0 0 .5" noclick="1" />
+					<label name="{title_widget=store_model_viewer_title_label}" style="h1" width="100%" textalign="center" textvalign="center" height="100%" content="{title=Выберите товар}" />
+				</panel>
+
+				<!-- Hint Label -->
+				<label name="{hint_widget=store_model_viewer_hint}" align="center" valign="center" font="dyn_16" style="text_base,textcenter" color="1 1 1 .8" content="{hint_text=Выберите товар для предпросмотра}" noclick="1" />
+
+				<!-- Action Buttons — primary CTA + secondary row, overlaid at bottom of model panel -->
+				<panel name="store_small_button_container" width="92%" height="6.6h" align="center" valign="bottom" y="-1.2h" noclick="1">
+
+					<!-- ═══ Primary Action (Equip / Buy) — frosted pill with accent border ═══ -->
+					<panel width="58%" height="3.2h" align="center" noclick="1">
+						
+						<!-- Outer glow (soft cyan halo) -->
+						<frame name="store_model_viewer_main_button_glow" texture="/ui/hd_ui/frames/squareglow.tga" size="+1.4h" align="center" valign="center"
+							color="0 0 0 0" bordercolor=".1 .6 .8 .35" borderthickness="1.2h" noclick="1"
+						/>
+						
+						<!-- Drop shadow -->
+						<frame texture="/ui/hd_ui/frames/squareglow.tga" size="+.6h" y=".3h" align="center" valign="center"
+							color="0 0 0 0" bordercolor="0 0 0 .5" borderthickness=".8h" noclick="1" />
+						
+						<!-- Dark frosted fill — outside <button> so GetWidget() can access it -->
+						<frame name="store_model_viewer_main_button_pill_bg" texture="/ui/hd_ui/frames/rounded_bg_solid.tga" borderthickness=".5h" color=".08 .1 .14 .9" noclick="1" />
+						
+						<!-- Subtle top highlight -->
+						<image name="store_model_viewer_main_button_highlight" texture="/ui/hd_ui/elements/grad_linear_vert.tga" width="-1h" height="40%" align="center" valign="top" y="2" color=".3 .7 .85 .08" noclick="1" />
+						
+						<!-- Invisible button overlay — handles click/hover/enable/disable events -->
+						<button name="store_model_viewer_main_button" color="invisible" width="100%" height="100%"
+							onmouseoverlua="Store:MainButtonHoverEnter()"
+							onmouseoutlua="Store:MainButtonHoverLeave()"
+							ondisablelua="Store:MainButtonOnDisable()"
+							onenablelua="Store:MainButtonOnEnable()"
+							onclicklua="PlaySound('/shared/sounds/ui/menu/button_click.wav') Store:MainButtonDirector()"
+							references="/shared/sounds/ui/button_over_02.wav,/shared/sounds/ui/menu/button_click.wav"
+						/>
+						
+						<!-- Hover effect overlay -->
+						<modelpanel name="store_model_viewer_main_button_effect"
+							width="100%" height="100%"
+							style="button_hover_effect_style"
+							effect="/ui/effects/hd_button.effect"
+							onshowlua="self:SetEffect('/ui/effects/hd_button.effect')"
+						/>
+						
+						<!-- Idle CTA shimmer effect -->
+						<modelpanel name="store_model_viewer_main_button_idle_effect" width="100%" height="100%"
+							style="button_hover_effect_style"
+							effect="/ui/effects/store_button_blue.effect"
+							visible="0" noclick="1"
+						/>
+						
+						<!-- Accent border -->
+						<frame name="store_model_viewer_main_button_border" texture="/ui/hd_ui/frames/border_normal.tga" borderthickness=".5h" bordercolor=".15 .55 .7 .8" color="invisible" size="+.3h" style="center" noclick="1" />
+						
+						<!-- Text-only label (Equip / Equipped / Unavailable) -->
+						<label name="store_model_viewer_main_button_label" width="100%" height="100%" textalign="center" textvalign="center"
+							font="dyn_bold_14" color=".85 .92 .95 1" shadow="1" shadowcolor="0 0 0 1" shadowoffset="1"
+							content="general_buy" noclick="1"
+						/>
+						
+						<!-- Price layout (icon + amount) — hidden by default, shown when purchasable -->
+						<panel name="store_model_viewer_main_button_price_container" width="100%" height="100%" visible="0" noclick="1">
+							<panel height="60%" style="grow_noinvis" align="center" valign="center" float="right" padding=".4h" noclick="1">
+								<label name="store_model_viewer_main_button_price_label" fitx="1" font="dyn_bold_14" color=".85 .92 .95 1" shadow="1" shadowcolor="0 0 0 1" shadowoffset="1"
+									textvalign="center" content=":jade: 0" noclick="1"
+								/>
+								<panel name="store_model_viewer_main_button_price_spacer" width="1.5h" height="1" visible="0" noclick="1" />
+								<label name="store_model_viewer_main_button_ticket_price_label" fitx="1" font="dyn_bold_14" color=".85 .92 .95 1" shadow="1" shadowcolor="0 0 0 1" shadowoffset="1"
+									textvalign="center" content="" visible="0" noclick="1"
+								/>
+							</panel>
+						</panel>
+						
+						<!-- Tooltip overlay for disabled "No Listings" state -->
+						<panel name="store_model_viewer_main_button_tip_overlay" width="100%" height="100%" color="invisible" visible="0"
+							onmouseoverlua="Tooltips:TooltipHover_Main(self, Store:GetNoListingsTipKey(), 'top', 500)"
+							onmouseoutlua="Tooltips:TooltipHover_Main(false)"
+						/>
+						
+					</panel>
+
+					<!-- ═══ Secondary Actions — Sell, Listings, Demo ═══ -->
+					<panel width="85%" height="2.8h" align="center" valign="bottom" float="right" padding=".4h" noclick="1">
+
+						<!-- Sell/Rent -->
+						<instance name="button_store" button_name="store_model_viewer_rent_list_button" width="32%" version="gray" font="dyn_9"
+							label="general_rent"
+							onclicklua="Store:LeftButtonDirector()"
+						/>
+
+						<!-- Show Listings -->
+						<instance name="button_store" button_name="store_model_viewer_listings_play_button" width="32%" version="gray" sticky="1" font="dyn_9"
+							label="store_show_listings"
+							onclicklua="Store:MiddleButtonDirector()"
+						/>
+
+						<!-- Demo -->
+						<instance name="button_store" button_name="store_model_viewer_demo_button" width="32%" version="gray" sticky="1" font="dyn_9"
+							label="general_demo"
+							onclicklua="Store:DemoAvatar()"
+						/>
+
+					</panel>
+
+				</panel>
+
+				<!-- Equip/Buy button parent kept for Lua visibility control -->
+				<panel name="store_model_viewer_main_button_parent" visible="1" width="0" height="0" noclick="1" />
+
+				<!-- Toggle Ward Preview Type (Normal/Invis) -->
+				<panel name="store_model_viewer_toggle_ward_parent" size="3.6h" align="right" x="-5%" y="5%" visible="0" noclick="1">
+					<instance name="button_store" button_name="store_model_viewer_toggle_ward" version="secondary"
+						show_icon="1" icon="/ui/hd_ui/icons/vote_remake.tga" icon_size="56%"
+						onmouseoverlua="Tooltips:TooltipHover_Main(self, 'store_toggle_ward', 'left')"
+						onmouseoutlua="Tooltips:TooltipHover_Main(false)"
+						onclicklua="Store:ToggleWardPreview()"
+					/>
+				</panel>
+
+
+				<!-- Teleport Preview Replay Buttons (Source / Target) -->
+				<panel name="store_model_viewer_teleport_alt_parent" width="20h" height="3.2h" align="center" valign="top" y="9.5%" visible="0" noclick="1">
+					<panel width="100%" height="100%" align="center" valign="center" float="right" padding=".8h" noclick="1">
+						<instance name="button_store" button_name="store_model_viewer_teleport_source_button" width="9h" height="100%" version="secondary"
+							label="Источник" font="dyn_9"
+							onclicklua="Store:PlayTeleportSource()"
+						/>
+						<instance name="button_store" button_name="store_model_viewer_teleport_alt_button" width="9h" height="100%" version="secondary"
+							label="Назначение" font="dyn_9"
+							onclicklua="Store:PlayTeleportTarget()"
+						/>
+					</panel>
+				</panel>
+
+			</panel>
+
+			<!-- Announcer Controls (outside aspect container so it can extend left into the gap) -->
+			<panel name="store_announcer_controls_root" width="11h" height="0" visible="0" valign="bottom" noclick="1">
+				<listbox name="store_announcer_event_listbox" style="store_product_grid_scroller" wrap="row" itemheight="2.3h" itemwidth="100%" x="-9.5h" y="-4h" height="58h" valign="bottom" />
+			</panel>
+
+		</panel>
+
+	</template>
+
+	<template name="store_loading_blackout">
+		<panel name="store_cache_blackout" visible="0" noclick="1">
+
+			<!-- Blackout -->
+			<panel color="0 0 0 0.5" />
+
+			<!-- Loading Modal. Spinner and label styling mirror /ui/fe3/loading.interface so the
+			     store reads as the same product as the boot and match load screens. -->
+			<panel width="30h" height="14h" style="center" noclick="1">
+
+				<!-- Base Frame  -->
+				<instance name="modal_base_frame" />
+
+				<!-- Content -->
+				<panel float="right" padding="1h" style="grow_noinvis,center" noclick="1">
+
+					<animatedimage name="store_cache_spinner"
+						texture="/ui/fe3/elements/loading/spinner.png"
+						width="4.4h" height="4.4h" align="center" valign="top" y="1h"
+						loop="1" fps="28" noclick="1"
+					/>
+
+					<label name="store_cache_stage_label"
+						width="26h" height="3h" align="center" valign="bottom" y="-2.6h"
+						textalign="center" textvalign="center"
+						font="dyn_11" color=".8 .8 .8 1" shadow="1" noclick="1"
+					/>
+
+					<label name="store_cache_step_label"
+						width="26h" height="2h" align="center" valign="bottom" y="-0.6h"
+						textalign="center" textvalign="center"
+						font="dyn_9" color=".55 .55 .55 1" noclick="1"
+					/>
+
+				</panel>
+
+			</panel>
+
+		</panel>
+	</template>
+
+	<!-- Store -->
+	<template name="store">
+		<panel name="store" width="100%" height="100%" noclick="1"
+			onshowlua="Store:OnShow()"
+			onhidelua="Store:OnHide()"
+		>
+			<panel width="-4h" height="-4.6h" align="center" x="11w" noclick="1"
+				onloadlua="Main:ApplyUltrawideWidth(self, '-4h', '134.7h'); Main:ApplyUltrawideX(self, '11w', '19.6h')">
+				<frame texture="/ui/hd_ui/frames/inset.tga" color="0 0 0 .5" borderthickness=".4h" width="100%" height="100%" noclick="1" />
+				
+				<!-- Content Container -->
+				<panel name="store_content_container" y="-2.2h" height="-8.8h" width="-2.8h" align="center" valign="bottom" noclick="1">
+
+					<!-- Sub Menu Instances -->
+					<panel name="store_sub_menu_container" width="+2.8h" height="3.6h" align="center" float="right" y="-1.5h" noclick="1">
+						<instance name="store_sub_header_tab" id="1" width="12.5%" label="Sub Menu 1" enabled="0" />
+						<instance name="store_sub_header_tab" id="2" width="12.5%" label="Sub Menu 2" enabled="1" />
+						<instance name="store_sub_header_tab" id="3" width="12.5%" label="Sub Menu 3" enabled="1" />
+						<instance name="store_sub_header_tab" id="4" width="12.5%" label="Sub Menu 4" enabled="1" />
+						<instance name="store_sub_header_tab" id="5" width="12.5%" label="Sub Menu 5" enabled="1" />
+						<instance name="store_sub_header_tab" id="6" width="12.5%" label="Sub Menu 6" enabled="1" />
+						<instance name="store_sub_header_tab" id="7" width="12.5%" label="Sub Menu 7" enabled="1" />
+						<instance name="store_sub_header_tab" id="8" width="12.5%" label="Sub Menu 8" enabled="1" />
+
+						<!-- Featured-tab Jade purchase CTA -->
+						<panel width="26h" height="2.4h" align="right" valign="center" x="2.4h" noclick="1">
+							<instance name="store_purchase_btn"
+								root_name="store_featured_jade_cta"
+								btn_name="store_featured_jade_cta_btn"
+								height="100%" y="-.2h"
+								icon="/ui/hd_ui/elements/jade.tga"
+								label="store_buy_jade"
+								label_name="store_featured_jade_cta_label"
+								onclicklua="Main:GetWidget('vanity_external_jadebuy_dialog'):SetVisible(1)"
+							/>
+						</panel>
+
+					</panel>
+
+					<panel name="store_section_parent" width="100%" align="center" y="-.5h" valign="bottom" noclick="1">
+
+						<!-- Hero List -->
+						<instance name="store_hero_list_section" width="20%" height="-.8h" target="store_filter_" object="Store" visible="1" align="left" x="0h" />
+
+						<!-- Product Grid: 3 cols x 3 rows of 2:3 portrait cards -->
+						<!-- Card aspect = 2:3 (w:h), grid = 3 cards wide x 3 tall -->
+						<!-- Grid ratio: 3*2 / 3*3 = 6/9 = 0.667, using 65@ for padding headroom -->
+						<instance name="store_product_grid_section" width="65@" height="-.8h" itemheight="33.2%" itemwidth="33.2%" align="left" x="20%" />
+
+						<!-- Model Viewer -->
+						<instance name="store_model_viewer_section" width="35%" height="-.8h" x="0h" />
+
+						<!-- Emote Wheels [RIGHT] -->
+						<instance name="store_emote_wheel_section" width="20%" />
+						
+						<!-- Featured Section -->
+						<instance name="store_featured_section" width="100%" />
+						
+					</panel>
+
+				</panel>
+
+				<!-- Header Menu Instances-->
+				<panel width="100%" height="4.4h" noclick="1">
+					<panel width="100%" float="right" noclick="1">
+						<instance name="store_header_tab" id="store_tab_featured" tabid="Enum.StoreTabs.Featured" width="20%" label="store_cat_featured" enabled="0" border_l_texture="tab_border_first_tab_l.tga" />
+						<instance name="store_header_tab" id="store_tab_alt_avatars" tabid="Enum.StoreTabs.Avatars" width="20%" label="vanity_cat_avatars" enabled="1" />
+						<instance name="store_header_tab" id="store_tab_game_vanity" tabid="Enum.StoreTabs.GameVanity" width="20%" label="vanity_cat_game_vanity" enabled="1" />
+						<instance name="store_header_tab" id="store_tab_emotes" tabid="Enum.StoreTabs.Emotes" width="20%" label="vanity_cat_emotes" enabled="1" />
+						<instance name="store_header_tab" id="store_tab_account_vanity" tabid="Enum.StoreTabs.AccountVanity" width="20%" label="vanity_cat_account_vanity" enabled="1" border_r_texture="tab_border_last_tab_r.tga" />
+					</panel>
+				</panel>
+
+				<!-- Loading Blackout -->
+				<instance name="store_loading_blackout" />
+
+			</panel>
+
+		</panel>
+	</template>
+
+	<panel name="store_announcer_fullscreen_preview_root"
+		width="100%" height="100%"
+		color="0 0 0 0"
+		visible="0"
+		noclick="1"
+		onshow="BringToFront();"
+	>
+		<panel name="store_announcer_fullscreen_preview_dim" width="100%" height="100%" color="0 0 0 .40" visible="0" noclick="1" />
+
+		<panel name="store_announcer_fullscreen_preview_top" color="0 0 0 0" width="100w" height="50h" align="center" valign="top" noclick="1">
+			<modelpanel name="store_announcer_fullscreen_preview_panel"
+				width="100%" height="100%" align="center"
+				visible="0"
+				model="/shared/models/invis.mdf"
+				noclick="1"
+				anim="idle"
+				cameradistance="0"
+				lookat="0"
+				camerapos="0 2200 -40"
+				cameraangles="0 0 180"
+				camerafov="50"
+				cameranear="1"
+				carmerafar="3000"
+				depthclear="0"
+				depthcompress="1"
+				sunazimuth="-120"
+				sunaltitude="170"
+				suncolor="1 1 1"
+				scenebuffer="1"
+				shadows="1"
+			/>
+		</panel>
+	</panel>
+	
+	<!-- Purchase Confirmation Dialog -->
+	<panel name="store_purchase_dialog_root" visible="0" color="0 0 0 .8"
+		onshow="BringToFront();" width="100%" height="100%" noclick="0"
+	>
+		<instance name="modal"
+			y="0" width="26.0h" align="center"
+			label="vanity_purchase_confirmation"
+			label_name="store_purchase_dialog_modal_label"
+			id="store_purchase_dialog_modal"
+			show_close="1"
+			closebtn_clicklua="Store:HidePurchaseConfirmationWindow()"
+			body="store_purchase_dialog_body"
+			interactive="{interactive}"
+		/>
+	</panel>
+
+	<!-- Equip Error Dialog -->
+	<panel name="store_equip_error_dialog_root" visible="0" color="0 0 0 .8"
+		onshow="BringToFront();" width="100%" height="100%" noclick="0"
+	>
+		<instance name="modal"
+			y="0" width="26.0h" align="center"
+			label="store_equip_error_title"
+			label_name="store_equip_error_dialog_modal_label"
+			id="store_equip_error_dialog_modal"
+			show_close="1"
+			closebtn_clicklua="Store:HideEquipErrorDialog()"
+			body="store_equip_error_dialog_body"
+			interactive="{interactive}"
+		/>
+	</panel>
+
+	<!-- Marketplace Dialog -->
+	<panel name="store_marketplace_dialog_root" visible="0" color="0 0 0 .7"
+		onshow="BringToFront();" width="100%" height="100%" noclick="0"
+	>
+		<instance name="modal"
+			y="-5h" width="55.0h" align="center"
+			label="store_avatar_marketplace"
+			label_name="store_marketplace_dialog_modal_label"
+			id="store_marketplace_dialog_modal"
+			show_close="1"
+			closebtn_clicklua="Store:HideMarketplaceDialog()"
+			body="store_marketplace_dialog_body"
+			interactive="{interactive}"
+		/>
+
+		<!-- Listing Form Popup (overlays bottom of marketplace) -->
+		<panel name="store_marketplace_listing_form" visible="0"
+			width="30.0h" height="43.5h" style="center"
+			noclick="0" onshow="BringToFront();"
+		>
+			<!-- Background -->
+			<frame size="+5h" style="center" texture="/ui/hd_ui/frames/squareglow.tga" color="0 0 0 .5" bordercolor="0 0 0 .5" borderthickness="2.4h" noclick="1" />
+			<panel style="color-panel_bg" noclick="1" />
+			<instance name="border_metal_01" />
+
+			<panel name="store_marketplace_listing_input_view" size="-5.0h" style="center" float="bottom" padding=".5h" noclick="1">
+
+				<!-- Icon -->
+				<panel width="100%" height="10.5h" noclick="1">
+					<panel size="10h" align="center" noclick="1">
+						<image name="store_marketplace_listing_icon" width="100%" height="100%" texture="$invis" usealphamask="1" alphamaskfile="/ui/hd_ui/mask/item_frame_cutout.tga" noclick="1" />
+						<frame texture="/ui/hd_ui/frames/border_normal.tga" color=".4 .4 .4" bordercolor=".4 .4 .4" borderthickness=".6h" noclick="1" />
+					</panel>
+				</panel>
+
+				<!-- Product Name -->
+				<label name="store_marketplace_listing_form_label" width="100%" style="h1" textalign="center" fity="1" content="store_list_item" color=".85 .92 .95 1" noclick="1" />
+
+				<!-- Spacer -->
+				<panel width="100%" height="0.5h" noclick="1" />
+
+				<label style="text_base" textalign="center" fity="1" content="store_set_marketplace_price" noclick="1" />
+
+				<!-- Price Input Row -->
+				<panel height="3.6h" noclick="1">
+					<frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" width="60%" align="center" color="0 0 0 .4" borderthickness=".5h" noclick="1">
+						<frame texture="/ui/hd_ui/frames/inset.tga" color=".5 .5 .5 .5" borderthickness=".5h" noclick="1" />
+						<panel x=".15h" height="-.3h" valign="center" width="110@" noclick="1">
+							<frame texture="/ui/hd_ui/frames/rounded_left_bg_solid.tga" borderthickness=".5h" color=".2 .2 .2 .35" rendermode="additive" noclick="1" />
+							<image texture="/ui/hd_ui/elements/jade.tga" width="68@" height="68%" style="center" noclick="1" />
+							<panel width="1" align="right" color="#97bc972d" noclick="1" />
+						</panel>
+						<panel width="-125@" align="right" noclick="1">					
+							<textbox name="store_marketplace_listing_price_input" y=".35h" hmargin="0.7h" vmargin="0.4h"
+								color="invisible"
+								font="dyn_bold_12"
+								textcolor=".9 .9 .9 1"
+								shadow="1"
+								onchangelua="Store:OnListPriceChanged(self)"
+								onenterlua="Store:RequestListItem()"
+							/>
+						</panel>
+					</frame>
+				</panel>
+
+				<!-- Spacer -->
+				<panel width="100%" height="0.5h" noclick="1" />
+
+				<!-- Fee Structure -->
+				<panel width="100%" style="grow_noregrow_noinvis" noclick="1">
+					<frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" color="0 0 0 .25" borderthickness=".5h" width="80%" align="center" style="grow_noregrow_noinvis" noclick="1">
+
+						<panel width="-1.8h" align="center" style="grow_noregrow_noinvis" float="bottom" noclick="1">
+
+							<panel height=".5h" noclick="1" />
+
+							<!-- Fee Row -->
+							<panel width="100%" height="1.8h" noclick="1">
+								<label style="text_label" width="55%" textalign="left" textvalign="center" content="store_marketplace_fee" color=".8 .6 .6 1" noclick="1" />
+								<panel height="70%" align="right" valign="center" float="right" padding=".5h" style="grow_noregrow_noinvis" noclick="1">
+									<image texture="/ui/hd_ui/elements/jade.tga" width="100@" height="100%" noclick="1" />
+									<label name="store_marketplace_listing_fee_amount" fitx="1" style="text_label" textvalign="center" content="--" color=".8 .6 .6 1" noclick="1" />
+								</panel>
+							</panel>
+
+							<!-- You Receive Row -->
+							<panel width="100%" height="1.8h" noclick="1">
+								<label style="text_label" width="55%" textalign="left" textvalign="center" content="store_you_receive" color=".7 .9 .7 1" noclick="1" />
+								<panel height="70%" align="right" valign="center" float="right" padding=".5h" style="grow_noregrow_noinvis" noclick="1">
+									<image texture="/ui/hd_ui/elements/jade.tga" width="100@" height="100%" noclick="1" />
+									<label name="store_marketplace_listing_receive_amount" fitx="1" style="text_label" textvalign="center" content="--" color=".7 .9 .7 1" noclick="1" />
+								</panel>
+							</panel>
+
+							<panel height=".5h" noclick="1" />
+
+						</panel>
+
+						<frame texture="/ui/hd_ui/frames/border_thin.tga" borderthickness=".5h" bordercolor=".2 .2 .2" color="invisible" noclick="1" />
+					</frame>
+				</panel>
+
+				<!-- Spacer -->
+				<panel width="100%" height="0.5h" noclick="1" />
+
+				<!-- Buttons -->
+				<panel width="100%" style="grow_noregrow_noinvis" float="bottom" padding="1.5h" noclick="1">
+					<instance name="button_hd"
+						button_name="store_marketplace_listing_submit_btn"
+						label="store_marketplace_review_listing"
+						version="primary"
+						enabled="0"
+						width="80%"
+						height="3.2h"
+						align="center"
+						onclicklua="Store:RequestListItem()"
+					/>
+					<instance name="button_hd"
+						button_name="store_marketplace_listing_cancel_btn"
+						label="general_cancel"
+						style="btn_sm,btn_red"
+						width="49%"
+						height="2.2h"
+						align="center"
+						onclicklua="Store:HideListingForm()"
+					/>
+				</panel>
+
+			</panel>
+
+			<!-- Confirm View  -->
+			<panel name="store_marketplace_listing_confirm_view" visible="0" size="-5.0h" style="center" float="bottom" padding=".5h" noclick="1">
+
+				<!-- Title -->
+				<label width="100%" style="h1" textalign="center" fity="1" content="store_marketplace_confirm_title" color=".85 .92 .95 1" noclick="1" />
+
+				<!-- Spacer -->
+				<panel width="100%" height="0.5h" noclick="1" />
+
+				<!-- Prompt -->
+				<label style="text_base" textalign="center" fity="1" content="store_marketplace_confirm_prompt" noclick="1" />
+
+				<!-- Spacer -->
+				<panel width="100%" height="0.5h" noclick="1" />
+
+				<!-- Product Name -->
+				<label name="store_marketplace_confirm_name" width="100%" style="h1" textalign="center" fity="1" content="store_list_item" color=".85 .92 .95 1" noclick="1" />
+
+				<!-- Spacer -->
+				<panel width="100%" height="0.5h" noclick="1" />
+
+				<!-- Summary -->
+				<panel width="100%" style="grow_noregrow_noinvis" noclick="1">
+					<frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" color="0 0 0 .25" borderthickness=".5h" width="80%" align="center" style="grow_noregrow_noinvis" noclick="1">
+
+						<panel width="-1.8h" align="center" style="grow_noregrow_noinvis" float="bottom" noclick="1">
+
+							<panel height=".5h" noclick="1" />
+
+							<!-- List Price Row -->
+							<panel width="100%" height="1.8h" noclick="1">
+								<label style="text_label" width="55%" textalign="left" textvalign="center" content="store_marketplace_list_price" color=".85 .92 .95 1" noclick="1" />
+								<panel height="70%" align="right" valign="center" float="right" padding=".5h" style="grow_noregrow_noinvis" noclick="1">
+									<image texture="/ui/hd_ui/elements/jade.tga" width="100@" height="100%" noclick="1" />
+									<label name="store_marketplace_confirm_price_amount" fitx="1" style="text_label" textvalign="center" content="--" color=".85 .92 .95 1" noclick="1" />
+								</panel>
+							</panel>
+
+							<!-- You Receive Row -->
+							<panel width="100%" height="1.8h" noclick="1">
+								<label style="text_label" width="55%" textalign="left" textvalign="center" content="store_you_receive" color=".7 .9 .7 1" noclick="1" />
+								<panel height="70%" align="right" valign="center" float="right" padding=".5h" style="grow_noregrow_noinvis" noclick="1">
+									<image texture="/ui/hd_ui/elements/jade.tga" width="100@" height="100%" noclick="1" />
+									<label name="store_marketplace_confirm_receive_amount" fitx="1" style="text_label" textvalign="center" content="--" color=".7 .9 .7 1" noclick="1" />
+								</panel>
+							</panel>
+
+							<panel height=".5h" noclick="1" />
+
+						</panel>
+
+						<frame texture="/ui/hd_ui/frames/border_thin.tga" borderthickness=".5h" bordercolor=".2 .2 .2" color="invisible" noclick="1" />
+					</frame>
+				</panel>
+
+				<!-- Spacer -->
+				<panel width="100%" height="0.5h" noclick="1" />
+
+				<!-- Buttons -->
+				<panel width="100%" style="grow_noregrow_noinvis" float="bottom" padding="1.5h" noclick="1">
+					<instance name="button_hd"
+						button_name="store_marketplace_confirm_submit_btn"
+						label="store_list_item"
+						version="primary"
+						width="80%"
+						height="3.2h"
+						align="center"
+						onclicklua="Store:SubmitListItem()"
+					/>
+					<instance name="button_hd"
+						button_name="store_marketplace_confirm_cancel_btn"
+						label="general_cancel"
+						style="btn_sm,btn_red"
+						width="49%"
+						height="2.2h"
+						align="center"
+						onclicklua="Store:ShowListingInputView()"
+					/>
+				</panel>
+
+			</panel>
+		</panel>
+	</panel>
+
+	<!-- Purchase Result Dialog -->
+	<panel name="store_purchase_result_root" visible="0" color="0 0 0 .8"
+		onshow="BringToFront();" width="100%" height="100%" noclick="0"
+	>
+		<instance name="modal"
+			y="0" width="24.0h" align="center"
+			label="vanity_purchase_complete"
+			label_name="store_purchase_result_modal_label"
+			id="store_purchase_result_modal"
+			show_close="1"
+			closebtn_clicklua="Store:HidePurchaseResult()"
+			body="store_purchase_result_body"
+			interactive="{interactive}"
+		/>
+	</panel>
+
+	<!-- Marketplace Listing Confirmation Dialog -->
+	<panel name="store_marketplace_listing_confirm_root" visible="0" color="0 0 0 .8"
+		onshow="BringToFront();" width="100%" height="100%" noclick="0"
+	>
+		<instance name="modal"
+			y="0" width="26.0h" align="center"
+			label="vanity_list_confirmation"
+			label_name="store_marketplace_listing_confirm_modal_label"
+			id="store_marketplace_listing_confirm_modal"
+			show_close="1"
+			closebtn_clicklua="Store:CancelListItem()"
+			body="store_marketplace_listing_confirm_body"
+			interactive="{interactive}"
+		/>
+	</panel>
+
+</package>

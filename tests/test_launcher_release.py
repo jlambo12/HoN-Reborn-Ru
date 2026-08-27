@@ -80,7 +80,9 @@ class AutonomousLauncherTests(unittest.TestCase):
         install_body = install_source.split("public async Task InstallAsync", 1)[1].split("public async Task RestoreAsync", 1)[0]
         self.assertIn('SetLocale(LocalizedStartupPath, "ru"', install_body)
         self.assertIn("SeedLocalizedProfile()", install_body)
-        self.assertIn('new[] { "startup.cfg", "game_settings_local.cfg", "voice_config.cfg", "login.cfg" }', install_source)
+        self.assertIn('new[] { "startup.cfg", "game_settings_local.cfg", "voice_config.cfg", "bindings/shared.json", "login.cfg" }', install_source)
+        self.assertIn("Directory.CreateDirectory(Path.GetDirectoryName(target)!)", install_source)
+        self.assertIn("var extension = Path.GetExtension(name)", install_source)
         self.assertIn('if (name.Equals("login.cfg", StringComparison.OrdinalIgnoreCase))', install_source)
         self.assertIn('sources.Add(Path.Combine(NormalProfileDirectory, "extensions", name))', install_source)
         self.assertIn("OrderByDescending(path => File.GetLastWriteTimeUtc(path))", install_source)
@@ -170,18 +172,18 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn("EmbeddedResource", project)
 
     def test_beta_release_translation_manifest_matches_asset(self):
-        directory = ROOT / "release-assets" / "0.1.0-beta.12"
+        directory = ROOT / "release-assets" / "0.1.0-beta.13"
         manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
         archive = directory / manifest["file"]
         self.assertTrue(archive.is_file())
         self.assertEqual(archive.stat().st_size, manifest["size_bytes"])
-        self.assertEqual("0.1.0-beta.12", manifest["version"])
+        self.assertEqual("0.1.0-beta.13", manifest["version"])
 
     def test_website_download_points_to_current_beta_setup(self):
         site_config = (ROOT / "website" / "src" / "config" / "site.ts").read_text(encoding="utf-8")
         download_button = (ROOT / "website" / "src" / "components" / "DownloadButton.astro").read_text(encoding="utf-8")
         self.assertIn(
-            "/releases/download/v0.1.0-beta.12/HoNRebornRU-Setup.exe",
+            "/releases/download/v0.1.0-beta.13/HoNRebornRU-Setup.exe",
             site_config,
         )
         self.assertIn("api.github.com/repos/jlambo12/HoN-Reborn-Ru/releases", download_button)
@@ -240,6 +242,51 @@ class AutonomousLauncherTests(unittest.TestCase):
             "ui/scripts/fe3/matchmaking.lua",
             "ui/scripts/fe3/regions.lua",
             "ui/scripts/fe3/store_featured.lua",
+        }
+        with zipfile.ZipFile(base_path) as base, zipfile.ZipFile(candidate_path) as candidate:
+            base_members = {name: base.read(name) for name in base.namelist()}
+            candidate_members = {name: candidate.read(name) for name in candidate.namelist()}
+        self.assertFalse(base_members.keys() - candidate_members.keys())
+        actual = {
+            name for name in candidate_members
+            if name not in base_members or candidate_members[name] != base_members[name]
+        }
+        self.assertEqual(allowed, actual)
+
+    def test_beta13_completes_reported_store_profile_and_notification_strings(self):
+        archive_path = ROOT / "release-assets" / "0.1.0-beta.13" / "resources0.jz"
+        with zipfile.ZipFile(archive_path) as archive:
+            names = set(archive.namelist())
+            interface = archive.read("stringtables/interface_ru.str").decode("utf-8")
+            messages = archive.read("stringtables/game_messages_ru.str").decode("utf-8")
+            preact = archive.read("preact/dist/index.js").decode("utf-8")
+            store = archive.read("ui/fe3/templates/store_featured_templates.package").decode("utf-8")
+            bottom_bar = archive.read("ui/fe3/sections/bottom_bar.package").decode("utf-8")
+        self.assertIn("ui/fe3/sections/store.package", names)
+        self.assertIn("store_cat_featured\tРЕКОМЕНДУЕМЫЕ ТОВАРЫ", interface)
+        self.assertIn("vanity_cat_avatars\tОБЛИКИ", interface)
+        self.assertIn("killstreak5\t{killer_color}{killer}^*^; ^848доминирует^*!!", messages)
+        self.assertIn("client_disconnected\t{account_color}{player}^*^; отключился.", messages)
+        self.assertIn("Система чести", preact)
+        self.assertIn("История штрафных очков", preact)
+        self.assertIn("Показать сведения о системе чести", preact)
+        self.assertIn('content="ТОРГОВАЯ ПЛОЩАДКА"', store)
+        self.assertIn('tooltip="Друзья"', bottom_bar)
+        self.assertIn('tooltip="Сообщения"', bottom_bar)
+
+    def test_beta13_microfix_does_not_remove_or_modify_unreviewed_members(self):
+        base_path = ROOT / "release-assets" / "0.1.0-beta.12" / "resources0.jz"
+        candidate_path = ROOT / "release-assets" / "0.1.0-beta.13" / "resources0.jz"
+        allowed = {
+            "preact/dist/index.js",
+            "preact/dist/index.js.map",
+            "stringtables/game_messages_en.str",
+            "stringtables/game_messages_ru.str",
+            "stringtables/interface_en.str",
+            "stringtables/interface_ru.str",
+            "ui/fe3/sections/bottom_bar.package",
+            "ui/fe3/sections/store.package",
+            "ui/fe3/templates/store_featured_templates.package",
         }
         with zipfile.ZipFile(base_path) as base, zipfile.ZipFile(candidate_path) as candidate:
             base_members = {name: base.read(name) for name in base.namelist()}

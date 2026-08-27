@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "batch_id": "NATIVE_RUNTIME_006_STORE_AND_BOTTOM_BAR",
+  "reviewed_by": "Player screenshots and exact CURRENT Juvio source 2026-08-27",
+  "rows": [
+    {"source_file":"ui/fe3/sections/store.package","english":"{title=Select a Product}","russian":"{title=Выберите товар}","expected_matches":1},
+    {"source_file":"ui/fe3/sections/store.package","english":"{hint_text=Select a product to preview}","russian":"{hint_text=Выберите товар для предпросмотра}","expected_matches":1},
+    {"source_file":"ui/fe3/sections/store.package","english":"label=\"Source\"","russian":"label=\"Источник\"","expected_matches":1},
+    {"source_file":"ui/fe3/sections/store.package","english":"label=\"Target\"","russian":"label=\"Назначение\"","expected_matches":1},
+    {"source_file":"ui/fe3/templates/store_featured_templates.package","english":"label=\"VFX\"","russian":"label=\"ЭФФЕКТЫ\"","expected_matches":1},
+    {"source_file":"ui/fe3/templates/store_featured_templates.package","english":"label=\"SFX\"","russian":"label=\"ЗВУК\"","expected_matches":1},
+    {"source_file":"ui/fe3/templates/store_featured_templates.package","english":"label=\"VOICE\"","russian":"label=\"ГОЛОС\"","expected_matches":1},
+    {"source_file":"ui/fe3/templates/store_featured_templates.package","english":"label=\"ANIMS\"","russian":"label=\"АНИМАЦИИ\"","expected_matches":1},
+    {"source_file":"ui/fe3/templates/store_featured_templates.package","english":"label=\"ICONS\"","russian":"label=\"ЗНАЧКИ\"","expected_matches":1},
+    {"source_file":"ui/fe3/templates/store_featured_templates.package","english":"label=\"Preview\"","russian":"label=\"Предпросмотр\"","expected_matches":1},
+    {"source_file":"ui/fe3/templates/store_featured_templates.package","english":"label=\"Unlock\"","russian":"label=\"Открыть\"","expected_matches":1},
+    {"source_file":"ui/fe3/templates/store_featured_templates.package","english":"content=\"MARKETPLACE\"","russian":"content=\"ТОРГОВАЯ ПЛОЩАДКА\"","expected_matches":1},
+    {"source_file":"ui/fe3/sections/bottom_bar.package","english":"tooltip=\"Friends\"","russian":"tooltip=\"Друзья\"","expected_matches":1},
+    {"source_file":"ui/fe3/sections/bottom_bar.package","english":"tooltip=\"Messages\"","russian":"tooltip=\"Сообщения\"","expected_matches":1},
+    {"source_file":"ui/fe3/sections/bottom_bar.package","english":"tooltip=\"Notifications\"","russian":"tooltip=\"Уведомления\"","expected_matches":1}
+  ]
+}

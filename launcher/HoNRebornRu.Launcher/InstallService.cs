@@ -290,7 +290,7 @@ internal sealed partial class InstallService
         try
         {
             Directory.CreateDirectory(LocalizedProfileDirectory);
-            foreach (var name in new[] { "startup.cfg", "game_settings_local.cfg", "voice_config.cfg", "login.cfg" })
+            foreach (var name in new[] { "startup.cfg", "game_settings_local.cfg", "voice_config.cfg", "bindings/shared.json", "login.cfg" })
             {
                 var target = Path.Combine(LocalizedProfileDirectory, name);
                 var sources = new List<string> { Path.Combine(NormalProfileDirectory, name) };
@@ -311,7 +311,8 @@ internal sealed partial class InstallService
                 {
                     Directory.CreateDirectory(AppStorage.BackupRoot);
                     var safeName = Path.GetFileNameWithoutExtension(name);
-                    var backup = Path.Combine(AppStorage.BackupRoot, $"{safeName}-before-{DateTime.Now:yyyyMMdd-HHmmss}-{Guid.NewGuid():N}.cfg");
+                    var extension = Path.GetExtension(name);
+                    var backup = Path.Combine(AppStorage.BackupRoot, $"{safeName}-before-{DateTime.Now:yyyyMMdd-HHmmss}-{Guid.NewGuid():N}{extension}");
                     File.Copy(target, backup, false);
                     result.ReplacedFiles[target] = backup;
                 }
@@ -319,6 +320,7 @@ internal sealed partial class InstallService
                 {
                     result.CreatedFiles.Add(target);
                 }
+                Directory.CreateDirectory(Path.GetDirectoryName(target)!);
                 CopyProfileFile(source, target);
             }
             return result;

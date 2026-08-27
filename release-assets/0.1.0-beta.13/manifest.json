@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "version": "0.1.0-beta.13",
+  "file": "resources0.jz",
+  "sha256": "a36425dac9f37399198832e886958f55289c81c15779e12324bcad35f1af6ec8",
+  "size_bytes": 3157068,
+  "members": 36,
+  "crc": "PASS",
+  "automated_tests": "PASS",
+  "runtime_verified": false,
+  "runtime_status": "Screenshot-driven store, profile, Honor System and notification completion; exact-current UI overrides and beta.12 archive-diff gate passed."
+}

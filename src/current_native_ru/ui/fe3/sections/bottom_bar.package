@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package>
+
+	<!-- LUA -->
+	<lua file="/ui/scripts/fe3/bottom_bar.lua" />
+
+	<!-- Templates -->
+	<include file="/ui/fe3/templates/bottom_bar_templates.package" />
+
+	<!-- FX overlay that can sit above the bar UI -->
+	<template name="bottom_bar_fx_layer">
+		<panel align="center" width="80h" noclick="1" color="1 0 0 0">
+		<modelpanel name="bottom_bar_fx" noclick="1"
+			model="/core/null/invis.mdf"
+			anim="idle"
+			visible="1"
+			depthclear="1"
+			depthcompress="1"
+			scenebuffer="1"
+			drawinui="1"
+			cameradistance="0"
+			lookat="0"
+			camerapos="0 1500 0"
+			cameraangles="0 0 180"
+			camerafov="50"
+			cameranear="1"
+			camerafar="5000"
+			effect="/ui/hd_ui/elements/effects/bottom_bar.effect"
+			references="/ui/hd_ui/elements/effects/bottom_bar.effect"
+		/>
+		</panel>
+	</template>
+
+	<template name="bottom_bar_add_channel">
+		<panel width="70@" height="100%" valign="center" visible="1" noclick="1">
+
+			<!-- Button onmouseoverlua="Tooltips:TooltipHover_Main(self, '{tip_label}')" -->
+			<button name="bottom_bar_add_channel_button" width="30@" height="30%" style="center" color="invisible"
+				usebitmask="1"
+				onclick="PlaySound('/shared/sounds/ui/button_click_01.wav');"
+				onmouseover="PlaySound('/shared/sounds/ui/button_over_02.wav');"
+				onmouseoutlua="Tooltips:TooltipHover_Main(false)"
+				onclicklua="Communicator:ShowJoinChannelDialog(self)"
+			>
+
+				<widgetstate statename="up">
+					<image texture="/ui/hd_ui/icons/plus_circle.tga" color=".8 .8 .8" noclick="1" />
+				</widgetstate>
+
+				<widgetstate statename="over" y="-1">
+					<image texture="/ui/hd_ui/icons/plus_circle.tga"  noclick="1" />
+				</widgetstate>
+
+				<widgetstate statename="down" y="1">
+					<image texture="/ui/hd_ui/icons/plus_circle.tga" color=".5 .5 .5" noclick="1" />
+				</widgetstate>
+
+			</button>
+
+		</panel>
+	</template>
+
+	<template name="bottom_bar_play_section">
+		<panel width="30h" height="100%" align="center" noclick="1"
+			watch="LobbyPhase"
+			ontriggerlua="Lobby:PhaseSetVisible(self, 'lt', Enum.LobbyPhase.IN_LOBBY)"
+		>
+
+			<!-- Play Button -->
+			<panel align="center" valign="bottom" noclick="1">
+
+				<!-- Outer Frame -->
+				<image width="1024i" height="128i" align="center" valign="bottom" texture="/ui/hd_ui/elements/play_border.tga" noclick="1" />
+
+				<!-- Button -->
+				<button name="bottom_bar_play_btn" width="27.6h" height="6.9h" align="center" valign="bottom" color="invisible" visible="1"
+					usebitmask="1"
+					bitmaskfile="/ui/hd_ui/elements/play_button_up.tga"
+					onclick="PlaySound('/shared/sounds/ui/button_click_01.wav');"
+					onmouseover="PlaySound('/shared/sounds/ui/button_over_02.wav');"
+					onclicklua="BottomBar:OnPlayButtonClicked()"
+					onmouseoverlua="GetWidget('bottom_bar_play_btn_effect'):FadeIn(150)"
+					onmouseoutlua="GetWidget('bottom_bar_play_btn_effect'):FadeOut(150)"
+				>
+					
+					<panel noclick="1"
+						onloadlua="self:Sleep(1, function() self:SetVisible(0) end)"
+						onhidelua="self:Sleep(1, function() self:SetVisible(1) end)"
+					>
+
+						<modelpanel name="startbuttonmodel2"
+							width="100%" height="100%" align="center"
+							visible="1"
+							model="/ui/hd_ui/elements/effects/playbutton/model.mdf"
+							noclick="1"
+							anim="idle"
+							color="blue"
+							cameradistance="0"
+							lookat="0"
+							camerapos="0 200 0"
+							cameraangles="0 0 180"
+							camerafov="50"
+							cameranear="1"
+							camerafar="5000"
+							depthclear="0"
+							depthcompress="1"
+							sunazimuth="-90"
+							sunaltitude="180"
+							suncolor="4 1 1"
+							scenebuffer="1"
+							references="/ui/hd_ui/elements/effects/playbutton/playbutton.effect,/ui/hd_ui/elements/effects/playbutton/backbutton.effect"
+						/>
+
+					</panel>							
+										
+					<widgetstate statename="up">
+
+						<!-- Button Texture -->
+						<image name="bottom_bar_playbtn_texture_up" texture="/ui/hd_ui/elements/play_button_up.tga" noclick="1" />
+
+						<!-- Icon/Label -->
+						<panel height="100%" align="center" style="grow_noinvis" noclick="1">
+							<label name="bottom_bar_playlabel_up" style="fe3_play" outlinecolor="#1b510c" valign="center" fity="1" fitx="1" content="main_menu_playnow" />
+						</panel>
+
+					</widgetstate>
+
+					<widgetstate statename="over">
+
+						<!-- Button Texture -->
+						<image name="bottom_bar_playbtn_texture_over1" texture="/ui/hd_ui/elements/play_button_up.tga" noclick="1" />
+						<image name="bottom_bar_playbtn_texture_over2" texture="/ui/hd_ui/elements/play_button_up.tga" rendermode="additive" color="1 1 1 .35" noclick="1" />
+
+						<!-- Icon/Label -->
+						<panel height="100%" align="center" style="grow_noinvis" noclick="1">
+							<label name="bottom_bar_playlabel_over" style="fe3_play" outlinecolor="#1b510c" valign="center" fity="1" fitx="1" content="main_menu_playnow" />
+						</panel>
+
+					</widgetstate>
+
+					<widgetstate statename="down" y="1">
+
+						<!-- Button Texture -->
+						<image name="bottom_bar_playbtn_texture_down" texture="/ui/hd_ui/elements/play_button_down.tga" noclick="1" />
+
+						<!-- Icon/Label -->
+						<panel height="100%" align="center" style="grow_noinvis" noclick="1">
+							<label name="bottom_bar_playlabel_down" style="fe3_play" outlinecolor="#1b510c" color=".8 .8 .8 1" valign="center" fity="1" fitx="1" content="main_menu_playnow" />
+						</panel>
+
+					</widgetstate>
+
+				</button>
+
+				<!-- Effect overlay with fade transition -->
+				<modelpanel name="bottom_bar_play_btn_effect"
+					width="27.6h" height="6.9h"
+					style="button_hover_effect_style"
+					effect="/ui/effects/play_button.effect"
+					onshowlua="self:SetEffect('/ui/effects/play_button.effect')"
+					valign="bottom"
+				/>
+
+				<!-- Play Frame -->
+				<image width="27.6h" height="6.9h" align="center" valign="bottom" texture="/ui/hd_ui/elements/play_frame.tga" noclick="1" />
+
+			</panel>
+
+		</panel>
+	</template>
+
+	<template name="bottom_bar_left_section">
+		<panel height="100%" float="right" valign="center" style="grow_noinvis" noclick="1">
+
+			<!-- Friends -->
+			<panel name="bottom_bar_social_panel" height="100%" style="grow_noinvis" noclick="1">
+				<instance name="icon_button_hd"
+					button_name="bottom_bar_friends_btn"
+					icon="/ui/hd_ui/icons/user_mult.tga"
+					tooltip="Друзья"
+					tooltip_pos="top"
+					onclicklua="Social_Panel:ToggleSocialPanel()"
+				/>
+			</panel>
+
+			<!-- Social IM -->
+			<panel name="bottom_bar_im_panel" height="100%" style="grow_noinvis" noclick="1">
+				<instance name="icon_button_hd"
+					button_name="bottom_bar_im"
+					icon="/ui/hd_ui/icons/dm.tga"
+					tooltip="Сообщения"
+					tooltip_pos="top"
+					onclicklua="Social_IM:Open()"
+				/>
+			</panel>
+
+			<!-- Notifications History -->
+			<panel name="bottom_bar_notif_history" height="100%" style="grow_noinvis" noclick="1">
+				<instance name="icon_button_hd"
+					button_name="bottom_bar_notification"
+					icon="/ui/hd_ui/icons/bell.tga"
+					tooltip="Уведомления"
+					tooltip_pos="top"
+					onclicklua="NotificationsV2:ToggleHistoryPanel()"
+				/>
+			</panel>
+
+			<!-- Lang Selector slot. The combobox itself lives in bottom_bar_selectors_overlay
+			     (instanced above the stadium area in main.interface) so its dropdown list opens
+			     above the friends list / notifications; this panel only reserves the bar space. -->
+			<panel name="bottom_bar_lang_slot" width="12h" height="100%" noclick="1" />
+
+			<!-- Backend Selector slot (bottom-left near language). Same overlay arrangement as the
+			     language selector; SystemBar toggles this slot's width/visibility for the layout. -->
+			<panel name="system_bar_backend_selector_panel" width="12h" height="100%" visible="0" noclick="1" />
+
+		</panel>
+	</template>
+
+	<template name="bottom_bar_right_section">
+		<panel height="100%" float="left" align="right" valign="center" style="grow_noinvis" noclick="1">
+
+			<!-- Channels -->
+			<panel name="bottom_bar_right_channelbuttons_root" height="100%" style="grow_noinvis" float="right" align="right" valign="center" noclick="1" />
+
+			<!-- Add Channel -->
+			<panel height="100%" style="grow_noinvis" noclick="1">
+				<instance name="bottom_bar_add_channel" />
+			</panel>
+
+			<!-- Staff Spectate -->
+			<panel name="bottom_bar_staff_spectate_panel" height="100%" style="grow_noinvis" visible="0" noclick="1">
+				<panel width="300@" height="80%" style="center" noclick="1">
+					<frame texture="/ui/frames/rounded_bg_white.tga" borderthickness="0.5h" color="#171a28" />
+					<frame texture="/ui/frames/roundframe.tga" color="#66aaff" borderthickness="0.5h" />
+					<panel width="-80@" height="100%" noclick="1">
+						<textbox name="bottom_bar_staff_spectate_input"
+							width="100%" height="100%"
+							color="invisible"
+							font="dyn_9"
+							textcolor="white"
+							shadow="1"
+							maxlength="20"
+							defaulttext="ui_staff_spectate_placeholder"
+							defaulttextcolor="#888888"
+						/>
+					</panel>
+					<button width="70@" height="100%" align="right" color="invisible"
+						onclick="PlaySound('/shared/sounds/ui/button_click_01.wav');"
+						onmouseover="PlaySound('/shared/sounds/ui/button_over_02.wav');"
+						onclicklua="BottomBar:OnStaffSpectateClicked()"
+					>
+						<widgetstate statename="up">
+							<image texture="/ui/hd_ui/elements/system_bar_gray_btn_up.tga" noclick="1" />
+							<image width="50@" height="50%" style="center" texture="/ui/hd_ui/icons/eye.tga" color=".8 .8 .8" noclick="1" />
+						</widgetstate>
+						<widgetstate statename="over">
+							<image texture="/ui/hd_ui/elements/system_bar_gray_btn_over.tga" noclick="1" />
+							<image width="50@" height="50%" style="center" texture="/ui/hd_ui/icons/eye.tga" noclick="1" />
+						</widgetstate>
+						<widgetstate statename="down">
+							<image texture="/ui/hd_ui/elements/system_bar_gray_btn_down.tga" noclick="1" />
+							<image width="50@" height="50%" style="center" texture="/ui/hd_ui/icons/eye.tga" color=".5 .5 .5" noclick="1" />
+						</widgetstate>
+					</button>
+				</panel>
+			</panel>
+
+		</panel>
+	</template>
+
+	<!-- Language + backend selector overlay. Instanced near the end of main.interface, above the
+	     stadium area (friends list / notifications), so the dropdown lists open above those panels
+	     while dialogs and tooltips still render on top. The slot panels in bottom_bar_left_section
+	     reserve the bar space; BottomBar:SyncSelectorsOverlay() pins these panels onto the slots. -->
+	<template name="bottom_bar_selectors_overlay">
+		<panel name="bottom_bar_selectors_overlay_root" valign="bottom" width="100%" height="6.0h" visible="0" noclick="1"
+			onloadlua="BottomBar:OnSelectorsOverlayLoaded()">
+
+			<!-- Lang Selector -->
+			<panel name="bottom_bar_lang_overlay_panel" width="12h" height="100%" noclick="1">
+				<instance name="combobox_hd" id="language_selector_combobox_botbar"
+					width="10h"
+					height="3.0h"
+					align="center" valign="center" listbg_y="-.4h"
+					itemheight="3.0h"
+					itemwidth="100%"
+					bringtofront="1"
+					references="/ui/icons/local.tga,/ui/icons/automatic.tga"
+					maxlistheight="5"
+					listbgheight="6.7h"
+					watch="UIUpdateRegions"
+					ontriggerlua="self:BringToFront(); HoN_Region:PopulateLanguageSelector(self)"
+					onselectlua="HoN_Region:ChangeLanguage(self:GetValue())"
+				/>
+			</panel>
+
+			<!-- Backend Selector -->
+			<panel name="bottom_bar_backend_overlay_panel" width="12h" height="100%" visible="0" noclick="1">
+				<instance name="combobox_hd" id="system_bar_backend_mode_dropdown"
+					width="9.2h"
+					height="3.0h"
+					valign="center"
+					itemheight="3.0h"
+					itemwidth="100%"
+					bringtofront="1"
+					maxlistheight="4"
+					listbgheight="5.8h"
+					ontriggerlua="self:BringToFront()"
+				/>
+				<label name="system_bar_backend_error" x="3.8h" width="9.2h" height="1.0h" valign="bottom" y="0.05h" font="dyn_8" style="text_base,textcenter" color="#ff6f6f" visible="0" content="" noclick="1" />
+			</panel>
+
+		</panel>
+	</template>
+
+	<!-- Core -->
+	<panel name="bottom_bar_root" valign="bottom" width="100%" height="6.0h" visible="0" onloadlua="BottomBar:Init()" noclick="1">
+
+		<!-- Base -->
+		<image texture="/ui/hd_ui/elements/repeating_bottom_frame.tga" valign="bottom" width="100%" utile="1" uscale=".2" />
+
+		<!-- Play Button -->
+		<instance name="bottom_bar_play_section" />
+
+		<!-- Bottom Left -->
+		<instance name="bottom_bar_left_section" />
+
+		<!-- Bottom Right -->
+		<instance name="bottom_bar_right_section" />
+
+		<!-- Bottom bar FX overlay 
+		<instance name="bottom_bar_fx_layer" />
+		-->
+
+	</panel>
+
+</package>

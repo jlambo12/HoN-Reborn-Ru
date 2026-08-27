@@ -21,7 +21,7 @@ Builder не пишет в установленную игру. Этим зан�
 
 Последний мод K2 одновременно выбирает профиль настроек, поэтому запуск идёт
 без `-config`: `-mod "heroes of newerth;extensions" -host_locale ru`.
-`startup.cfg`, `game_settings_local.cfg` и `voice_config.cfg` выбираются по
+`startup.cfg`, `game_settings_local.cfg`, `voice_config.cfg` и `bindings/shared.json` выбираются по
 времени изменения только между обычным и русским профилями. Из ошибочно
 созданного beta.9 профиля разрешено переносить лишь более свежий `login.cfg`,
 но не его настройки по умолчанию. Более новый файл переносится после резервного
