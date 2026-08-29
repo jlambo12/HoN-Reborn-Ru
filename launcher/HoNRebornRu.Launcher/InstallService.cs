@@ -50,8 +50,17 @@ internal sealed partial class InstallService
         Directory.CreateDirectory(BaseDirectory);
         Directory.CreateDirectory(AppStorage.BackupRoot);
         var oldState = ReadState();
+        string? currentExtensionHash = null;
         if (oldState?.SchemaVersion is 1 or 3)
-            await ValidateInstalledExtensionAsync(oldState, cancellationToken);
+        {
+            if (!File.Exists(InstalledArchive))
+                throw new FileNotFoundException("Перевод предыдущей версии не найден.", InstalledArchive);
+            currentExtensionHash = await Sha256Async(InstalledArchive, cancellationToken);
+            if (!CanReconcileInstalledArchive(currentExtensionHash, oldState.InstalledSha256, downloadedHash))
+                throw new InvalidOperationException("Файл extensions\\resources0.jz изменён после установки. Лаунчер не будет его перезаписывать.");
+            if (!currentExtensionHash.Equals(oldState.InstalledSha256, StringComparison.OrdinalIgnoreCase))
+                AppStorage.Log($"Adopting exact official translation archive {manifest.Version} ({currentExtensionHash}); saved state was {oldState.Version} ({oldState.InstalledSha256}).");
+        }
         else if (oldState?.SchemaVersion == 2)
             await ValidateBaseOverlayAsync(oldState, cancellationToken);
         string? previousBackup = null;
@@ -67,10 +76,6 @@ internal sealed partial class InstallService
         bool? localeSettingsModified = oldState?.LocaleSettingsModified ?? false;
         if (oldState?.SchemaVersion is 1 or 3)
         {
-            if (!File.Exists(InstalledArchive)) throw new InvalidOperationException("Установленный перевод был удалён вне лаунчера. Сначала выполните восстановление вручную.");
-            var currentHash = await Sha256Async(InstalledArchive, cancellationToken);
-            if (!currentHash.Equals(oldState.InstalledSha256, StringComparison.OrdinalIgnoreCase))
-                throw new InvalidOperationException("Файл extensions\\resources0.jz изменён после установки. Лаунчер не будет его перезаписывать.");
             previousBackup = oldState.PreviousExtensionBackup;
             previousHash = oldState.PreviousExtensionSha256;
             previousBaseBackup = oldState.PreviousBaseOverlayBackup;
@@ -164,6 +169,10 @@ internal sealed partial class InstallService
             catch (Exception exception) { AppStorage.Log("Obsolete base overlay cleanup failed: " + exception); }
         }
     }
+
+    internal static bool CanReconcileInstalledArchive(string currentHash, string stateHash, string downloadedHash) =>
+        currentHash.Equals(stateHash, StringComparison.OrdinalIgnoreCase) ||
+        currentHash.Equals(downloadedHash, StringComparison.OrdinalIgnoreCase);
 
     public async Task RestoreAsync(CancellationToken cancellationToken)
     {

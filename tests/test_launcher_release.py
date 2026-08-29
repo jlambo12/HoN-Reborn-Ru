@@ -115,6 +115,15 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertNotIn('startInfo.ArgumentList.Add("-config")', launch_source)
         self.assertNotIn("SetLocale(", launch_source)
 
+    def test_exact_official_archive_can_repair_stale_launcher_state(self):
+        install_source = (LAUNCHER / "InstallService.cs").read_text(encoding="utf-8")
+        self_test = (LAUNCHER / "SelfTest.cs").read_text(encoding="utf-8")
+        self.assertIn("CanReconcileInstalledArchive", install_source)
+        self.assertIn("currentHash.Equals(downloadedHash", install_source)
+        self.assertIn("Adopting exact official translation archive", install_source)
+        self.assertIn('CanReconcileInstalledArchive("target", "old", "target")', self_test)
+        self.assertIn('CanReconcileInstalledArchive("unknown", "managed", "target")', self_test)
+
     def test_gearup_is_instruction_only_and_never_launched_by_launcher(self):
         game_source = (LAUNCHER / "GameLauncher.cs").read_text(encoding="utf-8")
         ui_source = (LAUNCHER / "MainForm.cs").read_text(encoding="utf-8")
@@ -172,18 +181,18 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn("EmbeddedResource", project)
 
     def test_beta_release_translation_manifest_matches_asset(self):
-        directory = ROOT / "release-assets" / "0.1.0-beta.14"
+        directory = ROOT / "release-assets" / "0.1.0-beta.15"
         manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
         archive = directory / manifest["file"]
         self.assertTrue(archive.is_file())
         self.assertEqual(archive.stat().st_size, manifest["size_bytes"])
-        self.assertEqual("0.1.0-beta.14", manifest["version"])
+        self.assertEqual("0.1.0-beta.15", manifest["version"])
 
     def test_website_download_points_to_current_beta_setup(self):
         site_config = (ROOT / "website" / "src" / "config" / "site.ts").read_text(encoding="utf-8")
         download_button = (ROOT / "website" / "src" / "components" / "DownloadButton.astro").read_text(encoding="utf-8")
         self.assertIn(
-            "/releases/download/v0.1.0-beta.14/HoNRebornRU-Setup.exe",
+            "/releases/download/v0.1.0-beta.15/HoNRebornRU-Setup.exe",
             site_config,
         )
         self.assertIn("api.github.com/repos/jlambo12/HoN-Reborn-Ru/releases", download_button)
@@ -334,6 +343,11 @@ class AutonomousLauncherTests(unittest.TestCase):
             if candidate_members[name] != base_members[name]
         }
         self.assertEqual(allowed, actual)
+
+    def test_beta15_is_launcher_only_and_keeps_beta14_translation_exact(self):
+        beta14 = ROOT / "release-assets" / "0.1.0-beta.14" / "resources0.jz"
+        beta15 = ROOT / "release-assets" / "0.1.0-beta.15" / "resources0.jz"
+        self.assertEqual(beta14.read_bytes(), beta15.read_bytes())
 
     def test_rebase_restores_safe_legacy_locale_aliases_without_stale_screens(self):
         source = (ROOT / "tools" / "localization" / "rebase_current_release.py").read_text(encoding="utf-8")

@@ -10,6 +10,9 @@ internal static class SelfTest
         if (!SemVersion.TryParse("0.1.0", out var stable)) failures.Add("parse stable");
         if (beta2 is null || beta10 is null || beta2.CompareTo(beta10) >= 0) failures.Add("beta numeric ordering");
         if (beta10 is null || stable is null || beta10.CompareTo(stable) >= 0) failures.Add("stable ordering");
+        if (!InstallService.CanReconcileInstalledArchive("target", "old", "target")) failures.Add("adopt exact official archive");
+        if (!InstallService.CanReconcileInstalledArchive("managed", "managed", "target")) failures.Add("accept managed archive");
+        if (InstallService.CanReconcileInstalledArchive("unknown", "managed", "target")) failures.Add("reject unknown archive");
         if (failures.Count == 0)
         {
             Console.WriteLine("PASS: launcher self-test");
