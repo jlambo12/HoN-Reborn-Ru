@@ -2,6 +2,7 @@
   "schema_version": 1,
   "batch_id": "HUMAN_RU_224_BETA8_RUNTIME_FIXES",
   "catalog_apply": true,
+  "upstream_sha256": "1802e16e5518b729256782d2d77643c092e6300b7eb05bebd849f96545969b93",
   "reviewed_by": "Codex beta.8 runtime screenshot review 2026-08-25",
   "entries": [
     {

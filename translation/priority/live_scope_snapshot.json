@@ -1599,8 +1599,8 @@
   },
   "schema_version": 1,
   "upstream": {
-    "path": "%LOCALAPPDATA%\\Juvio\\heroes of newerth\\resources0.jz",
-    "sha256": "eec2d8bc50200874e8aa368b980d1d67b45f637ffad4fb39030c4749c324af76",
+    "path": "C:\\Users\\asasin2130\\AppData\\Local\\Juvio\\heroes of newerth\\resources0.jz",
+    "sha256": "1802e16e5518b729256782d2d77643c092e6300b7eb05bebd849f96545969b93",
     "source": "cache"
   }
 }

@@ -33,32 +33,60 @@ local MODEL_REVEAL_DELAY_MS = 200
 
 local MARKETPLACE_PRODUCTS = {
 	{
-		key = 'Hero.CorruptedDisciple.Loki',
-		title = 'Loki',
+		key = 'Hero.Chipper.Warforged',
+		title = 'Warforged Chipper',
 		shopCategory = 'HeroSkin',
 		productType = 'avatar',
 		rarity = 'legendary',
-		storeModel = '/heroes/corrupted_disciple/loki/store/store.mdf',
-		storeEffect = '/heroes/corrupted_disciple/loki/effects/body_store_no_sfx.effect',
-		modalStoreEffect = '/heroes/corrupted_disciple/loki/effects/body_store.effect',
-		titleEffect = '/ui/effects/marketplace_loki_corrupted_disciple_title.effect',
+		storeModel = '/heroes/chipper/warforged/store/store.mdf',
+		storeEffect = '/heroes/chipper/warforged/effects/body.effect',
+		modalStoreEffect = '/heroes/chipper/warforged/effects/body_store.effect',
+		titleEffect = '',
 		titleImage = '/ui/fe3/elements/feature_avatar_title_3.png',
+		availabilityText = 'Этот облик нельзя продать.',
+		featureTitle = 'INCLUDES NEW:',
+		limited = false,
+		marketable = false,
+		mainModelPosition = '0 -10 -20',
+		mainModelScale = .9,
+		modalModelPosition = '0 -20 -20',
+		modalModelScale = .9,
+		featureFlags = {
+			vfx = true,
+			sfx = true,
+			voice = true,
+			anims = true,
+			icons = true,
+		},
+	},
+	{
+		key = 'Hero.Succubus.Headmistress',
+		title = 'Headmistress',
+		shopCategory = 'HeroSkin',
+		productType = 'avatar',
+		rarity = 'epic',
+		storeModel = '/heroes/succubus/headmistress/store/store.mdf',
+		storeEffect = '',
+		modalStoreEffect = '',
+		titleEffect = '/ui/effects/marketplace_headmistress_succubus_title.effect',
+		titleImage = '/ui/fe3/elements/feature_avatar_title_1.png',
 		availabilityText = 'Этот облик нельзя продать.',
 		featureTitle = 'INCLUDES NEW:',
 		limited = false,
 		marketable = false,
 		mainModelPosition = '0 0 -20',
 		mainModelScale = 1,
-		modalModelPosition = '0 0 -20',
+		modalModelPosition = '0 -30 -20',
 		modalModelScale = 1,
 		featureFlags = {
 			vfx = true,
-			sfx = false,
+			sfx = true,
 			voice = true,
 			anims = true,
-			icons = true,
+			icons = false,
 		},
 	},
+	--[[
 	{
 		key = 'Announcer.ThaiEnglish',
 		title = 'VRZO English Announcer',
@@ -83,7 +111,7 @@ local MARKETPLACE_PRODUCTS = {
 		},
 		featureFlags = {},
 	},
-
+	--]]
 }
 
 local ANNOUNCE_FEATURE_BADGES = { 'vfx', 'sfx', 'voice', 'anims', 'icons' }

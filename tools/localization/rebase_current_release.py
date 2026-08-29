@@ -21,8 +21,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 UPSTREAM = Path(os.environ.get("LOCALAPPDATA", Path.home() / "AppData/Local")) / "Juvio" / "heroes of newerth" / "resources0.jz"
 HUMAN_BASE = ROOT / "build" / "human-ru" / "resources0.jz"
-PREACT_DIST = ROOT / "build" / "preact-baseline-workspace" / "preact" / "dist"
-PREACT_REMOTE_DIST = ROOT / "build" / "preact-baseline-workspace" / "preact-remote" / "dist"
+PREACT_DIST = ROOT / "src" / "extended_ru" / "preact" / "dist"
+PREACT_REMOTE_DIST = ROOT / "src" / "extended_ru" / "preact-remote" / "dist"
 OUTPUT = ROOT / "build" / "human-ru-current" / "resources0.jz"
 REPORT = ROOT / "translation" / "reports" / "human_current_rebase.json"
 CURRENT_NATIVE_REPORT = ROOT / "translation" / "reports" / "current_native_overrides.json"

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Create exact, source-pinned Russian drafts for the large editorial patch pages.
 
-This helper is intentionally limited to the two current patch components.  It
+This helper is intentionally limited to the current patch components.  It
 uses the already audited AST report and a public Lingva endpoint, then leaves a
 normal reviewed batch in translation/human for manual polishing.
 """
@@ -98,13 +98,17 @@ def translate(texts: list[str], endpoint: str) -> list[str]:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--project-root", type=Path, required=True)
-    parser.add_argument("--patch", choices=("0124", "0125"), required=True)
+    parser.add_argument("--patch", choices=("0124", "0125", "0126"), required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--exclude-batch", type=Path, action="append", default=[])
     parser.add_argument("--endpoint", default="https://lingva.lunar.icu/api/v1/en/ru")
     args = parser.parse_args()
     root = args.project_root.resolve()
-    report = root / "translation" / "reports" / "patch_editorial_all.jsonl"
+    report = (
+        root / "reports" / "preact_string_candidates.jsonl"
+        if args.patch == "0126"
+        else root / "translation" / "reports" / "patch_editorial_all.jsonl"
+    )
     source_file = f"preact/src/layers/patch-notes-v2/patches/patch{args.patch}.tsx"
     excluded: set[str] = set()
     for path in args.exclude_batch:
@@ -118,10 +122,11 @@ def main() -> int:
         row = json.loads(raw)
         if not row["source_file"].endswith(f"patch{args.patch}.tsx"):
             continue
-        english = html.unescape(row["english"]).replace("'", "&apos;").replace('"', "&quot;")
+        source_text = row.get("english", row.get("literal", ""))
+        english = html.unescape(source_text).replace("'", "&apos;").replace('"', "&quot;")
         # Keep the exact spelling from the report; html.unescape above is only
         # used to normalize scanner variants back to the source representation.
-        english = row["english"]
+        english = source_text
         counts[english] += 1
         first_line.setdefault(english, int(row["source_line"]))
         if english not in ordered:

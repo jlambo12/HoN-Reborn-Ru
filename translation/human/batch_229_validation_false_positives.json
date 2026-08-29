@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_229_VALIDATION_FALSE_POSITIVES",
+  "catalog_apply": true,
+  "upstream_sha256": "1802e16e5518b729256782d2d77643c092e6300b7eb05bebd849f96545969b93",
+  "reviewed_by": "Codex semantic review of false-positive locked spans 2026-08-30",
+  "entries": [
+    {
+      "keys": ["interface:Shop_Supplies_description"],
+      "ru": "Здесь продаются различные припасы и зелья, которые обычно расходуются при использовании.",
+      "unlocked_terms": ["Home"]
+    },
+    {
+      "keys": ["interface:heroinfo_cooldown"],
+      "ru": "^cПерезарядка:^* {time} с",
+      "unlocked_terms": ["CD"]
+    },
+    {
+      "keys": ["interface:boss_info_kongor_stat_hp_regen"],
+      "ru": "^oВосстановление здоровья:^* 10/с",
+      "unlocked_terms": ["HP"]
+    }
+  ]
+}

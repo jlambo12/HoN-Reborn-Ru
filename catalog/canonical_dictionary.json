@@ -1185,7 +1185,7 @@
       {
         "canonical_text": "Succubus",
         "type": "HERO",
-        "source_key": "Hero_Succubis_name",
+        "source_key": "Hero_Succubus_name",
         "source_file": "stringtables/entities_en.str",
         "aliases": [],
         "case_policy": "EXACT",
@@ -2977,7 +2977,7 @@
       {
         "canonical_text": "Cursed Embrace",
         "type": "ABILITY",
-        "source_key": "Ability_Succubis4_name",
+        "source_key": "Ability_Succubus4_name",
         "source_file": "stringtables/entities_en.str",
         "aliases": [],
         "case_policy": "EXACT",
@@ -2987,7 +2987,7 @@
       {
         "canonical_text": "Cursed Grip",
         "type": "ABILITY",
-        "source_key": "Ability_Succubis4_name:ult_boost",
+        "source_key": "Ability_Succubus4_name:ult_boost",
         "source_file": "stringtables/entities_en.str",
         "aliases": [],
         "case_policy": "EXACT",
@@ -5397,7 +5397,7 @@
       {
         "canonical_text": "Heartache",
         "type": "ABILITY",
-        "source_key": "Ability_Succubis2_name",
+        "source_key": "Ability_Succubus2_name",
         "source_file": "stringtables/entities_en.str",
         "aliases": [],
         "case_policy": "EXACT",
@@ -6767,7 +6767,7 @@
       {
         "canonical_text": "Mesmerize",
         "type": "ABILITY",
-        "source_key": "Ability_Succubis3_name",
+        "source_key": "Ability_Succubus3_name",
         "source_file": "stringtables/entities_en.str",
         "aliases": [],
         "case_policy": "EXACT",
@@ -8777,7 +8777,7 @@
       {
         "canonical_text": "Smitten",
         "type": "ABILITY",
-        "source_key": "Ability_Succubis1_name",
+        "source_key": "Ability_Succubus1_name",
         "source_file": "stringtables/entities_en.str",
         "aliases": [],
         "case_policy": "EXACT",
@@ -13851,16 +13851,6 @@
         "protection_strength": "EXACT"
       },
       {
-        "canonical_text": "Katana",
-        "type": "COSMETIC",
-        "source_key": "native:0122",
-        "source_file": "ui/scripts/fe3/marketplace_announce.lua",
-        "aliases": [],
-        "case_policy": "EXACT",
-        "protection_policy": "IMMUTABLE_VISIBLE_TEXT",
-        "protection_strength": "CONTEXTUAL"
-      },
-      {
         "canonical_text": "Keg Bernard Courier",
         "type": "COSMETIC",
         "source_key": "Pet_FlyngCourier_name:C_Bernard",
@@ -13879,16 +13869,6 @@
         "case_policy": "EXACT",
         "protection_policy": "IMMUTABLE_VISIBLE_TEXT",
         "protection_strength": "EXACT"
-      },
-      {
-        "canonical_text": "Leo",
-        "type": "COSMETIC",
-        "source_key": "native:0121",
-        "source_file": "ui/scripts/fe3/marketplace_announce.lua",
-        "aliases": [],
-        "case_policy": "EXACT",
-        "protection_policy": "IMMUTABLE_VISIBLE_TEXT",
-        "protection_strength": "CONTEXTUAL"
       },
       {
         "canonical_text": "Mountain Dew Courier",

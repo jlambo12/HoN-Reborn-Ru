@@ -38,7 +38,7 @@ def replace_on_line(lines: list[str], row: dict) -> None:
     # Babel's JSX coordinates can drift by a few source lines around large
     # fragments and comments.  Keep the search local, but wide enough for the
     # audited patch-note components.
-    for line_index in range(max(0, index - 40), min(len(lines), index + 41)):
+    for line_index in range(max(0, index - 250), min(len(lines), index + 251)):
         for position in safe_positions(lines[line_index]):
             candidates.append((line_index, position))
     if candidates:
@@ -162,16 +162,35 @@ def main() -> int:
             english = row["english"]
             russian = row["russian"]
             expected = int(row.get("expected_matches", 1))
+            if english == russian:
+                # Explicit KEEP_EN rows document reviewed terminology but do
+                # not need a source rewrite, which also avoids stale editorial
+                # coordinates when an upstream page is merely reflowed.
+                continue
             found = text.count(english)
             if found == expected:
                 target.write_text(text.replace(english, russian), encoding="utf-8", newline="")
                 batch_count += found
                 continue
+            # Editorial JSX is frequently reflowed without changing its visible
+            # text. Accept whitespace-only source drift when the passage still
+            # has the exact expected cardinality.
+            flexible = re.compile(r"\s+".join(re.escape(part) for part in english.split()))
+            flexible_matches = list(flexible.finditer(text))
+            if len(flexible_matches) == expected:
+                def replace_flexible(match: re.Match[str]) -> str:
+                    missing_breaks = max(0, match.group(0).count("\n") - russian.count("\n"))
+                    return russian + ("\n" * missing_breaks)
+
+                target.write_text(flexible.sub(replace_flexible, text), encoding="utf-8", newline="")
+                batch_count += len(flexible_matches)
+                continue
             coordinates = editorial_coordinates.get((source_name, english), [])
             if len(coordinates) != expected:
                 raise RuntimeError(
                     f"exact Preact match count changed for {source_name}: expected {expected}, "
-                    f"found {found}, audited coordinates {len(coordinates)} ({batch_path.name})"
+                    f"found {found}, audited coordinates {len(coordinates)} ({batch_path.name}); "
+                    f"source={english[:160]!r}"
                 )
             lines = text.splitlines(keepends=True)
             for coordinate in sorted(coordinates, key=lambda item: int(item["source_line"]), reverse=True):

@@ -1,9 +1,11 @@
 $ErrorActionPreference = "Stop"
 $ProjectRoot = Split-Path -Parent $PSScriptRoot
 $Archive = Join-Path $env:LOCALAPPDATA "Juvio\heroes of newerth\resources0.jz"
-$Snapshot = Get-ChildItem -LiteralPath "$ProjectRoot\src\upstream" -Directory | Sort-Object Name | Select-Object -Last 1
-if (-not $Snapshot) { throw "No upstream snapshot. Run scripts/run_audit.ps1 first." }
-$Snapshot = $Snapshot.FullName
+$ArchiveSha = (Get-FileHash -Algorithm SHA256 -LiteralPath $Archive).Hash.ToLowerInvariant()
+$Snapshot = Join-Path $ProjectRoot ("src\upstream\" + $ArchiveSha.Substring(0, 12))
+if (-not (Test-Path -LiteralPath $Snapshot -PathType Container)) {
+    throw "No upstream snapshot for current archive $ArchiveSha. Run scripts/run_audit.ps1 first."
+}
 $Workspace = Join-Path $ProjectRoot "build\pass-b-preact-workspace"
 $BaseBuild = Join-Path $ProjectRoot "build\pass-b-localization\base_resources0.jz"
 

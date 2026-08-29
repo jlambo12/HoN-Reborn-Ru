@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "version": "0.1.0-beta.14",
+  "file": "resources0.jz",
+  "sha256": "9848d0f1a3310cc7f2ea314aa851ef2e3de205eb89b3d89f04623853acf7d41a",
+  "size_bytes": 3214130,
+  "members": 36,
+  "crc": "PASS",
+  "automated_tests": "PASS",
+  "runtime_verified": false,
+  "runtime_status": "Rebased on HoN 0.12.6; Succubus gameplay strings and the complete 0.12.6 patch page are localized; exact-current native and Preact builds passed."
+}

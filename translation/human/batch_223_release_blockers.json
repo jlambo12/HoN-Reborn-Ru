@@ -2,6 +2,7 @@
   "schema_version": 1,
   "batch_id": "HUMAN_RU_223_RELEASE_BLOCKERS",
   "catalog_apply": true,
+  "upstream_sha256": "1802e16e5518b729256782d2d77643c092e6300b7eb05bebd849f96545969b93",
   "reviewed_by": "Codex release blocker review 2026-08-24",
   "entries": [
     {

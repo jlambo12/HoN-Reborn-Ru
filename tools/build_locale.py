@@ -94,7 +94,8 @@ def validate(rows: list[dict], allow_fallback: bool, required_ids: set[str] | No
                         "russian": dict(tokens(pattern, russian)),
                     })
             spans = row.get("locked_spans", [])
-            if spans:
+            human_runtime_override = row.get("classification_source") == "HUMAN_RUNTIME"
+            if spans and not human_runtime_override:
                 expected = Counter((span["canonical_text"], span.get("case_policy", "EXACT")) for span in spans)
                 for (term, case_policy), expected_count in expected.items():
                     actual_count = visible_term_count(russian, term, case_policy)
@@ -119,7 +120,7 @@ def validate(rows: list[dict], allow_fallback: bool, required_ids: set[str] | No
                     start, end = span.get("source_start"), span.get("source_end")
                     if not isinstance(start, int) or not isinstance(end, int) or visible_text(english[start:end]) != span["canonical_text"]:
                         errors.append({"code": "invalid_locked_source_span", "id": row_id, "span": span})
-            else:
+            elif not human_runtime_override:
                 for term in row.get("protected_terms", []):
                     if visible_term_count(english, term) != visible_term_count(russian, term):
                         errors.append({

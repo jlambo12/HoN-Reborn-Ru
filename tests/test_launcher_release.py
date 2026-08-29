@@ -172,18 +172,18 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn("EmbeddedResource", project)
 
     def test_beta_release_translation_manifest_matches_asset(self):
-        directory = ROOT / "release-assets" / "0.1.0-beta.13"
+        directory = ROOT / "release-assets" / "0.1.0-beta.14"
         manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
         archive = directory / manifest["file"]
         self.assertTrue(archive.is_file())
         self.assertEqual(archive.stat().st_size, manifest["size_bytes"])
-        self.assertEqual("0.1.0-beta.13", manifest["version"])
+        self.assertEqual("0.1.0-beta.14", manifest["version"])
 
     def test_website_download_points_to_current_beta_setup(self):
         site_config = (ROOT / "website" / "src" / "config" / "site.ts").read_text(encoding="utf-8")
         download_button = (ROOT / "website" / "src" / "components" / "DownloadButton.astro").read_text(encoding="utf-8")
         self.assertIn(
-            "/releases/download/v0.1.0-beta.13/HoNRebornRU-Setup.exe",
+            "/releases/download/v0.1.0-beta.14/HoNRebornRU-Setup.exe",
             site_config,
         )
         self.assertIn("api.github.com/repos/jlambo12/HoN-Reborn-Ru/releases", download_button)
@@ -295,6 +295,43 @@ class AutonomousLauncherTests(unittest.TestCase):
         actual = {
             name for name in candidate_members
             if name not in base_members or candidate_members[name] != base_members[name]
+        }
+        self.assertEqual(allowed, actual)
+
+    def test_beta14_supports_hon_0126_and_succubus(self):
+        archive_path = ROOT / "release-assets" / "0.1.0-beta.14" / "resources0.jz"
+        with zipfile.ZipFile(archive_path) as archive:
+            entities = archive.read("stringtables/entities_ru.str").decode("utf-8")
+            preact = archive.read("preact/dist/index.js").decode("utf-8")
+        self.assertIn("Hero_Succubus_description\t", entities)
+        self.assertIn("Ability_Succubus4_description_simple\t", entities)
+        self.assertIn("Staff of the Master", entities)
+        self.assertIn("Новый герой: Succubus", preact)
+        self.assertIn("Описание патча 0.12.6", preact)
+        self.assertIn("Производительность и память", preact)
+
+    def test_beta14_rebase_keeps_the_release_overlay_thin(self):
+        base_path = ROOT / "release-assets" / "0.1.0-beta.13" / "resources0.jz"
+        candidate_path = ROOT / "release-assets" / "0.1.0-beta.14" / "resources0.jz"
+        allowed = {
+            "preact-remote/dist/index.js",
+            "preact/dist/assets/index.css",
+            "preact/dist/index.js",
+            "preact/dist/index.js.map",
+            "stringtables/entities_en.str",
+            "stringtables/entities_ru.str",
+            "stringtables/interface_en.str",
+            "stringtables/interface_ru.str",
+            "ui/scripts/fe3/marketplace_announce.lua",
+            "ui/scripts/fe3/store_featured.lua",
+        }
+        with zipfile.ZipFile(base_path) as base, zipfile.ZipFile(candidate_path) as candidate:
+            base_members = {name: base.read(name) for name in base.namelist()}
+            candidate_members = {name: candidate.read(name) for name in candidate.namelist()}
+        self.assertEqual(base_members.keys(), candidate_members.keys())
+        actual = {
+            name for name in candidate_members
+            if candidate_members[name] != base_members[name]
         }
         self.assertEqual(allowed, actual)
 

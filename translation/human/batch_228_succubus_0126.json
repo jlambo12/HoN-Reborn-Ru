@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_228_SUCCUBUS_0126",
+  "catalog_apply": true,
+  "upstream_sha256": "1802e16e5518b729256782d2d77643c092e6300b7eb05bebd849f96545969b93",
+  "reviewed_by": "Codex manual gameplay localization for HoN Reborn 0.12.6",
+  "entries": [
+    {
+      "keys": ["entities:Ability_Succubus1_description"],
+      "ru": "Succubus очаровывает противников своей красотой, значительно снижая весь наносимый ими урон."
+    },
+    {
+      "keys": ["entities:Ability_Succubus1_description_simple"],
+      "ru": "Очаровывает способностью ^oSmitten^* вражеских юнитов в радиусе 400, снижая весь наносимый ими урон на ^o{20,25,30,35}%^* в течение {6.25,6.5,6.75,7} секунды."
+    },
+    {
+      "keys": ["entities:Ability_Succubus1_IMPACT_effect"],
+      "ru": "Накладывает Smitten на вражеских юнитов в выбранной области на {6.25,6.5,6.75,7} секунды. Наносимый ими урон снижается на {20,25,30,35}%."
+    },
+    {
+      "keys": ["entities:Ability_Succubus1_effect_header"],
+      "ru": "Эффекты Smitten"
+    },
+    {
+      "keys": ["entities:Ability_Succubus1_tooltip_flavor"],
+      "ru": "Красота — в глазах смотрящего."
+    },
+    {
+      "keys": ["entities:State_Succubus_Ability1_description"],
+      "ru": "Наносимый урон снижен на {20,25,30,35}%"
+    },
+    {
+      "keys": ["entities:Ability_Succubus2_description"],
+      "ru": "Succubus разбивает сердце врага и питается его отчаянием, одновременно нанося урон противнику и исцеляя себя."
+    },
+    {
+      "keys": ["entities:Ability_Succubus2_description_simple"],
+      "ru": "Разбивает сердце вражеского юнита, нанося ^o{75,150,225,300} чистого урона^* и восстанавливая себе столько же здоровья."
+    },
+    {
+      "keys": ["entities:Ability_Succubus2_tooltip_flavor"],
+      "ru": "Не умри от разбитого сердца!"
+    },
+    {
+      "keys": ["entities:Ability_Succubus2_IMPACT_effect"],
+      "ru": "Наносит выбранному юниту {75,150,225,300} чистого урона и восстанавливает себе {75,150,225,300} здоровья."
+    },
+    {
+      "keys": ["entities:Ability_Succubus3_description"],
+      "ru": "Succubus гипнотизирует выбранную цель."
+    },
+    {
+      "keys": ["entities:Ability_Succubus3_description_simple"],
+      "ru": "Гипнотизирует юнита с помощью ^oMesmerize^*, накладывая ^oсон на {3,4,5,6} секунды^*. Если целью был противник, он теряет ^o30 здоровья в секунду^*. Прямой урон снимает сон, а при атаке спящий эффект передаётся атакующему на 3 секунды.\\n\\nВ первую секунду сна цель неуязвима. Вы можете в любой момент снять ^oMesmerize^* с себя."
+    },
+    {
+      "keys": ["entities:Ability_Succubus3_description_simple:Succubus_E_active", "entities:Ability_Succubus3_IMPACT_effect:Succubus_E_active"],
+      "ru": "Снимает Mesmerize с Succubus."
+    },
+    {
+      "keys": ["entities:Ability_Succubus3_effect_header"],
+      "ru": "Эффекты Mesmerize"
+    },
+    {
+      "keys": ["entities:Ability_Succubus3_IMPACT_effect"],
+      "ru": "Накладывает ^oMesmerize^* на цель на ^o{3,4,5,6} секунды^*. В первую секунду гипноза цель неуязвима. Если кто-либо атакует загипнотизированную цель, эффект передаётся атакующему на 3 секунды.\\n\\nSuccubus может в любой момент снять Mesmerize с себя."
+    },
+    {
+      "keys": ["entities:Ability_Succubus3_tooltip_flavor"],
+      "ru": "Твои веки тяжелеют..."
+    },
+    {
+      "keys": ["entities:State_Succubus_Ability3_FRAME_effect"],
+      "ru": "Каждую секунду отнимает 30 здоровья\\nПри атаке Mesmerize снимается и передаётся атакующему на 3 секунды."
+    },
+    {
+      "keys": ["entities:State_Succubus_Ability3_Invulnerable_name"],
+      "ru": "Неуязвимость от Mesmerize"
+    },
+    {
+      "keys": ["entities:Ability_Succubus4_description"],
+      "ru": "Succubus вытягивает сущность врага, постепенно нанося ему урон и похищая ману. Во время истощения противник не может действовать."
+    },
+    {
+      "keys": ["entities:Ability_Succubus4_description2"],
+      "ru": "^gЭту способность можно усилить с помощью Staff of the Master.^*\\n\\n^gЭффект Staff:^* способность больше не требует поддержания, её длительность увеличивается на 1 секунду, а перезарядка сокращается на 15 секунд. Максимальное расстояние удержания — 1200."
+    },
+    {
+      "keys": ["entities:Ability_Succubus4_description_simple"],
+      "ru": "Поддерживает заклинание на вражеском юните до 5 секунд, оглушая его и нанося ^o{100,160,220} магического урона в секунду^*. За время действия похищает до 25% маны цели и передаёт её вам.\\n\\n^gStaff of the Master^*: способность становится ^oне требующей поддержания^*, её длительность увеличивается на 1 секунду, а перезарядка сокращается на 15 секунд. ^oМаксимальное расстояние удержания — 1200^*."
+    },
+    {
+      "keys": ["entities:Ability_Succubus4_description_simple:ult_boost"],
+      "ru": "Поддерживает заклинание на вражеском юните до ^g6 секунд^*, оглушая его и нанося ^o{100,160,220} магического урона в секунду^*. За время действия похищает до 25% маны цели и передаёт её вам.\\n\\nЭффект прекращается, если вас оглушат или заставят замолчать. ^gМаксимальное расстояние удержания — 1200^*."
+    },
+    {
+      "keys": ["entities:Ability_Succubus4_effect_header"],
+      "ru": "Эффекты Cursed Embrace"
+    },
+    {
+      "keys": ["entities:Ability_Succubus4_tooltip_flavor"],
+      "ru": "Ты всё ещё не женат?"
+    },
+    {
+      "keys": ["entities:Ability_Succubus4_IMPACT_effect"],
+      "ru": "Накладывает Cursed Embrace на цель на время поддержания заклинания."
+    },
+    {
+      "keys": ["entities:Ability_Succubus4_IMPACT_effect:ult_boost"],
+      "ru": "Накладывает ^oCursed Embrace^* на цель на ^g6 секунд^*. Эффект прекращается, если Succubus оглушат или заставят замолчать. Максимальное расстояние удержания — 1200."
+    },
+    {
+      "keys": ["entities:State_Succubus_Ability4_FRAME_effect"],
+      "ru": "{100,160,220} магического урона в секунду\\nКаждую секунду похищает 5% максимального запаса маны и передаёт её применившему способность"
+    },
+    {
+      "keys": ["entities:State_Succubus_Ability4_FRAME_effect:ult_boost"],
+      "ru": "{100,160,220} магического урона в секунду\\nКаждую секунду похищает 5% максимального запаса маны и передаёт её применившему способность\\nМаксимальное расстояние удержания — 1200."
+    },
+    {
+      "keys": ["entities:Hero_Succubus_description"],
+      "ru": "Немало солдат Легиона бесследно исчезло во время одиночных дозоров, когда Succubus выходила на охоту, заманивая жертв соблазнительным зовом. Насытившись похищенной жизненной силой, эта демоница не дарит истинного наслаждения тем, кто поддаётся её чарам, однако само её имя всё равно обладает пугающей притягательностью."
+    },
+    {
+      "keys": ["entities:Hero_Succubus_role"],
+      "ru": "В распоряжении Succubus множество оглушений и ослаблений, позволяющих одновременно обезвреживать нескольких противников. На линии Heartache наносит огромный урон и одновременно восстанавливает ей здоровье."
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_Succubus_1"],
+      "ru": "Применяйте Mesmerize к противникам, которых сейчас не атакуют союзники. Союзник, ударивший спящую цель, получит этот отрицательный эффект вместо неё."
+    },
+    {
+      "keys": ["interface:hero_tip_offensive_tip_Hero_Succubus_2"],
+      "ru": "Играя за Succubus, перед применением Cursed Embrace убедитесь, что находитесь в безопасном месте: так вы сможете удерживать противника дольше."
+    },
+    {
+      "keys": ["interface:hero_tip_defensive_tip_Hero_Succubus_1"],
+      "ru": "Лучше приближаться к Succubus вместе с союзником, чтобы она не смогла надолго обездвижить вас поддерживаемой ультимативной способностью."
+    },
+    {
+      "keys": ["interface:hero_tip_defensive_tip_Hero_Succubus_2"],
+      "ru": "Атакуйте спящего союзника правой кнопкой мыши, чтобы перенести Mesmerize на себя и позволить товарищу отступить."
+    }
+  ]
+}

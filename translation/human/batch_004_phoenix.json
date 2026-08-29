@@ -173,7 +173,8 @@
     },
     {
       "keys": ["interface:boss_info_phoenix_stat_hp_regen"],
-      "ru": "^oРегенерация здоровья:^* 15/с"
+      "ru": "^oВосстановление здоровья:^* 15/с",
+      "unlocked_terms": ["HP"]
     },
     {
       "keys": ["interface:boss_info_phoenix_ability1_desc"],

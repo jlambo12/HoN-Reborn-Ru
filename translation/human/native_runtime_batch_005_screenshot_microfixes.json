@@ -13,7 +13,7 @@
     {"source_file":"ui/scripts/fe3/regions.lua","english":"return {'en', 'th'}","russian":"return {'en', 'ru', 'th'}","expected_matches":2},
     {"source_file":"ui/fe3/sections/boss_info.package","english":"header_text=\"boss_info_scaling_header\"","russian":"header_text=\"Усиление с каждым возрождением\"","expected_matches":2},
     {"source_file":"ui/fe3/sections/marketplace_announce.package","english":"cta=\"GET IT NOW\"","russian":"cta=\"ПОЛУЧИТЬ\"","expected_matches":2},
-    {"source_file":"ui/scripts/fe3/marketplace_announce.lua","english":"availabilityText = 'This Avatar is not marketable.'","russian":"availabilityText = 'Этот облик нельзя продать.'","expected_matches":1},
+    {"source_file":"ui/scripts/fe3/marketplace_announce.lua","english":"availabilityText = 'This Avatar is not marketable.'","russian":"availabilityText = 'Этот облик нельзя продать.'","expected_matches":2},
     {"source_file":"ui/scripts/fe3/store_featured.lua","english":"common    = 'Common'","russian":"common    = 'Обычный'","expected_matches":1},
     {"source_file":"ui/scripts/fe3/store_featured.lua","english":"uncommon  = 'Uncommon'","russian":"uncommon  = 'Необычный'","expected_matches":1},
     {"source_file":"ui/scripts/fe3/store_featured.lua","english":"rare      = 'Rare'","russian":"rare      = 'Редкий'","expected_matches":1},
