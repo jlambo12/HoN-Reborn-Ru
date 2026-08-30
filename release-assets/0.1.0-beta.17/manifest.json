@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "version": "0.1.0-beta.17",
+  "file": "resources0.jz",
+  "sha256": "cc0c3bed847aaa03142a52041cd547de7a4b79fcff411024009fd7bb3bd74c42",
+  "size_bytes": 3230744,
+  "members": 36,
+  "crc": "PASS",
+  "automated_tests": "PASS",
+  "runtime_verified": false,
+  "runtime_status": "Launcher-only release. Translation payload is byte-identical to beta.16; no local installation was performed."
+}

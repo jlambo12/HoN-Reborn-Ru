@@ -34,7 +34,6 @@ internal sealed class MainForm : Form
     private readonly LauncherProgressBar _progress = new();
     private readonly LauncherButton _launchButton = UiButton("ИГРАТЬ", LauncherButtonKind.Primary);
     private readonly LauncherButton _checkButton = UiButton("ПРОВЕРИТЬ ОБНОВЛЕНИЯ", LauncherButtonKind.Secondary);
-    private readonly LauncherButton _installButton = UiButton("УСТАНОВИТЬ / ОБНОВИТЬ", LauncherButtonKind.Primary);
     private readonly LauncherButton _restoreButton = UiButton("↺  ВОССТАНОВЛЕНИЕ", LauncherButtonKind.Ghost);
     private readonly LauncherButton _channelButton = UiButton("КАНАЛ: БЕТА", LauncherButtonKind.Ghost);
     private readonly LauncherButton _shortcutButton = UiButton("ВЫБРАТЬ ЯРЛЫК…", LauncherButtonKind.Secondary);
@@ -190,10 +189,8 @@ internal sealed class MainForm : Form
         _translationCheck.Location = new Point(306, 106); _translationCheck.Size = new Size(180, 22);
         _filesCheck.Location = new Point(306, 130); _filesCheck.Size = new Size(180, 22);
 
-        _checkButton.Location = new Point(22, 174); _checkButton.Size = new Size(202, 40);
+        _checkButton.Location = new Point(22, 174); _checkButton.Size = new Size(464, 40);
         _checkButton.Click += async (_, _) => await RunGuardedAsync(CheckUpdatesAsync);
-        _installButton.Location = new Point(234, 174); _installButton.Size = new Size(252, 40);
-        _installButton.Click += async (_, _) => await RunGuardedAsync(InstallOrUpdateAsync);
 
         _progress.Location = new Point(22, 232); _progress.Size = new Size(410, 14);
         _progressPercent.Location = new Point(438, 226); _progressPercent.Size = new Size(48, 24);
@@ -203,7 +200,7 @@ internal sealed class MainForm : Form
 
         card.Controls.AddRange([title, _installedValue, _updateSummary, _availableValue, _lastChecked,
             statusTitle, _readinessHeadline, _gameCheck, _translationCheck, _filesCheck,
-            _checkButton, _installButton, _progress, _progressPercent, _operationTitle, _operationDetail]);
+            _checkButton, _progress, _progressPercent, _operationTitle, _operationDetail]);
         Controls.Add(card);
     }
 
@@ -247,18 +244,18 @@ internal sealed class MainForm : Form
         var needsTranslation = installed is null || IsNewer(_remote.Manifest.Version, installed);
         _updateSummary.Text = needsTranslation ? "ДОСТУПНО ОБНОВЛЕНИЕ" : "✓ Установлена последняя версия";
         _updateSummary.ForeColor = needsTranslation ? LauncherTheme.Warning : LauncherTheme.Success;
-        _installButton.Text = needsTranslation ? "УСТАНОВИТЬ ОБНОВЛЕНИЕ" : "ПЕРЕУСТАНОВИТЬ";
         SetOperation("Проверка завершена", needsTranslation
             ? $"Доступна версия {_remote.Manifest.Version}."
             : "Русификатор и Launcher актуальны.", 100,
             needsTranslation ? LauncherTheme.Warning : LauncherTheme.Success);
-        await OfferLauncherUpdateAsync(_remote, cancellationToken);
+        if (await OfferLauncherUpdateAsync(_remote, cancellationToken)) return;
+        if (needsTranslation && LauncherDialog.Confirm(this, "Обновление русификатора",
+                $"Доступна версия {_remote.Manifest.Version}. Установить сейчас?", "УСТАНОВИТЬ"))
+            await InstallOrUpdateAsync(_remote, cancellationToken);
     }
 
-    private async Task InstallOrUpdateAsync(CancellationToken cancellationToken)
+    private async Task InstallOrUpdateAsync(RemoteRelease remote, CancellationToken cancellationToken)
     {
-        if (_remote is null) await CheckUpdatesAsync(cancellationToken);
-        var remote = _remote ?? throw new InvalidOperationException("Релиз не найден.");
         if (!remote.AssetUrls.TryGetValue(remote.Manifest.Translation.Name, out var url))
             throw new InvalidDataException("В релизе отсутствует архив перевода.");
         var temporary = Path.Combine(Path.GetTempPath(), $"HoN-Reborn-RU-{Guid.NewGuid():N}.jz");
@@ -282,13 +279,13 @@ internal sealed class MainForm : Form
         }
     }
 
-    private async Task OfferLauncherUpdateAsync(RemoteRelease remote, CancellationToken cancellationToken)
+    private async Task<bool> OfferLauncherUpdateAsync(RemoteRelease remote, CancellationToken cancellationToken)
     {
         if (string.IsNullOrWhiteSpace(remote.Manifest.Launcher.Version) ||
-            !IsNewer(remote.Manifest.Launcher.Version, Program.LauncherVersion)) return;
+            !IsNewer(remote.Manifest.Launcher.Version, Program.LauncherVersion)) return false;
         if (!LauncherDialog.Confirm(this, "Обновление Launcher",
                 $"Доступна новая версия Launcher {remote.Manifest.Launcher.Version}. Обновить сейчас?",
-                "ОБНОВИТЬ")) return;
+                "ОБНОВИТЬ")) return false;
         if (!remote.AssetUrls.TryGetValue(remote.Manifest.Launcher.Name, out var launcherUrl) ||
             !remote.AssetUrls.TryGetValue(remote.Manifest.Updater.Name, out var updaterUrl))
             throw new InvalidDataException("В GitHub Release отсутствуют файлы обновления лаунчера.");
@@ -317,6 +314,7 @@ internal sealed class MainForm : Form
             }
         });
         Close();
+        return true;
     }
 
     private static async Task VerifyAssetAsync(string path, ReleaseAsset asset, CancellationToken cancellationToken)
@@ -449,7 +447,7 @@ internal sealed class MainForm : Form
 
     private static (string Title, string Detail) FriendlyError(Exception exception)
     {
-        if (exception is HttpRequestException or TaskCanceledException)
+        if (exception is HttpRequestException or TaskCanceledException or TimeoutException)
             return ("Не удалось проверить обновления", "Проверьте подключение к интернету и повторите попытку.");
         if (exception.Message.Contains("Закройте Heroes", StringComparison.OrdinalIgnoreCase))
             return ("Игра сейчас запущена", "Закройте Heroes of Newerth Reborn и повторите операцию.");
@@ -469,7 +467,6 @@ internal sealed class MainForm : Form
     private void ToggleBusy(bool busy)
     {
         _checkButton.Enabled = !busy;
-        _installButton.Enabled = !busy;
         _shortcutButton.Enabled = !busy;
         _channelButton.Enabled = !busy;
         _officialMode.Enabled = !busy;

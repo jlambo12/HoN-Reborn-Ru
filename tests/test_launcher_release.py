@@ -64,6 +64,17 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn("SemVersion.TryParse(release.TagName", source)
         self.assertIn("OrderByDescending(candidate => candidate.Version)", source)
 
+    def test_release_check_is_bounded_and_offers_install_without_a_second_button(self):
+        client = (LAUNCHER / "UpdateClient.cs").read_text(encoding="utf-8")
+        form = (LAUNCHER / "MainForm.cs").read_text(encoding="utf-8")
+        self.assertIn("ConnectTimeout = TimeSpan.FromSeconds(10)", client)
+        self.assertIn("Timeout = TimeSpan.FromSeconds(30)", client)
+        self.assertIn("deadline.CancelAfter(TimeSpan.FromSeconds(30))", client)
+        self.assertNotIn("TimeSpan.FromMinutes(10)", client)
+        self.assertNotIn("_installButton", form)
+        self.assertIn('LauncherDialog.Confirm(this, "Обновление русификатора"', form)
+        self.assertIn("await InstallOrUpdateAsync(_remote, cancellationToken)", form)
+
     def test_self_test_does_not_require_an_installed_game(self):
         source = (LAUNCHER / "SelfTest.cs").read_text(encoding="utf-8")
         self.assertNotIn("LocalApplicationData", source)
@@ -181,18 +192,18 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn("EmbeddedResource", project)
 
     def test_beta_release_translation_manifest_matches_asset(self):
-        directory = ROOT / "release-assets" / "0.1.0-beta.16"
+        directory = ROOT / "release-assets" / "0.1.0-beta.17"
         manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
         archive = directory / manifest["file"]
         self.assertTrue(archive.is_file())
         self.assertEqual(archive.stat().st_size, manifest["size_bytes"])
-        self.assertEqual("0.1.0-beta.16", manifest["version"])
+        self.assertEqual("0.1.0-beta.17", manifest["version"])
 
     def test_website_download_points_to_current_beta_setup(self):
         site_config = (ROOT / "website" / "src" / "config" / "site.ts").read_text(encoding="utf-8")
         download_button = (ROOT / "website" / "src" / "components" / "DownloadButton.astro").read_text(encoding="utf-8")
         self.assertIn(
-            "/releases/download/v0.1.0-beta.16/HoNRebornRU-Setup.exe",
+            "/releases/download/v0.1.0-beta.17/HoNRebornRU-Setup.exe",
             site_config,
         )
         self.assertIn("api.github.com/repos/jlambo12/HoN-Reborn-Ru/releases", download_button)
@@ -363,6 +374,11 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn("mm_queue_btn_cost\tВстать в очередь — стоимость: {cost} жетон очереди ролей", interface)
         self.assertIn("rolepick_foot_cost\tЕсли не выбрать ни одну роль поддержки", interface)
         self.assertIn("matchmaking:ПОИСК МАТЧА,game_list:СВОИ ИГРЫ", main_ui)
+
+    def test_beta17_is_launcher_only_and_keeps_beta16_translation_exact(self):
+        beta16 = ROOT / "release-assets" / "0.1.0-beta.16" / "resources0.jz"
+        beta17 = ROOT / "release-assets" / "0.1.0-beta.17" / "resources0.jz"
+        self.assertEqual(beta16.read_bytes(), beta17.read_bytes())
 
     def test_rebase_restores_safe_legacy_locale_aliases_without_stale_screens(self):
         source = (ROOT / "tools" / "localization" / "rebase_current_release.py").read_text(encoding="utf-8")
