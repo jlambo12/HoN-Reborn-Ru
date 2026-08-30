@@ -5,7 +5,7 @@
   "reviewed_by": "Codex manual editorial translation 2026-08-24",
   "rows": [
     {"source_file":"preact/src/layers/patch-notes-v2/data/patchregistry.ts","english":"August 15th, 2026","russian":"15 августа 2026 года","expected_matches":1},
-    {"source_file":"preact/src/layers/patch-notes-v2/data/patchregistry.ts","english":"A major matchmaking overhaul, Kane joins the roster, and a new renderer under every HTML panel.","russian":"Масштабное обновление подбора матчей, появление Kane и новый рендерер для всех HTML-панелей.","expected_matches":1},
+    {"source_file":"preact/src/layers/patch-notes-v2/data/patchregistry.ts","english":"A major matchmaking overhaul, Kane joins the roster, and a new renderer under every HTML panel.","russian":"Масштабное обновление подбора матчей, появление Kane и новый рендерер для всех HTML-панелей.","expected_matches":1,"retired":true},
     {"source_file":"preact/src/layers/patch-notes-v2/patches/patch0125.tsx","english":"Solo","russian":"В одиночку","expected_matches":1},
     {"source_file":"preact/src/layers/patch-notes-v2/patches/patch0125.tsx","english":"Duo","russian":"Вдвоём","expected_matches":1},
     {"source_file":"preact/src/layers/patch-notes-v2/patches/patch0125.tsx","english":"Trio","russian":"Втроём","expected_matches":1},

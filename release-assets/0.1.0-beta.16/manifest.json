@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "version": "0.1.0-beta.16",
+  "file": "resources0.jz",
+  "sha256": "cc0c3bed847aaa03142a52041cd547de7a4b79fcff411024009fd7bb3bd74c42",
+  "size_bytes": 3230744,
+  "members": 36,
+  "crc": "PASS",
+  "automated_tests": "PASS",
+  "runtime_verified": false,
+  "runtime_status": "Restores the cumulative reviewed Preact localization after the 0.12.6 source rebase and adds screenshot-driven translations for dynamic profile, Honor System, matchmaking role-token UI, and live 0.12.6 news. No local installation was performed."
+}

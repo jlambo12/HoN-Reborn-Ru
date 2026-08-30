@@ -137,8 +137,29 @@ def main() -> int:
     errors: list[dict[str, object]] = []
     preact_js = members["preact/dist/index.js"].decode("utf-8")
     cyrillic = len(re.findall(r"[А-Яа-яЁё]", preact_js))
-    if cyrillic < 2000:
+    if cyrillic < 50000:
         errors.append({"code": "PREACT_LOCALIZATION_NOT_PRESENT", "cyrillic_characters": cyrillic})
+    required_preact_literals = {
+        "PROFILE_PLAYER_REPORT": "Жалоба на игрока",
+        "HONOR_AVOIDED": "Избегание",
+        "HONOR_MATCH_FINISHED": "Матч завершён",
+        "PROFILE_TIME_AGO": "минуту",
+        "CODE_OF_CONDUCT": "Правила поведения",
+    }
+    for code, literal in required_preact_literals.items():
+        if literal not in preact_js:
+            errors.append({"code": f"MISSING_{code}_LOCALIZATION", "literal": literal})
+    remote_js = members["preact-remote/dist/index.js"].decode("utf-8")
+    for literal in ("Патч 0.12.6 уже доступен", "Succubus пополняет список героев", "Повышение производительности"):
+        if literal not in remote_js:
+            errors.append({"code": "MISSING_PATCH_0126_MOTD_LOCALIZATION", "literal": literal})
+    interface = members["stringtables/interface_ru.str"].decode("utf-8-sig")
+    queue_line = "mm_queue_btn_cost\tВстать в очередь — стоимость: {cost} жетон очереди ролей"
+    if queue_line not in interface:
+        errors.append({"code": "MISSING_ROLE_QUEUE_COST_LOCALIZATION"})
+    main_interface = members.get("ui/fe3/main.interface", b"").decode("utf-8", errors="replace")
+    if "matchmaking:ПОИСК МАТЧА,game_list:СВОИ ИГРЫ" not in main_interface:
+        errors.append({"code": "MISSING_MATCHMAKING_TAB_LOCALIZATION"})
     entities = members["stringtables/entities_ru.str"].decode("utf-8-sig")
     for forbidden in ("Посох Мастера", "посох мастера", "Персонал Мастера", "персонал мастера"):
         if forbidden in entities:

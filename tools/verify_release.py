@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import sys
 import zipfile
 from pathlib import Path, PurePosixPath
@@ -67,6 +68,24 @@ def main() -> int:
         corrupt = archive.testzip()
         if corrupt:
             errors.append(f"CRC failure: {corrupt}")
+        preact = archive.read("preact/dist/index.js").decode("utf-8")
+        remote = archive.read("preact-remote/dist/index.js").decode("utf-8")
+        interface = archive.read("stringtables/interface_ru.str").decode("utf-8-sig")
+        main_interface = archive.read("ui/fe3/main.interface").decode("utf-8")
+        if len(re.findall(r"[А-Яа-яЁё]", preact)) < 50000:
+            errors.append("cumulative Preact localization is incomplete")
+        for literal in ("Жалоба на игрока", "Избегание", "Матч завершён", "Правила поведения", "минуту"):
+            if literal not in preact:
+                errors.append(f"missing Preact regression sentinel: {literal}")
+        for literal in ("Патч 0.12.6 уже доступен", "Succubus пополняет список героев", "Повышение производительности"):
+            if literal not in remote:
+                errors.append(f"missing MOTD regression sentinel: {literal}")
+        if "mm_queue_btn_cost\tВстать в очередь — стоимость: {cost} жетон очереди ролей" not in interface:
+            errors.append("missing role queue cost translation")
+        if "rolepick_foot_cost\tЕсли не выбрать ни одну роль поддержки" not in interface:
+            errors.append("missing role priority footer translation")
+        if "matchmaking:ПОИСК МАТЧА,game_list:СВОИ ИГРЫ" not in main_interface:
+            errors.append("missing matchmaking tab translation")
 
     if errors:
         for error in errors:
@@ -80,4 +99,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

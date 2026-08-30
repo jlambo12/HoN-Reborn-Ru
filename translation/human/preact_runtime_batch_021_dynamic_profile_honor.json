@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "batch_id": "PREACT_RUNTIME_021_DYNAMIC_PROFILE_HONOR",
+  "scope": "Dynamic profile time labels and Honor System infraction values",
+  "reviewed_by": "Codex screenshot regression review 2026-08-30",
+  "apply_order": "post",
+  "rows": [
+    {"source_file":"preact/src/helpers/formats.ts","english":"export const formatTimeAgo = (dateString: string): string => {","russian":"const pluralRu = (value: number, one: string, few: string, many: string): string => {\n  const mod10 = value % 10;\n  const mod100 = value % 100;\n  if (mod10 === 1 && mod100 !== 11) return one;\n  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return few;\n  return many;\n};\n\nexport const formatTimeAgo = (dateString: string): string => {","expected_matches":1},
+    {"source_file":"preact/src/helpers/formats.ts","english":"if (isInvalidDate) return \"Never\";","russian":"if (isInvalidDate) return \"Никогда\";","expected_matches":2},
+    {"source_file":"preact/src/helpers/formats.ts","english":"return \"Just now\";","russian":"return \"Только что\";","expected_matches":1},
+    {"source_file":"preact/src/helpers/formats.ts","english":"return `${minutes} minute${minutes === 1 ? '' : 's'} ago`;","russian":"return `${minutes} ${pluralRu(minutes, 'минуту', 'минуты', 'минут')} назад`;","expected_matches":1},
+    {"source_file":"preact/src/helpers/formats.ts","english":"return `${hours} hour${hours === 1 ? '' : 's'} ago`;","russian":"return `${hours} ${pluralRu(hours, 'час', 'часа', 'часов')} назад`;","expected_matches":1},
+    {"source_file":"preact/src/helpers/formats.ts","english":"return `${days} day${days === 1 ? '' : 's'} ago`;","russian":"return `${days} ${pluralRu(days, 'день', 'дня', 'дней')} назад`;","expected_matches":1},
+    {"source_file":"preact/src/helpers/formats.ts","english":"return `${weeks} week${weeks === 1 ? '' : 's'} ago`;","russian":"return `${weeks} ${pluralRu(weeks, 'неделю', 'недели', 'недель')} назад`;","expected_matches":1},
+    {"source_file":"preact/src/helpers/formats.ts","english":"return `${months} month${months === 1 ? '' : 's'} ago`;","russian":"return `${months} ${pluralRu(months, 'месяц', 'месяца', 'месяцев')} назад`;","expected_matches":1},
+    {"source_file":"preact/src/helpers/formats.ts","english":"return `${years} year${years === 1 ? '' : 's'} ago`;","russian":"return `${years} ${pluralRu(years, 'год', 'года', 'лет')} назад`;","expected_matches":1},
+    {"source_file":"preact/src/apis/penalty-status/types.ts","english":"NoInfractionType = 'No Infraction'","russian":"NoInfractionType = 'Нет нарушения'","expected_matches":1},
+    {"source_file":"preact/src/apis/penalty-status/types.ts","english":"LobbyDodge = 'Lobby Dodge'","russian":"LobbyDodge = 'Выход из лобби'","expected_matches":1},
+    {"source_file":"preact/src/apis/penalty-status/types.ts","english":"Afk = 'Afk'","russian":"Afk = 'АФК'","expected_matches":1},
+    {"source_file":"preact/src/apis/penalty-status/types.ts","english":"Leaver = 'Leaver'","russian":"Leaver = 'Выход из матча'","expected_matches":1},
+    {"source_file":"preact/src/apis/penalty-status/types.ts","english":"Kicked = 'Kicked'","russian":"Kicked = 'Исключение'","expected_matches":1},
+    {"source_file":"preact/src/apis/penalty-status/types.ts","english":"Avoided = 'Avoided'","russian":"Avoided = 'Избегание'","expected_matches":1},
+    {"source_file":"preact/src/apis/penalty-status/types.ts","english":"WardConsumableWaste = 'Ward/Consumable Waste'","russian":"WardConsumableWaste = 'Растрата вардов/расходников'","expected_matches":1},
+    {"source_file":"preact/src/apis/penalty-status/types.ts","english":"ItemAbuse = 'Item Abuse'","russian":"ItemAbuse = 'Злоупотребление предметами'","expected_matches":1},
+    {"source_file":"preact/src/apis/penalty-status/types.ts","english":"Feeding = 'Feeding'","russian":"Feeding = 'Фид'","expected_matches":1},
+    {"source_file":"preact/src/apis/penalty-status/types.ts","english":"RoleAbuse = 'Role Abuse'","russian":"RoleAbuse = 'Нарушение роли'","expected_matches":1},
+    {"source_file":"preact/src/apis/penalty-status/types.ts","english":"AbilityAbuse = 'Ability Abuse'","russian":"AbilityAbuse = 'Злоупотребление способностями'","expected_matches":1},
+    {"source_file":"preact/src/apis/penalty-status/types.ts","english":"MatchFinished = 'Match Finished'","russian":"MatchFinished = 'Матч завершён'","expected_matches":1},
+    {"source_file":"preact/src/apis/penalty-status/types.ts","english":"AdminAdjustment = 'Admin Adjustment'","russian":"AdminAdjustment = 'Корректировка администратора'","expected_matches":1},
+    {"source_file":"preact/src/apis/penalty-status/types.ts","english":"PlayerReport = 'Player Report'","russian":"PlayerReport = 'Жалоба на игрока'","expected_matches":1},
+    {"source_file":"preact/src/apis/penalty-status/types.ts","english":"ReportPenaltyRefund = 'Penalty Reversed'","russian":"ReportPenaltyRefund = 'Штраф отменён'","expected_matches":1}
+  ]
+}

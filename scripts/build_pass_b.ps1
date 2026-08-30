@@ -23,10 +23,15 @@ py -3.14 "$ProjectRoot\tools\prepare_preact_workspace.py" `
 if ($LASTEXITCODE -ne 0) { throw "Preact workspace preparation failed" }
 Move-Item -LiteralPath "$ProjectRoot\build\preact-baseline-workspace" -Destination $Workspace
 
+py -3.14 "$ProjectRoot\tools\localization\apply_preact_human_batches.py"
+if ($LASTEXITCODE -ne 0) { throw "Reviewed Preact batch restore failed" }
+py -3.14 "$ProjectRoot\tools\localization\make_preact_human_scope.py"
+if ($LASTEXITCODE -ne 0) { throw "Cumulative Preact scope generation failed" }
+
 py -3.14 "$ProjectRoot\tools\prepare_phase2a_overrides.py" `
     --project-root $ProjectRoot --archive $Archive --preact-workspace $Workspace `
     --scope "$ProjectRoot\catalog\pass_b_scope.json" `
-    --preact-scope "$ProjectRoot\catalog\phase2a_scope.json"
+    --preact-scope "$ProjectRoot\translation\human\preact_scope.json"
 if ($LASTEXITCODE -ne 0) { throw "Pass B override preparation failed" }
 
 Push-Location "$Workspace\preact"

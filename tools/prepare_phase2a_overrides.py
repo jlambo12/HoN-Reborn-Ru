@@ -168,9 +168,20 @@ def main() -> int:
                 # coordinates when an upstream page is merely reflowed.
                 continue
             found = text.count(english)
+            if row.get("retired") is True:
+                if found:
+                    raise RuntimeError(
+                        f"retired exact Preact source returned for {source_name} ({batch_path.name}): {english[:160]!r}"
+                    )
+                continue
             if found == expected:
                 target.write_text(text.replace(english, russian), encoding="utf-8", newline="")
                 batch_count += found
+                continue
+            # A cumulative catalog translation may have applied the same
+            # reviewed Russian value before an exact runtime batch reaches it.
+            # Treat that as satisfied instead of reporting source drift.
+            if found == 0 and text.count(russian) == expected:
                 continue
             # Editorial JSX is frequently reflowed without changing its visible
             # text. Accept whitespace-only source drift when the passage still

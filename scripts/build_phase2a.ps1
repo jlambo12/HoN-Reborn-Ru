@@ -22,8 +22,14 @@ py -3.14 "$ProjectRoot\tools\prepare_preact_workspace.py" `
 if ($LASTEXITCODE -ne 0) { throw "Preact workspace preparation failed" }
 Move-Item -LiteralPath "$ProjectRoot\build\preact-baseline-workspace" -Destination $Workspace
 
+py -3.14 "$ProjectRoot\tools\localization\apply_preact_human_batches.py"
+if ($LASTEXITCODE -ne 0) { throw "Reviewed Preact batch restore failed" }
+py -3.14 "$ProjectRoot\tools\localization\make_preact_human_scope.py"
+if ($LASTEXITCODE -ne 0) { throw "Cumulative Preact scope generation failed" }
+
 py -3.14 "$ProjectRoot\tools\prepare_phase2a_overrides.py" `
-    --project-root $ProjectRoot --archive $Archive --preact-workspace $Workspace --skip-native
+    --project-root $ProjectRoot --archive $Archive --preact-workspace $Workspace --skip-native `
+    --preact-scope "$ProjectRoot\translation\human\preact_scope.json"
 if ($LASTEXITCODE -ne 0) { throw "Phase 2A override preparation failed" }
 
 Push-Location "$Workspace\preact"
@@ -38,7 +44,7 @@ try {
 
 Push-Location "$Workspace\preact-remote"
 try {
-    & "$Workspace\preact\bun.exe" install --frozen-lockfile
+    & "$Workspace\preact\bun.exe" install --frozen-lockfile --offline
     if ($LASTEXITCODE -ne 0) { throw "preact-remote bun install failed" }
     & "$Workspace\preact\bun.exe" run build
     if ($LASTEXITCODE -ne 0) { throw "Preact Remote RU build failed" }

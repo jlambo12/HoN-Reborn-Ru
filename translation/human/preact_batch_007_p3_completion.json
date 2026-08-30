@@ -15,7 +15,8 @@
     {
       "id": "preact:preact/src/layers/patch-notes-v2/components/spotlightvideo.tsx:jsx_template_attribute:c6f197f4c957:1",
       "english": "${title} - opens in your browser",
-      "russian": "${title} — откроется в браузере"
+      "russian": "${title} — откроется в браузере",
+      "retired": true
     },
     {
       "id": "preact:preact/src/layers/patch-notes/components/patchnoteslistview.tsx:jsx_template_attribute:990495fb53bd:1",

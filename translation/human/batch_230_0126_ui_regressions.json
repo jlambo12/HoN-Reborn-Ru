@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_230_0126_UI_REGRESSIONS",
+  "catalog_apply": true,
+  "upstream_sha256": "1802e16e5518b729256782d2d77643c092e6300b7eb05bebd849f96545969b93",
+  "reviewed_by": "Codex screenshot regression review 2026-08-30",
+  "entries": [
+    {
+      "keys": ["interface:mm_queue_btn_cost"],
+      "ru": "Встать в очередь — стоимость: {cost} жетон очереди ролей",
+      "unlocked_terms": ["Enter"]
+    },
+    {
+      "keys": ["interface:mm_queue_cooldown_btn"],
+      "ru": "Повторный поиск через: {time}"
+    },
+    {
+      "keys": ["interface:mm_queue_btn_required"],
+      "ru": "Выберите роль поддержки для поиска"
+    },
+    {
+      "keys": ["interface:mm_queue_btn_earn"],
+      "ru": "Встать в очередь — награда: +{win} / +{loss} жетонов очереди ролей",
+      "unlocked_terms": ["Enter"]
+    },
+    {
+      "keys": ["interface:mm_denied_four_player_party_ranked"],
+      "ru": "Группа из четырёх игроков не может участвовать в рейтинговом поиске. Оставьте троих игроков или добавьте пятого."
+    },
+    {
+      "keys": ["interface:mm_denied_high_rated_party_size"],
+      "ru": "Игроки с рейтингом 1850+ могут участвовать в рейтинговом поиске только в одиночку или вдвоём."
+    },
+    {
+      "keys": ["interface:mm_denied_elite_party_rating_floor"],
+      "ru": "Группа с игроком рейтинга 1850+ может участвовать в рейтинговом поиске только с игроками рейтинга не ниже 1500."
+    },
+    {
+      "keys": ["interface:mm_denied_insufficient_role_tokens"],
+      "ru": "У вас нет жетонов очереди ролей. Выберите мягкую или жёсткую поддержку для рейтингового Caldavar либо сыграйте за поддержку, чтобы получить жетон."
+    },
+    {
+      "keys": ["interface:mm_denied_party_ratings_unavailable"],
+      "ru": "Не удалось загрузить рейтинги вашей группы, поэтому рейтинговый поиск сейчас недоступен. Повторите попытку через некоторое время."
+    },
+    {
+      "keys": ["interface:mm_role_tokens_title"],
+      "ru": "Жетоны очереди ролей"
+    },
+    {
+      "keys": ["interface:mm_notice_party_disparity_tier"],
+      "ru": "Разница рейтинга в вашей группе составляет {spread} MMR (уровень {tier}). Вы получаете и теряете на {reduction}% меньше MMR, а жетоны очереди ролей не начисляются."
+    },
+    {
+      "keys": ["interface:mm_notice_party_support_locked"],
+      "ru": "Разница рейтинга в вашей группе составляет {spread} MMR, поэтому в этом матче доступна только поддержка. Сохранённые роли не изменены и вернутся после уменьшения разницы. Вы получаете и теряете на {reduction}% меньше MMR."
+    },
+    {
+      "keys": ["interface:rolepick_paused_badge"],
+      "ru": "Приостановлено"
+    },
+    {
+      "keys": ["interface:rolepick_earn_badge"],
+      "ru": "+{win} / +{loss}"
+    },
+    {
+      "keys": ["interface:rolepick_foot_locked"],
+      "ru": "Сохранённые роли не изменены — они вернутся, когда вы покинете группу или разница рейтинга уменьшится."
+    },
+    {
+      "keys": ["interface:rolepick_foot_cost"],
+      "ru": "Если не выбрать ни одну роль поддержки, после матча будет списан {cost} жетон очереди ролей. Выберите любую роль поддержки для бесплатного поиска."
+    },
+    {
+      "keys": ["interface:rolepick_foot_earn"],
+      "ru": "Выбраны обе роли поддержки: +{win} жетонов за победу и +{loss} за поражение."
+    },
+    {
+      "keys": ["interface:rolepick_foot_last_gain"],
+      "ru": "За последний матч получено +{delta} жетонов очереди ролей."
+    }
+  ]
+}

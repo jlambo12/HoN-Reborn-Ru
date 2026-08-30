@@ -20,13 +20,14 @@ def main() -> int:
     rows = [json.loads(line) for line in CATALOG.read_text(encoding="utf-8-sig").splitlines() if line.strip()]
     by_id = {row["id"]: row for row in rows}
     seen: dict[str, Path] = {}
-    applied = kept = 0
+    applied = kept = retired = 0
     batches = []
     errors = []
 
     for path in sorted(BATCH_DIR.glob("preact_batch_*.json")):
         payload = json.loads(path.read_text(encoding="utf-8-sig"))
         batch_applied = 0
+        batch_retired = 0
         for item in payload.get("rows", []):
             row_id = item.get("id")
             if row_id:
@@ -39,6 +40,14 @@ def main() -> int:
                     errors.append(f"phrase row needs source_prefix and expected_matches in {path.name}")
                     continue
                 candidates = [row for row in rows if row.get("source_file", "").startswith(prefix) and row.get("english") == item.get("english")]
+            if item.get("retired") is True:
+                if candidates:
+                    label = row_id or f"{item.get('source_prefix')} :: {item.get('english')}"
+                    errors.append(f"retired row returned to current catalog: {label} in {path.name}")
+                else:
+                    retired += 1
+                    batch_retired += 1
+                continue
             if len(candidates) != expected:
                 label = row_id or f"{item.get('source_prefix')} :: {item.get('english')}"
                 errors.append(f"expected {expected} current match(es), found {len(candidates)} for {label} in {path.name}")
@@ -70,10 +79,10 @@ def main() -> int:
                 applied += 1
                 kept += decision == "KEEP_EN"
                 batch_applied += 1
-        batches.append({"file": path.name, "rows": batch_applied})
+        batches.append({"file": path.name, "rows": batch_applied, "retired": batch_retired})
 
     result = "PASS" if not errors else "FAIL"
-    report = {"schema_version": 1, "result": result, "applied": applied, "keep_en": kept, "batches": batches, "errors": errors}
+    report = {"schema_version": 1, "result": result, "applied": applied, "keep_en": kept, "retired": retired, "batches": batches, "errors": errors}
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     if errors:

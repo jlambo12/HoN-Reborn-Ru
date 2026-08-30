@@ -1,6 +1,7 @@
 {
   "schema_version": 1,
   "batch_id": "HUMAN_RU_225_SCREENSHOT_MICROFIXES",
+  "catalog_apply": true,
   "reviewed_by": "Player screenshots 2026-08-26",
   "entries": [
     {"keys":["interface:warning_text1"],"english_hash":"03e902c30c24d9257131965c33de55e9f132d526f5a4681360056120bb453184","ru":"Некоторые материалы в этой игре могут вас оскорбить"},
