@@ -34,19 +34,16 @@ class HoNPlusLiveTests(unittest.TestCase):
         self.assertGreaterEqual(len(chunks), 16)
         self.assertLess(max(path.stat().st_size for path in chunks), 100_000)
 
-    def test_native_preparer_patches_a_game_interface_and_copies_assets(self):
-        base = """<?xml version=\"1.0\"?><interface>
-<lua file=\"/ui/scripts/game/damagebar.lua\" />
-<panel onloadlua=\"noop\" />
-\t\t\tIGVanity_Shop:Init()
-\t<!-- Vanity Shop -->
-</interface>"""
+    def test_native_preparer_patches_the_known_loaded_vanity_package(self):
+        base = """<?xml version=\"1.0\"?><package>
+<panel name=\"vanity_shop_header_tabs\" />
+</package>"""
         with tempfile.TemporaryDirectory() as directory:
             temp_root = Path(directory) / "project"
             shutil.copytree(ROOT / "src" / "honplus_native", temp_root / "src" / "honplus_native")
             archive = Path(directory) / "resources0.jz"
             with zipfile.ZipFile(archive, "w") as output:
-                output.writestr("ui/game_hd.interface", base)
+                output.writestr("ui/hd_ui/sections/ig_vanity_shop.package", base)
             result = subprocess.run(
                 [sys.executable, str(ROOT / "tools" / "prepare_honplus_native.py"), "--project-root", str(temp_root), "--archive", str(archive)],
                 text=True,
@@ -54,10 +51,11 @@ class HoNPlusLiveTests(unittest.TestCase):
                 check=False,
             )
             self.assertEqual(0, result.returncode, result.stderr)
-            patched = (temp_root / "src" / "extended_ru" / "ui" / "game_hd.interface").read_text(encoding="utf-8")
+            patched = (temp_root / "src" / "extended_ru" / "ui" / "hd_ui" / "sections" / "ig_vanity_shop.package").read_text(encoding="utf-8")
             self.assertIn("honplus_live_data.lua", patched)
-            self.assertIn("HoNPlusLive:Init()", patched)
-            self.assertLess(patched.index("honplus_live.package"), patched.index("<!-- Vanity Shop -->"))
+            self.assertIn('name="honplus_live_root"', patched)
+            self.assertIn('onloadlua="HoNPlusLive:Init()"', patched)
+            self.assertNotIn("honplus_live.package", patched)
 
     def test_release_builds_prepare_native_hud(self):
         for name in ("build_phase2a.ps1", "build_pass_b.ps1"):

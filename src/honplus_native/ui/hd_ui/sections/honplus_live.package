@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package>
-  <panel name="honplus_live_root" x=".5h" y="4.0h" width="28.0h" height="17.0h" noclick="1">
+  <panel name="honplus_live_root" x=".5h" y="4.0h" width="28.0h" height="17.0h" noclick="1" onloadlua="HoNPlusLive:Init()">
     <frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" borderthickness=".5h" color=".035 .075 .095 .94" bordercolor=".15 .65 .82 .8" noclick="1" />
     <panel height="3.2h" color=".04 .16 .21 .96">
       <button width="100%" height="100%" color="invisible" onclicklua="HoNPlusLive:Toggle()" />

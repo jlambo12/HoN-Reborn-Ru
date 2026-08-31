@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create native game-HUD overrides for HoN Plus Live."""
+"""Create the native vanity-package override for HoN Plus Live."""
 
 from __future__ import annotations
 
@@ -28,34 +28,37 @@ def main() -> int:
         raise SystemExit("Unsafe extended root")
 
     with zipfile.ZipFile(archive) as zf:
-        game_hd = zf.read("ui/game_hd.interface").decode("utf-8-sig")
+        vanity = zf.read("ui/hd_ui/sections/ig_vanity_shop.package").decode("utf-8-sig")
     data_files = sorted((source / "ui" / "scripts" / "game").glob("honplus_live_data*.lua"))
     if not data_files or data_files[0].name != "honplus_live_data.lua":
         raise SystemExit("HoN Plus generated benchmark files are missing")
     lua_includes = "\n".join(
         f'\t<lua file="/ui/scripts/game/{path.name}" />' for path in data_files
     )
-    game_hd = replace_once(
-        game_hd,
-        '<lua file="/ui/scripts/game/damagebar.lua" />',
-        '<lua file="/ui/scripts/game/damagebar.lua" />\n' + lua_includes + '\n\t<lua file="/ui/scripts/game/honplus_live.lua" />',
-        "HoN Plus Lua insertion",
+    live_package = (source / "ui" / "hd_ui" / "sections" / "honplus_live.package").read_text(encoding="utf-8")
+    live_body = live_package.removeprefix('<?xml version="1.0" encoding="UTF-8"?>').strip()
+    if not live_body.startswith("<package>") or not live_body.endswith("</package>"):
+        raise SystemExit("HoN Plus package wrapper invariant changed")
+    live_body = live_body[len("<package>"):-len("</package>")].strip()
+    vanity = replace_once(
+        vanity,
+        "<package>",
+        "<package>\n\n\t<!-- HoN Plus Live Lua -->\n" + lua_includes + '\n\t<lua file="/ui/scripts/game/honplus_live.lua" />',
+        "Vanity package Lua insertion",
     )
-    game_hd = replace_once(
-        game_hd,
-        '\t\t\tIGVanity_Shop:Init()',
-        '\t\t\tIGVanity_Shop:Init()\n\t\t\tHoNPlusLive:Init()',
-        "HoN Plus init insertion",
+    vanity = replace_once(
+        vanity,
+        "</package>",
+        "\n\t<!-- HoN Plus Live panel -->\n" + live_body + "\n\n</package>",
+        "Vanity package panel insertion",
     )
-    game_hd = replace_once(
-        game_hd,
-        '\t<!-- Vanity Shop -->',
-        '\t<!-- HoN Plus Live -->\n\t<include file="/ui/hd_ui/sections/honplus_live.package" />\n\n\t<!-- Vanity Shop -->',
-        "HoN Plus package insertion",
-    )
-    target_game = extended / "ui" / "game_hd.interface"
-    target_game.parent.mkdir(parents=True, exist_ok=True)
-    target_game.write_text(game_hd, encoding="utf-8", newline="")
+    target_vanity = extended / "ui" / "hd_ui" / "sections" / "ig_vanity_shop.package"
+    target_vanity.parent.mkdir(parents=True, exist_ok=True)
+    target_vanity.write_text(vanity, encoding="utf-8", newline="")
+
+    stale_game = extended / "ui" / "game_hd.interface"
+    if stale_game.is_file() and "honplus_live" in stale_game.read_text(encoding="utf-8"):
+        stale_game.unlink()
 
     copied = 0
     for path in sorted(source.rglob("*")):
@@ -66,7 +69,7 @@ def main() -> int:
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(path, destination)
         copied += 1
-    print(f"Prepared HoN Plus native HUD: game_hd.interface + {copied} files")
+    print(f"Prepared HoN Plus native HUD in vanity package + {copied} files")
     return 0
 
 
