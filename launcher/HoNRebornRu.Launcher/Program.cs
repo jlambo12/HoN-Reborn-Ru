@@ -35,8 +35,9 @@ internal static class Program
     {
         try
         {
-            var installer = new InstallService();
-            if (installer.ReadState() is not null) installer.RestoreAsync(CancellationToken.None).GetAwaiter().GetResult();
+            var module = GetLocalizationModule();
+            var snapshot = module.InspectAsync(CancellationToken.None).GetAwaiter().GetResult();
+            if (snapshot.CanRemove) module.RemoveAsync(CancellationToken.None).GetAwaiter().GetResult();
             ShortcutService.RemoveUserPlayShortcut();
             return 0;
         }
@@ -82,7 +83,7 @@ internal static class Program
     {
         try
         {
-            new InstallService().RestoreAsync(CancellationToken.None).GetAwaiter().GetResult();
+            GetLocalizationModule().RemoveAsync(CancellationToken.None).GetAwaiter().GetResult();
             return 0;
         }
         catch (Exception exception)
@@ -102,7 +103,7 @@ internal static class Program
             if (!remote.AssetUrls.TryGetValue(remote.Manifest.Translation.Name, out var url))
                 throw new InvalidDataException("Файл перевода отсутствует в GitHub Release.");
             client.DownloadAsync(url, temporary, null, CancellationToken.None).GetAwaiter().GetResult();
-            new InstallService().InstallAsync(temporary, remote.Manifest, CancellationToken.None).GetAwaiter().GetResult();
+            GetLocalizationModule().InstallAsync(temporary, remote.Manifest, CancellationToken.None).GetAwaiter().GetResult();
             return 0;
         }
         catch (Exception exception)
@@ -114,5 +115,11 @@ internal static class Program
         {
             if (File.Exists(temporary)) File.Delete(temporary);
         }
+    }
+
+    private static IHonPlusModule GetLocalizationModule()
+    {
+        var modules = ModuleCatalog.CreateDefault();
+        return ModuleCatalog.Require(modules, LocalizationModule.ModuleId);
     }
 }

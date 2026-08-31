@@ -1,0 +1,29 @@
+.honplus-panel { width: 100%; height: 100%; box-sizing: border-box; padding: 22px 28px; color: #e9eef7; overflow-y: auto; background: linear-gradient(145deg, rgba(8,18,28,.98), rgba(12,28,37,.94)); }
+.honplus-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+.honplus-header h2 { margin: 0; color: #63dcff; font-size: 27px; letter-spacing: .06em; }
+.honplus-header span { color: #91a8b8; font-size: 12px; }
+.honplus-reliability { padding: 7px 12px; border: 1px solid #527487; border-radius: 4px; color: #c7d8e2; text-transform: uppercase; font-size: 11px; }
+.honplus-reliability.honplus-high, .honplus-reliability.honplus-good { border-color: #43c98d; color: #79e5b3; }
+.honplus-reliability.honplus-low, .honplus-reliability.honplus-very_low { border-color: #d78a54; color: #f0b37e; }
+.honplus-player-list { display: grid; grid-template-columns: repeat(5, 1fr); gap: 7px; margin-bottom: 16px; }
+.honplus-player-list button, .honplus-minutes button { border: 1px solid #314c5c; background: #102936; color: #b9cbd6; border-radius: 3px; cursor: pointer; }
+.honplus-player-list button { min-height: 48px; padding: 6px 8px; text-align: left; }
+.honplus-player-list button strong, .honplus-player-list button span { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.honplus-player-list button span { margin-top: 3px; color: #7892a2; font-size: 10px; }
+.honplus-player-list button.active, .honplus-minutes button.active { border-color: #4fcbee; background: #17485b; color: white; box-shadow: 0 0 9px rgba(79,203,238,.2); }
+.honplus-minutes { display: flex; gap: 6px; margin-bottom: 18px; }
+.honplus-minutes button { min-width: 55px; padding: 6px 8px; }
+.honplus-scores { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.honplus-score { padding: 20px; border: 1px solid #294a5c; background: rgba(20,49,64,.75); border-radius: 5px; }
+.honplus-score-name { color: #9fb6c4; font-size: 13px; text-transform: uppercase; letter-spacing: .08em; }
+.honplus-score-value { margin: 8px 0; color: #fff; font-size: 42px; line-height: 1; font-weight: 700; }
+.honplus-score-track { height: 6px; overflow: hidden; border-radius: 3px; background: #08151d; }
+.honplus-score-fill { height: 100%; background: linear-gradient(90deg, #2984a7, #5de0ff); }
+.honplus-score-combat .honplus-score-fill { background: linear-gradient(90deg, #a84b48, #ff8974); }
+.honplus-score-team-impact .honplus-score-fill { background: linear-gradient(90deg, #7c62bd, #b59aff); }
+.honplus-score-caption { margin-top: 8px; color: #718a99; font-size: 10px; }
+.honplus-note { margin-top: 18px; color: #8098a7; font-size: 11px; line-height: 1.45; }
+.honplus-state { display: flex; width: 100%; height: 100%; align-items: center; justify-content: center; color: #afc4d1; flex-direction: column; gap: 8px; }
+.honplus-error strong { color: #ff8d7d; font-size: 18px; }
+.honplus-error span { color: #9db0bb; }
+.honplus-demo { margin-top: 8px; padding: 8px 14px; border: 1px solid #4fcbee; border-radius: 3px; background: #17485b; color: white; cursor: pointer; }

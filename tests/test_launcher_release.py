@@ -80,6 +80,16 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertNotIn("LocalApplicationData", source)
         self.assertNotIn("game discovery", source)
 
+    def test_hon_plus_catalog_exposes_localization_as_first_module(self):
+        modules = (LAUNCHER / "Modules.cs").read_text(encoding="utf-8")
+        form = (LAUNCHER / "MainForm.cs").read_text(encoding="utf-8")
+        self.assertIn("interface IHonPlusModule", modules)
+        self.assertIn('ModuleId = "ru-localization"', modules)
+        self.assertIn("class LocalizationModule : IHonPlusModule", modules)
+        self.assertIn("ModuleCatalog.CreateDefault()", form)
+        self.assertIn('Text = "HoN Plus"', form)
+        self.assertNotIn("private readonly InstallService _installer", form)
+
     def test_locale_replacement_does_not_consume_the_next_line(self):
         source = (LAUNCHER / "InstallService.cs").read_text(encoding="utf-8")
         self.assertIn('[^\\\\r\\\\n]*', source)

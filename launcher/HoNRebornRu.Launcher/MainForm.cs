@@ -10,7 +10,8 @@ internal sealed class MainForm : Form
     private const int WmNclButtonDown = 0xA1;
     private const int HtCaption = 0x2;
 
-    private readonly InstallService _installer = new();
+    private readonly IReadOnlyList<IHonPlusModule> _modules;
+    private readonly IHonPlusModule _translationModule;
     private readonly GameLauncher _gameLauncher = new();
     private readonly UpdateClient _updateClient = new();
     private readonly LauncherSettings _settings;
@@ -50,13 +51,16 @@ internal sealed class MainForm : Form
     private CancellationTokenSource? _operation;
     private Image? _background;
     private bool _canLaunch;
+    private bool _canRestore;
 
     public MainForm()
     {
+        _modules = ModuleCatalog.CreateDefault();
+        _translationModule = ModuleCatalog.Require(_modules, LocalizationModule.ModuleId);
         _settings = AppStorage.Load<LauncherSettings>(AppStorage.SettingsPath);
         AutoScaleMode = AutoScaleMode.Dpi;
         AutoScaleDimensions = new SizeF(96, 96);
-        Text = "HoN Reborn RU Launcher";
+        Text = "HoN Plus";
         ClientSize = new Size(1100, 700);
         MinimumSize = new Size(1100, 700);
         MaximumSize = new Size(1100, 700);
@@ -97,7 +101,7 @@ internal sealed class MainForm : Form
         };
         var mark = UiLabel("◆", 11, LauncherTheme.Red, FontStyle.Bold);
         mark.Location = new Point(18, 14); mark.AutoSize = true;
-        var title = UiLabel("HoN REBORN RU", 9.5f, LauncherTheme.Text, FontStyle.Bold);
+        var title = UiLabel("HoN PLUS", 9.5f, LauncherTheme.Text, FontStyle.Bold);
         title.Location = new Point(42, 14); title.AutoSize = true;
         var version = UiLabel($"Launcher {Program.LauncherVersion}", 8.3f, LauncherTheme.Muted);
         version.Location = new Point(185, 15); version.AutoSize = true;
@@ -240,7 +244,7 @@ internal sealed class MainForm : Form
         _remote = await _updateClient.FindReleaseAsync(CurrentChannel(), cancellationToken);
         _availableValue.Text = $"Последняя версия: {_remote.Manifest.Version}";
         _lastChecked.Text = $"Последняя проверка: {DateTime.Now:HH:mm}";
-        var installed = await _installer.GetInstalledVersionAsync(cancellationToken);
+        var installed = (await _translationModule.InspectAsync(cancellationToken)).Version;
         var needsTranslation = installed is null || IsNewer(_remote.Manifest.Version, installed);
         _updateSummary.Text = needsTranslation ? "ДОСТУПНО ОБНОВЛЕНИЕ" : "✓ Установлена последняя версия";
         _updateSummary.ForeColor = needsTranslation ? LauncherTheme.Warning : LauncherTheme.Success;
@@ -269,7 +273,7 @@ internal sealed class MainForm : Form
                 _operationDetail.Text = $"Скачивание файлов… {value}%";
             }), cancellationToken);
             SetOperation("Проверка файлов", "Проверяю SHA-256 и подготавливаю установку…", 92, LauncherTheme.Warning);
-            await _installer.InstallAsync(temporary, remote.Manifest, cancellationToken);
+            await _translationModule.InstallAsync(temporary, remote.Manifest, cancellationToken);
             SetOperation("Завершено", $"Русификатор {remote.Manifest.Version} установлен.", 100, LauncherTheme.Success);
             await RefreshLocalStateAsync();
         }
@@ -334,7 +338,7 @@ internal sealed class MainForm : Form
         await RunGuardedAsync(async token =>
         {
             SetOperation("Восстановление", "Проверяю резервную копию…", 30, LauncherTheme.Warning);
-            await _installer.RestoreAsync(token);
+            await _translationModule.RemoveAsync(token);
             await RefreshLocalStateAsync();
             SetOperation("Восстановлено", "Предыдущая версия расширения возвращена.", 100, LauncherTheme.Success);
         });
@@ -380,13 +384,11 @@ internal sealed class MainForm : Form
 
     private async Task RefreshLocalStateAsync()
     {
-        var version = await _installer.GetInstalledVersionAsync();
-        var state = _installer.ReadState();
-        var juvioRoot = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Juvio");
-        var gameFound = File.Exists(Path.Combine(juvioRoot, "bin", "juvio.exe"));
-        var stateArchive = state?.SchemaVersion == 2 ? _installer.BaseOverlayArchive : _installer.InstalledArchive;
-        var translationFound = File.Exists(stateArchive);
-        var installed = version is not null && state is not null && translationFound;
+        var snapshot = await _translationModule.InspectAsync();
+        var version = snapshot.Version;
+        var gameFound = snapshot.GameFound;
+        var translationFound = snapshot.FilesFound;
+        var installed = snapshot.State == HonPlusModuleState.Installed;
 
         _installedValue.Text = version ?? "Не установлен";
         _heroStatus.Text = installed ? "✓ РУСИФИКАТОР УСТАНОВЛЕН" : "РУСИФИКАТОР НЕ УСТАНОВЛЕН";
@@ -403,7 +405,8 @@ internal sealed class MainForm : Form
         _readinessHeadline.ForeColor = ready ? LauncherTheme.Success : LauncherTheme.Warning;
         _canLaunch = ready;
         _launchButton.Enabled = ready && _operation is null;
-        _restoreButton.Enabled = state is not null && _operation is null;
+        _canRestore = snapshot.CanRemove;
+        _restoreButton.Enabled = _canRestore && _operation is null;
         RefreshShortcutState();
     }
 
@@ -471,7 +474,7 @@ internal sealed class MainForm : Form
         _channelButton.Enabled = !busy;
         _officialMode.Enabled = !busy;
         _directMode.Enabled = !busy;
-        _restoreButton.Enabled = !busy && _installer.ReadState() is not null;
+        _restoreButton.Enabled = !busy && _canRestore;
         _launchButton.Enabled = !busy && _canLaunch;
     }
 

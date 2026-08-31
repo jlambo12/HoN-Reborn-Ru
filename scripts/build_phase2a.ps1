@@ -32,6 +32,9 @@ py -3.14 "$ProjectRoot\tools\prepare_phase2a_overrides.py" `
     --preact-scope "$ProjectRoot\translation\human\preact_scope.json"
 if ($LASTEXITCODE -ne 0) { throw "Phase 2A override preparation failed" }
 
+py -3.14 "$ProjectRoot\tools\apply_honplus_preact.py" --project-root $ProjectRoot --workspace $Workspace
+if ($LASTEXITCODE -ne 0) { throw "HoN Plus Preact overlay failed" }
+
 Push-Location "$Workspace\preact"
 try {
     & .\bun.exe install --frozen-lockfile

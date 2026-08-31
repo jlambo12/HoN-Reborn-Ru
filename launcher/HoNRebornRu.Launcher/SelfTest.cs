@@ -13,6 +13,10 @@ internal static class SelfTest
         if (!InstallService.CanReconcileInstalledArchive("target", "old", "target")) failures.Add("adopt exact official archive");
         if (!InstallService.CanReconcileInstalledArchive("managed", "managed", "target")) failures.Add("accept managed archive");
         if (InstallService.CanReconcileInstalledArchive("unknown", "managed", "target")) failures.Add("reject unknown archive");
+        var modules = ModuleCatalog.CreateDefault();
+        if (!ModuleCatalog.HasUniqueIds(modules)) failures.Add("unique module ids");
+        if (modules.Count != 1 || modules[0].Descriptor.Id != LocalizationModule.ModuleId)
+            failures.Add("built-in localization module");
         if (failures.Count == 0)
         {
             Console.WriteLine("PASS: launcher self-test");
