@@ -1,27 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package>
-  <panel name="honplus_live_root" x=".5h" y="4.0h" width="28.0h" height="17.0h" noclick="1" onloadlua="HoNPlusLive:Init()">
-    <frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" borderthickness=".5h" color=".035 .075 .095 .94" bordercolor=".15 .65 .82 .8" noclick="1" />
-    <panel height="3.2h" color=".04 .16 .21 .96">
+  <!-- Starts to the right of the native 4.6h quick-buy column. -->
+  <panel name="honplus_live_root" x="5.2h" y="4.0h" width="20.0h" height="11.5h" noclick="1" onloadlua="HoNPlusLive:Init()">
+    <frame texture="/ui/hd_ui/frames/rounded_bg_solid.tga" borderthickness=".35h" color=".035 .075 .095 .94" bordercolor=".15 .65 .82 .8" noclick="1" />
+    <panel height="2.2h" color=".04 .16 .21 .96">
       <button width="100%" height="100%" color="invisible" onclicklua="HoNPlusLive:Toggle()" />
-      <label x="1.0h" width="12h" height="100%" font="dyn_bold_11" color="#63dcff" textvalign="center" content="HoN Plus LIVE" noclick="1" />
-      <button align="right" x="-3.5h" width="9.5h" height="100%" color="invisible" onclicklua="HoNPlusLive:CycleRole()">
-        <label name="honplus_live_role" width="100%" height="100%" font="dyn_bold_8" color="#d8e8ef" textalign="right" textvalign="center" content="РОЛЬ" noclick="1" />
+      <label x=".6h" width="8.2h" height="100%" font="dyn_bold_8" color="#63dcff" textvalign="center" content="HoN Plus LIVE" noclick="1" />
+      <button align="right" x="-2.3h" width="7.4h" height="100%" color="invisible" onclicklua="HoNPlusLive:CycleRole()">
+        <label name="honplus_live_role" width="100%" height="100%" font="dyn_bold_6" color="#d8e8ef" textalign="right" textvalign="center" content="РОЛЬ" noclick="1" />
       </button>
-      <label name="honplus_live_toggle" align="right" width="2.8h" height="100%" font="dyn_bold_14" color="#63dcff" textalign="center" textvalign="center" content="−" noclick="1" />
+      <label name="honplus_live_toggle" align="right" width="2.0h" height="100%" font="dyn_bold_10" color="#63dcff" textalign="center" textvalign="center" content="−" noclick="1" />
     </panel>
-    <panel name="honplus_live_body" y="3.2h" height="13.8h" noclick="1">
-      <label name="honplus_live_status" x="1h" y=".35h" width="26h" height="1.3h" font="dyn_bold_8" color="#78a5b8" textvalign="center" content="LIVE" noclick="1" />
-      <panel x="1h" y="1.8h" width="26h" height="4.0h" float="right" padding=".5h" noclick="1">
-        <panel width="8.33h" height="100%" color=".05 .15 .19 .9" noclick="1"><label x=".6h" y=".35h" content="ЭКОНОМИКА" font="dyn_bold_7" color="#8ca7b5" noclick="1"/><label name="honplus_live_economy" x=".6h" y="1.3h" content="—" font="dyn_bold_16" color="white" noclick="1"/><panel x=".6h" y="3.25h" width="7.1h" height=".3h" color=".02 .05 .07" noclick="1"><panel name="honplus_live_economy_bar" width="0%" height="100%" color="#63dcff" noclick="1"/></panel></panel>
-        <panel width="8.33h" height="100%" color=".05 .15 .19 .9" noclick="1"><label x=".6h" y=".35h" content="ИМПАКТ" font="dyn_bold_7" color="#8ca7b5" noclick="1"/><label name="honplus_live_combat" x=".6h" y="1.3h" content="—" font="dyn_bold_16" color="white" noclick="1"/><panel x=".6h" y="3.25h" width="7.1h" height=".3h" color=".02 .05 .07" noclick="1"><panel name="honplus_live_combat_bar" width="0%" height="100%" color="#ef786f" noclick="1"/></panel></panel>
-        <panel width="8.33h" height="100%" color=".05 .15 .19 .9" noclick="1"><label x=".6h" y=".35h" content="КОМАНДА" font="dyn_bold_7" color="#8ca7b5" noclick="1"/><label name="honplus_live_team" x=".6h" y="1.3h" content="—" font="dyn_bold_16" color="white" noclick="1"/><panel x=".6h" y="3.25h" width="7.1h" height=".3h" color=".02 .05 .07" noclick="1"><panel name="honplus_live_team_bar" width="0%" height="100%" color="#b59aff" noclick="1"/></panel></panel>
+    <panel name="honplus_live_body" y="2.2h" height="9.3h" noclick="1">
+      <label name="honplus_live_status" x=".6h" y=".15h" width="18.8h" height=".8h" font="dyn_bold_6" color="#78a5b8" textvalign="center" content="LIVE" noclick="1" />
+      <panel x=".6h" y="1.0h" width="18.8h" height="2.55h" float="right" padding=".25h" noclick="1">
+        <panel width="6.1h" height="100%" color=".05 .15 .19 .9" noclick="1">
+          <label x=".35h" y=".2h" content="ЭКОНОМИКА" font="dyn_bold_5" color="#8ca7b5" noclick="1" />
+          <label name="honplus_live_economy" x=".35h" y=".75h" content="—" font="dyn_bold_11" color="white" noclick="1" />
+          <panel x=".35h" y="2.15h" width="5.4h" height=".22h" color=".02 .05 .07" noclick="1"><panel name="honplus_live_economy_bar" width="0%" height="100%" color="#63dcff" noclick="1" /></panel>
+        </panel>
+        <panel width="6.1h" height="100%" color=".05 .15 .19 .9" noclick="1">
+          <label x=".35h" y=".2h" content="ИМПАКТ" font="dyn_bold_5" color="#8ca7b5" noclick="1" />
+          <label name="honplus_live_combat" x=".35h" y=".75h" content="—" font="dyn_bold_11" color="white" noclick="1" />
+          <panel x=".35h" y="2.15h" width="5.4h" height=".22h" color=".02 .05 .07" noclick="1"><panel name="honplus_live_combat_bar" width="0%" height="100%" color="#ef786f" noclick="1" /></panel>
+        </panel>
+        <panel width="6.1h" height="100%" color=".05 .15 .19 .9" noclick="1">
+          <label x=".35h" y=".2h" content="КОМАНДА" font="dyn_bold_5" color="#8ca7b5" noclick="1" />
+          <label name="honplus_live_team" x=".35h" y=".75h" content="—" font="dyn_bold_11" color="white" noclick="1" />
+          <panel x=".35h" y="2.15h" width="5.4h" height=".22h" color=".02 .05 .07" noclick="1"><panel name="honplus_live_team_bar" width="0%" height="100%" color="#b59aff" noclick="1" /></panel>
+        </panel>
       </panel>
-      <panel x="1h" y="6.25h" width="26h" height="6.7h" noclick="1">
-        <label x="0" y="0" width="7h" height="1.4h" content="ПОКАЗАТЕЛЬ" font="dyn_bold_7" color="#708d9b" textvalign="center" noclick="1"/><label x="7h" y="0" width="8.5h" height="1.4h" content="СЕЙЧАС" font="dyn_bold_7" color="#708d9b" textalign="center" textvalign="center" noclick="1"/><label x="15.5h" y="0" width="10.5h" height="1.4h" content="МЕДИАННАЯ ЦЕЛЬ" font="dyn_bold_7" color="#708d9b" textalign="right" textvalign="center" noclick="1"/>
-        <label x="0" y="1.55h" width="7h" height="1.5h" content="У / С / П" font="dyn_bold_9" color="#c8d8df" textvalign="center" noclick="1"/><label name="honplus_live_kda_now" x="7h" y="1.55h" width="8.5h" height="1.5h" content="0 / 0 / 0" font="dyn_bold_9" color="white" textalign="center" textvalign="center" noclick="1"/><label name="honplus_live_kda_target" x="15.5h" y="1.55h" width="10.5h" height="1.5h" content="—" font="dyn_bold_9" color="#63dcff" textalign="right" textvalign="center" noclick="1"/>
-        <label x="0" y="3.1h" width="7h" height="1.5h" content="КРИПЫ / DN" font="dyn_bold_9" color="#c8d8df" textvalign="center" noclick="1"/><label name="honplus_live_cs_now" x="7h" y="3.1h" width="8.5h" height="1.5h" content="0 / 0" font="dyn_bold_9" color="white" textalign="center" textvalign="center" noclick="1"/><label name="honplus_live_cs_target" x="15.5h" y="3.1h" width="10.5h" height="1.5h" content="—" font="dyn_bold_9" color="#63dcff" textalign="right" textvalign="center" noclick="1"/>
-        <label x="0" y="4.65h" width="7h" height="1.5h" content="УРОВЕНЬ" font="dyn_bold_9" color="#c8d8df" textvalign="center" noclick="1"/><label name="honplus_live_level_now" x="7h" y="4.65h" width="8.5h" height="1.5h" content="1" font="dyn_bold_9" color="white" textalign="center" textvalign="center" noclick="1"/><label name="honplus_live_level_target" x="15.5h" y="4.65h" width="10.5h" height="1.5h" content="—" font="dyn_bold_9" color="#63dcff" textalign="right" textvalign="center" noclick="1"/>
+      <panel x=".6h" y="3.8h" width="18.8h" height="4.8h" noclick="1">
+        <label x="0" y="0" width="5.5h" height=".85h" content="ПОКАЗАТЕЛЬ" font="dyn_bold_5" color="#708d9b" textvalign="center" noclick="1" />
+        <label x="5.5h" y="0" width="5.0h" height=".85h" content="СЕЙЧАС" font="dyn_bold_5" color="#708d9b" textalign="center" textvalign="center" noclick="1" />
+        <label x="10.5h" y="0" width="8.3h" height=".85h" content="ЦЕЛЬ" font="dyn_bold_5" color="#708d9b" textalign="right" textvalign="center" noclick="1" />
+        <label x="0" y=".95h" width="5.5h" height="1.0h" content="У / С / П" font="dyn_bold_6" color="#c8d8df" textvalign="center" noclick="1" />
+        <label name="honplus_live_kda_now" x="5.5h" y=".95h" width="5.0h" height="1.0h" content="0 / 0 / 0" font="dyn_bold_6" color="white" textalign="center" textvalign="center" noclick="1" />
+        <label name="honplus_live_kda_target" x="10.5h" y=".95h" width="8.3h" height="1.0h" content="—" font="dyn_bold_6" color="#63dcff" textalign="right" textvalign="center" noclick="1" />
+        <label x="0" y="2.0h" width="5.5h" height="1.0h" content="КРИПЫ / DN" font="dyn_bold_6" color="#c8d8df" textvalign="center" noclick="1" />
+        <label name="honplus_live_cs_now" x="5.5h" y="2.0h" width="5.0h" height="1.0h" content="0 / 0" font="dyn_bold_6" color="white" textalign="center" textvalign="center" noclick="1" />
+        <label name="honplus_live_cs_target" x="10.5h" y="2.0h" width="8.3h" height="1.0h" content="—" font="dyn_bold_6" color="#63dcff" textalign="right" textvalign="center" noclick="1" />
+        <label x="0" y="3.05h" width="5.5h" height="1.0h" content="УРОВЕНЬ" font="dyn_bold_6" color="#c8d8df" textvalign="center" noclick="1" />
+        <label name="honplus_live_level_now" x="5.5h" y="3.05h" width="5.0h" height="1.0h" content="1" font="dyn_bold_6" color="white" textalign="center" textvalign="center" noclick="1" />
+        <label name="honplus_live_level_target" x="10.5h" y="3.05h" width="8.3h" height="1.0h" content="—" font="dyn_bold_6" color="#63dcff" textalign="right" textvalign="center" noclick="1" />
       </panel>
     </panel>
   </panel>

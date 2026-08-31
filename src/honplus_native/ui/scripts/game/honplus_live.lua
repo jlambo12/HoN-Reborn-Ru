@@ -161,7 +161,7 @@ function HoNPlusLive:Toggle()
     self.expanded = not self.expanded
     local body, root = Widget('body'), Widget('root')
     if body then body:SetVisible(self.expanded) end
-    if root then root:SetHeight(self.expanded and '17.0h' or '3.2h') end
+    if root then root:SetHeight(self.expanded and '11.5h' or '2.2h') end
     SetText('toggle', self.expanded and '−' or '+')
 end
 

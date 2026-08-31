@@ -17,8 +17,10 @@ class HoNPlusLiveTests(unittest.TestCase):
         tree = ElementTree.parse(package)
         root_panel = tree.getroot().find("panel")
         self.assertEqual("honplus_live_root", root_panel.attrib["name"])
-        self.assertEqual(".5h", root_panel.attrib["x"])
+        self.assertEqual("5.2h", root_panel.attrib["x"])
         self.assertEqual("4.0h", root_panel.attrib["y"])
+        self.assertEqual("20.0h", root_panel.attrib["width"])
+        self.assertEqual("11.5h", root_panel.attrib["height"])
         self.assertIn('content="ИМПАКТ"', package.read_text(encoding="utf-8"))
 
     def test_live_lua_is_local_and_uses_native_match_watches(self):
