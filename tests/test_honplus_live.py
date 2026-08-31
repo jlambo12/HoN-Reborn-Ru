@@ -67,6 +67,13 @@ class HoNPlusLiveTests(unittest.TestCase):
             source = (ROOT / "scripts" / name).read_text(encoding="utf-8")
             self.assertIn("prepare_honplus_native.py", source)
 
+    def test_post_match_players_use_hero_cards_ranked_by_impact(self):
+        source = (ROOT / "src" / "honplus_preact" / "HoNPlusPanel.tsx").read_text(encoding="utf-8")
+        self.assertIn("gamestorage.juvio.com/heroes/${heroId}/icon.webp", source)
+        self.assertIn("useMatchStats(requestedMatchId)", source)
+        self.assertIn(".sort((left, right) => right.impact - left.impact)", source)
+        self.assertIn("ИМПАКТ", source)
+
 
 if __name__ == "__main__":
     unittest.main()
