@@ -34,6 +34,10 @@ py -3.14 "$ProjectRoot\tools\prepare_phase2a_overrides.py" `
     --preact-scope "$ProjectRoot\translation\human\preact_scope.json"
 if ($LASTEXITCODE -ne 0) { throw "Pass B override preparation failed" }
 
+py -3.14 "$ProjectRoot\tools\prepare_honplus_native.py" `
+    --project-root $ProjectRoot --archive $Archive
+if ($LASTEXITCODE -ne 0) { throw "HoN Plus native HUD preparation failed" }
+
 py -3.14 "$ProjectRoot\tools\apply_honplus_preact.py" --project-root $ProjectRoot --workspace $Workspace
 if ($LASTEXITCODE -ne 0) { throw "HoN Plus Preact overlay failed" }
 
