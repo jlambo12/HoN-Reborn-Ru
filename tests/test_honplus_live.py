@@ -28,6 +28,12 @@ class HoNPlusLiveTests(unittest.TestCase):
             self.assertNotIn(forbidden, source)
         self.assertIn("local slot = index", source)
 
+    def test_generated_benchmarks_are_split_for_the_legacy_lua_compiler(self):
+        data_dir = ROOT / "src" / "honplus_native" / "ui" / "scripts" / "game"
+        chunks = sorted(data_dir.glob("honplus_live_data_*.lua"))
+        self.assertGreaterEqual(len(chunks), 16)
+        self.assertLess(max(path.stat().st_size for path in chunks), 100_000)
+
     def test_native_preparer_patches_a_game_interface_and_copies_assets(self):
         base = """<?xml version=\"1.0\"?><interface>
 <lua file=\"/ui/scripts/game/damagebar.lua\" />

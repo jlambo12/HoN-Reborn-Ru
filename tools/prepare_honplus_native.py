@@ -29,10 +29,16 @@ def main() -> int:
 
     with zipfile.ZipFile(archive) as zf:
         game_hd = zf.read("ui/game_hd.interface").decode("utf-8-sig")
+    data_files = sorted((source / "ui" / "scripts" / "game").glob("honplus_live_data*.lua"))
+    if not data_files or data_files[0].name != "honplus_live_data.lua":
+        raise SystemExit("HoN Plus generated benchmark files are missing")
+    lua_includes = "\n".join(
+        f'\t<lua file="/ui/scripts/game/{path.name}" />' for path in data_files
+    )
     game_hd = replace_once(
         game_hd,
         '<lua file="/ui/scripts/game/damagebar.lua" />',
-        '<lua file="/ui/scripts/game/damagebar.lua" />\n\t<lua file="/ui/scripts/game/honplus_live_data.lua" />\n\t<lua file="/ui/scripts/game/honplus_live.lua" />',
+        '<lua file="/ui/scripts/game/damagebar.lua" />\n' + lua_includes + '\n\t<lua file="/ui/scripts/game/honplus_live.lua" />',
         "HoN Plus Lua insertion",
     )
     game_hd = replace_once(
