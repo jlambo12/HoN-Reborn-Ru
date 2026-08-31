@@ -22,6 +22,8 @@ class HoNPlusLiveTests(unittest.TestCase):
         self.assertEqual("20.0h", root_panel.attrib["width"])
         self.assertEqual("11.5h", root_panel.attrib["height"])
         self.assertIn('content="ИМПАКТ"', package.read_text(encoding="utf-8"))
+        self.assertNotIn('font="dyn_bold_5"', package.read_text(encoding="utf-8"))
+        self.assertNotIn('font="dyn_bold_6"', package.read_text(encoding="utf-8"))
 
     def test_live_lua_is_local_and_uses_native_match_watches(self):
         source = (ROOT / "src" / "honplus_native" / "ui" / "scripts" / "game" / "honplus_live.lua").read_text(encoding="utf-8")
