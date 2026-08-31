@@ -6,6 +6,7 @@ $GameArchive = Join-Path $JuvioRoot 'heroes of newerth\resources0.jz'
 $ExtensionDirectory = Join-Path $JuvioRoot 'extensions'
 $Target = Join-Path $ExtensionDirectory 'resources0.jz'
 $Build = Join-Path $ProjectRoot 'build\honplus-test\resources0.jz'
+$StatePath = Join-Path $ProjectRoot 'reports\honplus_test_install_state.json'
 $ExpectedGameSha = '1802e16e5518b729256782d2d77643c092e6300b7eb05bebd849f96545969b93'
 
 if (Get-Process -Name 'juvio' -ErrorAction SilentlyContinue) {
@@ -41,6 +42,16 @@ if ((Get-FileHash -Algorithm SHA256 -LiteralPath $Temporary).Hash.ToLowerInvaria
 Move-Item -LiteralPath $Temporary -Destination $Target -Force
 $InstalledSha = (Get-FileHash -Algorithm SHA256 -LiteralPath $Target).Hash.ToLowerInvariant()
 if ($InstalledSha -ne $BuildSha) { throw 'Проверка установленной сборки не прошла.' }
+
+$State = [ordered]@{
+    schema_version = 1
+    installed_at = (Get-Date).ToString('o')
+    game_archive = [ordered]@{ path = $GameArchive; sha256 = $GameSha; modified = $false }
+    installed = [ordered]@{ path = $Target; sha256 = $InstalledSha; crc = $Crc }
+    backup = if ($Backup) { [ordered]@{ path = $Backup; sha256 = (Get-FileHash -Algorithm SHA256 -LiteralPath $Backup).Hash.ToLowerInvariant() } } else { $null }
+}
+New-Item -ItemType Directory -Path (Split-Path -Parent $StatePath) -Force | Out-Null
+$State | ConvertTo-Json -Depth 4 | Set-Content -LiteralPath $StatePath -Encoding utf8
 
 Write-Host "HoN Plus установлен. SHA-256: $InstalledSha"
 if ($Backup) { Write-Host "Резервная копия: $Backup" }
