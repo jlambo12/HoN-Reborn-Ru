@@ -9,7 +9,7 @@ on:
       version:
         description: "Version without the v prefix"
         required: true
-        default: "0.1.0-beta.17"
+        default: "0.1.0-beta.18"
 
 permissions:
   contents: write
@@ -55,7 +55,7 @@ jobs:
             --translation "release-assets\${{ steps.version.outputs.version }}\resources0.jz" `
             --launcher "dist\launcher\HoNRebornRU.exe" `
             --updater "dist\launcher\HoNRebornRU.Updater.exe" `
-            --game-sha256 "1802e16e5518b729256782d2d77643c092e6300b7eb05bebd849f96545969b93" `
+            --game-sha256 "b56cb49a61adf8f5e6c4a57a19de828aae9a9cfaaabf73ee0d5ad32f88c121f4" `
             --output-directory "dist\release"
           python tools/verify_update_manifest.py --directory "dist\release"
       - name: Build portable package

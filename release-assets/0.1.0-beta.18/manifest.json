@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "version": "0.1.0-beta.18",
+  "file": "resources0.jz",
+  "sha256": "95bcf3f918356697e8a8c01eb8c6bc03a42517e3b1bbaa61870100e58a29a535",
+  "size_bytes": 3846194,
+  "members": 69,
+  "crc": "PASS",
+  "automated_tests": "PASS",
+  "runtime_verified": false,
+  "runtime_status": "Current-game Russian overlay with HoN Plus post-match analysis and live in-match benchmarks; exact full test build passed local runtime verification before thin release packaging."
+}

@@ -202,18 +202,18 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn("EmbeddedResource", project)
 
     def test_beta_release_translation_manifest_matches_asset(self):
-        directory = ROOT / "release-assets" / "0.1.0-beta.17"
+        directory = ROOT / "release-assets" / "0.1.0-beta.18"
         manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
         archive = directory / manifest["file"]
         self.assertTrue(archive.is_file())
         self.assertEqual(archive.stat().st_size, manifest["size_bytes"])
-        self.assertEqual("0.1.0-beta.17", manifest["version"])
+        self.assertEqual("0.1.0-beta.18", manifest["version"])
 
     def test_website_download_points_to_current_beta_setup(self):
         site_config = (ROOT / "website" / "src" / "config" / "site.ts").read_text(encoding="utf-8")
         download_button = (ROOT / "website" / "src" / "components" / "DownloadButton.astro").read_text(encoding="utf-8")
         self.assertIn(
-            "/releases/download/v0.1.0-beta.17/HoNRebornRU-Setup.exe",
+            "/releases/download/v0.1.0-beta.18/HoNRebornRU-Setup.exe",
             site_config,
         )
         self.assertIn("api.github.com/repos/jlambo12/HoN-Reborn-Ru/releases", download_button)
@@ -389,6 +389,17 @@ class AutonomousLauncherTests(unittest.TestCase):
         beta16 = ROOT / "release-assets" / "0.1.0-beta.16" / "resources0.jz"
         beta17 = ROOT / "release-assets" / "0.1.0-beta.17" / "resources0.jz"
         self.assertEqual(beta16.read_bytes(), beta17.read_bytes())
+
+    def test_beta18_contains_honplus_live_and_postmatch_ui(self):
+        archive_path = ROOT / "release-assets" / "0.1.0-beta.18" / "resources0.jz"
+        with zipfile.ZipFile(archive_path) as archive:
+            names = set(archive.namelist())
+            live = archive.read("ui/scripts/game/honplus_live.lua").decode("utf-8")
+            preact = archive.read("preact/dist/index.js").decode("utf-8")
+        self.assertIn("ui/hd_ui/sections/honplus_live.package", names)
+        self.assertIn("ui/hd_ui/sections/ig_vanity_shop.package", names)
+        self.assertIn("math.floor(values[4] + .5)", live)
+        self.assertIn("HoN Plus", preact)
 
     def test_rebase_restores_safe_legacy_locale_aliases_without_stale_screens(self):
         source = (ROOT / "tools" / "localization" / "rebase_current_release.py").read_text(encoding="utf-8")
