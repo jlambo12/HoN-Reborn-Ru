@@ -51,8 +51,17 @@ try {
 
 Push-Location "$Workspace\preact-remote"
 try {
-    & "$Workspace\preact\bun.exe" install --frozen-lockfile --offline
-    if ($LASTEXITCODE -ne 0) { throw "preact-remote bun install failed" }
+    $RemoteLock = Join-Path "$Workspace\preact-remote" "bun.lock"
+    if (Test-Path -LiteralPath $RemoteLock -PathType Leaf) {
+        & "$Workspace\preact\bun.exe" install --frozen-lockfile --offline
+        if ($LASTEXITCODE -ne 0) { throw "preact-remote bun install failed" }
+    } else {
+        # Current upstream omits a remote lockfile. Its dependency versions are
+        # already a subset of the validated main Preact install, so reuse that
+        # exact node_modules tree instead of contacting the package registry.
+        New-Item -ItemType Junction -Path "$Workspace\preact-remote\node_modules" `
+            -Target "$Workspace\preact\node_modules" | Out-Null
+    }
     & "$Workspace\preact\bun.exe" run build
     if ($LASTEXITCODE -ne 0) { throw "Preact Remote RU build failed" }
 } finally {

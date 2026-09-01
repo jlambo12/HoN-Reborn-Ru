@@ -7,7 +7,7 @@ $ExtensionDirectory = Join-Path $JuvioRoot 'extensions'
 $Target = Join-Path $ExtensionDirectory 'resources0.jz'
 $Build = Join-Path $ProjectRoot 'build\honplus-test\resources0.jz'
 $StatePath = Join-Path $ProjectRoot 'reports\honplus_test_install_state.json'
-$ExpectedGameSha = '1802e16e5518b729256782d2d77643c092e6300b7eb05bebd849f96545969b93'
+$ExpectedGameSha = 'b56cb49a61adf8f5e6c4a57a19de828aae9a9cfaaabf73ee0d5ad32f88c121f4'
 
 if (Get-Process -Name 'juvio' -ErrorAction SilentlyContinue) {
     throw 'Закройте Juvio/HoN перед установкой тестовой сборки HoN Plus.'

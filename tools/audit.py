@@ -120,6 +120,37 @@ def merge_english_changed(row: dict, previous: dict) -> None:
     row["notes"] = "; ".join(filter(None, (prior_notes, note)))
 
 
+UNCHANGED_TRANSLATION_FIELDS = (
+    "protected_terms", "locked_spans", "russian", "notes",
+    "translation_origin", "translation_memory_sources",
+)
+REVIEWED_CLASSIFICATION_FIELDS = (
+    "category", "context", "status", "runtime_role", "protected_reason",
+    "classification_source", "classification_version",
+)
+
+
+def preserve_unchanged_review(row: dict, previous: dict) -> None:
+    """Keep reviewed catalog decisions stable while upstream English is unchanged.
+
+    The canonical-name dictionary is derived from the whole current game catalog.
+    A newly added hero, ability, or item can therefore introduce a name that also
+    occurs in an older, already translated string. Classifier improvements are
+    also applied in later review phases. Neither may retroactively replace those
+    decisions when the upstream English source did not change.
+    """
+    for field in UNCHANGED_TRANSLATION_FIELDS:
+        if field in previous:
+            row[field] = previous[field]
+    previous_version = int(previous.get("classification_version", 0) or 0)
+    current_version = int(row.get("classification_version", 0) or 0)
+    human_reviewed = str(previous.get("classification_source", "")).startswith("HUMAN")
+    if human_reviewed or previous_version > current_version:
+        for field in REVIEWED_CLASSIFICATION_FIELDS:
+            if field in previous:
+                row[field] = previous[field]
+
+
 def write_csv(path: Path, fields: list[str], rows: Iterable[dict]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8-sig", newline="") as handle:
@@ -748,10 +779,6 @@ def main() -> int:
     previous_rows = {row.get("id"): row for row in read_jsonl(catalog_path) if row.get("id")}
     update_counts: Counter[str] = Counter()
     current_ids: set[str] = set()
-    human_fields = (
-        "category", "context", "status", "runtime_role", "protected_reason",
-        "protected_terms", "locked_spans", "russian", "notes", "classification_source",
-    )
     for row in catalog_rows:
         row_id = row["id"]
         current_ids.add(row_id)
@@ -761,25 +788,7 @@ def main() -> int:
             continue
         if previous.get("english_hash") == row["english_hash"]:
             update_counts["unchanged"] += 1
-            if previous.get("classification_source") == "HUMAN" and row["status"] != "KEEP_EN":
-                for field in human_fields:
-                    if field in previous:
-                        row[field] = previous[field]
-            else:
-                # Preserve actual translator work, but clear English values that
-                # existed only because an old AUTO rule incorrectly used KEEP_EN.
-                prior_russian = previous.get("russian", "")
-                prior_was_auto_keep = (
-                    previous.get("status") == "KEEP_EN"
-                    and previous.get("classification_source", "AUTO") == "AUTO"
-                    and prior_russian == previous.get("english", "")
-                    and row["status"] != "KEEP_EN"
-                )
-                if row["status"] == "KEEP_EN":
-                    row["russian"] = row["english"]
-                elif not prior_was_auto_keep:
-                    row["russian"] = prior_russian
-                row["notes"] = previous.get("notes", row["notes"])
+            preserve_unchanged_review(row, previous)
             continue
 
         update_counts["english_changed"] += 1

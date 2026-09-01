@@ -280,6 +280,12 @@ class Phase16PolicyTests(unittest.TestCase):
         audit.merge_english_changed(row, {"status": "TRANSLATE", "russian": "Старый", "notes": ""})
         self.assertEqual((row["status"], row["russian"]), ("REVIEW", "Старый"))
 
+    def test_unchanged_review_does_not_drift_with_global_dictionary(self):
+        row = {"status": "KEEP_EN", "category": "ability_name", "classification_version": 2, "protected_terms": ["Teleport"], "locked_spans": [{"canonical_text": "Teleport"}]}
+        previous = {"status": "TRANSLATE", "category": "ability_description", "classification_version": 3, "protected_terms": [], "locked_spans": [], "russian": "Телепортируется"}
+        audit.preserve_unchanged_review(row, previous)
+        self.assertEqual((row["status"], row["category"], row["protected_terms"], row["locked_spans"], row["russian"]), ("TRANSLATE", "ability_description", [], [], "Телепортируется"))
+
     def test_longest_overlapping_canonical_name(self):
         row = self.protected_row("Ability_Artesia2_description", "Arcane Bolts are fired.")
         dictionary = self.canonical_dictionary([("Arcane Bolt", "Ability_Artesia2_name", "EXACT"), ("Arcane Bolts", "Ability_Artesia2_name", "EXACT")])
