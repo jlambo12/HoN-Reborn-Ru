@@ -32,6 +32,8 @@ class HoNPlusLiveTests(unittest.TestCase):
         for forbidden in ("http://", "https://", "127.0.0.1", "benchmarks.json"):
             self.assertNotIn(forbidden, source)
         self.assertIn("local slot = index", source)
+        self.assertIn("math.floor(values[4] + .5)", source)
+        self.assertNotIn("string.format('%.1f', values[4])", source)
 
     def test_generated_benchmarks_are_split_for_the_legacy_lua_compiler(self):
         data_dir = ROOT / "src" / "honplus_native" / "ui" / "scripts" / "game"

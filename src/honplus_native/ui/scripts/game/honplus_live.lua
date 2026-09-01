@@ -122,7 +122,7 @@ end
 local function FormatTarget(metric)
     local values = Metric(metric)
     if not values then return '—' end
-    return string.format('%.1f', values[4])
+    return tostring(math.floor(values[4] + .5))
 end
 
 local function SetScore(name, score)
