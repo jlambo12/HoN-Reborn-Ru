@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "rows": [
+    {
+      "source_prefix": "preact/src/components/common/penaltyrank/penaltyrank.tsx",
+      "english": "Abandons",
+      "russian": "Покидания",
+      "expected_matches": 1
+    },
+    {
+      "source_prefix": "preact/src/components/common/penaltyrank/penaltyrank.tsx",
+      "english": "Kicked",
+      "russian": "Исключения",
+      "expected_matches": 1
+    },
+    {
+      "source_prefix": "preact/src/components/common/penaltyrank/penaltyrank.tsx",
+      "english": "Muted",
+      "russian": "Заглушения",
+      "expected_matches": 1
+    },
+    {
+      "source_prefix": "preact/src/components/common/penaltyrank/penaltyrank.tsx",
+      "english": "Avoided",
+      "russian": "Избегания",
+      "expected_matches": 1
+    },
+    {
+      "source_prefix": "preact/src/layers/profile/components/alltimerecords/alltimerecords.tsx",
+      "english": "Wards Placed",
+      "russian": "Вардов поставлено",
+      "expected_matches": 1
+    }
+  ]
+}

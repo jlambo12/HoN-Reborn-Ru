@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "version": "0.1.0-beta.19",
+  "file": "resources0.jz",
+  "sha256": "51bc2129478a1abc21d4de8b7a980b55931730f0d4759719c23d7eda130bf08b",
+  "size_bytes": 3849963,
+  "members": 73,
+  "crc": "PASS",
+  "automated_tests": "PASS",
+  "runtime_verified": false,
+  "runtime_status": "Automated archive and regression checks passed; in-game verification pending user feedback. No local installation performed."
+}

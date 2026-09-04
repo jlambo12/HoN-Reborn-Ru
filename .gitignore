@@ -44,6 +44,7 @@ translation/reports/*
 # Local upstream/donor snapshots are reproducible but not redistributable here
 src/upstream/
 src/extended_ru/
+src/current_native_ru/
 external/
 
 # Historical review bundles and OS/editor files

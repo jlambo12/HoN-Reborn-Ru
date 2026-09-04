@@ -969,7 +969,7 @@
 
 				<!-- Best Balance BTN -->
 				<instance name="mm_fairness_tab" button_name="mm_fairness_balance_btn" align="left"
-					label="ЛУЧШИЙ БАЛАНС" icon="/ui/hd_ui/icons/balance.tga"
+					label="БАЛАНС КОМАНД" icon="/ui/hd_ui/icons/balance.tga"
 					bg_color_selected="#2563b8" bg_color_selected_over="#3574c9" bg_color_selected_down="#1a4f99"
 					tooltip="mm_tuning_best_balance_tooltip"
 					onclicklua="Matchmaking:OnBalanceBestClicked()"
@@ -977,7 +977,7 @@
 
 				<!-- Fast Queue BTN -->
 				<instance name="mm_fairness_tab" button_name="mm_fairness_speed_btn" align="right"
-					label="БЫСТРАЯ ОЧЕРЕДЬ" icon="/ui/hd_ui/icons/thunder.tga"
+					label="БЫСТРЫЙ ПОИСК" icon="/ui/hd_ui/icons/thunder.tga"
 					bg_color_selected="#c93d28" bg_color_selected_over="#da4e39" bg_color_selected_down="#b8321d"
 					tooltip="mm_tuning_fastest_queue_tooltip"
 					onclicklua="Matchmaking:OnBalanceFastClicked()"

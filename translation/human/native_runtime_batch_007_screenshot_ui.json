@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "batch_id": "NATIVE_RUNTIME_007_SCREENSHOT_UI",
+  "rows": [
+    {
+      "source_file": "ui/scripts/fe3/system_bar.lua",
+      "english": "'Profile', 'bottom'",
+      "russian": "'Профиль', 'bottom'",
+      "expected_matches": 1
+    },
+    {
+      "source_file": "ui/fe3/sections/notifications_v2.package",
+      "english": "label=\"Clear Notification History\"",
+      "russian": "label=\"Очистить уведомления\"",
+      "expected_matches": 1
+    },
+    {
+      "source_file": "ui/scripts/game/game_shop_hd.lua",
+      "english": "text = 'This purchased item goes to Backpack'",
+      "russian": "text = 'Купленный предмет попадёт в рюкзак'",
+      "expected_matches": 1
+    },
+    {
+      "source_file": "ui/scripts/game/game_shop_hd.lua",
+      "english": "text = 'This purchased item goes to Courier Stash'",
+      "russian": "text = 'Купленный предмет попадёт в тайник курьера'",
+      "expected_matches": 1
+    },
+    {
+      "source_file": "ui/hd_ui/sections/game_shop_hd_classic_section.package",
+      "english": "content=\"Vote Guide:\"",
+      "russian": "content=\"Оценить:\"",
+      "expected_matches": 1
+    }
+  ]
+}

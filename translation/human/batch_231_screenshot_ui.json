@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_231_SCREENSHOT_UI",
+  "catalog_apply": true,
+  "entries": [
+    {
+      "keys": [
+        "interface:game_guide_reco_1"
+      ],
+      "english_hash": "4479ccef9d0be30f899f1683341e72e8e72347d0c840b3a339752736976ec481",
+      "ru": "Начальные предметы"
+    },
+    {
+      "keys": [
+        "interface:game_guide_reco_3"
+      ],
+      "english_hash": "7990bfc5bcb32e9142bff780e7413ca64b3c540c1a61fab288541f0f906a59b0",
+      "ru": "Основные предметы"
+    },
+    {
+      "keys": [
+        "interface:game_guide_reco_5"
+      ],
+      "english_hash": "8c3874c1b0f19b20fd1ca4afdf2985072ba0dd3c7ae64101f5cc2170667ba839",
+      "ru": "По ситуации"
+    },
+    {
+      "keys": [
+        "interface:ccwhisper_header_send_a_message"
+      ],
+      "english_hash": "65e7392579e1fac5489b8f74142a15bd49a1319f3bd3706ff0cd83701bae5197",
+      "ru": "Написать сообщение"
+    },
+    {
+      "keys": [
+        "interface:ccwhisper_header_active_chats"
+      ],
+      "english_hash": "bd59a6157e6385ba62df774405b3377123d088dcb6ac06fd2cbc4810b9bce847",
+      "ru": "Переписки"
+    },
+    {
+      "keys": [
+        "interface:no_ims"
+      ],
+      "english_hash": "810f70e15a62aae0c980ace6ba8ecf9d081781b48f560a9b616d407e91054cb7",
+      "ru": "У вас пока нет переписок. Напишите другому игроку."
+    },
+    {
+      "keys": [
+        "interface:ui_items_cc_right_click_spectate_player"
+      ],
+      "english_hash": "d6eaf32ebee68e6373c9136b349cfb9ec37e6901b6b2aa7ebc01d6de93cb9e13",
+      "ru": "Наблюдать за игроком"
+    },
+    {
+      "keys": [
+        "interface:irc_status_chan"
+      ],
+      "english_hash": "920e413c7d411b61ef3e8c63b1cb6ad058d5f95f8b481dbafe60248387d8c355",
+      "ru": "Статус"
+    },
+    {
+      "keys": [
+        "interface:sp_listlabel_offline"
+      ],
+      "english_hash": "a1794783aab72d205dc532b1170d1be63ebdce8816b57c21acb451c15dab969a",
+      "ru": "Не в сети"
+    },
+    {
+      "keys": [
+        "interface:sp_listlabel_recent"
+      ],
+      "english_hash": "a1105acf8eca18abed53436f991d7ee212a81ee30b38b7ac9a10c6b5de507d7d",
+      "ru": "Недавние игроки"
+    },
+    {
+      "keys": [
+        "interface:dmg_total"
+      ],
+      "english_hash": "0fe2b3874706d166c5ae815136e234349a929afe7c49c59f6b16410461102a05",
+      "ru": "Всего урона:"
+    },
+    {
+      "keys": [
+        "game_messages:afk_warning"
+      ],
+      "english_hash": "b625d31f92a8660f9759c1b16ff4ee2ebbbaafbe4281495da36aea3158700c1d",
+      "ru": "Вас могут отметить как АФК за бездействие"
+    },
+    {
+      "keys": [
+        "interface:game_menu_disconnect_button"
+      ],
+      "english_hash": "acfc5be785a9bb3da11c9f05adb69bd5633096f09002aa44813a1b3207e912ad",
+      "ru": "Покинуть"
+    },
+    {
+      "keys": [
+        "interface:game_menu_quit_button"
+      ],
+      "english_hash": "6aef88e51a4717f3080c77e68b34d7b174c1db5fe508788db17ad6252838b429",
+      "ru": "Выйти"
+    },
+    {
+      "keys": [
+        "interface:map_midwars"
+      ],
+      "english_hash": "f01ef990e879d0972c7859c2713d445aa68f3c091de7341d8e51144770b587df",
+      "ru": "Mid Wars"
+    },
+    {
+      "keys": [
+        "interface:tooltip_value"
+      ],
+      "english_hash": "224a3369a5c9dc1f55c7400620af923dfb66731285f72831913be13ed4ef4908",
+      "ru": "Стоимость: "
+    },
+    {
+      "keys": [
+        "interface:death_summary"
+      ],
+      "english_hash": "939fa70c675f963f3fbef0a75df8bc49980589ba6ae8f53b5d5c5945c1cb8d8a",
+      "ru": "Причина смерти"
+    }
+  ]
+}

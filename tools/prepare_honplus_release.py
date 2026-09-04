@@ -48,16 +48,23 @@ def main() -> int:
     if not build.is_file() or not previous.is_file():
         raise SystemExit("Verified build or previous release archive is missing")
 
+    # Publication must consume the validated cumulative thin overlay, never
+    # silently combine an old UI screen with a newer game's Lua dependencies.
+    report_path = root / "translation" / "reports" / "human_current_rebase.json"
+    report = json.loads(report_path.read_text(encoding="utf-8"))
+    if report.get("result") != "PASS" or report["output"]["sha256"] != sha256(build):
+        raise SystemExit("Use the validated build/human-ru-current/resources0.jz")
+
     with zipfile.ZipFile(previous) as old, zipfile.ZipFile(build) as candidate:
         if old.testzip() is not None or candidate.testzip() is not None:
             raise SystemExit("Input archive CRC check failed")
         old_names = {name for name in old.namelist() if not name.endswith("/")}
         candidate_names = {name for name in candidate.namelist() if not name.endswith("/")}
         members: dict[str, bytes] = {}
-        for name in sorted(old_names):
-            if name in {f"stringtables/{domain}_en.str" for domain in ALIASED_DOMAINS}:
-                continue
-            members[name] = candidate.read(name) if name in candidate_names else old.read(name)
+        if missing := sorted(old_names - candidate_names):
+            raise SystemExit(f"Cumulative overlay lost previous members: {missing}")
+        for name in sorted(candidate_names):
+            members[name] = candidate.read(name)
 
         honplus_names = {
             path.relative_to(honplus_root).as_posix()
@@ -105,7 +112,7 @@ def main() -> int:
         "crc": "PASS",
         "automated_tests": "PASS",
         "runtime_verified": False,
-        "runtime_status": "Current-game Russian overlay with HoN Plus post-match analysis and live in-match benchmarks; exact full test build passed local runtime verification before thin release packaging.",
+        "runtime_status": "Automated archive and regression checks passed; in-game verification pending user feedback. No local installation performed.",
     }
     (output_dir / "manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n"

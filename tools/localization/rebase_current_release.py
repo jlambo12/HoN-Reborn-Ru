@@ -115,6 +115,27 @@ def main() -> int:
     for name, path in PREACT_MEMBERS.items():
         members[name] = path.read_bytes()
 
+    # HoN Plus is additive. Never import the broad phase2a archive here: its
+    # working tree may still contain native screens from an earlier game patch.
+    honplus_root = ROOT / "src" / "honplus_native"
+    honplus_names = {
+        path.relative_to(honplus_root).as_posix()
+        for path in honplus_root.rglob("*") if path.is_file()
+    }
+    honplus_names.add("ui/hd_ui/sections/ig_vanity_shop.package")
+    for name in sorted(honplus_names):
+        path = ROOT / "src" / "extended_ru" / name
+        if not path.is_file():
+            raise SystemExit(f"Missing freshly prepared HoN Plus member: {name}")
+        members[name] = path.read_bytes()
+
+    store = members.get("ui/fe3/sections/store.package", b"")
+    if b'/ui/scripts/fe3/store_listpool.lua' not in store:
+        raise SystemExit("Store dependency missing: refusing stale store.package")
+    for widget in (b'store_cache_stage_label', b'store_cache_step_label'):
+        if widget not in store:
+            raise SystemExit(f"Current store loading widget missing: {widget!r}")
+
     # Several legacy native UI paths ignore host_locale and always resolve the
     # English namespace. Runtime diagnosis proved that this produced raw keys or
     # English labels even though the matching RU entries existed. Alias the exact

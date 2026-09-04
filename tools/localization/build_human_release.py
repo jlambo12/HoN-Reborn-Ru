@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the cumulative manually reviewed Russian localization layer.
 
-The input is the validated Controlled 003 archive. Human batches contain only
+The input is the pinned last released archive. Human batches contain only
 explicit logical keys and reviewed Russian text; CURRENT English remains the
 semantic identity used by validation.
 """
@@ -20,11 +20,11 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[2]
-BASE = ROOT / "build" / "controlled-003" / "resources0.jz"
+BASE = ROOT / "release-assets" / "0.1.0-beta.18" / "resources0.jz"
 UPSTREAM = Path(os.environ.get("LOCALAPPDATA", Path.home() / "AppData/Local")) / "Juvio" / "heroes of newerth" / "resources0.jz"
 OUTPUT = ROOT / "build" / "human-ru" / "resources0.jz"
 REPORT = ROOT / "translation" / "reports" / "human_release_build.json"
-EXPECTED_BASE_SHA = "364993376ab1ad7310c0b14d88db93b8a82866479727021496e42f7e600c5bd7"
+EXPECTED_BASE_SHA = "95bcf3f918356697e8a8c01eb8c6bc03a42517e3b1bbaa61870100e58a29a535"
 LIVE_SNAPSHOT = ROOT / "translation" / "priority" / "live_scope_snapshot.json"
 MEMBERS = {
     "bot_messages": "stringtables/bot_messages_ru.str",
@@ -138,7 +138,7 @@ def main() -> int:
     snapshot = json.loads(LIVE_SNAPSHOT.read_text(encoding="utf-8"))
     expected_upstream_sha = snapshot["upstream"]["sha256"]
     if sha256(BASE) != EXPECTED_BASE_SHA or sha256(UPSTREAM) != expected_upstream_sha:
-        raise SystemExit("Protected Controlled 003/upstream identity mismatch")
+        raise SystemExit("Pinned previous release/upstream identity mismatch")
 
     # catalog/strings.jsonl is regenerated directly from the installed CURRENT
     # archive. The later hybrid source_index is useful for candidate review but
@@ -215,7 +215,7 @@ def main() -> int:
     changes: list[dict[str, str]] = []
     with zipfile.ZipFile(BASE) as base:
         if base.testzip() is not None:
-            raise SystemExit("Controlled 003 CRC failed")
+            raise SystemExit("Previous release CRC failed")
         for domain, member in MEMBERS.items():
             baseline = base.read(member)
             baseline = append_missing_keys(baseline, by_domain[domain])

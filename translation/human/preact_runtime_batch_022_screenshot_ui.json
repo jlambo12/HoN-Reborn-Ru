@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "batch_id": "PREACT_RUNTIME_022_SCREENSHOT_UI",
+  "apply_order": "post",
+  "rows": [
+    {
+      "source_file": "preact/src/layers/profile/components/alltimerecords/alltimerecords.css",
+      "english": "  margin-bottom: 4px;\n  text-wrap: nowrap;\n  width: max-content;",
+      "russian": "  margin-bottom: 4px;\n  text-wrap: wrap;\n  text-align: center;\n  width: 100%;\n  min-height: 32px;",
+      "expected_matches": 1
+    },
+    {
+      "source_file": "preact-remote/src/components/motd.tsx",
+      "english": "function localize(text: string): string {",
+      "russian": "Object.assign(RU_TEXT, {\n  'Hotfix Patch': 'ИСПРАВЛЕНИЯ',\n  'Patch 0.12.6.1 Hotfix': 'Исправления патча 0.12.6.1',\n  'Connection drops, lobby dodge penalties you did not earn, dead queues and the match end crash are fixed. Replays upload normally again.': 'Исправлены разрывы соединения, ошибочные штрафы за выход из лобби, зависание очередей и сбой при завершении матча. Загрузка повторов снова работает.',\n});\nfunction localize(text: string): string {",
+      "expected_matches": 1
+    }
+  ]
+}
