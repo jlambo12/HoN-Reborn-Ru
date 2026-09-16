@@ -75,6 +75,11 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn('LauncherDialog.Confirm(this, "Обновление русификатора"', form)
         self.assertIn("await InstallOrUpdateAsync(_remote, cancellationToken)", form)
 
+    def test_release_check_retries_directly_after_a_broken_system_proxy(self):
+        source = (LAUNCHER / "SelfTest.cs").read_text(encoding="utf-8")
+        self.assertIn("configured proxy unavailable", source)
+        self.assertIn("direct fallback after proxy failure", source)
+
     def test_self_test_does_not_require_an_installed_game(self):
         source = (LAUNCHER / "SelfTest.cs").read_text(encoding="utf-8")
         self.assertNotIn("LocalApplicationData", source)
@@ -202,18 +207,18 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn("EmbeddedResource", project)
 
     def test_beta_release_translation_manifest_matches_asset(self):
-        directory = ROOT / "release-assets" / "0.1.0-beta.19"
+        directory = ROOT / "release-assets" / "0.1.0-beta.20"
         manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
         archive = directory / manifest["file"]
         self.assertTrue(archive.is_file())
         self.assertEqual(archive.stat().st_size, manifest["size_bytes"])
-        self.assertEqual("0.1.0-beta.19", manifest["version"])
+        self.assertEqual("0.1.0-beta.20", manifest["version"])
 
     def test_website_download_points_to_current_beta_setup(self):
         site_config = (ROOT / "website" / "src" / "config" / "site.ts").read_text(encoding="utf-8")
         download_button = (ROOT / "website" / "src" / "components" / "DownloadButton.astro").read_text(encoding="utf-8")
         self.assertIn(
-            "/releases/download/v0.1.0-beta.19/HoNRebornRU-Setup.exe",
+            "/releases/download/v0.1.0-beta.20/HoNRebornRU-Setup.exe",
             site_config,
         )
         self.assertIn("api.github.com/repos/jlambo12/HoN-Reborn-Ru/releases", download_button)
@@ -389,6 +394,11 @@ class AutonomousLauncherTests(unittest.TestCase):
         beta16 = ROOT / "release-assets" / "0.1.0-beta.16" / "resources0.jz"
         beta17 = ROOT / "release-assets" / "0.1.0-beta.17" / "resources0.jz"
         self.assertEqual(beta16.read_bytes(), beta17.read_bytes())
+
+    def test_beta20_is_launcher_only_and_keeps_beta19_translation_exact(self):
+        beta19 = ROOT / "release-assets" / "0.1.0-beta.19" / "resources0.jz"
+        beta20 = ROOT / "release-assets" / "0.1.0-beta.20" / "resources0.jz"
+        self.assertEqual(beta19.read_bytes(), beta20.read_bytes())
 
     def test_beta18_contains_honplus_live_and_postmatch_ui(self):
         archive_path = ROOT / "release-assets" / "0.1.0-beta.19" / "resources0.jz"
