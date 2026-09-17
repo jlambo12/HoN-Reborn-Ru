@@ -61,8 +61,15 @@ class AutonomousLauncherTests(unittest.TestCase):
 
     def test_release_discovery_uses_semantic_version_order(self):
         source = (LAUNCHER / "UpdateClient.cs").read_text(encoding="utf-8")
-        self.assertIn("SemVersion.TryParse(release.TagName", source)
-        self.assertIn("OrderByDescending(candidate => candidate.Version)", source)
+        self.assertIn("SemVersion.TryParse(listedRelease.TagName", source)
+        self.assertIn("OrderByDescending(item => item.Version).FirstOrDefault()", source)
+        self.assertIn("releases?per_page=100", source)
+        self.assertIn("Never fall back to an older manifest", source)
+        self_test = (LAUNCHER / "SelfTest.cs").read_text(encoding="utf-8")
+        self.assertIn('"v0.1.0-beta.16"', self_test)
+        self.assertIn('"v0.1.0-beta.19"', self_test)
+        self.assertIn('"v0.1.0-beta.20"', self_test)
+        self.assertIn("direct jump to latest release", self_test)
 
     def test_release_check_is_bounded_and_offers_install_without_a_second_button(self):
         client = (LAUNCHER / "UpdateClient.cs").read_text(encoding="utf-8")
@@ -207,18 +214,18 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn("EmbeddedResource", project)
 
     def test_beta_release_translation_manifest_matches_asset(self):
-        directory = ROOT / "release-assets" / "0.1.0-beta.20"
+        directory = ROOT / "release-assets" / "0.1.0-beta.21"
         manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
         archive = directory / manifest["file"]
         self.assertTrue(archive.is_file())
         self.assertEqual(archive.stat().st_size, manifest["size_bytes"])
-        self.assertEqual("0.1.0-beta.20", manifest["version"])
+        self.assertEqual("0.1.0-beta.21", manifest["version"])
 
     def test_website_download_points_to_current_beta_setup(self):
         site_config = (ROOT / "website" / "src" / "config" / "site.ts").read_text(encoding="utf-8")
         download_button = (ROOT / "website" / "src" / "components" / "DownloadButton.astro").read_text(encoding="utf-8")
         self.assertIn(
-            "/releases/download/v0.1.0-beta.20/HoNRebornRU-Setup.exe",
+            "/releases/download/v0.1.0-beta.21/HoNRebornRU-Setup.exe",
             site_config,
         )
         self.assertIn("api.github.com/repos/jlambo12/HoN-Reborn-Ru/releases", download_button)
@@ -399,6 +406,16 @@ class AutonomousLauncherTests(unittest.TestCase):
         beta19 = ROOT / "release-assets" / "0.1.0-beta.19" / "resources0.jz"
         beta20 = ROOT / "release-assets" / "0.1.0-beta.20" / "resources0.jz"
         self.assertEqual(beta19.read_bytes(), beta20.read_bytes())
+
+    def test_beta21_supports_current_0128_ui_and_motd(self):
+        archive_path = ROOT / "release-assets" / "0.1.0-beta.21" / "resources0.jz"
+        with zipfile.ZipFile(archive_path) as archive:
+            preact = archive.read("preact/dist/index.js").decode("utf-8")
+            remote = archive.read("preact-remote/dist/index.js").decode("utf-8")
+        for literal in ("Правила поведения", "Таблички имени", "Sacrilege"):
+            self.assertIn(literal, preact)
+        for literal in ("Патч 0.12.8 уже доступен", "Покажите свой флаг", "КОСМЕТИКА"):
+            self.assertIn(literal, remote)
 
     def test_beta18_contains_honplus_live_and_postmatch_ui(self):
         archive_path = ROOT / "release-assets" / "0.1.0-beta.19" / "resources0.jz"

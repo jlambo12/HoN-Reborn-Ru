@@ -6,7 +6,7 @@ namespace HoNRebornRu.Launcher;
 
 internal sealed class UpdateClient : IDisposable
 {
-    private const string ReleasesApi = "https://api.github.com/repos/jlambo12/HoN-Reborn-Ru/releases?per_page=20";
+    private const string ReleasesApi = "https://api.github.com/repos/jlambo12/HoN-Reborn-Ru/releases?per_page=100";
     private readonly HttpClient _configuredHttp;
     private readonly HttpClient _directHttp;
     private readonly Action<string> _log;
@@ -102,34 +102,40 @@ internal sealed class UpdateClient : IDisposable
         response.EnsureSuccessStatusCode();
         await using var stream = await response.Content.ReadAsStreamAsync(cancellationToken);
         var releases = await JsonSerializer.DeserializeAsync<List<GitHubRelease>>(stream, AppStorage.JsonOptions, cancellationToken) ?? [];
-        var candidates = new List<(GitHubRelease Release, SemVersion Version)>();
-        foreach (var release in releases.Where(release => !release.Draft && (channel == ReleaseChannel.Beta || !release.Prerelease)))
+        var candidates = new List<(GitHubRelease Release, SemVersion Version, GitHubAsset ManifestAsset)>();
+        foreach (var listedRelease in releases.Where(release => !release.Draft && (channel == ReleaseChannel.Beta || !release.Prerelease)))
         {
-            if (SemVersion.TryParse(release.TagName, out var version) && version is not null)
-                candidates.Add((release, version));
+            var manifestAsset = listedRelease.Assets.FirstOrDefault(asset =>
+                asset.Name.Equals("update-manifest.json", StringComparison.OrdinalIgnoreCase));
+            if (manifestAsset is not null && SemVersion.TryParse(listedRelease.TagName, out var version) && version is not null)
+                candidates.Add((listedRelease, version, manifestAsset));
         }
 
-        // GitHub does not guarantee semantic-version ordering here. In particular,
-        // beta.9 may be returned before beta.10, so always inspect newest first.
-        foreach (var candidate in candidates.OrderByDescending(candidate => candidate.Version))
+        // Select exactly one target: the highest semantic version that exposes an
+        // update manifest. Never fall back to an older manifest after selecting
+        // the target, otherwise one broken request can turn a direct .15 -> .19
+        // update into a chain of intermediate installations.
+        var candidate = candidates.OrderByDescending(item => item.Version).FirstOrDefault();
+        if (candidate.Release is null)
+            throw new InvalidOperationException(channel == ReleaseChannel.Beta
+                ? "В GitHub Releases не найден совместимый релиз."
+                : "Стабильный релиз пока не опубликован. Выберите канал «Бета»."
+            );
+
+        var release = candidate.Release;
+        var manifest = await client.GetFromJsonAsync<UpdateManifest>(
+            candidate.ManifestAsset.BrowserDownloadUrl, AppStorage.JsonOptions, cancellationToken);
+        if (manifest is null || manifest.SchemaVersion != 1 ||
+            !manifest.Version.Equals(release.TagName.TrimStart('v', 'V'), StringComparison.OrdinalIgnoreCase))
+            throw new InvalidDataException("Манифест последнего релиза повреждён или не соответствует его версии.");
+        if (channel == ReleaseChannel.Stable && !manifest.Channel.Equals("stable", StringComparison.OrdinalIgnoreCase))
+            throw new InvalidDataException("Последний стабильный релиз содержит манифест другого канала.");
+        return new RemoteRelease
         {
-            var release = candidate.Release;
-            var manifestAsset = release.Assets.FirstOrDefault(asset => asset.Name.Equals("update-manifest.json", StringComparison.OrdinalIgnoreCase));
-            if (manifestAsset is null) continue;
-            var manifest = await client.GetFromJsonAsync<UpdateManifest>(manifestAsset.BrowserDownloadUrl, AppStorage.JsonOptions, cancellationToken);
-            if (manifest is null || manifest.SchemaVersion != 1 || !manifest.Version.Equals(release.TagName.TrimStart('v', 'V'), StringComparison.OrdinalIgnoreCase)) continue;
-            if (channel == ReleaseChannel.Stable && !manifest.Channel.Equals("stable", StringComparison.OrdinalIgnoreCase)) continue;
-            return new RemoteRelease
-            {
-                Release = release,
-                Manifest = manifest,
-                AssetUrls = release.Assets.ToDictionary(asset => asset.Name, asset => asset.BrowserDownloadUrl, StringComparer.OrdinalIgnoreCase)
-            };
-        }
-        throw new InvalidOperationException(channel == ReleaseChannel.Beta
-            ? "В GitHub Releases не найден совместимый релиз."
-            : "Стабильный релиз пока не опубликован. Выберите канал «Бета»."
-        );
+            Release = release,
+            Manifest = manifest,
+            AssetUrls = release.Assets.ToDictionary(asset => asset.Name, asset => asset.BrowserDownloadUrl, StringComparer.OrdinalIgnoreCase)
+        };
     }
 
     private static async Task DownloadWithClientAsync(

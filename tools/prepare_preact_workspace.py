@@ -45,6 +45,22 @@ def main() -> int:
     # bun.lock and bundled Bun runtime are the reproducible install path.
     with zipfile.ZipFile(archive, "r") as zf:
         (workspace / "preact" / "bun.exe").write_bytes(zf.read("preact/bun.exe"))
+        # These source-time dependencies live outside the audited Preact trees
+        # in the official archive. Keep them inside the isolated workspace so a
+        # current upstream build does not accidentally read from the game or
+        # from an older checkout.
+        external_sources = {
+            "namecolor_animations.json": workspace / "namecolor_animations.json",
+            "namecolor_animations.test.json": workspace / "namecolor_animations.test.json",
+            "namecolor_fills.json": workspace / "namecolor_fills.json",
+            "preact/build/verifylocalpreact.ts": workspace / "preact" / "build" / "verifyLocalPreact.ts",
+            "preact/vite.aliases.ts": workspace / "preact" / "vite.aliases.ts",
+            "preact/vite.gm-review.config.ts": workspace / "preact" / "vite.gm-review.config.ts",
+            "preact/gm-review.html": workspace / "preact" / "gm-review.html",
+        }
+        for member, destination in external_sources.items():
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_bytes(zf.read(member))
 
     required = [
         workspace / "preact" / "package.json",
@@ -52,6 +68,13 @@ def main() -> int:
         workspace / "preact" / "preact-qjs" / "package.json",
         workspace / "preact" / "src" / "main.tsx",
         workspace / "preact" / "public",
+        workspace / "namecolor_animations.json",
+        workspace / "namecolor_animations.test.json",
+        workspace / "namecolor_fills.json",
+        workspace / "preact" / "build" / "verifyLocalPreact.ts",
+        workspace / "preact" / "vite.aliases.ts",
+        workspace / "preact" / "vite.gm-review.config.ts",
+        workspace / "preact" / "gm-review.html",
     ]
     missing = [str(path) for path in required if not path.exists()]
     if missing:

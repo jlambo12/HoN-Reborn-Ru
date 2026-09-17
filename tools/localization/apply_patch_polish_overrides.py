@@ -11,6 +11,8 @@ ROOT = Path(__file__).resolve().parents[2]
 JOBS = (
     ("preact_runtime_batch_012_patch_0124_complete.json", "patch_0124_polish_overrides.json"),
     ("preact_runtime_batch_011_patch_0125_remaining.json", "patch_0125_polish_overrides.json"),
+    ("preact_runtime_batch_023_patch_0127_complete.json", "patch_0127_polish_overrides.json"),
+    ("preact_runtime_batch_024_patch_0128_complete.json", "patch_0128_polish_overrides.json"),
 )
 
 
@@ -30,7 +32,7 @@ def main() -> int:
         for english, russian in overrides.items():
             rows[english]["russian"] = russian
             rows[english]["decision"] = "MANUAL_POLISH"
-        payload["reviewed_by"] = "Machine draft with manual terminology and screenshot polish 2026-08-24"
+        payload["reviewed_by"] = "Machine draft with manual terminology and screenshot polish 2026-09-17"
         target.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         total += len(overrides)
     print(json.dumps({"result": "PASS", "overrides": total}, ensure_ascii=False))

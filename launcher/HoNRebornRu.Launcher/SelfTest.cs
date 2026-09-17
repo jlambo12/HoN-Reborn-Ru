@@ -26,7 +26,7 @@ internal static class SelfTest
                 new StubHttpHandler(_ => throw new HttpRequestException("configured proxy unavailable")),
                 new StubHttpHandler(DirectReleaseResponse));
             var release = client.FindReleaseAsync(ReleaseChannel.Beta, CancellationToken.None).GetAwaiter().GetResult();
-            if (release.Manifest.Version != "0.1.0-beta.20") failures.Add("direct fallback release version");
+            if (release.Manifest.Version != "0.1.0-beta.20") failures.Add("direct jump to latest release");
         }
         catch (Exception exception)
         {
@@ -43,10 +43,23 @@ internal static class SelfTest
 
     private static HttpResponseMessage DirectReleaseResponse(HttpRequestMessage request)
     {
-        const string manifestUrl = "https://downloads.example/update-manifest.json";
-        var json = request.RequestUri?.AbsoluteUri == manifestUrl
-            ? """{"schema_version":1,"version":"0.1.0-beta.20","channel":"beta"}"""
-            : $$"""[{"tag_name":"v0.1.0-beta.20","html_url":"https://example.invalid/release","draft":false,"prerelease":true,"assets":[{"name":"update-manifest.json","browser_download_url":"{{manifestUrl}}"}]}]""";
+        const string manifest16 = "https://downloads.example/beta16/update-manifest.json";
+        const string manifest19 = "https://downloads.example/beta19/update-manifest.json";
+        const string manifest20 = "https://downloads.example/beta20/update-manifest.json";
+        var url = request.RequestUri?.AbsoluteUri;
+        var json = url switch
+        {
+            manifest16 => """{"schema_version":1,"version":"0.1.0-beta.16","channel":"beta"}""",
+            manifest19 => """{"schema_version":1,"version":"0.1.0-beta.19","channel":"beta"}""",
+            manifest20 => """{"schema_version":1,"version":"0.1.0-beta.20","channel":"beta"}""",
+            _ => $$"""
+                [
+                {"tag_name":"v0.1.0-beta.19","html_url":"https://example.invalid/19","draft":false,"prerelease":true,"assets":[{"name":"update-manifest.json","browser_download_url":"{{manifest19}}"}]},
+                {"tag_name":"v0.1.0-beta.16","html_url":"https://example.invalid/16","draft":false,"prerelease":true,"assets":[{"name":"update-manifest.json","browser_download_url":"{{manifest16}}"}]},
+                {"tag_name":"v0.1.0-beta.20","html_url":"https://example.invalid/20","draft":false,"prerelease":true,"assets":[{"name":"update-manifest.json","browser_download_url":"{{manifest20}}"}]}
+                ]
+                """
+        };
         return new HttpResponseMessage(HttpStatusCode.OK)
         {
             Content = new StringContent(json, Encoding.UTF8, "application/json")

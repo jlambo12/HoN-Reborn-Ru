@@ -1,0 +1,371 @@
+{
+  "schema_version": 1,
+  "batch_id": "HUMAN_RU_233_0128_GAMEPLAY_UI",
+  "scope": "HoN Reborn 0.12.8 changed hero mechanics and new report/settings UI",
+  "reviewed_by": "Codex manual gameplay localization for HoN Reborn 0.12.8",
+  "catalog_apply": true,
+  "upstream_sha256": "ae3d51104bc6d9b6045b4123a84a31f72b1b283b4d5c9e6e96d269f1b5132643",
+  "entries": [
+    {
+      "keys": [
+        "interface:options_smartcast_double_activate_delay"
+      ],
+      "ru": "Задержка двойной активации быстрого применения (мс)"
+    },
+    {
+      "keys": [
+        "interface:options_smartcast_double_activate_delay_tip"
+      ],
+      "ru": "Задерживает быстрое применение способностей и предметов с двойной активацией, чтобы вы успели второй раз нажать горячую клавишу и активировать альтернативное действие (Teleportation Stone перенесёт героя на базу, зелье здоровья будет применено на себя и т. п.).\\nДействует только на способности и предметы с двойной активацией; всё остальное по-прежнему применяется мгновенно. Установите 0, чтобы полностью отключить задержку."
+    },
+    {
+      "keys": [
+        "interface:options_show_team_purchases"
+      ],
+      "ru": "Показывать покупки союзников"
+    },
+    {
+      "keys": [
+        "interface:options_show_team_purchases_tip"
+      ],
+      "ru": "Показывает под лентой убийств небольшое уведомление, когда союзник покупает важный предмет: варды, командный расходуемый предмет или любой готовый предмет дороже заданного порога."
+    },
+    {
+      "keys": [
+        "interface:options_slider_team_purchases_duration"
+      ],
+      "ru": "Длительность уведомлений о покупках союзников"
+    },
+    {
+      "keys": [
+        "interface:options_slider_team_purchases_duration_tip"
+      ],
+      "ru": "Сколько секунд уведомление о покупке союзника остаётся на экране перед исчезновением."
+    },
+    {
+      "keys": [
+        "interface:options_animated_name_colors"
+      ],
+      "ru": "Анимация цвета имени"
+    },
+    {
+      "keys": [
+        "interface:options_animated_name_colors_tip"
+      ],
+      "ru": "Воспроизводит анимацию у цветов имени, которые её поддерживают. Отключите, чтобы все имена отображались одним сплошным цветом."
+    },
+    {
+      "keys": [
+        "interface:mm_honor_coc"
+      ],
+      "ru": "Правила поведения"
+    },
+    {
+      "keys": [
+        "interface:mm_honor_coc_tip"
+      ],
+      "ru": "Открыть правила поведения Heroes of Newerth"
+    },
+    {
+      "keys": [
+        "interface:report_player_match_time_caption",
+        "interface:report_ui_match_time"
+      ],
+      "ru": "Время матча"
+    },
+    {
+      "keys": [
+        "interface:report_player_match_time"
+      ],
+      "ru": "Время матча: {time}"
+    },
+    {
+      "keys": [
+        "interface:report_player_current_time"
+      ],
+      "ru": "Текущее время"
+    },
+    {
+      "keys": [
+        "interface:report_player_minute_ago"
+      ],
+      "ru": "1 минуту назад"
+    },
+    {
+      "keys": [
+        "interface:report_player_minutes_ago"
+      ],
+      "ru": "{count} мин. назад"
+    },
+    {
+      "keys": [
+        "interface:report_ui_header"
+      ],
+      "ru": "Пожаловаться на игрока"
+    },
+    {
+      "keys": [
+        "interface:report_ui_header_submitted"
+      ],
+      "ru": "Жалоба отправлена"
+    },
+    {
+      "keys": [
+        "interface:report_ui_header_failed"
+      ],
+      "ru": "Не удалось отправить жалобу"
+    },
+    {
+      "keys": [
+        "interface:report_ui_reporting"
+      ],
+      "ru": "Игрок:"
+    },
+    {
+      "keys": [
+        "interface:report_ui_reason"
+      ],
+      "ru": "Причина"
+    },
+    {
+      "keys": [
+        "interface:report_ui_details"
+      ],
+      "ru": "Что произошло? (необязательно)"
+    },
+    {
+      "keys": [
+        "interface:report_ui_details_placeholder"
+      ],
+      "ru": "Укажите сведения, которые помогут модератору найти нарушение в записи матча."
+    },
+    {
+      "keys": [
+        "interface:report_ui_confirm"
+      ],
+      "ru": "Подтвердить"
+    },
+    {
+      "keys": [
+        "interface:report_ui_ok"
+      ],
+      "ru": "ОК"
+    },
+    {
+      "keys": [
+        "interface:report_ui_success"
+      ],
+      "ru": "Жалоба отправлена. Её рассмотрит команда модераторов."
+    },
+    {
+      "keys": [
+        "interface:report_ui_quota_used_up"
+      ],
+      "ru": "На этой неделе вы уже использовали все жалобы. Эта жалоба записана, но не будет передана на рассмотрение. Лимит жалоб обновляется раз в неделю."
+    },
+    {
+      "keys": [
+        "interface:report_ui_error_unknown"
+      ],
+      "ru": "Произошла неизвестная ошибка."
+    },
+    {
+      "keys": [
+        "interface:report_ui_error_already_reported"
+      ],
+      "ru": "Вы уже пожаловались на этого игрока."
+    },
+    {
+      "keys": [
+        "interface:report_ui_error_permission_denied"
+      ],
+      "ru": "Вы не можете пожаловаться на этого игрока."
+    },
+    {
+      "keys": [
+        "interface:report_ui_error_invalid"
+      ],
+      "ru": "Недопустимый запрос."
+    },
+    {
+      "keys": [
+        "interface:report_ui_time_now"
+      ],
+      "ru": "Сейчас"
+    },
+    {
+      "keys": [
+        "interface:report_ui_time_1m"
+      ],
+      "ru": "1 мин. назад"
+    },
+    {
+      "keys": [
+        "interface:report_ui_time_3m"
+      ],
+      "ru": "3 мин. назад"
+    },
+    {
+      "keys": [
+        "interface:report_ui_time_5m"
+      ],
+      "ru": "5 мин. назад"
+    },
+    {
+      "keys": [
+        "interface:report_ui_time_10m"
+      ],
+      "ru": "10 мин. назад"
+    },
+    {
+      "keys": [
+        "interface:report_ui_communication"
+      ],
+      "ru": "Нарушения в общении"
+    },
+    {
+      "keys": [
+        "interface:report_ui_communication_report"
+      ],
+      "ru": "Язык ненависти, оскорбления, угрозы, целенаправленная травля или распространение личных данных другого человека."
+    },
+    {
+      "keys": [
+        "interface:report_ui_communication_not"
+      ],
+      "ru": "Не используйте эту причину из-за ругани на эмоциях — такого игрока лучше заглушить."
+    },
+    {
+      "keys": [
+        "interface:report_ui_feeding"
+      ],
+      "ru": "Намеренные смерти"
+    },
+    {
+      "keys": [
+        "interface:report_ui_feeding_report"
+      ],
+      "ru": "Игрок многократно и намеренно погибает либо специально проигрывает матч."
+    },
+    {
+      "keys": [
+        "interface:report_ui_feeding_not"
+      ],
+      "ru": "Не жалуйтесь на союзника только из-за неудачного матча. Ошибки и разница в уровне игры не являются намеренными смертями."
+    },
+    {
+      "keys": [
+        "interface:report_ui_afk_evasion"
+      ],
+      "ru": "Обход обнаружения бездействия"
+    },
+    {
+      "keys": [
+        "interface:report_ui_afk_evasion_report"
+      ],
+      "ru": "Игрок делает лишь минимум для обхода системы обнаружения бездействия и никак не помогает команде."
+    },
+    {
+      "keys": [
+        "interface:report_ui_afk_evasion_not"
+      ],
+      "ru": "Не жалуйтесь на действительно отсутствующего игрока: система сама отметит его, а команда сможет проголосовать за исключение."
+    },
+    {
+      "keys": [
+        "interface:report_ui_not_participating"
+      ],
+      "ru": "Отказ от участия"
+    },
+    {
+      "keys": [
+        "interface:report_ui_not_participating_report"
+      ],
+      "ru": "Игрок находится в матче, но не пытается помочь команде — например, продолжает фармить лес, пока разрушают базу."
+    },
+    {
+      "keys": [
+        "interface:report_ui_not_participating_not"
+      ],
+      "ru": "Не жалуйтесь на игрока, который фармит другую линию, потому что не согласен с командным решением."
+    },
+    {
+      "keys": [
+        "interface:report_ui_ability_abuse"
+      ],
+      "ru": "Злоупотребление способностями или предметами"
+    },
+    {
+      "keys": [
+        "interface:report_ui_ability_abuse_report"
+      ],
+      "ru": "Использование способностей или предметов против своей команды либо намеренное уничтожение, продажа или передача предметов во вред команде."
+    },
+    {
+      "keys": [
+        "interface:report_ui_ability_abuse_not"
+      ],
+      "ru": "Не жалуйтесь из-за одного украденного крипа, убийства или предмета. Это раздражает, но не является нарушением."
+    },
+    {
+      "keys": [
+        "interface:report_ui_role_refusal"
+      ],
+      "ru": "Отказ от назначенной роли"
+    },
+    {
+      "keys": [
+        "interface:report_ui_role_refusal_report"
+      ],
+      "ru": "Отказ играть назначенную роль или намеренный саботаж состава команды."
+    },
+    {
+      "keys": [
+        "interface:report_ui_role_refusal_not"
+      ],
+      "ru": "Не жалуйтесь из-за разногласий о распределении ролей. Сначала попытайтесь договориться в игре."
+    },
+    {
+      "keys": [
+        "interface:report_ui_cheating"
+      ],
+      "ru": "Эксплойты и читы"
+    },
+    {
+      "keys": [
+        "interface:report_ui_cheating_report"
+      ],
+      "ru": "Скрипты, макросы, сторонние программы или использование ошибки игры для получения преимущества."
+    },
+    {
+      "keys": [
+        "interface:report_ui_cheating_not"
+      ],
+      "ru": "Не жалуйтесь на грамотное применение механики, которая работает так, как задумано."
+    },
+    {
+      "keys": [
+        "interface:report_ui_boosting"
+      ],
+      "ru": "Смурфинг и бустинг"
+    },
+    {
+      "keys": [
+        "interface:report_ui_boosting_report"
+      ],
+      "ru": "Сильный игрок использует учётную запись с намного более низким рейтингом либо передаёт свою учётную запись другому человеку для повышения рейтинга."
+    },
+    {
+      "keys": [
+        "interface:report_ui_boosting_not"
+      ],
+      "ru": "Такие жалобы сразу передаются старшим модераторам и сотрудникам проекта, которым доступна полная история учётной записи."
+    },
+    {
+      "keys": [
+        "interface:vanity_cat_nameplates"
+      ],
+      "ru": "Таблички имени"
+    }
+  ]
+}

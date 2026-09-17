@@ -366,6 +366,26 @@
 				onmouseoutlua="Tooltips:TooltipHover_Main(false)"
 				onclicklua="Matchmaking:OpenHonorSystem()"
 			/>
+
+			<!-- Code of Conduct. Declared after the click catcher so it takes the click instead of it. -->
+			<button name="matchmaking_honor_coc_btn" color="invisible"
+				width="11h" height="1.8h" x="-1.0h" y="1.0h" align="right"
+				onmouseover="PlaySound('/shared/sounds/ui/ccpanel/button_over_01.wav')"
+				onclick="PlaySound('/shared/sounds/ui/button_click_06.wav')"
+				onmouseoverlua="Tooltips:TooltipHover_Main(self, 'mm_honor_coc_tip', 'top')"
+				onmouseoutlua="Tooltips:TooltipHover_Main(false)"
+				onclicklua="Matchmaking:OpenCodeOfConduct()"
+			>
+				<widgetstate statename="up">
+					<label content="mm_honor_coc" style="text_label" color=".6 .6 .6" align="right" valign="center" fitx="1" fity="1" noclick="1" />
+				</widgetstate>
+				<widgetstate statename="over">
+					<label content="mm_honor_coc" style="text_label" color=".95 .95 .95" align="right" valign="center" fitx="1" fity="1" noclick="1" />
+				</widgetstate>
+				<widgetstate statename="down">
+					<label content="mm_honor_coc" style="text_label" color=".8 .8 .8" align="right" valign="center" fitx="1" fity="1" noclick="1" />
+				</widgetstate>
+			</button>
 			 
 		</frame>
 	</template>

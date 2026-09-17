@@ -2,7 +2,7 @@
   "schema_version": 1,
   "batch_id": "PREACT_RUNTIME_PATCH_0124_DRAFT",
   "scope": "Complete editorial text for patch 0.2.4",
-  "reviewed_by": "Machine draft with manual terminology and screenshot polish 2026-08-24",
+  "reviewed_by": "Machine draft with manual terminology and screenshot polish 2026-09-17",
   "rows": [
     {
       "source_file": "preact/src/layers/patch-notes-v2/patches/patch0124.tsx",

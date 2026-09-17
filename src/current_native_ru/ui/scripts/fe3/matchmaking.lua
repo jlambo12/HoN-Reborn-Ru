@@ -324,6 +324,10 @@ function Matchmaking:OpenHonorSystem()
 	ProfileV2:OpenWithPlayerName(Main.playerName, Enum.FSPanelDisplay.Sticky)
 end
 
+function Matchmaking:OpenCodeOfConduct()
+	ProfileV2:OpenCodeOfConduct()
+end
+
 local function SetNoticeLabel(text, type)
 
 	if type == 0 then
@@ -509,7 +513,6 @@ local function IsUnrankedOnlySelected()
 	local mode = Matchmaking.matchmakingOptions.mode
 	return HasUnrankedBit(mode) and not HasRankedBit(mode)
 end
-
 
 -- The 3-stack, 4-stack, high-MMR and rating-disparity conditions are all ranked party restrictions, and the
 -- backend applies none of them to unranked, so they must neither warn nor block the queue there. Cooldown and
@@ -701,7 +704,6 @@ local function UpdateQueueUI()
 	elseif condition == Enum.MatchmakingCondition.Normal then
 		SetNoticeLabel('', Enum.ErrorType.Normal)
 	end
-
 
 end
 
@@ -1449,6 +1451,12 @@ function Matchmaking:OnShow()
 		MatchmakingClient.RefreshPlayBanStatus()
 	end
 
+	-- Ratings are cached client side and a match changes them, so revalidate on the way in. This expires
+	-- before it repaints; a plain refresh would read the same cache and show the same numbers.
+	if MatchmakingClient.RefreshGroupRatings then
+		MatchmakingClient.RefreshGroupRatings()
+	end
+
 	npe.panelReady = true
 	Matchmaking:UpdateNewPlayerUpsell()
 end
@@ -1538,11 +1546,24 @@ local function MatchmakingPlayerStatus(widgetData, index, data)
 		widgetData.filled.leave:SetVisible(false)
 		widgetData.filled.kick:SetVisible(false)
 		widgetData.filled.add:SetVisible(false)
+		NCAnim:Release(widgetData.filled.name)
 	else
 		if widgetData.empty.root then widgetData.empty.root:SetVisible(false) end -- hide empty
 		if widgetData.filled.root then widgetData.filled.root:SetVisible(true) end -- show filled
 
-		widgetData.filled.name:SetText((data.isNewPlayer and ':newplayersprout: ' or '') .. data.displayName)
+		local leadIn = (data.isNewPlayer and ':newplayersprout: ' or '')
+		local composed = leadIn .. data.displayName
+		NCAnim:Release(widgetData.filled.name)
+		widgetData.filled.name:SetText(composed)
+		local namePrefix, modelName = WExt:SplitColoredName(data.displayName)
+		if namePrefix then
+			NCAnim:Track(widgetData.filled.name, {
+				prefix = namePrefix,
+				name = modelName,
+				leadIn = leadIn,
+				composed = composed,
+			})
+		end
 
 		widgetData.filled.caldavarRating:SetText(tostring(data.rankedCaldavarRating))
 		widgetData.filled.midwarsRating:SetText(tostring(data.rankedMidwarsRating))
@@ -2005,10 +2026,6 @@ end
 function Matchmaking:RolesChangedLocally()
 	UpdateQueueUI()
 end
-
-
-
-
 
 local function PartyQueueEligibility(...)
 	partyRefusals = {}

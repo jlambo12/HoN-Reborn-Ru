@@ -196,6 +196,19 @@ def main() -> int:
                 target.write_text(flexible.sub(replace_flexible, text), encoding="utf-8", newline="")
                 batch_count += len(flexible_matches)
                 continue
+            # Generated editorial batches pin each JSX fragment to its audited
+            # source line. A short fragment such as "and" can legitimately
+            # occur many times in the same patch page; in that case replace the
+            # reviewed occurrence nearest its source coordinate, not every
+            # unrelated occurrence in the document.
+            if expected == 1 and row.get("source_line"):
+                lines = text.splitlines(keepends=True)
+                pinned = dict(row)
+                pinned.setdefault("id", f"{source_name}:{row['source_line']}")
+                replace_on_line(lines, pinned)
+                target.write_text("".join(lines), encoding="utf-8", newline="")
+                batch_count += 1
+                continue
             coordinates = editorial_coordinates.get((source_name, english), [])
             if len(coordinates) != expected:
                 raise RuntimeError(

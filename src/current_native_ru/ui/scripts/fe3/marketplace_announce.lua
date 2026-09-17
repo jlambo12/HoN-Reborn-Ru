@@ -27,11 +27,88 @@ local countdownToken = 0
 local productRotationToken = 0
 local productRotationSuspended = false
 local priceRequestToken = 0
+local previewActionToken = 0
 local registersSetup = false
+local activeAbilityVideo = nil
+local videoOpenedFromModal = false
+local videoResumesRotation = false
+local abilityVideoToken = 0
+local UpdateCountdown, UpdateAnnouncePrice, StartProductRotation, GetPreviewStage
+local ABILITY_VIDEO_GROUPS = { 'compact', 'modal', 'video' }
+local ABILITY_VIDEO_SIZES = { compact = 3.6, modal = 5.2, video = 3 }
+local ABILITY_VIDEO_GUTTERS = { compact = .6, modal = .6, video = .3 }
+local ABILITY_VIDEO_COUNT = 4
 
 local MODEL_REVEAL_DELAY_MS = 200
 
 local MARKETPLACE_PRODUCTS = {
+	--[[ Disabled while Bloodaxe is the sole marketplace rotation product.
+	{
+		key = 'Hero.WitchSlayer.Sacrilege',
+		abilityPreviewPath = '/heroes/witch_slayer/sacrilege/',
+		abilityVideos = {
+			{ file = 'ability_01', icon = 'ability_01', label = 'Graveyard' },
+			{ file = 'ability_02', icon = 'ability_02', label = 'Miniaturization' },
+			{ file = 'ability_03', icon = 'ability_03', label = 'Power Drain' },
+			{ file = 'ability_04', icon = 'ability_04', label = 'Silver Bullet' },
+		},
+		title = 'Sacrilege',
+		shopCategory = 'HeroSkin',
+		productType = 'avatar',
+		rarity = 'legendary',
+		storeModel = '/heroes/witch_slayer/sacrilege/store/store.mdf',
+		storeEffect = '/heroes/witch_slayer/sacrilege/effects/body_store.effect',
+		modalStoreEffect = '/heroes/witch_slayer/sacrilege/effects/body_store.effect',
+		titleEffect = '/ui/effects/marketplace_sacrilege_witch_slayer_title.effect',
+		mainTitleEffectPosition = '0 0 -2',
+		titleImage = '/ui/fe3/elements/feature_avatar_title_1.png',
+		availabilityText = 'Этот облик нельзя продать.',
+		featureTitle = 'WHAT\'S NEW:',
+		limited = false,
+		marketable = false,
+		mainModelPosition = '0 0 -20',
+		mainModelScale = 0.95,
+		modalModelPosition = '0 -25 -20',
+		modalModelScale = 1,
+		defaultPreviewStage = ModelPanelShared.DYNAMIC_AVATAR_PREVIEWS['Hero.WitchSlayer.Sacrilege'].defaultPreviewStage,
+		previewStages = ModelPanelShared.DYNAMIC_AVATAR_PREVIEWS['Hero.WitchSlayer.Sacrilege'].previewStages,
+		featureFlags = {
+			vfx = true,
+			sfx = true,
+			voice = true,
+			anims = true,
+			icons = true,
+		},
+	},
+	--]]
+	{
+		key = 'Hero.Berzerker.Bloodaxe',
+		title = 'Bloodaxe Berzerker',
+		shopCategory = 'HeroSkin',
+		productType = 'avatar',
+		rarity = 'legendary',
+		storeModel = '/heroes/berzerker/bloodaxe/store/store.mdf',
+		storeEffect = '',
+		modalStoreEffect = '/heroes/berzerker/bloodaxe/effects/body_store.effect',
+		titleEffect = '/ui/effects/marketplace_bloodaxe_berzerker_title.effect',
+		titleImage = '/ui/fe3/elements/feature_avatar_title_1.png',
+		availabilityText = 'Этот облик нельзя продать.',
+		featureTitle = 'INCLUDES NEW:',
+		limited = false,
+		marketable = false,
+		mainModelPosition = '0 0 -20',
+		mainModelScale = 1.1,
+		modalModelPosition = '0 -25 -20',
+		modalModelScale = 1.15,
+		featureFlags = {
+			vfx = true,
+			sfx = true,
+			voice = true,
+			anims = true,
+			icons = false,
+		},
+	},
+	--[[ Disabled while Bloodaxe is configured as the solo marketplace product.
 	{
 		key = 'Hero.Chipper.Warforged',
 		title = 'Warforged Chipper',
@@ -86,6 +163,7 @@ local MARKETPLACE_PRODUCTS = {
 			icons = false,
 		},
 	},
+	--]]
 	--[[
 	{
 		key = 'Announcer.ThaiEnglish',
@@ -116,9 +194,8 @@ local MARKETPLACE_PRODUCTS = {
 
 local ANNOUNCE_FEATURE_BADGES = { 'vfx', 'sfx', 'voice', 'anims', 'icons' }
 
-local FEATURE_BADGE_SPACING_H = 6.0
-
 local stageCache = {}
+local previewStageIndexes = {}
 local activeProductIndex = 1
 local activeProduct = MARKETPLACE_PRODUCTS[activeProductIndex]
 local announceWidgets = {}
@@ -169,7 +246,7 @@ local function CacheMarketplaceWidgets()
 		announceWidgets.statusRoot = Main:GetWidget('marketplace_announce_status_root')
 		announceWidgets.status = Main:GetWidget('marketplace_announce_status_label')
 		announceWidgets.subtitleModal = Main:GetWidget('marketplace_announce_available_label_modal')
-		announceWidgets.includesTitle = Main:GetWidget('marketplace_announce_includes_title')
+		announceWidgets.includesTitle = Main:GetWidget('marketplace_announce_features_title')
 		announceWidgets.countdownRoot = Main:GetWidget('marketplace_announce_countdown_root')
 		announceWidgets.mainButton = Main:GetWidget('marketplace_announce_purchase_button')
 		announceWidgets.mainLabel = Main:GetWidget('marketplace_announce_purchase_label')
@@ -179,6 +256,24 @@ local function CacheMarketplaceWidgets()
 		announceWidgets.demoPlayIcon = Main:GetWidget('marketplace_announce_demo_button_modal_play_icon')
 		announceWidgets.swapEffect = Main:GetWidget('marketplace_announce_swap_effect')
 		announceWidgets.swapEffectModal = Main:GetWidget('marketplace_announce_swap_effect_modal')
+		announceWidgets.previewStagePortraitRoot = Main:GetWidget('marketplace_announce_stage_portrait_root')
+		announceWidgets.previewStagePortrait = Main:GetWidget('marketplace_announce_stage_portrait')
+		announceWidgets.previewStageRoots = {
+			Main:GetWidget('marketplace_announce_stage_selector'),
+			Main:GetWidget('marketplace_announce_stage_selector_compact'),
+		}
+		announceWidgets.previewStageButtonGroups = {
+			{
+				Main:GetWidget('marketplace_announce_stage_button_1'),
+				Main:GetWidget('marketplace_announce_stage_button_2'),
+				Main:GetWidget('marketplace_announce_stage_button_3'),
+			},
+			{
+				Main:GetWidget('marketplace_announce_stage_button_compact_1'),
+				Main:GetWidget('marketplace_announce_stage_button_compact_2'),
+				Main:GetWidget('marketplace_announce_stage_button_compact_3'),
+			},
+		}
 	end
 end
 
@@ -211,6 +306,25 @@ local function SetWidgetVisible(widget, visible)
 	if widget then widget:SetVisible(visible and 1 or 0) end
 end
 
+local function ResetPreviewModelAnimation(modelPanel)
+	if not modelPanel then return end
+	modelPanel:SetAnim('')
+	modelPanel:SetAnim('idle')
+	modelPanel:SetAnimTime(0)
+end
+
+local function CancelPreviewStageAction()
+	previewActionToken = previewActionToken + 1
+	ResetPreviewModelAnimation(announceModelPanel)
+	ResetPreviewModelAnimation(announceModelPanelModal)
+end
+
+local function SetModalPreviewActive(modalActive)
+	CacheMarketplaceWidgets()
+	SetWidgetVisible(announceModelPanelModal, modalActive)
+	SetWidgetVisible(announceModelPanel, not modalActive)
+end
+
 local function SetWidgetText(widget, text)
 	if widget then widget:SetText(text or '') end
 end
@@ -222,6 +336,121 @@ end
 local function GetActiveProduct()
 	activeProduct = MARKETPLACE_PRODUCTS[activeProductIndex]
 	return activeProduct
+end
+
+local function GetAvatarPresentation(product)
+	if not product or product.productType ~= 'avatar' then return nil end
+	local previewStage = GetPreviewStage and GetPreviewStage(product) or nil
+	return ModelPanelShared:ResolveAvatarPresentation(product, previewStage)
+end
+
+local function GetAbilityVideo(product, index, presentation)
+	presentation = presentation or GetAvatarPresentation(product)
+	local ability = presentation and presentation.abilities and presentation.abilities[index]
+	if not ability or not ability.icon then return nil end
+	local path = InterfaceManager.MarketplaceAbilityVideo and ability.video or nil
+	return ability, path
+end
+
+local function ApplyAbilityVideoControls(product)
+	local presentation = GetAvatarPresentation(product)
+	local style = presentation and presentation.style or {}
+	for _, group in ipairs(ABILITY_VIDEO_GROUPS) do
+		local count = 0
+		local size = ABILITY_VIDEO_SIZES[group]
+		local gutter = ABILITY_VIDEO_GUTTERS[group]
+		for index = 1, ABILITY_VIDEO_COUNT do
+			local name = 'marketplace_announce_ability_' .. group .. '_' .. index
+			local button = Main:GetWidget(name)
+			local ability, path = GetAbilityVideo(product, index, presentation)
+			SetWidgetVisible(button, ability ~= nil)
+			if ability and button then
+				button:SetX(tostring(count * (size + gutter)) .. 'h')
+				-- Keep icon-only entries interactive so the shared hover treatment and
+				-- ability tooltip still work when no video has been supplied yet.
+				button:SetEnabled(1)
+				local icon = Main:GetWidget(name .. '_icon')
+				SetWidgetTexture(icon, ability.icon)
+				if icon then
+					icon:SetColor(ability.color or (path and style.abilityIconColor or style.abilityUnavailableColor))
+				end
+				local selected = Main:GetWidget(name .. '_selected')
+				SetWidgetVisible(Main:GetWidget(name .. '_hover'), false)
+				if selected and style.abilitySelectedBorderColor then
+					selected:SetBorderColor(style.abilitySelectedBorderColor)
+				end
+				SetWidgetVisible(selected, path and activeAbilityVideo == index)
+				count = count + 1
+			end
+		end
+		local root = Main:GetWidget('marketplace_announce_abilities_' .. group)
+		if root then
+			root:SetWidth(tostring(math.max(0, count * size + math.max(0, count - 1) * gutter)) .. 'h')
+			root:SetVisible(count > 0 and 1 or 0)
+		end
+	end
+end
+
+local function StopAbilityVideo()
+	abilityVideoToken = abilityVideoToken + 1
+	activeAbilityVideo = nil
+	if videoResumesRotation then productRotationSuspended = false end
+	videoResumesRotation = false
+	if InterfaceManager.MarketplaceAbilityVideo then InterfaceManager.MarketplaceAbilityVideo('') end
+	SetWidgetVisible(Main:GetWidget('marketplace_announce_video_root'), false)
+end
+
+function MarketplaceAnnounce:AbilityVideoTooltip(widget, index)
+	local ability = GetAbilityVideo(GetActiveProduct(), index)
+	if ability then Tooltips:TooltipHover_Main(widget, ability.label, 'bottom') end
+end
+
+function MarketplaceAnnounce:SetAbilityHover(group, index, visible)
+	local hover = Main:GetWidget('marketplace_announce_ability_' .. group .. '_' .. index .. '_hover')
+	SetWidgetVisible(hover, visible)
+end
+
+function MarketplaceAnnounce:ShowAbilityVideo(index, fromModal)
+	local ability, path = GetAbilityVideo(GetActiveProduct(), index)
+	if not ability or not path then
+		ApplyAbilityVideoControls(GetActiveProduct())
+		return
+	end
+	if not activeAbilityVideo then
+		videoOpenedFromModal = fromModal == true
+		videoResumesRotation = not productRotationSuspended
+		productRotationSuspended = true
+		productRotationToken = productRotationToken + 1
+	end
+	CancelPreviewStageAction()
+	Tooltips:TooltipHover_Main(false)
+	activeAbilityVideo = index
+	abilityVideoToken = abilityVideoToken + 1
+	local token = abilityVideoToken
+	ApplyAbilityVideoControls(GetActiveProduct())
+	SetWidgetText(Main:GetWidget('marketplace_announce_video_title'), ability.label)
+	local root = Main:GetWidget('marketplace_announce_video_root')
+	local parent = Main:GetWidget(videoOpenedFromModal and 'marketplace_announce_modal_frame' or 'marketplace_announce_root')
+	if root:GetParent() ~= parent then
+		root:SetVisible(0)
+		root:SetParent(parent)
+	end
+	-- Reparenting is deferred by the widget tree until the next frame.
+	root:Sleep(1, function()
+		if token ~= abilityVideoToken then return end
+		root:SetWidth('100%')
+		root:SetHeight('100%')
+		root:SetVisible(1)
+		root:BringToFront()
+		InterfaceManager.MarketplaceAbilityVideo(path)
+	end)
+end
+
+function MarketplaceAnnounce:HideAbilityVideo()
+	local resumeRotation = videoResumesRotation
+	StopAbilityVideo()
+	ApplyAbilityVideoControls(GetActiveProduct())
+	if resumeRotation and Main.marketplaceAnnounceEnabled then StartProductRotation() end
 end
 
 local function ProductIsLimited(product)
@@ -328,14 +557,12 @@ local function ApplyFeatureBadges()
 
 	if not hasBadges then return end
 
-	local badgeCount = #activeBadgeIndexes
-	for displayIndex = 1, badgeCount do
+	for displayIndex = 1, #activeBadgeIndexes do
 		local badgeKey = ANNOUNCE_FEATURE_BADGES[activeBadgeIndexes[displayIndex]]
 		local root = Main:GetWidget('marketplace_announce_include_badge_' .. badgeKey)
-		local offsetX = (displayIndex - ((badgeCount + 1) * 0.5)) * FEATURE_BADGE_SPACING_H
 
 		if root then
-			root:SetX(format('%.2fh', offsetX))
+			root:SetX('0h')
 			root:SetVisible(1)
 		end
 	end
@@ -383,6 +610,51 @@ local function ApplyProductDemoButton(product)
 	SetWidgetVisible(announceWidgets.demoPlayIcon, isAnnouncer)
 end
 
+GetPreviewStage = function(product)
+	if not product or not product.previewStages then return nil, nil end
+
+	local index = previewStageIndexes[product.key] or product.defaultPreviewStage or 1
+	if not product.previewStages[index] then index = 1 end
+	previewStageIndexes[product.key] = index
+	return product.previewStages[index], index
+end
+
+local function ApplyPreviewStageControls(product)
+	CacheMarketplaceWidgets()
+	local stages = product and product.previewStages
+	local activeStage, activeIndex = GetPreviewStage(product)
+	local presentation = product and product.productType == 'avatar'
+		and ModelPanelShared:ResolveAvatarPresentation(product, activeStage)
+		or nil
+	local portrait = presentation and presentation.portrait
+	local hasPortrait = portrait and portrait ~= ''
+	if hasPortrait then
+		SetWidgetTexture(announceWidgets.previewStagePortrait, portrait)
+		if announceWidgets.previewStagePortrait and presentation.style then
+			announceWidgets.previewStagePortrait:SetColor(presentation.style.portraitColor)
+		end
+	end
+	SetWidgetVisible(announceWidgets.previewStagePortraitRoot, hasPortrait)
+
+	if announceWidgets.previewStageRoots then
+		for i = 1, #announceWidgets.previewStageRoots do
+			SetWidgetVisible(announceWidgets.previewStageRoots[i], stages and #stages > 0)
+		end
+	end
+	if not announceWidgets.previewStageButtonGroups then return end
+
+	for groupIndex = 1, #announceWidgets.previewStageButtonGroups do
+		local buttons = announceWidgets.previewStageButtonGroups[groupIndex]
+		for i = 1, #buttons do
+			local button = buttons[i]
+			if button then
+				button:SetVisible(stages and stages[i] and 1 or 0)
+				button:SetEnabled(i ~= activeIndex and 1 or 0)
+			end
+		end
+	end
+end
+
 local function SetupMarketplaceStageWidget(stageWidget, modelPanel, stageCachePrefix, lightingCachePrefix, product, isModal)
 	if not stageWidget or not modelPanel or not product then return end
 
@@ -421,19 +693,27 @@ local function SetupMarketplaceStageWidget(stageWidget, modelPanel, stageCachePr
 		end
 	end
 
-	modelPanel:SetModel(product.storeModel)
+	local previewStage = GetPreviewStage(product)
+	local modelPath = previewStage and previewStage.model or product.storeModel
+	local previewEffect = previewStage and ((isModal and previewStage.modalEffect) or previewStage.mainEffect)
+	local effectPath = previewEffect or ((isModal and product.modalStoreEffect) or product.storeEffect)
+	local modelPosition = isModal and product.modalModelPosition or product.mainModelPosition
+	local modelScale = isModal and product.modalModelScale or product.mainModelScale
+	modelPanel:SetModel(modelPath)
 	modelPanel:SetAnim('idle')
-	modelPanel:SetModelPosition(isModal and product.modalModelPosition or product.mainModelPosition)
+	modelPanel:SetModelPosition(modelPosition)
 	modelPanel:SetModelAngles(modelAngles)
-	modelPanel:SetModelScale(isModal and product.modalModelScale or product.mainModelScale)
+	modelPanel:SetModelScale(modelScale)
 	ModelPanelShared:ApplyThemeSunOverrides(modelPanel, product.key)
-	modelPanel:SetEffect((isModal and product.modalStoreEffect) or product.storeEffect)
+	modelPanel:SetEffect(effectPath)
 end
 
 local function SetupMarketplaceStage(revealModel)
+	ApplyAbilityVideoControls(GetActiveProduct())
 	local product = GetActiveProduct()
 	CacheMarketplaceWidgets()
 	if not announceModelPanel or not product then return end
+	ApplyPreviewStageControls(product)
 
 	local useAnnouncerStage = product.stage and product.stage.type == 'announcer'
 	local stageWidget = useAnnouncerStage and announceAnnouncerStageWidget or announceStageWidget
@@ -445,6 +725,8 @@ local function SetupMarketplaceStage(revealModel)
 	SetWidgetVisible(announceAnnouncerStageWidget, useAnnouncerStage)
 
 	if announceWidgets.titleEffect then
+		announceWidgets.titleEffect:SetModelPosition(product.mainTitleEffectPosition or '0 0 0')
+		announceWidgets.titleEffect:SetModelScale(product.mainTitleEffectScale or 1)
 		announceWidgets.titleEffect:SetEffect(product.titleEffect or '')
 	end
 	ApplyProductTitleImage(product)
@@ -472,6 +754,7 @@ end
 local function SetupMarketplaceModalStage()
 	local product = GetActiveProduct()
 	CacheMarketplaceWidgets()
+	ApplyPreviewStageControls(product)
 
 	if announceModelPanelModal and product then
 		local useAnnouncerStage = product.stage and product.stage.type == 'announcer'
@@ -484,6 +767,8 @@ local function SetupMarketplaceModalStage()
 		SetWidgetVisible(announceAnnouncerStageWidgetModal, useAnnouncerStage)
 
 		if announceWidgets.titleEffectModal then
+			announceWidgets.titleEffectModal:SetModelPosition(product.modalTitleEffectPosition or '0 0 0')
+			announceWidgets.titleEffectModal:SetModelScale(product.modalTitleEffectScale or 1)
 			announceWidgets.titleEffectModal:SetEffect(product.titleEffect or '')
 		end
 		ApplyProductTitleImage(product)
@@ -508,13 +793,66 @@ local function ReplayModalModel()
 	announceModelPanelModal:SetAnim('')
 	announceModelPanelModal:SetAnim('idle')
 	announceModelPanelModal:SetAnimTime(0)
-	if product then announceModelPanelModal:SetEffect(product.modalStoreEffect or product.storeEffect) end
+	if product then
+		local previewStage = GetPreviewStage(product)
+		announceModelPanelModal:SetEffect(previewStage and previewStage.modalEffect or product.modalStoreEffect or product.storeEffect)
+	end
+end
+
+local function PlayPreviewStageSound(stage)
+	if not stage or not stage.previewSound or stage.previewSound == '' then return end
+	PlaySound(stage.previewSound, stage.previewSoundVolume or 1.0)
+end
+
+local function PlayPreviewStageAction(stage, modelPanel, actionToken)
+	if not stage or not modelPanel or not stage.previewAnim then return end
+
+	modelPanel:SetAnim('')
+	modelPanel:SetAnim(stage.previewAnim)
+	modelPanel:SetAnimTime(0)
+
+	local animDurationMs = stage.previewAnimDurationMs or 0
+	interface:Sleep(animDurationMs, function()
+		if previewActionToken ~= actionToken then return end
+		modelPanel:SetAnim('idle')
+		modelPanel:SetAnimTime(0)
+	end)
+end
+
+function MarketplaceAnnounce:SelectPreviewStage(index, fromModal)
+	local product = GetActiveProduct()
+	if not product or not product.previewStages or not product.previewStages[index] then return end
+	if previewStageIndexes[product.key] == index then return end
+	local modalActive = fromModal
+	if modalActive == nil then
+		modalActive = announceWidgets.modalRoot and announceWidgets.modalRoot:IsVisible() ~= 0
+	end
+
+	previewActionToken = previewActionToken + 1
+	local actionToken = previewActionToken
+	local previewStage = product.previewStages[index]
+	previewStageIndexes[product.key] = index
+	PlayPreviewStageSound(previewStage)
+	ApplyPreviewStageControls(product)
+	SetupMarketplaceStage(true)
+	if modalActive then
+		SetupMarketplaceModalStage()
+		ReplayModalModel()
+		if announceModelPanelModal then announceModelPanelModal:SetColor('1 1 1 1') end
+	end
+	PlayPreviewStageAction(
+		previewStage,
+		modalActive and announceModelPanelModal or announceModelPanel,
+		actionToken
+	)
 end
 
 local function HideMarketplaceAnnounce()
+	StopAbilityVideo()
 	Main.marketplaceAnnounceEnabled = false
 	countdownToken = countdownToken + 1
 	productRotationToken = productRotationToken + 1
+	previewActionToken = previewActionToken + 1
 	productRotationSuspended = false
 	priceRequestToken = priceRequestToken + 1
 	ModelPanelShared:ClearStageCache(stageCache)
@@ -533,16 +871,21 @@ local function HideMarketplaceAnnounce()
 	if modalRoot then
 		modalRoot:SetVisible(0)
 	end
+	SetModalPreviewActive(false)
 end
 
-local UpdateCountdown, UpdateAnnouncePrice, StartProductRotation
-
 function MarketplaceAnnounce:ShowModal()
+	StopAbilityVideo()
+	ApplyAbilityVideoControls(GetActiveProduct())
 	if not productRotationSuspended then
 		productRotationSuspended = true
 		productRotationToken = productRotationToken + 1
 	end
 
+	CacheMarketplaceWidgets()
+	CancelPreviewStageAction()
+	SetModalPreviewActive(true)
+	SetWidgetVisible(announceWidgets.root, false)
 	ApplyProductText(GetActiveProduct())
 	ApplyFeatureBadges()
 	MarketplaceAnnounce:ApplyRarityTheme()
@@ -559,14 +902,19 @@ function MarketplaceAnnounce:ShowModal()
 end
 
 function MarketplaceAnnounce:HideModal()
+	StopAbilityVideo()
+	ApplyAbilityVideoControls(GetActiveProduct())
 	local resumeProductRotation = productRotationSuspended
 	productRotationSuspended = false
+	CancelPreviewStageAction()
 
 	if Store and Store.HideAnnouncerFullscreenPreview then
 		Store:HideAnnouncerFullscreenPreview()
 	end
 	local modalRoot = Main:GetWidget('marketplace_announce_modal_root')
 	if modalRoot then modalRoot:SetVisible(0) end
+	SetModalPreviewActive(false)
+	SetWidgetVisible(announceWidgets.root, Main.marketplaceAnnounceEnabled)
 
 	if resumeProductRotation and Main.marketplaceAnnounceEnabled then
 		StartProductRotation()
@@ -661,6 +1009,7 @@ function MarketplaceAnnounce:OpenProduct()
 end
 
 local function ActivateProduct(index, revealModel)
+	StopAbilityVideo()
 	activeProductIndex = index
 	activeProduct = MARKETPLACE_PRODUCTS[activeProductIndex]
 	if not activeProduct then
@@ -844,6 +1193,7 @@ function MarketplaceAnnounce:ApplyRarityTheme()
 end
 
 function MarketplaceAnnounce:Init()
+	StopAbilityVideo()
 	WExt:ProcessInitWidgets(MarketplaceAnnounce, Main)
 
 	ModelPanelShared:ClearStageCache(stageCache)
@@ -861,6 +1211,7 @@ function MarketplaceAnnounce:Init()
 	productRotationSuspended = false
 	priceRequestToken = priceRequestToken + 1
 	lastAnnouncerDemoKey = nil
+	previewStageIndexes = {}
 	activeProductIndex = FindAvailableProductIndex(1) or 1
 	activeProduct = MARKETPLACE_PRODUCTS[activeProductIndex]
 

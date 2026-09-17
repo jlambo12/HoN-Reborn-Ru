@@ -14,7 +14,7 @@
     {"source_file":"ui/fe3/templates/store_featured_templates.package","english":"label=\"ICONS\"","russian":"label=\"ЗНАЧКИ\"","expected_matches":1},
     {"source_file":"ui/fe3/templates/store_featured_templates.package","english":"label=\"Preview\"","russian":"label=\"Предпросмотр\"","expected_matches":1},
     {"source_file":"ui/fe3/templates/store_featured_templates.package","english":"label=\"Unlock\"","russian":"label=\"Открыть\"","expected_matches":1},
-    {"source_file":"ui/fe3/templates/store_featured_templates.package","english":"content=\"MARKETPLACE\"","russian":"content=\"ТОРГОВАЯ ПЛОЩАДКА\"","expected_matches":1},
+    {"source_file":"ui/fe3/templates/store_featured_templates.package","english":"content=\"MARKETPLACE\"","russian":"content=\"ТОРГОВАЯ ПЛОЩАДКА\"","expected_matches":1,"retired":true},
     {"source_file":"ui/fe3/sections/bottom_bar.package","english":"tooltip=\"Friends\"","russian":"tooltip=\"Друзья\"","expected_matches":1},
     {"source_file":"ui/fe3/sections/bottom_bar.package","english":"tooltip=\"Messages\"","russian":"tooltip=\"Сообщения\"","expected_matches":1},
     {"source_file":"ui/fe3/sections/bottom_bar.package","english":"tooltip=\"Notifications\"","russian":"tooltip=\"Уведомления\"","expected_matches":1}

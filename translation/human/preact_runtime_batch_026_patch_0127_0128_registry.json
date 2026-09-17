@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "batch_id": "PREACT_RUNTIME_026_PATCH_0127_0128_REGISTRY",
+  "scope": "Patch list metadata for 0.12.7 and 0.12.8",
+  "reviewed_by": "Codex manual translation 2026-09-17",
+  "rows": [
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/data/patchregistry.ts",
+      "english": "September 16th, 2026",
+      "russian": "16 сентября 2026 года",
+      "expected_matches": 1
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/data/patchregistry.ts",
+      "english": "The Berzerker comes back swinging.",
+      "russian": "Berzerker возвращается в бой.",
+      "expected_matches": 1
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/data/patchregistry.ts",
+      "english": "September 7th, 2026",
+      "russian": "7 сентября 2026 года",
+      "expected_matches": 1
+    },
+    {
+      "source_file": "preact/src/layers/patch-notes-v2/data/patchregistry.ts",
+      "english": "A Sacrilege that arrives in three stages.",
+      "russian": "Sacrilege — облик, проходящий три стадии.",
+      "expected_matches": 1
+    }
+  ]
+}

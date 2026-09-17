@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package>
 
+	<template name="marketplace_announce_ability_button">
+		<button name="marketplace_announce_ability_{group}_{index}" size="{size}" color="invisible" visible="0"
+			onclicklua="MarketplaceAnnounce:ShowAbilityVideo({index}, {from_modal})"
+			onmouseoverlua="MarketplaceAnnounce:SetAbilityHover('{group}', {index}, true) MarketplaceAnnounce:AbilityVideoTooltip(self, {index})"
+			onmouseoutlua="MarketplaceAnnounce:SetAbilityHover('{group}', {index}, false) Tooltips:TooltipHover_Main(false)">
+			<panel size="100%" color=".025 .012 .008 1" noclick="1" />
+			<image name="marketplace_announce_ability_{group}_{index}_icon" size="-.36h" align="center" valign="center" texture="$invis" color="1 1 1 1" noclick="1" />
+			<frame size="100%" texture="/ui/hd_ui/frames/rounded_grad_minor.tga" borderthickness=".1h" color="invisible" bordercolor=".72 .48 .15 .65" noclick="1" />
+			<frame name="marketplace_announce_ability_{group}_{index}_hover" size="+.3h" align="center" valign="center" texture="/ui/hd_ui/frames/rounded_grad_minor.tga" borderthickness=".14h" color="1 .58 .14 .18" bordercolor="1 .86 .34 1" visible="0" noclick="1" />
+			<frame name="marketplace_announce_ability_{group}_{index}_selected" size="+.3h" align="center" valign="center" texture="/ui/hd_ui/frames/rounded_grad_minor.tga" borderthickness=".15h" color="invisible" bordercolor="1 .89 .48 .8" visible="0" noclick="1" />
+		</button>
+	</template>
+
 	<!-- Marketplace Announce -->
 	<template name="marketplace_mp_button">
 		<panel name="{root_name}" style="sticky" width="{root_width=100%}" height="{height=5h}" visible="{visible=1}">
@@ -103,11 +116,11 @@
 						<image texture="/ui/hd_ui/elements/grad_linear_vert.tga" align="center" width="93%" height="100%" color="0 0 0 0.5" noclick="1" />
 						<panel width="100%" height="100%" noclick="1">
 							<instance name="marketplace_countdown" id="days" unit="DAYS" value="05" x=".45h" />
-							<image texture="/ui/hd_ui/elements/white.tga" x="6.85h" width="1@" height="62%" valign="center" color="#d5a44e77" noclick="1" />
+							<image texture="$white" x="6.85h" width="1@" height="62%" valign="center" color="#d5a44e77" noclick="1" />
 							<instance name="marketplace_countdown" id="hours" unit="HOURS" value="04" x="7.15h" />
-							<image texture="/ui/hd_ui/elements/white.tga" x="13.55h" width="1@" height="62%" valign="center" color="#d5a44e77" noclick="1" />
+							<image texture="$white" x="13.55h" width="1@" height="62%" valign="center" color="#d5a44e77" noclick="1" />
 							<instance name="marketplace_countdown" id="mins" unit="MINUTES" value="17" x="13.85h" />
-							<image texture="/ui/hd_ui/elements/white.tga" x="20.25h" width="1@" height="62%" valign="center" color="#d5a44e77" noclick="1" />
+							<image texture="$white" x="20.25h" width="1@" height="62%" valign="center" color="#d5a44e77" noclick="1" />
 							<instance name="marketplace_countdown" id="secs" unit="SECONDS" value="59" x="20.55h" />
 						</panel>
 					</frame>
@@ -126,6 +139,42 @@
 
 			</panel>
 		</panel>
+	</template>
+
+	<!-- Small-card variant of the ornate level medallion. Everything inside is sized off the
+	     button, so a caller can scale the whole medallion through badge_w / badge_h. -->
+	<template name="marketplace_announce_stage_button_compact_state">
+		<image texture="/ui/fe3/elements/dpp/icon_vfx.png" width="100%" height="100%" align="center" color="{badge_color}" noclick="1" />
+		<image texture="/ui/hd_ui/mask/misc_circle_cutout.tga" width="48.56@" height="48.56%" y="12.68%" align="center" color="{face_color}" noclick="1" />
+		<label y="13.4%" width="57.42@" height="57.42%" align="center" font="{number_font=dyn_bold_11}" content="{level}"
+			textalign="center" textvalign="center" shadow="1" outline="1" outlinecolor="#2b1000"
+			gradientstart="#fff7c7" gradientmid="{number_mid=#e9b93f}" gradientmidpos="0.5"
+			gradientend="#8a4308" gradientdirection="vertical" noclick="1" />
+		<label y="75.36%" width="67.46@" height="14.35%" align="center" font="{plaque_font=dyn_bold_7}" fitx="1" fitxpadding=".07h" content="LEVEL"
+			textalign="center" textvalign="center" shadow="1" gradientstart="#fff7c7" gradientmid="#d6a724"
+			gradientmidpos="0.5" gradientend="#6c3307" gradientdirection="vertical" noclick="1" />
+	</template>
+
+	<template name="marketplace_announce_stage_button_compact">
+		<button name="{button_prefix=marketplace_announce_stage_button_compact_}{index}" width="{badge_w=3.17h}" height="{badge_h=4.18h}" x="{x=0}" y="{y=0}" color="invisible"
+			onclicklua="PlaySound('/shared/sounds/ui/menu/button_click.wav') {stage_handler=MarketplaceAnnounce}:SelectPreviewStage({index}, false)"
+			onmouseoverlua="PlaySound('/shared/sounds/ui/button_over_02.wav')"
+		>
+			<widgetstate statename="up">
+				<instance name="marketplace_announce_stage_button_compact_state" level="{level}" number_font="{number_font=dyn_bold_11}" plaque_font="{plaque_font=dyn_bold_7}" badge_color=".72 .62 .42 1" face_color=".035 .025 .015 .97" />
+			</widgetstate>
+			<widgetstate statename="over">
+				<instance name="marketplace_announce_stage_button_compact_state" level="{level}" number_font="{number_font_over=dyn_bold_12}" plaque_font="{plaque_font=dyn_bold_7}" badge_color="1.12 1.05 .84 1" face_color=".11 .045 .015 .98" number_mid="#ffd861" />
+			</widgetstate>
+			<widgetstate statename="down">
+				<instance name="marketplace_announce_stage_button_compact_state" level="{level}" number_font="{number_font=dyn_bold_11}" plaque_font="{plaque_font=dyn_bold_7}" badge_color=".8 .68 .46 1" face_color=".025 .018 .01 .99" />
+			</widgetstate>
+			<widgetstate statename="disabled">
+				<instance name="marketplace_announce_stage_button_compact_state" level="{level}" number_font="{number_font_over=dyn_bold_12}" plaque_font="{plaque_font=dyn_bold_7}" badge_color="1.15 1.08 .9 1" face_color=".15 .055 .012 .99" number_mid="#ffe47a" />
+			</widgetstate>
+			<modelpanel width="68.9@" height="68.9%" y="4.07%" align="center" valign="top" style="button_hover_effect_style"
+				visible="1" noclick="1" onshowlua="self:SetEffect('/ui/effects/marketplace_announce_badge.effect')" />
+		</button>
 	</template>
 
 	<frame name="marketplace_announce_root" x=".8h" y="7h" width="32.2h" style="grow_noregrow_noinvis" texture="/ui/hd_ui/frames/rounded_grad_minor.tga" color="#280a1d86" borderthickness=".5h" visible="0">
@@ -152,7 +201,7 @@
 		</panel>
 
 		<!-- Title effect - renders BEFORE the character so character paints over it -->
-		<modelpanel name="marketplace_announce_title_effect" style="button_hover_effect_style" width="100%" height="60%" y="-2h" valign="top" visible="1" noclick="1"/>
+		<modelpanel name="marketplace_announce_title_effect" style="marketplace_announce_title_effect_style" width="100%" height="36h" y="-7.5h" valign="top" visible="1" noclick="1"/>
 
 		<!-- Title banner image - renders BEFORE the character so character paints over it -->
 		<panel height="10h" noclick="1">
@@ -209,6 +258,24 @@
 			</widgetstate>
 		</button>
 
+		<!-- Shared avatar ability strip; icons remain visible when a preview video is unavailable. -->
+		<panel name="marketplace_announce_abilities_compact" width="16.2h" height="3.6h" align="center" valign="bottom" y="-8.55h" visible="0" noclick="1">
+			<instance name="marketplace_announce_ability_button" group="compact" index="1" size="3.6h" from_modal="false" />
+			<instance name="marketplace_announce_ability_button" group="compact" index="2" size="3.6h" from_modal="false" />
+			<instance name="marketplace_announce_ability_button" group="compact" index="3" size="3.6h" from_modal="false" />
+			<instance name="marketplace_announce_ability_button" group="compact" index="4" size="3.6h" from_modal="false" />
+		</panel>
+
+		<!-- Compact progressive avatar stage selector, stacked down the right edge. -->
+		<panel name="marketplace_announce_stage_selector_compact" width="3.8h" height="15.56h" x="-1.5h" align="right" valign="center" visible="0" noclick="1">
+			<instance name="marketplace_announce_stage_button_compact" index="1" level="1" x="0" y="0"
+				badge_w="3.8h" badge_h="5.02h" number_font="dyn_bold_13" number_font_over="dyn_bold_14" plaque_font="dyn_bold_8" />
+			<instance name="marketplace_announce_stage_button_compact" index="2" level="6" x="0" y="5.27h"
+				badge_w="3.8h" badge_h="5.02h" number_font="dyn_bold_13" number_font_over="dyn_bold_14" plaque_font="dyn_bold_8" />
+			<instance name="marketplace_announce_stage_button_compact" index="3" level="11" x="0" y="10.54h"
+				badge_w="3.8h" badge_h="5.02h" number_font="dyn_bold_13" number_font_over="dyn_bold_14" plaque_font="dyn_bold_8" />
+		</panel>
+
 		<!-- Featured frame border -->
 		<panel size="100%" noclick="1">
 			<image valign="center" width=".5h" align="left" texture="/ui/fe3/store/featured/featured_frame_l.tga" noclick="1"/>
@@ -232,11 +299,47 @@
 	</frame>
 
 	<template name="marketplace_announce_include_badge">
-		<panel name="marketplace_announce_include_badge_{id}" width="5.25h" height="6.95h" align="center" visible="0" noclick="1">
-			<image name="marketplace_announce_include_badge_icon_{id}" texture="{icon=$invis}" width="100%" height="100%" align="center" valign="center" noclick="1" />
-			<modelpanel name="marketplace_announce_include_badge_effect_{id}" width="4.75h" height="4.75h" y=".28h" align="center" valign="top" style="button_hover_effect_style" visible="1" noclick="1" onshowlua="self:SetEffect('/ui/effects/marketplace_announce_badge.effect')" />
-			<label name="marketplace_announce_include_badge_label_{id}" y="5.2h" width="4.65h" height="1h" align="center" font="dyn_bold_9" fitx="1" fitxpadding=".2h" content="{label}" textalign="center" textvalign="center" shadow="1" gradientstart="#ffffff" gradientmid="#d6a724" gradientmidpos="0.5" gradientend="#5f2f0c" gradientdirection="vertical" noclick="1" />
+		<panel width="22h" height="2h" x="{wrapper_x=0}" y="{y=0}" align="left" noclick="1">
+			<panel name="marketplace_announce_include_badge_{id}" width="22h" height="2h" align="left" visible="0" noclick="1">
+				<image texture="/ui/hd_ui/mask/diamond_mask.tga" size=".78h" x=".28h" align="left" valign="center" color="#d42b27" noclick="1" />
+				<image texture="/ui/hd_ui/elements/diamond_border.tga" size=".78h" x=".28h" align="left" valign="center" color="#ff7040" noclick="1" />
+				<label name="marketplace_announce_include_badge_label_{id}" x="1.55h" width="20.25h" height="100%" font="dyn_bold_10" fitx="1" fitxpadding=".2h" content="{label}" textalign="left" textvalign="center" shadow="1" gradientstart="#fff6ce" gradientmid="#dda83a" gradientmidpos="0.55" gradientend="#8b4a13" gradientdirection="vertical" noclick="1" />
+			</panel>
 		</panel>
+	</template>
+
+	<template name="marketplace_announce_stage_button_state">
+		<image texture="/ui/fe3/elements/dpp/icon_vfx.png" width="100%" height="100%" color="{badge_color}" noclick="1" />
+		<!-- Cover the VFX pictogram while retaining the ornate baked-gold surround. -->
+		<image texture="/ui/hd_ui/mask/misc_circle_cutout.tga" size="4.02h" y="1.06h" align="center" color="{face_color}" noclick="1" />
+		<label y="1.06h" width="4.44h" height="4.44h" align="center" font="{number_font=dyn_bold_20}" content="{level}"
+			textalign="center" textvalign="center" shadow="1" outline="1" outlinecolor="#2b1000"
+			gradientstart="{number_start=#fff7c7}" gradientmid="{number_mid=#e9b93f}" gradientmidpos="0.5"
+			gradientend="{number_end=#8a4308}" gradientdirection="vertical" noclick="1" />
+		<label y="6.24h" width="5.58h" height="1.2h" align="center" font="dyn_bold_10" content="LEVEL"
+			textalign="center" textvalign="center" shadow="1" color="{plaque_color=#d6a724}" noclick="1" />
+	</template>
+
+	<template name="marketplace_announce_stage_button">
+		<button name="marketplace_announce_stage_button_{index}" width="6.3h" height="8.34h" x="{x=0}" y="{y=0}" color="invisible"
+			onclicklua="PlaySound('/shared/sounds/ui/menu/button_click.wav') MarketplaceAnnounce:SelectPreviewStage({index}, true)"
+			onmouseoverlua="PlaySound('/shared/sounds/ui/button_over_02.wav')"
+		>
+			<widgetstate statename="up">
+				<instance name="marketplace_announce_stage_button_state" level="{level}" badge_color=".72 .62 .42 1" face_color=".035 .025 .015 .97" />
+			</widgetstate>
+			<widgetstate statename="over">
+				<instance name="marketplace_announce_stage_button_state" level="{level}" badge_color="1.12 1.05 .84 1" face_color=".11 .045 .015 .98" number_font="dyn_bold_22" number_mid="#ffd861" />
+			</widgetstate>
+			<widgetstate statename="down">
+				<instance name="marketplace_announce_stage_button_state" level="{level}" badge_color=".8 .68 .46 1" face_color=".025 .018 .01 .99" number_end="#683006" />
+			</widgetstate>
+			<widgetstate statename="disabled">
+				<instance name="marketplace_announce_stage_button_state" level="{level}" badge_color="1.15 1.08 .9 1" face_color=".15 .055 .012 .99" number_font="dyn_bold_22" number_start="#ffffff" number_mid="#ffe47a" number_end="#b86209" />
+			</widgetstate>
+			<modelpanel width="5.7h" height="5.7h" y=".34h" align="center" valign="top" style="button_hover_effect_style"
+				visible="1" noclick="1" onshowlua="self:SetEffect('/ui/effects/marketplace_announce_badge.effect')" />
+		</button>
 	</template>
 
 	<panel name="marketplace_announce_modal_root" size="100%" color="0 0 0 .74" visible="0" onshowlua="self:BringToFront()">
@@ -264,11 +367,11 @@
 				/>
 
 				<!-- Title effect - renders BEFORE the character so character paints over it -->
-				<modelpanel name="marketplace_announce_title_effect_modal" style="button_hover_effect_style" width="100%" height="60%" y="-10h" valign="top" visible="1" noclick="1"/>
+				<modelpanel name="marketplace_announce_title_effect_modal" style="marketplace_announce_title_effect_style" width="100%" height="48h" y="-10h" valign="top" visible="1" noclick="1"/>
 
 				<!-- Title banner image - before character so character paints over it -->
 				<panel height="16h" width="100%" valign="top" noclick="1">
-					<image name="marketplace_announce_title_image_modal" texture="/ui/fe3/elements/feature_avatar_title_1.png" y="2h" width="200@" height="100%" align="center" noclick="1" rendermode="none" />
+					<image name="marketplace_announce_title_image_modal" texture="/ui/fe3/elements/feature_avatar_title_1.png" y="4h" width="200@" height="100%" align="center" noclick="1" rendermode="none" />
 					<label name="marketplace_announce_title_label_modal" y="4h" width="80%" height="4h" align="center" style="h1" font="dyn_bold_18" fitx="1" color="#f6c45a" content="" textalign="center" textvalign="center" shadow="1" noclick="1" visible="0" />
 				</panel>
 
@@ -284,27 +387,53 @@
 			<!-- Close -->
 			<instance name="closexbutton" button_name="marketplace_announce_modal_close" size="2.25h" x="-1h" y="1h" align="right" valign="top" onclicklua="MarketplaceAnnounce:HideModal()" />
 
-			<panel name="marketplace_announce_includes_panel" y="-7h" width="40h" height="11.4h" align="center" valign="bottom" visible="0" noclick="1">
-				<image texture="/ui/fe3/elements/dpp/new_frame.png" width="40h" height="11.1h" align="center" y=".15h" noclick="1" />
+			<!-- Shared avatar ability strip; dynamic stages may override each icon/preview. -->
+			<panel name="marketplace_announce_abilities_modal" width="22.6h" height="5.2h" align="center" valign="bottom" y="-12.7h" visible="0" noclick="1">
+				<instance name="marketplace_announce_ability_button" group="modal" index="1" size="5.2h" from_modal="true" />
+				<instance name="marketplace_announce_ability_button" group="modal" index="2" size="5.2h" from_modal="true" />
+				<instance name="marketplace_announce_ability_button" group="modal" index="3" size="5.2h" from_modal="true" />
+				<instance name="marketplace_announce_ability_button" group="modal" index="4" size="5.2h" from_modal="true" />
+			</panel>
 
-				<panel height="0" align="center" valign="top" noclick="1">
-					<panel height="1.5h" y="1.1h" align="center" width="14h" noclick="1">
-						<label name="marketplace_announce_includes_title" valign="center" content="INCLUDES NEW:" style="h4" font="dyn_bold_14" textalign="center" textvalign="center" width="100%" height="100%" shadow="1" gradientstart="#ffffff" gradientmid="#c87f15" gradientmidpos="0.5" gradientend="#5f2f0c" gradientdirection="vertical" noclick="1" />
-					</panel>
-				</panel>
+			<!-- Progressive avatar stage selector, stacked down the right edge. -->
+			<panel name="marketplace_announce_stage_selector" width="6.3h" height="25.82h" x="-4h" align="right" valign="center" visible="0" noclick="1">
+				<instance name="marketplace_announce_stage_button" index="1" level="1" x="0" y="0" />
+				<instance name="marketplace_announce_stage_button" index="2" level="6" x="0" y="8.74h" />
+				<instance name="marketplace_announce_stage_button" index="3" level="11" x="0" y="17.48h" />
+			</panel>
+			<label name="marketplace_announce_available_label_modal" y="-9.1h" width="48h" height="1.6h" align="center" valign="bottom" font="dyn_bold_10" content="marketplace_header_subtitle" textalign="center" textvalign="center" shadow="1" gradientstart="#ffffff" gradientmid="#c87f15" gradientmidpos="0.5" gradientend="#5f2f0c" gradientdirection="vertical" noclick="1" visible="1" />
 
-				<panel name="marketplace_announce_includes_badges" width="100%" height="6.0h" align="center" y="3.5h" noclick="1">
-					<instance name="marketplace_announce_include_badge" id="vfx" label="VFX" icon="/ui/fe3/elements/dpp/icon_vfx.png" />
-					<instance name="marketplace_announce_include_badge" id="sfx" label="SFX" icon="/ui/fe3/elements/dpp/icon_sfx.png" />
-					<instance name="marketplace_announce_include_badge" id="voice" label="VOICE" icon="/ui/fe3/elements/dpp/icon_voice.png" />
-					<instance name="marketplace_announce_include_badge" id="anims" label="ANIMS" icon="/ui/fe3/elements/dpp/icon_anims.png" />
-					<instance name="marketplace_announce_include_badge" id="icons" label="ICONS" icon="/ui/fe3/elements/dpp/icon_icons.png" />
+			<!-- Lower-left feature list from the Sacrilege concept. -->
+			<panel name="marketplace_announce_includes_panel" x="4h" y="-9.5h" width="23h" height="13h" align="left" valign="bottom" visible="0" noclick="1">
+				<image size="+1.2h" align="center" valign="center" texture="/ui/hd_ui/elements/vanity/vanity_item_shadow_square.tga" color=".045 .012 .018 .34" noclick="1" />
+				<label name="marketplace_announce_features_title" width="17h" height="1.8h" content="WHAT'S NEW:" font="dyn_bold_13" textalign="left" textvalign="center" shadow="1" gradientstart="#fff7d2" gradientmid="#dcaa43" gradientmidpos="0.5" gradientend="#7c4212" gradientdirection="vertical" noclick="1" />
+				<panel y="1.85h" width="22h" height="1" color="#b77a25" noclick="1" />
+				<panel name="marketplace_announce_includes_badges" x="0" y="2.35h" width="22h" height="10.4h" noclick="1">
+					<instance name="marketplace_announce_include_badge" id="vfx" label="New Visual Effects" y="0" />
+					<instance name="marketplace_announce_include_badge" id="sfx" label="New Sound Effects" y="2.1h" />
+					<instance name="marketplace_announce_include_badge" id="voice" label="New Voice Lines" y="4.2h" />
+					<instance name="marketplace_announce_include_badge" id="anims" label="New Animations" y="6.3h" />
+					<instance name="marketplace_announce_include_badge" id="icons" label="New Icons" y="8.4h" />
 				</panel>
+				<panel y="12.85h" width="22h" height="1" color="#7f4c18" noclick="1" />
+			</panel>
+
+			<!-- Default avatar portrait; dynamic stages may supply their own portrait. -->
+			<panel name="marketplace_announce_stage_portrait_root" x="-4h" y="-9.5h" size="13h" align="right" valign="bottom" visible="0" noclick="1">
+				<image size="+1.2h" align="center" valign="center" texture="/ui/hd_ui/elements/vanity/vanity_item_shadow_square.tga" color=".045 .012 .018 0" noclick="1" />
+				<panel color=".025 .008 .012 .95" noclick="1" />
+				<image name="marketplace_announce_stage_portrait" texture="$invis" x=".4h" y=".4h" width="-0.8h" height="-0.8h" noclick="1" />
+				<image height="-1.2h" valign="center" width=".35h" align="left" texture="/ui/fe3/store/featured/featured_frame_l.tga" noclick="1" />
+				<image height="-1.2h" valign="center" width=".35h" align="right" hflip="1" texture="/ui/fe3/store/featured/featured_frame_l.tga" noclick="1" />
+				<image width="-1.2h" align="center" height=".35h" valign="top" texture="/ui/fe3/store/featured/featured_frame_t.tga" noclick="1" />
+				<image width="-1.2h" align="center" height=".35h" valign="bottom" vflip="1" texture="/ui/fe3/store/featured/featured_frame_t.tga" noclick="1" />
+				<image size="1.4h" align="left" valign="top" texture="/ui/fe3/store/featured/featured_frame_tl.tga" noclick="1" />
+				<image size="1.4h" align="right" valign="top" hflip="1" texture="/ui/fe3/store/featured/featured_frame_tl.tga" noclick="1" />
+				<image size="1.4h" align="left" valign="bottom" vflip="1" texture="/ui/fe3/store/featured/featured_frame_tl.tga" noclick="1" />
+				<image size="1.4h" align="right" valign="bottom" hflip="1" vflip="1" texture="/ui/fe3/store/featured/featured_frame_tl.tga" noclick="1" />
 			</panel>
 
 			<panel name="marketplace_announce_modal_action_panel" width="48h" height="8.4h" align="center" valign="bottom" y="-1h" noclick="1">
-				<label name="marketplace_announce_available_label_modal" y="-11.2h" width="100%" height="1.6h" font="dyn_bold_10" content="marketplace_header_subtitle" textalign="center" textvalign="center" shadow="1" gradientstart="#ffffff" gradientmid="#c87f15" gradientmidpos="0.5" gradientend="#5f2f0c" gradientdirection="vertical" noclick="1" visible="1" />
-
 				<panel name="marketplace_announce_modal_button_row" y="2.35h" width="46h" height="5h" align="center" noclick="1">
 					<panel width="22h" height="100%" align="left" noclick="1">
 						<instance name="marketplace_mp_button" root_name="marketplace_announce_purchase_button_modal_root" root_width="22h" enabled="0" visible="1" width="100%" height="5h"
@@ -350,6 +479,18 @@
 
 		</frame>
 
+	</panel>
+
+	<panel name="marketplace_announce_video_root" size="100%" color="0 0 0 .78" visible="0" hotkey="ESC" onhotkeylua="MarketplaceAnnounce:HideAbilityVideo()">
+		<html name="marketplace_announce_video_html" viewscope="marketplace-ability-video" source="/marketplace-preview/index.html" root="/marketplace-preview/" width="96%" height="96@" align="center" valign="center" y="-1h" noclick="1" />
+		<label name="marketplace_announce_video_title" width="-7h" height="3h" x="2h" y="1.5h" font="dyn_bold_12" textvalign="center" color="#ffe47a" noclick="1" />
+		<panel name="marketplace_announce_abilities_video" width="12.9h" height="3h" align="center" valign="bottom" y="-4h" visible="0" noclick="1">
+			<instance name="marketplace_announce_ability_button" group="video" index="1" size="3h" from_modal="true" />
+			<instance name="marketplace_announce_ability_button" group="video" index="2" size="3h" from_modal="true" />
+			<instance name="marketplace_announce_ability_button" group="video" index="3" size="3h" from_modal="true" />
+			<instance name="marketplace_announce_ability_button" group="video" index="4" size="3h" from_modal="true" />
+		</panel>
+		<instance name="closexbutton" button_name="marketplace_announce_video_close" size="2h" x="-1.5h" y="1.5h" align="right" valign="top" onclicklua="MarketplaceAnnounce:HideAbilityVideo()" />
 	</panel>
 
 </package>

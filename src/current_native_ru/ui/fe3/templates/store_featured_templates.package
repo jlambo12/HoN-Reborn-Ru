@@ -7,10 +7,10 @@
 
 		Layout:
 		- Top (~70%): Banner (left 65%) + 2x2 square grid (right 34.5%)
-		- Bottom (~30%): Marketplace row (4 landscape cards)
+		- Bottom (~30%): Account vanity row (landscape cards)
 	-->
 
-	<!-- Landscape product card (used in marketplace row) -->
+	<!-- Landscape product card (used in the account vanity row) -->
 	<template name="store_featured_card">
 		<button name="store_featured_card_{id}" color="invisible" width="{width=24.6%}" height="100%"
 			onmouseoverlua="GetWidget('store_featured_card_effect_{id}'):FadeIn(150) GetWidget('store_featured_card_inner_glow_{id}'):SetBorderColor('.6 .8 .9 1')"
@@ -22,6 +22,8 @@
 			<!-- Image -->
 			<panel clip="1" width="100%" height="100%" color=".18 .18 .18 1" noclick="1">
 				<image name="store_featured_card_image_{id}" texture="$invis" width="100%" height="100%" align="center" valign="center" noclick="1" />
+				<!-- Drawn by the nameplate catalogue, which owns the plate textures; 17.3@ is their 556x96 art. -->
+				<panel name="store_featured_card_nameplate_{id}" width="100%" height="17.3@" valign="center" texture="$invis" color="white" noclick="1" />
 			</panel>
 
 			<!-- Gradient Overlay -->
@@ -51,7 +53,7 @@
 					<label name="store_featured_card_name_{id}" style="text_base" font="dyn_bold_12" color="1 1 1 1" width="100%" valign="center" y="0.5h" content="" noclick="1" />
 					<label name="store_featured_card_subtitle_{id}" style="text_base" font="dyn_9" color=".8 .8 .8 1" width="100%" valign="center" y="2h" content="" noclick="1" />
 				</panel>
-				<panel height="2h" align="right" valign="center" float="right" padding=".2h" noclick="1" style="grow_noinvis">
+				<panel name="store_featured_card_price_group_{id}" height="2h" align="right" valign="center" float="right" padding=".2h" noclick="1" style="grow_noinvis">
 					<image texture="/ui/hd_ui/elements/jade.tga" height="100%" width="100@" valign="center" noclick="1" />
 					<label name="store_featured_card_price_{id}" style="text_base" font="dyn_bold_12" color="#ffffffff" textvalign="center" fitx="1" content="" noclick="1" />
 				</panel>
@@ -101,7 +103,7 @@
 					<label name="store_featured_square_name_{id}" style="text_base" font="dyn_bold_10" color="1 1 1 1" width="100%" valign="center" y="0.3h" content="" noclick="1" />
 					<label name="store_featured_square_subtitle_{id}" style="text_base" font="dyn_8" color=".8 .8 .8 1" width="100%" valign="center" y="1.6h" content="" noclick="1" />
 				</panel>
-				<panel height="1.8h" align="right" valign="center" float="right" padding=".25h" noclick="1" style="grow_noinvis">
+				<panel name="store_featured_square_price_group_{id}" height="1.8h" align="right" valign="center" float="right" padding=".25h" noclick="1" style="grow_noinvis">
 					<image texture="/ui/hd_ui/elements/jade.tga" height="100%" width="100@" valign="center" noclick="1" />
 					<label name="store_featured_square_price_{id}" style="text_base" font="dyn_bold_10" color="#ffffffff" textvalign="center" fitx="1" content="" noclick="1" />
 				</panel>
@@ -233,10 +235,10 @@
 				<instance name="store_featured_banner" />
 				<instance name="store_featured_grid" />
 			</panel>
-			<!-- Bottom area: marketplace row -->
-			<panel name="store_featured_marketplace_area" width="100%" height="30%" valign="bottom" noclick="1">
-				<label name="store_featured_row_title_marketplace" style="h1" font="dyn_bold_14" color="1 1 1 1" height="2.2h" content="ТОРГОВАЯ ПЛОЩАДКА" noclick="1" />
-				<panel name="store_featured_row_cards_marketplace" width="100%" height="-2.4h" valign="bottom" float="right" padding="0.5%" noclick="1" />
+			<!-- Bottom area: account vanity row -->
+			<panel name="store_featured_vanity_area" width="100%" height="30%" valign="bottom" noclick="1">
+				<label name="store_featured_row_title_vanity" style="h1" font="dyn_bold_14" color="1 1 1 1" height="2.2h" content="vanity_cat_account_vanity" noclick="1" />
+				<panel name="store_featured_row_cards_vanity" width="100%" height="-2.4h" valign="bottom" float="right" padding="0.5%" noclick="1" />
 			</panel>
 		</panel>
 	</template>

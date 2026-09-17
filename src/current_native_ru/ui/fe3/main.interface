@@ -46,6 +46,9 @@
 	<lua file="/ui/scripts/shared/global_main.lua" />
 	<lua file="/ui/scripts/shared/widget_extensions.lua" />
 	<lua file="/ui/scripts/shared/widget_anims.lua" />
+	<!-- Must precede system_bar and social_panel: both call NCAnim at runtime. -->
+	<lua file="/ui/scripts/shared/namecolor_epoch.lua" />
+	<lua file="/ui/scripts/shared/namecolor_anim.lua" />
 	<lua file="/ui/scripts/shared/database.lua" />
 	<lua file="/ui/scripts/fe3/notifications_v2.lua" />
 	<lua file="/ui/scripts/fe3/social_im.lua" references="/ui/hd_ui/icons/send.tga,/ui/fe2/store/icons/account_icons/default.tga,/ui/fe2/elements/comm_current.tga,/ui/fe2/elements/comm_newmsg.tga" />
@@ -61,10 +64,10 @@
 	<lua file="/ui/scripts/fe3/player_hosted.lua" />
 	<lua file="/ui/scripts/fe3/game_lobby.lua"
 		references="/ui/hd_ui/icons/role_suicide.tga,
-	/ui/hd_ui/icons/kick_up.tga,
-	/ui/hd_ui/icons/kick_over.tga,
-	/ui/hd_ui/icons/kick_down.tga,
-	/ui/hd_ui/icons/kick_disabled.tga,
+	/ui/fe3/elements/kick_up.tga,
+	/ui/fe3/elements/kick_over.tga,
+	/ui/fe3/elements/kick_down.tga,
+	/ui/fe3/elements/kick_disabled.tga,
 	/ui/hd_ui/icons/crown.tga,
 	/ui/elements/role_map_elements/map_role_tooltip_carry.tga,
 	/ui/elements/role_map_elements/map_role_tooltip_hardsupport.tga,
@@ -140,10 +143,6 @@
 	/ui/fe3/plinko_v2/puck_shadow.tga,
 	/ui/hd_ui/icons/drag_gesture.tga,
 
-	/ui/fe3/plinko_v2/temp/super_board.tga,
-	/ui/fe3/plinko_v2/effects/tier_legendary.tga,
-	/ui/fe3/plinko_v2/effects/tickets_small.tga,
-	/ui/fe3/plinko_v2/effects/tier_epic.tga,
 	/ui/hd_ui/icons/x.tga,
 	
 	/ui/fe3/plinko_v2/bucket_tiers/tickets_big.tga,
@@ -163,12 +162,13 @@
 	<lua file="/ui/scripts/fe3/marketplace_announce.lua" />
 	<lua file="/ui/scripts/fe3/regions.lua" references="/ui/fe2/elements/flag_en.tga,/ui/fe2/elements/flag_fr.tga,/ui/fe2/elements/flag_de.tga,/ui/fe2/elements/flag_br.tga,/ui/fe2/elements/flag_es.tga,/ui/fe2/elements/flag_ro.tga,/ui/fe2/elements/flag_ru.tga,/ui/fe2/elements/flag_vn.tga,/ui/fe2/elements/flag_th.tga,/ui/fe2/elements/flag_id.tga,/ui/fe2/elements/flag_my.tga,/ui/fe2/elements/flag_cn.tga,/ui/fe2/elements/flag_ua.tga,/ui/fe2/elements/flag_tr.tga,/ui/fe2/elements/flag_ko.tga" />
 	<lua file="/ui/scripts/fe3/login.lua" references="/shared/sounds/ui/login_fail.wav" />
-	<lua file="/ui/scripts/shared/shop_shared.lua" references="/ui/hd_ui/elements/sort_cost_high.tga,/ui/hd_ui/elements/sort_cost_low.tga,/ui/hd_ui/icons/attribute_armor.tga,/ui/hd_ui/icons/attribute_attack.tga,/ui/hd_ui/icons/attribute_attack_speed.tga,/ui/hd_ui/icons/attribute_boots.tga,/ui/hd_ui/icons/attribute_magic.tga,/ui/hd_ui/icons/courier.tga,/ui/hd_ui/icons/deny.tga,/ui/hd_ui/icons/empty_pack.tga,/ui/hd_ui/icons/shop_cat_allitems.tga,/ui/hd_ui/icons/shop_cat_boots.tga,/ui/hd_ui/icons/shop_cat_consumables.tga,/ui/hd_ui/icons/shop_cat_damage.tga,/ui/hd_ui/icons/shop_cat_defense.tga,/ui/hd_ui/icons/shop_cat_enchantment.tga,/ui/hd_ui/icons/shop_cat_initiation.tga,/ui/hd_ui/icons/shop_cat_recommended.tga,/ui/hd_ui/icons/shop_cat_supportive.tga,/ui/hd_ui/elements/shop/cat_button_up.tga,/ui/hd_ui/frames/squareglow.tga,/ui/hd_ui/elements/shop/cat_button_selected.tga" />
+	<lua file="/ui/scripts/shared/shop_shared.lua" references="/ui/hd_ui/elements/sort_cost_high.tga,/ui/hd_ui/elements/sort_cost_low.tga,/ui/hd_ui/icons/attribute_armor.tga,/ui/hd_ui/icons/attribute_attack.tga,/ui/hd_ui/icons/attribute_attack_speed.tga,/ui/hd_ui/icons/attribute_boots.tga,/ui/hd_ui/icons/attribute_magic.tga,/ui/hd_ui/icons/courier.tga,/ui/hd_ui/icons/deny.tga,/ui/hd_ui/icons/empty_pack.tga,/ui/hd_ui/icons/shop_cat_allitems.tga,/ui/hd_ui/icons/shop_cat_boots.tga,/ui/hd_ui/icons/shop_cat_consumables.tga,/ui/hd_ui/icons/shop_cat_damage.tga,/ui/hd_ui/icons/shop_cat_defense.tga,/ui/hd_ui/icons/shop_cat_enchantment.tga,/ui/hd_ui/icons/shop_cat_initiation.tga,/ui/hd_ui/icons/shop_cat_recommended.tga,/ui/hd_ui/icons/shop_cat_supportive.tga,/ui/hd_ui/elements/shop/cat_button_up.tga,frame(/ui/hd_ui/frames/squareglow.tga),/ui/hd_ui/elements/shop/cat_button_selected.tga" />
 	<lua file="/ui/scripts/fe3/itemlist.lua" />
 	<lua file="/ui/scripts/fe3/tutorial.lua" />
 	<lua file="/ui/scripts/fe3/tutorial_slides.lua" />
 	<lua file="/ui/scripts/fe3/match_stats.lua" references="/ui/hd_ui/elements/arrow_up.tga,/ui/hd_ui/icons/building_dmg.tga,/ui/hd_ui/icons/xp.tga" />
 	<lua file="/ui/scripts/fe3/profile-v2.lua" />
+	<lua file="/ui/scripts/fe3/miniprofile.lua" />
 	<lua file="/ui/scripts/fe3/ladder_v2.lua" />
 	<lua file="/ui/scripts/fe3/matchmaking.lua" references="/ui/hd_ui/icons/stopwatch.tga,/maps/caldavarphoenix/icon.tga,/maps/midwars/icon.tga,/maps/showdown/icon.tga,/shared/sounds/ui/lobby/player_joined.wav,/shared/sounds/ui/lobby/match_found.wav,/shared/sounds/ui/lobby/player_kicked.wav,/shared/sounds/ui/lobby/player_left.wav,/shared/sounds/ui/button_click_03.wav,/ui/hd_ui/icons/role_unassigned.tga,/ui/icons/flags/unitedstates-east.tga,/ui/icons/flags/unitedstates-west.tga" instantiates="matchmaking_toggle_widgetstates" />
 	<lua file="/ui/scripts/shared/soundmanager.lua" />
@@ -268,6 +268,11 @@
 
 	<!-- Store -->
 	<include file="/ui/fe3/sections/store.package"/>
+
+	<!-- Mini Profile (player card) - templates only; instanced further down -->
+	<include file="/ui/fe3/sections/miniprofile.package" />
+
+	<include file="/ui/fe3/sections/gm_review.package" />
 
 	<!-- Social Panel (Friends) -->
 	<include file="/ui/fe3/sections/social_panel.package" />
@@ -386,6 +391,19 @@
 	     the one exception, so their popup lists open above the friends list / notifications; dialogs
 	     and tooltips still render above them. Template defined in bottom_bar.package. -->
 	<instance name="bottom_bar_selectors_overlay" />
+
+	<!-- Mini profile card. Sits here so it draws above the communicator, the friends list
+	     and the lobby (it anchors to rows in all three), while dialogs and tooltips still
+	     render above it. The ticker follows the card so the card exists by the time its
+	     onload runs MiniProfile:Init(). -->
+	<instance name="miniprofile" />
+	<instance name="miniprofile_ticker" />
+
+	<instance name="gm_review_card" />
+
+	<!-- Notification Detail Modal. Template lives in notifications_v2.package, but it is instanced here
+	     with the dialogs so it renders above the notification toasts and the friends list it opens from. -->
+	<instance name="notificationsv2_detail" />
 
 	<!-- Dialogs / Confirmations -->
 	<include file="/ui/fe3/sections/dialogs.package" />

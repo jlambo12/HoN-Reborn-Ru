@@ -50,6 +50,10 @@ def main() -> int:
                 old = row["english"].encode(encoding)
                 new = row["russian"].encode("utf-8")
                 found = data.count(old)
+                if row.get("retired") is True:
+                    if found:
+                        raise SystemExit(f"Retired native source returned for {source_file}: {row['english']}")
+                    continue
                 if found != row.get("expected_matches", 1):
                     raise SystemExit(f"Exact native match count changed for {source_file}: {found}")
                 data = data.replace(old, new)

@@ -9,7 +9,7 @@ on:
       version:
         description: "Version without the v prefix"
         required: true
-        default: "0.1.0-beta.20"
+        default: "0.1.0-beta.21"
 
 permissions:
   contents: write
@@ -44,18 +44,18 @@ jobs:
         run: python tools/verify_release.py --version ${{ steps.version.outputs.version }}
       - name: Build autonomous launcher and updater
         shell: pwsh
-        run: .\scripts\build_launcher.ps1 -LauncherVersion 1.0.14
+        run: .\scripts\build_launcher.ps1 -LauncherVersion 1.0.15
       - name: Create update manifest and assets
         shell: pwsh
         run: |
           python tools/create_update_manifest.py `
             --version "${{ steps.version.outputs.version }}" `
             --channel "${{ steps.version.outputs.channel }}" `
-            --launcher-version "1.0.14" `
+            --launcher-version "1.0.15" `
             --translation "release-assets\${{ steps.version.outputs.version }}\resources0.jz" `
             --launcher "dist\launcher\HoNRebornRU.exe" `
             --updater "dist\launcher\HoNRebornRU.Updater.exe" `
-            --game-sha256 "b56cb49a61adf8f5e6c4a57a19de828aae9a9cfaaabf73ee0d5ad32f88c121f4" `
+            --game-sha256 "ae3d51104bc6d9b6045b4123a84a31f72b1b283b4d5c9e6e96d269f1b5132643" `
             --output-directory "dist\release"
           python tools/verify_update_manifest.py --directory "dist\release"
       - name: Build portable package

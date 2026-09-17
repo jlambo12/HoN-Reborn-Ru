@@ -28,7 +28,8 @@ local widgets =
 	bannerDots	= WExt:InitWidget('store_featured_banner_dots', StoreFeatured),
 	gridRow0	= WExt:InitWidget('store_featured_grid_row0', StoreFeatured),
 	gridRow1	= WExt:InitWidget('store_featured_grid_row1', StoreFeatured),
-	marketRow	= WExt:InitWidget('store_featured_row_cards_marketplace', StoreFeatured),
+	vanityArea	= WExt:InitWidget('store_featured_vanity_area', StoreFeatured),
+	vanityRow	= WExt:InitWidget('store_featured_row_cards_vanity', StoreFeatured),
 }
 
 ---- CONFIGS ----
@@ -37,13 +38,41 @@ local FEATURED_BANNER_ROTATE_MS = 15000
 local BANNER_PRODUCTS =
 {
 	{
+		name = 'Bloodaxe Berzerker',
+		key = 'Hero.Berzerker.Bloodaxe',
+		priceKeys = { 'Hero.Berzerker.Bloodaxe' },
+		route = { tab = Enum.StoreTabs.Avatars },
+		bannerImage = '/ui/fe3/store/featured/featured_banner_3.tga',
+		description = '',
+		featureFlags = {
+			vfx = true,
+			sfx = true,
+			voice = true,
+			anims = true,
+			icons = false,
+		},
+	},
+	{
+		name = 'Sacrilege Witch Slayer',
+		key = 'Hero.WitchSlayer.Sacrilege',
+		priceKeys = { 'Hero.WitchSlayer.Sacrilege' },
+		route = { tab = Enum.StoreTabs.Avatars },
+		bannerImage = '/ui/fe3/store/featured/featured_banner_4.tga',
+		description = '',
+		featureFlags = {
+			vfx = true,
+			sfx = true,
+			voice = true,
+			anims = true,
+			icons = true,
+		},
+	},
+	{
 		name = 'Warforged Chipper',
 		key = 'Hero.Chipper.Warforged',
 		priceKeys = { 'Hero.Chipper.Warforged' },
-		rarity = 'legendary',
 		route = { tab = Enum.StoreTabs.Avatars },
 		bannerImage = '/ui/fe3/store/featured/featured_banner_1.tga',
-		tag = 'НОВЫЙ ЛЕГЕНДАРНЫЙ ОБЛИК',
 		description = '',
 		featureFlags = {
 			vfx = true,
@@ -57,10 +86,8 @@ local BANNER_PRODUCTS =
 		name = 'Headmistress Succubus',
 		key = 'Hero.Succubus.Headmistress',
 		priceKeys = { 'Hero.Succubus.Headmistress' },
-		rarity = 'epic',
 		route = { tab = Enum.StoreTabs.Avatars },
 		bannerImage = '/ui/fe3/store/featured/featured_banner_2.tga',
-		tag = 'НОВЫЙ ЭПИЧЕСКИЙ ОБЛИК',
 		description = '',
 		featureFlags = {
 			vfx = true,
@@ -68,40 +95,6 @@ local BANNER_PRODUCTS =
 			voice = true,
 			anims = true,
 			icons = false,
-		},
-	},
-	{
-		name = 'Loki',
-		key = 'Hero.CorruptedDisciple.Loki',
-		priceKeys = { 'Hero.CorruptedDisciple.Loki' },
-		rarity = 'legendary',
-		route = { tab = Enum.StoreTabs.Avatars },
-		bannerImage = '/ui/fe3/store/featured/featured_banner_3.tga',
-		tag = 'НОВЫЙ ЛЕГЕНДАРНЫЙ ОБЛИК',
-		description = '',
-		featureFlags = {
-			vfx = true,
-			sfx = false,
-			voice = true,
-			anims = true,
-			icons = true,
-		},
-	},
-	{
-		name = 'Lion Nighthound',
-		key = 'Hero.NightHound.Lion',
-		priceKeys = { 'Hero.NightHound.Lion' },
-		rarity = 'legendary',
-		route = { tab = Enum.StoreTabs.Avatars },
-		bannerImage = '/ui/fe3/store/featured/featured_banner_4.tga',
-		tag = 'НОВЫЙ ЛЕГЕНДАРНЫЙ ОБЛИК',
-		description = '',
-		featureFlags = {
-			vfx = true,
-			sfx = false,
-			voice = true,
-			anims = true,
-			icons = true,
 		},
 	}
 }
@@ -121,10 +114,9 @@ local BANNER_TITLE_RARITIES = { 'common', 'uncommon', 'rare', 'epic', 'legendary
 local GRID_PRODUCTS =
 {
 	{ name = 'VRZO English Announcer', key = 'Announcer.ThaiEnglish', new = true },
-	{ name = 'Katana Kane', key = 'Hero.Kane.Katana', new = false },
+	{ name = 'Loki', key = 'Hero.CorruptedDisciple.Loki', new = true },
+	{ name = 'Lion Nighthound', key = 'Hero.NightHound.Lion', new = false },
 	{ name = 'Demon Emerald Warden', key = 'Hero.EmeraldWarden.Demon', new = false },
-	{ name = 'Vampira Dark Lady', key = 'Hero.DarkLady.Vampira', new = false },
-
 }
 
 local CATEGORY_INFO =
@@ -141,6 +133,11 @@ local CATEGORY_INFO =
 	[Enum.ActivationType.Shoutouts]   = { name = 'Shoutout',       icon = '/ui/hd_ui/icons/mic.tga'       },
 	[Enum.ActivationType.Icons]       = { name = 'Account Icon',   icon = '/content/icons/account_icon.tga' },
 	[Enum.ActivationType.NameColors]  = { name = 'Name Color',     icon = '/content/icons/account_icon.tga' },
+	[Enum.ActivationType.Nameplates]  = { name = 'Nameplate',      icon = '/content/icons/account_icon.tga' },
+	[Enum.ActivationType.ProfileFrames]      = { name = 'Profile Frame',      icon = '/ui/hd_ui/icons/cosmetics.tga' },
+	[Enum.ActivationType.ProfileBackgrounds] = { name = 'Profile Background', icon = '/ui/hd_ui/icons/cosmetics.tga' },
+	[Enum.ActivationType.ProfileEffects]     = { name = 'Profile Effect',     icon = '/ui/hd_ui/icons/cosmetics.tga' },
+	[Enum.ActivationType.Bundles]            = { name = 'Profile Bundle',     icon = '/ui/hd_ui/icons/chest.tga' },
 }
 
 local ACCOUNT_UPGRADE_CATEGORY_INFO = { name = 'Account Upgrade', icon = '/content/icons/account_icon.tga' }
@@ -158,20 +155,38 @@ local TILE_VARIANTS =
 {
 	square =
 	{
-		prefix            = 'store_featured_square_',
-		allowIconFallback = true,
-		showNewEffect     = true,
+		prefix           = 'store_featured_square_',
+		heroIconFit      = true,
+		allowProductIcon = true,
+		showNewEffect    = true,
 	},
 	card =
 	{
-		prefix            = 'store_featured_card_',
-		allowIconFallback = false,
-		showNewEffect     = false,
+		prefix           = 'store_featured_card_',
+		heroIconFit      = false,
+		allowProductIcon = true,
+		coverArt         = true,
+		showNewEffect    = false,
+		showNameplate    = true,
 	},
 }
 
-local MARKETPLACE_DEAL_POOL_SIZE = 20
-local MARKETPLACE_DEAL_MAX_PRICE = 260
+-- Matched by catalog product name; a product missing from the catalog drops its card.
+local VANITY_PRODUCTS =
+{
+	{ name = 'Greed Profile Bundle' },
+	{ name = 'Pink Dream' },
+	{ name = 'Teal Mist' },
+	{ name = 'Void Nebula' },
+	{
+		name = 'Thailand Nameplate',
+		label = 'Nameplates',
+		subtitle = 'Country Flags',
+	},
+}
+
+-- Past five slots, long names like "Greed Profile Bundle" clip in the card footer.
+local VANITY_ROW_GAP_PCT = 0.5 -- matches padding on store_featured_row_cards_vanity
 
 local CLICK_MODE = 'navigate' -- 'navigate' | 'buy'
 
@@ -189,10 +204,6 @@ local bannerRotationToken = 0
 ----------------------------------------------
 --				   Helpers					--
 ----------------------------------------------
-
-local function GetDayOfYearSeed()
-	return floor(GetHostTime() / 86400)
-end
 
 local function EnsureRandomSeeded()
 	if randomSeeded then return end
@@ -226,16 +237,19 @@ local function BuildProductLookup()
 			end
 		end
 	end
-	local accountUpgrades = Store:GetProductData('AccountUpgrade')
-	if accountUpgrades then
-		for _, wrapper in ipairs(accountUpgrades) do
-			local entry = wrapper[1]
-			if entry then
-				if entry.productName and not productByName[entry.productName] then
-					productByName[entry.productName] = entry
-				end
-				if entry.key and not productByName[entry.key] then
-					productByName[entry.key] = entry
+	-- Account upgrades and bundles sit outside Enum.ShopCategory but still feed the tab.
+	for _, category in ipairs({ 'AccountUpgrade', 'Bundle' }) do
+		local products = Store:GetProductData(category)
+		if products then
+			for _, wrapper in ipairs(products) do
+				local entry = wrapper[1]
+				if entry then
+					if entry.productName and not productByName[entry.productName] then
+						productByName[entry.productName] = entry
+					end
+					if entry.key and not productByName[entry.key] then
+						productByName[entry.key] = entry
+					end
 				end
 			end
 		end
@@ -261,7 +275,8 @@ local function GetProductInfoCached(entry)
 	if not entry or not entry.key then return nil end
 	local cached = productInfoCache[entry.key]
 	if cached then return cached end
-	local productInfo = GetProductInfo(entry.key)
+	-- Bundles are keyed by product id, which the native lookup does not resolve.
+	local productInfo = StoreBundles:GetProductInfo(entry.key) or GetProductInfo(entry.key)
 	if productInfo then
 		productInfoCache[entry.key] = productInfo
 		return productInfo
@@ -283,6 +298,12 @@ local function IsHeroSkinEntry(entry)
 	if not entry or not entry.key then return false end
 	local productInfo = GetProductInfoCached(entry)
 	return productInfo and productInfo[1] and productInfo[1].type == Enum.ActivationType.HeroSkins
+end
+
+local function GetNameplateKey(entry)
+	local productInfo = GetProductInfoCached(entry)
+	local activation = productInfo and productInfo[1]
+	return activation and activation.type == Enum.ActivationType.Nameplates and activation.nameplate or nil
 end
 
 local function IsTruthyFlag(value)
@@ -316,7 +337,7 @@ local function BuildSubtitle(entry, catInfo)
 end
 
 local function GetDisplayRarity(entry, config)
-	return (config and config.rarity) or (entry and entry.rarity) or 'common'
+	return (entry and entry.rarity) or (config and config.fallbackRarity) or 'common'
 end
 
 local function GetDisplayRarityName(rarity)
@@ -416,66 +437,22 @@ local function ResolveGridEntry(configEntry)
 	return entry
 end
 
-local function IsBannerProductName(productName)
-	if not productName then return false end
-	for i = 1, #BANNER_PRODUCTS do
-		local bannerProduct = BANNER_PRODUCTS[i]
-		if bannerProduct.name == productName or bannerProduct.key == productName then
-			return true
-		end
-		if type(bannerProduct.priceKeys) == 'table' then
-			for j = 1, #bannerProduct.priceKeys do
-				if bannerProduct.priceKeys[j] == productName then return true end
-			end
-		end
-	end
-	return false
-end
-
-local function BuildMarketplaceList()
-	local products = Store:GetProductData('HeroSkin')
-	if not products then return {} end
-
-	local priced = {}
-	for _, wrapper in ipairs(products) do
-		local entry = wrapper[1]
+local function BuildVanityList()
+	local resolved = {}
+	for i = 1, #VANITY_PRODUCTS do
+		local config = VANITY_PRODUCTS[i]
+		local entry = FindProductByName(config.name)
 		if entry and not entry.isBase then
-			local price = Store:ResolveJadePrice(entry)
-			if price and price > 0 then
-				tinsert(priced, { entry = entry, price = price })
-			end
+			resolved[#resolved + 1] = { entry = entry, config = config }
 		end
 	end
-
-	if #priced == 0 then return {} end
-
-	tsort(priced, function(a, b) return a.price > b.price end)
-
-	local result = {}
-	local usedNames = {}
-	for i = 1, math.min(3, #priced) do
-		result[#result + 1] = priced[i].entry
-		usedNames[priced[i].entry.productName] = true
-	end
-
-	local cheapPool = {}
-	for i = #priced, 1, -1 do
-		local name = priced[i].entry.productName
-		if not usedNames[name] and not IsBannerProductName(name) and priced[i].price <= MARKETPLACE_DEAL_MAX_PRICE then
-			cheapPool[#cheapPool + 1] = priced[i].entry
-			if #cheapPool >= MARKETPLACE_DEAL_POOL_SIZE then break end
-		end
-	end
-	if #cheapPool > 0 then
-		local dealIndex = (GetDayOfYearSeed() % #cheapPool) + 1
-		result[#result + 1] = cheapPool[dealIndex]
-	end
-
-	return result
+	return resolved
 end
 
-local function ResolveTileImage(imageW, entry, allowIconFallback)
-	if allowIconFallback and IsHeroSkinEntry(entry) then
+local function ResolveTileImage(imageW, entry, cfg)
+	-- '100@' sizes height off width, so square art crops instead of squashing (landscape art over-zooms).
+	imageW:SetHeight(cfg.coverArt and '100@' or '100%')
+	if cfg.heroIconFit and IsHeroSkinEntry(entry) then
 		imageW:SetWidth('200@')
 	else
 		imageW:SetWidth('100%')
@@ -487,7 +464,7 @@ local function ResolveTileImage(imageW, entry, allowIconFallback)
 			imageW:SetColor(1, 1, 1, 1)
 			return
 		end
-		if allowIconFallback and entry.icon and entry.icon ~= '' then
+		if cfg.allowProductIcon and entry.icon and entry.icon ~= '' then
 			imageW:SetTexture(entry.icon)
 			imageW:SetColor(1, 1, 1, 1)
 			return
@@ -497,37 +474,87 @@ local function ResolveTileImage(imageW, entry, allowIconFallback)
 	imageW:SetColor(.18, .18, .18, 1)
 end
 
+local function GetTileWidget(variant, suffix, cardId)
+	return Main:GetWidget(TILE_VARIANTS[variant].prefix .. suffix .. '_' .. cardId)
+end
+
+-- The price group grows with its text, so a long name has to stop short of it instead of running underneath.
+local function FitTileName(nameW, text, priceGroupW)
+	nameW:SetText(text)
+	local textPanel = nameW:GetParent()
+	local right = textPanel:GetAbsoluteX() + textPanel:GetWidth()
+	if priceGroupW then
+		right = math.min(right, priceGroupW:GetAbsoluteX() - textPanel:GetWidthFromString('0.4h'))
+	end
+	local font = nameW:GetFont()
+	local maxWidth = right - nameW:GetAbsoluteX()
+	if maxWidth <= 0 or GetStringWidth(font, text) <= maxWidth then return end
+
+	local lo, hi = 0, #text
+	while lo < hi do
+		local mid = floor((lo + hi + 1) / 2)
+		if GetStringWidth(font, sub(text, 1, mid) .. '...') <= maxWidth then
+			lo = mid
+		else
+			hi = mid - 1
+		end
+	end
+	-- back off a cut that landed inside a multi-byte character
+	while lo > 0 do
+		local nextByte = string.byte(text, lo + 1)
+		if not nextByte or nextByte < 128 or nextByte >= 192 then break end
+		lo = lo - 1
+	end
+	nameW:SetText(sub(text, 1, lo):match('^(.-)%s*$') .. '...')
+end
+
+local function ApplyTilePrice(variant, cardId, entry, configEntry)
+	local jadePrice = Store:ResolveJadePrice(entry)
+	local priceW = GetTileWidget(variant, 'price', cardId)
+	if priceW then priceW:SetText(jadePrice and tostring(jadePrice) or '') end
+	local priceGroupW = GetTileWidget(variant, 'price_group', cardId)
+	SetWidgetVisible(priceGroupW, jadePrice ~= nil)
+
+	local nameW = GetTileWidget(variant, 'name', cardId)
+	if nameW then
+		FitTileName(nameW, (configEntry and configEntry.label) or entry.productName or '', jadePrice and priceGroupW)
+	end
+end
+
 local function PopulateTile(variant, cardId, entry, configEntry)
 	local cfg = TILE_VARIANTS[variant]
 	local prefix = cfg.prefix
 
-	local function w(suffix) return Main:GetWidget(prefix .. suffix .. '_' .. cardId) end
+	local function w(suffix) return GetTileWidget(variant, suffix, cardId) end
+
+	-- Loading a plate texture here as a plain image would clash with the catalogue's uncompressed copy.
+	local nameplateW = cfg.showNameplate and w('nameplate')
+	local nameplateKey = nameplateW and GetNameplateKey(entry)
+	if nameplateW then nameplateW:SetNameplate(nameplateKey or '') end
 
 	local imageW = w('image')
-	if imageW then ResolveTileImage(imageW, entry, cfg.allowIconFallback) end
+	if imageW then
+		if nameplateKey then
+			imageW:SetTexture('$invis')
+		else
+			ResolveTileImage(imageW, entry, cfg)
+		end
+	end
 
 	local rarityTheme = Store:GetRarityTheme(entry.rarity or 'common')
 	local nameW = w('name')
-	if nameW then
-		nameW:SetText(entry.productName or '')
-		if rarityTheme then nameW:SetColor(rarityTheme['border_color']) end
-	end
+	if nameW and rarityTheme then nameW:SetColor(rarityTheme['border_color']) end
 
 	local catInfo = GetCategoryInfo(entry)
-	local subtitleText = (variant == 'card' and cardId == 'market_3')
-		and 'Deal of the Day'
-		or BuildSubtitle(entry, catInfo)
 	local subtitleW = w('subtitle')
-	if subtitleW then subtitleW:SetText(subtitleText) end
+	if subtitleW then
+		subtitleW:SetText((configEntry and configEntry.subtitle) or BuildSubtitle(entry, catInfo))
+	end
 
 	local catIconW = w('caticon')
 	if catIconW and catInfo and catInfo.icon then catIconW:SetTexture(catInfo.icon) end
 
-	local priceW = w('price')
-	if priceW then
-		local jadePrice = Store:ResolveJadePrice(entry)
-		priceW:SetText(jadePrice and tostring(jadePrice) or '')
-	end
+	ApplyTilePrice(variant, cardId, entry, configEntry)
 
 	local rarityW = w('rarity')
 	if rarityW and rarityTheme then rarityW:SetBorderColor(rarityTheme['border_color']) end
@@ -567,12 +594,12 @@ local function ResolveBannerItems()
 			or FindProductByName(config.name)
 		if catalogEntry and catalogEntry.isBase then catalogEntry = nil end
 
-		-- Banner configuration is authoritative. Catalog data adds live pricing and
-		-- purchase metadata, but a missing catalog record must not remove the slide.
+		-- Catalog metadata is authoritative when available. Configuration keeps the
+		-- slide identity and art stable when a catalog record is temporarily absent.
 		local displayEntry = catalogEntry or {
 			key = config.key,
 			productName = config.name or config.key or '',
-			rarity = config.rarity,
+			rarity = config.fallbackRarity,
 			isBase = false,
 		}
 		local priceEntry = FindProductByAnyIdentifier(config.priceKeys) or catalogEntry
@@ -658,14 +685,17 @@ local function PopulateGrid()
 	end
 end
 
-local function PopulateMarketplaceRow()
-	widgets.marketRow:ClearChildren()
-	local entries = BuildMarketplaceList()
-	for i = 1, 4 do
-		local entry = entries[i]
-		local cardId = 'market_' .. tostring(i - 1)
-		widgets.marketRow:InstantiateAndReturn('store_featured_card', 'id', cardId)
-		if entry then PopulateTile('card', cardId, entry) end
+local function PopulateVanityRow()
+	widgets.vanityRow:ClearChildren()
+	local resolvedCards = BuildVanityList()
+	SetWidgetVisible(widgets.vanityArea, #resolvedCards > 0)
+	local slots = #VANITY_PRODUCTS
+	local cardWidth = format('%.3f%%', (100 - (slots - 1) * VANITY_ROW_GAP_PCT) / slots)
+	for i = 1, #resolvedCards do
+		local resolved = resolvedCards[i]
+		local cardId = 'vanity_' .. tostring(i - 1)
+		widgets.vanityRow:InstantiateAndReturn('store_featured_card', 'id', cardId, 'width', cardWidth)
+		PopulateTile('card', cardId, resolved.entry, resolved.config)
 	end
 end
 
@@ -693,7 +723,7 @@ function StoreFeatured:Populate()
 	ClearBanner()
 	widgets.gridRow0:ClearChildren()
 	widgets.gridRow1:ClearChildren()
-	widgets.marketRow:ClearChildren()
+	widgets.vanityRow:ClearChildren()
 	currentGridEntries = {}
 
 	local products = Store:GetProductData('HeroSkin')
@@ -706,7 +736,7 @@ function StoreFeatured:Populate()
 	PopulateBanner(1)
 	StartBannerRotation()
 	PopulateGrid()
-	PopulateMarketplaceRow()
+	PopulateVanityRow()
 end
 
 function StoreFeatured:RefreshPrices()
@@ -720,9 +750,10 @@ function StoreFeatured:RefreshPrices()
 		RefreshTilePrice('store_featured_banner_price', (bannerItem and bannerItem.priceEntry) or bannerEntry)
 	end
 	for idx = 0, 3 do
-		RefreshTilePrice('store_featured_square_price_grid_' .. tostring(idx), currentGridEntries[idx + 1])
+		local entry = currentGridEntries[idx + 1]
+		if entry then ApplyTilePrice('square', 'grid_' .. tostring(idx), entry, GRID_PRODUCTS[idx + 1]) end
 	end
-	PopulateMarketplaceRow()
+	PopulateVanityRow()
 end
 
 function StoreFeatured:Reset()

@@ -15,6 +15,7 @@ import re
 import time
 import urllib.parse
 import urllib.request
+from urllib.error import HTTPError, URLError
 from collections import Counter
 from pathlib import Path
 
@@ -83,10 +84,35 @@ SKIP_RE = re.compile(r"^(?:https?://|/|[\d\s.,:+%()\-/]+)$")
 
 def translate(texts: list[str], endpoint: str) -> list[str]:
     masked = [text.replace("&apos;", "__APOS__").replace("&quot;", "__QUOT__").replace("&middot;", "__MDOT__") for text in texts]
-    url = endpoint.rstrip("/") + "/" + urllib.parse.quote(SEPARATOR.join(masked), safe="")
-    with urllib.request.urlopen(url, timeout=45) as response:
-        payload = json.load(response)
-    result = payload["translation"].split(SEPARATOR)
+    try_google = endpoint.casefold() == "google"
+    try:
+        if try_google:
+            raise URLError("Google endpoint requested")
+        url = endpoint.rstrip("/") + "/" + urllib.parse.quote(SEPARATOR.join(masked), safe="")
+        with urllib.request.urlopen(url, timeout=20) as response:
+            payload = json.load(response)
+        translated = payload["translation"]
+    except (HTTPError, URLError, TimeoutError):
+        query = urllib.parse.urlencode({
+            "client": "gtx", "sl": "en", "tl": "ru", "dt": "t",
+            "q": SEPARATOR.join(masked),
+        })
+        request = urllib.request.Request(
+            "https://translate.googleapis.com/translate_a/single?" + query,
+            headers={"User-Agent": "Mozilla/5.0 HoN-Reborn-RU-localization"},
+        )
+        try:
+            with urllib.request.urlopen(request, timeout=20) as response:
+                payload = json.load(response)
+        except (HTTPError, URLError, TimeoutError):
+            if len(texts) > 1:
+                midpoint = len(texts) // 2
+                return translate(texts[:midpoint], "google") + translate(texts[midpoint:], "google")
+            time.sleep(1)
+            with urllib.request.urlopen(request, timeout=45) as response:
+                payload = json.load(response)
+        translated = "".join(segment[0] for segment in payload[0] if segment and segment[0])
+    result = translated.split(SEPARATOR)
     if len(result) != len(texts):
         if len(texts) == 1:
             raise RuntimeError("translator changed the only string")
@@ -98,7 +124,7 @@ def translate(texts: list[str], endpoint: str) -> list[str]:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--project-root", type=Path, required=True)
-    parser.add_argument("--patch", choices=("0124", "0125", "0126"), required=True)
+    parser.add_argument("--patch", choices=("0124", "0125", "0126", "0127", "0128"), required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--exclude-batch", type=Path, action="append", default=[])
     parser.add_argument("--endpoint", default="https://lingva.lunar.icu/api/v1/en/ru")
@@ -106,7 +132,7 @@ def main() -> int:
     root = args.project_root.resolve()
     report = (
         root / "reports" / "preact_string_candidates.jsonl"
-        if args.patch == "0126"
+        if args.patch in {"0126", "0127", "0128"}
         else root / "translation" / "reports" / "patch_editorial_all.jsonl"
     )
     source_file = f"preact/src/layers/patch-notes-v2/patches/patch{args.patch}.tsx"
@@ -132,6 +158,31 @@ def main() -> int:
         if english not in ordered:
             ordered.append(english)
 
+    # The lightweight audit scanner intentionally records one-line JSX only.
+    # Patch 0.12.7+ contains many prose nodes split over several source lines,
+    # often immediately after an inline <strong> element. Include those exact
+    # source spans so a "complete" patch batch cannot leave English sentence
+    # tails behind.
+    if args.patch in {"0127", "0128"}:
+        build = json.loads((root / "reports" / "build.json").read_text(encoding="utf-8"))
+        snapshot = root / "src" / "upstream" / build["sha256"][:12]
+        source_text = (snapshot / source_file).read_text(encoding="utf-8-sig")
+        known_visible = {re.sub(r"\s+", " ", text).strip() for text in ordered}
+        for match in re.finditer(r">([^<>{}]+)<", source_text, flags=re.S):
+            exact = match.group(1)
+            visible = re.sub(r"\s+", " ", exact).strip()
+            if (
+                len(visible) < 2
+                or not re.search(r"[A-Za-z]", visible)
+                or visible in known_visible
+                or visible.startswith(("http://", "https://"))
+            ):
+                continue
+            counts[exact] += 1
+            first_line.setdefault(exact, source_text.count("\n", 0, match.start(1)) + 1)
+            if exact not in ordered:
+                ordered.append(exact)
+
     pending = [text for text in ordered if text not in excluded and not SKIP_RE.fullmatch(text)]
     manual = MANUAL_0125 if args.patch == "0125" else {}
     translations: dict[str, str] = {text: manual.get(text, text) for text in pending if text in KEEP_EXACT or text in manual}
@@ -141,7 +192,7 @@ def main() -> int:
     size = 0
     for text in translatable:
         added = len(text) + (len(SEPARATOR) if chunk else 0)
-        if chunk and size + added > 850:
+        if chunk and size + added > (400 if args.endpoint.casefold() == "google" else 850):
             chunks.append(chunk)
             chunk, size = [], 0
         chunk.append(text)
@@ -168,7 +219,7 @@ def main() -> int:
     payload = {
         "schema_version": 1,
         "batch_id": f"PREACT_RUNTIME_PATCH_{args.patch}_DRAFT",
-        "scope": f"Complete editorial text for patch 0.{args.patch[-2]}.{args.patch[-1]}",
+        "scope": f"Complete editorial text for patch 0.{int(args.patch[1:3])}.{args.patch[-1]}",
         "reviewed_by": "Machine draft; requires manual review",
         "rows": rows,
     }

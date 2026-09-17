@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "batch_id": "PREACT_RUNTIME_025_PATCH_0127_0128_MOTD",
+  "scope": "Russian localization for live 0.12.7 and 0.12.8 MOTD content",
+  "reviewed_by": "Codex manual screenshot and live endpoint review 2026-09-17",
+  "apply_order": "post",
+  "rows": [
+    {
+      "source_file": "preact-remote/src/components/motd.tsx",
+      "english": "  'Patch 0.12.6.1 Hotfix': 'Исправления патча 0.12.6.1',",
+      "russian": "  'Patch 0.12.6.1 Hotfix': 'Исправления патча 0.12.6.1',\n  'COSMETIC': 'КОСМЕТИКА',\n  'cosmetic': 'КОСМЕТИКА',\n  'Fly your flag': 'Покажите свой флаг',\n  'Nameplates are here. A new slot behind your name, worn alongside your name colour. Fifteen country flags to start.': 'Добавлены таблички имени — новый элемент рядом с именем и его цветом. На старте доступны флаги 15 стран.',\n  'Patch 0.12.8 is LIVE': 'Патч 0.12.8 уже доступен',\n  'A new carry off the chain, stun immunity that finally means immune, a Null Stone you can see through, and nameplates to fly your flag': 'Новый керри рвётся с цепи, иммунитет к оглушению теперь действительно защищает, Null Stone становится заметнее, а таблички имени позволяют показать флаг своей страны.',\n  'READ PATCH NOTES': 'ОПИСАНИЕ ПАТЧА',\n  'Patch 0.12.7 is now LIVE': 'Патч 0.12.7 уже доступен',\n  'A Sacrilege that arrives in three stages and a moderation overhaul': 'Динамический облик Sacrilege с тремя стадиями и масштабное обновление модерации.',\n  'Player Profile Cards': 'Карточки профиля игроков',\n  \"Point at any player's name and a card opens beside it. Ratings, recent form, the roles they play and their most played heroes.  Check out the store for upgrades!\": 'Наведите курсор на имя игрока — рядом откроется карточка с рейтингом, последними результатами, ролями и любимыми героями. Новые варианты оформления доступны в магазине!',\n  'New Moderation is LIVE': 'Новая система модерации уже работает',\n  'The Moderation Team starts today. A confirmed report now carries a real mute or suspension, judged by a panel, not by automation.': 'Команда модераторов приступила к работе. Подтверждённая жалоба теперь приводит к реальному запрету общения или отстранению, а решение принимает коллегия, а не автоматика.',\n  'Code of Conduct': 'Правила поведения',\n  'hotfix patch': 'ИСПРАВЛЕНИЕ'",
+      "expected_matches": 1
+    },
+    {
+      "source_file": "preact-remote/src/components/motd.tsx",
+      "english": "\n  'Connection drops, lobby dodge penalties you did not earn, dead queues and the match end crash are fixed. Replays upload normally again.'",
+      "russian": ",\n  'Connection drops, lobby dodge penalties you did not earn, dead queues and the match end crash are fixed. Replays upload normally again.'",
+      "expected_matches": 1
+    }
+  ]
+}
