@@ -454,6 +454,8 @@ internal sealed class MainForm : Form
             return ("Не удалось проверить обновления", "Проверьте подключение к интернету и повторите попытку.");
         if (exception.Message.Contains("Закройте Heroes", StringComparison.OrdinalIgnoreCase))
             return ("Игра сейчас запущена", "Закройте Heroes of Newerth Reborn и повторите операцию.");
+        if (exception.Message.Contains("Версия игры несовместима", StringComparison.OrdinalIgnoreCase))
+            return ("Игра обновилась", "Для этой версии HoN ещё нет проверенного русификатора. Дождитесь совместимого обновления перевода.");
         if (exception.Message.Contains("не установлен", StringComparison.OrdinalIgnoreCase))
             return ("Русификатор не установлен", "Сначала установите перевод в блоке обновлений.");
         if (exception.Message.Contains("ярлык", StringComparison.OrdinalIgnoreCase))

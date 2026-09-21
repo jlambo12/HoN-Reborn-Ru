@@ -16,6 +16,10 @@ internal static class SelfTest
         if (!InstallService.CanReconcileInstalledArchive("target", "old", "target")) failures.Add("adopt exact official archive");
         if (!InstallService.CanReconcileInstalledArchive("managed", "managed", "target")) failures.Add("accept managed archive");
         if (InstallService.CanReconcileInstalledArchive("unknown", "managed", "target")) failures.Add("reject unknown archive");
+        var savedState = new InstallationState { Version = "0.1.0-beta.20" };
+        if (!InstallService.ShouldStartFreshInstallation(savedState, managedArchiveExists: false)) failures.Add("repair missing managed archive");
+        if (InstallService.ShouldStartFreshInstallation(savedState, managedArchiveExists: true)) failures.Add("preserve valid managed archive");
+        if (InstallService.ShouldStartFreshInstallation(null, managedArchiveExists: false)) failures.Add("ignore missing archive without state");
         var modules = ModuleCatalog.CreateDefault();
         if (!ModuleCatalog.HasUniqueIds(modules)) failures.Add("unique module ids");
         if (modules.Count != 1 || modules[0].Descriptor.Id != LocalizationModule.ModuleId)
@@ -31,6 +35,20 @@ internal static class SelfTest
         catch (Exception exception)
         {
             failures.Add("direct fallback after proxy failure: " + exception.GetType().Name);
+        }
+        try
+        {
+            using var client = new UpdateClient(
+                new BlockingHttpHandler(),
+                new StubHttpHandler(DirectReleaseResponse),
+                configuredAttemptTimeout: TimeSpan.FromMilliseconds(25),
+                overallDiscoveryTimeout: TimeSpan.FromSeconds(2));
+            var release = client.FindReleaseAsync(ReleaseChannel.Beta, CancellationToken.None).GetAwaiter().GetResult();
+            if (release.Manifest.Version != "0.1.0-beta.20") failures.Add("direct fallback after proxy timeout");
+        }
+        catch (Exception exception)
+        {
+            failures.Add("bounded proxy timeout fallback: " + exception.GetType().Name);
         }
         if (failures.Count == 0)
         {
@@ -70,5 +88,15 @@ internal static class SelfTest
     {
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) =>
             Task.FromResult(responseFactory(request));
+    }
+
+    private sealed class BlockingHttpHandler : HttpMessageHandler
+    {
+        protected override async Task<HttpResponseMessage> SendAsync(
+            HttpRequestMessage request, CancellationToken cancellationToken)
+        {
+            await Task.Delay(Timeout.InfiniteTimeSpan, cancellationToken);
+            throw new InvalidOperationException("unreachable");
+        }
     }
 }

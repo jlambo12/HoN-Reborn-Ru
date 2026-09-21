@@ -50,11 +50,18 @@ internal sealed partial class InstallService
         Directory.CreateDirectory(BaseDirectory);
         Directory.CreateDirectory(AppStorage.BackupRoot);
         var oldState = ReadState();
+        var oldArchive = oldState is null ? null : ArchiveForState(oldState);
+        var repairingMissingManagedArchive = ShouldStartFreshInstallation(oldState, File.Exists(oldArchive));
+        if (repairingMissingManagedArchive)
+        {
+            AppStorage.Log(
+                $"Saved installation state {oldState!.Version} points to a missing managed archive ({oldArchive}); " +
+                "starting a fresh verified installation and discarding the stale restore chain.");
+            oldState = null;
+        }
         string? currentExtensionHash = null;
         if (oldState?.SchemaVersion is 1 or 3)
         {
-            if (!File.Exists(InstalledArchive))
-                throw new FileNotFoundException("Перевод предыдущей версии не найден.", InstalledArchive);
             currentExtensionHash = await Sha256Async(InstalledArchive, cancellationToken);
             if (!CanReconcileInstalledArchive(currentExtensionHash, oldState.InstalledSha256, downloadedHash))
                 throw new InvalidOperationException("Файл extensions\\resources0.jz изменён после установки. Лаунчер не будет его перезаписывать.");
@@ -173,6 +180,9 @@ internal sealed partial class InstallService
     internal static bool CanReconcileInstalledArchive(string currentHash, string stateHash, string downloadedHash) =>
         currentHash.Equals(stateHash, StringComparison.OrdinalIgnoreCase) ||
         currentHash.Equals(downloadedHash, StringComparison.OrdinalIgnoreCase);
+
+    internal static bool ShouldStartFreshInstallation(InstallationState? state, bool managedArchiveExists) =>
+        state is not null && !managedArchiveExists;
 
     public async Task RestoreAsync(CancellationToken cancellationToken)
     {

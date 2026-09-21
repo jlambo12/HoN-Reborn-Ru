@@ -74,18 +74,40 @@ class AutonomousLauncherTests(unittest.TestCase):
     def test_release_check_is_bounded_and_offers_install_without_a_second_button(self):
         client = (LAUNCHER / "UpdateClient.cs").read_text(encoding="utf-8")
         form = (LAUNCHER / "MainForm.cs").read_text(encoding="utf-8")
-        self.assertIn("ConnectTimeout = TimeSpan.FromSeconds(10)", client)
+        self.assertIn("ConnectTimeout = useProxy ? TimeSpan.FromSeconds(5) : TimeSpan.FromSeconds(25)", client)
         self.assertIn("Timeout = TimeSpan.FromSeconds(30)", client)
-        self.assertIn("deadline.CancelAfter(TimeSpan.FromSeconds(30))", client)
+        self.assertIn("deadline.CancelAfter(_overallDiscoveryTimeout)", client)
         self.assertNotIn("TimeSpan.FromMinutes(10)", client)
         self.assertNotIn("_installButton", form)
         self.assertIn('LauncherDialog.Confirm(this, "Обновление русификатора"', form)
         self.assertIn("await InstallOrUpdateAsync(_remote, cancellationToken)", form)
 
     def test_release_check_retries_directly_after_a_broken_system_proxy(self):
+        client = (LAUNCHER / "UpdateClient.cs").read_text(encoding="utf-8")
         source = (LAUNCHER / "SelfTest.cs").read_text(encoding="utf-8")
         self.assertIn("configured proxy unavailable", source)
         self.assertIn("direct fallback after proxy failure", source)
+        self.assertIn("BlockingHttpHandler", source)
+        self.assertIn("bounded proxy timeout fallback", source)
+        self.assertIn("TimeSpan.FromSeconds(5)", client)
+        self.assertIn("TimeSpan.FromSeconds(25)", client)
+
+    def test_missing_managed_archive_is_reinstalled_as_fresh_state(self):
+        source = (LAUNCHER / "InstallService.cs").read_text(encoding="utf-8")
+        self_test = (LAUNCHER / "SelfTest.cs").read_text(encoding="utf-8")
+        self.assertIn("repairingMissingManagedArchive", source)
+        self.assertIn("ShouldStartFreshInstallation", source)
+        self.assertIn("starting a fresh verified installation", source)
+        self.assertIn("oldState = null", source)
+        self.assertIn("repair missing managed archive", self_test)
+        self.assertIn("preserve valid managed archive", self_test)
+        install_path = source[source.index("public async Task InstallAsync"):source.index("public async Task RestoreAsync")]
+        self.assertNotIn('throw new FileNotFoundException("Перевод предыдущей версии не найден.", InstalledArchive)', install_path)
+
+    def test_incompatible_game_patch_has_actionable_message(self):
+        source = (LAUNCHER / "MainForm.cs").read_text(encoding="utf-8")
+        self.assertIn('return ("Игра обновилась"', source)
+        self.assertIn("нет проверенного русификатора", source)
 
     def test_self_test_does_not_require_an_installed_game(self):
         source = (LAUNCHER / "SelfTest.cs").read_text(encoding="utf-8")
@@ -214,18 +236,18 @@ class AutonomousLauncherTests(unittest.TestCase):
         self.assertIn("EmbeddedResource", project)
 
     def test_beta_release_translation_manifest_matches_asset(self):
-        directory = ROOT / "release-assets" / "0.1.0-beta.21"
+        directory = ROOT / "release-assets" / "0.1.0-beta.22"
         manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
         archive = directory / manifest["file"]
         self.assertTrue(archive.is_file())
         self.assertEqual(archive.stat().st_size, manifest["size_bytes"])
-        self.assertEqual("0.1.0-beta.21", manifest["version"])
+        self.assertEqual("0.1.0-beta.22", manifest["version"])
 
     def test_website_download_points_to_current_beta_setup(self):
         site_config = (ROOT / "website" / "src" / "config" / "site.ts").read_text(encoding="utf-8")
         download_button = (ROOT / "website" / "src" / "components" / "DownloadButton.astro").read_text(encoding="utf-8")
         self.assertIn(
-            "/releases/download/v0.1.0-beta.21/HoNRebornRU-Setup.exe",
+            "/releases/download/v0.1.0-beta.22/HoNRebornRU-Setup.exe",
             site_config,
         )
         self.assertIn("api.github.com/repos/jlambo12/HoN-Reborn-Ru/releases", download_button)
@@ -416,6 +438,11 @@ class AutonomousLauncherTests(unittest.TestCase):
             self.assertIn(literal, preact)
         for literal in ("Патч 0.12.8 уже доступен", "Покажите свой флаг", "КОСМЕТИКА"):
             self.assertIn(literal, remote)
+
+    def test_beta22_is_launcher_only_and_keeps_beta21_translation_exact(self):
+        beta21 = ROOT / "release-assets" / "0.1.0-beta.21" / "resources0.jz"
+        beta22 = ROOT / "release-assets" / "0.1.0-beta.22" / "resources0.jz"
+        self.assertEqual(beta21.read_bytes(), beta22.read_bytes())
 
     def test_beta18_contains_honplus_live_and_postmatch_ui(self):
         archive_path = ROOT / "release-assets" / "0.1.0-beta.19" / "resources0.jz"

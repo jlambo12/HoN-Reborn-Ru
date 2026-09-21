@@ -10,6 +10,8 @@ internal sealed class UpdateClient : IDisposable
     private readonly HttpClient _configuredHttp;
     private readonly HttpClient _directHttp;
     private readonly Action<string> _log;
+    private readonly TimeSpan _configuredAttemptTimeout;
+    private readonly TimeSpan _overallDiscoveryTimeout;
     private HttpClient _releaseHttp;
 
     public UpdateClient()
@@ -18,23 +20,26 @@ internal sealed class UpdateClient : IDisposable
     }
 
     internal UpdateClient(
-        HttpMessageHandler configuredHandler, HttpMessageHandler directHandler, Action<string>? log = null)
+        HttpMessageHandler configuredHandler, HttpMessageHandler directHandler, Action<string>? log = null,
+        TimeSpan? configuredAttemptTimeout = null, TimeSpan? overallDiscoveryTimeout = null)
     {
         _configuredHttp = CreateClient(configuredHandler);
         _directHttp = CreateClient(directHandler);
         _log = log ?? (_ => { });
+        _configuredAttemptTimeout = configuredAttemptTimeout ?? TimeSpan.FromSeconds(5);
+        _overallDiscoveryTimeout = overallDiscoveryTimeout ?? TimeSpan.FromSeconds(30);
         _releaseHttp = _configuredHttp;
     }
 
     public async Task<RemoteRelease> FindReleaseAsync(ReleaseChannel channel, CancellationToken cancellationToken)
     {
         using var deadline = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
-        deadline.CancelAfter(TimeSpan.FromSeconds(30));
+        deadline.CancelAfter(_overallDiscoveryTimeout);
         var requestToken = deadline.Token;
         try
         {
             using var configuredAttempt = CancellationTokenSource.CreateLinkedTokenSource(requestToken);
-            configuredAttempt.CancelAfter(TimeSpan.FromSeconds(15));
+            configuredAttempt.CancelAfter(_configuredAttemptTimeout);
             try
             {
                 var release = await FindReleaseWithClientAsync(_configuredHttp, channel, configuredAttempt.Token);
@@ -47,7 +52,7 @@ internal sealed class UpdateClient : IDisposable
             }
             catch (OperationCanceledException) when (!cancellationToken.IsCancellationRequested && !requestToken.IsCancellationRequested)
             {
-                _log("GitHub request through the configured proxy exceeded 15 seconds; retrying directly.");
+                _log($"GitHub request through the configured proxy exceeded {_configuredAttemptTimeout.TotalSeconds:0.#} seconds; retrying directly.");
             }
 
             var directRelease = await FindReleaseWithClientAsync(_directHttp, channel, requestToken);
@@ -56,7 +61,7 @@ internal sealed class UpdateClient : IDisposable
         }
         catch (OperationCanceledException) when (!cancellationToken.IsCancellationRequested)
         {
-            throw new TimeoutException("GitHub Releases не ответил за 30 секунд.");
+            throw new TimeoutException($"GitHub Releases не ответил за {_overallDiscoveryTimeout.TotalSeconds:0.#} секунд.");
         }
     }
 
@@ -72,12 +77,18 @@ internal sealed class UpdateClient : IDisposable
             await DownloadWithClientAsync(_directHttp, url, destination, progress, cancellationToken);
             _releaseHttp = _directHttp;
         }
+        catch (OperationCanceledException) when (!cancellationToken.IsCancellationRequested && !ReferenceEquals(_releaseHttp, _directHttp))
+        {
+            _log("Release download through the configured proxy timed out; retrying directly.");
+            await DownloadWithClientAsync(_directHttp, url, destination, progress, cancellationToken);
+            _releaseHttp = _directHttp;
+        }
     }
 
     private static SocketsHttpHandler CreateHandler(bool useProxy) => new()
     {
         UseProxy = useProxy,
-        ConnectTimeout = TimeSpan.FromSeconds(10),
+        ConnectTimeout = useProxy ? TimeSpan.FromSeconds(5) : TimeSpan.FromSeconds(25),
         AutomaticDecompression = System.Net.DecompressionMethods.All
     };
 
